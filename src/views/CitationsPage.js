@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 // Import the JSON data directly
 // Note: You'll need to place the rapid_265citations.json file in the same directory as this component
 // or adjust the path accordingly
-import citationsData from './rapid_265citations.json';
+import citationsData from './rapid_20250523.json';
 
 const CitationsPage = () => {
   const [citations, setCitations] = useState([]);

@@ -1,6 +1,6 @@
 {
-  "short_name": "RAPID Dashboard",
-  "name": "RAPID Citation Dashboard",
+  "short_name": "Dashboard",
+  "name": "Science Model Dashboard",
   "icons": [
     {
       "src": "favicon.ico",

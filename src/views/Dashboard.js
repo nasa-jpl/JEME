@@ -36,7 +36,7 @@ const Dashboard = () => {
             </div>
             <div>
               <h1 className="text-lg font-semibold text-blue-900">RAPID Citation Dashboard</h1>
-              <div className="text-xs text-gray-500">River Application for Parallel computation of Discharge | 265 Citations</div>
+              <div className="text-xs text-gray-500">River Application for Parallel computation of Discharge</div>
             </div>
           </div>
           
@@ -91,7 +91,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <div className="font-medium text-blue-900">Raw Citation Data</div>
-                <div className="text-sm text-blue-700">View all 265 papers citing RAPID</div>
+                <div className="text-sm text-blue-700">View all papers</div>
               </div>
               <ExternalLink size={16} className="ml-auto text-blue-400" />
             </Link>
@@ -105,7 +105,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <div className="font-medium text-green-900">Geographic Impact</div>
-                <div className="text-sm text-green-700">Explore 48 watersheds in 17 countries</div>
+                <div className="text-sm text-green-700">Explore watersheds</div>
               </div>
               <ExternalLink size={16} className="ml-auto text-green-400" />
             </Link>
