@@ -34,7 +34,6 @@ const CitationTrendsChart = () => (
           <Legend />
           <Bar yAxisId="left" dataKey="annual" name="Annual Citations" fill={colors.primaryLight} barSize={30} />
           <Line yAxisId="right" type="monotone" dataKey="cumulative" name="Cumulative Citations" stroke={colors.accent} strokeWidth={2} />
-          <Area yAxisId="right" type="monotone" dataKey="cumulative" fill={colors.accent} fillOpacity={0.1} stroke="none" />
         </ComposedChart>
       </ResponsiveContainer>
     </div>

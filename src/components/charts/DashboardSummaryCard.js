@@ -1,5 +1,5 @@
 // src/components/charts/DashboardSummaryCard.js
-// Summary card with key metrics
+// Summary card with key metrics based on real RAPID citation data
 
 import React from 'react';
 import { Download } from 'lucide-react';
@@ -22,45 +22,45 @@ const SummarySection = ({ title, items }) => (
 );
 
 const DashboardSummaryCard = () => {
-  // Citation summary items
+  // Citation summary items (based on real data analysis)
   const citationSummaryItems = [
-    { label: "Total Citations", value: "265" },
-    { label: "Average Annual Growth", value: "19.6 citations/year" },
-    { label: "Current Year-to-Date", value: "21 citations (Q2 2025)" },
-    { label: "Peak Citation Year", value: "2023 (35 citations)" },
-    { label: "Citation Quality Index", value: "Medium-High" }
+    { label: "Total Publications", value: "265" },
+    { label: "Total Citation Impact", value: "8,684 citations" },
+    { label: "Average Citations/Paper", value: "32.8" },
+    { label: "Peak Publication Year", value: "2023 (35 papers)" },
+    { label: "2025 Publications", value: "15 papers (YTD)" }
   ];
   
-  // Research impact items
+  // Research impact items (based on engagement analysis)
   const researchImpactItems = [
-    { label: "Implementation Score", value: "34.7%" },
-    { label: "High-Engagement Citations", value: "40 papers (Levels 3-4)" },
-    { label: "Geographic Reach", value: "48 watersheds in 17 countries" },
-    { label: "Educational Impact", value: "31 academic theses" }
+    { label: "Implementation Score", value: "51.0%" },
+    { label: "High-Engagement Studies", value: "133 papers (Levels 3-4)" },
+    { label: "Geographic Reach", value: "37 countries, 63 watersheds" },
+    { label: "Academic Impact", value: "25 theses/dissertations" }
   ];
   
-  // Domain impact items
+  // Domain impact items (based on research domain analysis)
   const domainImpactItems = [
-    { label: "Primary Domain", value: "River Modeling (114 papers)" },
-    { label: "Cross-Disciplinary Reach", value: "5 major research domains" },
-    { label: "Model Extensions", value: "4 major adaptations" },
-    { label: "Research Focus Areas", value: "Flood prediction, Flow analysis" }
+    { label: "Primary Domain", value: "Flood Prediction (48 papers)" },
+    { label: "Secondary Domain", value: "River Modeling (34 papers)" },
+    { label: "Cross-Disciplinary Reach", value: "8+ research domains" },
+    { label: "Top Applications", value: "Streamflow, Hydrologic modeling" }
   ];
   
-  // Recommendations items
+  // Key insights and recommendations
   const recommendationsItems = [
-    { label: "Monitor", value: "Streamflow modeling applications" },
-    { label: "Highlight", value: "Flood prediction applications" },
-    { label: "Explore", value: "Water resources management" },
-    { label: "Showcase", value: "River network modeling capabilities" }
+    { label: "Strength", value: "Flood prediction applications" },
+    { label: "Growth Area", value: "Water resources management" },
+    { label: "Geographic Focus", value: "Mississippi, Ganges basins" },
+    { label: "Academic Adoption", value: "Strong thesis integration" }
   ];
   
   return (
     <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
       <div className="flex justify-between items-start mb-4">
         <div>
-          <div className="text-base font-semibold text-gray-800">Dashboard Summary</div>
-          <div className="text-sm text-gray-500 mt-1">Key insights and metrics at a glance</div>
+          <div className="text-base font-semibold text-gray-800">RAPID Model Impact Dashboard</div>
+          <div className="text-sm text-gray-500 mt-1">Citation analysis and research impact metrics</div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">
           <Download size={18} />
@@ -80,7 +80,7 @@ const DashboardSummaryCard = () => {
           <SummarySection title="Domain Impact" items={domainImpactItems} />
           
           <div className="mt-6">
-            <SummarySection title="Recommendations" items={recommendationsItems} />
+            <SummarySection title="Key Insights" items={recommendationsItems} />
           </div>
         </div>
       </div>

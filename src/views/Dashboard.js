@@ -31,11 +31,10 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">R</span>
+              <span className="font-bold">SMD</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">RAPID Citation Dashboard</h1>
-              <div className="text-xs text-gray-500">River Application for Parallel computation of Discharge</div>
+              <h1 className="text-lg font-semibold text-blue-900">Science Model Dashboard</h1>
             </div>
           </div>
           
