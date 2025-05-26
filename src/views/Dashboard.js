@@ -8,7 +8,6 @@ import { Link } from 'react-router-dom';
 // Import components
 import PaperInfo from '../components/PaperInfo';
 import Header from '../components/Header';
-import Tabs from '../components/Tabs';
 import Footer from '../components/Footer';
 
 // Import section components
@@ -45,8 +44,6 @@ const Dashboard = () => {
             <Link to="/citations" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Citation Analytics</Link>
             <Link to="/geographic-impact" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Geographic Impact</Link>
             <Link to="/research-domains" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Research Domains</Link>
-            <a href="#" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Model Evolution</a>
-            <a href="#" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Reports</a>
           </div>
           
           <div className="flex items-center gap-4">
@@ -72,7 +69,6 @@ const Dashboard = () => {
       <main className="max-w-7xl mx-auto px-4 py-6">
         <PaperInfo />
         <Header />
-        <Tabs />
         
         {/* Data Verification Section */}
         <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
@@ -125,6 +121,8 @@ const Dashboard = () => {
             </Link>
           </div>
         </div>
+        
+
         
         <MetricsOverview />
         <CitationTrendsChart />

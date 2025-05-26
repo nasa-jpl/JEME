@@ -8,6 +8,71 @@ import { Link } from 'react-router-dom';
 // or adjust the path accordingly
 import citationsData from './rapid_20250523.json';
 
+// Multi-select component
+const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  
+  const handleToggleOption = (option) => {
+    const newSelected = selectedValues.includes(option)
+      ? selectedValues.filter(item => item !== option)
+      : [...selectedValues, option];
+    onChange(newSelected);
+  };
+  
+  const clearAll = () => {
+    onChange([]);
+  };
+  
+  return (
+    <div className="relative">
+      <button
+        type="button"
+        onClick={() => setIsOpen(!isOpen)}
+        className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white text-left flex items-center justify-between"
+      >
+        <span className="text-sm">
+          {selectedValues.length === 0 
+            ? placeholder 
+            : `${selectedValues.length} selected`
+          }
+        </span>
+        <Filter size={16} className="text-gray-400" />
+      </button>
+      
+      {isOpen && (
+        <div className="absolute z-10 mt-1 w-full bg-white border border-gray-300 rounded-lg shadow-lg max-h-60 overflow-auto">
+          <div className="p-2 border-b border-gray-200">
+            <button
+              onClick={clearAll}
+              className="text-xs text-blue-600 hover:text-blue-800"
+            >
+              Clear All
+            </button>
+          </div>
+          <div className="p-1">
+            {options.map((option) => (
+              <label
+                key={option}
+                className="flex items-center px-3 py-2 hover:bg-gray-50 cursor-pointer"
+              >
+                <input
+                  type="checkbox"
+                  checked={selectedValues.includes(option)}
+                  onChange={() => handleToggleOption(option)}
+                  className="mr-3 h-4 w-4 text-blue-600 rounded border-gray-300"
+                />
+                <span className="text-sm text-gray-700 truncate" title={option}>
+                  {option}
+                </span>
+              </label>
+            ))}
+          </div>
+        </div>
+      )}
+    </div>
+  );
+};
+
 const CitationsPage = () => {
   const [citations, setCitations] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -15,8 +80,8 @@ const CitationsPage = () => {
   const [sortField, setSortField] = useState('cites');
   const [sortDirection, setSortDirection] = useState('desc');
   const [filterEngagement, setFilterEngagement] = useState('all');
-  const [filterDomain, setFilterDomain] = useState('all');
-  const [filterWatershed, setFilterWatershed] = useState('all');
+  const [filterDomain, setFilterDomain] = useState([]);
+  const [filterWatershed, setFilterWatershed] = useState([]);
   const [filterCountry, setFilterCountry] = useState('all');
   const [yearRange, setYearRange] = useState([2011, 2025]);
   const [error, setError] = useState(null);
@@ -184,12 +249,12 @@ const CitationsPage = () => {
       citation.engagement_level === filterEngagement;
     
     // Filter by research domain
-    const domainMatch = filterDomain === 'all' || 
-      citation.research_domain === filterDomain;
+    const domainMatch = filterDomain.length === 0 || 
+      filterDomain.includes(citation.research_domain);
     
     // Filter by watershed
-    const watershedMatch = filterWatershed === 'all' || 
-      citation.watershed === filterWatershed;
+    const watershedMatch = filterWatershed.length === 0 || 
+      filterWatershed.includes(citation.watershed);
     
     // Filter by country
     const countryMatch = filterCountry === 'all' || 
@@ -394,9 +459,9 @@ const CitationsPage = () => {
                 </div>
               </div>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-4 mb-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
                 {/* Search input */}
-                <div className="col-span-1 md:col-span-2 relative">
+                <div className="col-span-1 md:col-span-2 lg:col-span-1 relative">
                   <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
                     <Search size={16} className="text-gray-400" />
                   </div>
@@ -425,30 +490,22 @@ const CitationsPage = () => {
                 
                 {/* Research Domain Filter */}
                 <div>
-                  <select
-                    value={filterDomain}
-                    onChange={(e) => setFilterDomain(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white"
-                  >
-                    <option value="all">All Domains</option>
-                    {getUniqueValues('research_domain').map(domain => (
-                      <option key={domain} value={domain}>{domain}</option>
-                    ))}
-                  </select>
+                  <MultiSelect
+                    options={getUniqueValues('research_domain')}
+                    selectedValues={filterDomain}
+                    onChange={setFilterDomain}
+                    placeholder="All Domains"
+                  />
                 </div>
                 
                 {/* Watershed Filter */}
                 <div>
-                  <select
-                    value={filterWatershed}
-                    onChange={(e) => setFilterWatershed(e.target.value)}
-                    className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white"
-                  >
-                    <option value="all">All Watersheds</option>
-                    {getUniqueValues('watershed').map(watershed => (
-                      <option key={watershed} value={watershed}>{watershed}</option>
-                    ))}
-                  </select>
+                  <MultiSelect
+                    options={getUniqueValues('watershed')}
+                    selectedValues={filterWatershed}
+                    onChange={setFilterWatershed}
+                    placeholder="All Watersheds"
+                  />
                 </div>
               </div>
               

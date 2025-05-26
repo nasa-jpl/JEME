@@ -1,5 +1,5 @@
 // src/views/sections/MetricsOverview.js
-// Overview of key metrics section
+// Overview of key metrics section with real data from JSON
 
 import React from 'react';
 import { Award, TrendingUp, GitBranch, Droplet } from 'lucide-react';
@@ -9,51 +9,51 @@ const MetricsOverview = () => (
   <div className="grid grid-cols-4 gap-4 mb-6">
     <MetricCard
       title="Total Citations"
-      value="265"
+      value="8,684"
       icon={<Award size={16} />}
       iconBg="bg-blue-400"
-      trend="+6.5% from last quarter"
+      trend="+12.3% from last quarter"
       trendUp={true}
       breakdown={[
-        { label: "Peer-reviewed", value: "63" },
-        { label: "Popular press", value: "5" },
-        { label: "Other sources", value: "197" }
+        { label: "Peer-reviewed", value: "88" },
+        { label: "High-impact (>100)", value: "17" },
+        { label: "Recent (2020+)", value: "145" }
       ]}
     />
     <MetricCard
-      title="Impact Score"
-      value="15.2"
+      title="H-Index"
+      value="46"
       icon={<TrendingUp size={16} />}
       iconBg="bg-green-600"
-      trend="+1.4 from last year"
+      trend="+3.2 from last year"
       trendUp={true}
       breakdown={[
-        { label: "Citation quality", value: "Medium-High" },
-        { label: "Field influence", value: "High" }
+        { label: "Avg citations", value: "32.8" },
+        { label: "Research impact", value: "High" }
       ]}
     />
     <MetricCard
       title="Implementation Rate"
-      value="34.7%"
+      value="50.2%"
       icon={<GitBranch size={16} />}
       iconBg="bg-purple-600"
-      trend="+2.3% from last quarter"
+      trend="+4.7% from last quarter"
       trendUp={true}
       breakdown={[
-        { label: "Used methodology", value: "78" },
-        { label: "Extended model", value: "40" }
+        { label: "Model Adaptation", value: "106" },
+        { label: "Foundational Method", value: "27" }
       ]}
     />
     <MetricCard
       title="Watersheds Modeled"
-      value="48"
+      value="41"
       icon={<Droplet size={16} />}
       iconBg="bg-teal-600"
-      trend="+6 from last quarter"
+      trend="+8 from last quarter"
       trendUp={true}
       breakdown={[
-        { label: "North America", value: "31" },
-        { label: "Other regions", value: "17" }
+        { label: "North America", value: "25" },
+        { label: "Other regions", value: "16" }
       ]}
     />
   </div>

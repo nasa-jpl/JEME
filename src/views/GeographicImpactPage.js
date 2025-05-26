@@ -1,63 +1,231 @@
 // src/views/GeographicImpactPage.js
 // Page for showing geographical distribution of RAPID applications
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
+// Import the JSON data directly
+import citationsData from './rapid_20250523.json';
+
+// Import the interactive map component
+import InteractiveWorldMap from '../components/InteractiveWorldMap';
+
 const GeographicImpactPage = () => {
   const [selectedRegion, setSelectedRegion] = useState('all');
+  const [watershedData, setWatershedData] = useState([]);
+  const [countryData, setCountryData] = useState([]);
+  const [loading, setLoading] = useState(true);
   
-  // Sample data of watersheds where RAPID has been applied
-  const watershedData = [
-    { id: 1, name: "Mississippi River Basin", country: "United States", area: 3220000, papers: 12, details: "Continental scale modeling with high-resolution NHDPlus dataset" },
-    { id: 2, name: "Seine River Basin", country: "France", area: 78650, papers: 5, details: "Applied with the SIM-France model for operational flood forecasting" },
-    { id: 3, name: "Texas Gulf Coast Basins", country: "United States", area: 116000, papers: 4, details: "San Antonio, Guadalupe, and Colorado river basins" },
-    { id: 4, name: "Rhine Graben Basin", country: "Germany/France", area: 185000, papers: 3, details: "Upper Rhine hydrosystem water balance assessment" },
-    { id: 5, name: "South Platte River Basin", country: "United States", area: 62400, papers: 2, details: "Flood inundation mapping and streamflow estimation" },
-    { id: 6, name: "Great Lakes Basin", country: "United States/Canada", area: 765000, papers: 2, details: "Hydrologic forecasting system development" },
-    { id: 7, name: "Columbia River Basin", country: "United States/Canada", area: 668000, papers: 2, details: "Transboundary watershed management and routing" },
-    { id: 8, name: "Amazon River Basin", country: "Brazil/Peru/Colombia", area: 6300000, papers: 1, details: "Large-scale river routing on continental network" },
-    { id: 9, name: "Yangtze River Basin", country: "China", area: 1800000, papers: 1, details: "River routing with local adaptations for regional hydrology" },
-    { id: 10, name: "Ganges-Brahmaputra Basin", country: "India/Bangladesh", area: 1730000, papers: 1, details: "Flood prediction in densely populated delta regions" },
-    { id: 11, name: "Murray-Darling Basin", country: "Australia", area: 1060000, papers: 1, details: "Drought impact assessment and river management" },
-    { id: 12, name: "Danube River Basin", country: "Multiple European Countries", area: 801500, papers: 1, details: "Transboundary water management in Europe" },
-  ];
+  useEffect(() => {
+    processGeographicData();
+  }, []);
+  
+  const processGeographicData = () => {
+    try {
+      // Filter out entries with meaningful watershed and country data
+      const validEntries = citationsData.filter(citation => 
+        citation.watershed && 
+        citation.country && 
+        citation.watershed !== 'Unknown' && 
+        citation.watershed !== 'Not specified' &&
+        citation.watershed !== 'Not applicable' &&
+        citation.country !== 'Unknown' && 
+        citation.country !== 'Not specified' &&
+        citation.country !== 'Not applicable'
+      );
+      
+      // Group by watershed
+      const watershedStats = {};
+      validEntries.forEach(citation => {
+        const watershed = citation.watershed;
+        const country = citation.country;
+        
+        if (!watershedStats[watershed]) {
+          watershedStats[watershed] = {
+            name: watershed,
+            countries: new Set(),
+            papers: 0,
+            citations: 0,
+            domains: new Set(),
+            engagementLevels: new Set(),
+            years: []
+          };
+        }
+        
+        watershedStats[watershed].countries.add(country);
+        watershedStats[watershed].papers += 1;
+        watershedStats[watershed].citations += citation.cites || 0;
+        if (citation.research_domain) {
+          watershedStats[watershed].domains.add(citation.research_domain);
+        }
+        if (citation.engagement_level) {
+          watershedStats[watershed].engagementLevels.add(citation.engagement_level);
+        }
+        if (citation.year) {
+          watershedStats[watershed].years.push(citation.year);
+        }
+      });
+      
+      // Convert to array and add derived fields
+      const watershedArray = Object.values(watershedStats).map(ws => ({
+        ...ws,
+        countries: Array.from(ws.countries).join(', '),
+        domains: Array.from(ws.domains).join(', '),
+        engagementLevels: Array.from(ws.engagementLevels).join(', '),
+        firstYear: ws.years.length > 0 ? Math.min(...ws.years) : null,
+        lastYear: ws.years.length > 0 ? Math.max(...ws.years) : null,
+        avgCitations: ws.papers > 0 ? Math.round(ws.citations / ws.papers) : 0
+      })).sort((a, b) => b.papers - a.papers);
+      
+      setWatershedData(watershedArray);
+      
+      // Group by country
+      const countryStats = {};
+      validEntries.forEach(citation => {
+        const countries = citation.country.split(/[,/]/).map(c => c.trim());
+        
+        countries.forEach(country => {
+          if (!countryStats[country]) {
+            countryStats[country] = {
+              country: country,
+              watersheds: new Set(),
+              papers: 0,
+              citations: 0,
+              domains: new Set()
+            };
+          }
+          
+          countryStats[country].watersheds.add(citation.watershed);
+          countryStats[country].papers += 1 / countries.length; // Split count for multi-country papers
+          countryStats[country].citations += (citation.cites || 0) / countries.length;
+          if (citation.research_domain) {
+            countryStats[country].domains.add(citation.research_domain);
+          }
+        });
+      });
+      
+      // Convert to array
+      const countryArray = Object.values(countryStats).map(cs => ({
+        ...cs,
+        watersheds: cs.watersheds.size,
+        papers: Math.round(cs.papers),
+        citations: Math.round(cs.citations),
+        domains: Array.from(cs.domains).join(', ')
+      })).sort((a, b) => b.papers - a.papers);
+      
+      setCountryData(countryArray);
+      setLoading(false);
+      
+    } catch (error) {
+      console.error('Error processing geographic data:', error);
+      setLoading(false);
+    }
+  };
+  
+  // Determine region for filtering
+  const getRegion = (countries) => {
+    const countryList = countries.toLowerCase();
+    if (countryList.includes('usa') || countryList.includes('united states') || countryList.includes('canada') || countryList.includes('mexico')) {
+      return 'north-america';
+    }
+    if (countryList.includes('france') || countryList.includes('germany') || countryList.includes('spain') || 
+        countryList.includes('italy') || countryList.includes('uk') || countryList.includes('bulgaria') ||
+        countryList.includes('europe')) {
+      return 'europe';
+    }
+    if (countryList.includes('china') || countryList.includes('india') || countryList.includes('bangladesh') || 
+        countryList.includes('nepal') || countryList.includes('cambodia')) {
+      return 'asia';
+    }
+    if (countryList.includes('brazil') || countryList.includes('peru') || countryList.includes('colombia') || 
+        countryList.includes('south america')) {
+      return 'south-america';
+    }
+    if (countryList.includes('australia')) {
+      return 'australia';
+    }
+    if (countryList.includes('africa')) {
+      return 'africa';
+    }
+    return 'other';
+  };
   
   // Filter watersheds by region
   const filteredWatersheds = selectedRegion === 'all' 
     ? watershedData 
-    : watershedData.filter(w => {
-        if (selectedRegion === 'north-america') return w.country.includes('United States') || w.country.includes('Canada');
-        if (selectedRegion === 'europe') return w.country.includes('France') || w.country.includes('Germany') || w.country.includes('European');
-        if (selectedRegion === 'asia') return w.country.includes('China') || w.country.includes('India');
-        if (selectedRegion === 'australia') return w.country.includes('Australia');
-        if (selectedRegion === 'south-america') return w.country.includes('Brazil') || w.country.includes('Peru') || w.country.includes('Colombia');
-        return false;
-      });
+    : watershedData.filter(w => getRegion(w.countries) === selectedRegion);
   
-  // Group watersheds by country for summary
-  const countrySummary = watershedData.reduce((acc, watershed) => {
-    const countries = watershed.country.split('/');
-    countries.forEach(country => {
-      if (!acc[country.trim()]) {
-        acc[country.trim()] = { count: 0, papers: 0 };
+  // Calculate summary statistics
+  const totalWatersheds = watershedData.length;
+  const totalCountries = countryData.length;
+  const totalPapers = watershedData.reduce((sum, w) => sum + w.papers, 0);
+  const totalCitations = watershedData.reduce((sum, w) => sum + w.citations, 0);
+  
+  // Get timeline data
+  const getTimelineData = () => {
+    const yearStats = {};
+    watershedData.forEach(ws => {
+      if (ws.firstYear) {
+        const year = ws.firstYear;
+        if (!yearStats[year]) {
+          yearStats[year] = { watersheds: [], count: 0 };
+        }
+        yearStats[year].watersheds.push(ws.name);
+        yearStats[year].count += 1;
       }
-      // Increment with partial count for shared watersheds
-      acc[country.trim()].count += 1 / countries.length;
-      acc[country.trim()].papers += watershed.papers / countries.length;
     });
-    return acc;
-  }, {});
+    
+    return Object.entries(yearStats)
+      .sort(([a], [b]) => parseInt(a) - parseInt(b))
+      .slice(0, 6); // Show first 6 years
+  };
   
-  // Sort countries by watershed count
-  const sortedCountries = Object.entries(countrySummary)
-    .map(([country, stats]) => ({
-      country,
-      count: Math.round(stats.count),
-      papers: Math.round(stats.papers)
-    }))
-    .sort((a, b) => b.count - a.count);
+  const timelineData = getTimelineData();
+  
+  // Handle region selection from map
+  const handleMapRegionSelect = (countryName) => {
+    // This could be enhanced to filter the table based on the selected country
+    console.log('Selected country from map:', countryName);
+  };
+  
+  // Export function
+  const exportData = () => {
+    const csvContent = [
+      ['Watershed', 'Countries', 'Papers', 'Citations', 'Avg Citations', 'Research Domains', 'First Year', 'Last Year'].join(','),
+      ...watershedData.map(w => [
+        `"${w.name}"`,
+        `"${w.countries}"`,
+        w.papers,
+        w.citations,
+        w.avgCitations,
+        `"${w.domains}"`,
+        w.firstYear || '',
+        w.lastYear || ''
+      ].join(','))
+    ].join('\n');
+    
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'rapid_geographic_impact.csv');
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  };
+  
+  if (loading) {
+    return (
+      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading geographic data...</p>
+        </div>
+      </div>
+    );
+  }
   
   return (
     <div className="bg-gray-100 min-h-screen">
@@ -100,6 +268,7 @@ const GeographicImpactPage = () => {
                     <option value="asia">Asia</option>
                     <option value="south-america">South America</option>
                     <option value="australia">Australia</option>
+                    <option value="africa">Africa</option>
                   </select>
                   <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
                     <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -108,7 +277,10 @@ const GeographicImpactPage = () => {
                   </div>
                 </div>
                 
-                <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <button 
+                  onClick={exportData}
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
                   <Download size={16} />
                   <span>Export Data</span>
                 </button>
@@ -118,39 +290,37 @@ const GeographicImpactPage = () => {
             <div className="flex flex-wrap text-center mb-6">
               <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-700 mb-1">48</div>
-                  <div className="text-sm text-blue-600">Watersheds Modeled</div>
+                  <div className="text-3xl font-bold text-blue-700 mb-1">{totalWatersheds}</div>
+                  <div className="text-sm text-blue-600">Watersheds Studied</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-green-700 mb-1">17</div>
+                  <div className="text-3xl font-bold text-green-700 mb-1">{totalCountries}</div>
                   <div className="text-sm text-green-600">Countries</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-purple-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-purple-700 mb-1">5</div>
-                  <div className="text-sm text-purple-600">Continents</div>
+                  <div className="text-3xl font-bold text-purple-700 mb-1">{totalPapers}</div>
+                  <div className="text-sm text-purple-600">Research Papers</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-amber-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-amber-700 mb-1">28.5M</div>
-                  <div className="text-sm text-amber-600">km² Total Area</div>
+                  <div className="text-3xl font-bold text-amber-700 mb-1">{totalCitations}</div>
+                  <div className="text-sm text-amber-600">Total Citations</div>
                 </div>
               </div>
             </div>
             
-            {/* Map placeholder */}
-            <div className="bg-gray-100 rounded-lg h-96 mb-6 flex items-center justify-center border border-gray-200">
-              <div className="text-center">
-                <Map size={48} className="mx-auto text-gray-400 mb-4" />
-                <p className="text-gray-500 max-w-md mx-auto">
-                  Interactive map showing global RAPID model implementation regions. 
-                  Click on a watershed to view detailed information.
-                </p>
-              </div>
+            {/* Interactive Map */}
+            <div className="mb-6">
+              <InteractiveWorldMap 
+                watershedData={watershedData}
+                selectedRegion={selectedRegion}
+                onRegionSelect={handleMapRegionSelect}
+              />
             </div>
             
             {/* Watershed Table */}
@@ -165,33 +335,41 @@ const GeographicImpactPage = () => {
                       Country/Region
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Area (km²)
+                      Papers
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Related Papers
+                      Citations
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Details
+                      Research Domains
+                    </th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Years Active
                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredWatersheds.map((watershed) => (
-                    <tr key={watershed.id} className="hover:bg-gray-50">
+                  {filteredWatersheds.map((watershed, index) => (
+                    <tr key={index} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
                         {watershed.name}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.country}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.area.toLocaleString()}
+                        {watershed.countries}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                         {watershed.papers}
                       </td>
-                      <td className="px-6 py-4 whitespace-normal text-sm text-gray-500 max-w-md">
-                        {watershed.details}
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {watershed.citations}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate" title={watershed.domains}>
+                        {watershed.domains}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {watershed.firstYear && watershed.lastYear 
+                          ? `${watershed.firstYear}-${watershed.lastYear}`
+                          : watershed.firstYear || 'N/A'}
                       </td>
                     </tr>
                   ))}
@@ -216,19 +394,25 @@ const GeographicImpactPage = () => {
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       Papers
                     </th>
+                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Citations
+                    </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {sortedCountries.map((countryData, index) => (
+                  {countryData.slice(0, 15).map((countryItem, index) => (
                     <tr key={index} className="hover:bg-gray-50">
                       <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        {countryData.country}
+                        {countryItem.country}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {countryData.count}
+                        {countryItem.watersheds}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {countryData.papers}
+                        {countryItem.papers}
+                      </td>
+                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                        {countryItem.citations}
                       </td>
                     </tr>
                   ))}
@@ -244,60 +428,19 @@ const GeographicImpactPage = () => {
               <div className="relative">
                 <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-blue-200"></div>
                 <div className="space-y-8">
-                  {/* Timeline items */}
-                  <div className="relative pl-10">
-                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                      2011
+                  {timelineData.map(([year, data], index) => (
+                    <div key={year} className="relative pl-10">
+                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-medium">
+                        {year}
+                      </div>
+                      <h3 className="text-base font-semibold text-gray-800">New Watersheds</h3>
+                      <p className="text-sm text-gray-600 mt-1">
+                        {data.watersheds.slice(0, 3).join(', ')}
+                        {data.watersheds.length > 3 && `, +${data.watersheds.length - 3} more`}
+                      </p>
+                      <div className="mt-1 text-xs text-blue-600">{data.count} watershed{data.count > 1 ? 's' : ''}</div>
                     </div>
-                    <h3 className="text-base font-semibold text-gray-800">Initial Development</h3>
-                    <p className="text-sm text-gray-600 mt-1">First application on the NHDPlus dataset in the United States. Applied to SIM-France model.</p>
-                    <div className="mt-1 text-xs text-blue-600">2 watersheds</div>
-                  </div>
-                  
-                  <div className="relative pl-10">
-                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                      2013
-                    </div>
-                    <h3 className="text-base font-semibold text-gray-800">North American Expansion</h3>
-                    <p className="text-sm text-gray-600 mt-1">Extended to multiple watersheds across the United States, focusing on Texas Gulf Coast basins.</p>
-                    <div className="mt-1 text-xs text-blue-600">+5 watersheds</div>
-                  </div>
-                  
-                  <div className="relative pl-10">
-                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                      2015
-                    </div>
-                    <h3 className="text-base font-semibold text-gray-800">European Applications</h3>
-                    <p className="text-sm text-gray-600 mt-1">Implementation in several European river basins, including the Rhine and Danube basins.</p>
-                    <div className="mt-1 text-xs text-blue-600">+8 watersheds</div>
-                  </div>
-                  
-                  <div className="relative pl-10">
-                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                      2017
-                    </div>
-                    <h3 className="text-base font-semibold text-gray-800">Continental Scale Application</h3>
-                    <p className="text-sm text-gray-600 mt-1">Implementation across the entire Mississippi River Basin and initial applications in South America.</p>
-                    <div className="mt-1 text-xs text-blue-600">+12 watersheds</div>
-                  </div>
-                  
-                  <div className="relative pl-10">
-                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                      2020
-                    </div>
-                    <h3 className="text-base font-semibold text-gray-800">Global Expansion</h3>
-                    <p className="text-sm text-gray-600 mt-1">Implementation in Asian river basins including the Yangtze and Ganges-Brahmaputra, along with the Murray-Darling in Australia.</p>
-                    <div className="mt-1 text-xs text-blue-600">+15 watersheds</div>
-                  </div>
-                  
-                  <div className="relative pl-10">
-                    <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-sm font-medium">
-                      2025
-                    </div>
-                    <h3 className="text-base font-semibold text-gray-800">Current Coverage</h3>
-                    <p className="text-sm text-gray-600 mt-1">Implementation across 48 watersheds on 5 continents, covering major river systems globally.</p>
-                    <div className="mt-1 text-xs text-blue-600">+6 watersheds</div>
-                  </div>
+                  ))}
                 </div>
               </div>
             </div>
@@ -307,13 +450,21 @@ const GeographicImpactPage = () => {
         <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
           <h2 className="text-lg font-semibold text-gray-800 mb-4">About the Geographic Impact Analysis</h2>
           <p className="text-sm text-gray-600 mb-4">
-            This geographic impact analysis tracks the implementation of the RAPID (River Application for Parallel computation of Discharge) model in watersheds around the world. The data is compiled from published research papers and technical reports that cite the original RAPID paper and document specific implementations of the model.
+            This geographic impact analysis is automatically generated from {citationsData.length} research papers and citations 
+            related to the RAPID (Routing Application for Parallel computatIon of Discharge) model. The data includes 
+            watershed names, countries, research domains, and citation metrics extracted from the academic literature.
           </p>
           <p className="text-sm text-gray-600 mb-4">
-            The watershed boundaries and area measurements are derived from HydroSHEDS and similar global hydrographic datasets. Implementation details are extracted from the research papers and supplementary materials.
+            Each watershed entry represents a unique combination of geographic location and research application documented 
+            in the literature. The timeline shows the chronological expansion of RAPID applications across different 
+            regions and research domains. The interactive map above provides a visual representation of the global 
+            distribution of RAPID implementations.
           </p>
-          <div className="flex justify-end">
-            <a href="#" className="text-sm text-blue-600 hover:text-blue-800 hover:underline">Download Methodology Documentation</a>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-500">
+            <div>📊 Data source: Academic citations and research papers</div>
+            <div>🌍 Coverage: {totalWatersheds} watersheds across {totalCountries} countries</div>
+            <div>📈 Analysis period: 2011-2025</div>
+            <div>🗺️ Interactive map with zoom, pan, and hover details</div>
           </div>
         </div>
       </main>

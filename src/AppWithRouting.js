@@ -4,9 +4,7 @@ import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
 import Dashboard from './views/Dashboard';
 import CitationsPage from './views/CitationsPage';
 import GeographicImpactPage from './views/GeographicImpactPage';
-
-// Import the ResearchDomainsPage component - uncomment when it exists
-// import ResearchDomainsPage from './views/ResearchDomainsPage';
+import ResearchDomainsPage from './views/ResearchDomainsPage';
 
 function AppWithRouting() {
   return (
@@ -18,9 +16,7 @@ function AppWithRouting() {
         {/* Other routes */}
         <Route path="/citations" element={<CitationsPage />} />
         <Route path="/geographic-impact" element={<GeographicImpactPage />} />
-        
-        {/* Uncomment when ResearchDomainsPage exists */}
-        {/* <Route path="/research-domains" element={<ResearchDomainsPage />} /> */}
+        <Route path="/research-domains" element={<ResearchDomainsPage />} />
         
         {/* Fallback route for any unmatched paths */}
         <Route path="*" element={<Navigate to="/" />} />
