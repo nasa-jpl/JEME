@@ -6,7 +6,7 @@ import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from './rapid_20250523.json';
+import citationsData from './rapid_20250528_2.json';
 
 // Import the interactive map component
 import InteractiveWorldMap from '../components/InteractiveWorldMap';
@@ -55,15 +55,35 @@ const GeographicImpactPage = () => {
         
         watershedStats[watershed].countries.add(country);
         watershedStats[watershed].papers += 1;
-        watershedStats[watershed].citations += citation.cites || 0;
+        
+        // Handle citations data - check multiple possible field names
+        const citationCount = citation['is-referenced-by-count'] || 
+                             citation.cites || 
+                             citation.citations || 
+                             0;
+        watershedStats[watershed].citations += citationCount;
+        
         if (citation.research_domain) {
           watershedStats[watershed].domains.add(citation.research_domain);
         }
         if (citation.engagement_level) {
           watershedStats[watershed].engagementLevels.add(citation.engagement_level);
         }
+        
+        // Handle year data - check multiple possible sources
+        let year = null;
         if (citation.year) {
-          watershedStats[watershed].years.push(citation.year);
+          year = citation.year;
+        } else if (citation.published && citation.published['date-parts'] && citation.published['date-parts'][0]) {
+          year = citation.published['date-parts'][0][0];
+        } else if (citation['published-online'] && citation['published-online']['date-parts'] && citation['published-online']['date-parts'][0]) {
+          year = citation['published-online']['date-parts'][0][0];
+        } else if (citation['published-print'] && citation['published-print']['date-parts'] && citation['published-print']['date-parts'][0]) {
+          year = citation['published-print']['date-parts'][0][0];
+        }
+        
+        if (year) {
+          watershedStats[watershed].years.push(year);
         }
       });
       
@@ -75,7 +95,12 @@ const GeographicImpactPage = () => {
         engagementLevels: Array.from(ws.engagementLevels).join(', '),
         firstYear: ws.years.length > 0 ? Math.min(...ws.years) : null,
         lastYear: ws.years.length > 0 ? Math.max(...ws.years) : null,
-        avgCitations: ws.papers > 0 ? Math.round(ws.citations / ws.papers) : 0
+        avgCitations: ws.papers > 0 ? Math.round(ws.citations / ws.papers) : 0,
+        yearRange: ws.years.length > 0 ? 
+          (Math.min(...ws.years) === Math.max(...ws.years) ? 
+            Math.min(...ws.years).toString() : 
+            `${Math.min(...ws.years)}-${Math.max(...ws.years)}`) : 
+          'N/A'
       })).sort((a, b) => b.papers - a.papers);
       
       setWatershedData(watershedArray);
@@ -98,7 +123,14 @@ const GeographicImpactPage = () => {
           
           countryStats[country].watersheds.add(citation.watershed);
           countryStats[country].papers += 1 / countries.length; // Split count for multi-country papers
-          countryStats[country].citations += (citation.cites || 0) / countries.length;
+          
+          // Handle citations for countries
+          const citationCount = citation['is-referenced-by-count'] || 
+                               citation.cites || 
+                               citation.citations || 
+                               0;
+          countryStats[country].citations += citationCount / countries.length;
+          
           if (citation.research_domain) {
             countryStats[country].domains.add(citation.research_domain);
           }
@@ -192,7 +224,7 @@ const GeographicImpactPage = () => {
   // Export function
   const exportData = () => {
     const csvContent = [
-      ['Watershed', 'Countries', 'Papers', 'Citations', 'Avg Citations', 'Research Domains', 'First Year', 'Last Year'].join(','),
+      ['Watershed', 'Countries', 'Papers', 'Citations', 'Avg Citations', 'Research Domains', 'Years Active'].join(','),
       ...watershedData.map(w => [
         `"${w.name}"`,
         `"${w.countries}"`,
@@ -200,8 +232,7 @@ const GeographicImpactPage = () => {
         w.citations,
         w.avgCitations,
         `"${w.domains}"`,
-        w.firstYear || '',
-        w.lastYear || ''
+        w.yearRange
       ].join(','))
     ].join('\n');
     
@@ -232,7 +263,7 @@ const GeographicImpactPage = () => {
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
+            <Link to="/science-model-dashboard" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
               <ArrowLeft size={18} className="mr-1" />
               <span className="font-medium">Back to Dashboard</span>
             </Link>
@@ -308,7 +339,7 @@ const GeographicImpactPage = () => {
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-amber-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-amber-700 mb-1">{totalCitations}</div>
+                  <div className="text-3xl font-bold text-amber-700 mb-1">{totalCitations.toLocaleString()}</div>
                   <div className="text-sm text-amber-600">Total Citations</div>
                 </div>
               </div>
@@ -361,15 +392,13 @@ const GeographicImpactPage = () => {
                         {watershed.papers}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.citations}
+                        {watershed.citations.toLocaleString()}
                       </td>
                       <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate" title={watershed.domains}>
                         {watershed.domains}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.firstYear && watershed.lastYear 
-                          ? `${watershed.firstYear}-${watershed.lastYear}`
-                          : watershed.firstYear || 'N/A'}
+                        {watershed.yearRange}
                       </td>
                     </tr>
                   ))}
@@ -412,7 +441,7 @@ const GeographicImpactPage = () => {
                         {countryItem.papers}
                       </td>
                       <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {countryItem.citations}
+                        {countryItem.citations.toLocaleString()}
                       </td>
                     </tr>
                   ))}
@@ -457,13 +486,13 @@ const GeographicImpactPage = () => {
           <p className="text-sm text-gray-600 mb-4">
             Each watershed entry represents a unique combination of geographic location and research application documented 
             in the literature. The timeline shows the chronological expansion of RAPID applications across different 
-            regions and research domains. The interactive map above provides a visual representation of the global 
-            distribution of RAPID implementations.
+            regions and research domains. Citation counts are extracted from the "is-referenced-by-count" field in the 
+            academic database records.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500">
             <div>📊 Data source: Academic citations and research papers</div>
             <div>🌍 Coverage: {totalWatersheds} watersheds across {totalCountries} countries</div>
-            <div>📈 Analysis period: 2011-2025</div>
+            <div>📈 Total citations: {totalCitations.toLocaleString()}</div>
             <div>🗺️ Interactive map with zoom, pan, and hover details</div>
           </div>
         </div>

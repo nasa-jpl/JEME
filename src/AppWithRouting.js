@@ -6,12 +6,16 @@ import CitationsPage from './views/CitationsPage';
 import GeographicImpactPage from './views/GeographicImpactPage';
 import ResearchDomainsPage from './views/ResearchDomainsPage';
 
+import CMS_Flux_Dashboard from './views/CMS-Flux/Dashboard';
+
+
 function AppWithRouting() {
   return (
     <BrowserRouter>
       <Routes>
         {/* Default route redirects to Dashboard */}
-        <Route path="/" element={<Dashboard />} />
+        <Route path="/science-model-dashboard" element={<Dashboard />} />
+        <Route path="/science-model-dashboard/CMS-Flux" element={<CMS_Flux_Dashboard />} />
         
         {/* Other routes */}
         <Route path="/citations" element={<CitationsPage />} />
@@ -19,7 +23,7 @@ function AppWithRouting() {
         <Route path="/research-domains" element={<ResearchDomainsPage />} />
         
         {/* Fallback route for any unmatched paths */}
-        <Route path="*" element={<Navigate to="/" />} />
+        <Route path="*" element={<Navigate to="/science-model-dashboard" />} />
       </Routes>
     </BrowserRouter>
   );

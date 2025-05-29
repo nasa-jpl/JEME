@@ -3,7 +3,7 @@ import { ArrowLeft, Download, Filter, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from './rapid_20250523.json';
+import citationsData from './rapid_20250528_2.json';
 
 const ResearchDomainsPage = () => {
   const [selectedDomain, setSelectedDomain] = useState('all');
@@ -38,9 +38,21 @@ const ResearchDomainsPage = () => {
         : citationsData.filter(paper => paper.research_domain === selectedDomain);
       
       filteredDataForYear.forEach(paper => {
-        if (paper.year && paper.year > 2000) {
-          if (!yearlyData[paper.year]) yearlyData[paper.year] = 0;
-          yearlyData[paper.year]++;
+        // Extract year from multiple possible sources
+        let year = null;
+        if (paper.year) {
+          year = paper.year;
+        } else if (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0]) {
+          year = paper.published['date-parts'][0][0];
+        } else if (paper['published-online'] && paper['published-online']['date-parts'] && paper['published-online']['date-parts'][0]) {
+          year = paper['published-online']['date-parts'][0][0];
+        } else if (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0]) {
+          year = paper['published-print']['date-parts'][0][0];
+        }
+        
+        if (year && year > 2000) {
+          if (!yearlyData[year]) yearlyData[year] = 0;
+          yearlyData[year]++;
         }
       });
 
@@ -99,9 +111,104 @@ const ResearchDomainsPage = () => {
       "Flow Analysis": "bg-purple-100 text-purple-800",
       "Streamflow": "bg-indigo-100 text-indigo-800",
       "Hydrological Modeling": "bg-cyan-100 text-cyan-800",
-      "Hydrology": "bg-emerald-100 text-emerald-800"
+      "Hydrology": "bg-emerald-100 text-emerald-800",
+      "Hydrologic Modeling": "bg-sky-100 text-sky-800"
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
+  };
+
+  // Helper function to extract year from paper
+  const extractYear = (paper) => {
+    if (paper.year) return paper.year;
+    if (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0]) {
+      return paper.published['date-parts'][0][0];
+    }
+    if (paper['published-online'] && paper['published-online']['date-parts'] && paper['published-online']['date-parts'][0]) {
+      return paper['published-online']['date-parts'][0][0];
+    }
+    if (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0]) {
+      return paper['published-print']['date-parts'][0][0];
+    }
+    return null;
+  };
+
+  // Helper function to extract authors from paper
+  const extractAuthors = (paper) => {
+    if (paper.authors && Array.isArray(paper.authors)) {
+      return paper.authors;
+    }
+    if (paper.author && Array.isArray(paper.author)) {
+      return paper.author.map(author => {
+        if (typeof author === 'string') return author;
+        if (author.given && author.family) return `${author.given} ${author.family}`;
+        if (author.family) return author.family;
+        return 'Unknown Author';
+      });
+    }
+    return [];
+  };
+
+  // Helper function to extract citations count
+  const extractCitations = (paper) => {
+    return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+  };
+
+  // Helper function to extract title
+  const extractTitle = (paper) => {
+    if (paper.title) {
+      if (Array.isArray(paper.title)) {
+        return paper.title[0] || "Untitled Paper";
+      }
+      return paper.title;
+    }
+    return "Untitled Paper";
+  };
+
+  // Helper function to extract publisher/source
+  const extractSource = (paper) => {
+    if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
+      return paper['container-title'][0];
+    }
+    if (paper.source) return paper.source;
+    if (paper.publisher) return paper.publisher;
+    return "Unknown Source";
+  };
+
+  // Helper function to extract DOI
+  const extractDOI = (paper) => {
+    return paper.DOI || paper.doi || null;
+  };
+
+  // Helper function to extract abstract
+  const extractAbstract = (paper) => {
+    if (paper.abstract) {
+      // Remove HTML tags from abstract
+      return paper.abstract.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, ' ').trim();
+    }
+    return null;
+  };
+
+  // Export function
+  const exportData = () => {
+    const csvContent = [
+      ['Domain', 'Papers', 'Percentage', 'Engagement Level Distribution'].join(','),
+      ...topDomains.map(domain => [
+        `"${domain.domain}"`,
+        domain.count,
+        ((domain.count / citationsData.length) * 100).toFixed(1) + '%',
+        `"${Object.entries(engagementStats).map(([level, count]) => `${level}: ${count}`).join('; ')}"`
+      ].join(','))
+    ].join('\n');
+    
+    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.setAttribute('href', url);
+    link.setAttribute('download', 'rapid_research_domains_analysis.csv');
+    link.style.visibility = 'hidden';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
   };
 
   return (
@@ -109,7 +216,7 @@ const ResearchDomainsPage = () => {
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <Link to="/" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
+            <Link to="/science-model-dashboard" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
               <ArrowLeft size={18} className="mr-1" />
               <span className="font-medium">Back to Dashboard</span>
             </Link>
@@ -151,7 +258,10 @@ const ResearchDomainsPage = () => {
                   </div>
                 </div>
                 
-                <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700">
+                <button 
+                  onClick={exportData}
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                >
                   <Download size={16} />
                   <span>Export Analysis</span>
                 </button>
@@ -190,7 +300,7 @@ const ResearchDomainsPage = () => {
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
                 <div className="bg-teal-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-teal-700 mb-1">
-                    {citationsData.filter(p => p.year >= 2020).length}
+                    {citationsData.filter(p => extractYear(p) >= 2020).length}
                   </div>
                   <div className="text-sm text-teal-600">Recent Papers (2020+)</div>
                 </div>
@@ -394,154 +504,114 @@ const ResearchDomainsPage = () => {
                 <thead className="bg-gray-50">
                   <tr>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Rank
+                      YEAR
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Paper Title & Source
+                      CITATIONS
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Authors
+                      RESEARCH DOMAIN / ENGAGEMENT LEVEL
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Year
+                      WATERSHED / COUNTRY
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Citations
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Research Domain
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Watershed
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
+                      LINKS
                     </th>
                   </tr>
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
-                  {processedData.papers.map((paper, index) => (
-                    <tr key={paper.uid || index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <div className="flex items-center justify-center w-8 h-8 bg-blue-100 text-blue-800 rounded-full text-xs font-medium">
-                          {paper.rank || index + 1}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 text-sm font-medium text-gray-900 max-w-lg">
-                        <div className="mb-1">
-                          <div className="font-medium text-gray-900 leading-tight" title={paper.title}>
-                            {paper.title || "Untitled Paper"}
+                  {processedData.papers.map((paper, index) => {
+                    const authors = extractAuthors(paper);
+                    const citations = extractCitations(paper);
+                    const year = extractYear(paper);
+                    const title = extractTitle(paper);
+                    const source = extractSource(paper);
+                    const doi = extractDOI(paper);
+                    const abstract = extractAbstract(paper);
+                    
+                    return (
+                      <tr key={paper.DOI || index} className="hover:bg-gray-50">
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
+                            {year || "N/A"}
+                          </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <div className="flex items-center">
+                            <span className="font-medium text-gray-900">{citations.toLocaleString()}</span>
+                            <span className="text-xs text-gray-500 ml-1">citations</span>
                           </div>
-                        </div>
-                        <div className="text-xs text-gray-500 space-y-1">
-                          <div className="flex items-center gap-2">
-                            <span className="font-medium">{paper.source || "Unknown Source"}</span>
-                            {paper.publisher && (
-                              <span className="text-gray-400">• {paper.publisher}</span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          {paper.research_domain && paper.research_domain !== "Unknown" ? (
+                            <span className={`px-2 py-1 text-xs rounded-full ${getDomainColor(paper.research_domain)}`}>
+                              {paper.research_domain}
+                            </span>
+                          ) : (
+                            <span className="text-gray-400 text-xs">Not classified</span>
+                          )}
+                          {paper.engagement_level && (
+                            <div className="mt-1">
+                              <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
+                                {paper.engagement_level.replace("Level ", "L")}
+                              </span>
+                            </div>
+                          )}
+                        </td>
+                        <td className="px-6 py-4 text-sm text-gray-500 max-w-xs">
+                          <div className="space-y-1">
+                            {paper.watershed && paper.watershed !== "Unknown" && (
+                              <div className="text-xs">
+                                <span className="font-medium text-gray-700">Watershed:</span>
+                                <div className="text-gray-600">{paper.watershed}</div>
+                              </div>
+                            )}
+                            {paper.country && paper.country !== "Unknown" && (
+                              <div className="text-xs">
+                                <span className="font-medium text-gray-700">Country:</span>
+                                <div className="text-gray-600">{paper.country}</div>
+                              </div>
                             )}
                           </div>
-                          {paper.doi && (
-                            <div className="text-blue-600">
-                              DOI: {paper.doi}
-                            </div>
-                          )}
-                          {paper.abstract && (
-                            <div className="text-gray-600 line-clamp-2" title={paper.abstract}>
-                              {paper.abstract.length > 150 
-                                ? `${paper.abstract.substring(0, 150)}...` 
-                                : paper.abstract}
-                            </div>
-                          )}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 text-sm text-gray-500 max-w-xs">
-                        <div className="truncate" title={Array.isArray(paper.authors) ? paper.authors.join(", ") : "Unknown Authors"}>
-                          {Array.isArray(paper.authors) 
-                            ? paper.authors.length > 3 
-                              ? `${paper.authors.slice(0, 3).join(", ")} et al.`
-                              : paper.authors.join(", ")
-                            : "Unknown Authors"}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-800">
-                          {paper.year || "N/A"}
-                        </span>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <div className="flex items-center">
-                          <span className="font-medium text-gray-900">{paper.cites || 0}</span>
-                          <span className="text-xs text-gray-500 ml-1">citations</span>
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {paper.research_domain && paper.research_domain !== "Unknown" ? (
-                          <span className={`px-2 py-1 text-xs rounded-full ${getDomainColor(paper.research_domain)}`}>
-                            {paper.research_domain}
-                          </span>
-                        ) : (
-                          <span className="text-gray-400 text-xs">Not classified</span>
-                        )}
-                        {paper.engagement_level && (
-                          <div className="mt-1">
-                            <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                              {paper.engagement_level.replace("Level ", "L")}
-                            </span>
+                        </td>
+                        <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                          <div className="flex flex-col space-y-1">
+                            {paper.URL && (
+                              <a 
+                                href={paper.URL} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-blue-600 hover:text-blue-800 text-xs underline"
+                              >
+                                View Paper
+                              </a>
+                            )}
+                            {paper.link && paper.link.length > 0 && paper.link[0].URL && (
+                              <a 
+                                href={paper.link[0].URL} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-green-600 hover:text-green-800 text-xs underline"
+                              >
+                                Full Text
+                              </a>
+                            )}
+                            {doi && (
+                              <a 
+                                href={`https://doi.org/${doi}`} 
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="text-purple-600 hover:text-purple-800 text-xs underline"
+                              >
+                                View DOI
+                              </a>
+                            )}
                           </div>
-                        )}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-gray-500 max-w-xs">
-                        <div className="space-y-1">
-                          {paper.watershed && paper.watershed !== "Unknown" && (
-                            <div className="text-xs">
-                              <span className="font-medium text-gray-700">Watershed:</span>
-                              <div className="text-gray-600">{paper.watershed}</div>
-                            </div>
-                          )}
-                          {paper.country && paper.country !== "Unknown" && (
-                            <div className="text-xs">
-                              <span className="font-medium text-gray-700">Country:</span>
-                              <div className="text-gray-600">{paper.country}</div>
-                            </div>
-                          )}
-                        </div>
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        <div className="flex flex-col space-y-1">
-                          {paper.article_url && (
-                            <a 
-                              href={paper.article_url} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-blue-600 hover:text-blue-800 text-xs underline"
-                            >
-                              View Paper
-                            </a>
-                          )}
-                          {paper.fulltext_url && (
-                            <a 
-                              href={paper.fulltext_url} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-green-600 hover:text-green-800 text-xs underline"
-                            >
-                              Full Text
-                            </a>
-                          )}
-                          {paper.cites_url && (
-                            <a 
-                              href={paper.cites_url} 
-                              target="_blank" 
-                              rel="noopener noreferrer"
-                              className="text-purple-600 hover:text-purple-800 text-xs underline"
-                            >
-                              Citations
-                            </a>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  ))}
+                        </td>
+                      </tr>
+                    );
+                  })}
                 </tbody>
               </table>
             </div>
@@ -579,6 +649,44 @@ const ResearchDomainsPage = () => {
               </div>
             </div>
           </div>
+          
+          {/* Engagement Level Distribution */}
+          <div className="bg-white rounded-lg shadow-sm p-6">
+            <h2 className="text-lg font-semibold text-gray-800 mb-4">Engagement Levels</h2>
+            <div className="space-y-3">
+              {Object.entries(engagementStats)
+                .sort(([,a], [,b]) => b - a)
+                .map(([level, count], index) => {
+                  const percentage = ((count / citationsData.length) * 100).toFixed(1);
+                  const colors = [
+                    'bg-blue-100 text-blue-800',
+                    'bg-green-100 text-green-800', 
+                    'bg-purple-100 text-purple-800',
+                    'bg-amber-100 text-amber-800',
+                    'bg-red-100 text-red-800'
+                  ];
+                  
+                  return (
+                    <div key={level} className="space-y-1">
+                      <div className="flex justify-between items-center">
+                        <span className={`px-2 py-1 text-xs rounded-full ${colors[index % colors.length]}`}>
+                          {level}
+                        </span>
+                        <div className="text-sm font-medium text-gray-900">
+                          {count} ({percentage}%)
+                        </div>
+                      </div>
+                      <div className="w-full bg-gray-200 rounded-full h-2">
+                        <div 
+                          className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                          style={{ width: `${percentage}%` }}
+                        ></div>
+                      </div>
+                    </div>
+                  );
+                })}
+            </div>
+          </div>
         </div>
         
         <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
@@ -589,10 +697,22 @@ const ResearchDomainsPage = () => {
           </p>
           <p className="text-sm text-gray-600 mb-4">
             Research domains are determined through analysis of paper content, keywords, and stated research objectives. 
-            Engagement levels range from simple citations to foundational methodological contributions.
+            Engagement levels range from simple citations to foundational methodological contributions. Citation counts are extracted from the 
+            "is-referenced-by-count" field in the academic database records.
           </p>
+          <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
+            <div>📊 Data source: Academic citations and research papers</div>
+            <div>📈 Total citations: {citationsData.reduce((sum, paper) => sum + extractCitations(paper), 0).toLocaleString()}</div>
+            <div>🌐 Coverage: {processedData.domains.length} research domains</div>
+            <div>📅 Time range: {Math.min(...citationsData.map(p => extractYear(p)).filter(y => y))} - {Math.max(...citationsData.map(p => extractYear(p)).filter(y => y))}</div>
+          </div>
           <div className="flex justify-end">
-            <a href="#" className="text-sm text-blue-600 hover:text-blue-800 hover:underline">Download Full Dataset</a>
+            <button 
+              onClick={exportData}
+              className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+            >
+              Download Full Dataset
+            </button>
           </div>
         </div>
       </main>

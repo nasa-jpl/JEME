@@ -6,23 +6,23 @@ import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, 
 import { Link } from 'react-router-dom';
 
 // Import components
-import PaperInfo from '../components/PaperInfo';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import PaperInfo from '../../components/PaperInfo';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 // Import section components
-import MetricsOverview from './sections/MetricsOverview';
+import MetricsOverview from '../sections/MetricsOverview';
 
 // Import chart components
-import CitationTrendsChart from '../components/charts/CitationTrendsChart';
-import ModelComparisonChart from '../components/charts/ModelComparisonChart';
-import ResearchDomainsCard from '../components/charts/ResearchDomainsCard';
-import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
-import CitationTypeCard from '../components/charts/CitationTypeCard';
-import FutureTrendsChart from '../components/charts/FutureTrendsChart'; 
-import DashboardSummaryCard from '../components/charts/DashboardSummaryCard';
-import JournalDistributionCard from '../components/charts/JournalDistributionCard';
-import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
+import CitationTrendsChart from '../../components/charts/CitationTrendsChart';
+import ModelComparisonChart from '../../components/charts/ModelComparisonChart';
+import ResearchDomainsCard from '../../components/charts/ResearchDomainsCard';
+import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
+import CitationTypeCard from '../../components/charts/CitationTypeCard';
+import FutureTrendsChart from '../../components/charts/FutureTrendsChart'; 
+import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
+import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
+import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
 
 const Dashboard = () => {
   const models = [
@@ -208,6 +208,10 @@ const Dashboard = () => {
           <EngagementLevelsCard />
         </div>
         
+        <div className="grid grid-cols-2 gap-6 mb-6">
+          <CitationTypeCard />
+          <ModelComparisonChart />
+        </div>
         
         <FutureTrendsChart />
         <DashboardSummaryCard />
