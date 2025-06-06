@@ -4,10 +4,10 @@
 import React, { useMemo } from 'react';
 import { ComposedChart, Bar, Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Expand, MoreHorizontal } from 'lucide-react';
-import colors from '../../utils/colors';
+import colors from '../../../utils/colors';
 
 // Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
+import citationsData from '../../../views/rapid_20250528_2.json';
 
 const CitationTrendsChart = () => {
   // Process the citation data to create chart data

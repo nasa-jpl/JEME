@@ -7,7 +7,7 @@ import { Filter, Calendar, Download } from 'lucide-react';
 const Header = () => (
   <div className="flex justify-between items-center mb-6">
     <div>
-      <h2 className="text-xl font-semibold text-gray-900">RAPID Model Dashboard</h2>
+      <h2 className="text-xl font-semibold text-gray-900">CARDAMOM Model Dashboard</h2>
       <div className="text-sm text-gray-500">Last updated: June 01, 2025</div>
     </div>
     <div className="flex gap-3">

@@ -6,23 +6,22 @@ import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, 
 import { Link } from 'react-router-dom';
 
 // Import components
-import PaperInfo from '../../components/PaperInfo';
-import Header from '../../components/Header';
+import PaperInfo from '../../components/CARDAMOM/PaperInfo';
+import Header from '../../components/CARDAMOM/Header';
 import Footer from '../../components/Footer';
 
 // Import section components
-import MetricsOverview from '../sections/MetricsOverview';
+import MetricsOverview from './MetricsOverview';
 
 // Import chart components
-import CitationTrendsChart from '../../components/charts/CitationTrendsChart';
-import ModelComparisonChart from '../../components/charts/ModelComparisonChart';
-import ResearchDomainsCard from '../../components/charts/ResearchDomainsCard';
-import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
-import CitationTypeCard from '../../components/charts/CitationTypeCard';
-import FutureTrendsChart from '../../components/charts/FutureTrendsChart'; 
-import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
-import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
-import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
+import CitationTrendsChart from '../../components/charts/CARDAMOM/CitationTrendsChart';
+import ModelComparisonChart from '../../components/charts/CARDAMOM/ModelComparisonChart';
+import ResearchDomainsCard from '../../components/charts/CARDAMOM/ResearchDomainsCard';
+import EngagementLevelsCard from '../../components/charts/CARDAMOM/EngagementLevelsCard';
+import FutureTrendsChart from '../../components/charts/CARDAMOM/FutureTrendsChart'; 
+import DashboardSummaryCard from '../../components/charts/CARDAMOM/DashboardSummaryCard';
+import JournalDistributionCard from '../../components/charts/CARDAMOM/JournalDistributionCard';
+import GitHubMetricsCard from '../../components/charts/CARDAMOM/GitHubMetricsCard';
 
 const Dashboard = () => {
   const models = [
@@ -155,7 +154,7 @@ const Dashboard = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link 
-              to="/citations" 
+              to="/science-model-dashboard/CARDAMOM/citations" 
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -169,7 +168,7 @@ const Dashboard = () => {
             </Link>
             
             <Link 
-              to="/geographic-impact" 
+              to="/science-model-dashboard/CARDAMOM/geographic-impact" 
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -183,7 +182,7 @@ const Dashboard = () => {
             </Link>
             
             <Link 
-              to="/research-domains" 
+              to="/science-model-dashboard/CARDAMOM/research-domains" 
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">
@@ -208,10 +207,6 @@ const Dashboard = () => {
           <EngagementLevelsCard />
         </div>
         
-        <div className="grid grid-cols-2 gap-6 mb-6">
-          <CitationTypeCard />
-          <ModelComparisonChart />
-        </div>
         
         <FutureTrendsChart />
         <DashboardSummaryCard />

@@ -4,10 +4,10 @@
 import React, { useMemo } from 'react';
 import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import { MoreHorizontal } from 'lucide-react';
-import colors from '../../utils/colors';
+import colors from '../../../utils/colors';
 
 // Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
+import citationsData from '../../../views/rapid_20250528_2.json';
 
 const ResearchDomainsCard = () => {
   // Process the research domains data

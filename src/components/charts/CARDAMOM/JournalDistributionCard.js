@@ -5,7 +5,7 @@ import React, { useMemo } from 'react';
 import { MoreHorizontal } from 'lucide-react';
 
 // Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
+import citationsData from '../../../views/rapid_20250528_2.json';
 
 const JournalDistributionCard = () => {
   // Process the journal distribution data

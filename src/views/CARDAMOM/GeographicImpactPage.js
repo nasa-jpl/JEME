@@ -6,10 +6,10 @@ import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from './rapid_20250528_2.json';
+import citationsData from '../../data/CARDAMOM/cardamom.json';
 
 // Import the interactive map component
-import InteractiveWorldMap from '../components/InteractiveWorldMap';
+import InteractiveWorldMap from '../../components/CARDAMOM/InteractiveWorldMap';
 
 const GeographicImpactPage = () => {
   const [selectedRegion, setSelectedRegion] = useState('all');

@@ -18,7 +18,6 @@ import CitationTrendsChart from '../components/charts/CitationTrendsChart';
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
 import ResearchDomainsCard from '../components/charts/ResearchDomainsCard';
 import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
-import CitationTypeCard from '../components/charts/CitationTypeCard';
 import FutureTrendsChart from '../components/charts/FutureTrendsChart'; 
 import DashboardSummaryCard from '../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../components/charts/JournalDistributionCard';
