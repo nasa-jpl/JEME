@@ -220,17 +220,17 @@ const Dashboard = () => {
         <CitationTrendsChart data={rapidData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <ResearchDomainsCard />
+          <ResearchDomainsCard data={rapidData} />
           <EngagementLevelsCard data={rapidData} />
         </div>
         
         
-        <FutureTrendsChart />
-        <DashboardSummaryCard />
+        <FutureTrendsChart data={rapidData} />
+        <DashboardSummaryCard data={rapidData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <JournalDistributionCard />
-          <GitHubMetricsCard />
+          <JournalDistributionCard data={rapidData} />
+          <GitHubMetricsCard data={rapidData} />
         </div>
         
         <Footer />
