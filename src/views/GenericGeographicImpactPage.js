@@ -47,29 +47,135 @@ const GenericGeographicImpactPage = () => {
     }
   };
   
+  // Helper function to extract country from affiliation string
+  const extractCountryFromAffiliation = (affiliationName) => {
+    if (!affiliationName) return null;
+    
+    // Common country patterns in affiliations
+    const countryMappings = {
+      'USA': 'United States',
+      'US': 'United States', 
+      'United States': 'United States',
+      'China': 'China',
+      'France': 'France',
+      'Germany': 'Germany',
+      'UK': 'United Kingdom',
+      'United Kingdom': 'United Kingdom',
+      'Canada': 'Canada',
+      'Australia': 'Australia',
+      'Brazil': 'Brazil',
+      'India': 'India',
+      'Japan': 'Japan',
+      'Italy': 'Italy',
+      'Spain': 'Spain',
+      'Netherlands': 'Netherlands',
+      'Switzerland': 'Switzerland',
+      'Sweden': 'Sweden',
+      'Norway': 'Norway',
+      'Denmark': 'Denmark',
+      'Belgium': 'Belgium',
+      'Austria': 'Austria',
+      'Finland': 'Finland',
+      'South Korea': 'South Korea',
+      'Korea': 'South Korea',
+      'Mexico': 'Mexico',
+      'Argentina': 'Argentina',
+      'Chile': 'Chile',
+      'Peru': 'Peru'
+    };
+    
+    // Try to match country patterns
+    for (const [pattern, country] of Object.entries(countryMappings)) {
+      if (affiliationName.includes(pattern)) {
+        return country;
+      }
+    }
+    
+    return null;
+  };
+
+  // Helper function to extract region from country
+  const getRegionFromCountry = (country) => {
+    const regionMappings = {
+      'United States': 'North America',
+      'Canada': 'North America',
+      'Mexico': 'North America',
+      'China': 'Asia',
+      'Japan': 'Asia',
+      'South Korea': 'Asia',
+      'India': 'Asia',
+      'France': 'Europe',
+      'Germany': 'Europe',
+      'United Kingdom': 'Europe',
+      'Italy': 'Europe',
+      'Spain': 'Europe',
+      'Netherlands': 'Europe',
+      'Switzerland': 'Europe',
+      'Sweden': 'Europe',
+      'Norway': 'Europe',
+      'Denmark': 'Europe',
+      'Belgium': 'Europe',
+      'Austria': 'Europe',
+      'Finland': 'Europe',
+      'Australia': 'Oceania',
+      'Brazil': 'South America',
+      'Argentina': 'South America',
+      'Chile': 'South America',
+      'Peru': 'South America'
+    };
+    
+    return regionMappings[country] || 'Other';
+  };
+
   const processGeographicData = (data) => {
     try {
-      // Filter out entries with meaningful watershed and country data
-      const validEntries = data.filter(citation => 
-        citation.watershed && 
-        citation.country && 
-        citation.watershed !== 'Unknown' && 
-        citation.watershed !== 'Not specified' &&
-        citation.watershed !== 'Not applicable' &&
-        citation.country !== 'Unknown' && 
-        citation.country !== 'Not specified' &&
-        citation.country !== 'Not applicable'
-      );
+      console.log(`${modelConfig.displayName} citations data loaded:`, data.length);
       
-      // Group by watershed
-      const watershedStats = {};
-      validEntries.forEach(citation => {
-        const watershed = citation.watershed;
+      // Process each citation and extract geographic information from affiliations
+      const entriesWithGeo = [];
+      
+      data.forEach((citation, index) => {
+        if (citation.author && Array.isArray(citation.author)) {
+          // Extract countries from all authors' affiliations
+          const countries = new Set();
+          
+          citation.author.forEach(author => {
+            if (author.affiliation && Array.isArray(author.affiliation)) {
+              author.affiliation.forEach(aff => {
+                const country = extractCountryFromAffiliation(aff.name);
+                if (country) {
+                  countries.add(country);
+                }
+              });
+            }
+          });
+          
+          // If we found any countries, add to our processed data
+          if (countries.size > 0) {
+            const primaryCountry = Array.from(countries)[0]; // Use first country found
+            const region = getRegionFromCountry(primaryCountry);
+            
+            entriesWithGeo.push({
+              ...citation,
+              country: primaryCountry,
+              region: region,
+              allCountries: Array.from(countries)
+            });
+          }
+        }
+      });
+      
+      console.log(`Extracted geographic data for ${entriesWithGeo.length} entries out of ${data.length} total`);
+      
+      // Group by region
+      const regionStats = {};
+      entriesWithGeo.forEach(citation => {
+        const region = citation.region;
         const country = citation.country;
         
-        if (!watershedStats[watershed]) {
-          watershedStats[watershed] = {
-            name: watershed,
+        if (!regionStats[region]) {
+          regionStats[region] = {
+            name: region,
             countries: new Set(),
             papers: 0,
             citations: 0,
@@ -79,21 +185,21 @@ const GenericGeographicImpactPage = () => {
           };
         }
         
-        watershedStats[watershed].countries.add(country);
-        watershedStats[watershed].papers += 1;
+        regionStats[region].countries.add(country);
+        regionStats[region].papers += 1;
         
         // Handle citations data - check multiple possible field names
         const citationCount = citation['is-referenced-by-count'] || 
                              citation.cites || 
                              citation.citations || 
                              0;
-        watershedStats[watershed].citations += citationCount;
+        regionStats[region].citations += citationCount;
         
         if (citation.research_domain) {
-          watershedStats[watershed].domains.add(citation.research_domain);
+          regionStats[region].domains.add(citation.research_domain);
         }
         if (citation.engagement_level) {
-          watershedStats[watershed].engagementLevels.add(citation.engagement_level);
+          regionStats[region].engagementLevels.add(citation.engagement_level);
         }
         
         // Handle year data - check multiple possible sources
@@ -109,40 +215,40 @@ const GenericGeographicImpactPage = () => {
         }
         
         if (year) {
-          watershedStats[watershed].years.push(year);
+          regionStats[region].years.push(year);
         }
       });
       
       // Convert to array and add derived fields
-      const watershedArray = Object.values(watershedStats).map(ws => ({
-        ...ws,
-        countries: Array.from(ws.countries).join(', '),
-        domains: Array.from(ws.domains).join(', '),
-        engagementLevels: Array.from(ws.engagementLevels).join(', '),
-        firstYear: ws.years.length > 0 ? Math.min(...ws.years) : null,
-        lastYear: ws.years.length > 0 ? Math.max(...ws.years) : null,
-        avgCitations: ws.papers > 0 ? Math.round(ws.citations / ws.papers) : 0,
-        yearRange: ws.years.length > 0 ? 
-          (Math.min(...ws.years) === Math.max(...ws.years) ? 
-            `${Math.min(...ws.years)}` : 
-            `${Math.min(...ws.years)}-${Math.max(...ws.years)}`) : 
+      const regionArray = Object.values(regionStats).map(rs => ({
+        ...rs,
+        countries: Array.from(rs.countries).join(', '),
+        domains: Array.from(rs.domains).join(', '),
+        engagementLevels: Array.from(rs.engagementLevels).join(', '),
+        firstYear: rs.years.length > 0 ? Math.min(...rs.years) : null,
+        lastYear: rs.years.length > 0 ? Math.max(...rs.years) : null,
+        avgCitations: rs.papers > 0 ? Math.round(rs.citations / rs.papers) : 0,
+        yearRange: rs.years.length > 0 ? 
+          (Math.min(...rs.years) === Math.max(...rs.years) ? 
+            `${Math.min(...rs.years)}` : 
+            `${Math.min(...rs.years)}-${Math.max(...rs.years)}`) : 
           'Unknown'
       }));
       
       // Sort by number of papers (descending)
-      watershedArray.sort((a, b) => b.papers - a.papers);
+      regionArray.sort((a, b) => b.papers - a.papers);
       
-      // Group by country
+      // Group by country  
       const countryStats = {};
-      validEntries.forEach(citation => {
+      entriesWithGeo.forEach(citation => {
         const country = citation.country;
         
         if (!countryStats[country]) {
           countryStats[country] = {
-            name: country,
+            country: country,
             papers: 0,
             citations: 0,
-            watersheds: new Set(),
+            regions: new Set(),
             domains: new Set(),
             years: []
           };
@@ -156,8 +262,8 @@ const GenericGeographicImpactPage = () => {
                              0;
         countryStats[country].citations += citationCount;
         
-        if (citation.watershed) {
-          countryStats[country].watersheds.add(citation.watershed);
+        if (citation.region) {
+          countryStats[country].regions.add(citation.region);
         }
         if (citation.research_domain) {
           countryStats[country].domains.add(citation.research_domain);
@@ -179,7 +285,7 @@ const GenericGeographicImpactPage = () => {
       // Convert to array and add derived fields
       const countryArray = Object.values(countryStats).map(cs => ({
         ...cs,
-        watersheds: Array.from(cs.watersheds).join(', '),
+        regions: Array.from(cs.regions).join(', '),
         domains: Array.from(cs.domains).join(', '),
         avgCitations: cs.papers > 0 ? Math.round(cs.citations / cs.papers) : 0,
         firstYear: cs.years.length > 0 ? Math.min(...cs.years) : null,
@@ -189,11 +295,11 @@ const GenericGeographicImpactPage = () => {
       // Sort by number of papers (descending)
       countryArray.sort((a, b) => b.papers - a.papers);
       
-      setWatershedData(watershedArray);
+      setWatershedData(regionArray);
       setCountryData(countryArray);
       setError(null);
       
-      console.log(`Processed geographic data: ${watershedArray.length} watersheds, ${countryArray.length} countries`);
+      console.log(`Processed geographic data: ${regionArray.length} regions, ${countryArray.length} countries`);
       
     } catch (error) {
       console.error('Error processing geographic data:', error);
@@ -206,9 +312,9 @@ const GenericGeographicImpactPage = () => {
   const setDemoData = () => {
     console.log(`Setting up demo geographic data for ${modelConfig.displayName}`);
     
-    const mockWatersheds = [
+    const mockRegions = [
       {
-        name: 'Example Basin',
+        name: 'Example Region',
         countries: 'Global',
         papers: 5,
         citations: 42,
@@ -223,10 +329,10 @@ const GenericGeographicImpactPage = () => {
     
     const mockCountries = [
       {
-        name: 'Global',
+        country: 'Global',
         papers: 5,
         citations: 42,
-        watersheds: 'Example Basin',
+        regions: 'Example Region',
         domains: modelConfig.domain || 'Unknown',
         avgCitations: 8,
         firstYear: 2015,
@@ -234,7 +340,7 @@ const GenericGeographicImpactPage = () => {
       }
     ];
     
-    setWatershedData(mockWatersheds);
+    setWatershedData(mockRegions);
     setCountryData(mockCountries);
     setError(`Using demo geographic data for ${modelConfig.displayName}.`);
   };
@@ -242,7 +348,7 @@ const GenericGeographicImpactPage = () => {
   // Export data as CSV
   const exportWatershedCSV = () => {
     const headers = [
-      'Watershed', 'Countries', 'Papers', 'Citations', 'Avg Citations', 
+      'Region', 'Countries', 'Papers', 'Citations', 'Avg Citations', 
       'Research Domains', 'Engagement Levels', 'Year Range'
     ];
     const rows = watershedData.map(w => [
@@ -262,7 +368,7 @@ const GenericGeographicImpactPage = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', `${modelName}_watersheds.csv`);
+    link.setAttribute('download', `${modelName}_regions.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -318,7 +424,7 @@ const GenericGeographicImpactPage = () => {
               <div className="text-lg font-semibold text-gray-800 mb-4">{modelConfig.displayName} Global Distribution</div>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-sm text-blue-700 mb-1">Total Watersheds</div>
+                  <div className="text-sm text-blue-700 mb-1">Total Regions</div>
                   <div className="text-2xl font-bold text-blue-900">{watershedData.length}</div>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4">
@@ -367,9 +473,9 @@ const GenericGeographicImpactPage = () => {
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                 <div>
-                  <div className="text-lg font-semibold text-gray-800">Watershed Analysis</div>
+                  <div className="text-lg font-semibold text-gray-800">Regional Analysis</div>
                   <p className="text-sm text-gray-500 mt-1">
-                    {modelConfig.displayName} applications by watershed and river basin
+                    {modelConfig.displayName} applications by geographic region
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -388,7 +494,7 @@ const GenericGeographicImpactPage = () => {
                   <thead className="bg-gray-50">
                     <tr>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Watershed/Basin
+                        Region
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Countries
@@ -408,40 +514,40 @@ const GenericGeographicImpactPage = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {watershedData.length > 0 ? watershedData.map((watershed, index) => (
+                    {watershedData.length > 0 ? watershedData.map((region, index) => (
                       <tr key={index} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{watershed.name}</div>
+                          <div className="text-sm font-medium text-gray-900">{region.name}</div>
                         </td>
                         <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={watershed.countries}>
-                            {watershed.countries}
+                          <div className="text-sm text-gray-500 max-w-xs truncate" title={region.countries}>
+                            {region.countries}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{watershed.papers}</div>
+                          <div className="text-sm text-gray-900">{region.papers}</div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-900">
-                            {watershed.citations}
+                            {region.citations}
                             <div className="text-xs text-gray-500">
-                              ({watershed.avgCitations} avg)
+                              ({region.avgCitations} avg)
                             </div>
                           </div>
                         </td>
                         <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={watershed.domains}>
-                            {watershed.domains}
+                          <div className="text-sm text-gray-500 max-w-xs truncate" title={region.domains}>
+                            {region.domains}
                           </div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{watershed.yearRange}</div>
+                          <div className="text-sm text-gray-900">{region.yearRange}</div>
                         </td>
                       </tr>
                     )) : (
                       <tr>
                         <td colSpan="6" className="px-6 py-4 text-center text-gray-500">
-                          No watershed data available
+                          No regional data available
                         </td>
                       </tr>
                     )}
@@ -471,7 +577,7 @@ const GenericGeographicImpactPage = () => {
                         Citations
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Watersheds
+                        Regions
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Research Domains
@@ -482,7 +588,7 @@ const GenericGeographicImpactPage = () => {
                     {countryData.length > 0 ? countryData.map((country, index) => (
                       <tr key={index} className="hover:bg-gray-50">
                         <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{country.name}</div>
+                          <div className="text-sm font-medium text-gray-900">{country.country}</div>
                         </td>
                         <td className="px-6 py-4 whitespace-nowrap">
                           <div className="text-sm text-gray-900">{country.papers}</div>
@@ -496,8 +602,8 @@ const GenericGeographicImpactPage = () => {
                           </div>
                         </td>
                         <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={country.watersheds}>
-                            {country.watersheds}
+                          <div className="text-sm text-gray-500 max-w-xs truncate" title={country.regions}>
+                            {country.regions}
                           </div>
                         </td>
                         <td className="px-6 py-4">

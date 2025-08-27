@@ -4,7 +4,7 @@ export const MODELS = {
     name: 'RAPID',
     displayName: 'RAPID',
     description: 'Routing Application for Parallel computatIon of Discharge',
-    dataPath: '../data/RAPID_analyzed.json',
+    dataPath: '../../data/RAPID_analyzed.json',
     color: '#3B82F6', // Blue
     domain: 'Hydrology',
     github: 'https://github.com/c-h-david/rapid',
@@ -15,7 +15,7 @@ export const MODELS = {
     name: 'CARDAMOM',
     displayName: 'CARDAMOM',
     description: 'Carbon Data Model Framework',
-    dataPath: '../data/CARDAMOM_analyzed.json',
+    dataPath: '../../data/CARDAMOM_analyzed.json',
     color: '#10B981', // Green
     domain: 'Ecology/Carbon Cycle',
     github: 'https://github.com/GCEL/CARDAMOM',
@@ -26,7 +26,7 @@ export const MODELS = {
     name: 'CMS-Flux',
     displayName: 'CMS-Flux',
     description: 'Carbon Monitoring System Flux',
-    dataPath: '../data/CMS-Flux_analyzed.json',
+    dataPath: '../../data/CMS-Flux_analyzed.json',
     color: '#F59E0B', // Amber
     domain: 'Carbon Flux Monitoring',
     github: 'https://github.com/ornldaac/cms',
@@ -37,7 +37,7 @@ export const MODELS = {
     name: 'ECCO',
     displayName: 'ECCO',
     description: 'Estimating the Circulation and Climate of the Ocean',
-    dataPath: '../data/ECCO_analyzed.json',
+    dataPath: '../../data/ECCO_analyzed.json',
     color: '#8B5CF6', // Purple
     domain: 'Oceanography',
     github: 'https://github.com/ECCO-GROUP',
@@ -48,7 +48,7 @@ export const MODELS = {
     name: 'ISSM',
     displayName: 'ISSM',
     description: 'Ice Sheet System Model',
-    dataPath: '../data/ISSM_analyzed.json',
+    dataPath: '../../data/ISSM_analyzed.json',
     color: '#06B6D4', // Cyan
     domain: 'Glaciology',
     github: 'https://github.com/ISSMteam/ISSM',
@@ -59,7 +59,7 @@ export const MODELS = {
     name: 'MOMO-CHEM',
     displayName: 'MOMO-CHEM',
     description: 'Multi-mOdel Multi-cOnstituent Chemical data assimilation',
-    dataPath: '../data/MOMO-CHEM_analyzed.json',
+    dataPath: '../../data/MOMO-CHEM_analyzed.json',
     color: '#EF4444', // Red
     domain: 'Atmospheric Chemistry',
     github: null, // No dedicated GitHub repository found

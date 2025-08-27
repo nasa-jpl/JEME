@@ -17,8 +17,8 @@ const GeographicImpactPage = () => {
   const [countryData, setCountryData] = useState([]);
   const [loading, setLoading] = useState(true);
   
-  // Google Maps API key
-  const GOOGLE_MAPS_API_KEY = process.env.GOOGLE_MAPS_API_KEY || 'REMOVED_API_KEY';
+  // Google Maps API key - should be set in environment variables
+  const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   
   useEffect(() => {
     processGeographicData();
@@ -354,14 +354,30 @@ const GeographicImpactPage = () => {
         {/* Google Map */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <h2 className="text-xl font-semibold text-gray-900 mb-4">Global Distribution</h2>
-          {/* Debug information */}
-          <div className="mb-4 p-2 bg-gray-50 text-xs">
-            <strong>Debug:</strong> Passing {countryData?.length || 0} countries to GoogleMapComponent
-            {countryData?.length > 0 && (
-              <div>Sample: {countryData[0]?.country} - {countryData[0]?.papers} papers</div>
-            )}
-          </div>
-          <GoogleMapComponent data={countryData} apiKey={GOOGLE_MAPS_API_KEY} />
+          {GOOGLE_MAPS_API_KEY ? (
+            <GoogleMapComponent data={countryData} apiKey={GOOGLE_MAPS_API_KEY} />
+          ) : (
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-yellow-800">
+                    Google Maps API Key Required
+                  </h3>
+                  <div className="mt-2 text-sm text-yellow-700">
+                    <p>
+                      To display the interactive map, please set up your Google Maps API key in the environment variables.
+                      Create a <code>.env</code> file and add <code>REACT_APP_GOOGLE_MAPS_API_KEY=your_key_here</code>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
