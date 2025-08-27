@@ -6,10 +6,7 @@ import { LineChart, Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, Re
 import { MoreHorizontal } from 'lucide-react';
 import colors from '../../utils/colors';
 
-// Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
-
-const FutureTrendsChart = () => {
+const FutureTrendsChart = ({ data }) => {
   // Process the data to create trend projections
   const trendData = useMemo(() => {
     // Helper function to extract year from paper
@@ -34,6 +31,9 @@ const FutureTrendsChart = () => {
 
     // Group data by year for historical analysis
     const yearlyData = {};
+    // Use provided data or empty array as fallback
+    const citationsData = data || [];
+    
     citationsData.forEach(paper => {
       const year = extractYear(paper);
       const citations = extractCitations(paper);
@@ -104,7 +104,7 @@ const FutureTrendsChart = () => {
 
     // Combine historical and projected data
     return [...historicalData, ...projectedData];
-  }, []);
+  }, [data]);
 
   // Calculate emerging research directions from recent papers
   const emergingTrends = useMemo(() => {
@@ -112,7 +112,7 @@ const FutureTrendsChart = () => {
     const recentDomains = {};
     const olderDomains = {};
     
-    citationsData.forEach(paper => {
+    (data || []).forEach(paper => {
       const year = paper.year || 
         (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0] && paper.published['date-parts'][0][0]) ||
         (paper['published-online'] && paper['published-online']['date-parts'] && paper['published-online']['date-parts'][0] && paper['published-online']['date-parts'][0][0]);
@@ -152,13 +152,13 @@ const FutureTrendsChart = () => {
     return domainTrends
       .sort((a, b) => (b.recentCount + b.growthRate) - (a.recentCount + a.growthRate))
       .slice(0, 5);
-  }, []);
+  }, [data]);
 
   // Calculate potential growth drivers based on recent trends
   const growthDrivers = useMemo(() => {
     // Analyze keywords and themes from recent papers
     const keywordAnalysis = {};
-    const recentPapers = citationsData.filter(paper => {
+    const recentPapers = (data || []).filter(paper => {
       const year = paper.year || 
         (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0] && paper.published['date-parts'][0][0]);
       return year >= 2020;
@@ -203,7 +203,7 @@ const FutureTrendsChart = () => {
     ];
 
     return drivers.sort((a, b) => b.impact - a.impact).slice(0, 4);
-  }, [emergingTrends]);
+  }, [emergingTrends, data]);
 
   // Custom tooltip
   const CustomTooltip = ({ active, payload, label }) => {
@@ -228,7 +228,7 @@ const FutureTrendsChart = () => {
         <div>
           <div className="text-base font-semibold text-gray-800">Future Trends & Predictions</div>
           <div className="text-sm text-gray-500 mt-1">
-            Projected growth and emerging research areas • Based on {citationsData.length} papers
+            Projected growth and emerging research areas • Based on {(data || []).length} papers
           </div>
         </div>
         <div className="flex gap-2">
@@ -406,7 +406,7 @@ const FutureTrendsChart = () => {
               Projection Summary
             </div>
             <div className="space-y-1 text-xs text-blue-800">
-              <div>• Based on {citationsData.length} historical papers</div>
+              <div>• Based on {(data || []).length} historical papers</div>
               <div>• {emergingTrends.length} active research domains identified</div>
               <div>• Growth projections use 5-year trend analysis</div>
               <div>• Confidence intervals reflect domain variability</div>

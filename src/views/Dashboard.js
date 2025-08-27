@@ -1,8 +1,8 @@
 // src/views/Dashboard.js
 // Main dashboard view that combines all components
 
-import React from 'react';
-import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import components
@@ -24,6 +24,23 @@ import JournalDistributionCard from '../components/charts/JournalDistributionCar
 import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
 
 const Dashboard = () => {
+  const [rapidData, setRapidData] = useState([]);
+
+  // Load RAPID data for time series chart
+  useEffect(() => {
+    const loadRapidData = async () => {
+      try {
+        const rapidModule = await import('../data/RAPID_analyzed.json');
+        const data = rapidModule.default || rapidModule;
+        setRapidData(data);
+      } catch (error) {
+        console.error('Failed to load RAPID data:', error);
+      }
+    };
+    
+    loadRapidData();
+  }, []);
+
   const models = [
     {
       name: "RAPID",
@@ -78,12 +95,12 @@ const Dashboard = () => {
           
           <div className="flex gap-8">
             <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">Dashboard</a>
-            <Link to="/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
-            <Link to="/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
-            <Link to="/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
-            <Link to="/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
-            <Link to="/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
-            <Link to="/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
+            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
+            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
+            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
+            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
+            <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
           </div>
           
           <div className="flex items-center gap-4">
@@ -200,11 +217,11 @@ const Dashboard = () => {
 
         
         <MetricsOverview />
-        <CitationTrendsChart />
+        <CitationTrendsChart data={rapidData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
           <ResearchDomainsCard />
-          <EngagementLevelsCard />
+          <EngagementLevelsCard data={rapidData} />
         </div>
         
         

@@ -13,18 +13,22 @@ const MetricCard = ({ title, value, icon, iconBg, trend, trendUp, breakdown }) =
       </div>
     </div>
     <div className="text-2xl font-semibold text-gray-900">{value}</div>
-    <div className={`flex items-center gap-2 mt-2 text-xs ${trendUp ? 'text-green-600' : 'text-red-600'}`}>
-      {trendUp ? <TrendingUp size={14} /> : <TrendingUp size={14} className="rotate-180" />}
-      <span>{trend}</span>
-    </div>
-    <div className="mt-2 text-xs text-gray-600">
-      {breakdown.map((item, index) => (
-        <div key={index} className="flex justify-between mt-1">
-          <span className="text-gray-500">{item.label}:</span>
-          <span className="font-medium text-gray-700">{item.value}</span>
-        </div>
-      ))}
-    </div>
+    {trend && (
+      <div className={`flex items-center gap-2 mt-2 text-xs ${trendUp ? 'text-green-600' : 'text-red-600'}`}>
+        {trendUp ? <TrendingUp size={14} /> : <TrendingUp size={14} className="rotate-180" />}
+        <span>{trend}</span>
+      </div>
+    )}
+    {breakdown && breakdown.length > 0 && (
+      <div className="mt-2 text-xs text-gray-600">
+        {breakdown.map((item, index) => (
+          <div key={index} className="flex justify-between mt-1">
+            <span className="text-gray-500">{item.label}:</span>
+            <span className="font-medium text-gray-700">{item.value}</span>
+          </div>
+        ))}
+      </div>
+    )}
   </div>
 );
 

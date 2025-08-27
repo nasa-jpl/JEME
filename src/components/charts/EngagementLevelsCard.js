@@ -5,19 +5,26 @@ import React, { useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { MoreHorizontal } from 'lucide-react';
 
-// Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
-
-const EngagementLevelsCard = () => {
+const EngagementLevelsCard = ({ data }) => {
   // Process the engagement levels data
   const engagementData = useMemo(() => {
     // Count papers by engagement level
     const engagementCounts = {};
     
+    // Use provided data or empty array as fallback
+    const citationsData = data || [];
+    
     citationsData.forEach(paper => {
       const level = paper.engagement_level;
       if (level && level !== "Unknown" && level !== "Not specified") {
-        engagementCounts[level] = (engagementCounts[level] || 0) + 1;
+        // Map the actual RAPID engagement levels to standardized names
+        let standardLevel = level;
+        if (level === "Level 2: Data/Method Usage") {
+          standardLevel = "Level 2: Data Usage";
+        } else if (level === "Level 3: Model/Method Adaptation") {
+          standardLevel = "Level 3: Model Adaptation";
+        }
+        engagementCounts[standardLevel] = (engagementCounts[standardLevel] || 0) + 1;
       } else {
         // Handle papers without engagement level classification
         engagementCounts["Unclassified"] = (engagementCounts["Unclassified"] || 0) + 1;
@@ -65,7 +72,7 @@ const EngagementLevelsCard = () => {
       .filter(item => item.value > 0); // Only show levels that have papers
 
     return processedData;
-  }, []);
+  }, [data]);
 
   // Calculate total classified papers
   const totalClassified = engagementData
@@ -135,7 +142,7 @@ const EngagementLevelsCard = () => {
         <div>
           <div className="text-base font-semibold text-gray-800">Engagement Level Distribution</div>
           <div className="text-sm text-gray-500 mt-1">
-            How deeply is RAPID being utilized in research? • {citationsData.length} total papers
+            How deeply is this model being utilized in research? • {(data || []).length} total papers
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">

@@ -3,7 +3,7 @@ import { ArrowLeft, Download, Filter, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from './rapid_20250528_2.json';
+import citationsData from '../data/RAPID_analyzed.json';
 
 const ResearchDomainsPage = () => {
   const [selectedDomain, setSelectedDomain] = useState('all');
