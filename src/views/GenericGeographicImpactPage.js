@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
-import InteractiveWorldMap from '../components/InteractiveWorldMap';
+import GoogleMapComponent from '../components/GoogleMapComponent';
 
 const GenericGeographicImpactPage = () => {
   const { modelName } = useParams();
@@ -15,6 +15,9 @@ const GenericGeographicImpactPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [citationsData, setCitationsData] = useState([]);
+  
+  // Google Maps API key
+  const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   
   useEffect(() => {
     loadModelData();
@@ -32,8 +35,30 @@ const GenericGeographicImpactPage = () => {
       setLoading(true);
       console.log(`Loading geographic data for ${modelConfig.displayName}`);
       
-      // Dynamically import the model's JSON data
-      const dataModule = await import(modelConfig.dataPath);
+      // Import the model's JSON data
+      let dataModule;
+      switch(modelName) {
+        case 'RAPID':
+          dataModule = await import('../data/RAPID_analyzed.json');
+          break;
+        case 'CMS-Flux':
+          dataModule = await import('../data/CMS-Flux_analyzed.json');
+          break;
+        case 'ECCO':
+          dataModule = await import('../data/ECCO_analyzed.json');
+          break;
+        case 'ISSM':
+          dataModule = await import('../data/ISSM_analyzed.json');
+          break;
+        case 'MOMO-CHEM':
+          dataModule = await import('../data/MOMO-CHEM_analyzed.json');
+          break;
+        case 'CARDAMOM':
+          dataModule = await import('../data/CARDAMOM_analyzed.json');
+          break;
+        default:
+          throw new Error(`Unknown model: ${modelName}`);
+      }
       const data = dataModule.default;
       setCitationsData(data);
       
@@ -462,10 +487,23 @@ const GenericGeographicImpactPage = () => {
               </div>
               
               <div className="h-96 bg-gray-50 rounded-lg">
-                <InteractiveWorldMap 
-                  data={citationsData} 
-                  modelName={modelConfig.displayName}
-                />
+                {GOOGLE_MAPS_API_KEY ? (
+                  <GoogleMapComponent 
+                    data={countryData}
+                    regionalData={watershedData}
+                    apiKey={GOOGLE_MAPS_API_KEY}
+                  />
+                ) : (
+                  <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 h-full flex items-center justify-center">
+                    <div className="text-center">
+                      <div className="text-yellow-800 font-medium mb-2">Google Maps API Key Required</div>
+                      <div className="text-yellow-700 text-sm">
+                        To display the interactive map, please set up your Google Maps API key in the environment variables.
+                        Create a <code className="bg-yellow-100 px-1 rounded">.env</code> file and add <code className="bg-yellow-100 px-1 rounded">REACT_APP_GOOGLE_MAPS_API_KEY=your_key_here</code>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             

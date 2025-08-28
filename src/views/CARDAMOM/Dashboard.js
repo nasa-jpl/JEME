@@ -1,35 +1,49 @@
-// src/views/Dashboard.js
-// Main dashboard view that combines all components
-
-import React from 'react';
-import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf } from 'lucide-react';
+// CARDAMOM Dashboard - matches the comprehensive main dashboard layout
+import React, { useState, useEffect } from 'react';
+import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import components
-import PaperInfo from '../../components/CARDAMOM/PaperInfo';
-import Header from '../../components/CARDAMOM/Header';
+import PaperInfo from '../../components/PaperInfo';
+import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 // Import section components
-import MetricsOverview from './MetricsOverview';
+import MetricsOverview from '../sections/MetricsOverview';
 
 // Import chart components
-import CitationTrendsChart from '../../components/charts/CARDAMOM/CitationTrendsChart';
-import ModelComparisonChart from '../../components/charts/CARDAMOM/ModelComparisonChart';
-import ResearchDomainsCard from '../../components/charts/CARDAMOM/ResearchDomainsCard';
-import EngagementLevelsCard from '../../components/charts/CARDAMOM/EngagementLevelsCard';
-import FutureTrendsChart from '../../components/charts/CARDAMOM/FutureTrendsChart'; 
-import DashboardSummaryCard from '../../components/charts/CARDAMOM/DashboardSummaryCard';
-import JournalDistributionCard from '../../components/charts/CARDAMOM/JournalDistributionCard';
-import GitHubMetricsCard from '../../components/charts/CARDAMOM/GitHubMetricsCard';
+import CitationTrendsChart from '../../components/charts/CitationTrendsChart';
+import ModelComparisonChart from '../../components/charts/ModelComparisonChart';
+import ResearchDomainsCard from '../../components/charts/ResearchDomainsCard';
+import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
+import FutureTrendsChart from '../../components/charts/FutureTrendsChart'; 
+import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
+import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
+import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
 
-const Dashboard = () => {
+const CARDAMOMDashboard = () => {
+  const [cardamomData, setCardamomData] = useState([]);
+
+  // Load CARDAMOM data for time series chart
+  useEffect(() => {
+    const loadCardamomData = async () => {
+      try {
+        const cardamomModule = await import('../../data/CARDAMOM_analyzed.json');
+        const data = cardamomModule.default || cardamomModule;
+        setCardamomData(data);
+      } catch (error) {
+        console.error('Failed to load CARDAMOM data:', error);
+      }
+    };
+    
+    loadCardamomData();
+  }, []);
   const models = [
     {
       name: "RAPID",
       icon: <Zap size={20} className="text-blue-600" />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard"
+      link: "/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
@@ -77,13 +91,13 @@ const Dashboard = () => {
           </div>
           
           <div className="flex gap-8">
-            <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">Dashboard</a>
-            <Link to="/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
-            <Link to="/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
-            <Link to="/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
-            <Link to="/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
-            <Link to="/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
-            <Link to="/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
+            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
+            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
+            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
+            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
+            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
+            <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">CARDAMOM</a>
           </div>
           
           <div className="flex items-center gap-4">
@@ -122,14 +136,20 @@ const Dashboard = () => {
               <Link 
                 key={index}
                 to={model.link}
-                className="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
+                className={`group p-4 border rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200 ${
+                  model.name === 'CARDAMOM' ? 'border-blue-300 bg-blue-50' : 'border-gray-200'
+                }`}
               >
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-blue-50 transition-colors">
+                  <div className={`p-2 rounded-lg transition-colors ${
+                    model.name === 'CARDAMOM' ? 'bg-blue-100' : 'bg-gray-50 group-hover:bg-blue-50'
+                  }`}>
                     {model.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-900 transition-colors">
+                    <h3 className={`font-semibold transition-colors ${
+                      model.name === 'CARDAMOM' ? 'text-blue-900' : 'text-gray-900 group-hover:text-blue-900'
+                    }`}>
                       {model.name}
                     </h3>
                     <p className="text-sm text-gray-600 mt-1 leading-relaxed">
@@ -142,8 +162,8 @@ const Dashboard = () => {
           </div>
         </div>
         
-        <PaperInfo />
-        <Header />
+        <PaperInfo modelName="CARDAMOM" />
+        <Header modelName="CARDAMOM" />
         
         {/* Data Verification Section */}
         <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
@@ -176,7 +196,7 @@ const Dashboard = () => {
               </div>
               <div>
                 <div className="font-medium text-green-900">Geographic Impact</div>
-                <div className="text-sm text-green-700">Explore watersheds</div>
+                <div className="text-sm text-green-700">Explore regions</div>
               </div>
               <ExternalLink size={16} className="ml-auto text-green-400" />
             </Link>
@@ -199,21 +219,20 @@ const Dashboard = () => {
         
 
         
-        <MetricsOverview />
-        <CitationTrendsChart />
+        <MetricsOverview data={cardamomData} />
+        <CitationTrendsChart data={cardamomData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <ResearchDomainsCard />
-          <EngagementLevelsCard />
+          <ResearchDomainsCard data={cardamomData} />
+          <EngagementLevelsCard data={cardamomData} />
         </div>
         
-        
-        <FutureTrendsChart />
-        <DashboardSummaryCard />
+        <FutureTrendsChart data={cardamomData} />
+        <DashboardSummaryCard data={cardamomData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
-          <JournalDistributionCard />
-          <GitHubMetricsCard />
+          <JournalDistributionCard data={cardamomData} />
+          <GitHubMetricsCard data={cardamomData} />
         </div>
         
         <Footer />
@@ -222,4 +241,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default CARDAMOMDashboard;

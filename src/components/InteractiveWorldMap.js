@@ -4,7 +4,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Info, ZoomIn, ZoomOut, RotateCcw } from 'lucide-react';
 
-const InteractiveWorldMap = ({ watershedData, selectedRegion, onRegionSelect }) => {
+const InteractiveWorldMap = ({ watershedData, data, selectedRegion, onRegionSelect }) => {
   const svgRef = useRef(null);
   const [tooltip, setTooltip] = useState({ show: false, x: 0, y: 0, content: null });
   const [mapTransform, setMapTransform] = useState({ scale: 1, translateX: 0, translateY: 0 });
@@ -63,8 +63,20 @@ const InteractiveWorldMap = ({ watershedData, selectedRegion, onRegionSelect }) 
   const getCountryStats = () => {
     const countryStats = {};
     
-    watershedData.forEach(watershed => {
-      const countries = watershed.countries.split(/[,/]/).map(c => c.trim());
+    // Use either watershedData or data prop, with fallback to empty array
+    const dataToProcess = watershedData || data || [];
+    
+    dataToProcess.forEach(watershed => {
+      // Handle different data structures - some might have countries as string, others as array
+      let countries = [];
+      if (watershed.countries) {
+        if (typeof watershed.countries === 'string') {
+          countries = watershed.countries.split(/[,/]/).map(c => c.trim());
+        } else if (Array.isArray(watershed.countries)) {
+          countries = watershed.countries;
+        }
+      }
+      
       countries.forEach(country => {
         if (countryCoordinates[country]) {
           if (!countryStats[country]) {
@@ -77,11 +89,16 @@ const InteractiveWorldMap = ({ watershedData, selectedRegion, onRegionSelect }) 
             };
           }
           countryStats[country].watersheds += 1;
-          countryStats[country].papers += watershed.papers;
-          countryStats[country].citations += watershed.citations;
-          watershed.domains.split(', ').forEach(domain => {
-            if (domain.trim()) countryStats[country].domains.add(domain.trim());
-          });
+          countryStats[country].papers += watershed.papers || 0;
+          countryStats[country].citations += watershed.citations || 0;
+          
+          // Handle domains field safely
+          if (watershed.domains) {
+            const domainString = typeof watershed.domains === 'string' ? watershed.domains : watershed.domains.toString();
+            domainString.split(', ').forEach(domain => {
+              if (domain.trim()) countryStats[country].domains.add(domain.trim());
+            });
+          }
         }
       });
     });

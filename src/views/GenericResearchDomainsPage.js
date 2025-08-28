@@ -33,8 +33,30 @@ const GenericResearchDomainsPage = () => {
         setLoading(true);
         console.log(`Loading research domains data for ${modelConfig.displayName}`);
         
-        // Dynamically import the model's JSON data
-        const dataModule = await import(modelConfig.dataPath);
+        // Import the model's JSON data
+        let dataModule;
+        switch(modelName) {
+          case 'RAPID':
+            dataModule = await import('../data/RAPID_analyzed.json');
+            break;
+          case 'CMS-Flux':
+            dataModule = await import('../data/CMS-Flux_analyzed.json');
+            break;
+          case 'ECCO':
+            dataModule = await import('../data/ECCO_analyzed.json');
+            break;
+          case 'ISSM':
+            dataModule = await import('../data/ISSM_analyzed.json');
+            break;
+          case 'MOMO-CHEM':
+            dataModule = await import('../data/MOMO-CHEM_analyzed.json');
+            break;
+          case 'CARDAMOM':
+            dataModule = await import('../data/CARDAMOM_analyzed.json');
+            break;
+          default:
+            throw new Error(`Unknown model: ${modelName}`);
+        }
         const data = dataModule.default;
         setCitationsData(data);
         

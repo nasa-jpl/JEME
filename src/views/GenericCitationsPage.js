@@ -97,10 +97,35 @@ const GenericCitationsPage = () => {
       try {
         setLoading(true);
         console.log(`Loading citations data for ${modelConfig.displayName}`);
+        console.log(`Model name: ${modelName}`);
+        console.log(`Data path: ${modelConfig.dataPath}`);
         
-        // Dynamically import the model's JSON data
-        const dataModule = await import(modelConfig.dataPath);
+        // Import the model's JSON data
+        let dataModule;
+        switch(modelName) {
+          case 'RAPID':
+            dataModule = await import('../data/RAPID_analyzed.json');
+            break;
+          case 'CMS-Flux':
+            dataModule = await import('../data/CMS-Flux_analyzed.json');
+            break;
+          case 'ECCO':
+            dataModule = await import('../data/ECCO_analyzed.json');
+            break;
+          case 'ISSM':
+            dataModule = await import('../data/ISSM_analyzed.json');
+            break;
+          case 'MOMO-CHEM':
+            dataModule = await import('../data/MOMO-CHEM_analyzed.json');
+            break;
+          case 'CARDAMOM':
+            dataModule = await import('../data/CARDAMOM_analyzed.json');
+            break;
+          default:
+            throw new Error(`Unknown model: ${modelName}`);
+        }
         const citationsData = dataModule.default;
+        console.log(`Raw data loaded - type: ${typeof citationsData}, length: ${Array.isArray(citationsData) ? citationsData.length : 'not array'}`);
         
         processCitationsData(citationsData);
       } catch (error) {
@@ -160,6 +185,8 @@ const GenericCitationsPage = () => {
   
   // Process citations data format
   const processCitationsData = (data) => {
+    console.log(`processCitationsData called with:`, typeof data, Array.isArray(data) ? `array of ${data.length}` : 'not array');
+    
     // Handle both single object and array formats
     const records = Array.isArray(data) ? data : [data];
     
@@ -262,6 +289,7 @@ const GenericCitationsPage = () => {
     transformedData.sort((a, b) => b.cites - a.cites);
     
     console.log(`Transformed ${transformedData.length} citations`);
+    console.log('First few citations:', transformedData.slice(0, 3));
     setCitations(transformedData);
     
     // Update year range based on actual data
@@ -354,9 +382,12 @@ const GenericCitationsPage = () => {
       citation.year >= yearRange[0] && 
       citation.year <= yearRange[1];
     
-    return searchMatch && engagementMatch && domainMatch && watershedMatch && countryMatch && 
+    const result = searchMatch && engagementMatch && domainMatch && watershedMatch && countryMatch && 
            (typeof citation.year === 'number' ? yearMatch : true);
+    return result;
   });
+  
+  console.log(`Filtered ${filteredCitations.length} citations from ${citations.length} total`);
   
   // Sort citations
   const sortedCitations = [...filteredCitations].sort((a, b) => {
