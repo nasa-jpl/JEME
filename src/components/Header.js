@@ -4,12 +4,19 @@
 import React from 'react';
 import { Filter, Calendar, Download } from 'lucide-react';
 
-const Header = ({ modelName = 'RAPID' }) => (
-  <div className="flex justify-between items-center mb-6">
-    <div>
-      <h2 className="text-xl font-semibold text-gray-900">{modelName} Model Dashboard</h2>
-      <div className="text-sm text-gray-500">Last updated: June 01, 2025</div>
-    </div>
+const Header = ({ modelName = 'RAPID' }) => {
+  const today = new Date().toLocaleDateString('en-US', { 
+    year: 'numeric', 
+    month: 'long', 
+    day: '2-digit' 
+  });
+
+  return (
+    <div className="flex justify-between items-center mb-6">
+      <div>
+        <h2 className="text-xl font-semibold text-gray-900">{modelName} Model Dashboard</h2>
+        <div className="text-sm text-gray-500">Last updated: {today}</div>
+      </div>
     <div className="flex gap-3">
       <button className="flex items-center gap-2 px-3 py-2 rounded-md border border-gray-300 bg-white text-sm font-medium text-gray-700 hover:bg-gray-100">
         <Filter size={16} />
@@ -25,6 +32,7 @@ const Header = ({ modelName = 'RAPID' }) => (
       </button>
     </div>
   </div>
-);
+  );
+};
 
 export default Header;
