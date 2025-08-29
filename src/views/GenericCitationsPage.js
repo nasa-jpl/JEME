@@ -1,12 +1,8 @@
-// src/views/CitationsPage.js
+// Generic Citations Page component that works with any model
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc } from 'lucide-react';
-import { Link } from 'react-router-dom';
-
-// Import the JSON data directly
-// Note: You'll need to place the crossref_data.json file in the same directory as this component
-// or adjust the path accordingly
-import citationsData from '../data/RAPID_analyzed.json';
+import { Link, useParams } from 'react-router-dom';
+import { getModelConfig } from '../config/modelConfig';
 
 // Multi-select component
 const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
@@ -73,7 +69,10 @@ const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
   );
 };
 
-const CitationsPage = () => {
+const GenericCitationsPage = () => {
+  const { modelName } = useParams();
+  const modelConfig = getModelConfig(modelName);
+  
   const [citations, setCitations] = useState([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
@@ -85,20 +84,60 @@ const CitationsPage = () => {
   const [yearRange, setYearRange] = useState([2011, 2025]);
   const [error, setError] = useState(null);
   
-  // Process the imported JSON data
+  // Load model-specific data
   useEffect(() => {
-    try {
-      setLoading(true);
-      console.log('Processing Crossref citation data');
-      processCrossrefData(citationsData);
-    } catch (error) {
-      console.error('Error processing imported data:', error);
-      setError(`Error: ${error.message}`);
-      setDemoData();
-    } finally {
-      setLoading(false);
-    }
-  }, []);
+    const loadModelData = async () => {
+      if (!modelConfig) {
+        setError(`Model "${modelName}" not found`);
+        setLoading(false);
+        return;
+      }
+
+      try {
+        setLoading(true);
+        console.log(`Loading citations data for ${modelConfig.displayName}`);
+        console.log(`Model name: ${modelName}`);
+        console.log(`Data path: ${modelConfig.dataPath}`);
+        
+        // Import the model's JSON data
+        let dataModule;
+        switch(modelName) {
+          case 'RAPID':
+            dataModule = await import('../data/RAPID_analyzed.json');
+            break;
+          case 'CMS-Flux':
+            dataModule = await import('../data/CMS-Flux_analyzed.json');
+            break;
+          case 'ECCO':
+            dataModule = await import('../data/ECCO_analyzed.json');
+            break;
+          case 'ISSM':
+            dataModule = await import('../data/ISSM_analyzed.json');
+            break;
+          case 'MOMO-CHEM':
+            dataModule = await import('../data/MOMO-CHEM_analyzed.json');
+            break;
+          case 'CARDAMOM':
+            dataModule = await import('../data/CARDAMOM_analyzed.json');
+            break;
+          default:
+            throw new Error(`Unknown model: ${modelName}`);
+        }
+        const citationsData = dataModule.default;
+        console.log(`Raw data loaded - type: ${typeof citationsData}, length: ${Array.isArray(citationsData) ? citationsData.length : 'not array'}`);
+        
+        processCitationsData(citationsData);
+      } catch (error) {
+        console.error('Error loading model data:', error);
+        setError(`Error loading data for ${modelConfig.displayName}: ${error.message}`);
+        setDemoData();
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadModelData();
+  }, [modelName, modelConfig]);
   
   // Extract year from date-parts array
   const extractYear = (dateObj) => {
@@ -143,8 +182,10 @@ const CitationsPage = () => {
       .trim();
   };
   
-  // Process Crossref data format
-  const processCrossrefData = (data) => {
+  // Process citations data format
+  const processCitationsData = (data) => {
+    console.log(`processCitationsData called with:`, typeof data, Array.isArray(data) ? `array of ${data.length}` : 'not array');
+    
     // Handle both single object and array formats
     const records = Array.isArray(data) ? data : [data];
     
@@ -152,14 +193,15 @@ const CitationsPage = () => {
       throw new Error("No data found in JSON file");
     }
     
-    console.log(`Processing ${records.length} Crossref records`);
+    console.log(`Processing ${records.length} citation records for ${modelConfig.displayName}`);
     
-    // Transform the Crossref data
+    // Transform the citation data
     const transformedData = records.map((record, index) => {
       // Extract publication year
       const publishedYear = extractYear(record.published) || 
                            extractYear(record['published-online']) || 
-                           extractYear(record['published-print']);
+                           extractYear(record['published-print']) ||
+                           record.year;
       
       // Format title (remove array wrapper if present)
       const title = Array.isArray(record.title) ? record.title[0] : record.title || 'Untitled';
@@ -179,11 +221,11 @@ const CitationsPage = () => {
       const url = record.URL || (record.DOI ? `https://doi.org/${record.DOI}` : '');
       
       // Use engagement level from JSON file if available, otherwise use default
-      let engagementLevel = record.engagement_level || 'Level 1: Basic Citation';
+      let engagementLevel = record.engagement_level || 'Level 1: Simple Citation';
       
       // If engagement_level is not in the JSON, fall back to citation-based determination
       if (!record.engagement_level) {
-        const citationCount = record['is-referenced-by-count'] || 0;
+        const citationCount = record['is-referenced-by-count'] || record.cites || record.citations || 0;
         if (citationCount > 500) {
           engagementLevel = 'Level 4: Foundational Method';
         } else if (citationCount > 100) {
@@ -194,23 +236,27 @@ const CitationsPage = () => {
       }
       
       // Determine research domain from JSON or title keywords
-      let researchDomain = record.research_domain || 'Water Resources';
-      if (!record.research_domain) {
-        if (title.toLowerCase().includes('hydro')) {
+      let researchDomain = record.research_domain || modelConfig.domain || 'Unknown';
+      if (!record.research_domain && !modelConfig.domain) {
+        // Try to infer from title
+        const titleLower = title.toLowerCase();
+        if (titleLower.includes('hydro')) {
           researchDomain = 'Hydrology';
-        } else if (title.toLowerCase().includes('river') || title.toLowerCase().includes('flow')) {
-          researchDomain = 'River Modeling';
-        } else if (title.toLowerCase().includes('climate')) {
+        } else if (titleLower.includes('climate')) {
           researchDomain = 'Climate Science';
+        } else if (titleLower.includes('ocean')) {
+          researchDomain = 'Ocean Science';
+        } else if (titleLower.includes('carbon')) {
+          researchDomain = 'Carbon Cycle';
         }
       }
       
       // Extract country info (use from JSON if available)
       const country = record.country || 'Global';
       
-      // Check if this is a key RAPID paper
-      const isOriginalPaper = title.toLowerCase().includes('rapid') && 
-                             title.toLowerCase().includes('routing');
+      // Check if this is a key paper for the model
+      const modelNameLower = modelConfig.name.toLowerCase();
+      const isOriginalPaper = title.toLowerCase().includes(modelNameLower);
       
       return {
         id: index + 1,
@@ -220,7 +266,7 @@ const CitationsPage = () => {
         source: source,
         publisher: record.publisher || '',
         doi: record.DOI || '',
-        cites: record['is-referenced-by-count'] || 0,
+        cites: record['is-referenced-by-count'] || record.cites || record.citations || 0,
         url: url,
         fulltext_url: url,
         cites_url: record.DOI ? `https://scholar.google.com/scholar?cites=${record.DOI}` : '',
@@ -240,6 +286,7 @@ const CitationsPage = () => {
     transformedData.sort((a, b) => b.cites - a.cites);
     
     console.log(`Transformed ${transformedData.length} citations`);
+    console.log('First few citations:', transformedData.slice(0, 3));
     setCitations(transformedData);
     
     // Update year range based on actual data
@@ -256,30 +303,30 @@ const CitationsPage = () => {
   
   // Set demo data (fallback)
   const setDemoData = () => {
-    console.log("Setting up demo citation data");
+    console.log(`Setting up demo citation data for ${modelConfig.displayName}`);
     
     const mockCitations = [
       {
         id: 1,
-        title: "Global Reconstruction of Naturalized River Flows at 2.94 Million Reaches",
-        authors: "Lin, Peirong; Pan, Ming; Beck, Hylke E.; Yang, Yuan; Yamazaki, Dai",
-        year: 2019,
-        source: "Water Resources Research",
-        publisher: "American Geophysical Union (AGU)",
-        doi: "10.1029/2019WR025287",
-        cites: 213,
-        url: "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019WR025287",
-        engagement_level: "Level 3: Model Adaptation",
-        research_domain: "River Modeling",
+        title: `Example Paper Using ${modelConfig.displayName}`,
+        authors: "Smith, J.; Doe, A.; Johnson, B.",
+        year: 2020,
+        source: "Journal of Scientific Computing",
+        publisher: "Academic Publisher",
+        doi: "10.1000/example",
+        cites: 42,
+        url: "https://example.com/paper",
+        engagement_level: "Level 2: Data Usage",
+        research_domain: modelConfig.domain || "Unknown",
         country: "Global",
-        isOriginalPaper: true,
-        abstract: "Spatiotemporally continuous global river discharge estimates across the full spectrum of stream orders are vital to a range of hydrologic applications, yet they remain poorly constrained..."
+        isOriginalPaper: false,
+        abstract: `This paper demonstrates the application of ${modelConfig.displayName} model for scientific research...`
       }
     ];
     
     setCitations(mockCitations);
     setLoading(false);
-    setError("Using demo data based on provided research paper.");
+    setError(`Using demo data for ${modelConfig.displayName}.`);
   };
 
   // Get unique values for filter dropdowns
@@ -327,9 +374,12 @@ const CitationsPage = () => {
       citation.year >= yearRange[0] && 
       citation.year <= yearRange[1];
     
-    return searchMatch && engagementMatch && domainMatch && countryMatch && 
+    const result = searchMatch && engagementMatch && domainMatch && countryMatch && 
            (typeof citation.year === 'number' ? yearMatch : true);
+    return result;
   });
+  
+  console.log(`Filtered ${filteredCitations.length} citations from ${citations.length} total`);
   
   // Sort citations
   const sortedCitations = [...filteredCitations].sort((a, b) => {
@@ -391,7 +441,7 @@ const CitationsPage = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', 'crossref_citations.csv');
+    link.setAttribute('download', `${modelName}_citations.csv`);
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -419,17 +469,30 @@ const CitationsPage = () => {
       return acc;
     }, {})
   };
+
+  if (!modelConfig) {
+    return (
+      <div className="bg-gray-100 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="text-center">
+            <h1 className="text-2xl font-bold text-red-600">Model Not Found</h1>
+            <p className="text-gray-600 mt-2">The model "{modelName}" is not configured.</p>
+          </div>
+        </div>
+      </div>
+    );
+  }
   
   return (
     <div className="bg-gray-100 min-h-screen">
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <Link to="/science-model-dashboard" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
+            <Link to={`/science-model-dashboard/${modelName}`} className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
               <ArrowLeft size={18} className="mr-1" />
-              <span className="font-medium">Back to Dashboard</span>
+              <span className="font-medium">Back to {modelConfig.displayName} Dashboard</span>
             </Link>
-            <h1 className="text-xl font-semibold text-gray-900">Crossref Citation Analytics</h1>
+            <h1 className="text-xl font-semibold text-gray-900">{modelConfig.displayName} Citation Analytics</h1>
           </div>
         </div>
       </header>
@@ -453,7 +516,7 @@ const CitationsPage = () => {
           <>
             {/* Statistics Summary */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-              <div className="text-lg font-semibold text-gray-800 mb-4">Citation Statistics</div>
+              <div className="text-lg font-semibold text-gray-800 mb-4">{modelConfig.displayName} Citation Statistics</div>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-sm text-blue-700 mb-1">Total Publications</div>
@@ -477,46 +540,46 @@ const CitationsPage = () => {
               </div>
               
               {/* Engagement Level Distribution */}
-                      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
-                      <div>
-                        <div className="text-sm font-medium text-gray-700 mb-2">By Engagement Level</div>
-                        <div className="space-y-2">
-                        {Object.entries(citationStats.byEngagement)
-                          .sort(([a], [b]) => a.localeCompare(b))
-                          .slice(0, 5)
-                          .map(([level, count]) => (
-                          <div key={level} className="flex justify-between text-sm">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-4">
+                <div>
+                  <div className="text-sm font-medium text-gray-700 mb-2">By Engagement Level</div>
+                  <div className="space-y-2">
+                    {Object.entries(citationStats.byEngagement)
+                      .sort(([a], [b]) => a.localeCompare(b))
+                      .slice(0, 5)
+                      .map(([level, count]) => (
+                        <div key={level} className="flex justify-between text-sm">
                           <span className="text-gray-600 truncate">{level}</span>
                           <span className="font-medium text-gray-900">{count}</span>
-                          </div>
-                        ))}
                         </div>
-                      </div>
-                      
-                      <div>
-                        <div className="text-sm font-medium text-gray-700 mb-2">By Research Domain</div>
-                        <div className="space-y-2">
-                        {Object.entries(citationStats.byDomain)
-                          .sort(([a], [b]) => a.localeCompare(b))
-                          .slice(0, 5)
-                          .map(([domain, count]) => (
-                          <div key={domain} className="flex justify-between text-sm">
+                      ))}
+                  </div>
+                </div>
+                
+                <div>
+                  <div className="text-sm font-medium text-gray-700 mb-2">By Research Domain</div>
+                  <div className="space-y-2">
+                    {Object.entries(citationStats.byDomain)
+                      .sort(([a], [b]) => a.localeCompare(b))
+                      .slice(0, 5)
+                      .map(([domain, count]) => (
+                        <div key={domain} className="flex justify-between text-sm">
                           <span className="text-gray-600 truncate">{domain}</span>
                           <span className="font-medium text-gray-900">{count}</span>
-                          </div>
-                        ))}
                         </div>
-                      </div>
-                      </div>
-                    </div>
-                    
-                    {/* Citation Table */}
+                      ))}
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            {/* Citation Table */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                 <div>
-                  <div className="text-lg font-semibold text-gray-800">Research Publications</div>
+                  <div className="text-lg font-semibold text-gray-800">{modelConfig.displayName} Research Publications</div>
                   <p className="text-sm text-gray-500 mt-1">
-                    Academic publications with detailed metadata from Crossref
+                    Academic publications with detailed metadata
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -746,4 +809,4 @@ const CitationsPage = () => {
   );
 };
 
-export default CitationsPage;
+export default GenericCitationsPage;

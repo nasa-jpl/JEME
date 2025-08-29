@@ -1,36 +1,34 @@
-// src/views/Dashboard.js
-// Main dashboard view that combines all components
-
+// RAPID Dashboard - matches the comprehensive main dashboard layout
 import React, { useState, useEffect } from 'react';
 import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import components
-import PaperInfo from '../components/PaperInfo';
-import Header from '../components/Header';
-import Footer from '../components/Footer';
+import PaperInfo from '../../components/PaperInfo';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 // Import section components
-import MetricsOverview from './sections/MetricsOverview';
+import MetricsOverview from '../sections/MetricsOverview';
 
 // Import chart components
-import CitationTrendsChart from '../components/charts/CitationTrendsChart';
-import ModelComparisonChart from '../components/charts/ModelComparisonChart';
-import ResearchDomainsCard from '../components/charts/ResearchDomainsCard';
-import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
-import FutureTrendsChart from '../components/charts/FutureTrendsChart'; 
-import DashboardSummaryCard from '../components/charts/DashboardSummaryCard';
-import JournalDistributionCard from '../components/charts/JournalDistributionCard';
-import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
+import CitationTrendsChart from '../../components/charts/CitationTrendsChart';
+import ModelComparisonChart from '../../components/charts/ModelComparisonChart';
+import ResearchDomainsCard from '../../components/charts/ResearchDomainsCard';
+import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
+import FutureTrendsChart from '../../components/charts/FutureTrendsChart'; 
+import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
+import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
+import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
 
-const Dashboard = () => {
+const RAPIDDashboard = () => {
   const [rapidData, setRapidData] = useState([]);
 
   // Load RAPID data for time series chart
   useEffect(() => {
     const loadRapidData = async () => {
       try {
-        const rapidModule = await import('../data/RAPID_analyzed.json');
+        const rapidModule = await import('../../data/RAPID_analyzed.json');
         const data = rapidModule.default || rapidModule;
         setRapidData(data);
       } catch (error) {
@@ -46,7 +44,7 @@ const Dashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} className="text-blue-600" />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard"
+      link: "/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
@@ -94,8 +92,8 @@ const Dashboard = () => {
           </div>
           
           <div className="flex gap-8">
-            <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">Dashboard</a>
-            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
+            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
+            <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">RAPID</a>
             <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
             <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
@@ -139,14 +137,20 @@ const Dashboard = () => {
               <Link 
                 key={index}
                 to={model.link}
-                className="group p-4 border border-gray-200 rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200"
+                className={`group p-4 border rounded-lg hover:border-blue-300 hover:shadow-md transition-all duration-200 ${
+                  model.name === 'RAPID' ? 'border-blue-300 bg-blue-50' : 'border-gray-200'
+                }`}
               >
                 <div className="flex items-start gap-3">
-                  <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-blue-50 transition-colors">
+                  <div className={`p-2 rounded-lg transition-colors ${
+                    model.name === 'RAPID' ? 'bg-blue-100' : 'bg-gray-50 group-hover:bg-blue-50'
+                  }`}>
                     {model.icon}
                   </div>
                   <div className="flex-1 min-w-0">
-                    <h3 className="font-semibold text-gray-900 group-hover:text-blue-900 transition-colors">
+                    <h3 className={`font-semibold transition-colors ${
+                      model.name === 'RAPID' ? 'text-blue-900' : 'text-gray-900 group-hover:text-blue-900'
+                    }`}>
                       {model.name}
                     </h3>
                     <p className="text-sm text-gray-600 mt-1 leading-relaxed">
@@ -159,8 +163,8 @@ const Dashboard = () => {
           </div>
         </div>
         
-        <PaperInfo />
-        <Header />
+        <PaperInfo modelName="RAPID" />
+        <Header modelName="RAPID" />
         
         {/* Data Verification Section */}
         <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
@@ -171,7 +175,7 @@ const Dashboard = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link 
-              to="/citations" 
+              to="/science-model-dashboard/RAPID/citations" 
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -185,7 +189,7 @@ const Dashboard = () => {
             </Link>
             
             <Link 
-              to="/geographic-impact" 
+              to="/science-model-dashboard/RAPID/geographic-impact" 
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -199,7 +203,7 @@ const Dashboard = () => {
             </Link>
             
             <Link 
-              to="/research-domains" 
+              to="/science-model-dashboard/RAPID/research-domains" 
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">
@@ -214,16 +218,13 @@ const Dashboard = () => {
           </div>
         </div>
         
-
-        
-        <MetricsOverview />
+        <MetricsOverview data={rapidData} />
         <CitationTrendsChart data={rapidData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
           <ResearchDomainsCard data={rapidData} />
           <EngagementLevelsCard data={rapidData} />
         </div>
-        
         
         <FutureTrendsChart data={rapidData} />
         <DashboardSummaryCard data={rapidData} />
@@ -239,4 +240,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default RAPIDDashboard;

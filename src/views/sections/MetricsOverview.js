@@ -6,7 +6,7 @@ import { Award, TrendingUp, GitBranch, Droplet } from 'lucide-react';
 import MetricCard from '../../components/MetricCard';
 
 // Import the JSON data directly
-import citationsData from '../rapid_20250528_2.json';
+import citationsData from '../../data/RAPID_analyzed.json';
 
 const MetricsOverview = () => {
   // Calculate metrics from the JSON data

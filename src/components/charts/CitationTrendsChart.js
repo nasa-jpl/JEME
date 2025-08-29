@@ -6,10 +6,7 @@ import { ComposedChart, Bar, Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, L
 import { Expand, MoreHorizontal } from 'lucide-react';
 import colors from '../../utils/colors';
 
-// Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
-
-const CitationTrendsChart = () => {
+const CitationTrendsChart = ({ data }) => {
   // Process the citation data to create chart data
   const chartData = useMemo(() => {
     // Helper function to extract year from paper
@@ -71,6 +68,9 @@ const CitationTrendsChart = () => {
     const yearlyStats = {};
     let totalPapers = 0;
 
+    // Use provided data or empty array as fallback
+    const citationsData = data || [];
+    
     citationsData.forEach(paper => {
       const year = extractYear(paper);
       
@@ -166,7 +166,7 @@ const CitationTrendsChart = () => {
       totalPeerReviewed: cumulativePeerReviewed,
       totalPopularPress: cumulativePopularPress
     };
-  }, []);
+  }, [data]);
 
   // Custom tooltip
   const CustomTooltip = ({ active, payload, label }) => {

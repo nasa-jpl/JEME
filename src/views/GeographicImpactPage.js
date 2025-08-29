@@ -2,48 +2,164 @@
 // Page for showing geographical distribution of RAPID applications
 
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
+import { ArrowLeft, Download, MapPin, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from './rapid_20250528_2.json';
+import citationsData from '../data/RAPID_analyzed.json';
 
-// Import the interactive map component
-import InteractiveWorldMap from '../components/InteractiveWorldMap';
+// Import Google Maps component
+import GoogleMapComponent from '../components/GoogleMapComponent';
 
 const GeographicImpactPage = () => {
   const [selectedRegion, setSelectedRegion] = useState('all');
-  const [watershedData, setWatershedData] = useState([]);
+  const [regionData, setRegionData] = useState([]);
   const [countryData, setCountryData] = useState([]);
   const [loading, setLoading] = useState(true);
+  
+  // Google Maps API key - should be set in environment variables
+  const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   
   useEffect(() => {
     processGeographicData();
   }, []);
   
+  // Helper function to extract country from affiliation string
+  const extractCountryFromAffiliation = (affiliationName) => {
+    if (!affiliationName) return null;
+    
+    // Common country patterns in affiliations
+    const countryMappings = {
+      'USA': 'United States',
+      'US': 'United States',
+      'United States': 'United States',
+      'China': 'China',
+      'France': 'France',
+      'Germany': 'Germany',
+      'UK': 'United Kingdom',
+      'United Kingdom': 'United Kingdom',
+      'Canada': 'Canada',
+      'Australia': 'Australia',
+      'Brazil': 'Brazil',
+      'India': 'India',
+      'Japan': 'Japan',
+      'Italy': 'Italy',
+      'Spain': 'Spain',
+      'Netherlands': 'Netherlands',
+      'Switzerland': 'Switzerland',
+      'Sweden': 'Sweden',
+      'Norway': 'Norway',
+      'Denmark': 'Denmark',
+      'Belgium': 'Belgium',
+      'Austria': 'Austria',
+      'Finland': 'Finland',
+      'South Korea': 'South Korea',
+      'Korea': 'South Korea',
+      'Mexico': 'Mexico',
+      'Argentina': 'Argentina',
+      'Chile': 'Chile',
+      'Peru': 'Peru'
+    };
+    
+    // Try to match country patterns
+    for (const [pattern, country] of Object.entries(countryMappings)) {
+      if (affiliationName.includes(pattern)) {
+        return country;
+      }
+    }
+    
+    return null;
+  };
+
+  // Helper function to extract region from country
+  const getRegionFromCountry = (country) => {
+    const regionMappings = {
+      'United States': 'North America',
+      'Canada': 'North America',
+      'Mexico': 'North America',
+      'China': 'Asia',
+      'Japan': 'Asia',
+      'South Korea': 'Asia',
+      'India': 'Asia',
+      'France': 'Europe',
+      'Germany': 'Europe',
+      'United Kingdom': 'Europe',
+      'Italy': 'Europe',
+      'Spain': 'Europe',
+      'Netherlands': 'Europe',
+      'Switzerland': 'Europe',
+      'Sweden': 'Europe',
+      'Norway': 'Europe',
+      'Denmark': 'Europe',
+      'Belgium': 'Europe',
+      'Austria': 'Europe',
+      'Finland': 'Europe',
+      'Australia': 'Oceania',
+      'Brazil': 'South America',
+      'Argentina': 'South America',
+      'Chile': 'South America',
+      'Peru': 'South America'
+    };
+    
+    return regionMappings[country] || 'Other';
+  };
+
   const processGeographicData = () => {
     try {
-      // Filter out entries with meaningful watershed and country data
-      const validEntries = citationsData.filter(citation => 
-        citation.watershed && 
-        citation.country && 
-        citation.watershed !== 'Unknown' && 
-        citation.watershed !== 'Not specified' &&
-        citation.watershed !== 'Not applicable' &&
-        citation.country !== 'Unknown' && 
-        citation.country !== 'Not specified' &&
-        citation.country !== 'Not applicable'
-      );
+      console.log('RAPID citations data loaded:', citationsData.length);
+      console.log('First few entries:', citationsData.slice(0, 1));
       
-      // Group by watershed
-      const watershedStats = {};
-      validEntries.forEach(citation => {
-        const watershed = citation.watershed;
+      // Check what fields are available in the data
+      if (citationsData.length > 0) {
+        console.log('Sample entry fields:', Object.keys(citationsData[0]));
+        console.log('Sample author structure:', citationsData[0].author?.slice(0, 1));
+      }
+      
+      // Process each citation and extract geographic information from affiliations
+      const entriesWithGeo = [];
+      
+      citationsData.forEach((citation, index) => {
+        if (citation.author && Array.isArray(citation.author)) {
+          // Extract countries from all authors' affiliations
+          const countries = new Set();
+          
+          citation.author.forEach(author => {
+            if (author.affiliation && Array.isArray(author.affiliation)) {
+              author.affiliation.forEach(aff => {
+                const country = extractCountryFromAffiliation(aff.name);
+                if (country) {
+                  countries.add(country);
+                }
+              });
+            }
+          });
+          
+          // If we found any countries, add to our processed data
+          if (countries.size > 0) {
+            const primaryCountry = Array.from(countries)[0]; // Use first country found
+            const region = getRegionFromCountry(primaryCountry);
+            
+            entriesWithGeo.push({
+              ...citation,
+              country: primaryCountry,
+              region: region,
+              allCountries: Array.from(countries)
+            });
+          }
+        }
+      });
+      
+      console.log(`Extracted geographic data for ${entriesWithGeo.length} entries out of ${citationsData.length} total`);
+      
+      // Group by region
+      const regionStats = {};
+      entriesWithGeo.forEach(citation => {
+        const region = citation.region;
         const country = citation.country;
         
-        if (!watershedStats[watershed]) {
-          watershedStats[watershed] = {
-            name: watershed,
+        if (!regionStats[region]) {
+          regionStats[region] = {
+            name: region,
             countries: new Set(),
             papers: 0,
             citations: 0,
@@ -53,99 +169,85 @@ const GeographicImpactPage = () => {
           };
         }
         
-        watershedStats[watershed].countries.add(country);
-        watershedStats[watershed].papers += 1;
+        regionStats[region].countries.add(country);
+        regionStats[region].papers += 1;
         
-        // Handle citations data - check multiple possible field names
-        const citationCount = citation['is-referenced-by-count'] || 
-                             citation.cites || 
-                             citation.citations || 
-                             0;
-        watershedStats[watershed].citations += citationCount;
+        // Handle citations data
+        const citationCount = citation['is-referenced-by-count'] || 0;
+        regionStats[region].citations += citationCount;
         
         if (citation.research_domain) {
-          watershedStats[watershed].domains.add(citation.research_domain);
+          regionStats[region].domains.add(citation.research_domain);
         }
         if (citation.engagement_level) {
-          watershedStats[watershed].engagementLevels.add(citation.engagement_level);
+          regionStats[region].engagementLevels.add(citation.engagement_level);
         }
         
-        // Handle year data - check multiple possible sources
+        // Handle year data
         let year = null;
-        if (citation.year) {
-          year = citation.year;
-        } else if (citation.published && citation.published['date-parts'] && citation.published['date-parts'][0]) {
+        if (citation.published && citation.published['date-parts'] && citation.published['date-parts'][0]) {
           year = citation.published['date-parts'][0][0];
-        } else if (citation['published-online'] && citation['published-online']['date-parts'] && citation['published-online']['date-parts'][0]) {
-          year = citation['published-online']['date-parts'][0][0];
-        } else if (citation['published-print'] && citation['published-print']['date-parts'] && citation['published-print']['date-parts'][0]) {
-          year = citation['published-print']['date-parts'][0][0];
         }
         
         if (year) {
-          watershedStats[watershed].years.push(year);
+          regionStats[region].years.push(year);
         }
       });
       
       // Convert to array and add derived fields
-      const watershedArray = Object.values(watershedStats).map(ws => ({
-        ...ws,
-        countries: Array.from(ws.countries).join(', '),
-        domains: Array.from(ws.domains).join(', '),
-        engagementLevels: Array.from(ws.engagementLevels).join(', '),
-        firstYear: ws.years.length > 0 ? Math.min(...ws.years) : null,
-        lastYear: ws.years.length > 0 ? Math.max(...ws.years) : null,
-        avgCitations: ws.papers > 0 ? Math.round(ws.citations / ws.papers) : 0,
-        yearRange: ws.years.length > 0 ? 
-          (Math.min(...ws.years) === Math.max(...ws.years) ? 
-            Math.min(...ws.years).toString() : 
-            `${Math.min(...ws.years)}-${Math.max(...ws.years)}`) : 
+      const regionArray = Object.values(regionStats).map(rs => ({
+        ...rs,
+        countries: Array.from(rs.countries).join(', '),
+        domains: Array.from(rs.domains).join(', '),
+        engagementLevels: Array.from(rs.engagementLevels).join(', '),
+        firstYear: rs.years.length > 0 ? Math.min(...rs.years) : null,
+        lastYear: rs.years.length > 0 ? Math.max(...rs.years) : null,
+        avgCitations: rs.papers > 0 ? Math.round(rs.citations / rs.papers) : 0,
+        yearRange: rs.years.length > 0 ? 
+          (Math.min(...rs.years) === Math.max(...rs.years) ? 
+            Math.min(...rs.years).toString() : 
+            `${Math.min(...rs.years)}-${Math.max(...rs.years)}`) : 
           'N/A'
       })).sort((a, b) => b.papers - a.papers);
       
-      setWatershedData(watershedArray);
+      setRegionData(regionArray);
       
       // Group by country
       const countryStats = {};
-      validEntries.forEach(citation => {
-        const countries = citation.country.split(/[,/]/).map(c => c.trim());
+      entriesWithGeo.forEach(citation => {
+        const country = citation.country;
         
-        countries.forEach(country => {
-          if (!countryStats[country]) {
-            countryStats[country] = {
-              country: country,
-              watersheds: new Set(),
-              papers: 0,
-              citations: 0,
-              domains: new Set()
-            };
-          }
-          
-          countryStats[country].watersheds.add(citation.watershed);
-          countryStats[country].papers += 1 / countries.length; // Split count for multi-country papers
-          
-          // Handle citations for countries
-          const citationCount = citation['is-referenced-by-count'] || 
-                               citation.cites || 
-                               citation.citations || 
-                               0;
-          countryStats[country].citations += citationCount / countries.length;
-          
-          if (citation.research_domain) {
-            countryStats[country].domains.add(citation.research_domain);
-          }
-        });
+        if (!countryStats[country]) {
+          countryStats[country] = {
+            country: country,
+            regions: new Set(),
+            papers: 0,
+            citations: 0,
+            domains: new Set()
+          };
+        }
+        
+        countryStats[country].regions.add(citation.region);
+        countryStats[country].papers += 1;
+        
+        const citationCount = citation['is-referenced-by-count'] || 0;
+        countryStats[country].citations += citationCount;
+        
+        if (citation.research_domain) {
+          countryStats[country].domains.add(citation.research_domain);
+        }
       });
       
       // Convert to array
       const countryArray = Object.values(countryStats).map(cs => ({
         ...cs,
-        watersheds: cs.watersheds.size,
+        regions: cs.regions.size,
         papers: Math.round(cs.papers),
         citations: Math.round(cs.citations),
         domains: Array.from(cs.domains).join(', ')
       })).sort((a, b) => b.papers - a.papers);
       
+      console.log('Final countryData to be set:', countryArray.slice(0, 5));
       setCountryData(countryArray);
       setLoading(false);
       
@@ -155,348 +257,176 @@ const GeographicImpactPage = () => {
     }
   };
   
-  // Determine region for filtering
-  const getRegion = (countries) => {
-    const countryList = countries.toLowerCase();
-    if (countryList.includes('usa') || countryList.includes('united states') || countryList.includes('canada') || countryList.includes('mexico')) {
-      return 'north-america';
-    }
-    if (countryList.includes('france') || countryList.includes('germany') || countryList.includes('spain') || 
-        countryList.includes('italy') || countryList.includes('uk') || countryList.includes('bulgaria') ||
-        countryList.includes('europe')) {
-      return 'europe';
-    }
-    if (countryList.includes('china') || countryList.includes('india') || countryList.includes('bangladesh') || 
-        countryList.includes('nepal') || countryList.includes('cambodia')) {
-      return 'asia';
-    }
-    if (countryList.includes('brazil') || countryList.includes('peru') || countryList.includes('colombia') || 
-        countryList.includes('south america')) {
-      return 'south-america';
-    }
-    if (countryList.includes('australia')) {
-      return 'australia';
-    }
-    if (countryList.includes('africa')) {
-      return 'africa';
-    }
-    return 'other';
-  };
-  
-  // Filter watersheds by region
-  const filteredWatersheds = selectedRegion === 'all' 
-    ? watershedData 
-    : watershedData.filter(w => getRegion(w.countries) === selectedRegion);
-  
   // Calculate summary statistics
-  const totalWatersheds = watershedData.length;
+  const totalRegions = regionData.length;
   const totalCountries = countryData.length;
-  const totalPapers = watershedData.reduce((sum, w) => sum + w.papers, 0);
-  const totalCitations = watershedData.reduce((sum, w) => sum + w.citations, 0);
-  
-  // Get timeline data
-  const getTimelineData = () => {
-    const yearStats = {};
-    watershedData.forEach(ws => {
-      if (ws.firstYear) {
-        const year = ws.firstYear;
-        if (!yearStats[year]) {
-          yearStats[year] = { watersheds: [], count: 0 };
-        }
-        yearStats[year].watersheds.push(ws.name);
-        yearStats[year].count += 1;
-      }
-    });
-    
-    return Object.entries(yearStats)
-      .sort(([a], [b]) => parseInt(a) - parseInt(b))
-      .slice(0, 6); // Show first 6 years
-  };
-  
-  const timelineData = getTimelineData();
-  
-  // Handle region selection from map
-  const handleMapRegionSelect = (countryName) => {
-    // This could be enhanced to filter the table based on the selected country
-    console.log('Selected country from map:', countryName);
-  };
-  
-  // Export function
-  const exportData = () => {
-    const csvContent = [
-      ['Watershed', 'Countries', 'Papers', 'Citations', 'Avg Citations', 'Research Domains', 'Years Active'].join(','),
-      ...watershedData.map(w => [
-        `"${w.name}"`,
-        `"${w.countries}"`,
-        w.papers,
-        w.citations,
-        w.avgCitations,
-        `"${w.domains}"`,
-        w.yearRange
-      ].join(','))
-    ].join('\n');
-    
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.setAttribute('href', url);
-    link.setAttribute('download', 'rapid_geographic_impact.csv');
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-  };
+  const totalPapers = regionData.reduce((sum, r) => sum + r.papers, 0);
+  const totalCitations = regionData.reduce((sum, r) => sum + r.citations, 0);
   
   if (loading) {
     return (
-      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
-        <div className="text-center">
-          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-          <p className="text-gray-600">Loading geographic data...</p>
+      <div className="bg-gray-100 min-h-screen">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="bg-white rounded-lg p-6 text-center">
+            <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+            <p className="text-gray-600">Processing geographic data...</p>
+          </div>
         </div>
       </div>
     );
   }
-  
+
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4">
-          <div className="flex items-center">
-            <Link to="/science-model-dashboard" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
-              <ArrowLeft size={18} className="mr-1" />
-              <span className="font-medium">Back to Dashboard</span>
-            </Link>
-            <h1 className="text-xl font-semibold text-gray-900">Geographic Impact of RAPID</h1>
-          </div>
-        </div>
-      </header>
-      
-      <main className="max-w-7xl mx-auto px-4 py-6">
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-          {/* Summary Card */}
-          <div className="bg-white rounded-lg shadow-sm p-6 lg:col-span-3">
-            <div className="flex flex-wrap items-center justify-between mb-6">
+      {/* Header */}
+      <div className="bg-white border-b border-gray-200 shadow-sm">
+        <div className="max-w-7xl mx-auto px-4 py-6">
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-4">
+              <Link to="/" className="text-blue-600 hover:text-blue-800">
+                <ArrowLeft size={24} />
+              </Link>
               <div>
-                <h2 className="text-lg font-semibold text-gray-800">Global Distribution of RAPID Applications</h2>
-                <p className="text-sm text-gray-500 mt-1">
-                  Showing the watersheds and river basins where RAPID has been implemented and studied
-                </p>
-              </div>
-              <div className="flex items-center space-x-4 mt-2 sm:mt-0">
-                <div className="relative">
-                  <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                    <Globe size={16} className="text-gray-400" />
-                  </div>
-                  <select
-                    value={selectedRegion}
-                    onChange={(e) => setSelectedRegion(e.target.value)}
-                    className="appearance-none pl-10 pr-8 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent bg-white"
-                  >
-                    <option value="all">All Regions</option>
-                    <option value="north-america">North America</option>
-                    <option value="europe">Europe</option>
-                    <option value="asia">Asia</option>
-                    <option value="south-america">South America</option>
-                    <option value="australia">Australia</option>
-                    <option value="africa">Africa</option>
-                  </select>
-                  <div className="absolute inset-y-0 right-3 flex items-center pointer-events-none">
-                    <svg className="h-4 w-4 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                  </div>
-                </div>
-                
-                <button 
-                  onClick={exportData}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                >
-                  <Download size={16} />
-                  <span>Export Data</span>
-                </button>
+                <h1 className="text-2xl font-bold text-gray-900">Geographic Impact Analysis</h1>
+                <p className="text-gray-600 mt-1">RAPID model applications across different regions and countries</p>
               </div>
             </div>
-            
-            <div className="flex flex-wrap text-center mb-6">
-              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-700 mb-1">{totalWatersheds}</div>
-                  <div className="text-sm text-blue-600">Watersheds Studied</div>
-                </div>
+            <button className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700">
+              <Download size={18} />
+              Export Data
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4 py-6">
+        {/* Summary Stats */}
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-6">
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-blue-100 rounded-lg">
+                <Globe2 size={24} className="text-blue-600" />
               </div>
-              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
-                <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-green-700 mb-1">{totalCountries}</div>
-                  <div className="text-sm text-green-600">Countries</div>
-                </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">{totalRegions}</div>
+                <div className="text-sm text-gray-500">Regions</div>
               </div>
-              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
-                <div className="bg-purple-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-purple-700 mb-1">{totalPapers}</div>
-                  <div className="text-sm text-purple-600">Research Papers</div>
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
-                <div className="bg-amber-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-amber-700 mb-1">{totalCitations.toLocaleString()}</div>
-                  <div className="text-sm text-amber-600">Total Citations</div>
-                </div>
-              </div>
-            </div>
-            
-            {/* Interactive Map */}
-            <div className="mb-6">
-              <InteractiveWorldMap 
-                watershedData={watershedData}
-                selectedRegion={selectedRegion}
-                onRegionSelect={handleMapRegionSelect}
-              />
-            </div>
-            
-            {/* Watershed Table */}
-            <div className="overflow-x-auto">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Watershed
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Country/Region
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Papers
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Citations
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Research Domains
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Years
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {filteredWatersheds.map((watershed, index) => (
-                    <tr key={index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        {watershed.name}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.countries}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.papers}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.citations.toLocaleString()}
-                      </td>
-                      <td className="px-6 py-4 text-sm text-gray-500 max-w-xs truncate" title={watershed.domains}>
-                        {watershed.domains}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {watershed.yearRange}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
             </div>
           </div>
           
-          {/* Country Statistics Card */}
-          <div className="bg-white rounded-lg shadow-sm p-6 lg:col-span-2">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Country Statistics</h2>
-            <div className="overflow-hidden">
-              <table className="min-w-full divide-y divide-gray-200">
-                <thead className="bg-gray-50">
-                  <tr>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Country
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Watersheds
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Papers
-                    </th>
-                    <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Citations
-                    </th>
-                  </tr>
-                </thead>
-                <tbody className="bg-white divide-y divide-gray-200">
-                  {countryData.slice(0, 15).map((countryItem, index) => (
-                    <tr key={index} className="hover:bg-gray-50">
-                      <td className="px-6 py-4 whitespace-nowrap text-sm font-medium text-gray-900">
-                        {countryItem.country}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {countryItem.watersheds}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {countryItem.papers}
-                      </td>
-                      <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                        {countryItem.citations.toLocaleString()}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-green-100 rounded-lg">
+                <MapPin size={24} className="text-green-600" />
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">{totalCountries}</div>
+                <div className="text-sm text-gray-500">Countries</div>
+              </div>
             </div>
           </div>
           
-          {/* Application Timeline Card */}
-          <div className="bg-white rounded-lg shadow-sm p-6">
-            <h2 className="text-lg font-semibold text-gray-800 mb-4">Implementation Timeline</h2>
-            <div className="space-y-6">
-              <div className="relative">
-                <div className="absolute top-0 bottom-0 left-4 w-0.5 bg-blue-200"></div>
-                <div className="space-y-8">
-                  {timelineData.map(([year, data], index) => (
-                    <div key={year} className="relative pl-10">
-                      <div className="absolute left-0 top-1 w-8 h-8 rounded-full bg-blue-500 flex items-center justify-center text-white text-xs font-medium">
-                        {year}
-                      </div>
-                      <h3 className="text-base font-semibold text-gray-800">New Watersheds</h3>
-                      <p className="text-sm text-gray-600 mt-1">
-                        {data.watersheds.slice(0, 3).join(', ')}
-                        {data.watersheds.length > 3 && `, +${data.watersheds.length - 3} more`}
-                      </p>
-                      <div className="mt-1 text-xs text-blue-600">{data.count} watershed{data.count > 1 ? 's' : ''}</div>
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-purple-100 rounded-lg">
+                <div className="w-6 h-6 bg-purple-600 rounded text-white text-xs flex items-center justify-center font-bold">P</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">{totalPapers}</div>
+                <div className="text-sm text-gray-500">Papers</div>
+              </div>
+            </div>
+          </div>
+          
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <div className="flex items-center gap-3">
+              <div className="p-3 bg-orange-100 rounded-lg">
+                <div className="w-6 h-6 bg-orange-600 rounded text-white text-xs flex items-center justify-center font-bold">C</div>
+              </div>
+              <div>
+                <div className="text-2xl font-bold text-gray-900">{totalCitations.toLocaleString()}</div>
+                <div className="text-sm text-gray-500">Citations</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        {/* Google Map */}
+        <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
+          <h2 className="text-xl font-semibold text-gray-900 mb-4">Global Distribution</h2>
+          {GOOGLE_MAPS_API_KEY ? (
+            <GoogleMapComponent data={countryData} apiKey={GOOGLE_MAPS_API_KEY} />
+          ) : (
+            <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4">
+              <div className="flex items-center">
+                <div className="flex-shrink-0">
+                  <svg className="h-5 w-5 text-yellow-400" viewBox="0 0 20 20" fill="currentColor">
+                    <path fillRule="evenodd" d="M8.257 3.099c.765-1.36 2.722-1.36 3.486 0l5.58 9.92c.75 1.334-.213 2.98-1.742 2.98H4.42c-1.53 0-2.493-1.646-1.743-2.98l5.58-9.92zM11 13a1 1 0 11-2 0 1 1 0 012 0zm-1-8a1 1 0 00-1 1v3a1 1 0 002 0V6a1 1 0 00-1-1z" clipRule="evenodd" />
+                  </svg>
+                </div>
+                <div className="ml-3">
+                  <h3 className="text-sm font-medium text-yellow-800">
+                    Google Maps API Key Required
+                  </h3>
+                  <div className="mt-2 text-sm text-yellow-700">
+                    <p>
+                      To display the interactive map, please set up your Google Maps API key in the environment variables.
+                      Create a <code>.env</code> file and add <code>REACT_APP_GOOGLE_MAPS_API_KEY=your_key_here</code>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          )}
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {/* Regional Distribution */}
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Regional Distribution</h2>
+            <div className="space-y-4">
+              {regionData.slice(0, 10).map((region, index) => (
+                <div key={index} className="border-b border-gray-100 pb-3">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-medium text-gray-900">{region.name}</h3>
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-blue-600">{region.papers} papers</div>
+                      <div className="text-xs text-gray-500">{region.citations} citations</div>
                     </div>
-                  ))}
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <div>Countries: {region.countries}</div>
+                    <div>Years: {region.yearRange}</div>
+                    <div>Avg Citations: {region.avgCitations}</div>
+                  </div>
                 </div>
-              </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Country Distribution */}
+          <div className="bg-white rounded-lg p-6 shadow-sm">
+            <h2 className="text-xl font-semibold text-gray-900 mb-4">Top Countries</h2>
+            <div className="space-y-4">
+              {countryData.slice(0, 10).map((country, index) => (
+                <div key={index} className="border-b border-gray-100 pb-3">
+                  <div className="flex justify-between items-start mb-2">
+                    <h3 className="font-medium text-gray-900">{country.country}</h3>
+                    <div className="text-right">
+                      <div className="text-sm font-medium text-blue-600">{country.papers} papers</div>
+                      <div className="text-xs text-gray-500">{country.citations} citations</div>
+                    </div>
+                  </div>
+                  <div className="text-sm text-gray-600">
+                    <div>Regions: {country.regions}</div>
+                    <div>Domains: {country.domains.substring(0, 50)}{country.domains.length > 50 ? '...' : ''}</div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
-        
-        <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
-          <h2 className="text-lg font-semibold text-gray-800 mb-4">About the Geographic Impact Analysis</h2>
-          <p className="text-sm text-gray-600 mb-4">
-            This geographic impact analysis is automatically generated from {citationsData.length} research papers and citations 
-            related to the RAPID (Routing Application for Parallel computatIon of Discharge) model. The data includes 
-            watershed names, countries, research domains, and citation metrics extracted from the academic literature.
-          </p>
-          <p className="text-sm text-gray-600 mb-4">
-            Each watershed entry represents a unique combination of geographic location and research application documented 
-            in the literature. The timeline shows the chronological expansion of RAPID applications across different 
-            regions and research domains. Citation counts are extracted from the "is-referenced-by-count" field in the 
-            academic database records.
-          </p>
-          <div className="flex flex-wrap gap-4 text-sm text-gray-500">
-            <div>📊 Data source: Academic citations and research papers</div>
-            <div>🌍 Coverage: {totalWatersheds} watersheds across {totalCountries} countries</div>
-            <div>📈 Total citations: {totalCitations.toLocaleString()}</div>
-            <div>🗺️ Interactive map with zoom, pan, and hover details</div>
-          </div>
-        </div>
-      </main>
+      </div>
     </div>
   );
 };

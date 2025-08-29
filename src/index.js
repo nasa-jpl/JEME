@@ -3,6 +3,7 @@ import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './index.css';
 import App from './App';
+// import App from './App.test';
 
 // Using modern React 18 rendering method
 const container = document.getElementById('root');

@@ -4,17 +4,56 @@
 import React, { useState } from 'react';
 import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 
-const PaperInfo = () => {
+const PaperInfo = ({ modelName = 'RAPID' }) => {
   const [expanded, setExpanded] = useState(false);
 
-  // Original paper data
-  const originalPaper = {
-    title: "River network routing on the NHDPlus dataset",
-    authors: "Cédric H. David, David R. Maidment, Guo-Yue Niu, Zong-Liang Yang, Florence Habets, Victor Eijkhout",
-    journal: "Journal of Hydrometeorology (2011), Volume 12, Issue 5, Pages 913-934",
-    doi: "10.1175/2011JHM1345.1",
-    link: "http://dx.doi.org/10.1175/2011JHM1345.1"
+  // Model-specific paper data
+  const modelPapers = {
+    'RAPID': {
+      title: "River network routing on the NHDPlus dataset",
+      authors: "Cédric H. David, David R. Maidment, Guo-Yue Niu, Zong-Liang Yang, Florence Habets, Victor Eijkhout",
+      journal: "Journal of Hydrometeorology (2011), Volume 12, Issue 5, Pages 913-934",
+      doi: "10.1175/2011JHM1345.1",
+      link: "http://dx.doi.org/10.1175/2011JHM1345.1"
+    },
+    'CMS-Flux': {
+      title: "Carbon Monitoring System Flux - Atmospheric CO2 inversion framework",
+      authors: "NASA Carbon Monitoring System Team",
+      journal: "Carbon Monitoring System Documentation",
+      doi: "CMS-Flux System",
+      link: "#"
+    },
+    'ECCO': {
+      title: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation",
+      authors: "ECCO Consortium",
+      journal: "ECCO Ocean State Estimation Documentation",
+      doi: "ECCO System",
+      link: "#"
+    },
+    'ISSM': {
+      title: "Ice Sheet System Model - Thermomechanical ice sheet modeling framework",
+      authors: "ISSM Team",
+      journal: "ISSM Model Documentation",
+      doi: "ISSM System",
+      link: "#"
+    },
+    'MOMO-CHEM': {
+      title: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model",
+      authors: "MOMO-CHEM Team",
+      journal: "MOMO-CHEM Model Documentation",
+      doi: "MOMO-CHEM System",
+      link: "#"
+    },
+    'CARDAMOM': {
+      title: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation",
+      authors: "CARDAMOM Team",
+      journal: "CARDAMOM Framework Documentation",
+      doi: "CARDAMOM System",
+      link: "#"
+    }
   };
+
+  const originalPaper = modelPapers[modelName] || modelPapers['RAPID'];
 
   // Related papers data
   const relatedPapers = [
@@ -184,7 +223,7 @@ const PaperInfo = () => {
       {/* Related papers list */}
       {expanded && (
         <div className="mt-4 border-t border-blue-200 pt-3">
-          <div className="text-sm font-medium text-blue-800 mb-2">Papers Citing the RAPID Model:</div>
+          <div className="text-sm font-medium text-blue-800 mb-2">Papers Citing the {modelName} Model:</div>
           <div className="max-h-96 overflow-y-auto pr-2">
             {relatedPapers.map((paper, index) => (
               <div key={index} className="mb-4 pb-3 border-b border-blue-100 last:border-b-0">
