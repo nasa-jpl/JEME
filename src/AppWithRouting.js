@@ -40,6 +40,10 @@ function AppWithRouting() {
         <Route path="/geographic-impact" element={<GeographicImpactPage />} />
         <Route path="/research-domains" element={<ResearchDomainsPage />} />
         
+        {/* RAPID-specific redirects to legacy pages */}
+        <Route path="/science-model-dashboard/RAPID/citations" element={<Navigate to="/citations" replace />} />
+        <Route path="/science-model-dashboard/RAPID/research-domains" element={<Navigate to="/research-domains" replace />} />
+        
         {/* Generic routes for all models - these work with any model name */}
         <Route path="/science-model-dashboard/:modelName/citations" element={<GenericCitationsPage />} />
         <Route path="/science-model-dashboard/:modelName/geographic-impact" element={<GenericGeographicImpactPage />} />

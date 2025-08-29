@@ -80,7 +80,6 @@ const GenericCitationsPage = () => {
   const [sortDirection, setSortDirection] = useState('desc');
   const [filterEngagement, setFilterEngagement] = useState('all');
   const [filterDomain, setFilterDomain] = useState([]);
-  const [filterWatershed, setFilterWatershed] = useState([]);
   const [filterCountry, setFilterCountry] = useState('all');
   const [yearRange, setYearRange] = useState([2011, 2025]);
   const [error, setError] = useState(null);
@@ -252,8 +251,7 @@ const GenericCitationsPage = () => {
         }
       }
       
-      // Extract watershed and country info (use from JSON if available)
-      const watershed = record.watershed || 'Global';
+      // Extract country info (use from JSON if available)
       const country = record.country || 'Global';
       
       // Check if this is a key paper for the model
@@ -275,7 +273,6 @@ const GenericCitationsPage = () => {
         abstract: abstract,
         engagement_level: engagementLevel,
         research_domain: researchDomain,
-        watershed: watershed,
         country: country,
         isOriginalPaper: isOriginalPaper,
         pages: record.page || '',
@@ -321,7 +318,6 @@ const GenericCitationsPage = () => {
         url: "https://example.com/paper",
         engagement_level: "Level 2: Data Usage",
         research_domain: modelConfig.domain || "Unknown",
-        watershed: "Example Basin",
         country: "Global",
         isOriginalPaper: false,
         abstract: `This paper demonstrates the application of ${modelConfig.displayName} model for scientific research...`
@@ -354,7 +350,6 @@ const GenericCitationsPage = () => {
       citation.abstract,
       citation.doi,
       citation.research_domain,
-      citation.watershed,
       citation.country
     ].some(field => 
       field && String(field).toLowerCase().includes(searchTerm.toLowerCase())
@@ -368,9 +363,6 @@ const GenericCitationsPage = () => {
     const domainMatch = filterDomain.length === 0 || 
       filterDomain.includes(citation.research_domain);
     
-    // Filter by watershed
-    const watershedMatch = filterWatershed.length === 0 || 
-      filterWatershed.includes(citation.watershed);
     
     // Filter by country
     const countryMatch = filterCountry === 'all' || 
@@ -382,7 +374,7 @@ const GenericCitationsPage = () => {
       citation.year >= yearRange[0] && 
       citation.year <= yearRange[1];
     
-    const result = searchMatch && engagementMatch && domainMatch && watershedMatch && countryMatch && 
+    const result = searchMatch && engagementMatch && domainMatch && countryMatch && 
            (typeof citation.year === 'number' ? yearMatch : true);
     return result;
   });
@@ -433,7 +425,7 @@ const GenericCitationsPage = () => {
     ];
     const rows = sortedCitations.map(c => [
       c.title, c.authors, c.year, c.source, c.publisher, c.doi, c.cites, 
-      c.engagement_level, c.research_domain, c.watershed, c.country,
+      c.engagement_level, c.research_domain, c.country,
       c.volume, c.issue, c.pages, c.referenceCount
     ]);
     
@@ -640,15 +632,6 @@ const GenericCitationsPage = () => {
                   />
                 </div>
                 
-                {/* Watershed Filter */}
-                <div>
-                  <MultiSelect
-                    options={getUniqueValues('watershed')}
-                    selectedValues={filterWatershed}
-                    onChange={setFilterWatershed}
-                    placeholder="All Watersheds"
-                  />
-                </div>
               </div>
               
               <div className="text-sm text-gray-600 mb-4">

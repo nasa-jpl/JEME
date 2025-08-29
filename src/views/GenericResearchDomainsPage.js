@@ -213,6 +213,99 @@ const GenericResearchDomainsPage = () => {
   // Colors for pie chart
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
+  // Helper function to get domain colors
+  const getDomainColor = (domain) => {
+    const colors = {
+      "Water Resources": "bg-blue-100 text-blue-800",
+      "Flood Prediction": "bg-red-100 text-red-800",
+      "River Modeling": "bg-green-100 text-green-800",
+      "Global River Modeling": "bg-teal-100 text-teal-800",
+      "Flow Analysis": "bg-purple-100 text-purple-800",
+      "Streamflow": "bg-indigo-100 text-indigo-800",
+      "Hydrological Modeling": "bg-cyan-100 text-cyan-800",
+      "Hydrology": "bg-emerald-100 text-emerald-800",
+      "Hydrologic Modeling": "bg-sky-100 text-sky-800",
+      "Carbon Flux": "bg-amber-100 text-amber-800",
+      "Atmospheric Science": "bg-orange-100 text-orange-800",
+      "Climate Modeling": "bg-rose-100 text-rose-800",
+      "Ocean Modeling": "bg-blue-200 text-blue-900",
+      "Ice Sheet Modeling": "bg-slate-100 text-slate-800",
+      "Atmospheric Chemistry": "bg-lime-100 text-lime-800"
+    };
+    return colors[domain] || "bg-gray-100 text-gray-800";
+  };
+
+  // Helper function to extract year from paper
+  const extractYear = (paper) => {
+    if (paper.year) return paper.year;
+    if (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0]) {
+      return paper.published['date-parts'][0][0];
+    }
+    if (paper['published-online'] && paper['published-online']['date-parts'] && paper['published-online']['date-parts'][0]) {
+      return paper['published-online']['date-parts'][0][0];
+    }
+    if (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0]) {
+      return paper['published-print']['date-parts'][0][0];
+    }
+    return null;
+  };
+
+  // Helper function to extract authors from paper
+  const extractAuthors = (paper) => {
+    if (paper.authors && Array.isArray(paper.authors)) {
+      return paper.authors;
+    }
+    if (paper.author && Array.isArray(paper.author)) {
+      return paper.author.map(author => {
+        if (typeof author === 'string') return author;
+        if (author.given && author.family) return `${author.given} ${author.family}`;
+        if (author.family) return author.family;
+        return 'Unknown Author';
+      });
+    }
+    return [];
+  };
+
+  // Helper function to extract citations count
+  const extractCitations = (paper) => {
+    return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+  };
+
+  // Helper function to extract title
+  const extractTitle = (paper) => {
+    if (paper.title) {
+      if (Array.isArray(paper.title)) {
+        return paper.title[0] || "Untitled Paper";
+      }
+      return paper.title;
+    }
+    return "Untitled Paper";
+  };
+
+  // Helper function to extract publisher/source
+  const extractSource = (paper) => {
+    if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
+      return paper['container-title'][0];
+    }
+    if (paper.source) return paper.source;
+    if (paper.publisher) return paper.publisher;
+    return "Unknown Source";
+  };
+
+  // Helper function to extract DOI
+  const extractDOI = (paper) => {
+    return paper.DOI || paper.doi || null;
+  };
+
+  // Helper function to extract abstract
+  const extractAbstract = (paper) => {
+    if (paper.abstract) {
+      // Remove HTML tags from abstract
+      return paper.abstract.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, ' ').trim();
+    }
+    return null;
+  };
+
   // Custom tooltip for charts
   const CustomTooltip = ({ active, payload, label }) => {
     if (active && payload && payload.length) {
@@ -468,33 +561,51 @@ const GenericResearchDomainsPage = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {processedData.papers.length > 0 ? processedData.papers.map((paper, index) => (
-                      <tr key={index} className="hover:bg-gray-50">
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-900 max-w-md truncate" title={paper.title}>
-                            {paper.title || 'Untitled'}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{paper.year || 'Unknown'}</div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-32 truncate" title={paper.research_domain}>
-                            {paper.research_domain || 'Unknown'}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-xs text-gray-600 max-w-32">
-                            {paper.engagement_level ? paper.engagement_level.replace('Level ', 'L') : 'Unknown'}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">
-                            {paper['is-referenced-by-count'] || paper.cites || paper.citations || 0}
-                          </div>
-                        </td>
-                      </tr>
-                    )) : (
+                    {processedData.papers.length > 0 ? processedData.papers.map((paper, index) => {
+                      const authors = extractAuthors(paper);
+                      const year = extractYear(paper);
+                      const title = extractTitle(paper);
+                      const source = extractSource(paper);
+                      const citations = extractCitations(paper);
+                      const abstract = extractAbstract(paper);
+                      
+                      return (
+                        <tr key={index} className="hover:bg-gray-50">
+                          <td className="px-6 py-4">
+                            <div className="text-sm font-medium text-gray-900 max-w-md">
+                              {title}
+                            </div>
+                            {authors.length > 0 && (
+                              <div className="text-xs text-gray-500 mt-1">
+                                {authors.slice(0, 3).join(', ')}
+                                {authors.length > 3 && ' et al.'}
+                              </div>
+                            )}
+                            {source && source !== 'Unknown Source' && (
+                              <div className="text-xs text-gray-400 mt-1">{source}</div>
+                            )}
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm text-gray-900">{year || 'Unknown'}</div>
+                          </td>
+                          <td className="px-6 py-4">
+                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDomainColor(paper.research_domain || 'Unknown')}`}>
+                              {paper.research_domain || 'Unknown'}
+                            </span>
+                          </td>
+                          <td className="px-6 py-4">
+                            <div className="text-xs text-gray-600 max-w-32">
+                              {paper.engagement_level ? paper.engagement_level.replace('Level ', 'L') : 'Unknown'}
+                            </div>
+                          </td>
+                          <td className="px-6 py-4 whitespace-nowrap">
+                            <div className="text-sm font-medium text-gray-900">
+                              {citations.toLocaleString()}
+                            </div>
+                          </td>
+                        </tr>
+                      );
+                    }) : (
                       <tr>
                         <td colSpan="5" className="px-6 py-4 text-center text-gray-500">
                           No publications found for the selected criteria
