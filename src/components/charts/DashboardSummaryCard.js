@@ -1,11 +1,8 @@
 // src/components/charts/DashboardSummaryCard.js
-// Summary card with key metrics based on real RAPID citation data
+// Summary card with key metrics based on citation data
 
 import React, { useMemo } from 'react';
 import { Download } from 'lucide-react';
-
-// Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
 
 // Component to create summary sections
 const SummarySection = ({ title, items }) => (
@@ -24,9 +21,31 @@ const SummarySection = ({ title, items }) => (
   </>
 );
 
-const DashboardSummaryCard = () => {
+const DashboardSummaryCard = ({ data = [] }) => {
+  // Use the data prop
+  const citationsData = data;
   // Process all metrics from the JSON data
   const metrics = useMemo(() => {
+    // Early return if no data
+    if (!citationsData || citationsData.length === 0) {
+      return {
+        totalPublications: 0,
+        totalCitations: 0,
+        avgCitations: 0,
+        peakYear: null,
+        current2025Papers: 0,
+        implementationScore: 0,
+        highEngagementCount: 0,
+        uniqueCountries: 0,
+        uniqueWatersheds: 0,
+        thesesCount: 0,
+        topDomains: [],
+        topWatersheds: [],
+        growthDomain: null,
+        strengthDomain: null,
+        totalDomains: 0
+      };
+    }
     // Helper function to extract year from paper
     const extractYear = (paper) => {
       if (paper.year) return paper.year;
@@ -189,12 +208,12 @@ const DashboardSummaryCard = () => {
       strengthDomain,
       totalDomains: Object.keys(domainCounts).length
     };
-  }, []);
+  }, [citationsData]);
 
   // Export function
   const exportSummary = () => {
     const summaryData = {
-      "RAPID Model Impact Summary": {
+      "Model Impact Summary": {
         "Total Publications": metrics.totalPublications,
         "Total Citations": metrics.totalCitations,
         "Average Citations per Paper": metrics.avgCitations.toFixed(1),
@@ -209,7 +228,7 @@ const DashboardSummaryCard = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.href = url;
-    link.download = 'rapid_impact_summary.json';
+    link.download = 'model_impact_summary.json';
     link.click();
     URL.revokeObjectURL(url);
   };
@@ -276,7 +295,7 @@ const DashboardSummaryCard = () => {
     <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
       <div className="flex justify-between items-start mb-4">
         <div>
-          <div className="text-base font-semibold text-gray-800">RAPID Model Impact Dashboard</div>
+          <div className="text-base font-semibold text-gray-800">Model Impact Dashboard</div>
           <div className="text-sm text-gray-500 mt-1">
             Citation analysis and research impact metrics • Based on {metrics.totalPublications} papers
           </div>

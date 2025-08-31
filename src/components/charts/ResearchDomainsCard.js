@@ -6,10 +6,9 @@ import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import { MoreHorizontal } from 'lucide-react';
 import colors from '../../utils/colors';
 
-// Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
-
-const ResearchDomainsCard = () => {
+const ResearchDomainsCard = ({ data = [] }) => {
+  // Use the data prop, or fall back to an empty array
+  const citationsData = data;
   // Process the research domains data
   const domainData = useMemo(() => {
     // Count papers by research domain
@@ -55,7 +54,7 @@ const ResearchDomainsCard = () => {
 
     // Take top 10 domains to avoid overcrowding
     return processedData.slice(0, 10);
-  }, []);
+  }, [citationsData]);
 
   // Calculate total papers in displayed domains
   const totalDisplayed = domainData.reduce((sum, item) => sum + item.value, 0);
@@ -69,7 +68,7 @@ const ResearchDomainsCard = () => {
       }
     });
     return uniqueDomains.size;
-  }, []);
+  }, [citationsData]);
 
   // Custom tooltip
   const CustomTooltip = ({ active, payload }) => {

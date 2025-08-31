@@ -17,7 +17,7 @@ const EngagementLevelsCard = ({ data }) => {
     citationsData.forEach(paper => {
       const level = paper.engagement_level;
       if (level && level !== "Unknown" && level !== "Not specified") {
-        // Map the actual RAPID engagement levels to standardized names
+        // Map the actual engagement levels to standardized names
         let standardLevel = level;
         if (level === "Level 2: Data/Method Usage") {
           standardLevel = "Level 2: Data Usage";
@@ -105,10 +105,10 @@ const EngagementLevelsCard = ({ data }) => {
   // Helper function to get engagement level descriptions
   const getEngagementDescription = (level) => {
     const descriptions = {
-      "Level 1: Simple Citation": "References the paper without using the model directly",
-      "Level 2: Data Usage": "Uses RAPID methodology, data, or outputs in their research", 
-      "Level 3: Model Adaptation": "Modifies, extends, or adapts the RAPID model for their needs",
-      "Level 4: Foundational Method": "RAPID is foundational or central to their research methodology"
+      "Level 1: Simple Citation": "References the paper without using the model",
+      "Level 2: Data Usage": "Uses methodology or data", 
+      "Level 3: Model Adaptation": "Modifies or extends the model",
+      "Level 4: Foundational Method": "Model is foundational to the research"
     };
     return descriptions[level] || "";
   };
@@ -226,21 +226,21 @@ const EngagementLevelsCard = ({ data }) => {
               <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#60A5FA" }}></div>
               <span>Level 2: Data Usage</span>
             </div>
-            <div className="text-right max-w-xs">Uses RAPID methodology or data</div>
+            <div className="text-right max-w-xs">Uses methodology or data</div>
           </div>
           <div className="flex justify-between py-1 border-b border-dashed border-gray-200">
             <div className="flex items-center">
               <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#3B82F6" }}></div>
               <span>Level 3: Model Adaptation</span>
             </div>
-            <div className="text-right max-w-xs">Modifies or extends the RAPID model</div>
+            <div className="text-right max-w-xs">Modifies or extends the model</div>
           </div>
           <div className="flex justify-between py-1">
             <div className="flex items-center">
               <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#1D4ED8" }}></div>
               <span>Level 4: Foundation</span>
             </div>
-            <div className="text-right max-w-xs">RAPID is foundational to the research</div>
+            <div className="text-right max-w-xs">Model is foundational to the research</div>
           </div>
         </div>
         

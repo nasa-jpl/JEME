@@ -11,6 +11,9 @@ import GenericCitationsPage from './views/GenericCitationsPage';
 import GenericGeographicImpactPage from './views/GenericGeographicImpactPage';
 import GenericResearchDomainsPage from './views/GenericResearchDomainsPage';
 
+// Model-specific page components
+import CMSFluxResearchDomainsPage from './views/CMS-Flux/ResearchDomainsPage';
+
 // Model-specific dashboards
 import RAPIDDashboard from './views/RAPID/Dashboard';
 import CMSFluxDashboard from './views/CMS-Flux/Dashboard';
@@ -43,6 +46,9 @@ function AppWithRouting() {
         {/* RAPID-specific redirects to legacy pages */}
         <Route path="/science-model-dashboard/RAPID/citations" element={<Navigate to="/citations" replace />} />
         <Route path="/science-model-dashboard/RAPID/research-domains" element={<Navigate to="/research-domains" replace />} />
+        
+        {/* CMS-Flux specific routes */}
+        <Route path="/science-model-dashboard/CMS-Flux/research-domains" element={<CMSFluxResearchDomainsPage />} />
         
         {/* Generic routes for all models - these work with any model name */}
         <Route path="/science-model-dashboard/:modelName/citations" element={<GenericCitationsPage />} />

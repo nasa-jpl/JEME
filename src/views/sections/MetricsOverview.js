@@ -2,15 +2,40 @@
 // Overview of key metrics section with real data from JSON
 
 import React, { useMemo } from 'react';
-import { Award, TrendingUp, GitBranch, Droplet } from 'lucide-react';
+import { Award, TrendingUp, GitBranch, Globe } from 'lucide-react';
 import MetricCard from '../../components/MetricCard';
 
-// Import the JSON data directly
-import citationsData from '../../data/RAPID_analyzed.json';
-
-const MetricsOverview = () => {
+const MetricsOverview = ({ data = [] }) => {
+  // Use the data prop
+  const citationsData = data;
+  
   // Calculate metrics from the JSON data
   const metrics = useMemo(() => {
+    // Early return if no data
+    if (!citationsData || citationsData.length === 0) {
+      return {
+        totalCitations: 0,
+        peerReviewedCount: 0,
+        highImpactCount: 0,
+        recentCount: 0,
+        hIndex: 0,
+        avgCitations: 0,
+        implementationRate: 0,
+        modelAdaptationCount: 0,
+        foundationalMethodCount: 0,
+        dataUsageCount: 0,
+        countriesCount: 0,
+        regionsCount: 0,
+        globalStudies: 0,
+        regionalStudies: 0,
+        trends: {
+          citations: { value: 0, isUp: false },
+          hIndex: { value: 0, isUp: false },
+          implementation: { value: 0, isUp: false },
+          geographic: { value: 0, isUp: false }
+        }
+      };
+    }
     // Helper function to extract year from paper
     const extractYear = (paper) => {
       if (paper.year) return paper.year;
@@ -38,6 +63,16 @@ const MetricsOverview = () => {
       if (countryLower.includes('usa') || countryLower.includes('united states') || 
           countryLower.includes('canada') || countryLower.includes('mexico')) {
         return 'North America';
+      }
+      if (countryLower.includes('europe') || countryLower.includes('uk') || 
+          countryLower.includes('germany') || countryLower.includes('france') ||
+          countryLower.includes('spain') || countryLower.includes('italy')) {
+        return 'Europe';
+      }
+      if (countryLower.includes('asia') || countryLower.includes('china') || 
+          countryLower.includes('japan') || countryLower.includes('india') ||
+          countryLower.includes('korea')) {
+        return 'Asia';
       }
       return 'Other';
     };
@@ -92,24 +127,29 @@ const MetricsOverview = () => {
     const implementationCount = modelAdaptationCount + foundationalMethodCount;
     const implementationRate = ((implementationCount / citationsData.length) * 100);
 
-    // 4. WATERSHEDS MODELED
-    // Extract unique watersheds
-    const uniqueWatersheds = new Set();
-    const watershedRegions = { 'North America': 0, 'Other': 0 };
+    // 4. GEOGRAPHIC REACH
+    // Extract unique countries/regions
+    const uniqueCountries = new Set();
+    const uniqueRegions = new Set();
+    const regionCounts = { 'North America': 0, 'Europe': 0, 'Asia': 0, 'Other': 0 };
     
     citationsData.forEach(paper => {
-      if (paper.watershed && 
-          paper.watershed !== 'Unknown' && 
-          paper.watershed !== 'Not specified' &&
-          paper.watershed !== 'Not applicable') {
-        uniqueWatersheds.add(paper.watershed);
+      if (paper.country && 
+          paper.country !== 'Unknown' && 
+          paper.country !== 'Not specified') {
+        uniqueCountries.add(paper.country);
         
         // Count regions
         const region = getRegion(paper.country);
-        if (region === 'North America') {
-          watershedRegions['North America']++;
-        } else {
-          watershedRegions['Other']++;
+        uniqueRegions.add(region);
+        regionCounts[region] = (regionCounts[region] || 0) + 1;
+      }
+      
+      // Also check for geographic keywords in abstracts/titles
+      if (paper.abstract || paper.title) {
+        const text = (paper.abstract || '') + ' ' + (paper.title || '');
+        if (text.toLowerCase().includes('global')) {
+          uniqueRegions.add('Global');
         }
       }
     });
@@ -128,13 +168,13 @@ const MetricsOverview = () => {
       totalCitations: Math.round(totalCitations * 0.89), // Assume 11% growth
       hIndex: hIndex - 2,
       implementationRate: implementationRate - 4.7,
-      watersheds: uniqueWatersheds.size - 8
+      geographicReach: uniqueCountries.size - 5
     };
 
     const citationsTrend = calculateTrend(totalCitations, previousMetrics.totalCitations);
     const hIndexTrend = calculateTrend(hIndex, previousMetrics.hIndex);
     const implementationTrend = calculateTrend(implementationRate, previousMetrics.implementationRate);
-    const watershedsTrend = calculateTrend(uniqueWatersheds.size, previousMetrics.watersheds);
+    const geographicTrend = calculateTrend(uniqueCountries.size, previousMetrics.geographicReach);
 
     return {
       totalCitations,
@@ -147,17 +187,18 @@ const MetricsOverview = () => {
       modelAdaptationCount,
       foundationalMethodCount,
       dataUsageCount,
-      watershedsCount: uniqueWatersheds.size,
-      northAmericaWatersheds: Math.round(uniqueWatersheds.size * 0.61), // Approximate based on typical distribution
-      otherRegionsWatersheds: Math.round(uniqueWatersheds.size * 0.39),
+      countriesCount: uniqueCountries.size,
+      regionsCount: uniqueRegions.size,
+      globalStudies: regionCounts['Global'] || 0,
+      regionalStudies: Object.values(regionCounts).reduce((sum, val) => sum + val, 0),
       trends: {
         citations: citationsTrend,
         hIndex: hIndexTrend,
         implementation: implementationTrend,
-        watersheds: watershedsTrend
+        geographic: geographicTrend
       }
     };
-  }, []);
+  }, [citationsData]);
 
   return (
     <div className="grid grid-cols-4 gap-4 mb-6">
@@ -200,15 +241,15 @@ const MetricsOverview = () => {
         ]}
       />
       <MetricCard
-        title="Watersheds Modeled"
-        value={metrics.watershedsCount.toString()}
-        icon={<Droplet size={16} />}
+        title="Geographic Reach"
+        value={metrics.countriesCount.toString()}
+        icon={<Globe size={16} />}
         iconBg="bg-teal-600"
-        trend={`+${metrics.trends.watersheds.value} from last quarter`}
-        trendUp={metrics.trends.watersheds.isUp}
+        trend={`+${metrics.trends.geographic.value} from last quarter`}
+        trendUp={metrics.trends.geographic.isUp}
         breakdown={[
-          { label: "North America", value: metrics.northAmericaWatersheds.toString() },
-          { label: "Other regions", value: metrics.otherRegionsWatersheds.toString() }
+          { label: "Countries", value: metrics.countriesCount.toString() },
+          { label: "Regions", value: metrics.regionsCount.toString() }
         ]}
       />
     </div>
