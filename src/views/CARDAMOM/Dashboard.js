@@ -43,7 +43,7 @@ const CARDAMOMDashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} className="text-blue-600" />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard/RAPID"
+      link: "/science-model-dashboard"
     },
     {
       name: "CMS-Flux",
