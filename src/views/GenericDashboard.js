@@ -156,7 +156,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           
           <div className="flex gap-8">
             <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard/RAPID" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
+            <Link to="/science-model-dashboard" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
             <Link to="/science-model-dashboard/CMS-Flux" className={`font-medium text-sm ${modelName === 'CMS-Flux' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CMS-Flux</Link>
             <Link to="/science-model-dashboard/ECCO" className={`font-medium text-sm ${modelName === 'ECCO' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ECCO</Link>
             <Link to="/science-model-dashboard/ISSM" className={`font-medium text-sm ${modelName === 'ISSM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ISSM</Link>

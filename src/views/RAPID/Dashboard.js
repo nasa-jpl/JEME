@@ -175,7 +175,7 @@ const RAPIDDashboard = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             <Link 
-              to="/science-model-dashboard/RAPID/citations" 
+              to="/citations" 
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -189,7 +189,7 @@ const RAPIDDashboard = () => {
             </Link>
             
             <Link 
-              to="/science-model-dashboard/RAPID/geographic-impact" 
+              to="/geographic-impact" 
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -203,7 +203,7 @@ const RAPIDDashboard = () => {
             </Link>
             
             <Link 
-              to="/science-model-dashboard/RAPID/research-domains" 
+              to="/research-domains" 
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">
@@ -231,7 +231,7 @@ const RAPIDDashboard = () => {
         
         <div className="grid grid-cols-2 gap-6 mb-6">
           <JournalDistributionCard data={rapidData} />
-          <GitHubMetricsCard data={rapidData} />
+          <GitHubMetricsCard owner="c-h-david" repo="rapid" />
         </div>
         
         <Footer />

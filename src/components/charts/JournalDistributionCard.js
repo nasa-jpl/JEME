@@ -4,12 +4,16 @@
 import React, { useMemo } from 'react';
 import { MoreHorizontal } from 'lucide-react';
 
-// Import the JSON data directly
-import citationsData from '../../views/rapid_20250528_2.json';
-
-const JournalDistributionCard = () => {
+const JournalDistributionCard = ({ data = [] }) => {
+  // Use the data prop
+  const citationsData = data;
   // Process the journal distribution data
   const journalData = useMemo(() => {
+    // Early return if no data
+    if (!citationsData || citationsData.length === 0) {
+      return [];
+    }
+    
     // Helper function to decode HTML entities
     const decodeHtmlEntities = (text) => {
       if (!text) return text;
@@ -85,7 +89,7 @@ const JournalDistributionCard = () => {
 
     // Take top 15 journals to avoid overcrowding
     return journalArray.slice(0, 15);
-  }, []);
+  }, [citationsData]);
 
   // Calculate journal impact analysis
   const impactAnalysis = useMemo(() => {
@@ -156,7 +160,7 @@ const JournalDistributionCard = () => {
       specialized: specializedCount,
       total: highImpactCount + mediumImpactCount + specializedCount
     };
-  }, []);
+  }, [citationsData]);
 
   // Calculate journal diversity metrics
   const diversityMetrics = useMemo(() => {
@@ -186,7 +190,7 @@ const JournalDistributionCard = () => {
         <div>
           <div className="text-base font-semibold text-gray-800">Journal Distribution</div>
           <div className="text-sm text-gray-500 mt-1">
-            Top journals citing RAPID • {diversityMetrics.totalJournals} unique journals
+            Top publishing journals • {diversityMetrics.totalJournals} unique journals
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">

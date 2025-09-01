@@ -3,12 +3,12 @@ import { ArrowLeft, Download, Filter, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from '../../data/CMS-Flux_analyzed.json';
+import citationsData from '../../data/ECCO_analyzed.json';
 
 // Define consistent colors for domains (moved outside component for better accessibility) - Same order as RAPID
 const domainColors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
 
-const CMSFluxResearchDomainsPage = () => {
+const ECCOResearchDomainsPage = () => {
   const [selectedDomain, setSelectedDomain] = useState('all');
   const [processedData, setProcessedData] = useState({
     domainStats: {},
@@ -107,15 +107,15 @@ const CMSFluxResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Environmental Science/Climate Change": "bg-amber-100 text-amber-800",
-      "Oceanography/Climate Science": "bg-blue-100 text-blue-800",
-      "Atmospheric Science/Climate Change": "bg-cyan-100 text-cyan-800",
-      "Environmental Science/Oceanography/Climate Change": "bg-teal-100 text-teal-800",
-      "Oceanography/Marine Biogeochemistry": "bg-green-100 text-green-800",
-      "Environmental Science/Climatology": "bg-purple-100 text-purple-800",
-      "Carbon Cycle": "bg-emerald-100 text-emerald-800",
-      "Climate Modeling": "bg-indigo-100 text-indigo-800",
-      "Carbon Flux": "bg-orange-100 text-orange-800"
+      "Oceanography": "bg-purple-100 text-purple-800",
+      "Physical Oceanography": "bg-blue-100 text-blue-800",
+      "Climate Science": "bg-cyan-100 text-cyan-800",
+      "Ocean Modeling": "bg-teal-100 text-teal-800",
+      "Marine Biogeochemistry": "bg-green-100 text-green-800",
+      "Sea Level Research": "bg-indigo-100 text-indigo-800",
+      "Ocean Circulation": "bg-purple-100 text-purple-800",
+      "Climate Modeling": "bg-emerald-100 text-emerald-800",
+      "Environmental Science": "bg-orange-100 text-orange-800"
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };
@@ -207,7 +207,7 @@ const CMSFluxResearchDomainsPage = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', 'cms_flux_research_domains_analysis.csv');
+    link.setAttribute('download', 'ecco_research_domains_analysis.csv');
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -219,11 +219,11 @@ const CMSFluxResearchDomainsPage = () => {
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <Link to="/science-model-dashboard/CMS-Flux" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
+            <Link to="/science-model-dashboard/ECCO" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
               <ArrowLeft size={18} className="mr-1" />
-              <span className="font-medium">Back to CMS-Flux Dashboard</span>
+              <span className="font-medium">Back to ECCO Dashboard</span>
             </Link>
-            <h1 className="text-xl font-semibold text-gray-900">CMS-Flux Research Domains Analysis</h1>
+            <h1 className="text-xl font-semibold text-gray-900">ECCO Research Domains Analysis</h1>
           </div>
         </div>
       </header>
@@ -236,7 +236,7 @@ const CMSFluxResearchDomainsPage = () => {
               <div>
                 <h2 className="text-lg font-semibold text-gray-800">Research Domain Analysis</h2>
                 <p className="text-sm text-gray-500 mt-1">
-                  Analysis of {citationsData.length} research papers using CMS-Flux across different domains
+                  Analysis of {citationsData.length} research papers using ECCO across different domains
                 </p>
               </div>
               <div className="flex items-center space-x-4 mt-2 sm:mt-0">
@@ -263,7 +263,7 @@ const CMSFluxResearchDomainsPage = () => {
                 
                 <button 
                   onClick={exportData}
-                  className="flex items-center gap-2 px-4 py-2 bg-amber-600 text-white rounded hover:bg-amber-700"
+                  className="flex items-center gap-2 px-4 py-2 bg-purple-600 text-white rounded hover:bg-purple-700"
                 >
                   <Download size={16} />
                   <span>Export Analysis</span>
@@ -273,9 +273,9 @@ const CMSFluxResearchDomainsPage = () => {
             
             <div className="flex flex-wrap text-center mb-6">
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
-                <div className="bg-amber-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-amber-700 mb-1">{processedData.domains.length}</div>
-                  <div className="text-sm text-amber-600">Research Domains</div>
+                <div className="bg-purple-50 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-purple-700 mb-1">{processedData.domains.length}</div>
+                  <div className="text-sm text-purple-600">Research Domains</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
@@ -318,7 +318,7 @@ const CMSFluxResearchDomainsPage = () => {
                   <div className="text-xs text-gray-500">
                     Interactive Chart • {selectedDomain === 'all' ? citationsData.length : (processedData.domainStats[selectedDomain] || 0)} papers
                     {selectedDomain !== 'all' && (
-                      <span className="ml-1 text-amber-600 font-medium">({selectedDomain})</span>
+                      <span className="ml-1 text-purple-600 font-medium">({selectedDomain})</span>
                     )}
                   </div>
                 </div>
@@ -389,7 +389,7 @@ const CMSFluxResearchDomainsPage = () => {
                           <div 
                             key={index} 
                             className={`flex items-center space-x-2 p-2 rounded hover:bg-white transition-colors duration-200 cursor-pointer ${
-                              isSelected ? 'bg-amber-50 ring-2 ring-amber-200' : ''
+                              isSelected ? 'bg-purple-50 ring-2 ring-purple-200' : ''
                             }`}
                             onClick={() => setSelectedDomain(domain.domain)}
                           >
@@ -398,9 +398,9 @@ const CMSFluxResearchDomainsPage = () => {
                               style={{ backgroundColor: domainColors[index % domainColors.length] }}
                             ></div>
                             <div className="flex-1 min-w-0">
-                              <div className={`text-xs font-medium truncate ${isSelected ? 'text-amber-800' : 'text-gray-800'}`} title={domain.domain}>
+                              <div className={`text-xs font-medium truncate ${isSelected ? 'text-purple-800' : 'text-gray-800'}`} title={domain.domain}>
                                 {domain.domain}
-                                {isSelected && <span className="ml-1 text-amber-600">●</span>}
+                                {isSelected && <span className="ml-1 text-purple-600">●</span>}
                               </div>
                               <div className="text-xs text-gray-500">
                                 {domain.count} papers ({percentage}%)
@@ -427,7 +427,7 @@ const CMSFluxResearchDomainsPage = () => {
                   <h5 className="text-xs font-medium text-gray-600 mb-3">
                     Publication Timeline 
                     {selectedDomain !== 'all' && (
-                      <span className="text-amber-600 font-medium ml-1">- {selectedDomain}</span>
+                      <span className="text-purple-600 font-medium ml-1">- {selectedDomain}</span>
                     )}
                     <span className="text-gray-500 font-normal ml-1">(Recent Years)</span>
                   </h5>
@@ -586,7 +586,7 @@ const CMSFluxResearchDomainsPage = () => {
                                 href={paper.URL} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="text-amber-600 hover:text-amber-800 text-xs underline"
+                                className="text-purple-600 hover:text-purple-800 text-xs underline"
                               >
                                 View Paper
                               </a>
@@ -671,7 +671,7 @@ const CMSFluxResearchDomainsPage = () => {
                 .map(([level, count], index) => {
                   const percentage = ((count / citationsData.length) * 100).toFixed(1);
                   const colors = [
-                    'bg-amber-100 text-amber-800',
+                    'bg-purple-100 text-purple-800',
                     'bg-green-100 text-green-800', 
                     'bg-blue-100 text-blue-800',
                     'bg-purple-100 text-purple-800',
@@ -690,7 +690,7 @@ const CMSFluxResearchDomainsPage = () => {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div 
-                          className="bg-amber-500 h-2 rounded-full transition-all duration-300"
+                          className="bg-purple-500 h-2 rounded-full transition-all duration-300"
                           style={{ width: `${percentage}%` }}
                         ></div>
                       </div>
@@ -704,7 +704,7 @@ const CMSFluxResearchDomainsPage = () => {
         <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
           <h2 className="text-lg font-semibold text-gray-800 mb-4">Data Analysis Methodology</h2>
           <p className="text-sm text-gray-600 mb-4">
-            This analysis is based on {citationsData.length} research papers that cite or use the CMS-Flux (Carbon Monitoring System Flux) model. 
+            This analysis is based on {citationsData.length} research papers that cite or use the ECCO (Estimating the Circulation and Climate of the Ocean) model. 
             Papers are categorized by research domain, engagement level, and geographic focus based on their abstracts and metadata.
           </p>
           <p className="text-sm text-gray-600 mb-4">
@@ -721,7 +721,7 @@ const CMSFluxResearchDomainsPage = () => {
           <div className="flex justify-end">
             <button 
               onClick={exportData}
-              className="text-sm text-amber-600 hover:text-amber-800 hover:underline"
+              className="text-sm text-purple-600 hover:text-purple-800 hover:underline"
             >
               Download Full Dataset
             </button>
@@ -732,4 +732,4 @@ const CMSFluxResearchDomainsPage = () => {
   );
 };
 
-export default CMSFluxResearchDomainsPage;
+export default ECCOResearchDomainsPage;

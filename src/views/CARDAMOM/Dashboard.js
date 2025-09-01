@@ -92,7 +92,7 @@ const CARDAMOMDashboard = () => {
           
           <div className="flex gap-8">
             <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
+            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
             <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
             <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
@@ -232,7 +232,7 @@ const CARDAMOMDashboard = () => {
         
         <div className="grid grid-cols-2 gap-6 mb-6">
           <JournalDistributionCard data={cardamomData} />
-          <GitHubMetricsCard data={cardamomData} />
+          <GitHubMetricsCard owner="GCEL" repo="CARDAMOM" />
         </div>
         
         <Footer />

@@ -13,6 +13,10 @@ import GenericResearchDomainsPage from './views/GenericResearchDomainsPage';
 
 // Model-specific page components
 import CMSFluxResearchDomainsPage from './views/CMS-Flux/ResearchDomainsPage';
+import ECCOResearchDomainsPage from './views/ECCO/ResearchDomainsPage';
+import ISSMResearchDomainsPage from './views/ISSM/ResearchDomainsPage';
+import CARDAMOMResearchDomainsPage from './views/CARDAMOM/ResearchDomainsPage';
+import MOMOCHEMResearchDomainsPage from './views/MOMO-CHEM/ResearchDomainsPage';
 
 // Model-specific dashboards
 import RAPIDDashboard from './views/RAPID/Dashboard';
@@ -43,12 +47,14 @@ function AppWithRouting() {
         <Route path="/geographic-impact" element={<GeographicImpactPage />} />
         <Route path="/research-domains" element={<ResearchDomainsPage />} />
         
-        {/* RAPID-specific redirects to legacy pages */}
-        <Route path="/science-model-dashboard/RAPID/citations" element={<Navigate to="/citations" replace />} />
-        <Route path="/science-model-dashboard/RAPID/research-domains" element={<Navigate to="/research-domains" replace />} />
+        {/* RAPID uses legacy pages directly */}
         
-        {/* CMS-Flux specific routes */}
+        {/* Model-specific routes */}
         <Route path="/science-model-dashboard/CMS-Flux/research-domains" element={<CMSFluxResearchDomainsPage />} />
+        <Route path="/science-model-dashboard/ECCO/research-domains" element={<ECCOResearchDomainsPage />} />
+        <Route path="/science-model-dashboard/ISSM/research-domains" element={<ISSMResearchDomainsPage />} />
+        <Route path="/science-model-dashboard/CARDAMOM/research-domains" element={<CARDAMOMResearchDomainsPage />} />
+        <Route path="/science-model-dashboard/MOMO-CHEM/research-domains" element={<MOMOCHEMResearchDomainsPage />} />
         
         {/* Generic routes for all models - these work with any model name */}
         <Route path="/science-model-dashboard/:modelName/citations" element={<GenericCitationsPage />} />

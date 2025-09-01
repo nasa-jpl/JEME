@@ -3,9 +3,12 @@ import { ArrowLeft, Download, Filter, BarChart3 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
-import citationsData from '../../data/CARDAMOM/cardamom.json';
+import citationsData from '../../data/CARDAMOM_analyzed.json';
 
-const ResearchDomainsPage = () => {
+// Define consistent colors for domains (moved outside component for better accessibility) - Same order as RAPID
+const domainColors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
+
+const CARDAMOMResearchDomainsPage = () => {
   const [selectedDomain, setSelectedDomain] = useState('all');
   const [processedData, setProcessedData] = useState({
     domainStats: {},
@@ -104,15 +107,15 @@ const ResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Water Resources": "bg-blue-100 text-blue-800",
-      "Flood Prediction": "bg-red-100 text-red-800",
-      "River Modeling": "bg-green-100 text-green-800",
-      "Global River Modeling": "bg-teal-100 text-teal-800",
-      "Flow Analysis": "bg-purple-100 text-purple-800",
-      "Streamflow": "bg-indigo-100 text-indigo-800",
-      "Hydrological Modeling": "bg-cyan-100 text-cyan-800",
-      "Hydrology": "bg-emerald-100 text-emerald-800",
-      "Hydrologic Modeling": "bg-sky-100 text-sky-800"
+      "Carbon Cycle": "bg-green-100 text-green-800",
+      "Ecosystem Modeling": "bg-emerald-100 text-emerald-800",
+      "Climate Science": "bg-cyan-100 text-cyan-800",
+      "Biogeochemistry": "bg-teal-100 text-teal-800",
+      "Forest Dynamics": "bg-green-100 text-green-800",
+      "Remote Sensing": "bg-indigo-100 text-indigo-800",
+      "Data Assimilation": "bg-blue-100 text-blue-800",
+      "Environmental Monitoring": "bg-emerald-100 text-emerald-800",
+      "Carbon Sequestration": "bg-green-100 text-green-800"
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };
@@ -204,7 +207,7 @@ const ResearchDomainsPage = () => {
     const url = URL.createObjectURL(blob);
     const link = document.createElement('a');
     link.setAttribute('href', url);
-    link.setAttribute('download', 'rapid_research_domains_analysis.csv');
+    link.setAttribute('download', 'cardamom_research_domains_analysis.csv');
     link.style.visibility = 'hidden';
     document.body.appendChild(link);
     link.click();
@@ -216,11 +219,11 @@ const ResearchDomainsPage = () => {
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <Link to="/science-model-dashboard" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
+            <Link to="/science-model-dashboard/CARDAMOM" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
               <ArrowLeft size={18} className="mr-1" />
-              <span className="font-medium">Back to Dashboard</span>
+              <span className="font-medium">Back to CARDAMOM Dashboard</span>
             </Link>
-            <h1 className="text-xl font-semibold text-gray-900">Research Domains Analysis</h1>
+            <h1 className="text-xl font-semibold text-gray-900">CARDAMOM Research Domains Analysis</h1>
           </div>
         </div>
       </header>
@@ -233,7 +236,7 @@ const ResearchDomainsPage = () => {
               <div>
                 <h2 className="text-lg font-semibold text-gray-800">Research Domain Analysis</h2>
                 <p className="text-sm text-gray-500 mt-1">
-                  Analysis of {citationsData.length} research papers using RAPID across different domains
+                  Analysis of {citationsData.length} research papers using CARDAMOM across different domains
                 </p>
               </div>
               <div className="flex items-center space-x-4 mt-2 sm:mt-0">
@@ -260,7 +263,7 @@ const ResearchDomainsPage = () => {
                 
                 <button 
                   onClick={exportData}
-                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
+                  className="flex items-center gap-2 px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700"
                 >
                   <Download size={16} />
                   <span>Export Analysis</span>
@@ -270,39 +273,39 @@ const ResearchDomainsPage = () => {
             
             <div className="flex flex-wrap text-center mb-6">
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-700 mb-1">{processedData.domains.length}</div>
-                  <div className="text-sm text-blue-600">Research Domains</div>
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
                 <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-green-700 mb-1">{citationsData.length}</div>
-                  <div className="text-sm text-green-600">Total Papers</div>
+                  <div className="text-3xl font-bold text-green-700 mb-1">{processedData.domains.length}</div>
+                  <div className="text-sm text-green-600">Research Domains</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
-                <div className="bg-purple-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-purple-700 mb-1">
-                    {processedData.domainStats['Flood Prediction'] || 0}
-                  </div>
-                  <div className="text-sm text-purple-600">Flood Prediction</div>
+                <div className="bg-emerald-50 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-emerald-700 mb-1">{citationsData.length}</div>
+                  <div className="text-sm text-emerald-600">Total Papers</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
-                <div className="bg-amber-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-amber-700 mb-1">
-                    {processedData.domainStats['River Modeling'] || 0}
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-teal-700 mb-1">
+                    {processedData.domainStats['Carbon Cycle'] || 0}
                   </div>
-                  <div className="text-sm text-amber-600">River Modeling</div>
+                  <div className="text-sm text-teal-600">Carbon Cycle</div>
+                </div>
+              </div>
+              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
+                <div className="bg-cyan-50 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-green-700 mb-1">
+                    {processedData.domainStats['Ecosystem Modeling'] || 0}
+                  </div>
+                  <div className="text-sm text-green-600">Ecosystem Models</div>
                 </div>
               </div>
               <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
                 <div className="bg-teal-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-teal-700 mb-1">
+                  <div className="text-3xl font-bold text-emerald-700 mb-1">
                     {citationsData.filter(p => extractYear(p) >= 2020).length}
                   </div>
-                  <div className="text-sm text-teal-600">Recent Papers (2020+)</div>
+                  <div className="text-sm text-emerald-600">Recent Papers (2020+)</div>
                 </div>
               </div>
             </div>
@@ -315,7 +318,7 @@ const ResearchDomainsPage = () => {
                   <div className="text-xs text-gray-500">
                     Interactive Chart • {selectedDomain === 'all' ? citationsData.length : (processedData.domainStats[selectedDomain] || 0)} papers
                     {selectedDomain !== 'all' && (
-                      <span className="ml-1 text-blue-600 font-medium">({selectedDomain})</span>
+                      <span className="ml-1 text-green-600 font-medium">({selectedDomain})</span>
                     )}
                   </div>
                 </div>
@@ -330,8 +333,6 @@ const ResearchDomainsPage = () => {
                         {(() => {
                           let cumulativeAngle = 0;
                           const total = topDomains.reduce((sum, d) => sum + d.count, 0);
-                          const colors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
-                          
                           return topDomains.slice(0, 8).map((domain, index) => {
                             const percentage = (domain.count / total) * 100;
                             const angle = (domain.count / total) * 360;
@@ -357,7 +358,7 @@ const ResearchDomainsPage = () => {
                               <path
                                 key={index}
                                 d={pathData}
-                                fill={colors[index % colors.length]}
+                                fill={domainColors[index % domainColors.length]}
                                 opacity={selectedDomain === 'all' || selectedDomain === domain.domain ? "0.8" : "0.3"}
                                 className="hover:opacity-100 transition-opacity duration-200 cursor-pointer"
                                 title={`${domain.domain}: ${domain.count} papers (${percentage.toFixed(1)}%)`}
@@ -381,7 +382,6 @@ const ResearchDomainsPage = () => {
                     <h5 className="text-xs font-medium text-gray-600 mb-3">Top Domains</h5>
                     <div className="space-y-2 max-h-44 overflow-y-auto">
                       {topDomains.slice(0, 8).map((domain, index) => {
-                        const colors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
                         const percentage = ((domain.count / citationsData.length) * 100).toFixed(1);
                         const isSelected = selectedDomain === domain.domain;
                         
@@ -389,18 +389,18 @@ const ResearchDomainsPage = () => {
                           <div 
                             key={index} 
                             className={`flex items-center space-x-2 p-2 rounded hover:bg-white transition-colors duration-200 cursor-pointer ${
-                              isSelected ? 'bg-blue-50 ring-2 ring-blue-200' : ''
+                              isSelected ? 'bg-green-50 ring-2 ring-green-200' : ''
                             }`}
                             onClick={() => setSelectedDomain(domain.domain)}
                           >
                             <div 
                               className="w-3 h-3 rounded-full flex-shrink-0" 
-                              style={{ backgroundColor: colors[index % colors.length] }}
+                              style={{ backgroundColor: domainColors[index % domainColors.length] }}
                             ></div>
                             <div className="flex-1 min-w-0">
-                              <div className={`text-xs font-medium truncate ${isSelected ? 'text-blue-800' : 'text-gray-800'}`} title={domain.domain}>
+                              <div className={`text-xs font-medium truncate ${isSelected ? 'text-green-800' : 'text-gray-800'}`} title={domain.domain}>
                                 {domain.domain}
-                                {isSelected && <span className="ml-1 text-blue-600">●</span>}
+                                {isSelected && <span className="ml-1 text-green-600">●</span>}
                               </div>
                               <div className="text-xs text-gray-500">
                                 {domain.count} papers ({percentage}%)
@@ -427,7 +427,7 @@ const ResearchDomainsPage = () => {
                   <h5 className="text-xs font-medium text-gray-600 mb-3">
                     Publication Timeline 
                     {selectedDomain !== 'all' && (
-                      <span className="text-blue-600 font-medium ml-1">- {selectedDomain}</span>
+                      <span className="text-green-600 font-medium ml-1">- {selectedDomain}</span>
                     )}
                     <span className="text-gray-500 font-normal ml-1">(Recent Years)</span>
                   </h5>
@@ -439,19 +439,21 @@ const ResearchDomainsPage = () => {
                         
                         // Get the color for the selected domain
                         const getDomainTimelineColor = () => {
-                          if (selectedDomain === 'all') return 'bg-blue-500 hover:bg-blue-600';
+                          if (selectedDomain === 'all') return domainColors[0]; // Use first domain color for "all"
                           
-                          const colors = ['bg-blue-500 hover:bg-blue-600', 'bg-red-500 hover:bg-red-600', 'bg-green-500 hover:bg-green-600', 'bg-yellow-500 hover:bg-yellow-600', 'bg-purple-500 hover:bg-purple-600', 'bg-cyan-500 hover:bg-cyan-600', 'bg-orange-500 hover:bg-orange-600', 'bg-pink-500 hover:bg-pink-600'];
                           const domainIndex = topDomains.findIndex(d => d.domain === selectedDomain);
-                          return domainIndex >= 0 && domainIndex < colors.length ? colors[domainIndex] : 'bg-gray-500 hover:bg-gray-600';
+                          return domainIndex >= 0 && domainIndex < domainColors.length ? domainColors[domainIndex] : '#6B7280';
                         };
                         
                         return (
                           <div key={index} className="flex flex-col items-center group relative">
                             <div className="relative">
                               <div 
-                                className={`w-8 rounded-t hover:opacity-80 transition-all duration-200 cursor-pointer shadow-sm ${getDomainTimelineColor()}`}
-                                style={{ height: `${height}px` }}
+                                className="w-8 rounded-t hover:opacity-80 transition-all duration-200 cursor-pointer shadow-sm"
+                                style={{ 
+                                  height: `${height}px`, 
+                                  backgroundColor: getDomainTimelineColor() 
+                                }}
                                 title={`${year.year}: ${year.count} papers${selectedDomain !== 'all' ? ` in ${selectedDomain}` : ''}`}
                               >
                               </div>
@@ -513,7 +515,7 @@ const ResearchDomainsPage = () => {
                       RESEARCH DOMAIN / ENGAGEMENT LEVEL
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      WATERSHED / COUNTRY
+                      PUBLISHER / SOURCE
                     </th>
                     <th scope="col" className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                       LINKS
@@ -561,16 +563,18 @@ const ResearchDomainsPage = () => {
                         </td>
                         <td className="px-6 py-4 text-sm text-gray-500 max-w-xs">
                           <div className="space-y-1">
-                            {paper.watershed && paper.watershed !== "Unknown" && (
-                              <div className="text-xs">
-                                <span className="font-medium text-gray-700">Watershed:</span>
-                                <div className="text-gray-600">{paper.watershed}</div>
+                            <div className="text-xs">
+                              <span className="font-medium text-gray-700">Source:</span>
+                              <div className="text-gray-600 truncate" title={source}>
+                                {source}
                               </div>
-                            )}
-                            {paper.country && paper.country !== "Unknown" && (
+                            </div>
+                            {paper.publisher && (
                               <div className="text-xs">
-                                <span className="font-medium text-gray-700">Country:</span>
-                                <div className="text-gray-600">{paper.country}</div>
+                                <span className="font-medium text-gray-700">Publisher:</span>
+                                <div className="text-gray-600 truncate" title={paper.publisher}>
+                                  {paper.publisher}
+                                </div>
                               </div>
                             )}
                           </div>
@@ -582,7 +586,7 @@ const ResearchDomainsPage = () => {
                                 href={paper.URL} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="text-blue-600 hover:text-blue-800 text-xs underline"
+                                className="text-green-600 hover:text-green-800 text-xs underline"
                               >
                                 View Paper
                               </a>
@@ -592,7 +596,7 @@ const ResearchDomainsPage = () => {
                                 href={paper.link[0].URL} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="text-green-600 hover:text-green-800 text-xs underline"
+                                className="text-emerald-600 hover:text-emerald-800 text-xs underline"
                               >
                                 Full Text
                               </a>
@@ -602,7 +606,7 @@ const ResearchDomainsPage = () => {
                                 href={`https://doi.org/${doi}`} 
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="text-purple-600 hover:text-purple-800 text-xs underline"
+                                className="text-green-600 hover:text-green-800 text-xs underline"
                               >
                                 View DOI
                               </a>
@@ -625,26 +629,34 @@ const ResearchDomainsPage = () => {
               <h3 className="text-sm font-medium text-gray-700 mb-3">Top Research Domains</h3>
               <div className="bg-gray-100 rounded-lg p-4 h-80 overflow-y-auto">
                 <div className="space-y-3">
-                  {topDomains.map((item, index) => (
-                    <div key={index} className="space-y-1">
-                      <div className="flex justify-between items-center">
-                        <div className="text-sm font-medium text-gray-700 flex-1" title={item.domain}>
-                          {item.domain}
+                  {topDomains.map((item, index) => {
+                    // Use the same colors as pie chart and legend
+                    const barColor = domainColors[index % domainColors.length];
+                    
+                    return (
+                      <div key={index} className="space-y-1">
+                        <div className="flex justify-between items-center">
+                          <div className="text-sm font-medium text-gray-700 flex-1" title={item.domain}>
+                            {item.domain}
+                          </div>
+                          <div className="text-sm font-bold text-gray-900 ml-2">
+                            {item.count}
+                          </div>
                         </div>
-                        <div className="text-sm font-bold text-gray-900 ml-2">
-                          {item.count}
+                        <div className="w-full">
+                          <div 
+                            className="bg-gray-200 h-4 rounded-full transition-all duration-300" 
+                            style={{ width: `${(item.count / Math.max(...topDomains.map(d => d.count))) * 100}%` }}
+                          >
+                            <div 
+                              className="h-full rounded-full opacity-80" 
+                              style={{ backgroundColor: barColor }}
+                            ></div>
+                          </div>
                         </div>
                       </div>
-                      <div className="w-full">
-                        <div 
-                          className="bg-blue-200 h-4 rounded-full transition-all duration-300" 
-                          style={{ width: `${(item.count / Math.max(...topDomains.map(d => d.count))) * 100}%` }}
-                        >
-                          <div className="h-full bg-blue-500 rounded-full opacity-80"></div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -659,11 +671,11 @@ const ResearchDomainsPage = () => {
                 .map(([level, count], index) => {
                   const percentage = ((count / citationsData.length) * 100).toFixed(1);
                   const colors = [
-                    'bg-blue-100 text-blue-800',
-                    'bg-green-100 text-green-800', 
-                    'bg-purple-100 text-purple-800',
-                    'bg-amber-100 text-amber-800',
-                    'bg-red-100 text-red-800'
+                    'bg-green-100 text-green-800',
+                    'bg-emerald-100 text-emerald-800', 
+                    'bg-teal-100 text-teal-800',
+                    'bg-cyan-100 text-cyan-800',
+                    'bg-blue-100 text-blue-800'
                   ];
                   
                   return (
@@ -678,7 +690,7 @@ const ResearchDomainsPage = () => {
                       </div>
                       <div className="w-full bg-gray-200 rounded-full h-2">
                         <div 
-                          className="bg-blue-500 h-2 rounded-full transition-all duration-300"
+                          className="bg-green-500 h-2 rounded-full transition-all duration-300"
                           style={{ width: `${percentage}%` }}
                         ></div>
                       </div>
@@ -692,7 +704,7 @@ const ResearchDomainsPage = () => {
         <div className="bg-white rounded-lg shadow-sm p-6 mt-6">
           <h2 className="text-lg font-semibold text-gray-800 mb-4">Data Analysis Methodology</h2>
           <p className="text-sm text-gray-600 mb-4">
-            This analysis is based on {citationsData.length} research papers that cite or use the model. 
+            This analysis is based on {citationsData.length} research papers that cite or use the CARDAMOM (CARbon DAta MOdel fraMework) model. 
             Papers are categorized by research domain, engagement level, and geographic focus based on their abstracts and metadata.
           </p>
           <p className="text-sm text-gray-600 mb-4">
@@ -709,7 +721,7 @@ const ResearchDomainsPage = () => {
           <div className="flex justify-end">
             <button 
               onClick={exportData}
-              className="text-sm text-blue-600 hover:text-blue-800 hover:underline"
+              className="text-sm text-green-600 hover:text-green-800 hover:underline"
             >
               Download Full Dataset
             </button>
@@ -720,4 +732,4 @@ const ResearchDomainsPage = () => {
   );
 };
 
-export default ResearchDomainsPage;
+export default CARDAMOMResearchDomainsPage;
