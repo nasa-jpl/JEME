@@ -1,7 +1,7 @@
 // Generic Dashboard component that works with any model
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp, Search, Bell, Settings } from 'lucide-react';
+import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp } from 'lucide-react';
 import MetricCard from '../components/MetricCard';
 import { calculateMetrics, processCitationTrends } from '../utils/dataUtils';
 import { getModelConfig } from '../config/modelConfig';
@@ -165,21 +165,6 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           </div>
           
           <div className="flex items-center gap-4">
-            <div className="relative w-64">
-              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Search size={16} className="text-gray-500" />
-              </div>
-              <input type="text" placeholder="Search citations..." className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-            </div>
-            <button className="text-gray-600 hover:text-gray-800">
-              <Bell size={20} />
-            </button>
-            <button className="text-gray-600 hover:text-gray-800">
-              <Settings size={20} />
-            </button>
-            <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-              A
-            </div>
           </div>
         </div>
       </header>
