@@ -12,8 +12,8 @@ const Footer = () => {
 
   return (
     <div className="text-center py-6 text-sm text-gray-500 border-t border-gray-200 mt-8">
-      <div>© 2025 Science Model Dashboard</div>
-      <div className="mt-2">Data sources: Google Scholar, Web of Science, Scopus, GitHub | Last updated: {today}</div>
+      <div>© 2025 JEME Publication Dashboard</div>
+      <div className="mt-2">Last updated: {today}</div>
     </div>
   );
 };

@@ -26,6 +26,8 @@ import ISSMDashboard from './views/ISSM/Dashboard';
 import MOMOCHEMDashboard from './views/MOMO-CHEM/Dashboard';
 import CARDAMOM_Dashboard from './views/CARDAMOM/Dashboard';
 
+// How It Works page
+import HowItWorks from './views/HowItWorks';
 
 function AppWithRouting() {
   return (
@@ -41,6 +43,9 @@ function AppWithRouting() {
         <Route path="/science-model-dashboard/ISSM" element={<ISSMDashboard />} />
         <Route path="/science-model-dashboard/MOMO-CHEM" element={<MOMOCHEMDashboard />} />
         <Route path="/science-model-dashboard/CARDAMOM" element={<CARDAMOM_Dashboard />} />
+        
+        {/* How It Works page */}
+        <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />
         
         {/* Legacy routes (keeping RAPID as default for backward compatibility) */}
         <Route path="/citations" element={<CitationsPage />} />

@@ -102,6 +102,7 @@ const Dashboard = () => {
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
           </div>
           
           <div className="flex items-center gap-4">
