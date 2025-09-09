@@ -38,7 +38,7 @@ const FutureTrendsChart = ({ data }) => {
       const year = extractYear(paper);
       const citations = extractCitations(paper);
       
-      if (year && year >= 2015 && year <= 2025) {
+      if (year && year >= 2015 && year <= 2024) {
         if (!yearlyData[year]) {
           yearlyData[year] = { papers: 0, totalCitations: 0 };
         }
@@ -49,7 +49,7 @@ const FutureTrendsChart = ({ data }) => {
 
     // Create historical data points
     const historicalData = [];
-    for (let year = 2015; year <= 2025; year++) {
+    for (let year = 2015; year <= 2024; year++) {
       const data = yearlyData[year] || { papers: 0, totalCitations: 0 };
       historicalData.push({
         year: year.toString(),
@@ -85,10 +85,10 @@ const FutureTrendsChart = ({ data }) => {
     const baseline = baselineYears.length > 0 ? 
       baselineYears.reduce((sum, d) => sum + d.actual, 0) / baselineYears.length : 10;
 
-    // Create projections for 2026-2030
+    // Create projections for 2025-2030
     const projectedData = [];
-    for (let year = 2026; year <= 2030; year++) {
-      const yearsFromBaseline = year - 2025;
+    for (let year = 2025; year <= 2030; year++) {
+      const yearsFromBaseline = year - 2024;
       const projected = Math.round(baseline * Math.pow(1 + avgGrowthRate, yearsFromBaseline));
       const optimistic = Math.round(projected * Math.pow(1.15, yearsFromBaseline)); // 15% higher
       const conservative = Math.round(projected * Math.pow(0.85, yearsFromBaseline)); // 15% lower
