@@ -157,10 +157,22 @@ classDiagram
     - Country identification
 
 #### Engagement Level Classification
-1. **Level 1**: Simple Citation - References without using the method
-2. **Level 2**: Data/Method Usage - Uses methodology or data
-3. **Level 3**: Model/Method Adaptation - Modifies or extends approach
-4. **Level 4**: Foundational Method - Core method is foundational
+
+1. **Level 1**: Acknowledgement Citation
+   - The work is mentioned only as background or context (e.g., in the introduction or related work) without using its data, methods, or results.
+   - Example: "We build on prior work in X [Author, Year]."
+
+2. **Level 2**: Data/Method Usage
+   - The work's data, tools, or methods are applied as-is without modification. The citing paper relies on the resource to support its own results.
+   - Example: Using a dataset or off-the-shelf model from the cited work.
+
+3. **Level 3**: Model/Method Adaptation
+   - The work's approach, data, or model is adapted, modified, or improved for new purposes. The citing paper adds innovation while leveraging the foundation.
+   - Example: Altering an algorithm for a new domain, fine-tuning a model, or combining methods from multiple sources.
+
+4. **Level 4**: Foundational Method
+   - The cited work provides a conceptual or methodological foundation that is central to the citing research. Without it, the work would not exist in its current form.
+   - Example: A theory, framework, or algorithm that becomes the main driver of the new research.
 
 ### 3. Publication Classifier
 
@@ -335,7 +347,7 @@ graph LR
 - **Rate Limiting**: 1 second between requests
 
 ### Classifier Performance
-- **Accuracy**: Model-specific F1 scores 0.75-0.95
+- **Accuracy**: Model-specific F1 scores (0.xx-0.yy)
 - **Processing Speed**: ~100 papers/minute
 - **Memory Usage**: <2GB for full pipeline
 
