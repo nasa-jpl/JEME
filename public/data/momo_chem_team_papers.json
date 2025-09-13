@@ -1,0 +1,356 @@
+{
+  "MOMO-CHEM": [
+    {
+      "authors": "DiMaria, Christian A.; Dylan B. A. Jones; Helen M Worden; A. Anthony Bloom; Kevin W. Bowman; Trissevgeni Stavrakou; K. Miyazaki; John R. Worden; Alex B. Guenther; Chinmoy Sarkar et al.",
+      "title": "Optimizing the isoprene emission model MEGAN with satellite and ground-based observational constraints",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2023,
+      "doi": "10.1029/2022JD037822",
+      "link": "https://doi.org/10.1029/2022JD037822"
+    },
+    {
+      "authors": "Han, W., He, T.-L., Jiang, Z., Zhu, R., Jones, D., Miyazaki, K., & Shen, Y.",
+      "title": "The capability of deep learning model to predict ozone across continents in China, the United States and Europe",
+      "journal": "Geophysical Research Letters",
+      "year": 2023,
+      "doi": "10.1029/2023GL104928",
+      "link": "https://doi.org/10.1029/2023GL104928"
+    },
+    {
+      "authors": "Malina, E., Bowman, K. W., Kantchev, V., Kuai, L., Kurosu, T. P., Miyazaki, K., Natraj, V., Osterman, G. B., and Thill, M. D.",
+      "title": "Joint spectral retrievals of ozone with Suomi NPP CrIS augmented by S5P/TROPOMI",
+      "journal": "EGUsphere [preprint]",
+      "year": 2023,
+      "doi": "10.5194/egusphere-2022-774",
+      "link": "https://doi.org/10.5194/egusphere-2022-774"
+    },
+    {
+      "authors": "Miyazaki, K., Bowman, K.",
+      "title": "Predictability of fossil fuel CO2 from air quality emissions",
+      "journal": "Nature Communications",
+      "year": 2023,
+      "doi": "10.1038/s41467-023-37264-8",
+      "link": "https://doi.org/10.1038/s41467-023-37264-8"
+    },
+    {
+      "authors": "Okamoto, S., Cuesta, J., Beekmann, M., Dufour, G., Eremenko, M., Miyazaki, K., Boonne, C., Tanimoto, H., and Akimoto, H.",
+      "title": "Impact of different sources of precursors on an ozone pollution outbreak over Europe analysed with IASI+GOME2 multispectral satellite observations and model simulations",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2023,
+      "doi": "10.5194/acp-23-7399-2023",
+      "link": "https://doi.org/10.5194/acp-23-7399-2023"
+    },
+    {
+      "authors": "Sekiya, Takashi, Kazuyuki Miyazaki, Henk Eskes, Kevin Bowman, Kengo Sudo, Yugo Kanaya, Masayuki Takigawa",
+      "title": "The worldwide COVID-19 lockdown impacts on global secondary inorganic aerosols and radiative budget",
+      "journal": "Science Advances",
+      "year": 2023,
+      "doi": "10.1126/sciadv.adh2688",
+      "link": "https://doi.org/10.1126/sciadv.adh2688"
+    },
+    {
+      "authors": "Shogrin, M. J., Payne, V. H., Kulawik, S. S., Miyazaki, K., and Fischer, E. V.",
+      "title": "Measurement report: Spatiotemporal variability of peroxy acyl nitrates (PANs) over Mexico City from TES and CrIS satellite measurements",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2023,
+      "doi": "10.5194/acp-23-2667-2023",
+      "link": "https://doi.org/10.5194/acp-23-2667-2023"
+    },
+    {
+      "authors": "Cao, Hansen, Daven K. Henze, Liye Zhu, Mark W. Shephard, Karen Cady-Pereira, Enrico Dammers, Michael Sitwell, Nicholas Heath, Chantelle Lonsdale, Jesse O. Bash, Kazuyuki Miyazaki, Christophe Flechard, Yannick Fauvel, Roy Wichink Kruit, Stefan Feigenspan, Christian Brümmer, Frederik Schrader, Marsailidh M. Twigg, Sarah Leeson, Yuk S. Tang, Amy C. M. Stephens, Christine Braban, Keith Vincent, Mario Meier, Eva Seitler, Camilla Geels, Thomas Ellermann, Agnieszka Sanocka, Shannon L. Capps",
+      "title": "4D-Var inversion of European NH3 emissions using CrIS NH3 measurements and GEOS-Chem adjoint with bi-directional and uni-directional flux schemes",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2022,
+      "doi": "10.1029/2021JD035687",
+      "link": "https://doi.org/10.1029/2021JD035687"
+    },
+    {
+      "authors": "Chen, J., Z. Jiang, R. Li, C. Liao, K. Miyazaki, D. B. A. Jones",
+      "title": "Large discrepancy between observed and modeled wintertime tropospheric NO2 variabilities due to COVID-19 controls in China",
+      "journal": "Environ. Res. Lett.",
+      "year": 2022,
+      "doi": "10.1088/1748-9326/ac4ec0",
+      "link": "https://doi.org/10.1088/1748-9326/ac4ec0"
+    },
+    {
+      "authors": "He, T.-L., Jones, D. B. A., Miyazaki, K., Huang, B., Liu, Y., Jiang, Z., et al.",
+      "title": "Deep learning to evaluate US NOx emissions using surface ozone predictions",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2022,
+      "doi": "10.1029/2021JD035597",
+      "link": "https://doi.org/10.1029/2021JD035597"
+    },
+    {
+      "authors": "He, T.-L., Jones, D. B. A., Miyazaki, K., Bowman, K. W., Jiang, Z., Chen, X., Li, R., Zhang, Y., and Li, K.",
+      "title": "Inverse modelling of Chinese NOx emissions using deep learning: integrating in situ observations with a satellite-based chemical reanalysis",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2022,
+      "doi": "10.5194/acp-22-14059-2022",
+      "link": "https://doi.org/10.5194/acp-22-14059-2022"
+    },
+    {
+      "authors": "Miyazaki, K., J. L. Neu, G. Osterman, K. Bowman",
+      "title": "Changes in U.S. background ozone associated with the 2011 turnaround in Chinese NOx emissions",
+      "journal": "Environmental Research Communications",
+      "year": 2022,
+      "doi": "10.1088/2515-7620/ac619b",
+      "link": "https://doi.org/10.1088/2515-7620/ac619b"
+    },
+    {
+      "authors": "Jiang, Z., R. Zhu, K. Miyazaki, B. C. McDonald, Z. Klimont, B. Zheng, K. F. Boersma, Q. Zhang, H. Worden, J. R. Worden, D. K. Henze, D. B. A. Jones, H. A.C. Denier van der Gon, H. Eskes",
+      "title": "Decadal variabilities in tropospheric nitrogen oxides over United States, Europe, and China",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2022,
+      "doi": "10.1029/2021JD035872",
+      "link": "https://doi.org/10.1029/2021JD035872"
+    },
+    {
+      "authors": "Ogino, S.-Y., Miyazaki, K., Fujiwara, M., Nodzu, M. I., Shiotani, M., Hasebe, F., et al.",
+      "title": "Cause of a lower-tropospheric high-ozone layer in spring over Hanoi",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2022,
+      "doi": "10.1029/2021JD035727",
+      "link": "https://doi.org/10.1029/2021JD035727"
+    },
+    {
+      "authors": "Payne, V. H., Kulawik, S. S., Fischer, E. V., Brewer, J. F., Huey, L. G., Miyazaki, K., Worden, J. R., Bowman, K. W., Hintsa, E. J., Moore, F., Elkins, J. W., and Juncosa Calahorrano, J.",
+      "title": "Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder: comparison with ATom aircraft measurements",
+      "journal": "Atmos. Meas. Tech.",
+      "year": 2022,
+      "doi": "10.5194/amt-15-3497-2022",
+      "link": "https://doi.org/10.5194/amt-15-3497-2022"
+    },
+    {
+      "authors": "Sekiya, T., Miyazaki, K., Eskes, H., Sudo, K., Takigawa, M., and Kanaya, Y.",
+      "title": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+      "journal": "Atmos. Meas. Tech.",
+      "year": 2022,
+      "doi": "10.5194/amt-15-1703-2022",
+      "link": "https://doi.org/10.5194/amt-15-1703-2022"
+    },
+    {
+      "authors": "Byrne, B., Liu, J., Lee, M., Yin, Y., Bowman, K. W., Miyazaki, K., et al.",
+      "title": "The carbon cycle of southeast Australia during 2019–2020: Drought, fires, and subsequent recovery",
+      "journal": "AGU Advances",
+      "year": 2021,
+      "doi": "10.1029/2021AV000469",
+      "link": "https://doi.org/10.1029/2021AV000469"
+    },
+    {
+      "authors": "Jiang, Z., Shi, H., Zhao, B., Gu, Y., Zhu, Y., Miyazaki, K., Lu, X., Zhang, Y., Bowman, K. W., Sekiya, T., and Liou, K.-N.",
+      "title": "Modeling the impact of COVID-19 on air quality in southern California: implications for future control policies",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2021,
+      "doi": "10.5194/acp-21-8693-2021",
+      "link": "https://doi.org/10.5194/acp-21-8693-2021"
+    },
+    {
+      "authors": "Laughner, J. L., J. L. Neu, D. Schimel, P. O. Wennberg, K. Barsanti, K. W. Bowman, A. Chatterjee, B. E. Croes, H. L. Fitzmaurice, D. K. Henze, J. Kim, E. A. Kort, Z. Liu, K. Miyazaki, A. Turner, S. Anenberg, J. Avise, H. Cao, D. Crisp, J. de Gouw, A. Eldering, J. C. Fyfe, D. L. Goldberg, K. R. Gurney, S. Hasheminassab, F. Hopkins, C. E. Ivey, D. B. A. Jones, J. Liu, N. S.Lovenduski, R. V. Martin, G. A. McKinley, L. Ott, B. Poulter, M. Ru, S. P. Sander, N. Swart, Y. L. Yung, Z.-C. Zeng",
+      "title": "Societal shifts due to COVID-19 reveal large-scale complexities and feedbacks between atmospheric chemistry and climate change",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "year": 2021,
+      "doi": "10.1073/pnas.2109481118",
+      "link": "https://doi.org/10.1073/pnas.2109481118"
+    },
+    {
+      "authors": "Miyazaki, K., K. Bowman, T. Sekiya, M. Takigawa, J. Neu, K. Sudo, G. Osterman, H. Eskes",
+      "title": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
+      "journal": "Science Advances",
+      "year": 2021,
+      "doi": "10.1126/sciadv.abf7460",
+      "link": "https://doi.org/10.1126/sciadv.abf7460"
+    },
+    {
+      "authors": "Ryu, Y. H., & Min, S. K.",
+      "title": "Long-term evaluation of atmospheric composition reanalyses from CAMS, TCR-2, and MERRA-2 over South Korea: Insights into applications, implications, and limitations",
+      "journal": "Atmospheric Environment",
+      "year": 2021,
+      "doi": "10.1016/j.atmosenv.2021.118062",
+      "link": "https://doi.org/10.1016/j.atmosenv.2021.118062"
+    },
+    {
+      "authors": "Sekiya, T., Miyazaki, K., Ogochi, K., Sudo, K., Takigawa, M., Eskes, H., & Boersma, K. F.",
+      "title": "Impacts of horizontal resolution on global data assimilation of satellite measurements for tropospheric chemistry analysis",
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "year": 2021,
+      "doi": "10.1029/2020MS002180",
+      "link": "https://doi.org/10.1029/2020MS002180"
+    },
+    {
+      "authors": "Elguindi, N., Granier, C., Stavrakou, T., Darras, S., Bauwens, M., Cao, H., Chen, C., Denier van der Gon, H.A.C., Dubovik, O., Fu, T.M., Henze, D.K., Jiang, Z., Keita, S., Kuenen, J.J.P., Kurokawa, J., Liousse, C., Miyazaki, K., Müller, J.‐F., Qu, Z., Solmon, F. and Zheng, B.",
+      "title": "Intercomparison of Magnitudes and Trends in Anthropogenic Surface Emissions From Bottom‐Up Inventories, Top‐Down Estimates, and Emission Scenarios",
+      "journal": "Earth's Future",
+      "year": 2020,
+      "doi": "10.1029/2020EF001520",
+      "link": "https://doi.org/10.1029/2020EF001520"
+    },
+    {
+      "authors": "Gaubert, B., Emmons, L. K., Raeder, K., Tilmes, S., Miyazaki, K., Arellano Jr., A. F., Elguindi, N., Granier, C., Tang, W., Barré, J., Worden, H. M., Buchholz, R. R., Edwards, D. P., Franke, P., Anderson, J. L., Saunois, M., Schroeder, J., Woo, J.-H., Simpson, I. J., Blake, D. R., Meinardi, S., Wennberg, P. O., Crounse, J., Teng, A., Kim, M., Dickerson, R. R., He, H., Ren, X., Pusede, S. E., and Diskin, G. S.",
+      "title": "Correcting model biases of CO in East Asia: impact on oxidant distributions during KORUS-AQ",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2020,
+      "doi": "10.5194/acp-20-14617-2020",
+      "link": "https://doi.org/10.5194/acp-20-14617-2020"
+    },
+    {
+      "authors": "Huijnen, V., Miyazaki, K., Flemming, J., Inness, A., Sekiya, T., and Schultz, M. G.",
+      "title": "An intercomparison of tropospheric ozone reanalysis products from CAMS, CAMS interim, TCR-1, and TCR-2",
+      "journal": "Geosci. Model Dev.",
+      "year": 2020,
+      "doi": "10.5194/gmd-13-1513-2020",
+      "link": "https://doi.org/10.5194/gmd-13-1513-2020"
+    },
+    {
+      "authors": "Kuai, L., Bowman, K. W., Miyazaki, K., Deushi, M., Revell, L., Rozanov, E., Paulot, F., Strode, S., Conley, A., Lamarque, J.-F., Jöckel, P., Plummer, D. A., Oman, L. D., Worden, H., Kulawik, S., Paynter, D., Stenke, A., and Kunze, M.",
+      "title": "Attribution of Chemistry-Climate Model Initiative (CCMI) ozone radiative flux bias from satellites",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2020,
+      "doi": "10.5194/acp-20-281-2020",
+      "link": "https://doi.org/10.5194/acp-20-281-2020"
+    },
+    {
+      "authors": "Miyazaki, K., Bowman, K., Sekiya, T., Jiang, Z., Chen, X., Eskes, H., Ru, M., Zhang, Y., Shindell, D.",
+      "title": "Air quality response in China linked to the 2019 novel coronavirus (COVID‐19) lockdown",
+      "journal": "Geophysical Research Letters",
+      "year": 2020,
+      "doi": "10.1029/2020GL089252",
+      "link": "https://doi.org/10.1029/2020GL089252"
+    },
+    {
+      "authors": "Miyazaki, K., Bowman, K., Sekiya, T., Eskes, H., Boersma, F., Worden, H., Livesey, N., Payne, V. H., Sudo, K., Kanaya, Y., Takigawa, M., and Ogochi, K.",
+      "title": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
+      "journal": "Earth Syst. Sci. Data",
+      "year": 2020,
+      "doi": "10.5194/essd-12-2223-2020",
+      "link": "https://doi.org/10.5194/essd-12-2223-2020"
+    },
+    {
+      "authors": "Park, S., Son, S., Jung, M. et al.",
+      "title": "Evaluation of tropospheric ozone reanalyses with independent ozonesonde observations in East Asia",
+      "journal": "Geosci. Lett.",
+      "year": 2020,
+      "doi": "10.1186/s40562-020-00161-9",
+      "link": "https://doi.org/10.1186/s40562-020-00161-9"
+    },
+    {
+      "authors": "Ryu, Young-Hee, Seung-Ki Min",
+      "title": "Long-term evaluation of atmospheric composition reanalyses from CAMS, TCR-2, and MERRA-2 over South Korea: Insights into applications, implications, and limitations",
+      "journal": "Atmospheric Environment",
+      "year": 2020,
+      "doi": "10.1016/j.atmosenv.2020.118062",
+      "link": "https://doi.org/10.1016/j.atmosenv.2020.118062"
+    },
+    {
+      "authors": "Itahashi, S., K. Yumimoto, J Kurokawa, Y. Morino, T Nagashima, K. Miyazaki, T. Maki and T. Ohara",
+      "title": "Inverse estimation of NOx emissions over China and India 2005–2016: contrasting recent trends and future perspectives",
+      "journal": "Environmental Research Letters",
+      "year": 2019,
+      "doi": "10.1088/1748-9326/ab4d5f",
+      "link": "https://doi.org/10.1088/1748-9326/ab4d5f"
+    },
+    {
+      "authors": "Kanaya, Y., Miyazaki, K., Taketani, F., Miyakawa, T., Takashima, H., Komazaki, Y., Pan, X., Kato, S., Sudo, K., Sekiya, T., Inoue, J., Sato, K., and Oshima, K.",
+      "title": "Ozone and carbon monoxide observations over open oceans on R/V Mirai from 67° S to 75° N during 2012 to 2017: testing global chemical reanalysis in terms of Arctic processes, low ozone levels at low latitudes, and pollution transport",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2019,
+      "doi": "10.5194/acp-19-7233-2019",
+      "link": "https://doi.org/10.5194/acp-19-7233-2019"
+    },
+    {
+      "authors": "Miyazaki, K., Sekiya, T., Fu, D., Bowman, K. W., Kulawik, S. S., Sudo, K., et al.",
+      "title": "Balance of emission and dynamical controls on ozone during the Korea‐United States Air Quality campaign from multiconstituent satellite data assimilation",
+      "journal": "J. Geophys. Res.- Atmos.",
+      "year": 2019,
+      "doi": "10.1029/2018JD028912",
+      "link": "https://doi.org/10.1029/2018JD028912"
+    },
+    {
+      "authors": "Tang, W., Arellano, A. F., Gaubert, B., Miyazaki, K., and Worden, H. M.",
+      "title": "Satellite data reveal a common combustion emission pathway for major cities in China",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2019,
+      "doi": "10.5194/acp-19-4269-2019",
+      "link": "https://doi.org/10.5194/acp-19-4269-2019"
+    },
+    {
+      "authors": "Thompson, A. M., R. M. Stauffer, T. P. Boyle, D. E. Kollonige, K. Miyazaki, M. Tzortziou, J. R. Herman, C. E. Jordan, B. T. Lamb",
+      "title": "Comparison of Near-surface NO2 Pollution with Pandora Total Column NO2 during the Korea-United States Ocean Color (KORUS OC) Campaign",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2019,
+      "doi": "10.1029/2019JD030765",
+      "link": "https://doi.org/10.1029/2019JD030765"
+    },
+    {
+      "authors": "Cuesta, J., Kanaya, Y., Takigawa, M., Dufour, G., Eremenko, M., Foret, G., Miyazaki, K., and Beekmann, M.",
+      "title": "Transboundary ozone pollution across East Asia: daily evolution and photochemical production analysed by IASI+GOME2 multispectral satellite observations and models",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2018,
+      "doi": "10.5194/acp-2017-972",
+      "link": "https://doi.org/10.5194/acp-2017-972"
+    },
+    {
+      "authors": "Fu, D., Kulawik, S. S., Miyazaki, K., Bowman, K. W., Worden, J. R., Eldering, A., Livesey, N. J., Teixeira, J., Irion, F. W., Herman, R. L., Osterman, G. B., Liu, X., Levelt, P. F., Thompson, A. M., and Luo, M.",
+      "title": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
+      "journal": "Atmos. Meas. Tech.",
+      "year": 2018,
+      "doi": "10.5194/amt-11-5587-2018",
+      "link": "https://doi.org/10.5194/amt-11-5587-2018"
+    },
+    {
+      "authors": "Jiang, Z., B. C McDonald, H. M Worden, J. R Worden, K. Miyazaki, Z. Qu, D. K. Henze, D. Jones, A. Arellano, E. Fischer, L. Zhu, F. Boersma",
+      "title": "Unexpected slowdown of US pollutant emission reduction in the past decade",
+      "journal": "Proc. Natl. Acad. Sci. USA",
+      "year": 2018,
+      "doi": "10.1073/pnas.1801191115",
+      "link": "https://doi.org/10.1073/pnas.1801191115"
+    },
+    {
+      "authors": "Cady-Pereira, K. E., Payne, V. H., Neu, J. L., Bowman, K. W., Miyazaki, K., Marais, E. A., Kulawik, S., Tzompa-Sosa, Z. A., and Hegarty, J. D.",
+      "title": "Seasonal and spatial changes in trace gases over megacities from Aura TES observations: two case studies",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2017,
+      "doi": "10.5194/acp-17-9379-2017",
+      "link": "https://doi.org/10.5194/acp-17-9379-2017"
+    },
+    {
+      "authors": "Ding, J., Miyazaki, K., van der A, R. J., Mijling, B., Kurokawa, J.-I., Cho, S., Janssens-Maenhout, G., Zhang, Q., Liu, F., and Levelt, P. F.",
+      "title": "Intercomparison of NOx emission inventories over East Asia",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2017,
+      "doi": "10.5194/acp-17-10125-2017",
+      "link": "https://doi.org/10.5194/acp-17-10125-2017"
+    },
+    {
+      "authors": "Miyazaki, K., Eskes, H., Sudo, K., Boersma, K. F., Bowman, K., and Kanaya, Y.",
+      "title": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2017,
+      "doi": "10.5194/acp-17-807-2017",
+      "link": "https://doi.org/10.5194/acp-17-807-2017"
+    },
+    {
+      "authors": "Miyazaki, K. and Bowman, K.",
+      "title": "Evaluation of ACCMIP ozone simulations and ozonesonde sampling biases using a satellite-based multi-constituent chemical reanalysis",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2017,
+      "doi": "10.5194/acp-17-8285-2017",
+      "link": "https://doi.org/10.5194/acp-17-8285-2017"
+    },
+    {
+      "authors": "Jiang, Z., K. Miyazaki, J. R. Worden, J. J. Liu, D. B. A. Jones, and D. K. Henze",
+      "title": "Impacts of anthropogenic and natural sources on free tropospheric ozone over the Middle East",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2016,
+      "doi": "10.5194/acp-16-6537-2016",
+      "link": "https://doi.org/10.5194/acp-16-6537-2016"
+    },
+    {
+      "authors": "Miyazaki, K., Eskes, H. J., and Sudo, K.",
+      "title": "A tropospheric chemistry reanalysis for the years 2005–2012 based on an assimilation of OMI, MLS, TES, and MOPITT satellite data",
+      "journal": "Atmos. Chem. Phys.",
+      "year": 2015,
+      "doi": "10.5194/acp-15-8315-2015",
+      "link": "https://doi.org/10.5194/acp-15-8315-2015"
+    }
+  ]
+}
