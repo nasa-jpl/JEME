@@ -49,7 +49,7 @@ const FutureTrendsChart = ({ data }) => {
 
     // Create historical data points
     const historicalData = [];
-    for (let year = 2015; year <= 2025; year++) {
+    for (let year = 2015; year <= 2024; year++) {
       const data = yearlyData[year] || { papers: 0, totalCitations: 0 };
       historicalData.push({
         year: year.toString(),
@@ -85,13 +85,29 @@ const FutureTrendsChart = ({ data }) => {
     const baseline = baselineYears.length > 0 ? 
       baselineYears.reduce((sum, d) => sum + d.actual, 0) / baselineYears.length : 10;
 
-    // Create projections for 2026-2030
+    // Get the last actual value from 2024
+    const lastActualYear = historicalData[historicalData.length - 1];
+    const lastActualValue = lastActualYear ? lastActualYear.actual : baseline;
+
+    // Create projections starting from 2025 (connecting to 2024 data)
     const projectedData = [];
+    
+    // Add 2025 as the first projection year
+    projectedData.push({
+      year: '2025',
+      actual: null, // No actual data for 2025 yet
+      projected: Math.round(lastActualValue * (1 + avgGrowthRate)),
+      optimistic: Math.round(lastActualValue * 1.15),
+      conservative: Math.round(lastActualValue * 0.85),
+      isHistorical: false
+    });
+    
+    // Continue projections for 2026-2030
     for (let year = 2026; year <= 2030; year++) {
-      const yearsFromBaseline = year - 2025;
-      const projected = Math.round(baseline * Math.pow(1 + avgGrowthRate, yearsFromBaseline));
-      const optimistic = Math.round(projected * Math.pow(1.15, yearsFromBaseline)); // 15% higher
-      const conservative = Math.round(projected * Math.pow(0.85, yearsFromBaseline)); // 15% lower
+      const yearsFromBaseline = year - 2024;
+      const projected = Math.round(lastActualValue * Math.pow(1 + avgGrowthRate, yearsFromBaseline));
+      const optimistic = Math.round(projected * Math.pow(1.15, yearsFromBaseline - 1)); // 15% higher
+      const conservative = Math.round(projected * Math.pow(0.85, yearsFromBaseline - 1)); // 15% lower
       
       projectedData.push({
         year: year.toString(),
@@ -103,7 +119,21 @@ const FutureTrendsChart = ({ data }) => {
     }
 
     // Combine historical and projected data
-    return [...historicalData, ...projectedData];
+    // Add projection values to the last historical data point (2024) for smooth connection
+    const combinedData = [...historicalData];
+    
+    // Update the 2024 entry to include projection starting points
+    if (combinedData.length > 0 && lastActualValue > 0) {
+      const lastIndex = combinedData.length - 1;
+      combinedData[lastIndex] = {
+        ...combinedData[lastIndex],
+        projected: lastActualValue,
+        optimistic: lastActualValue,
+        conservative: lastActualValue
+      };
+    }
+    
+    return [...combinedData, ...projectedData];
   }, [data]);
 
   // Calculate emerging research directions from recent papers
