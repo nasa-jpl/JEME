@@ -58,7 +58,7 @@ const MetricsOverview = ({ data = [] }) => {
 
     // Helper function to determine region from country
     const getRegion = (country) => {
-      if (!country) return 'Other';
+      if (!country || typeof country !== 'string') return 'Other';
       const countryLower = country.toLowerCase();
       if (countryLower.includes('usa') || countryLower.includes('united states') || 
           countryLower.includes('canada') || countryLower.includes('mexico')) {

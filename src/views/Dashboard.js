@@ -212,7 +212,7 @@ const Dashboard = () => {
         
 
         
-        <MetricsOverview />
+        <MetricsOverview data={rapidData} />
         <CitationTrendsChart data={rapidData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
