@@ -156,6 +156,14 @@ classDiagram
     - Geographic regions
     - Country identification
 
+#### Seed Papers Definition
+**Seed papers** (also referred to as team papers) are the foundational publications that define, describe, or formally introduce a given modeling system. They typically include:
+1. **Model Development & Description** – Papers presenting the design, formulation, or technical basis of the system.
+2. **Core Applications** – Studies that demonstrate the model's capability and serve as reference examples.
+3. **Reference Works** – Papers that the broader community consistently cites when applying, validating, or extending the system.
+
+These seed papers form the core bibliography for each model and are prominently featured in the dashboard as they represent the essential works that established each modeling framework.
+
 #### Engagement Level Classification
 - **Level 1**: Acknowledgement Citation
    - The work is mentioned only as background or context (e.g., in the introduction or related work) without using its data, methods, or results.
