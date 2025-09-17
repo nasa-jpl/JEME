@@ -33312,5 +33312,58 @@
     "research_domain": "Environmental Science/Ecology",
     "region": "Europe",
     "country": "Multiple (study focuses on the European region, authors' countries not specified)"
+  },
+  {
+    "title": [
+      "Large loss of CO2 in winter observed across the northern permafrost region"
+    ],
+    "author": [
+      {
+        "given": "Susan M.",
+        "family": "Natali",
+        "sequence": "first"
+      },
+      {
+        "given": "Jennifer D.",
+        "family": "Watts",
+        "sequence": "additional"
+      },
+      {
+        "given": "Brendan M.",
+        "family": "Rogers",
+        "sequence": "additional"
+      },
+      {
+        "given": "A. Anthony",
+        "family": "Bloom",
+        "sequence": "additional"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019,
+          10,
+          21
+        ]
+      ]
+    },
+    "container-title": [
+      "Nature Climate Change"
+    ],
+    "volume": "9",
+    "issue": "11",
+    "page": "852-857",
+    "DOI": "10.1038/s41558-019-0592-8",
+    "URL": "https://doi.org/10.1038/s41558-019-0592-8",
+    "publisher": "Springer Nature",
+    "source": "manual_addition",
+    "year": 2019,
+    "citations": 340,
+    "is_open_access": false,
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Climate Science/Carbon Cycle",
+    "region": "Arctic/Global",
+    "country": "Multiple (Arctic region study)"
   }
 ]
