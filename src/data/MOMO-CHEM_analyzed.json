@@ -15627,5 +15627,901 @@
     "research_domain": "Atmospheric Science/Environmental Chemistry",
     "region": "Global",
     "country": "Not specified"
+  },
+  {
+    "title": [
+      "Long-term evaluation of atmospheric composition reanalyses from CAMS, TCR-2, and MERRA-2 over South Korea: Insights into applications, implications, and limitations"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Ryu, Y. H., & Min, S. K.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Environment"
+    ],
+    "DOI": "10.1016/j.atmosenv.2021.118062",
+    "URL": "https://doi.org/10.1016/j.atmosenv.2021.118062",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "South Korea",
+    "year": 2021,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Inverse estimation of NOx emissions over China and India 2005–2016: contrasting recent trends and future perspectives"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Itahashi, S., K. Yumimoto, J Kurokawa, Y. Morino, T Nagashima, K. Miyazaki, T. Maki and T. Ohara",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "container-title": [
+      "Environmental Research Letters"
+    ],
+    "DOI": "10.1088/1748-9326/ab4d5f",
+    "URL": "https://doi.org/10.1088/1748-9326/ab4d5f",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "China",
+    "year": 2019,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Identifying drivers of surface ozone bias in global chemical reanalysis with explainable machine learning"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Miyazaki, K., Marchetti, Y., Montgomery, J., Lu, S., Bowman, K.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Chemistry and Physics"
+    ],
+    "DOI": "10.5194/acp-25-8507-2025",
+    "URL": "https://doi.org/10.5194/acp-25-8507-2025",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Global",
+    "country": "Global",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Uncertainty Quantification for Surface Ozone Emulators using Deep Learning"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Doerksen, K., Marchetti, Y., Lu, S., Bowman, K., Montgomery, J., Miyazaki, K., Gal, Y., Kalaitzis, F.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "arXiv preprint arXiv:2508.04885"
+    ],
+    "DOI": "10.48550/arXiv.2508.04885",
+    "URL": "https://doi.org/10.48550/arXiv.2508.04885",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Transport of Peroxyacyl Nitrates (PANs) across Northern Hemisphere Ocean Basins from Satellite Observations"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Shogrin, M.J., Payne, V.H., Kulawik, S., Miyazaki, K., Fischer, E.V.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "Authorea Preprints"
+    ],
+    "DOI": "",
+    "URL": "",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Remote Sensing",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "An Assessment of TROPESS CrIS and TROPOMI CO Retrievals and Their Synergies for the 2020 Western US Wildfires"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Neyra-Nazarrett, O.A., Miyazaki, K., Bowman, K.W., Saide, P.E.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "Remote Sensing"
+    ],
+    "DOI": "10.3390/rs17111854",
+    "URL": "https://doi.org/10.3390/rs17111854",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Remote Sensing",
+    "region": "North America",
+    "country": "United States",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Challenges and opportunities offered by geostationary space observations for air quality research and emission monitoring"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "He, T.-L., Oomen, G.-M., Tang, W., Bouarar, I., Chance, K., Clerbaux, C., Edwards, D.P., Eskes, H., Gaubert, B., Granier, C., Guevara, M., Jacob, D.J., Kaiser, J., Kim, J., Kondragunta, S., Liu, X., Marais, E.A., Miyazaki, K., Park, R., Peuch, V.-H., Pfister, G., Richter, A., Stavrakou, T., Suleiman, R.M., Turner, A.J., Veihelmann, B., Zeng, Z.-C., Brasseur, G.P.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "Bulletin of the American Meteorological Society"
+    ],
+    "DOI": "10.1175/BAMS-D-23-0145.1",
+    "URL": "https://doi.org/10.1175/BAMS-D-23-0145.1",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Trace gas atmospheric rivers: remote drivers of air pollutants"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Rai, M., Miyazaki, K., Payne, V., Guan, B., Waliser, D.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "EGUsphere"
+    ],
+    "DOI": "10.5194/egusphere-2025-399",
+    "URL": "https://doi.org/10.5194/egusphere-2025-399",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Assessing the relative impacts of satellite ozone and its precursor observations to improve global tropospheric ozone analysis using multiple chemical reanalysis systems"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Sekiya, T., Emili, E., Miyazaki, K., Inness, A., Qu, Z., Pierce, R.B., Jones, D., Worden, H., Cheng, W.Y.Y., Huijnen, V., Koren, G.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Chemistry and Physics"
+    ],
+    "DOI": "10.5194/acp-25-2243-2025",
+    "URL": "https://doi.org/10.5194/acp-25-2243-2025",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Global",
+    "country": "Global",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Quantifying uncertainties in satellite NO2 superobservations for data assimilation and model evaluation"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Rijsdijk, P., Eskes, H., Dingemans, A., Boersma, K.F., Sekiya, T., Miyazaki, K., Houweling, S.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "Geoscientific Model Development"
+    ],
+    "DOI": "10.5194/gmd-18-483-2025",
+    "URL": "https://doi.org/10.5194/gmd-18-483-2025",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Remote Sensing",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Assessment of regional and interannual variations in tropospheric ozone in chemical reanalyses"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Jones, D., Prates, L., Qu, Z., Cheng, W., Miyazaki, K., Sekiya, T., Inness, A., Kumar, R., Tang, X., Worden, H., Koren, G., Huijen, V.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "EGUsphere"
+    ],
+    "DOI": "10.5194/egusphere-2024-3759",
+    "URL": "https://doi.org/10.5194/egusphere-2024-3759",
+    "source": "team_papers",
+    "engagement_level": "Level 3: Model/Method Adaptation",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Intercomparison of global ground-level ozone datasets for health-relevant metrics"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Wang, H., Miyazaki, K., Sun, H.Z., Qu, Z., Liu, X., Inness, A., Schultz, M., Schröder, S., Serre, M., West, J.J.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2025
+        ]
+      ]
+    },
+    "container-title": [
+      "EGUsphere"
+    ],
+    "DOI": "10.5194/egusphere-2024-3723",
+    "URL": "https://doi.org/10.5194/egusphere-2024-3723",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Global",
+    "country": "Global",
+    "year": 2025,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Natural and anthropogenic influence on tropospheric ozone variability over the Tropical Atlantic unveiled by satellite and in situ observations"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Okamoto, S., Cuesta, J., Dufour, G., Eremenko, M., Miyazaki, K., Boonne, C., Tanimoto, H., Peischl, J., Thompson, C.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "EGUsphere"
+    ],
+    "DOI": "10.5194/egusphere-2024-3758",
+    "URL": "https://doi.org/10.5194/egusphere-2024-3758",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Tropospheric ozone precursors: global and regional distributions, trends, and variability"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Elshorbany, Y., Ziemke, J.R., Strode, S., Petetin, H., Miyazaki, K., De Smedt, I., Pickering, K., Seguel, R.J., Worden, H., Emmerichs, T., Taraborrelli, D., Cazorla, M., Fadnavis, S., Buchholz, R.R., Gaubert, B., Rojas, N.Y., Nogueira, T., Salameh, T., Huang, M.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Chemistry and Physics"
+    ],
+    "DOI": "10.5194/acp-24-12225-2024",
+    "URL": "https://doi.org/10.5194/acp-24-12225-2024",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Global",
+    "country": "Global",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Carbon emissions from the 2023 Canadian wildfires"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Byrne, B., Liu, J., Bowman, K.W., Pascolini-Campbell, M., Chatterjee, A., Pandey, S., Miyazaki, K., van der Werf, G.R., Wunch, D., Wennberg, P.O., Roehl, C.M., Sinha, S.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "Nature"
+    ],
+    "DOI": "10.1038/s41586-024-07878-z",
+    "URL": "https://doi.org/10.1038/s41586-024-07878-z",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Climate Science",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Joint spectral retrievals of ozone with Suomi NPP CrIS augmented by S5P/TROPOMI"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Malina, E., Bowman, K.W., Kantchev, V., Kuai, L., Kurosu, T.P., Miyazaki, K., Natraj, V., Osterman, G.B., Oyafuso, F., Thill, M.D.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Measurement Techniques"
+    ],
+    "DOI": "10.5194/amt-17-5341-2024",
+    "URL": "https://doi.org/10.5194/amt-17-5341-2024",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Changes to Peroxyacyl Nitrates (PANs) Over Megacities in Response to COVID‐19 Tropospheric NO2 Reductions Observed by the Cross‐Track Infrared Sounder"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Shogrin, M.J., Payne, V.H., Kulawik, S.S., Miyazaki, K., Fischer, E.V.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "Geophysical Research Letters"
+    ],
+    "DOI": "10.1029/2023GL104854",
+    "URL": "https://doi.org/10.1029/2023GL104854",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Estimation of CH4 emission based on an advanced 4D-LETKF assimilation system"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Bisht, J.S.H., Patra, P.K., Takigawa, M., Sekiya, T., Kanaya, Y., Saitoh, N., Miyazaki, K.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2023
+        ]
+      ]
+    },
+    "container-title": [
+      "Geoscientific Model Development"
+    ],
+    "DOI": "10.5194/gmd-16-1823-2023",
+    "URL": "https://doi.org/10.5194/gmd-16-1823-2023",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2023,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "A new methodology for inferring surface ozone from multispectral satellite measurements"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Colombi, N., Miyazaki, K., Bowman, K.W., Neu, J.L., Jacob, D.J.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2021
+        ]
+      ]
+    },
+    "container-title": [
+      "Environmental Research Letters"
+    ],
+    "DOI": "10.1088/1748-9326/ac18f6",
+    "URL": "https://doi.org/10.1088/1748-9326/ac18f6",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2021,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Inverse estimation of NOx emissions over China and India 2005–2016: contrasting recent trends and future perspectives"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Itahashi, S., Yumimoto, K., Kurokawa, J.-I., Morino, Y., Nagashima, T., Miyazaki, K., Maki, T., Ohara, T.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2019
+        ]
+      ]
+    },
+    "container-title": [
+      "Environmental Research Letters"
+    ],
+    "DOI": "10.1088/1748-9326/ab4d7f",
+    "URL": "https://doi.org/10.1088/1748-9326/ab4d7f",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "China",
+    "year": 2019,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Observational evidence for interhemispheric hydroxyl-radical parity"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Patra, P.K., Krol, M.C., Montzka, S.A., Arnold, T., Atlas, E.L., Lintner, B.R., Stephens, B.B., Xiang, B., Elkins, J.W., Fraser, P.J., Ghosh, A., Hintsa, E.J., Hurst, D.F., Ishijima, K., Krummel, P.B., Miller, B.R., Miyazaki, K., Moore, F.L., Mühle, J., O'Doherty, S., Prinn, R.G., Steele, L.P., Takigawa, M., Wang, H.J., Weiss, R.F., Wofsy, S.C., Young, D.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "container-title": [
+      "Nature"
+    ],
+    "DOI": "10.1038/nature13721",
+    "URL": "https://doi.org/10.1038/nature13721",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2014,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Global lightning NOx production estimated by an assimilation of multiple satellite data sets"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Miyazaki, K., Eskes, H.J., Sudo, K., Zhang, C.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2014
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Chemistry and Physics"
+    ],
+    "DOI": "10.5194/acp-14-3277-2014",
+    "URL": "https://doi.org/10.5194/acp-14-3277-2014",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Remote Sensing",
+    "region": "Global",
+    "country": "Global",
+    "year": 2014,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Constraints on surface NOx emissions by assimilating satellite observations of multiple species"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Miyazaki, K., Eskes, H.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "container-title": [
+      "Geophysical Research Letters"
+    ],
+    "DOI": "10.1002/grl.50894",
+    "URL": "https://doi.org/10.1002/grl.50894",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Remote Sensing",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2013,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "A multimodel comparison of stratospheric ozone data assimilation based on an ensemble Kalman filter approach"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Nakamura, T., Akiyoshi, H., Deushi, M., Miyazaki, K., Kobayashi, C., Shibata, K., Iwasaki, T.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2013
+        ]
+      ]
+    },
+    "container-title": [
+      "Journal of Geophysical Research: Atmospheres"
+    ],
+    "DOI": "",
+    "URL": "",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "Japan",
+    "year": 2013,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Simultaneous assimilation of satellite NO2, O3, CO, HNO3 data for the analysis of tropospheric chemical composition and emissions"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Miyazaki, K., Eskes, H., Sudo, K., Takigawa, M., van Weele, M., Boersma, K.F., et al.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Chemistry and Physics"
+    ],
+    "DOI": "10.5194/acp-12-9545-2012",
+    "URL": "https://doi.org/10.5194/acp-12-9545-2012",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "North America",
+    "country": "United States",
+    "year": 2012,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Miyazaki, K., Eskes, H.J., Sudo, K.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2012
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Chemistry and Physics"
+    ],
+    "DOI": "10.5194/acp-12-2263-2012",
+    "URL": "https://doi.org/10.5194/acp-12-2263-2012",
+    "source": "team_papers",
+    "engagement_level": "Level 4: Foundational Method",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Global",
+    "country": "Global",
+    "year": 2012,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "A comprehensive assessment of yield loss in rice due to surface ozone pollution in India during 2005–2020: A great concern for food security"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Anagha, A.G., Balaji, B., Shepherd, J.M.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "Agricultural Systems"
+    ],
+    "DOI": "10.1016/j.agsy.2023.103849",
+    "URL": "https://doi.org/10.1016/j.agsy.2023.103849",
+    "source": "team_papers",
+    "engagement_level": "Level 3: Model/Method Adaptation",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Asia",
+    "country": "India",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
+  },
+  {
+    "title": [
+      "Spatiotemporal variability of surface ozone and associated meteorological conditions over the Arabian Peninsula"
+    ],
+    "author": [
+      {
+        "given": "",
+        "family": "Alduwais, N.K., Gherboudj, I., Ghedira, H.",
+        "sequence": "first"
+      }
+    ],
+    "published-print": {
+      "date-parts": [
+        [
+          2024
+        ]
+      ]
+    },
+    "container-title": [
+      "Atmospheric Pollution Research"
+    ],
+    "DOI": "10.1016/j.apr.2024.102210",
+    "URL": "https://doi.org/10.1016/j.apr.2024.102210",
+    "source": "team_papers",
+    "engagement_level": "Level 2: Data/Method Usage",
+    "research_domain": "Atmospheric Science/Environmental Chemistry",
+    "region": "Global",
+    "country": "Not specified",
+    "year": 2024,
+    "citations": 0,
+    "is_open_access": false
   }
 ]

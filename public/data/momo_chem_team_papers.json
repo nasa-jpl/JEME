@@ -351,6 +351,238 @@
       "year": 2015,
       "doi": "10.5194/acp-15-8315-2015",
       "link": "https://doi.org/10.5194/acp-15-8315-2015"
+    },
+    {
+      "authors": "Miyazaki, K., Marchetti, Y., Montgomery, J., Lu, S., Bowman, K.",
+      "title": "Identifying drivers of surface ozone bias in global chemical reanalysis with explainable machine learning",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2025,
+      "doi": "10.5194/acp-25-8507-2025",
+      "link": "https://doi.org/10.5194/acp-25-8507-2025"
+    },
+    {
+      "authors": "Doerksen, K., Marchetti, Y., Lu, S., Bowman, K., Montgomery, J., Miyazaki, K., Gal, Y., Kalaitzis, F.",
+      "title": "Uncertainty Quantification for Surface Ozone Emulators using Deep Learning",
+      "journal": "arXiv preprint arXiv:2508.04885",
+      "year": 2025,
+      "doi": "10.48550/arXiv.2508.04885",
+      "link": "https://doi.org/10.48550/arXiv.2508.04885"
+    },
+    {
+      "authors": "Shogrin, M.J., Payne, V.H., Kulawik, S., Miyazaki, K., Fischer, E.V.",
+      "title": "Transport of Peroxyacyl Nitrates (PANs) across Northern Hemisphere Ocean Basins from Satellite Observations",
+      "journal": "Authorea Preprints",
+      "year": 2025,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Neyra-Nazarrett, O.A., Miyazaki, K., Bowman, K.W., Saide, P.E.",
+      "title": "An Assessment of TROPESS CrIS and TROPOMI CO Retrievals and Their Synergies for the 2020 Western US Wildfires",
+      "journal": "Remote Sensing",
+      "year": 2025,
+      "doi": "10.3390/rs17111854",
+      "link": "https://doi.org/10.3390/rs17111854"
+    },
+    {
+      "authors": "He, T.-L., Oomen, G.-M., Tang, W., Bouarar, I., Chance, K., Clerbaux, C., Edwards, D.P., Eskes, H., Gaubert, B., Granier, C., Guevara, M., Jacob, D.J., Kaiser, J., Kim, J., Kondragunta, S., Liu, X., Marais, E.A., Miyazaki, K., Park, R., Peuch, V.-H., Pfister, G., Richter, A., Stavrakou, T., Suleiman, R.M., Turner, A.J., Veihelmann, B., Zeng, Z.-C., Brasseur, G.P.",
+      "title": "Challenges and opportunities offered by geostationary space observations for air quality research and emission monitoring",
+      "journal": "Bulletin of the American Meteorological Society",
+      "year": 2025,
+      "doi": "10.1175/BAMS-D-23-0145.1",
+      "link": "https://doi.org/10.1175/BAMS-D-23-0145.1"
+    },
+    {
+      "authors": "Rai, M., Miyazaki, K., Payne, V., Guan, B., Waliser, D.",
+      "title": "Trace gas atmospheric rivers: remote drivers of air pollutants",
+      "journal": "EGUsphere",
+      "year": 2025,
+      "doi": "10.5194/egusphere-2025-399",
+      "link": "https://doi.org/10.5194/egusphere-2025-399"
+    },
+    {
+      "authors": "Sekiya, T., Emili, E., Miyazaki, K., Inness, A., Qu, Z., Pierce, R.B., Jones, D., Worden, H., Cheng, W.Y.Y., Huijnen, V., Koren, G.",
+      "title": "Assessing the relative impacts of satellite ozone and its precursor observations to improve global tropospheric ozone analysis using multiple chemical reanalysis systems",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2025,
+      "doi": "10.5194/acp-25-2243-2025",
+      "link": "https://doi.org/10.5194/acp-25-2243-2025"
+    },
+    {
+      "authors": "Rijsdijk, P., Eskes, H., Dingemans, A., Boersma, K.F., Sekiya, T., Miyazaki, K., Houweling, S.",
+      "title": "Quantifying uncertainties in satellite NO2 superobservations for data assimilation and model evaluation",
+      "journal": "Geoscientific Model Development",
+      "year": 2025,
+      "doi": "10.5194/gmd-18-483-2025",
+      "link": "https://doi.org/10.5194/gmd-18-483-2025"
+    },
+    {
+      "authors": "Jones, D., Prates, L., Qu, Z., Cheng, W., Miyazaki, K., Sekiya, T., Inness, A., Kumar, R., Tang, X., Worden, H., Koren, G., Huijen, V.",
+      "title": "Assessment of regional and interannual variations in tropospheric ozone in chemical reanalyses",
+      "journal": "EGUsphere",
+      "year": 2025,
+      "doi": "10.5194/egusphere-2024-3759",
+      "link": "https://doi.org/10.5194/egusphere-2024-3759"
+    },
+    {
+      "authors": "Wang, H., Miyazaki, K., Sun, H.Z., Qu, Z., Liu, X., Inness, A., Schultz, M., Schröder, S., Serre, M., West, J.J.",
+      "title": "Intercomparison of global ground-level ozone datasets for health-relevant metrics",
+      "journal": "EGUsphere",
+      "year": 2025,
+      "doi": "10.5194/egusphere-2024-3723",
+      "link": "https://doi.org/10.5194/egusphere-2024-3723"
+    },
+    {
+      "authors": "Okamoto, S., Cuesta, J., Dufour, G., Eremenko, M., Miyazaki, K., Boonne, C., Tanimoto, H., Peischl, J., Thompson, C.",
+      "title": "Natural and anthropogenic influence on tropospheric ozone variability over the Tropical Atlantic unveiled by satellite and in situ observations",
+      "journal": "EGUsphere",
+      "year": 2024,
+      "doi": "10.5194/egusphere-2024-3758",
+      "link": "https://doi.org/10.5194/egusphere-2024-3758"
+    },
+    {
+      "authors": "Elshorbany, Y., Ziemke, J.R., Strode, S., Petetin, H., Miyazaki, K., De Smedt, I., Pickering, K., Seguel, R.J., Worden, H., Emmerichs, T., Taraborrelli, D., Cazorla, M., Fadnavis, S., Buchholz, R.R., Gaubert, B., Rojas, N.Y., Nogueira, T., Salameh, T., Huang, M.",
+      "title": "Tropospheric ozone precursors: global and regional distributions, trends, and variability",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2024,
+      "doi": "10.5194/acp-24-12225-2024",
+      "link": "https://doi.org/10.5194/acp-24-12225-2024"
+    },
+    {
+      "authors": "Byrne, B., Liu, J., Bowman, K.W., Pascolini-Campbell, M., Chatterjee, A., Pandey, S., Miyazaki, K., van der Werf, G.R., Wunch, D., Wennberg, P.O., Roehl, C.M., Sinha, S.",
+      "title": "Carbon emissions from the 2023 Canadian wildfires",
+      "journal": "Nature",
+      "year": 2024,
+      "doi": "10.1038/s41586-024-07878-z",
+      "link": "https://doi.org/10.1038/s41586-024-07878-z"
+    },
+    {
+      "authors": "Malina, E., Bowman, K.W., Kantchev, V., Kuai, L., Kurosu, T.P., Miyazaki, K., Natraj, V., Osterman, G.B., Oyafuso, F., Thill, M.D.",
+      "title": "Joint spectral retrievals of ozone with Suomi NPP CrIS augmented by S5P/TROPOMI",
+      "journal": "Atmospheric Measurement Techniques",
+      "year": 2024,
+      "doi": "10.5194/amt-17-5341-2024",
+      "link": "https://doi.org/10.5194/amt-17-5341-2024"
+    },
+    {
+      "authors": "Shogrin, M.J., Payne, V.H., Kulawik, S.S., Miyazaki, K., Fischer, E.V.",
+      "title": "Changes to Peroxyacyl Nitrates (PANs) Over Megacities in Response to COVID‐19 Tropospheric NO2 Reductions Observed by the Cross‐Track Infrared Sounder",
+      "journal": "Geophysical Research Letters",
+      "year": 2024,
+      "doi": "10.1029/2023GL104854",
+      "link": "https://doi.org/10.1029/2023GL104854"
+    },
+    {
+      "authors": "Bisht, J.S.H., Patra, P.K., Takigawa, M., Sekiya, T., Kanaya, Y., Saitoh, N., Miyazaki, K.",
+      "title": "Estimation of CH4 emission based on an advanced 4D-LETKF assimilation system",
+      "journal": "Geoscientific Model Development",
+      "year": 2023,
+      "doi": "10.5194/gmd-16-1823-2023",
+      "link": "https://doi.org/10.5194/gmd-16-1823-2023"
+    },
+    {
+      "authors": "Colombi, N., Miyazaki, K., Bowman, K.W., Neu, J.L., Jacob, D.J.",
+      "title": "A new methodology for inferring surface ozone from multispectral satellite measurements",
+      "journal": "Environmental Research Letters",
+      "year": 2021,
+      "doi": "10.1088/1748-9326/ac18f6",
+      "link": "https://doi.org/10.1088/1748-9326/ac18f6"
+    },
+    {
+      "authors": "Itahashi, S., Yumimoto, K., Kurokawa, J.-I., Morino, Y., Nagashima, T., Miyazaki, K., Maki, T., Ohara, T.",
+      "title": "Inverse estimation of NOx emissions over China and India 2005–2016: contrasting recent trends and future perspectives",
+      "journal": "Environmental Research Letters",
+      "year": 2019,
+      "doi": "10.1088/1748-9326/ab4d7f",
+      "link": "https://doi.org/10.1088/1748-9326/ab4d7f"
+    },
+    {
+      "authors": "Fu, D., Kulawik, S.S., Miyazaki, K., Bowman, K.W., Worden, J.R., Eldering, A., Livesey, N.J., Teixeira, J., Irion, F.W., Herman, R.L., Osterman, G.B., Liu, X., Levelt, P.F., Thompson, A.M., Luo, M.",
+      "title": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
+      "journal": "Atmospheric Measurement Techniques",
+      "year": 2018,
+      "doi": "10.5194/amt-11-5587-2018",
+      "link": "https://doi.org/10.5194/amt-11-5587-2018"
+    },
+    {
+      "authors": "Patra, P.K., Krol, M.C., Montzka, S.A., Arnold, T., Atlas, E.L., Lintner, B.R., Stephens, B.B., Xiang, B., Elkins, J.W., Fraser, P.J., Ghosh, A., Hintsa, E.J., Hurst, D.F., Ishijima, K., Krummel, P.B., Miller, B.R., Miyazaki, K., Moore, F.L., Mühle, J., O'Doherty, S., Prinn, R.G., Steele, L.P., Takigawa, M., Wang, H.J., Weiss, R.F., Wofsy, S.C., Young, D.",
+      "title": "Observational evidence for interhemispheric hydroxyl-radical parity",
+      "journal": "Nature",
+      "year": 2014,
+      "doi": "10.1038/nature13721",
+      "link": "https://doi.org/10.1038/nature13721"
+    },
+    {
+      "authors": "Miyazaki, K., Eskes, H.J., Sudo, K., Zhang, C.",
+      "title": "Global lightning NOx production estimated by an assimilation of multiple satellite data sets",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2014,
+      "doi": "10.5194/acp-14-3277-2014",
+      "link": "https://doi.org/10.5194/acp-14-3277-2014"
+    },
+    {
+      "authors": "Miyazaki, K., Eskes, H.",
+      "title": "Constraints on surface NOx emissions by assimilating satellite observations of multiple species",
+      "journal": "Geophysical Research Letters",
+      "year": 2013,
+      "doi": "10.1002/grl.50894",
+      "link": "https://doi.org/10.1002/grl.50894"
+    },
+    {
+      "authors": "Nakamura, T., Akiyoshi, H., Deushi, M., Miyazaki, K., Kobayashi, C., Shibata, K., Iwasaki, T.",
+      "title": "A multimodel comparison of stratospheric ozone data assimilation based on an ensemble Kalman filter approach",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2013,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Miyazaki, K., Eskes, H., Sudo, K., Takigawa, M., van Weele, M., Boersma, K.F., et al.",
+      "title": "Simultaneous assimilation of satellite NO2, O3, CO, HNO3 data for the analysis of tropospheric chemical composition and emissions",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2012,
+      "doi": "10.5194/acp-12-9545-2012",
+      "link": "https://doi.org/10.5194/acp-12-9545-2012"
+    },
+    {
+      "authors": "Miyazaki, K., Eskes, H.J., Sudo, K.",
+      "title": "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2012,
+      "doi": "10.5194/acp-12-2263-2012",
+      "link": "https://doi.org/10.5194/acp-12-2263-2012"
+    },
+    {
+      "authors": "Ryu, Young-Hee, Min, Seung-Ki",
+      "title": "Long-term evaluation of atmospheric composition reanalyses from CAMS, TCR-2, and MERRA-2 over South Korea: Insights into applications, implications, and limitations",
+      "journal": "Atmospheric Environment",
+      "year": 2021,
+      "doi": "10.1016/j.atmosenv.2020.118062",
+      "link": "https://doi.org/10.1016/j.atmosenv.2020.118062"
+    },
+    {
+      "authors": "Park, S., Son, S.W., Jung, M.I. et al.",
+      "title": "Evaluation of tropospheric ozone reanalyses with independent ozonesonde observations in East Asia",
+      "journal": "Geoscience Letters",
+      "year": 2020,
+      "doi": "10.1186/s40562-020-00161-9",
+      "link": "https://doi.org/10.1186/s40562-020-00161-9"
+    },
+    {
+      "authors": "Anagha, A.G., Balaji, B., Shepherd, J.M.",
+      "title": "A comprehensive assessment of yield loss in rice due to surface ozone pollution in India during 2005–2020: A great concern for food security",
+      "journal": "Agricultural Systems",
+      "year": 2024,
+      "doi": "10.1016/j.agsy.2023.103849",
+      "link": "https://doi.org/10.1016/j.agsy.2023.103849"
+    },
+    {
+      "authors": "Alduwais, N.K., Gherboudj, I., Ghedira, H.",
+      "title": "Spatiotemporal variability of surface ozone and associated meteorological conditions over the Arabian Peninsula",
+      "journal": "Atmospheric Pollution Research",
+      "year": 2024,
+      "doi": "10.1016/j.apr.2024.102210",
+      "link": "https://doi.org/10.1016/j.apr.2024.102210"
     }
   ]
 }
