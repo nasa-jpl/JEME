@@ -15650,14 +15650,14 @@
       "Atmospheric Environment"
     ],
     "DOI": "10.1016/j.atmosenv.2021.118062",
-    "URL": "https://doi.org/10.1016/j.atmosenv.2021.118062",
+    "URL": "https://www.sciencedirect.com/science/article/pii/S1352231020307949",
     "source": "team_papers",
     "engagement_level": "Level 2: Data/Method Usage",
     "research_domain": "Atmospheric Science/Environmental Chemistry",
     "region": "Asia",
     "country": "South Korea",
     "year": 2021,
-    "citations": 0,
+    "citations": 34,
     "is_open_access": false
   },
   {
@@ -15689,7 +15689,7 @@
     "region": "Asia",
     "country": "China",
     "year": 2019,
-    "citations": 0,
+    "citations": "0",
     "is_open_access": false
   },
   {
@@ -15849,7 +15849,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2025,
-    "citations": 0,
+    "citations": 1,
     "is_open_access": false
   },
   {
@@ -15945,7 +15945,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2025,
-    "citations": 0,
+    "citations": 1,
     "is_open_access": false
   },
   {
@@ -16073,7 +16073,7 @@
     "region": "Global",
     "country": "Global",
     "year": 2024,
-    "citations": 0,
+    "citations": 17,
     "is_open_access": false
   },
   {
@@ -16105,7 +16105,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2024,
-    "citations": 0,
+    "citations": 72,
     "is_open_access": false
   },
   {
@@ -16137,7 +16137,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2024,
-    "citations": 0,
+    "citations": 4,
     "is_open_access": false
   },
   {
@@ -16201,7 +16201,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2023,
-    "citations": 0,
+    "citations": 4,
     "is_open_access": false
   },
   {
@@ -16265,7 +16265,7 @@
     "region": "Asia",
     "country": "China",
     "year": 2019,
-    "citations": 0,
+    "citations": 42,
     "is_open_access": false
   },
   {
@@ -16297,7 +16297,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2014,
-    "citations": 0,
+    "citations": 118,
     "is_open_access": false
   },
   {
@@ -16329,7 +16329,7 @@
     "region": "Global",
     "country": "Global",
     "year": 2014,
-    "citations": 0,
+    "citations": 71,
     "is_open_access": false
   },
   {
@@ -16361,7 +16361,7 @@
     "region": "Asia",
     "country": "Japan",
     "year": 2013,
-    "citations": 0,
+    "citations": 32,
     "is_open_access": false
   },
   {
@@ -16425,7 +16425,7 @@
     "region": "North America",
     "country": "United States",
     "year": 2012,
-    "citations": 0,
+    "citations": 120,
     "is_open_access": false
   },
   {
@@ -16457,7 +16457,7 @@
     "region": "Global",
     "country": "Global",
     "year": 2012,
-    "citations": 0,
+    "citations": 143,
     "is_open_access": false
   },
   {
@@ -16489,7 +16489,7 @@
     "region": "Asia",
     "country": "India",
     "year": 2024,
-    "citations": 0,
+    "citations": 15,
     "is_open_access": false
   },
   {
@@ -16521,7 +16521,7 @@
     "region": "Global",
     "country": "Not specified",
     "year": 2024,
-    "citations": 0,
+    "citations": 7,
     "is_open_access": false
   }
 ]
