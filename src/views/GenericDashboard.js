@@ -147,21 +147,23 @@ const GenericDashboard = ({ modelName, citationsData }) => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">SMD</span>
+              <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">Science Model Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Publication Dashboard</h1>
+              <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>
           
           <div className="flex gap-8">
             <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
+            <Link to="/science-model-dashboard/RAPID" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
             <Link to="/science-model-dashboard/CMS-Flux" className={`font-medium text-sm ${modelName === 'CMS-Flux' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CMS-Flux</Link>
             <Link to="/science-model-dashboard/ECCO" className={`font-medium text-sm ${modelName === 'ECCO' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ECCO</Link>
             <Link to="/science-model-dashboard/ISSM" className={`font-medium text-sm ${modelName === 'ISSM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className={`font-medium text-sm ${modelName === 'MOMO-CHEM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className={`font-medium text-sm ${modelName === 'CARDAMOM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CARDAMOM</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
           </div>
           
           <div className="flex items-center gap-4">

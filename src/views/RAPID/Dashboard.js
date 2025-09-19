@@ -84,10 +84,11 @@ const RAPIDDashboard = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">SMD</span>
+              <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">Science Model Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Publication Dashboard</h1>
+              <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>
           
@@ -99,25 +100,9 @@ const RAPIDDashboard = () => {
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
           </div>
           
-          <div className="flex items-center gap-4">
-            <div className="relative w-64">
-              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Search size={16} className="text-gray-500" />
-              </div>
-              <input type="text" placeholder="Search citations..." className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-            </div>
-            <button className="text-gray-600 hover:text-gray-800">
-              <Bell size={20} />
-            </button>
-            <button className="text-gray-600 hover:text-gray-800">
-              <Settings size={20} />
-            </button>
-            <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-              A
-            </div>
-          </div>
         </div>
       </header>
       
@@ -126,9 +111,9 @@ const RAPIDDashboard = () => {
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Science Models Overview</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Publication Dashboard</h2>
             <p className="text-gray-600">
-              Comprehensive suite of Earth system models for climate, hydrology, oceanography, and atmospheric research
+              Comprehensive publication dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
             </p>
           </div>
           
