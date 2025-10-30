@@ -1,96 +1,181 @@
 // src/components/charts/ModelComparisonChart.js
-// Chart comparing RAPID with other hydrological models
+// Chart comparing all JEME models
 
-import React from 'react';
-import { BarChart, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { Expand, MoreHorizontal } from 'lucide-react';
-import modelData from '../../data/modelData';
-import colors from '../../utils/colors';
+import React, { useMemo } from 'react';
+import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const ModelComparisonChart = () => (
+const ModelComparisonChart = ({ allModelsData = {} }) => {
+  // Calculate comparison data from all models
+  const comparisonData = useMemo(() => {
+    const modelColors = {
+      'RAPID': '#3b82f6',
+      'CMS-Flux': '#10b981',
+      'ECCO': '#14b8a6',
+      'ISSM': '#6366f1',
+      'MOMO-CHEM': '#a855f7',
+      'CARDAMOM': '#10b981'
+    };
+
+    return Object.entries(allModelsData).map(([modelName, data]) => {
+      const papers = Array.isArray(data) ? data : [];
+      const totalPapers = papers.length;
+      const totalCitations = papers.reduce((sum, paper) => sum + (paper['is-referenced-by-count'] || 0), 0);
+      const avgCitations = totalPapers > 0 ? Math.round(totalCitations / totalPapers) : 0;
+
+      // Calculate h-index (simplified)
+      const citationCounts = papers
+        .map(p => p['is-referenced-by-count'] || 0)
+        .sort((a, b) => b - a);
+      let hIndex = 0;
+      for (let i = 0; i < citationCounts.length; i++) {
+        if (citationCounts[i] >= i + 1) {
+          hIndex = i + 1;
+        } else {
+          break;
+        }
+      }
+
+      return {
+        name: modelName,
+        papers: totalPapers,
+        citations: totalCitations,
+        avgCitations,
+        hIndex,
+        color: modelColors[modelName] || '#6b7280'
+      };
+    }).sort((a, b) => b.citations - a.citations);
+  }, [allModelsData]);
+
+  if (comparisonData.length === 0) {
+    return null;
+  }
+
+  return (
   <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
     <div className="flex justify-between items-start mb-4">
       <div>
-        <div className="text-base font-semibold text-gray-800">Comparative Impact Assessment</div>
-        <div className="text-sm text-gray-500 mt-1">RAPID model compared to similar hydrological models</div>
-      </div>
-      <div className="flex gap-2">
-        <button className="text-gray-500 hover:text-gray-700 p-1"><Expand size={18} /></button>
-        <button className="text-gray-500 hover:text-gray-700 p-1"><MoreHorizontal size={18} /></button>
+        <div className="text-base font-semibold text-gray-800">Multi-Model Impact Comparison</div>
+        <div className="text-sm text-gray-500 mt-1">Comparing publication and citation metrics across all JEME models</div>
       </div>
     </div>
-    
-    <div className="flex">
-      <div className="flex-3">
-        <div className="h-80 mb-4">
+
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      {/* Total Citations Chart */}
+      <div>
+        <div className="mb-3">
+          <div className="text-sm font-semibold text-gray-700">Total Citations</div>
+          <div className="text-sm font-semibold text-gray-700">by Model</div>
+          <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
+        </div>
+        <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
             <BarChart
-              data={modelData}
-              margin={{ top: 20, right: 30, left: 20, bottom: 10 }}
+              data={comparisonData}
+              margin={{ top: 20, right: 30, left: 50, bottom: 50 }}
             >
               <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis dataKey="name" />
-              <YAxis yAxisId="left" orientation="left" label={{ value: 'Total Citations', angle: -90, position: 'insideLeft' }} />
-              <YAxis yAxisId="right" orientation="right" label={{ value: 'Impact Score', angle: 90, position: 'insideRight' }} />
-              <Tooltip formatter={(value, name, props) => {
-                if (name === 'citations') return [`${value} citations`, 'Citations'];
-                if (name === 'impactScore') return [`${value} impact score`, 'Impact Score'];
-                return [value, name];
-              }} />
-              <Legend />
-              <Bar yAxisId="left" dataKey="citations" name="Total Citations" fill={(data) => data.color} />
-              <Line yAxisId="right" type="monotone" dataKey="impactScore" name="Impact Score" stroke="#ff7300" strokeWidth={2} />
+              <XAxis
+                dataKey="name"
+                angle={-45}
+                textAnchor="end"
+                height={100}
+              />
+              <YAxis
+                scale="log"
+                domain={[100, 'auto']}
+                allowDataOverflow={false}
+                width={20}
+              />
+              <Tooltip
+                formatter={(value, name) => {
+                  if (name === 'citations') return [`${value.toLocaleString()} citations`, 'Total Citations'];
+                  return [value, name];
+                }}
+              />
+              <Bar dataKey="citations" name="Total Citations">
+                {comparisonData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.color} />
+                ))}
+              </Bar>
             </BarChart>
           </ResponsiveContainer>
         </div>
-        
-        <div className="flex flex-wrap gap-6 mt-4">
-          {modelData.map((model, index) => (
-            <div key={index} className="flex items-center gap-2">
-              <div className="w-3 h-3 rounded" style={{ backgroundColor: model.color }}></div>
-              <span className="text-xs text-gray-600">{model.name} ({model.citations} citations)</span>
-            </div>
-          ))}
-        </div>
       </div>
-      
-      <div className="flex-1 pl-8 border-l border-gray-200">
-        <div className="text-sm font-semibold text-gray-700 mb-4">Comparative Analysis</div>
-        
-        <div className="text-xs text-gray-600 mb-2">
-          The chart compares RAPID to other widely used hydrological models. For each model, the bars show total citations and the line shows impact score.
+
+      {/* Publications Chart */}
+      <div>
+        <div className="mb-3">
+          <div className="text-sm font-semibold text-gray-700">Total Publications</div>
+          <div className="text-sm font-semibold text-gray-700">by Model</div>
+          <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
         </div>
-        
-        <div className="bg-gray-100 rounded-lg p-3 mt-4">
-          <div className="text-xs text-gray-600 font-medium mb-2">Analysis Factors</div>
-          <div className="space-y-1 text-xs">
-            <div className="flex justify-between">
-              <div className="text-gray-600">Model Age</div>
-              <div className="text-gray-700">Older models tend to accumulate more citations</div>
-            </div>
-            <div className="flex justify-between">
-              <div className="text-gray-600">Citation-to-Age Ratio</div>
-              <div className="text-gray-700">RAPID: 19.6 citations/year</div>
-            </div>
-            <div className="flex justify-between">
-              <div className="text-gray-600">Average for Comparison</div>
-              <div className="text-gray-700">21.9 citations/year</div>
-            </div>
-          </div>
-        </div>
-        
-        <div className="mt-4">
-          <div className="text-xs text-gray-700 font-medium mb-2">RAPID's strengths:</div>
-          <ul className="text-xs text-gray-600 pl-6 list-disc space-y-1">
-            <li>Excellent performance for large-scale applications</li>
-            <li>Integration with NHDPlus dataset</li>
-            <li>Parallel computing capabilities</li>
-            <li>Strong growth in recent years</li>
-          </ul>
+        <div className="h-80">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={comparisonData}
+              margin={{ top: 20, right: 30, left: 50, bottom: 50 }}
+            >
+              <CartesianGrid strokeDasharray="3 3" vertical={false} />
+              <XAxis
+                dataKey="name"
+                angle={-45}
+                textAnchor="end"
+                height={100}
+              />
+              <YAxis
+                scale="log"
+                domain={[10, 'auto']}
+                allowDataOverflow={false}
+                width={20}
+              />
+              <Tooltip
+                formatter={(value, name) => {
+                  if (name === 'papers') return [`${value} papers`, 'Publications'];
+                  return [value, name];
+                }}
+              />
+              <Bar dataKey="papers" name="Publications">
+                {comparisonData.map((entry, index) => (
+                  <Cell key={`cell-${index}`} fill={entry.color} />
+                ))}
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
         </div>
       </div>
     </div>
+
+    {/* Summary Statistics */}
+    <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
+      {comparisonData.map((model) => (
+        <div key={model.name} className="border border-gray-200 rounded-lg p-3">
+          <div className="flex items-center gap-2 mb-2">
+            <div className="w-3 h-3 rounded" style={{ backgroundColor: model.color }}></div>
+            <div className="text-xs font-semibold text-gray-700">{model.name}</div>
+          </div>
+          <div className="space-y-1 text-xs">
+            <div className="flex justify-between">
+              <span className="text-gray-600">Papers:</span>
+              <span className="font-semibold">{model.papers}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Citations:</span>
+              <span className="font-semibold">{model.citations.toLocaleString()}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">Avg/Paper:</span>
+              <span className="font-semibold">{model.avgCitations}</span>
+            </div>
+            <div className="flex justify-between">
+              <span className="text-gray-600">h-index:</span>
+              <span className="font-semibold">{model.hIndex}</span>
+            </div>
+          </div>
+        </div>
+      ))}
+    </div>
   </div>
-);
+  );
+};
 
 export default ModelComparisonChart;

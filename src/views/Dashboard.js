@@ -2,43 +2,48 @@
 // Main dashboard view that combines all components
 
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight } from 'lucide-react';
+import { Zap, Wind, Waves, Mountain, Atom, Leaf } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import components
-import PaperInfo from '../components/PaperInfo';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
 
-// Import section components
-import MetricsOverview from './sections/MetricsOverview';
-
 // Import chart components
-import CitationTrendsChart from '../components/charts/CitationTrendsChart';
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
-import ResearchDomainsCard from '../components/charts/ResearchDomainsCard';
-import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
-import FutureTrendsChart from '../components/charts/FutureTrendsChart'; 
-import DashboardSummaryCard from '../components/charts/DashboardSummaryCard';
-import JournalDistributionCard from '../components/charts/JournalDistributionCard';
-import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
 
 const Dashboard = () => {
-  const [rapidData, setRapidData] = useState([]);
+  const [allModelsData, setAllModelsData] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  // Load RAPID data for time series chart
+  // Load all models' data for multi-model comparison
   useEffect(() => {
-    const loadRapidData = async () => {
+    const loadAllModelsData = async () => {
       try {
-        const rapidModule = await import('../data/RAPID_analyzed.json');
-        const data = rapidModule.default || rapidModule;
-        setRapidData(data);
+        const [rapidModule, cmsFluxModule, eccoModule, issmModule, momoChemModule, cardamomModule] = await Promise.all([
+          import('../data/RAPID_analyzed.json'),
+          import('../data/CMS-Flux_analyzed.json'),
+          import('../data/ECCO_analyzed.json'),
+          import('../data/ISSM_analyzed.json'),
+          import('../data/MOMO-CHEM_analyzed.json'),
+          import('../data/CARDAMOM_analyzed.json')
+        ]);
+
+        setAllModelsData({
+          RAPID: rapidModule.default || rapidModule,
+          'CMS-Flux': cmsFluxModule.default || cmsFluxModule,
+          ECCO: eccoModule.default || eccoModule,
+          ISSM: issmModule.default || issmModule,
+          'MOMO-CHEM': momoChemModule.default || momoChemModule,
+          CARDAMOM: cardamomModule.default || cardamomModule
+        });
+        setLoading(false);
       } catch (error) {
-        console.error('Failed to load RAPID data:', error);
+        console.error('Failed to load models data:', error);
+        setLoading(false);
       }
     };
-    
-    loadRapidData();
+
+    loadAllModelsData();
   }, []);
 
   const models = [
@@ -151,80 +156,27 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-        
-        <PaperInfo />
-        <Header />
-        
-        {/* Data Verification Section */}
-        <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
-          <div className="text-lg font-semibold text-gray-800 mb-4">Verify & Explore the Data</div>
-          <p className="text-sm text-gray-600 mb-4">
-            This dashboard provides visualizations based on actual citation data. You can explore and verify the raw data using the following detailed views:
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link 
-              to="/citations" 
-              className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
-            >
-              <div className="mr-4 bg-blue-100 p-3 rounded-full">
-                <Database size={24} className="text-blue-600" />
-              </div>
-              <div>
-                <div className="font-medium text-blue-900">Raw Citation Data</div>
-                <div className="text-sm text-blue-700">View all papers</div>
-              </div>
-              <ExternalLink size={16} className="ml-auto text-blue-400" />
-            </Link>
-            
-            <Link 
-              to="/geographic-impact" 
-              className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
-            >
-              <div className="mr-4 bg-green-100 p-3 rounded-full">
-                <Globe size={24} className="text-green-600" />
-              </div>
-              <div>
-                <div className="font-medium text-green-900">Geographic Impact</div>
-                <div className="text-sm text-green-700">Explore watersheds</div>
-              </div>
-              <ExternalLink size={16} className="ml-auto text-green-400" />
-            </Link>
-            
-            <Link 
-              to="/research-domains" 
-              className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
-            >
-              <div className="mr-4 bg-purple-100 p-3 rounded-full">
-                <BarChart3 size={24} className="text-purple-600" />
-              </div>
-              <div>
-                <div className="font-medium text-purple-900">Research Domains</div>
-                <div className="text-sm text-purple-700">Analyze topics and applications</div>
-              </div>
-              <ExternalLink size={16} className="ml-auto text-purple-400" />
-            </Link>
-          </div>
-        </div>
-        
 
-        
-        <MetricsOverview data={rapidData} />
-        <CitationTrendsChart data={rapidData} />
-        
-        <div className="grid grid-cols-2 gap-6 mb-6">
-          <ResearchDomainsCard data={rapidData} />
-          <EngagementLevelsCard data={rapidData} />
-        </div>
-        
-        
-        <FutureTrendsChart data={rapidData} />
-        <DashboardSummaryCard data={rapidData} />
-        
-        <div className="grid grid-cols-2 gap-6 mb-6">
-          <JournalDistributionCard data={rapidData} />
-          <GitHubMetricsCard data={rapidData} />
-        </div>
+        {loading ? (
+          <div className="bg-white rounded-lg p-8 shadow-sm mb-6 text-center">
+            <div className="text-gray-600">Loading data...</div>
+          </div>
+        ) : (
+          <>
+            {/* Multi-Model Comparison Section */}
+            <ModelComparisonChart allModelsData={allModelsData} />
+
+            {/* Citation trends across all models */}
+            <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
+              <h2 className="text-xl font-bold text-gray-900 mb-4">Citation Trends Across Models</h2>
+              <p className="text-sm text-gray-600 mb-4">
+                Compare citation growth patterns across all JEME models
+              </p>
+              {/* This would need a new multi-model citation trends chart component */}
+              <div className="text-sm text-gray-500 italic">Multi-model citation trends visualization coming soon</div>
+            </div>
+          </>
+        )}
         
         <Footer />
       </main>
