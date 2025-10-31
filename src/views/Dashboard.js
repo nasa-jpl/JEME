@@ -10,6 +10,7 @@ import Footer from '../components/Footer';
 
 // Import chart components
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
+import MultiModelCitationTrendsChart from '../components/charts/MultiModelCitationTrendsChart';
 
 const Dashboard = () => {
   const [allModelsData, setAllModelsData] = useState({});
@@ -49,37 +50,37 @@ const Dashboard = () => {
   const models = [
     {
       name: "RAPID",
-      icon: <Zap size={20} className="text-blue-600" />,
+      icon: <Zap size={20} style={{ color: '#3b82f6' }} />,  // Blue
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
       link: "/science-model-dashboard"
     },
     {
       name: "CMS-Flux",
-      icon: <Wind size={20} className="text-green-600" />,
+      icon: <Wind size={20} style={{ color: '#10b981' }} />,  // Green
       description: "Carbon Monitoring System Flux - Atmospheric CO2 inversion system for quantifying carbon sources and sinks",
       link: "/science-model-dashboard/CMS-Flux"
     },
     {
       name: "ECCO",
-      icon: <Waves size={20} className="text-teal-600" />,
+      icon: <Waves size={20} style={{ color: '#f97316' }} />,  // Orange
       description: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation system combining models with observations",
       link: "/science-model-dashboard/ECCO"
     },
     {
       name: "ISSM",
-      icon: <Mountain size={20} className="text-indigo-600" />,
+      icon: <Mountain size={20} style={{ color: '#ef4444' }} />,  // Red
       description: "Ice Sheet System Model - Thermomechanical ice sheet model for simulating ice dynamics and sea level change",
       link: "/science-model-dashboard/ISSM"
     },
     {
       name: "MOMO-CHEM",
-      icon: <Atom size={20} className="text-purple-600" />,
+      icon: <Atom size={20} style={{ color: '#8b5cf6' }} />,  // Purple
       description: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model for air quality and atmospheric composition studies",
       link: "/science-model-dashboard/MOMO-CHEM"
     },
     {
       name: "CARDAMOM",
-      icon: <Leaf size={20} className="text-emerald-600" />,
+      icon: <Leaf size={20} style={{ color: '#eab308' }} />,  // Yellow
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
       link: "/science-model-dashboard/CARDAMOM"
     }
@@ -167,14 +168,7 @@ const Dashboard = () => {
             <ModelComparisonChart allModelsData={allModelsData} />
 
             {/* Citation trends across all models */}
-            <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
-              <h2 className="text-xl font-bold text-gray-900 mb-4">Citation Trends Across Models</h2>
-              <p className="text-sm text-gray-600 mb-4">
-                Compare citation growth patterns across all JEME models
-              </p>
-              {/* This would need a new multi-model citation trends chart component */}
-              <div className="text-sm text-gray-500 italic">Multi-model citation trends visualization coming soon</div>
-            </div>
+            <MultiModelCitationTrendsChart allModelsData={allModelsData} />
           </>
         )}
         

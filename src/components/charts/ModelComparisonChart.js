@@ -8,12 +8,12 @@ const ModelComparisonChart = ({ allModelsData = {} }) => {
   // Calculate comparison data from all models
   const comparisonData = useMemo(() => {
     const modelColors = {
-      'RAPID': '#3b82f6',
-      'CMS-Flux': '#10b981',
-      'ECCO': '#14b8a6',
-      'ISSM': '#6366f1',
-      'MOMO-CHEM': '#a855f7',
-      'CARDAMOM': '#10b981'
+      'RAPID': '#3b82f6',      // Blue
+      'CMS-Flux': '#10b981',   // Green
+      'ECCO': '#f97316',       // Orange
+      'ISSM': '#ef4444',       // Red
+      'MOMO-CHEM': '#8b5cf6',  // Purple
+      'CARDAMOM': '#eab308'    // Yellow
     };
 
     return Object.entries(allModelsData).map(([modelName, data]) => {
