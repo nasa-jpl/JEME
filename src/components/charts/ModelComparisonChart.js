@@ -59,89 +59,45 @@ const ModelComparisonChart = ({ allModelsData = {} }) => {
       </div>
     </div>
 
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-      {/* Total Citations Chart */}
-      <div>
-        <div className="mb-3">
-          <div className="text-sm font-semibold text-gray-700">Total Citations</div>
-          <div className="text-sm font-semibold text-gray-700">by Model</div>
-          <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
-        </div>
-        <div className="h-80">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={comparisonData}
-              margin={{ top: 20, right: 30, left: 50, bottom: 50 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis
-                dataKey="name"
-                angle={-45}
-                textAnchor="end"
-                height={100}
-              />
-              <YAxis
-                scale="log"
-                domain={[100, 'auto']}
-                allowDataOverflow={false}
-                width={20}
-              />
-              <Tooltip
-                formatter={(value, name) => {
-                  if (name === 'citations') return [`${value.toLocaleString()} citations`, 'Total Citations'];
-                  return [value, name];
-                }}
-              />
-              <Bar dataKey="citations" name="Total Citations">
-                {comparisonData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+    {/* Publications Chart */}
+    <div className="max-w-3xl mx-auto">
+      <div className="mb-3">
+        <div className="text-sm font-semibold text-gray-700">Total Publications</div>
+        <div className="text-sm font-semibold text-gray-700">by Model</div>
+        <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
       </div>
-
-      {/* Publications Chart */}
-      <div>
-        <div className="mb-3">
-          <div className="text-sm font-semibold text-gray-700">Total Publications</div>
-          <div className="text-sm font-semibold text-gray-700">by Model</div>
-          <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
-        </div>
-        <div className="h-80">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={comparisonData}
-              margin={{ top: 20, right: 30, left: 50, bottom: 50 }}
-            >
-              <CartesianGrid strokeDasharray="3 3" vertical={false} />
-              <XAxis
-                dataKey="name"
-                angle={-45}
-                textAnchor="end"
-                height={100}
-              />
-              <YAxis
-                scale="log"
-                domain={[10, 'auto']}
-                allowDataOverflow={false}
-                width={20}
-              />
-              <Tooltip
-                formatter={(value, name) => {
-                  if (name === 'papers') return [`${value} papers`, 'Publications'];
-                  return [value, name];
-                }}
-              />
-              <Bar dataKey="papers" name="Publications">
-                {comparisonData.map((entry, index) => (
-                  <Cell key={`cell-${index}`} fill={entry.color} />
-                ))}
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
+      <div className="h-80">
+        <ResponsiveContainer width="100%" height="100%">
+          <BarChart
+            data={comparisonData}
+            margin={{ top: 20, right: 30, left: 50, bottom: 50 }}
+          >
+            <CartesianGrid strokeDasharray="3 3" vertical={false} />
+            <XAxis
+              dataKey="name"
+              angle={-45}
+              textAnchor="end"
+              height={100}
+            />
+            <YAxis
+              scale="log"
+              domain={[10, 'auto']}
+              allowDataOverflow={false}
+              width={20}
+            />
+            <Tooltip
+              formatter={(value, name) => {
+                if (name === 'papers') return [`${value} papers`, 'Publications'];
+                return [value, name];
+              }}
+            />
+            <Bar dataKey="papers" name="Publications">
+              {comparisonData.map((entry, index) => (
+                <Cell key={`cell-${index}`} fill={entry.color} />
+              ))}
+            </Bar>
+          </BarChart>
+        </ResponsiveContainer>
       </div>
     </div>
 

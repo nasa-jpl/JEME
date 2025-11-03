@@ -85,7 +85,7 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
 
   return (
     <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
-      <h2 className="text-xl font-bold text-gray-900 mb-2">Citation Trends Across Models</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-2">Publication Trends Across Models</h2>
       <p className="text-sm text-gray-600 mb-4">
         Cumulative publications over time for all JEME models (Log Scale)
       </p>
@@ -94,7 +94,7 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
         <ResponsiveContainer width="100%" height="100%">
           <LineChart
             data={trendData.chartData}
-            margin={{ top: 20, right: 30, left: 60, bottom: 50 }}
+            margin={{ top: 20, right: 30, left: 80, bottom: 50 }}
           >
             <CartesianGrid strokeDasharray="3 3" />
             <XAxis
@@ -104,7 +104,6 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
             <YAxis
               scale="log"
               domain={[1, 'dataMax']}
-              label={{ value: 'Cumulative Publications', angle: -90, position: 'insideLeft' }}
             />
             <Tooltip
               formatter={(value, name) => [`${value} papers`, name]}
