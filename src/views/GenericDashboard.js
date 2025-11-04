@@ -150,7 +150,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
               <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">JEME Publication Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Dashboard</h1>
               <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>

@@ -95,7 +95,7 @@ const Dashboard = () => {
               <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">JEME Publication Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Dashboard</h1>
               <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>
@@ -127,7 +127,7 @@ const Dashboard = () => {
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Publication Dashboard</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Dashboard</h2>
             <p className="text-gray-600">
               Comprehensive publication dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
             </p>

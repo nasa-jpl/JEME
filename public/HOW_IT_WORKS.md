@@ -1,8 +1,8 @@
-# JPL's Earth Modeling Enterprise (JEME) Publication Dashboard - How It Works 
+# JPL's Earth Modeling Enterprise (JEME) Dashboard - How It Works 
 
 ## Summary
 
-The JPL's Earth Modeling Enterprise (JEME) Publication Dashboard is a multi-component system designed for analyzing and visualizing scientific citation data across six NASA models: RAPID, CARDAMOM, CMS-Flux, ECCO, ISSM, and MOMO-CHEM. The system comprises three integrated components: a React-based web dashboard for visualization, an LLM-powered citation analyzer using Ollama, and a machine learning publication classifier using deep learning techniques.
+The JPL's Earth Modeling Enterprise (JEME) Dashboard is a multi-component system designed for analyzing and visualizing scientific citation data across six NASA models: RAPID, CARDAMOM, CMS-Flux, ECCO, ISSM, and MOMO-CHEM. The system comprises three integrated components: a React-based web dashboard for visualization, an LLM-powered citation analyzer using Ollama, and a machine learning publication classifier using deep learning techniques.
 
 ## System Architecture Overview
 
@@ -48,7 +48,7 @@ graph TB
 
 ## Component Deep Dive
 
-### 1. JPL's Earth Modeling Enterprise (JEME) Publication Dashboard (React Application)
+### 1. JPL's Earth Modeling Enterprise (JEME) Dashboard (React Application)
 
 #### Architecture Pattern
 The dashboard implements a **hybrid architecture** combining generic and model-specific components:
@@ -442,4 +442,4 @@ graph TD
 
 ## Conclusion
 
-The JPL's Earth Modeling Enterprise (JEME) Publication Dashboard represents a comprehensive solution for scientific citation analysis, combining modern web technologies with advanced machine learning and LLM capabilities. The modular architecture ensures maintainability and extensibility, while the multi-model support provides flexibility for diverse research domains. The system successfully bridges the gap between raw citation data and actionable insights through intelligent processing and intuitive visualization.
+The JPL's Earth Modeling Enterprise (JEME) Dashboard represents a comprehensive solution for scientific citation analysis, combining modern web technologies with advanced machine learning and LLM capabilities. The modular architecture ensures maintainability and extensibility, while the multi-model support provides flexibility for diverse research domains. The system successfully bridges the gap between raw citation data and actionable insights through intelligent processing and intuitive visualization.
