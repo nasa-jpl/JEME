@@ -52,7 +52,7 @@ const Dashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} style={{ color: '#3b82f6' }} />,  // Blue
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard"
+      link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
@@ -129,7 +129,7 @@ const Dashboard = () => {
           <div className="mb-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Dashboard</h2>
             <p className="text-gray-600">
-              Comprehensive publication dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
+              Comprehensive dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
             </p>
           </div>
           
