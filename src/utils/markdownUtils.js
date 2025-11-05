@@ -15,6 +15,9 @@ export const parseMarkdown = (text) => {
   // Convert links [text](url)
   html = html.replace(/\[(.+?)\]\((.+?)\)/g, '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">$1</a>');
 
+  // Convert plain URLs to clickable links (must come after markdown links)
+  html = html.replace(/(https?:\/\/[^\s<]+)/g, '<a href="$1" target="_blank" rel="noopener noreferrer" class="text-blue-600 hover:underline">$1</a>');
+
   // Convert inline code `code`
   html = html.replace(/`(.+?)`/g, '<code class="bg-gray-100 px-1 py-0.5 rounded text-sm">$1</code>');
 
@@ -29,10 +32,10 @@ export const parseMarkdown = (text) => {
 
     if (bulletMatch) {
       if (!inList) {
-        processedLines.push('<ul class="list-disc list-inside space-y-0.5 ml-4 my-2">');
+        processedLines.push('<ul class="list-disc list-inside ml-4 my-1" style="margin-top: 0.25rem; margin-bottom: 0.25rem;">');
         inList = true;
       }
-      processedLines.push(`<li class="leading-relaxed">${bulletMatch[1]}</li>`);
+      processedLines.push(`<li style="margin-bottom: 0.125rem;">${bulletMatch[1]}</li>`);
     } else if (line === '' && inList) {
       // Skip empty lines within lists
       continue;
@@ -42,7 +45,8 @@ export const parseMarkdown = (text) => {
         inList = false;
       }
       if (line !== '') {
-        processedLines.push(line);
+        // Wrap regular text in paragraph tags
+        processedLines.push(`<p class="my-2">${line}</p>`);
       }
     }
   }
@@ -51,7 +55,7 @@ export const parseMarkdown = (text) => {
     processedLines.push('</ul>');
   }
 
-  return processedLines.join('\n');
+  return processedLines.join('');
 };
 
 // Component to render parsed markdown

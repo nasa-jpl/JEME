@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 
 // Import components
 import Footer from '../components/Footer';
+import JEMEContributionSection from '../components/JEMEContributionSection';
 
 // Import chart components
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
@@ -117,13 +118,16 @@ const Dashboard = () => {
         
         {/* JEME Image */}
         <div className="mb-6">
-          <img 
-            src="/science-model-dashboard/JEME-1slide.jpg" 
-            alt="JEME Presentation" 
+          <img
+            src="/science-model-dashboard/JEME-1slide.jpg"
+            alt="JEME Presentation"
             className="w-full rounded-lg shadow-sm"
           />
         </div>
-        
+
+        {/* JEME Contribution Section */}
+        <JEMEContributionSection />
+
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="mb-6">
