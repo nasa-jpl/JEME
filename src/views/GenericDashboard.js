@@ -1,5 +1,5 @@
 // Generic Dashboard component that works with any model
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp } from 'lucide-react';
 import MetricCard from '../components/MetricCard';
@@ -15,7 +15,52 @@ import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
 const GenericDashboard = ({ modelName, citationsData }) => {
   const [refreshing, setRefreshing] = useState(false);
   const [teamPapersExpanded, setTeamPapersExpanded] = useState(false);
+  const [modelInfoExpanded, setModelInfoExpanded] = useState(false);
+  const [modelInfo, setModelInfo] = useState(null);
   const modelConfig = getModelConfig(modelName);
+
+  // Fetch model info from markdown file
+  useEffect(() => {
+    const fetchModelInfo = async () => {
+      try {
+        const response = await fetch(`/science-model-dashboard/models/${modelName}.md`);
+        if (response.ok) {
+          const text = await response.text();
+          // Parse markdown sections
+          const sections = {};
+          const lines = text.split('\n');
+          let currentSection = null;
+          let currentContent = [];
+
+          lines.forEach(line => {
+            if (line.startsWith('## ')) {
+              if (currentSection) {
+                sections[currentSection] = currentContent.join('\n').trim();
+              }
+              currentSection = line.replace('## ', '').trim();
+              currentContent = [];
+            } else if (line.startsWith('# ')) {
+              sections.title = line.replace('# ', '').trim();
+            } else if (currentSection) {
+              currentContent.push(line);
+            }
+          });
+
+          if (currentSection) {
+            sections[currentSection] = currentContent.join('\n').trim();
+          }
+
+          setModelInfo(sections);
+        }
+      } catch (error) {
+        console.error('Failed to fetch model info:', error);
+      }
+    };
+
+    if (modelName) {
+      fetchModelInfo();
+    }
+  }, [modelName]);
 
   const models = [
     {
@@ -213,7 +258,87 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             ))}
           </div>
         </div>
-        
+
+        {/* Model Information Section */}
+        {modelInfo && (
+          <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
+            <div className="mb-4">
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">About {modelConfig.displayName}</h2>
+              <p className="text-sm text-gray-600">Learn more about this model</p>
+            </div>
+
+            {/* Overview preview - show first 2-3 lines */}
+            <div className="text-gray-700 space-y-2">
+              {modelInfo.Overview && (
+                <div>
+                  <p className="leading-relaxed">
+                    {modelInfoExpanded
+                      ? modelInfo.Overview
+                      : modelInfo.Overview.split('\n').slice(0, 2).join('\n') + (modelInfo.Overview.split('\n').length > 2 ? '...' : '')}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Expanded content */}
+            {modelInfoExpanded && modelInfo && (
+              <div className="mt-4 space-y-4 text-gray-700">
+                {modelInfo.Background && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Background</h3>
+                    <p className="leading-relaxed whitespace-pre-line">{modelInfo.Background}</p>
+                  </div>
+                )}
+
+                {modelInfo['Key Features'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Key Features</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Key Features']}</div>
+                  </div>
+                )}
+
+                {modelInfo['Scientific Applications'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Scientific Applications</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Scientific Applications']}</div>
+                  </div>
+                )}
+
+                {modelInfo['Technical Details'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Technical Details</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Technical Details']}</div>
+                  </div>
+                )}
+
+                {modelInfo['JPL Team Members'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">JPL Team Members</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['JPL Team Members']}</div>
+                  </div>
+                )}
+
+                {modelInfo.Resources && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Resources</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo.Resources}</div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="mt-4">
+              <button
+                onClick={() => setModelInfoExpanded(!modelInfoExpanded)}
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+              >
+                {modelInfoExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                {modelInfoExpanded ? 'Show Less' : 'Learn More'}
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Team Papers Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="flex justify-between items-center mb-4">

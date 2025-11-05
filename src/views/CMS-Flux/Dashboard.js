@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Import components
 import PaperInfo from '../../components/PaperInfo';
+import ModelInfoSection from '../../components/ModelInfoSection';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -44,7 +45,7 @@ const CMSFluxDashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} className="text-blue-600" />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard"
+      link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
@@ -147,7 +148,8 @@ const CMSFluxDashboard = () => {
             ))}
           </div>
         </div>
-        
+
+        <ModelInfoSection modelName="CMS-Flux" modelDisplayName="CMS-Flux" />
         <PaperInfo modelName="CMS-Flux" />
         <Header modelName="CMS-Flux" />
         

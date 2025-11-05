@@ -40,7 +40,8 @@ MOMO-CHEM was developed to address limitations in single-model chemical data ass
 
 ## JPL Team Members
 
-- *To be updated with actual JPL team member names*
+- Kazuyuki Miyazaki
+- Kevin Bowman
 
 ## Key Publications
 
@@ -56,21 +57,3 @@ MOMO-CHEM was developed to address limitations in single-model chemical data ass
 - **Data Access**: Contact JPL atmospheric chemistry team
 - **Documentation**: Available through JPL internal systems
 - **Collaborations**: Through NASA atmospheric composition programs
-
-## Contact Information
-
-For more information about MOMO-CHEM at JPL, please contact:
-- Email: atmospheric-chemistry@jpl.nasa.gov
-- Office: Jet Propulsion Laboratory, Pasadena, CA
-
-## Related JPL Projects
-
-- **AIRS**: Atmospheric Infrared Sounder
-- **TES**: Tropospheric Emission Spectrometer
-- **OCO-2/3**: Orbiting Carbon Observatory
-- **TEMPO**: Tropospheric Emissions: Monitoring of Pollution
-
----
-
-*Last Updated: January 2025*
-*Note: Team member names are representative. Please update with actual current JPL team members.*

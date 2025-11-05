@@ -40,7 +40,8 @@ The ECCO project began as a collaborative effort between MIT, JPL, and other ins
 
 ## JPL Team Members
 
-- *To be updated with actual JPL team member names*
+- Ian Fenty
+- Dimitris Menemenlis
 
 ## Key Publications
 
@@ -57,14 +58,3 @@ The ECCO project began as a collaborative effort between MIT, JPL, and other ins
 - **Data Portal**: https://ecco.jpl.nasa.gov/drive/files
 - **Documentation**: https://ecco-group.org/docs.htm
 - **PO.DAAC**: https://podaac.jpl.nasa.gov/ECCO
-
-## Contact Information
-
-For more information about ECCO at JPL, please contact:
-- Email: ecco-support@jpl.nasa.gov
-- Office: Jet Propulsion Laboratory, Pasadena, CA
-
----
-
-*Last Updated: January 2025*
-*Note: Team member names are representative. Please update with actual current JPL team members.*

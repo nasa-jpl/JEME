@@ -40,7 +40,9 @@ ISSM was developed at NASA's Jet Propulsion Laboratory and the University of Cal
 
 ## JPL Team Members
 
-- *To be updated with actual JPL team member names*
+- Lambert Caron
+- Surendra Adhikari
+- Eric Larour
 
 ## Key Publications
 
@@ -57,14 +59,3 @@ ISSM was developed at NASA's Jet Propulsion Laboratory and the University of Cal
 - **Documentation**: https://issm.jpl.nasa.gov/documentation/
 - **Tutorials**: https://issm.jpl.nasa.gov/tutorials/
 - **Forum**: https://issm.ess.uci.edu/forum/
-
-## Contact Information
-
-For more information about ISSM at JPL, please contact:
-- Email: issm@jpl.nasa.gov
-- Office: Jet Propulsion Laboratory, Pasadena, CA
-
----
-
-*Last Updated: January 2025*
-*Note: Team member names are representative. Please update with actual current JPL team members.*

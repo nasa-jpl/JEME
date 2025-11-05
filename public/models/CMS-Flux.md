@@ -38,7 +38,12 @@ CMS-Flux was developed as part of NASA's Carbon Monitoring System to support car
 
 ## JPL Team Members
 
-- *To be updated with actual JPL team member names*
+- Kevin W. Bowman
+- Junjie Liu
+- Matt Thill
+- Dimitris Menemenlis
+- Anthony Bloom
+- Kazuyuki Miyazaki
 
 ## Key Publications
 
@@ -54,14 +59,3 @@ CMS-Flux was developed as part of NASA's Carbon Monitoring System to support car
 - **Official Website**: https://cmsflux.jpl.nasa.gov/
 - **Data Portal**: https://cmsflux.jpl.nasa.gov/data
 - **Documentation**: https://cmsflux.jpl.nasa.gov/docs
-
-## Contact Information
-
-For more information about CMS-Flux at JPL, please contact:
-- Email: cms-flux@jpl.nasa.gov
-- Office: Jet Propulsion Laboratory, Pasadena, CA
-
----
-
-*Last Updated: January 2025*
-*Note: Team member names are representative. Please update with actual current JPL team members.*

@@ -36,7 +36,7 @@ CARDAMOM was developed to address the challenge of constraining terrestrial carb
 
 ## JPL Team Members
 
-- *To be updated with actual JPL team member names*
+- A. Anthony Bloom
 
 ## Key Publications
 
@@ -52,14 +52,3 @@ CARDAMOM was developed to address the challenge of constraining terrestrial carb
 - **Official Website**: https://cardamom-framework.github.io/CARDAMOM
 - **Documentation**: https://cardamom-framework.github.io/CARDAMOM/docs
 - **Publications**: https://cardamom-framework.github.io/CARDAMOM/publications
-
-## Contact Information
-
-For more information about CARDAMOM at JPL, please contact:
-- Email: cardamom-team@jpl.nasa.gov
-- Office: Jet Propulsion Laboratory, Pasadena, CA
-
----
-
-*Last Updated: January 2025*
-*Note: Team member names are representative. Please update with actual current JPL team members.*
