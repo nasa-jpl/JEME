@@ -20,7 +20,7 @@ Each model bio file contains:
 3. **Key Features** - Main capabilities and characteristics
 4. **Scientific Applications** - Use cases and research areas
 5. **Technical Details** - Model specifications
-6. **JPL Team Members** - Organized by role:
+6. **Team Members** - Organized by role:
    - Principal Scientists
    - Research Staff
    - Technical Staff

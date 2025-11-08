@@ -33,7 +33,7 @@ RAPID was developed at The University of Texas at Austin and has been widely ado
 **Programming Language**: Fortran with Python interfaces
 **License**: Open Source (BSD 3-Clause)
 
-## JPL Team Members
+## Team Members
 
 - Cédric H. David
 - Michael Turmon

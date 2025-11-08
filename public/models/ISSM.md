@@ -38,7 +38,7 @@ ISSM was developed at NASA's Jet Propulsion Laboratory and the University of Cal
 **Numerical Method**: Finite Element
 **License**: Open Source (LGPL-2.1)
 
-## JPL Team Members
+## Team Members
 
 - Lambert Caron
 - Surendra Adhikari

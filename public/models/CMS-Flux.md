@@ -36,7 +36,7 @@ CMS-Flux was developed as part of NASA's Carbon Monitoring System to support car
 **Programming Language**: Python, Fortran, IDL
 **Key Components**: GEOS-Chem, TM5, CarbonTracker
 
-## JPL Team Members
+## Team Members
 
 - Kevin W. Bowman
 - Junjie Liu

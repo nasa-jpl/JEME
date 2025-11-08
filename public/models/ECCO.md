@@ -38,7 +38,7 @@ The ECCO project began as a collaborative effort between MIT, JPL, and other ins
 **Base Model**: MITgcm
 **License**: Open Source (MIT License)
 
-## JPL Team Members
+## Team Members
 
 - Ian Fenty
 - Dimitris Menemenlis

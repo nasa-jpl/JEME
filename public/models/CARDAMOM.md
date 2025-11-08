@@ -34,7 +34,7 @@ CARDAMOM was developed to address the challenge of constraining terrestrial carb
 **Programming Language**: MATLAB, R, Python
 **License**: Open Source (GPL-3.0)
 
-## JPL Team Members
+## Team Members
 
 - A. Anthony Bloom
 

@@ -38,7 +38,7 @@ MOMO-CHEM was developed to address limitations in single-model chemical data ass
 **Ensemble Models**: GEOS-Chem, TM5, Mozart, CAM-Chem
 **License**: Varies by component
 
-## JPL Team Members
+## Team Members
 
 - Kazuyuki Miyazaki
 - Kevin Bowman
