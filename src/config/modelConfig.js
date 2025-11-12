@@ -65,6 +65,28 @@ export const MODELS = {
     github: null, // No dedicated GitHub repository found
     website: 'https://acp.copernicus.org/articles/20/931/2020/',
     fullDescription: 'MOMO-CHEM is a multi-model, multi-constituent chemical data assimilation framework for tropospheric chemical reanalysis that directly accounts for model error in transport and chemistry.'
+  },
+  LES: {
+    name: 'LES',
+    displayName: 'LES',
+    description: 'Large Eddy Simulation for Atmospheric Studies',
+    dataPath: '../data/LES_analyzed.json',
+    color: '#2E8B57', // Sea Green
+    domain: 'Atmospheric Modeling',
+    github: null,
+    website: null,
+    fullDescription: 'Large Eddy Simulation (LES) techniques for high-resolution atmospheric modeling and boundary layer studies.'
+  },
+  EDMF: {
+    name: 'EDMF',
+    displayName: 'EDMF',
+    description: 'Eddy Diffusivity Mass Flux Scheme',
+    dataPath: '../data/EDMF_analyzed.json',
+    color: '#FF6347', // Tomato
+    domain: 'Atmospheric Modeling',
+    github: null,
+    website: null,
+    fullDescription: 'Eddy Diffusivity Mass Flux (EDMF) parameterization scheme for representing turbulent mixing and convective transport in atmospheric models.'
   }
 };
 
@@ -74,8 +96,11 @@ export const MODEL_ROUTES = {
   'CMS-Flux': '/science-model-dashboard/CMS-Flux',
   ECCO: '/science-model-dashboard/ECCO',
   ISSM: '/science-model-dashboard/ISSM',
-  'MOMO-CHEM': '/science-model-dashboard/MOMO-CHEM'
+  'MOMO-CHEM': '/science-model-dashboard/MOMO-CHEM',
+  LES: '/science-model-dashboard/LES',
+  EDMF: '/science-model-dashboard/EDMF'
 };
+
 
 export const getModelList = () => Object.keys(MODELS);
 

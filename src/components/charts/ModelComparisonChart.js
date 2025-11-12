@@ -11,8 +11,8 @@ const ModelComparisonChart = () => (
   <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
     <div className="flex justify-between items-start mb-4">
       <div>
-        <div className="text-base font-semibold text-gray-800">Comparative Impact Assessment</div>
-        <div className="text-sm text-gray-500 mt-1">RAPID model compared to similar hydrological models</div>
+        <div className="text-base font-semibold text-gray-800">Science Models Impact Comparison</div>
+        <div className="text-sm text-gray-500 mt-1">Citation analysis across Earth system models</div>
       </div>
       <div className="flex gap-2">
         <button className="text-gray-500 hover:text-gray-700 p-1"><Expand size={18} /></button>
@@ -58,34 +58,36 @@ const ModelComparisonChart = () => (
         <div className="text-sm font-semibold text-gray-700 mb-4">Comparative Analysis</div>
         
         <div className="text-xs text-gray-600 mb-2">
-          The chart compares RAPID to other widely used hydrological models. For each model, the bars show total citations and the line shows impact score.
+          The chart compares citation impact across different Earth system models. Each bar shows total citations with models spanning multiple scientific domains.
         </div>
         
         <div className="bg-gray-100 rounded-lg p-3 mt-4">
-          <div className="text-xs text-gray-600 font-medium mb-2">Analysis Factors</div>
+          <div className="text-xs text-gray-600 font-medium mb-2">Key Insights</div>
           <div className="space-y-1 text-xs">
             <div className="flex justify-between">
-              <div className="text-gray-600">Model Age</div>
-              <div className="text-gray-700">Older models tend to accumulate more citations</div>
+              <div className="text-gray-600">Total Models</div>
+              <div className="text-gray-700">8 Earth system models</div>
             </div>
             <div className="flex justify-between">
-              <div className="text-gray-600">Citation-to-Age Ratio</div>
-              <div className="text-gray-700">RAPID: 19.6 citations/year</div>
+              <div className="text-gray-600">Top Cited</div>
+              <div className="text-gray-700">ECCO (21,798 citations)</div>
             </div>
             <div className="flex justify-between">
-              <div className="text-gray-600">Average for Comparison</div>
-              <div className="text-gray-700">21.9 citations/year</div>
+              <div className="text-gray-600">Scientific Domains</div>
+              <div className="text-gray-700">6 research areas</div>
             </div>
           </div>
         </div>
         
         <div className="mt-4">
-          <div className="text-xs text-gray-700 font-medium mb-2">RAPID's strengths:</div>
-          <ul className="text-xs text-gray-600 pl-6 list-disc space-y-1">
-            <li>Excellent performance for large-scale applications</li>
-            <li>Integration with NHDPlus dataset</li>
-            <li>Parallel computing capabilities</li>
-            <li>Strong growth in recent years</li>
+          <div className="text-xs text-gray-700 font-medium mb-2">Model Domains:</div>
+          <ul className="text-xs text-gray-600 space-y-1">
+            <li>• Oceanography (ECCO)</li>
+            <li>• Glaciology (ISSM)</li>
+            <li>• Carbon Cycle (CARDAMOM, CMS-Flux)</li>
+            <li>• Hydrology (RAPID)</li>
+            <li>• Atmospheric Chemistry (MOMO-CHEM)</li>
+            <li>• Atmospheric Modeling (LES, EDMF)</li>
           </ul>
         </div>
       </div>

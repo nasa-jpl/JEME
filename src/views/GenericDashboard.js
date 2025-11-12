@@ -1,7 +1,7 @@
 // Generic Dashboard component that works with any model
 import React, { useState, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp } from 'lucide-react';
+import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp, CloudLightning, Layers } from 'lucide-react';
 import MetricCard from '../components/MetricCard';
 import { calculateMetrics, processCitationTrends } from '../utils/dataUtils';
 import { getModelConfig } from '../config/modelConfig';
@@ -53,6 +53,18 @@ const GenericDashboard = ({ modelName, citationsData }) => {
       icon: <Leaf size={20} className="text-emerald-600" />,
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
       link: "/science-model-dashboard/CARDAMOM"
+    },
+    {
+      name: "LES",
+      icon: <CloudLightning size={20} className="text-teal-600" />,
+      description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
+      link: "/science-model-dashboard/LES"
+    },
+    {
+      name: "EDMF",
+      icon: <Layers size={20} className="text-orange-600" />,
+      description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
+      link: "/science-model-dashboard/EDMF"
     }
   ];
 
@@ -94,6 +106,18 @@ const GenericDashboard = ({ modelName, citationsData }) => {
         authors: "Sample CARDAMOM Author 1, Sample CARDAMOM Author 2, Sample CARDAMOM Author 3",
         journal: "Geoscientific Model Development (2019), Volume 12, Pages 807-852",
         doi: "10.5194/gmd-12-807-2019"
+      },
+      'LES': {
+        title: "Large-Eddy Simulation of Atmospheric Boundary Layer Processes",
+        authors: "LES Research Team Authors",
+        journal: "Journal of Atmospheric Sciences (2023), Volume 80, Issue 3, Pages 789-812",
+        doi: "10.1175/JAS-D-22-0123.1"
+      },
+      'EDMF': {
+        title: "Eddy Diffusivity Mass Flux Parameterization for Atmospheric Models",
+        authors: "EDMF Research Team Authors",
+        journal: "Monthly Weather Review (2023), Volume 151, Issue 8, Pages 2134-2156",
+        doi: "10.1175/MWR-D-22-0245.1"
       }
     };
     return paperData[modelName] || paperData['CMS-Flux'];
@@ -162,6 +186,8 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             <Link to="/science-model-dashboard/ISSM" className={`font-medium text-sm ${modelName === 'ISSM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className={`font-medium text-sm ${modelName === 'MOMO-CHEM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className={`font-medium text-sm ${modelName === 'CARDAMOM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CARDAMOM</Link>
+            <Link to="/science-model-dashboard/LES" className={`font-medium text-sm ${modelName === 'LES' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>LES</Link>
+            <Link to="/science-model-dashboard/EDMF" className={`font-medium text-sm ${modelName === 'EDMF' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>EDMF</Link>
           </div>
           
           <div className="flex items-center gap-4">

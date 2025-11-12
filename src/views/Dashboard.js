@@ -2,7 +2,7 @@
 // Main dashboard view that combines all components
 
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight } from 'lucide-react';
+import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import components
@@ -77,6 +77,18 @@ const Dashboard = () => {
       icon: <Leaf size={20} className="text-emerald-600" />,
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
       link: "/science-model-dashboard/CARDAMOM"
+    },
+    {
+      name: "LES",
+      icon: <CloudLightning size={20} className="text-teal-600" />,
+      description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
+      link: "/science-model-dashboard/LES"
+    },
+    {
+      name: "EDMF",
+      icon: <Layers size={20} className="text-orange-600" />,
+      description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
+      link: "/science-model-dashboard/EDMF"
     }
   ];
 
@@ -101,6 +113,8 @@ const Dashboard = () => {
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm">LES</Link>
+            <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm">EDMF</Link>
           </div>
           
           <div className="flex items-center gap-4">
@@ -113,9 +127,9 @@ const Dashboard = () => {
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Science Models Overview</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Science Models Overview (Updated with LES & EDMF)</h2>
             <p className="text-gray-600">
-              Comprehensive suite of Earth system models for climate, hydrology, oceanography, and atmospheric research
+              Comprehensive suite of Earth system models including new LES and EDMF atmospheric models
             </p>
           </div>
           

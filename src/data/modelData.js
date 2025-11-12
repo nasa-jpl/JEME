@@ -5,38 +5,67 @@ import colors from '../utils/colors';
 const modelData = [
   {
     name: 'RAPID',
-    citations: 265, // Keep original - specific data not found
+    citations: 265,
     year: 2011,
-    color: colors.primary,
-    description: 'Routing Application for Parallel compuTation of Discharge'
+    color: '#3B82F6',
+    description: 'Routing Application for Parallel computation of Discharge',
+    domain: 'Hydrology'
   },
   {
-    name: 'LISFLOOD',
-    citations: 850, // Updated based on research - widely used in European systems
-    year: 2000, // First major version, though development started earlier
-    color: colors.secondary,
-    description: 'Distributed hydrological model for large river basins'
+    name: 'CARDAMOM',
+    citations: 1108,
+    year: 2015,
+    color: '#10B981',
+    description: 'Carbon Data Model Framework',
+    domain: 'Ecology/Carbon Cycle'
   },
   {
-    name: 'TOPMODEL',
-    citations: 7000, // Updated from research findings - >7000 citations as of 2020
-    year: 1979, // Beven and Kirkby (1979) original paper
-    color: colors.tertiary,
-    description: 'Topography-based hydrological model'
+    name: 'CMS-Flux',
+    citations: 2154,
+    year: 2010,
+    color: '#F59E0B',
+    description: 'Carbon Monitoring System Flux',
+    domain: 'Carbon Flux Monitoring'
   },
   {
-    name: 'HEC-RAS',
-    citations: 3200, // Estimated based on widespread use since 1995
-    year: 1995, // First release of HEC-RAS (successor to HEC-2 from 1964)
-    color: colors.accent,
-    description: 'Hydrologic Engineering Center River Analysis System'
+    name: 'ECCO',
+    citations: 21798,
+    year: 2008,
+    color: '#8B5CF6',
+    description: 'Estimating the Circulation and Climate of the Ocean',
+    domain: 'Oceanography'
   },
   {
-    name: 'VIC',
-    citations: 2800, // Updated based on extensive global applications
-    year: 1994, // Liang et al. (1994) seminal paper
-    color: colors.warning,
-    description: 'Variable Infiltration Capacity macroscale hydrologic model'
+    name: 'ISSM',
+    citations: 5431,
+    year: 2009,
+    color: '#06B6D4',
+    description: 'Ice Sheet System Model',
+    domain: 'Glaciology'
+  },
+  {
+    name: 'MOMO-CHEM',
+    citations: 521,
+    year: 2018,
+    color: '#EF4444',
+    description: 'Multi-mOdel Multi-cOnstituent Chemical data assimilation',
+    domain: 'Atmospheric Chemistry'
+  },
+  {
+    name: 'LES',
+    citations: 276,
+    year: 2020,
+    color: '#2E8B57',
+    description: 'Large Eddy Simulation for Atmospheric Studies',
+    domain: 'Atmospheric Modeling'
+  },
+  {
+    name: 'EDMF',
+    citations: 1556,
+    year: 2018,
+    color: '#FF6347',
+    description: 'Eddy Diffusivity Mass Flux Scheme',
+    domain: 'Atmospheric Modeling'
   }
 ];
 
