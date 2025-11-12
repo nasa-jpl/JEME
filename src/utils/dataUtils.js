@@ -87,7 +87,7 @@ export const extractPublicationData = (entry) => {
       authors: entry.author?.map(a => `${a.given || ''} ${a.family || ''}`.trim()) || [],
       year: entry['published-print']?.['date-parts']?.[0]?.[0] || null,
       month: entry['published-print']?.['date-parts']?.[0]?.[1] || null,
-      citations: entry['is-referenced-by-count'] || 0,
+      citations: Number(entry['is-referenced-by-count'] || entry.citations || 0),
       doi: entry.DOI || '',
       models: entry.models || [],
       researchDomain: entry.research_domain || 'Unknown',

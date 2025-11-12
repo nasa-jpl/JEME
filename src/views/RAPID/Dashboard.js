@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 
 // Import components
 import PaperInfo from '../../components/PaperInfo';
+import ModelInfoSection from '../../components/ModelInfoSection';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
@@ -44,7 +45,7 @@ const RAPIDDashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} className="text-blue-600" />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard"
+      link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
@@ -84,10 +85,11 @@ const RAPIDDashboard = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">SMD</span>
+              <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">Science Model Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Dashboard</h1>
+              <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>
           
@@ -99,25 +101,9 @@ const RAPIDDashboard = () => {
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
           </div>
           
-          <div className="flex items-center gap-4">
-            <div className="relative w-64">
-              <div className="absolute inset-y-0 left-3 flex items-center pointer-events-none">
-                <Search size={16} className="text-gray-500" />
-              </div>
-              <input type="text" placeholder="Search citations..." className="w-full py-2 pl-10 pr-4 border border-gray-300 rounded-full text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent" />
-            </div>
-            <button className="text-gray-600 hover:text-gray-800">
-              <Bell size={20} />
-            </button>
-            <button className="text-gray-600 hover:text-gray-800">
-              <Settings size={20} />
-            </button>
-            <div className="h-8 w-8 bg-gray-300 rounded-full flex items-center justify-center text-gray-700 font-semibold">
-              A
-            </div>
-          </div>
         </div>
       </header>
       
@@ -162,7 +148,8 @@ const RAPIDDashboard = () => {
             ))}
           </div>
         </div>
-        
+
+        <ModelInfoSection modelName="RAPID" modelDisplayName="RAPID" />
         <PaperInfo modelName="RAPID" />
         <Header modelName="RAPID" />
         
@@ -174,8 +161,8 @@ const RAPIDDashboard = () => {
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link 
-              to="/citations" 
+            <Link
+              to="/science-model-dashboard/RAPID/citations"
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -187,9 +174,9 @@ const RAPIDDashboard = () => {
               </div>
               <ExternalLink size={16} className="ml-auto text-blue-400" />
             </Link>
-            
-            <Link 
-              to="/geographic-impact" 
+
+            <Link
+              to="/science-model-dashboard/RAPID/geographic-impact"
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -201,9 +188,9 @@ const RAPIDDashboard = () => {
               </div>
               <ExternalLink size={16} className="ml-auto text-green-400" />
             </Link>
-            
-            <Link 
-              to="/research-domains" 
+
+            <Link
+              to="/science-model-dashboard/RAPID/research-domains"
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">

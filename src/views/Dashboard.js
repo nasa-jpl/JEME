@@ -6,75 +6,82 @@ import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, A
 import { Link } from 'react-router-dom';
 
 // Import components
-import PaperInfo from '../components/PaperInfo';
-import Header from '../components/Header';
 import Footer from '../components/Footer';
-
-// Import section components
-import MetricsOverview from './sections/MetricsOverview';
+import JEMEContributionSection from '../components/JEMEContributionSection';
 
 // Import chart components
-import CitationTrendsChart from '../components/charts/CitationTrendsChart';
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
-import ResearchDomainsCard from '../components/charts/ResearchDomainsCard';
-import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
-import FutureTrendsChart from '../components/charts/FutureTrendsChart'; 
-import DashboardSummaryCard from '../components/charts/DashboardSummaryCard';
-import JournalDistributionCard from '../components/charts/JournalDistributionCard';
-import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
+import MultiModelCitationTrendsChart from '../components/charts/MultiModelCitationTrendsChart';
 
 const Dashboard = () => {
-  const [rapidData, setRapidData] = useState([]);
+  const [allModelsData, setAllModelsData] = useState({});
+  const [loading, setLoading] = useState(true);
 
-  // Load RAPID data for time series chart
+  // Load all models' data for multi-model comparison
   useEffect(() => {
-    const loadRapidData = async () => {
+    const loadAllModelsData = async () => {
       try {
-        const rapidModule = await import('../data/RAPID_analyzed.json');
-        const data = rapidModule.default || rapidModule;
-        setRapidData(data);
+        const [rapidModule, cmsFluxModule, eccoModule, issmModule, momoChemModule, cardamomModule] = await Promise.all([
+          import('../data/RAPID_analyzed.json'),
+          import('../data/CMS-Flux_analyzed.json'),
+          import('../data/ECCO_analyzed.json'),
+          import('../data/ISSM_analyzed.json'),
+          import('../data/MOMO-CHEM_analyzed.json'),
+          import('../data/CARDAMOM_analyzed.json')
+        ]);
+
+        setAllModelsData({
+          RAPID: rapidModule.default || rapidModule,
+          'CMS-Flux': cmsFluxModule.default || cmsFluxModule,
+          ECCO: eccoModule.default || eccoModule,
+          ISSM: issmModule.default || issmModule,
+          'MOMO-CHEM': momoChemModule.default || momoChemModule,
+          CARDAMOM: cardamomModule.default || cardamomModule
+        });
+        setLoading(false);
       } catch (error) {
-        console.error('Failed to load RAPID data:', error);
+        console.error('Failed to load models data:', error);
+        setLoading(false);
       }
     };
-    
-    loadRapidData();
+
+    loadAllModelsData();
   }, []);
 
   const models = [
     {
       name: "RAPID",
-      icon: <Zap size={20} className="text-blue-600" />,
+      icon: <Zap size={20} style={{ color: '#3b82f6' }} />,  // Blue
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard"
+      link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
-      icon: <Wind size={20} className="text-green-600" />,
+      icon: <Wind size={20} style={{ color: '#10b981' }} />,  // Green
       description: "Carbon Monitoring System Flux - Atmospheric CO2 inversion system for quantifying carbon sources and sinks",
       link: "/science-model-dashboard/CMS-Flux"
     },
     {
       name: "ECCO",
-      icon: <Waves size={20} className="text-teal-600" />,
+      icon: <Waves size={20} style={{ color: '#f97316' }} />,  // Orange
       description: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation system combining models with observations",
       link: "/science-model-dashboard/ECCO"
     },
     {
       name: "ISSM",
-      icon: <Mountain size={20} className="text-indigo-600" />,
+      icon: <Mountain size={20} style={{ color: '#ef4444' }} />,  // Red
       description: "Ice Sheet System Model - Thermomechanical ice sheet model for simulating ice dynamics and sea level change",
       link: "/science-model-dashboard/ISSM"
     },
     {
       name: "MOMO-CHEM",
-      icon: <Atom size={20} className="text-purple-600" />,
+      icon: <Atom size={20} style={{ color: '#8b5cf6' }} />,  // Purple
       description: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model for air quality and atmospheric composition studies",
       link: "/science-model-dashboard/MOMO-CHEM"
     },
     {
       name: "CARDAMOM",
-      icon: <Leaf size={20} className="text-emerald-600" />,
+      icon: <Leaf size={20} style={{ color: '#eab308' }} />,  // Yellow
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
       link: "/science-model-dashboard/CARDAMOM"
     },
@@ -98,38 +105,61 @@ const Dashboard = () => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">SMD</span>
+              <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">Science Model Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Dashboard</h1>
+              <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>
           
           <div className="flex gap-8">
             <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">Dashboard</a>
-            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
+            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
             <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
             <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
             <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
             <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
             <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+<<<<<<< HEAD
             <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm">LES</Link>
             <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm">EDMF</Link>
           </div>
           
           <div className="flex items-center gap-4">
+=======
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
+>>>>>>> afb3b2a1409d56c89b9d86b535f9fe23ed1bf637
           </div>
         </div>
       </header>
       
       <main className="max-w-7xl mx-auto px-4 py-6">
         
+        {/* JEME Image */}
+        <div className="mb-6">
+          <img
+            src="/science-model-dashboard/JEME-1slide.jpg"
+            alt="JEME Presentation"
+            className="w-full rounded-lg shadow-sm"
+          />
+        </div>
+
+        {/* JEME Contribution Section */}
+        <JEMEContributionSection />
+
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="mb-6">
+<<<<<<< HEAD
             <h2 className="text-2xl font-bold text-gray-900 mb-2">Science Models Overview (Updated with LES & EDMF)</h2>
             <p className="text-gray-600">
               Comprehensive suite of Earth system models including new LES and EDMF atmospheric models
+=======
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Dashboard</h2>
+            <p className="text-gray-600">
+              Comprehensive dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
+>>>>>>> afb3b2a1409d56c89b9d86b535f9fe23ed1bf637
             </p>
           </div>
           
@@ -157,80 +187,20 @@ const Dashboard = () => {
             ))}
           </div>
         </div>
-        
-        <PaperInfo />
-        <Header />
-        
-        {/* Data Verification Section */}
-        <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
-          <div className="text-lg font-semibold text-gray-800 mb-4">Verify & Explore the Data</div>
-          <p className="text-sm text-gray-600 mb-4">
-            This dashboard provides visualizations based on actual citation data. You can explore and verify the raw data using the following detailed views:
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link 
-              to="/citations" 
-              className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
-            >
-              <div className="mr-4 bg-blue-100 p-3 rounded-full">
-                <Database size={24} className="text-blue-600" />
-              </div>
-              <div>
-                <div className="font-medium text-blue-900">Raw Citation Data</div>
-                <div className="text-sm text-blue-700">View all papers</div>
-              </div>
-              <ExternalLink size={16} className="ml-auto text-blue-400" />
-            </Link>
-            
-            <Link 
-              to="/geographic-impact" 
-              className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
-            >
-              <div className="mr-4 bg-green-100 p-3 rounded-full">
-                <Globe size={24} className="text-green-600" />
-              </div>
-              <div>
-                <div className="font-medium text-green-900">Geographic Impact</div>
-                <div className="text-sm text-green-700">Explore watersheds</div>
-              </div>
-              <ExternalLink size={16} className="ml-auto text-green-400" />
-            </Link>
-            
-            <Link 
-              to="/research-domains" 
-              className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
-            >
-              <div className="mr-4 bg-purple-100 p-3 rounded-full">
-                <BarChart3 size={24} className="text-purple-600" />
-              </div>
-              <div>
-                <div className="font-medium text-purple-900">Research Domains</div>
-                <div className="text-sm text-purple-700">Analyze topics and applications</div>
-              </div>
-              <ExternalLink size={16} className="ml-auto text-purple-400" />
-            </Link>
-          </div>
-        </div>
-        
 
-        
-        <MetricsOverview />
-        <CitationTrendsChart data={rapidData} />
-        
-        <div className="grid grid-cols-2 gap-6 mb-6">
-          <ResearchDomainsCard data={rapidData} />
-          <EngagementLevelsCard data={rapidData} />
-        </div>
-        
-        
-        <FutureTrendsChart data={rapidData} />
-        <DashboardSummaryCard data={rapidData} />
-        
-        <div className="grid grid-cols-2 gap-6 mb-6">
-          <JournalDistributionCard data={rapidData} />
-          <GitHubMetricsCard data={rapidData} />
-        </div>
+        {loading ? (
+          <div className="bg-white rounded-lg p-8 shadow-sm mb-6 text-center">
+            <div className="text-gray-600">Loading data...</div>
+          </div>
+        ) : (
+          <>
+            {/* Multi-Model Comparison Section */}
+            <ModelComparisonChart allModelsData={allModelsData} />
+
+            {/* Citation trends across all models */}
+            <MultiModelCitationTrendsChart allModelsData={allModelsData} />
+          </>
+        )}
         
         <Footer />
       </main>

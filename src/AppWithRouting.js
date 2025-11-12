@@ -28,6 +28,8 @@ import CARDAMOM_Dashboard from './views/CARDAMOM/Dashboard';
 import LESDashboard from './views/LES/Dashboard';
 import EDMFDashboard from './views/EDMF/Dashboard';
 
+// How It Works page
+import HowItWorks from './views/HowItWorks';
 
 function AppWithRouting() {
   return (
@@ -45,6 +47,9 @@ function AppWithRouting() {
         <Route path="/science-model-dashboard/CARDAMOM" element={<CARDAMOM_Dashboard />} />
         <Route path="/science-model-dashboard/LES" element={<LESDashboard />} />
         <Route path="/science-model-dashboard/EDMF" element={<EDMFDashboard />} />
+        
+        {/* How It Works page */}
+        <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />
         
         {/* Legacy routes (keeping RAPID as default for backward compatibility) */}
         <Route path="/citations" element={<CitationsPage />} />

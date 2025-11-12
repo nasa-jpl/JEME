@@ -1,5 +1,5 @@
 // Generic Dashboard component that works with any model
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp, CloudLightning, Layers } from 'lucide-react';
 import MetricCard from '../components/MetricCard';
@@ -15,7 +15,52 @@ import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
 const GenericDashboard = ({ modelName, citationsData }) => {
   const [refreshing, setRefreshing] = useState(false);
   const [teamPapersExpanded, setTeamPapersExpanded] = useState(false);
+  const [modelInfoExpanded, setModelInfoExpanded] = useState(false);
+  const [modelInfo, setModelInfo] = useState(null);
   const modelConfig = getModelConfig(modelName);
+
+  // Fetch model info from markdown file
+  useEffect(() => {
+    const fetchModelInfo = async () => {
+      try {
+        const response = await fetch(`/science-model-dashboard/models/${modelName}.md`);
+        if (response.ok) {
+          const text = await response.text();
+          // Parse markdown sections
+          const sections = {};
+          const lines = text.split('\n');
+          let currentSection = null;
+          let currentContent = [];
+
+          lines.forEach(line => {
+            if (line.startsWith('## ')) {
+              if (currentSection) {
+                sections[currentSection] = currentContent.join('\n').trim();
+              }
+              currentSection = line.replace('## ', '').trim();
+              currentContent = [];
+            } else if (line.startsWith('# ')) {
+              sections.title = line.replace('# ', '').trim();
+            } else if (currentSection) {
+              currentContent.push(line);
+            }
+          });
+
+          if (currentSection) {
+            sections[currentSection] = currentContent.join('\n').trim();
+          }
+
+          setModelInfo(sections);
+        }
+      } catch (error) {
+        console.error('Failed to fetch model info:', error);
+      }
+    };
+
+    if (modelName) {
+      fetchModelInfo();
+    }
+  }, [modelName]);
 
   const models = [
     {
@@ -171,16 +216,17 @@ const GenericDashboard = ({ modelName, citationsData }) => {
         <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
           <div className="flex items-center gap-3">
             <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">SMD</span>
+              <span className="font-bold">JEME</span>
             </div>
             <div>
-              <h1 className="text-lg font-semibold text-blue-900">Science Model Dashboard</h1>
+              <h1 className="text-lg font-semibold text-blue-900">JEME Dashboard</h1>
+              <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
             </div>
           </div>
           
           <div className="flex gap-8">
             <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
+            <Link to="/science-model-dashboard/RAPID" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
             <Link to="/science-model-dashboard/CMS-Flux" className={`font-medium text-sm ${modelName === 'CMS-Flux' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CMS-Flux</Link>
             <Link to="/science-model-dashboard/ECCO" className={`font-medium text-sm ${modelName === 'ECCO' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ECCO</Link>
             <Link to="/science-model-dashboard/ISSM" className={`font-medium text-sm ${modelName === 'ISSM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ISSM</Link>
@@ -188,6 +234,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             <Link to="/science-model-dashboard/CARDAMOM" className={`font-medium text-sm ${modelName === 'CARDAMOM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CARDAMOM</Link>
             <Link to="/science-model-dashboard/LES" className={`font-medium text-sm ${modelName === 'LES' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>LES</Link>
             <Link to="/science-model-dashboard/EDMF" className={`font-medium text-sm ${modelName === 'EDMF' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>EDMF</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
           </div>
           
           <div className="flex items-center gap-4">
@@ -237,7 +284,87 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             ))}
           </div>
         </div>
-        
+
+        {/* Model Information Section */}
+        {modelInfo && (
+          <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
+            <div className="mb-4">
+              <h2 className="text-xl font-semibold text-gray-900 mb-2">About {modelConfig.displayName}</h2>
+              <p className="text-sm text-gray-600">Learn more about this model</p>
+            </div>
+
+            {/* Overview preview - show first 2-3 lines */}
+            <div className="text-gray-700 space-y-2">
+              {modelInfo.Overview && (
+                <div>
+                  <p className="leading-relaxed">
+                    {modelInfoExpanded
+                      ? modelInfo.Overview
+                      : modelInfo.Overview.split('\n').slice(0, 2).join('\n') + (modelInfo.Overview.split('\n').length > 2 ? '...' : '')}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Expanded content */}
+            {modelInfoExpanded && modelInfo && (
+              <div className="mt-4 space-y-4 text-gray-700">
+                {modelInfo.Background && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Background</h3>
+                    <p className="leading-relaxed whitespace-pre-line">{modelInfo.Background}</p>
+                  </div>
+                )}
+
+                {modelInfo['Key Features'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Key Features</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Key Features']}</div>
+                  </div>
+                )}
+
+                {modelInfo['Scientific Applications'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Scientific Applications</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Scientific Applications']}</div>
+                  </div>
+                )}
+
+                {modelInfo['Technical Details'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Technical Details</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Technical Details']}</div>
+                  </div>
+                )}
+
+                {modelInfo['JPL Team Members'] && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">JPL Team Members</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['JPL Team Members']}</div>
+                  </div>
+                )}
+
+                {modelInfo.Resources && (
+                  <div>
+                    <h3 className="font-semibold text-gray-900 mb-2">Resources</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo.Resources}</div>
+                  </div>
+                )}
+              </div>
+            )}
+
+            <div className="mt-4">
+              <button
+                onClick={() => setModelInfoExpanded(!modelInfoExpanded)}
+                className="flex items-center gap-2 text-blue-600 hover:text-blue-800 font-medium"
+              >
+                {modelInfoExpanded ? <ChevronUp size={16} /> : <ChevronDown size={16} />}
+                {modelInfoExpanded ? 'Show Less' : 'Learn More'}
+              </button>
+            </div>
+          </div>
+        )}
+
         {/* Team Papers Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="flex justify-between items-center mb-4">
