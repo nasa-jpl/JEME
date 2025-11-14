@@ -13,18 +13,21 @@ const ModelComparisonChart = ({ allModelsData = {} }) => {
       'ECCO': '#f97316',       // Orange
       'ISSM': '#ef4444',       // Red
       'MOMO-CHEM': '#8b5cf6',  // Purple
-      'CARDAMOM': '#eab308'    // Yellow
+      'CARDAMOM': '#eab308',   // Yellow
+      'LES': '#2E8B57',        // Sea Green
+      'EDMF': '#FF6347'        // Tomato
     };
 
     return Object.entries(allModelsData).map(([modelName, data]) => {
       const papers = Array.isArray(data) ? data : [];
       const totalPapers = papers.length;
-      const totalCitations = papers.reduce((sum, paper) => sum + (paper['is-referenced-by-count'] || 0), 0);
+      // Support both citation_count (OpenCitations/Semantic Scholar) and is-referenced-by-count (CrossRef)
+      const totalCitations = papers.reduce((sum, paper) => sum + (paper.citation_count || paper['is-referenced-by-count'] || 0), 0);
       const avgCitations = totalPapers > 0 ? Math.round(totalCitations / totalPapers) : 0;
 
       // Calculate h-index (simplified)
       const citationCounts = papers
-        .map(p => p['is-referenced-by-count'] || 0)
+        .map(p => p.citation_count || p['is-referenced-by-count'] || 0)
         .sort((a, b) => b - a);
       let hIndex = 0;
       for (let i = 0; i < citationCounts.length; i++) {

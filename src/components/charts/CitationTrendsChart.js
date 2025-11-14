@@ -70,11 +70,24 @@ const CitationTrendsChart = ({ data }) => {
 
     // Use provided data or empty array as fallback
     const citationsData = data || [];
-    
+
+    // First pass: collect all years to determine the range
+    const allYears = [];
     citationsData.forEach(paper => {
       const year = extractYear(paper);
-      
-      if (year && year >= 2011 && year <= 2025) {
+      if (year && year >= 1900 && year <= 2100) {
+        allYears.push(year);
+      }
+    });
+
+    // Determine year range from actual data
+    const minYear = allYears.length > 0 ? Math.min(...allYears) : new Date().getFullYear();
+    const maxYear = allYears.length > 0 ? Math.max(...allYears) : new Date().getFullYear();
+
+    citationsData.forEach(paper => {
+      const year = extractYear(paper);
+
+      if (year && year >= minYear && year <= maxYear) {
         if (!yearlyStats[year]) {
           yearlyStats[year] = {
             year,
@@ -84,18 +97,18 @@ const CitationTrendsChart = ({ data }) => {
             cumulative: 0
           };
         }
-        
+
         yearlyStats[year].papers += 1;
-        
+
         if (isPeerReviewed(paper)) {
           yearlyStats[year].peerReviewed += 1;
         }
-        
+
         if (isPopularPress(paper)) {
           yearlyStats[year].popularPress += 1;
         }
       }
-      
+
       totalPapers += 1;
     });
 
@@ -130,9 +143,9 @@ const CitationTrendsChart = ({ data }) => {
 
     // Fill in missing years with zero values
     const completeData = [];
-    const startYear = 2011;
-    const endYear = 2025;
-    
+    const startYear = minYear;
+    const endYear = maxYear;
+
     for (let year = startYear; year <= endYear; year++) {
       const existingData = chartDataArray.find(d => parseInt(d.year) === year);
       if (existingData) {
@@ -164,7 +177,9 @@ const CitationTrendsChart = ({ data }) => {
       chartData: completeData,
       totalPapers: cumulativePapers,
       totalPeerReviewed: cumulativePeerReviewed,
-      totalPopularPress: cumulativePopularPress
+      totalPopularPress: cumulativePopularPress,
+      startYear: minYear,
+      endYear: maxYear
     };
   }, [data]);
 
@@ -197,7 +212,7 @@ const CitationTrendsChart = ({ data }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Papers Published Over Time</div>
           <div className="text-sm text-gray-500 mt-1">
-            Annual and cumulative papers published from 2011 to 2025 • {chartData.totalPapers} total papers
+            Annual and cumulative papers published from {chartData.startYear} to {chartData.endYear} • {chartData.totalPapers} total papers
           </div>
         </div>
         <div className="flex gap-2">

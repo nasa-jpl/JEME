@@ -52,6 +52,12 @@ const GenericResearchDomainsPage = () => {
             dataModule = await import('../data/MOMO-CHEM_analyzed.json');
             break;
           case 'CARDAMOM':
+        case 'LES':
+          dataModule = await import('../data/LES_analyzed.json');
+          break;
+        case 'EDMF':
+          dataModule = await import('../data/EDMF_analyzed.json');
+          break;
             dataModule = await import('../data/CARDAMOM_analyzed.json');
             break;
           default:
@@ -268,7 +274,7 @@ const GenericResearchDomainsPage = () => {
 
   // Helper function to extract citations count
   const extractCitations = (paper) => {
-    return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+    return paper['is-referenced-by-count'] || paper.citation_count || paper.cites || paper.citations || 0;
   };
 
   // Helper function to extract title

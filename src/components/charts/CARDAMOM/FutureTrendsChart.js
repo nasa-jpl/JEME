@@ -29,7 +29,7 @@ const FutureTrendsChart = () => {
 
     // Helper function to extract citations count
     const extractCitations = (paper) => {
-      return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+      return paper['is-referenced-by-count'] || paper.citation_count || paper.cites || paper.citations || 0;
     };
 
     // Group data by year for historical analysis

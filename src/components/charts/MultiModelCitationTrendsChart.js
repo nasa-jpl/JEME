@@ -5,6 +5,15 @@ import { useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
 const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
+  // Sort models by total publications (descending)
+  const sortedModelEntries = useMemo(() => {
+    return Object.entries(allModelsData).sort((a, b) => {
+      const aLength = Array.isArray(a[1]) ? a[1].length : 0;
+      const bLength = Array.isArray(b[1]) ? b[1].length : 0;
+      return bLength - aLength;
+    });
+  }, [allModelsData]);
+
   // Process data to get cumulative publications by year for each model
   const trendData = useMemo(() => {
     const modelColors = {
@@ -13,7 +22,9 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
       'ECCO': '#f97316',       // Orange
       'ISSM': '#ef4444',       // Red
       'MOMO-CHEM': '#8b5cf6',  // Purple
-      'CARDAMOM': '#eab308'    // Yellow
+      'CARDAMOM': '#eab308',   // Yellow
+      'LES': '#2E8B57',        // Sea Green
+      'EDMF': '#FF6347'        // Tomato
     };
 
     // Collect all years and papers by model
@@ -24,13 +35,18 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
       if (!Array.isArray(papers)) return;
 
       papers.forEach(paper => {
-        // Get publication year
-        const datePartsPublished = paper?.['published-print']?.['date-parts']?.[0] ||
-                                   paper?.published?.['date-parts']?.[0];
-
-        if (!datePartsPublished || !datePartsPublished[0]) return;
-
-        const year = datePartsPublished[0];
+        // Get publication year - support both formats
+        let year;
+        if (paper.year) {
+          // Simple year field (OpenCitations/Semantic Scholar format)
+          year = paper.year;
+        } else {
+          // CrossRef format
+          const datePartsPublished = paper?.['published-print']?.['date-parts']?.[0] ||
+                                     paper?.published?.['date-parts']?.[0];
+          if (!datePartsPublished || !datePartsPublished[0]) return;
+          year = datePartsPublished[0];
+        }
 
         // Only include years from 2000 onwards
         if (year < 2000 || year > new Date().getFullYear()) return;
@@ -114,7 +130,7 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
               wrapperStyle={{ paddingBottom: '20px' }}
             />
 
-            {Object.entries(allModelsData).map(([modelName]) => (
+            {sortedModelEntries.map(([modelName]) => (
               <Line
                 key={modelName}
                 type="monotone"
@@ -132,16 +148,24 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
 
       {/* Summary Statistics */}
       <div className="mt-6 grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4">
-        {Object.entries(allModelsData).map(([modelName, papers]) => {
+        {sortedModelEntries.map(([modelName, papers]) => {
           const paperArray = Array.isArray(papers) ? papers : [];
 
           // Calculate papers in last 5 years
           const currentYear = new Date().getFullYear();
           const recentPapers = paperArray.filter(paper => {
-            const datePartsPublished = paper?.['published-print']?.['date-parts']?.[0] ||
-                                       paper?.published?.['date-parts']?.[0];
-            if (!datePartsPublished || !datePartsPublished[0]) return false;
-            return datePartsPublished[0] >= currentYear - 5;
+            let year;
+            if (paper.year) {
+              // Simple year field (OpenCitations/Semantic Scholar format)
+              year = paper.year;
+            } else {
+              // CrossRef format
+              const datePartsPublished = paper?.['published-print']?.['date-parts']?.[0] ||
+                                         paper?.published?.['date-parts']?.[0];
+              if (!datePartsPublished || !datePartsPublished[0]) return false;
+              year = datePartsPublished[0];
+            }
+            return year >= currentYear - 5;
           }).length;
 
           return (

@@ -47,23 +47,24 @@ const JournalDistributionCard = () => {
       let journalName = null;
       
       // Try different fields for journal name
-      if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
+      // Check venue first (used in LES/EDMF data)
+      if (paper.venue && typeof paper.venue === 'string') {
+        journalName = paper.venue;
+      } else if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
         journalName = paper['container-title'][0];
       } else if (paper.journal && paper.journal.name) {
         journalName = paper.journal.name;
       } else if (paper.journal && typeof paper.journal === 'string') {
         journalName = paper.journal;
-      } else if (paper.source) {
-        journalName = paper.source;
       } else if (paper['journal-title']) {
         journalName = paper['journal-title'];
       } else {
         return null; // Return null for filtering
       }
-      
+
       // Decode HTML entities
       const decodedName = decodeHtmlEntities(journalName);
-      
+
       // Check if it's a valid journal
       return isValidJournal(decodedName) ? decodedName : null;
     };
@@ -135,9 +136,15 @@ const JournalDistributionCard = () => {
     };
 
     citationsData.forEach(paper => {
-      const journalName = paper['container-title'] && Array.isArray(paper['container-title']) 
-        ? paper['container-title'][0] 
-        : paper.source || paper.journal || 'Unknown';
+      // Use the same extraction logic as extractJournalName
+      let journalName = null;
+      if (paper.venue && typeof paper.venue === 'string') {
+        journalName = paper.venue;
+      } else if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
+        journalName = paper['container-title'][0];
+      } else if (paper.journal) {
+        journalName = typeof paper.journal === 'string' ? paper.journal : paper.journal.name;
+      }
 
       if (journalName && journalName !== 'Unknown') {
         if (matchesJournalSet(journalName, highImpactJournals)) {

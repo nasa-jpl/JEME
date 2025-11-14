@@ -1,6 +1,6 @@
 // CARDAMOM Dashboard - matches the comprehensive main dashboard layout
 import React, { useState, useEffect } from 'react';
-import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight } from 'lucide-react';
+import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import components
@@ -42,39 +42,51 @@ const CARDAMOMDashboard = () => {
   const models = [
     {
       name: "RAPID",
-      icon: <Zap size={20} className="text-blue-600" />,
+      icon: <Zap size={20} style={{ color: '#3b82f6' }} />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
       link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
-      icon: <Wind size={20} className="text-green-600" />,
+      icon: <Wind size={20} style={{ color: '#10b981' }} />,
       description: "Carbon Monitoring System Flux - Atmospheric CO2 inversion system for quantifying carbon sources and sinks",
       link: "/science-model-dashboard/CMS-Flux"
     },
     {
       name: "ECCO",
-      icon: <Waves size={20} className="text-teal-600" />,
+      icon: <Waves size={20} style={{ color: '#f97316' }} />,
       description: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation system combining models with observations",
       link: "/science-model-dashboard/ECCO"
     },
     {
       name: "ISSM",
-      icon: <Mountain size={20} className="text-indigo-600" />,
+      icon: <Mountain size={20} style={{ color: '#ef4444' }} />,
       description: "Ice Sheet System Model - Thermomechanical ice sheet model for simulating ice dynamics and sea level change",
       link: "/science-model-dashboard/ISSM"
     },
     {
       name: "MOMO-CHEM",
-      icon: <Atom size={20} className="text-purple-600" />,
+      icon: <Atom size={20} style={{ color: '#8b5cf6' }} />,
       description: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model for air quality and atmospheric composition studies",
       link: "/science-model-dashboard/MOMO-CHEM"
     },
     {
       name: "CARDAMOM",
-      icon: <Leaf size={20} className="text-emerald-600" />,
+      icon: <Leaf size={20} style={{ color: '#eab308' }} />,
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
       link: "/science-model-dashboard/CARDAMOM"
+    },
+    {
+      name: "LES",
+      icon: <CloudLightning size={20} style={{ color: '#2E8B57' }} />,
+      description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
+      link: "/science-model-dashboard/LES"
+    },
+    {
+      name: "EDMF",
+      icon: <Layers size={20} style={{ color: '#FF6347' }} />,
+      description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
+      link: "/science-model-dashboard/EDMF"
     }
   ];
 
@@ -93,14 +105,16 @@ const CARDAMOMDashboard = () => {
           </div>
           
           <div className="flex gap-8">
-            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
-            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
-            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
-            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
-            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
+            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">Dashboard</Link>
+            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">RAPID</Link>
+            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CMS-Flux</Link>
+            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ECCO</Link>
+            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ISSM</Link>
+            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">MOMO-CHEM</Link>
             <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">CARDAMOM</a>
-            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
+            <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">LES</Link>
+            <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">EDMF</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">How It Works</Link>
           </div>
           
         </div>

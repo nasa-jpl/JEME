@@ -256,13 +256,15 @@ const HowItWorks = () => {
           </div>
           
           <div className="flex gap-8">
-            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
-            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
-            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
-            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
-            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
-            <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
+            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">Dashboard</Link>
+            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">RAPID</Link>
+            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CMS-Flux</Link>
+            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ECCO</Link>
+            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ISSM</Link>
+            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">MOMO-CHEM</Link>
+            <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">LES</Link>
+            <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">EDMF</Link>
             <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">How It Works</a>
           </div>
         </div>

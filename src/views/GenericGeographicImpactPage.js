@@ -54,6 +54,12 @@ const GenericGeographicImpactPage = () => {
           dataModule = await import('../data/MOMO-CHEM_analyzed.json');
           break;
         case 'CARDAMOM':
+        case 'LES':
+          dataModule = await import('../data/LES_analyzed.json');
+          break;
+        case 'EDMF':
+          dataModule = await import('../data/EDMF_analyzed.json');
+          break;
           dataModule = await import('../data/CARDAMOM_analyzed.json');
           break;
         default:
@@ -155,15 +161,41 @@ const GenericGeographicImpactPage = () => {
   const processGeographicData = (data) => {
     try {
       console.log(`${modelConfig.displayName} citations data loaded:`, data.length);
-      
-      // Process each citation and extract geographic information from affiliations
+
+      // Process each citation and extract geographic information from affiliations or existing fields
       const entriesWithGeo = [];
-      
+
       data.forEach((citation, index) => {
-        if (citation.author && Array.isArray(citation.author)) {
+        let primaryCountry = null;
+        let region = null;
+        let allCountries = [];
+
+        // Check if country/region already exist in the data (LES/EDMF format)
+        if (citation.country &&
+            citation.country !== 'Global' &&
+            citation.country !== 'Not Geographic' &&
+            citation.country !== 'Not Applicable') {
+          primaryCountry = citation.country;
+          region = citation.region &&
+                   citation.region !== 'Global' &&
+                   citation.region !== 'Not Geographic' &&
+                   citation.region !== 'Not Applicable'
+            ? citation.region
+            : getRegionFromCountry(primaryCountry);
+          allCountries = [primaryCountry];
+
+          entriesWithGeo.push({
+            ...citation,
+            country: primaryCountry,
+            region: region,
+            allCountries: allCountries
+          });
+        }
+        // Otherwise try to extract from author affiliations (Crossref format)
+        else if (citation.author && Array.isArray(citation.author)) {
           // Extract countries from all authors' affiliations
           const countries = new Set();
-          
+
           citation.author.forEach(author => {
             if (author.affiliation && Array.isArray(author.affiliation)) {
               author.affiliation.forEach(aff => {
@@ -174,12 +206,12 @@ const GenericGeographicImpactPage = () => {
               });
             }
           });
-          
+
           // If we found any countries, add to our processed data
           if (countries.size > 0) {
-            const primaryCountry = Array.from(countries)[0]; // Use first country found
-            const region = getRegionFromCountry(primaryCountry);
-            
+            primaryCountry = Array.from(countries)[0]; // Use first country found
+            region = getRegionFromCountry(primaryCountry);
+
             entriesWithGeo.push({
               ...citation,
               country: primaryCountry,
@@ -189,7 +221,7 @@ const GenericGeographicImpactPage = () => {
           }
         }
       });
-      
+
       console.log(`Extracted geographic data for ${entriesWithGeo.length} entries out of ${data.length} total`);
       
       // Group by region
@@ -214,9 +246,10 @@ const GenericGeographicImpactPage = () => {
         regionStats[region].papers += 1;
         
         // Handle citations data - check multiple possible field names
-        const citationCount = citation['is-referenced-by-count'] || 
-                             citation.cites || 
-                             citation.citations || 
+        const citationCount = citation['is-referenced-by-count'] ||
+                             citation.citation_count ||
+                             citation.cites ||
+                             citation.citations ||
                              0;
         regionStats[region].citations += citationCount;
         
@@ -281,9 +314,10 @@ const GenericGeographicImpactPage = () => {
         
         countryStats[country].papers += 1;
         
-        const citationCount = citation['is-referenced-by-count'] || 
-                             citation.cites || 
-                             citation.citations || 
+        const citationCount = citation['is-referenced-by-count'] ||
+                             citation.citation_count ||
+                             citation.cites ||
+                             citation.citations ||
                              0;
         countryStats[country].citations += citationCount;
         

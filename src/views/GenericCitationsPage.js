@@ -120,6 +120,12 @@ const GenericCitationsPage = () => {
           case 'CARDAMOM':
             dataModule = await import('../data/CARDAMOM_analyzed.json');
             break;
+          case 'LES':
+            dataModule = await import('../data/LES_analyzed.json');
+            break;
+          case 'EDMF':
+            dataModule = await import('../data/EDMF_analyzed.json');
+            break;
           default:
             throw new Error(`Unknown model: ${modelName}`);
         }
@@ -147,22 +153,27 @@ const GenericCitationsPage = () => {
     return dateObj['date-parts'][0][0];
   };
   
-  // Format authors from Crossref format
+  // Format authors from Crossref format or string array
   const formatAuthors = (authorArray) => {
     if (!Array.isArray(authorArray) || authorArray.length === 0) {
       return 'Unknown';
     }
-    
+
     const formattedAuthors = authorArray.map(author => {
+      // Handle string format (LES/EDMF data)
+      if (typeof author === 'string') {
+        return author;
+      }
+      // Handle object format (Crossref data)
       const given = author.given || '';
       const family = author.family || '';
       return `${family}${given ? ', ' + given : ''}`;
     });
-    
+
     if (formattedAuthors.length > 3) {
       return formattedAuthors.slice(0, 3).join('; ') + ' et al.';
     }
-    
+
     return formattedAuthors.join('; ');
   };
   
@@ -206,8 +217,8 @@ const GenericCitationsPage = () => {
       // Format title (remove array wrapper if present)
       const title = Array.isArray(record.title) ? record.title[0] : record.title || 'Untitled';
       
-      // Format authors
-      const authors = formatAuthors(record.author);
+      // Format authors (handle both 'author' and 'authors' fields)
+      const authors = formatAuthors(record.author || record.authors);
       
       // Extract journal/source info
       const source = Array.isArray(record['container-title']) 
@@ -225,7 +236,7 @@ const GenericCitationsPage = () => {
       
       // If engagement_level is not in the JSON, fall back to citation-based determination
       if (!record.engagement_level) {
-        const citationCount = record['is-referenced-by-count'] || record.cites || record.citations || 0;
+        const citationCount = record['is-referenced-by-count'] || record.citation_count || record.cites || record.citations || 0;
         if (citationCount > 500) {
           engagementLevel = 'Level 4: Foundational Method';
         } else if (citationCount > 100) {
@@ -266,7 +277,7 @@ const GenericCitationsPage = () => {
         source: source,
         publisher: record.publisher || '',
         doi: record.DOI || '',
-        cites: record['is-referenced-by-count'] || record.cites || record.citations || 0,
+        cites: record['is-referenced-by-count'] || record.citation_count || record.cites || record.citations || 0,
         url: url,
         fulltext_url: url,
         cites_url: record.DOI ? `https://scholar.google.com/scholar?cites=${record.DOI}` : '',
@@ -419,14 +430,14 @@ const GenericCitationsPage = () => {
   // Export data as CSV
   const exportCSV = () => {
     const headers = [
-      'Title', 'Authors', 'Year', 'Source', 'Publisher', 'DOI', 'Citations', 
-      'Engagement Level', 'Research Domain', 'Watershed', 'Country', 
-      'Volume', 'Issue', 'Pages', 'Reference Count'
+      'Title', 'Authors', 'Year', 'Source', 'Publisher', 'DOI', 'Citations',
+      'Engagement Level', 'Research Domain', 'Country',
+      'Volume', 'Issue', 'Pages'
     ];
     const rows = sortedCitations.map(c => [
-      c.title, c.authors, c.year, c.source, c.publisher, c.doi, c.cites, 
+      c.title, c.authors, c.year, c.source, c.publisher, c.doi, c.cites,
       c.engagement_level, c.research_domain, c.country,
-      c.volume, c.issue, c.pages, c.referenceCount
+      c.volume, c.issue, c.pages
     ]);
     
     const csvContent = [
@@ -454,10 +465,9 @@ const GenericCitationsPage = () => {
     withDoi: citations.filter(c => c.doi).length,
     mostCited: citations.length > 0 ? Math.max(...citations.map(c => c.cites || 0)) : 0,
     totalCitations: citations.reduce((sum, citation) => sum + (citation.cites || 0), 0),
-    averageCitations: citations.length > 0 
-      ? Math.round(citations.reduce((sum, citation) => sum + (citation.cites || 0), 0) / citations.length) 
+    averageCitations: citations.length > 0
+      ? Math.round(citations.reduce((sum, citation) => sum + (citation.cites || 0), 0) / citations.length)
       : 0,
-    totalReferences: citations.reduce((sum, citation) => sum + (citation.referenceCount || 0), 0),
     byEngagement: citations.reduce((acc, c) => {
       const level = c.engagement_level || 'Unknown';
       acc[level] = (acc[level] || 0) + 1;
@@ -517,7 +527,7 @@ const GenericCitationsPage = () => {
             {/* Statistics Summary */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="text-lg font-semibold text-gray-800 mb-4">{modelConfig.displayName} Citation Statistics</div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-sm text-blue-700 mb-1">Total Publications</div>
                   <div className="text-2xl font-bold text-blue-900">{citationStats.total}</div>
@@ -532,10 +542,6 @@ const GenericCitationsPage = () => {
                     {citationStats.mostCited}
                     <span className="text-sm font-normal text-amber-700 ml-2">citations</span>
                   </div>
-                </div>
-                <div className="bg-purple-50 rounded-lg p-4">
-                  <div className="text-sm text-purple-700 mb-1">Total References</div>
-                  <div className="text-2xl font-bold text-purple-900">{citationStats.totalReferences}</div>
                 </div>
               </div>
               

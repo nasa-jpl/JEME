@@ -22,8 +22,8 @@ const SummarySection = ({ title, items }) => (
 );
 
 const DashboardSummaryCard = ({ data = [] }) => {
-  // Use the data prop
-  const citationsData = data;
+  // Use the data prop and ensure it's always an array
+  const citationsData = data || [];
   // Process all metrics from the JSON data
   const metrics = useMemo(() => {
     // Early return if no data
@@ -37,10 +37,10 @@ const DashboardSummaryCard = ({ data = [] }) => {
         implementationScore: 0,
         highEngagementCount: 0,
         uniqueCountries: 0,
-        uniqueWatersheds: 0,
+        uniqueRegions: 0,
         thesesCount: 0,
         topDomains: [],
-        topWatersheds: [],
+        topRegions: [],
         growthDomain: null,
         strengthDomain: null,
         totalDomains: 0
@@ -63,7 +63,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
 
     // Helper function to extract citations count
     const extractCitations = (paper) => {
-      return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+      return paper['is-referenced-by-count'] || paper.citation_count || paper.cites || paper.citations || 0;
     };
 
     // Helper function to determine if paper is thesis/dissertation
@@ -108,30 +108,38 @@ const DashboardSummaryCard = ({ data = [] }) => {
     // Count 2025 publications (current year)
     const current2025Papers = yearCounts[2025] || 0;
 
-    // Count engagement levels
-    const engagementCounts = {};
+    // Count engagement levels with flexible matching
+    let level3Count = 0;
+    let level4Count = 0;
+
     citationsData.forEach(paper => {
-      const level = paper.engagement_level || "Unclassified";
-      engagementCounts[level] = (engagementCounts[level] || 0) + 1;
+      const level = paper.engagement_level;
+      if (level) {
+        // Use flexible matching based on level prefix
+        if (level.includes('Level 3:') || level.includes('Level 3 ')) {
+          level3Count++;
+        } else if (level.includes('Level 4:') || level.includes('Level 4 ')) {
+          level4Count++;
+        }
+      }
     });
 
     // High engagement (Levels 3-4)
-    const highEngagementCount = (engagementCounts['Level 3: Model Adaptation'] || 0) + 
-                               (engagementCounts['Level 4: Foundational Method'] || 0);
+    const highEngagementCount = level3Count + level4Count;
 
     // Implementation score
     const implementationScore = ((highEngagementCount / citationsData.length) * 100);
 
-    // Count unique countries and watersheds
+    // Count unique countries and regions
     const uniqueCountries = new Set();
-    const uniqueWatersheds = new Set();
-    
+    const uniqueRegions = new Set();
+
     citationsData.forEach(paper => {
       if (paper.country && paper.country !== 'Unknown' && paper.country !== 'Not specified') {
         uniqueCountries.add(paper.country);
       }
-      if (paper.watershed && paper.watershed !== 'Unknown' && paper.watershed !== 'Not specified') {
-        uniqueWatersheds.add(paper.watershed);
+      if (paper.region && paper.region !== 'Unknown' && paper.region !== 'Not specified' && paper.region !== 'Global') {
+        uniqueRegions.add(paper.region);
       }
     });
 
@@ -152,15 +160,15 @@ const DashboardSummaryCard = ({ data = [] }) => {
       .sort(([,a], [,b]) => b - a)
       .slice(0, 3);
 
-    // Get most common watersheds
-    const watershedCounts = {};
+    // Get most common regions
+    const regionCounts = {};
     citationsData.forEach(paper => {
-      if (paper.watershed && paper.watershed !== 'Unknown' && paper.watershed !== 'Not specified') {
-        watershedCounts[paper.watershed] = (watershedCounts[paper.watershed] || 0) + 1;
+      if (paper.region && paper.region !== 'Unknown' && paper.region !== 'Not specified' && paper.region !== 'Global') {
+        regionCounts[paper.region] = (regionCounts[paper.region] || 0) + 1;
       }
     });
 
-    const topWatersheds = Object.entries(watershedCounts)
+    const topRegions = Object.entries(regionCounts)
       .sort(([,a], [,b]) => b - a)
       .slice(0, 2);
 
@@ -177,13 +185,14 @@ const DashboardSummaryCard = ({ data = [] }) => {
     const growthDomain = Object.entries(recentDomains)
       .sort(([,a], [,b]) => b - a)[0];
 
-    // Identify strengths based on highest engagement levels
+    // Identify strengths based on highest engagement levels with flexible matching
     const strengthDomains = {};
     citationsData.forEach(paper => {
       const domain = paper.research_domain;
       const level = paper.engagement_level;
-      if (domain && domain !== "Unknown" && 
-          (level === 'Level 3: Model Adaptation' || level === 'Level 4: Foundational Method')) {
+      if (domain && domain !== "Unknown" && level &&
+          (level.includes('Level 3:') || level.includes('Level 3 ') ||
+           level.includes('Level 4:') || level.includes('Level 4 '))) {
         strengthDomains[domain] = (strengthDomains[domain] || 0) + 1;
       }
     });
@@ -200,10 +209,10 @@ const DashboardSummaryCard = ({ data = [] }) => {
       implementationScore,
       highEngagementCount,
       uniqueCountries: uniqueCountries.size,
-      uniqueWatersheds: uniqueWatersheds.size,
+      uniqueRegions: uniqueRegions.size,
       thesesCount,
       topDomains,
-      topWatersheds,
+      topRegions,
       growthDomain,
       strengthDomain,
       totalDomains: Object.keys(domainCounts).length
@@ -219,7 +228,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
         "Average Citations per Paper": metrics.avgCitations.toFixed(1),
         "Peak Publication Year": `${metrics.peakYear ? metrics.peakYear[0] : 'N/A'} (${metrics.peakYear ? metrics.peakYear[1] : 0} papers)`,
         "Implementation Score": `${metrics.implementationScore.toFixed(1)}%`,
-        "Geographic Reach": `${metrics.uniqueCountries} countries, ${metrics.uniqueWatersheds} watersheds`,
+        "Geographic Reach": `${metrics.uniqueCountries} countries, ${metrics.uniqueRegions} regions`,
         "Research Domains": metrics.totalDomains,
       }
     };
@@ -248,9 +257,9 @@ const DashboardSummaryCard = ({ data = [] }) => {
   const researchImpactItems = [
     { label: "Implementation Score", value: `${metrics.implementationScore.toFixed(1)}%` },
     { label: "High-Engagement Studies", value: `${metrics.highEngagementCount} papers (Levels 3-4)` },
-    { 
-      label: "Geographic Reach", 
-      value: `${metrics.uniqueCountries} countries, ${metrics.uniqueWatersheds} watersheds` 
+    {
+      label: "Geographic Reach",
+      value: `${metrics.uniqueCountries} countries, ${metrics.uniqueRegions} regions`
     },
   ];
   
@@ -279,11 +288,11 @@ const DashboardSummaryCard = ({ data = [] }) => {
       label: "Growth Area", 
       value: metrics.growthDomain ? metrics.growthDomain[0] : "Water resources management"
     },
-    { 
-      label: "Geographic Focus", 
-      value: metrics.topWatersheds.length >= 2 ? 
-        `${metrics.topWatersheds[0][0]}, ${metrics.topWatersheds[1][0]} basins` : 
-        metrics.topWatersheds[0] ? `${metrics.topWatersheds[0][0]} basin` : "Global basins"
+    {
+      label: "Geographic Focus",
+      value: metrics.topRegions.length >= 2 ?
+        `${metrics.topRegions[0][0]}, ${metrics.topRegions[1][0]}` :
+        metrics.topRegions[0] ? `${metrics.topRegions[0][0]}` : "Global regions"
     },
     { 
       label: "Academic Adoption", 

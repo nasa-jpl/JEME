@@ -21,13 +21,15 @@ const Dashboard = () => {
   useEffect(() => {
     const loadAllModelsData = async () => {
       try {
-        const [rapidModule, cmsFluxModule, eccoModule, issmModule, momoChemModule, cardamomModule] = await Promise.all([
+        const [rapidModule, cmsFluxModule, eccoModule, issmModule, momoChemModule, cardamomModule, lesModule, edmfModule] = await Promise.all([
           import('../data/RAPID_analyzed.json'),
           import('../data/CMS-Flux_analyzed.json'),
           import('../data/ECCO_analyzed.json'),
           import('../data/ISSM_analyzed.json'),
           import('../data/MOMO-CHEM_analyzed.json'),
-          import('../data/CARDAMOM_analyzed.json')
+          import('../data/CARDAMOM_analyzed.json'),
+          import('../data/LES_analyzed.json'),
+          import('../data/EDMF_analyzed.json')
         ]);
 
         setAllModelsData({
@@ -36,7 +38,9 @@ const Dashboard = () => {
           ECCO: eccoModule.default || eccoModule,
           ISSM: issmModule.default || issmModule,
           'MOMO-CHEM': momoChemModule.default || momoChemModule,
-          CARDAMOM: cardamomModule.default || cardamomModule
+          CARDAMOM: cardamomModule.default || cardamomModule,
+          LES: lesModule.default || lesModule,
+          EDMF: edmfModule.default || edmfModule
         });
         setLoading(false);
       } catch (error) {
@@ -87,13 +91,13 @@ const Dashboard = () => {
     },
     {
       name: "LES",
-      icon: <CloudLightning size={20} className="text-teal-600" />,
+      icon: <CloudLightning size={20} style={{ color: '#2E8B57' }} />,  // Sea Green
       description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
       link: "/science-model-dashboard/LES"
     },
     {
       name: "EDMF",
-      icon: <Layers size={20} className="text-orange-600" />,
+      icon: <Layers size={20} style={{ color: '#FF6347' }} />,  // Tomato
       description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
       link: "/science-model-dashboard/EDMF"
     }
@@ -115,22 +119,17 @@ const Dashboard = () => {
           
           <div className="flex gap-8">
             <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">Dashboard</a>
-            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm">RAPID</Link>
-            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CMS-Flux</Link>
-            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ECCO</Link>
-            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">ISSM</Link>
-            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">MOMO-CHEM</Link>
-            <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm">CARDAMOM</Link>
-<<<<<<< HEAD
-            <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm">LES</Link>
-            <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm">EDMF</Link>
+            <Link to="/science-model-dashboard/RAPID" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">RAPID</Link>
+            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CMS-Flux</Link>
+            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ECCO</Link>
+            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ISSM</Link>
+            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">MOMO-CHEM</Link>
+            <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CARDAMOM</Link>
+            <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">LES</Link>
+            <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">EDMF</Link>
+            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">How It Works</Link>
           </div>
-          
-          <div className="flex items-center gap-4">
-=======
-            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
->>>>>>> afb3b2a1409d56c89b9d86b535f9fe23ed1bf637
-          </div>
+
         </div>
       </header>
       
@@ -151,15 +150,9 @@ const Dashboard = () => {
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
           <div className="mb-6">
-<<<<<<< HEAD
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">Science Models Overview (Updated with LES & EDMF)</h2>
-            <p className="text-gray-600">
-              Comprehensive suite of Earth system models including new LES and EDMF atmospheric models
-=======
             <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Dashboard</h2>
             <p className="text-gray-600">
               Comprehensive dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
->>>>>>> afb3b2a1409d56c89b9d86b535f9fe23ed1bf637
             </p>
           </div>
           

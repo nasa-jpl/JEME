@@ -17,7 +17,20 @@ const EngagementLevelsCard = () => {
     citationsData.forEach(paper => {
       const level = paper.engagement_level;
       if (level && level !== "Unknown" && level !== "Not specified") {
-        engagementCounts[level] = (engagementCounts[level] || 0) + 1;
+        // Use flexible matching based on level prefix instead of exact string matching
+        let standardLevel = "Unclassified";
+
+        if (level.includes("Level 1:") || level.includes("Level 1 ")) {
+          standardLevel = "Level 1: Simple Citation";
+        } else if (level.includes("Level 2:") || level.includes("Level 2 ")) {
+          standardLevel = "Level 2: Data Usage";
+        } else if (level.includes("Level 3:") || level.includes("Level 3 ")) {
+          standardLevel = "Level 3: Model Adaptation";
+        } else if (level.includes("Level 4:") || level.includes("Level 4 ")) {
+          standardLevel = "Level 4: Foundational Method";
+        }
+
+        engagementCounts[standardLevel] = (engagementCounts[standardLevel] || 0) + 1;
       } else {
         // Handle papers without engagement level classification
         engagementCounts["Unclassified"] = (engagementCounts["Unclassified"] || 0) + 1;

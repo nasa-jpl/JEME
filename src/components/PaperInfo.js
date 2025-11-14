@@ -10,6 +10,8 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   const [issmTeamPapers, setIssmTeamPapers] = useState([]);
   const [momoChemTeamPapers, setMomoChemTeamPapers] = useState([]);
   const [cardamomTeamPapers, setCardamomTeamPapers] = useState([]);
+  const [lesTeamPapers, setLesTeamPapers] = useState([]);
+  const [edmfTeamPapers, setEdmfTeamPapers] = useState([]);
 
   // Load ECCO team papers from JSON file
   useEffect(() => {
@@ -75,6 +77,56 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     }
   }, [modelName]);
 
+  // Load LES team papers from JSON file
+  useEffect(() => {
+    if (modelName === 'LES') {
+      fetch('/science-model-dashboard/data/LES_team_papers.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.papers) {
+            // Transform the data to match expected format
+            const transformedPapers = data.papers.map(paper => ({
+              authors: Array.isArray(paper.authors) ? paper.authors.join(', ') : paper.authors,
+              title: paper.title,
+              journal: paper.venue,
+              year: paper.year,
+              doi: paper.doi,
+              link: paper.doi ? `https://doi.org/${paper.doi}` : null
+            }));
+            setLesTeamPapers(transformedPapers);
+          }
+        })
+        .catch(error => {
+          console.error('Failed to load LES team papers:', error);
+        });
+    }
+  }, [modelName]);
+
+  // Load EDMF team papers from JSON file
+  useEffect(() => {
+    if (modelName === 'EDMF') {
+      fetch('/science-model-dashboard/data/EDMF_team_papers.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.papers) {
+            // Transform the data to match expected format
+            const transformedPapers = data.papers.map(paper => ({
+              authors: Array.isArray(paper.authors) ? paper.authors.join(', ') : paper.authors,
+              title: paper.title,
+              journal: paper.venue,
+              year: paper.year,
+              doi: paper.doi,
+              link: paper.doi ? `https://doi.org/${paper.doi}` : null
+            }));
+            setEdmfTeamPapers(transformedPapers);
+          }
+        })
+        .catch(error => {
+          console.error('Failed to load EDMF team papers:', error);
+        });
+    }
+  }, [modelName]);
+
   // Model-specific paper data
   const modelPapers = {
     'RAPID': {
@@ -118,6 +170,20 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
       journal: "Proceedings of the National Academy of Sciences",
       doi: "10.1073/pnas.1515160113",
       link: "https://doi.org/10.1073/pnas.1515160113"
+    },
+    'LES': {
+      title: "Synthetic Observations of the Planetary Boundary Layer from Space: A Retrieval Observing System Simulation Experiment Framework",
+      authors: "MJ Kurowski, J Teixeira, C Ao, S Brown, AB Davis, L Forster",
+      journal: "Bulletin of the American Meteorological Society (2023)",
+      doi: "10.1175/BAMS-D-22-0129.1",
+      link: "https://doi.org/10.1175/BAMS-D-22-0129.1"
+    },
+    'EDMF': {
+      title: "Performance of an eddy diffusivity-mass flux scheme for shallow cumulus boundary layers",
+      authors: "WM Angevine, H Jiang, T Mauritsen",
+      journal: "Monthly Weather Review (2010), Volume 138, Issue 7, Pages 2895-2912",
+      doi: "10.1175/2010MWR3142.1",
+      link: "https://doi.org/10.1175/2010MWR3142.1"
     }
   };
 
@@ -380,16 +446,20 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     'ECCO': [], // Will be loaded dynamically
     'ISSM': [], // Will be loaded dynamically
     'MOMO-CHEM': [],
-    'CARDAMOM': []
+    'CARDAMOM': [],
+    'LES': [], // Will be loaded dynamically
+    'EDMF': [] // Will be loaded dynamically
   };
 
   // Get the appropriate related papers for the current model
-  // For ECCO, ISSM, MOMO-CHEM, and CARDAMOM, use dynamically loaded papers if available
-  const relatedPapers = 
+  // For ECCO, ISSM, MOMO-CHEM, CARDAMOM, LES, and EDMF, use dynamically loaded papers if available
+  const relatedPapers =
     (modelName === 'ECCO' && eccoTeamPapers.length > 0) ? eccoTeamPapers :
     (modelName === 'ISSM' && issmTeamPapers.length > 0) ? issmTeamPapers :
     (modelName === 'MOMO-CHEM' && momoChemTeamPapers.length > 0) ? momoChemTeamPapers :
     (modelName === 'CARDAMOM' && cardamomTeamPapers.length > 0) ? cardamomTeamPapers :
+    (modelName === 'LES' && lesTeamPapers.length > 0) ? lesTeamPapers :
+    (modelName === 'EDMF' && edmfTeamPapers.length > 0) ? edmfTeamPapers :
     (modelRelatedPapers[modelName] || modelRelatedPapers['RAPID']);
 
   return (

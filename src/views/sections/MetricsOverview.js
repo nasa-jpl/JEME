@@ -53,7 +53,7 @@ const MetricsOverview = ({ data = [] }) => {
 
     // Helper function to extract citations count
     const extractCitations = (paper) => {
-      return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+      return paper['is-referenced-by-count'] || paper.citation_count || paper.cites || paper.citations || 0;
     };
 
     // Helper function to determine region from country
@@ -112,17 +112,26 @@ const MetricsOverview = ({ data = [] }) => {
     const avgCitations = totalCitations / citationsData.length;
 
     // 3. IMPLEMENTATION RATE
-    // Count different engagement levels
+    // Count different engagement levels - use flexible matching to support different naming conventions
     const engagementStats = {};
+    let modelAdaptationCount = 0;
+    let foundationalMethodCount = 0;
+    let dataUsageCount = 0;
+
     citationsData.forEach(paper => {
       const level = paper.engagement_level || "Unknown";
       engagementStats[level] = (engagementStats[level] || 0) + 1;
+
+      // Flexible matching for different naming conventions
+      if (level.startsWith('Level 3:')) {
+        modelAdaptationCount++;
+      } else if (level.startsWith('Level 4:')) {
+        foundationalMethodCount++;
+      } else if (level.startsWith('Level 2:')) {
+        dataUsageCount++;
+      }
     });
-    
-    const modelAdaptationCount = engagementStats['Level 3: Model Adaptation'] || 0;
-    const foundationalMethodCount = engagementStats['Level 4: Foundational Method'] || 0;
-    const dataUsageCount = engagementStats['Level 2: Data Usage'] || 0;
-    
+
     // Implementation rate calculation (Level 3 and 4 vs total)
     const implementationCount = modelAdaptationCount + foundationalMethodCount;
     const implementationRate = ((implementationCount / citationsData.length) * 100);
@@ -235,6 +244,7 @@ const MetricsOverview = ({ data = [] }) => {
         trend={`+${metrics.trends.implementation.value}% from last quarter`}
         trendUp={metrics.trends.implementation.isUp}
         breakdown={[
+          { label: "Formula", value: "(L3 + L4) / Total × 100" },
           { label: "Model Adaptation", value: metrics.modelAdaptationCount.toString() },
           { label: "Foundational Method", value: metrics.foundationalMethodCount.toString() },
           { label: "Data Usage", value: metrics.dataUsageCount.toString() }

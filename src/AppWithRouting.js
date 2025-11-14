@@ -45,9 +45,10 @@ function AppWithRouting() {
         <Route path="/science-model-dashboard/ISSM" element={<ISSMDashboard />} />
         <Route path="/science-model-dashboard/MOMO-CHEM" element={<MOMOCHEMDashboard />} />
         <Route path="/science-model-dashboard/CARDAMOM" element={<CARDAMOM_Dashboard />} />
+        {/* LES and EDMF - Now with real citation data! */}
         <Route path="/science-model-dashboard/LES" element={<LESDashboard />} />
         <Route path="/science-model-dashboard/EDMF" element={<EDMFDashboard />} />
-        
+
         {/* How It Works page */}
         <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />
         

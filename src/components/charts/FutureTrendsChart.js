@@ -26,7 +26,7 @@ const FutureTrendsChart = ({ data }) => {
 
     // Helper function to extract citations count
     const extractCitations = (paper) => {
-      return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
+      return paper['is-referenced-by-count'] || paper.citation_count || paper.cites || paper.citations || 0;
     };
 
     // Group data by year for historical analysis
@@ -82,16 +82,9 @@ const FutureTrendsChart = ({ data }) => {
 
     // Get baseline for projections (average of last 3 years)
     const baselineYears = historicalData.slice(-3).filter(d => d.actual > 0);
-    const baseline = baselineYears.length > 0 ? 
+    const baseline = baselineYears.length > 0 ?
       baselineYears.reduce((sum, d) => sum + d.actual, 0) / baselineYears.length : 10;
 
-    // Create projections for 2025-2030
-    const projectedData = [];
-    for (let year = 2025; year <= 2030; year++) {
-      const yearsFromBaseline = year - 2024;
-      const projected = Math.round(baseline * Math.pow(1 + avgGrowthRate, yearsFromBaseline));
-      const optimistic = Math.round(projected * Math.pow(1.15, yearsFromBaseline)); // 15% higher
-      const conservative = Math.round(projected * Math.pow(0.85, yearsFromBaseline)); // 15% lower
     // Get the last actual value from 2024
     const lastActualYear = historicalData[historicalData.length - 1];
     const lastActualValue = lastActualYear ? lastActualYear.actual : baseline;
@@ -429,7 +422,7 @@ const FutureTrendsChart = ({ data }) => {
                       {driver.category}
                     </span>
                     <span className="font-semibold">
-                      +{driver.impact}%
+                      +{driver.impact.toFixed(1)}%
                     </span>
                   </div>
                 </div>
