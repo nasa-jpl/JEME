@@ -13,9 +13,20 @@ import JEMEContributionSection from '../components/JEMEContributionSection';
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
 import MultiModelCitationTrendsChart from '../components/charts/MultiModelCitationTrendsChart';
 
+// Import network analysis components
+import NetworkInsightsCard from '../components/network/NetworkInsightsCard';
+import ConnectionMatrix from '../components/network/ConnectionMatrix';
+import BridgePapersTable from '../components/network/BridgePapersTable';
+import NetworkGraph from '../components/network/NetworkGraph';
+
+// Import network analysis utility
+import { performNetworkAnalysis } from '../utils/networkAnalysis';
+
 const Dashboard = () => {
   const [allModelsData, setAllModelsData] = useState({});
   const [loading, setLoading] = useState(true);
+  const [networkAnalysis, setNetworkAnalysis] = useState(null);
+  const [networkLoading, setNetworkLoading] = useState(true);
 
   // Load all models' data for multi-model comparison
   useEffect(() => {
@@ -50,6 +61,25 @@ const Dashboard = () => {
     };
 
     loadAllModelsData();
+  }, []);
+
+  // Perform network analysis
+  useEffect(() => {
+    const runNetworkAnalysis = async () => {
+      try {
+        setNetworkLoading(true);
+        console.log('Starting network analysis...');
+        const analysis = await performNetworkAnalysis();
+        setNetworkAnalysis(analysis);
+        console.log('Network analysis complete:', analysis);
+        setNetworkLoading(false);
+      } catch (error) {
+        console.error('Failed to perform network analysis:', error);
+        setNetworkLoading(false);
+      }
+    };
+
+    runNetworkAnalysis();
   }, []);
 
   const models = [
@@ -194,6 +224,49 @@ const Dashboard = () => {
             <MultiModelCitationTrendsChart allModelsData={allModelsData} />
           </>
         )}
+
+        {/* Network Analysis Section */}
+        <div className="mb-6">
+          <h2 className="text-2xl font-bold text-gray-900 mb-4">Cross-Model Network Analysis</h2>
+          <p className="text-gray-600 mb-6">
+            Explore connections between models through shared citations, bridge papers, and collaborative research
+          </p>
+
+          {networkLoading ? (
+            <div className="bg-white rounded-lg p-8 shadow-sm mb-6 text-center">
+              <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-purple-500 mx-auto mb-4"></div>
+              <div className="text-gray-600">Analyzing network connections across {models.length} models...</div>
+            </div>
+          ) : networkAnalysis ? (
+            <div className="space-y-6">
+              {/* Network Insights Card */}
+              <NetworkInsightsCard
+                summary={networkAnalysis.summary}
+                networkMetrics={networkAnalysis.networkMetrics}
+              />
+
+              {/* Network Graph */}
+              <NetworkGraph
+                connectionData={networkAnalysis.connectionData}
+                networkMetrics={networkAnalysis.networkMetrics}
+              />
+
+              {/* Connection Matrix */}
+              <ConnectionMatrix
+                connectionData={networkAnalysis.connectionData}
+              />
+
+              {/* Bridge Papers Table */}
+              <BridgePapersTable
+                bridgePapers={networkAnalysis.bridgePapers}
+              />
+            </div>
+          ) : (
+            <div className="bg-white rounded-lg p-8 shadow-sm mb-6 text-center">
+              <div className="text-gray-600">Failed to load network analysis</div>
+            </div>
+          )}
+        </div>
         
         <Footer />
       </main>
