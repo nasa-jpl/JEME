@@ -472,15 +472,15 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           <EngagementLevelsCard data={citationsData} />
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-          {/* Future Trends */}
-          <FutureTrendsChart data={citationsData} />
-          
+        {/* Future Trends */}
+        <FutureTrendsChart data={citationsData} />
+
+        <div className="mb-8">
           {/* GitHub Metrics */}
           {modelConfig.github ? (
-            <GitHubMetricsCard 
-              owner={modelConfig.github.split('/')[3]} 
-              repo={modelConfig.github.split('/')[4]} 
+            <GitHubMetricsCard
+              owner={modelConfig.github.split('/')[3]}
+              repo={modelConfig.github.split('/')[4]}
             />
           ) : (
             <div className="bg-white rounded-lg p-6 shadow-sm border">
@@ -491,7 +491,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
                   Visit the project website for more information
                 </p>
                 {modelConfig.website && (
-                  <a 
+                  <a
                     href={modelConfig.website}
                     target="_blank"
                     rel="noopener noreferrer"

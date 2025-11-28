@@ -1,0 +1,257 @@
+[
+  {
+    "title": "RAPID applied to the SIM-France model",
+    "authors": [
+      "David",
+      "Cédric H.",
+      "Florence Habets",
+      "David R. Maidment",
+      "Zong-Liang Yang"
+    ],
+    "year": 2011,
+    "doi": "10.1002/hyp.8070",
+    "venue": "Hydrological Processes, 25(22), 3412-3425"
+  },
+  {
+    "title": "Modeling the impact of in-stream water level fluctuations on stream-aquifer interactions at the regional scale",
+    "authors": [
+      "Saleh",
+      "Firas",
+      "Nicolas Flipo",
+      "Florence Habets",
+      "Agnès Ducharne",
+      "Ludovic Oudin",
+      "Pascal Viennot",
+      "Emmanuel Ledoux"
+    ],
+    "year": 2011,
+    "doi": "10.1016/j.jhydrol.2011.02.001",
+    "venue": "Journal of Hydrology, 400, 490-500"
+  },
+  {
+    "title": "Hybrid fitting of a hydrosystem model: Long-term insight into the Beauce aquifer functioning (France)",
+    "authors": [
+      "Flipo",
+      "Nicolas",
+      "Céline Monteil",
+      "Michel Poulin",
+      "Chantal de Fouquet",
+      "Mohamed Krimissa"
+    ],
+    "year": 2012,
+    "doi": "10.1029/2011WR011092",
+    "venue": "Water Resources Research, 48, 1-21"
+  },
+  {
+    "title": "Assessing the water balance of the Upper Rhine Graben hydrosystem",
+    "authors": [
+      "Thierion",
+      "Charlotte",
+      "Laurent Longuevergne",
+      "Florence Habets",
+      "Emmanuel Ledoux",
+      "Philippe Ackerer",
+      "Samer Majdalani",
+      "Etienne Leblois",
+      "Simon Lecluse",
+      "Eric Martin",
+      "Solen Queguiner",
+      "Pascal Viennot"
+    ],
+    "year": 2012,
+    "doi": "10.1016/j.jhydrol.2011.12.028",
+    "venue": "Journal of Hydrology, 424-425, 68-83"
+  },
+  {
+    "title": "Regional-scale river flow modeling using off-the-shelf runoff products, thousands of mapped rivers and hundreds of stream flow gauges",
+    "authors": [
+      "David",
+      "Cédric H.",
+      "Zong-Liang Yang",
+      "Seungbum Hong"
+    ],
+    "year": 2013,
+    "doi": "10.1016/j.envsoft.2012.12.011",
+    "venue": "Environmental Modelling & Software, 42, 116-132"
+  },
+  {
+    "title": "Quantification of the upstream-to-downstream influence in the Muskingum method, and implications for speedup in parallel computations of river flow",
+    "authors": [
+      "David",
+      "Cédric H.",
+      "Zong-Liang Yang",
+      "James S. Famiglietti"
+    ],
+    "year": 2013,
+    "doi": "10.1002/wrcr.20250",
+    "venue": "Water Resources Research, 49(5), 1-18"
+  },
+  {
+    "title": "Evaluation of regional-scale water level simulations using various river routing schemes within a hydrometeorological modelling framework for the preparation of the SWOT mission",
+    "authors": [
+      "Häfliger",
+      "Vincent",
+      "Eric Martin",
+      "Aaron Boone",
+      "Florence Habets",
+      "Cédric H. David",
+      "Pierre-A. Garambois",
+      "Hélène Roux",
+      "Sophie Ricci",
+      "Lucie Berthon",
+      "Anthony Thévenin",
+      "",
+      "Sylvain Biancamaria"
+    ],
+    "year": 2015,
+    "doi": "10.1175/JHM-D-14-0107.1",
+    "venue": "Journal of Hydrometeorology, 16(4), 1821-1842"
+  },
+  {
+    "title": "Enhanced fixed-size parallel speedup with the Muskingum method using a trans-boundary approach and a large sub-basins approximation",
+    "authors": [
+      "David",
+      "Cédric H.",
+      "James S. Famiglietti",
+      "Zong-Liang Yang",
+      "",
+      "Victor Eijkhout"
+    ],
+    "year": 2015,
+    "doi": "10.1002/2014WR016650",
+    "venue": "Water Resources Research, 51(9), 1-25"
+  },
+  {
+    "title": "A GIS Framework for Regional Modeling of Riverine Nitrogen Transport: Case Study, San Antonio and Guadalupe Basins",
+    "authors": [
+      "Tavakoly",
+      "Ahmad A.",
+      "David R. Maidment",
+      "James McClelland",
+      "Tim Whiteaker",
+      "Zong-Liang Yang",
+      "Claire Griffin",
+      "Cédric H. David",
+      "",
+      "Lisa Meyer"
+    ],
+    "year": 2015,
+    "doi": "10.1111/1752-1688.12355",
+    "venue": "Journal of the American Water Resources Association, 52(1), 1-15"
+  },
+  {
+    "title": "Development and evaluation of a physically-based lake level model for water resource management: A case study for Lake Buchanan, Texas",
+    "authors": [
+      "Lin",
+      "Peirong",
+      "Zong-Liang Yang",
+      "Xitian Cai",
+      "",
+      "Cédric H. David"
+    ],
+    "year": 2015,
+    "doi": "10.1016/j.ejrh.2015.08.005",
+    "venue": "Journal of Hydrology: Regional Studies, 4(B), 661-674"
+  },
+  {
+    "title": "A Decade of RAPID – Reflections on the Development of an Open Source Geoscience Code",
+    "authors": [
+      "David",
+      "Cédric H.",
+      "James S. Famiglietti",
+      "Zong-Liang Yang",
+      "",
+      "David R. Maidment"
+    ],
+    "year": 2016,
+    "doi": "10.1002/2015EA000142",
+    "venue": "Earth and Space Science, 3, 1-19"
+  },
+  {
+    "title": "A Cloud-Based High-Resolution National Hydrologic Forecast System Downscaled from a Global Ensemble Land Surface Model",
+    "authors": [
+      "Snow",
+      "Alan D.",
+      "Scott D. Christensen",
+      "Nathan R. Swain",
+      "James Nelson",
+      "Daniel P. Ames",
+      "Norman L. Jones",
+      "Deng Ding",
+      "Nawajish Noman",
+      "Cédric H. David",
+      "Florian Pappenberger"
+    ],
+    "year": 2016,
+    "doi": "10.1111/1752-1688.12434",
+    "venue": "Journal of the American Water Resources Association, 1-15"
+  },
+  {
+    "title": "Continental Scale River Flow Modeling of the Mississippi River Basin Using High-Resolution NHDPlus Dataset",
+    "authors": [
+      "Tavakoly",
+      "Ahmad A.",
+      "Alan D. Snow",
+      "Cédric H. David",
+      "Michael L. Follum",
+      "David R. Maidment",
+      "Zong-Liang Yang"
+    ],
+    "year": 2016,
+    "doi": "10.1111/1752-1688.12456",
+    "venue": "Journal of the American Water Resources Association, 1-22"
+  },
+  {
+    "title": "AutoRAPID: A Model for Prompt Streamflow Estimation and Flood Inundation Mapping over Regional to Continental Extents",
+    "authors": [
+      "Follum",
+      "Michael L.",
+      "Ahmad A. Tavakoly",
+      "Jeffrey D. Niemann",
+      "",
+      "Alan D. Snow"
+    ],
+    "year": 2016,
+    "doi": "10.1111/1752-1688.12476",
+    "venue": "Journal of the American Water Resources Association, 1-20"
+  },
+  {
+    "title": "A new open source platform for lowering the barrier for environmental web app development",
+    "authors": [
+      "Swain",
+      "Nathan R.",
+      "Scott D. Christensen",
+      "Alan D. Snow",
+      "Herman Dolder",
+      "Gonzalo Espinoza-Davalos",
+      "Erfan Goharian",
+      "Norman L. Jones",
+      "E. James Nelson",
+      "Daniel P. Ames",
+      "Steven J. Burian"
+    ],
+    "year": 2016,
+    "doi": "10.1016/j.envsoft.2016.08.003",
+    "venue": "Environmental Modelling & Software, 85, 11-26, 1-20"
+  },
+  {
+    "title": "Towards Real-Time Continental Scale Streamflow Simulation in Continuous and Discrete Space",
+    "authors": [
+      "Salas",
+      "Fernando R.",
+      "Marcelo A. Somos-Valenzuela",
+      "Aubrey Dugger",
+      "David R. Maidment",
+      "David J. Gochis",
+      "Cédric H. David",
+      "Wei Yu",
+      "Deng Ding",
+      "Edward P. Clark",
+      "",
+      "Nawajish Noman"
+    ],
+    "year": 2017,
+    "doi": "10.1111/1752-1688.12586",
+    "venue": "JAWRA Journal of the American Water Resources Association"
+  }
+]

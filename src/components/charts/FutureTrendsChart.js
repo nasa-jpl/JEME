@@ -2,139 +2,8 @@
 // Chart showing future citation trends
 
 import React, { useMemo } from 'react';
-import { LineChart, Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
-import { MoreHorizontal } from 'lucide-react';
-import colors from '../../utils/colors';
 
 const FutureTrendsChart = ({ data }) => {
-  // Process the data to create trend projections
-  const trendData = useMemo(() => {
-    // Helper function to extract year from paper
-    const extractYear = (paper) => {
-      if (paper.year) return paper.year;
-      if (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0]) {
-        return paper.published['date-parts'][0][0];
-      }
-      if (paper['published-online'] && paper['published-online']['date-parts'] && paper['published-online']['date-parts'][0]) {
-        return paper['published-online']['date-parts'][0][0];
-      }
-      if (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0]) {
-        return paper['published-print']['date-parts'][0][0];
-      }
-      return null;
-    };
-
-    // Helper function to extract citations count
-    const extractCitations = (paper) => {
-      return paper['is-referenced-by-count'] || paper.citation_count || paper.cites || paper.citations || 0;
-    };
-
-    // Group data by year for historical analysis
-    const yearlyData = {};
-    // Use provided data or empty array as fallback
-    const citationsData = data || [];
-    
-    citationsData.forEach(paper => {
-      const year = extractYear(paper);
-      const citations = extractCitations(paper);
-      
-      if (year && year >= 2015 && year <= 2024) {
-        if (!yearlyData[year]) {
-          yearlyData[year] = { papers: 0, totalCitations: 0 };
-        }
-        yearlyData[year].papers += 1;
-        yearlyData[year].totalCitations += citations;
-      }
-    });
-
-    // Create historical data points
-    const historicalData = [];
-    for (let year = 2015; year <= 2024; year++) {
-      const data = yearlyData[year] || { papers: 0, totalCitations: 0 };
-      historicalData.push({
-        year: year.toString(),
-        actual: data.papers,
-        actualCitations: data.totalCitations,
-        isHistorical: true
-      });
-    }
-
-    // Calculate growth trends from historical data
-    const recentYears = historicalData.slice(-5).filter(d => d.actual > 0);
-    let avgGrowthRate = 0;
-    
-    if (recentYears.length >= 2) {
-      const growthRates = [];
-      for (let i = 1; i < recentYears.length; i++) {
-        if (recentYears[i-1].actual > 0) {
-          const rate = (recentYears[i].actual - recentYears[i-1].actual) / recentYears[i-1].actual;
-          growthRates.push(rate);
-        }
-      }
-      avgGrowthRate = growthRates.length > 0 ? 
-        growthRates.reduce((sum, rate) => sum + rate, 0) / growthRates.length : 0.05;
-    } else {
-      avgGrowthRate = 0.05; // Default 5% growth
-    }
-
-    // Ensure reasonable growth rate bounds
-    avgGrowthRate = Math.max(-0.1, Math.min(0.3, avgGrowthRate)); // Between -10% and 30%
-
-    // Get baseline for projections (average of last 3 years)
-    const baselineYears = historicalData.slice(-3).filter(d => d.actual > 0);
-    const baseline = baselineYears.length > 0 ?
-      baselineYears.reduce((sum, d) => sum + d.actual, 0) / baselineYears.length : 10;
-
-    // Get the last actual value from 2024
-    const lastActualYear = historicalData[historicalData.length - 1];
-    const lastActualValue = lastActualYear ? lastActualYear.actual : baseline;
-
-    // Create projections starting from 2025 (connecting to 2024 data)
-    const projectedData = [];
-    
-    // Add 2025 as the first projection year
-    projectedData.push({
-      year: '2025',
-      actual: null, // No actual data for 2025 yet
-      projected: Math.round(lastActualValue * (1 + avgGrowthRate)),
-      optimistic: Math.round(lastActualValue * 1.15),
-      conservative: Math.round(lastActualValue * 0.85),
-      isHistorical: false
-    });
-    
-    // Continue projections for 2026-2030
-    for (let year = 2026; year <= 2030; year++) {
-      const yearsFromBaseline = year - 2024;
-      const projected = Math.round(lastActualValue * Math.pow(1 + avgGrowthRate, yearsFromBaseline));
-      const optimistic = Math.round(projected * Math.pow(1.15, yearsFromBaseline - 1)); // 15% higher
-      const conservative = Math.round(projected * Math.pow(0.85, yearsFromBaseline - 1)); // 15% lower
-      
-      projectedData.push({
-        year: year.toString(),
-        projected: Math.max(1, projected),
-        optimistic: Math.max(1, optimistic),
-        conservative: Math.max(1, conservative),
-        isHistorical: false
-      });
-    }
-
-    // Combine historical and projected data
-    // Add projection values to the last historical data point (2024) for smooth connection
-    const combinedData = [...historicalData];
-    
-    // Update the 2024 entry to include projection starting points
-    if (combinedData.length > 0 && lastActualValue > 0) {
-      const lastIndex = combinedData.length - 1;
-      combinedData[lastIndex] = {
-        ...combinedData[lastIndex],
-        projected: lastActualValue,
-        optimistic: lastActualValue,
-        conservative: lastActualValue
-      };
-    }
-    
-    return [...combinedData, ...projectedData];
-  }, [data]);
 
   // Calculate emerging research directions from recent papers
   const emergingTrends = useMemo(() => {
@@ -235,211 +104,103 @@ const FutureTrendsChart = ({ data }) => {
     return drivers.sort((a, b) => b.impact - a.impact).slice(0, 4);
   }, [emergingTrends, data]);
 
-  // Custom tooltip
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      return (
-        <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
-          <p className="font-medium text-gray-900">{`Year: ${label}`}</p>
-          {payload.map((entry, index) => (
-            <p key={index} style={{ color: entry.color }} className="text-sm">
-              {`${entry.name}: ${entry.value} papers`}
-            </p>
-          ))}
-        </div>
-      );
-    }
-    return null;
-  };
-
   return (
-    <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
-      <div className="flex justify-between items-start mb-4">
-        <div>
-          <div className="text-base font-semibold text-gray-800">Future Trends & Predictions</div>
-          <div className="text-sm text-gray-500 mt-1">
-            Projected growth and emerging research areas • Based on {(data || []).length} papers
-          </div>
-        </div>
-        <div className="flex gap-2">
-          <button className="text-gray-500 hover:text-gray-700 p-1">
-            <MoreHorizontal size={18} />
-          </button>
+    <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
+      <div className="mb-6">
+        <div className="text-xl font-bold text-gray-900">Emerging Research Directions</div>
+        <div className="text-sm text-gray-600 mt-1">
+          Trending research areas and growth drivers
         </div>
       </div>
-      
-      <div className="flex flex-col lg:flex-row">
-        <div className="flex-1 lg:pr-6 mb-6 lg:mb-0">
-          <div className="text-sm font-semibold text-gray-800 mb-3">
-            Citation Projection (2015-2030)
-          </div>
-          <div className="h-64 bg-gray-50 rounded-lg p-4">
-            <ResponsiveContainer width="100%" height="100%">
-              <LineChart
-                data={trendData}
-                margin={{ top: 10, right: 30, left: 20, bottom: 10 }}
-              >
-                <CartesianGrid strokeDasharray="3 3" vertical={false} />
-                <XAxis 
-                  dataKey="year" 
-                  tick={{ fontSize: 12 }}
-                />
-                <YAxis 
-                  tick={{ fontSize: 12 }}
-                  tickFormatter={(value) => value.toString()}
-                />
-                <Tooltip content={<CustomTooltip />} />
-                <Legend />
-                
-                {/* Historical data */}
-                <Line 
-                  type="monotone" 
-                  dataKey="actual" 
-                  name="Historical Data" 
-                  stroke={colors.primary || "#3B82F6"} 
-                  strokeWidth={3} 
-                  dot={{ r: 4, fill: colors.primary || "#3B82F6" }} 
-                  connectNulls={false}
-                />
-                
-                {/* Projected data */}
-                <Line 
-                  type="monotone" 
-                  dataKey="projected" 
-                  name="Projected Growth" 
-                  stroke={colors.primary || "#3B82F6"} 
-                  strokeWidth={3} 
-                  strokeDasharray="8 4"
-                  dot={{ r: 4, fill: colors.primary || "#3B82F6" }}
-                />
-                
-                {/* Optimistic projection */}
-                <Line 
-                  type="monotone" 
-                  dataKey="optimistic" 
-                  name="Optimistic Scenario" 
-                  stroke={colors.success || "#10B981"} 
-                  strokeWidth={2} 
-                  strokeDasharray="4 4"
-                  dot={{ r: 3 }}
-                />
-                
-                {/* Conservative projection */}
-                <Line 
-                  type="monotone" 
-                  dataKey="conservative" 
-                  name="Conservative Scenario" 
-                  stroke={colors.warning || "#F59E0B"} 
-                  strokeWidth={2} 
-                  strokeDasharray="4 4"
-                  dot={{ r: 3 }}
-                />
-                
-                {/* Confidence area */}
-                <Area 
-                  type="monotone" 
-                  dataKey="projected" 
-                  fill={colors.primary || "#3B82F6"} 
-                  fillOpacity={0.1} 
-                  stroke="none" 
-                />
-              </LineChart>
-            </ResponsiveContainer>
-          </div>
-          
-          <div className="flex flex-wrap gap-4 mt-4 text-xs">
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-0.5 bg-blue-500"></div>
-              <span className="text-gray-600">Historical Data</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-0.5 border-t-2 border-dashed border-blue-500"></div>
-              <span className="text-gray-600">Projected Growth</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-0.5 border-t-2 border-dashed border-green-500"></div>
-              <span className="text-gray-600">Optimistic</span>
-            </div>
-            <div className="flex items-center gap-2">
-              <div className="w-4 h-0.5 border-t-2 border-dashed border-orange-500"></div>
-              <span className="text-gray-600">Conservative</span>
-            </div>
-          </div>
-        </div>
-        
-        <div className="flex-1 lg:pl-6 lg:border-l border-gray-200">
+
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+        {/* Emerging Research Directions */}
+        <div>
           <div className="text-sm font-semibold text-gray-800 mb-3">
             Emerging Research Directions
           </div>
-          <div className="bg-gray-50 rounded-lg p-4 mb-6">
-            <div className="space-y-3">
-              {emergingTrends.map((trend, index) => (
-                <div key={index} className="flex justify-between items-center">
-                  <div className="text-sm text-gray-700 flex-1 pr-2">
-                    {trend.domain}
-                  </div>
-                  <div className="text-sm font-medium text-gray-900 flex items-center gap-2">
-                    <span className="text-xs text-gray-500">
-                      {trend.recentCount} papers
-                    </span>
-                    <span className={`px-2 py-1 rounded text-xs ${
-                      trend.trendLevel.includes('Strong') ? 'bg-green-100 text-green-800' :
-                      trend.trendLevel.includes('Growing') ? 'bg-blue-100 text-blue-800' :
-                      trend.trendLevel.includes('Trending') ? 'bg-yellow-100 text-yellow-800' :
-                      'bg-gray-100 text-gray-800'
-                    }`}>
-                      {trend.trendLevel}
-                    </span>
-                  </div>
+          <div className="space-y-3">
+            {emergingTrends.map((trend, index) => (
+              <div key={index} className="p-3 bg-gray-50 rounded-lg">
+                <div className="text-sm font-medium text-gray-900 mb-1">
+                  {trend.domain}
                 </div>
-              ))}
-            </div>
-            
+                <div className="flex items-center justify-between">
+                  <span className="text-xs text-gray-600">
+                    {trend.recentCount} papers
+                  </span>
+                  <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+                    trend.trendLevel.includes('Strong') ? 'bg-green-100 text-green-800' :
+                    trend.trendLevel.includes('Growing') ? 'bg-blue-100 text-blue-800' :
+                    trend.trendLevel.includes('Trending') ? 'bg-yellow-100 text-yellow-800' :
+                    'bg-gray-100 text-gray-800'
+                  }`}>
+                    {trend.trendLevel}
+                  </span>
+                </div>
+              </div>
+            ))}
+
             {emergingTrends.length === 0 && (
-              <div className="text-sm text-gray-500 text-center py-4">
-                Analyzing emerging trends from recent publications...
+              <div className="text-sm text-gray-500 text-center py-8 bg-gray-50 rounded-lg">
+                Analyzing emerging trends...
               </div>
             )}
           </div>
-          
+        </div>
+
+        {/* Potential Growth Drivers */}
+        <div>
           <div className="text-sm font-semibold text-gray-800 mb-3">
             Potential Growth Drivers
           </div>
-          <div className="bg-gray-50 rounded-lg p-4">
-            <div className="space-y-3">
-              {growthDrivers.map((driver, index) => (
-                <div key={index} className="flex justify-between items-center">
-                  <div className="text-sm text-gray-700 flex-1 pr-2">
-                    {driver.factor}
-                  </div>
-                  <div className="text-sm font-medium text-gray-900 flex items-center gap-2">
-                    <span className={`px-2 py-1 rounded text-xs ${
-                      driver.category === 'Environmental' ? 'bg-green-100 text-green-700' :
-                      driver.category === 'Technology' ? 'bg-blue-100 text-blue-700' :
-                      driver.category === 'Data' ? 'bg-purple-100 text-purple-700' :
-                      'bg-orange-100 text-orange-700'
-                    }`}>
-                      {driver.category}
-                    </span>
-                    <span className="font-semibold">
-                      +{driver.impact.toFixed(1)}%
-                    </span>
-                  </div>
+          <div className="space-y-3">
+            {growthDrivers.map((driver, index) => (
+              <div key={index} className="p-3 bg-gray-50 rounded-lg">
+                <div className="text-sm text-gray-700 mb-2">
+                  {driver.factor}
                 </div>
-              ))}
-            </div>
+                <div className="flex items-center justify-between">
+                  <span className={`px-2 py-0.5 rounded text-xs font-medium ${
+                    driver.category === 'Environmental' ? 'bg-green-100 text-green-700' :
+                    driver.category === 'Technology' ? 'bg-blue-100 text-blue-700' :
+                    driver.category === 'Data' ? 'bg-purple-100 text-purple-700' :
+                    'bg-orange-100 text-orange-700'
+                  }`}>
+                    {driver.category}
+                  </span>
+                  <span className="text-sm font-bold text-gray-900">
+                    +{driver.impact.toFixed(1)}%
+                  </span>
+                </div>
+              </div>
+            ))}
           </div>
-          
-          {/* Projection summary */}
-          <div className="mt-6 p-4 bg-blue-50 rounded-lg">
-            <div className="text-sm font-medium text-blue-900 mb-2">
-              Projection Summary
-            </div>
-            <div className="space-y-1 text-xs text-blue-800">
-              <div>• Based on {(data || []).length} historical papers</div>
-              <div>• {emergingTrends.length} active research domains identified</div>
-              <div>• Growth projections use 5-year trend analysis</div>
-              <div>• Confidence intervals reflect domain variability</div>
+        </div>
+
+        {/* Projection Summary */}
+        <div>
+          <div className="text-sm font-semibold text-gray-800 mb-3">
+            Projection Summary
+          </div>
+          <div className="p-4 bg-blue-50 rounded-lg">
+            <div className="space-y-2 text-sm text-blue-900">
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600 mt-0.5">•</span>
+                <span>Based on {(data || []).length} historical papers</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600 mt-0.5">•</span>
+                <span>{emergingTrends.length} active research domains identified</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600 mt-0.5">•</span>
+                <span>Growth projections use 5-year trend analysis</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-blue-600 mt-0.5">•</span>
+                <span>Confidence intervals reflect domain variability</span>
+              </div>
             </div>
           </div>
         </div>

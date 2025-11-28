@@ -34,14 +34,48 @@ class Paper:
 
 class SemanticScholarAPI:
     """Semantic Scholar API client"""
-    
+
     def __init__(self):
         self.base_url = "https://api.semanticscholar.org/graph/v1"
         self.session = requests.Session()
         self.session.headers.update({
             'User-Agent': 'CitationScraper/1.0 (research@nasa.gov)'
         })
-        
+
+    def search_paper_by_doi(self, doi: str) -> Optional[Paper]:
+        """Search for a paper by DOI (most reliable method)"""
+        try:
+            # Clean DOI
+            doi = doi.strip()
+            if doi.startswith('http'):
+                doi = doi.split('doi.org/')[-1]
+
+            url = f"{self.base_url}/paper/DOI:{doi}"
+            params = {
+                'fields': 'title,authors,year,venue,citationCount,paperId,url,abstract,externalIds'
+            }
+
+            # Retry logic for rate limiting
+            for retry in range(5):
+                response = self.session.get(url, params=params, timeout=15)
+                if response.status_code == 429:  # Rate limited
+                    wait_time = (retry + 1) * 5
+                    logger.warning(f"Rate limited. Waiting {wait_time} seconds...")
+                    time.sleep(wait_time)
+                    continue
+                elif response.status_code == 404:
+                    logger.warning(f"Paper not found for DOI: {doi}")
+                    return None
+                response.raise_for_status()
+                break
+
+            data = response.json()
+            return self._parse_paper(data)
+
+        except Exception as e:
+            logger.error(f"Error searching DOI {doi}: {e}")
+            return None
+
     def search_paper(self, title: str, authors: List[str] = None) -> Optional[Paper]:
         """Search for a paper by title and authors"""
         try:
@@ -391,23 +425,34 @@ class CitationScraper:
         title = team_paper.get('title', '')
         authors = team_paper.get('authors', [])
         doi = team_paper.get('doi', '')
-        
-        if not title:
+
+        if not title and not doi:
             return None
-        
-        # Try Semantic Scholar first
-        found_paper = self.semantic_scholar.search_paper(title, authors)
-        if found_paper and found_paper.paper_id:
-            return found_paper
-        
-        # Try CrossRef if we have DOI
+
+        # Try DOI-based search first (most reliable)
         if doi:
+            # Try Semantic Scholar with DOI
+            found_paper = self.semantic_scholar.search_paper_by_doi(doi)
+            if found_paper and found_paper.paper_id:
+                logger.info(f"Found paper via Semantic Scholar DOI: {doi}")
+                return found_paper
+
+            # Try CrossRef with DOI as fallback
             found_paper = self.crossref.search_paper_by_doi(doi)
             if found_paper:
+                logger.info(f"Found paper via CrossRef DOI: {doi}")
                 return found_paper
-        
-        # Try CrossRef by title
+
+        # Fall back to title-based search if DOI fails
+        found_paper = self.semantic_scholar.search_paper(title, authors)
+        if found_paper and found_paper.paper_id:
+            logger.info(f"Found paper via Semantic Scholar title search")
+            return found_paper
+
+        # Try CrossRef by title as last resort
         found_paper = self.crossref.search_paper_by_title(title)
+        if found_paper:
+            logger.info(f"Found paper via CrossRef title search")
         return found_paper
     
     def _paper_to_dict(self, paper: Paper) -> Dict:

@@ -17,7 +17,7 @@ import CitationTrendsChart from '../../components/charts/CitationTrendsChart';
 import ModelComparisonChart from '../../components/charts/ModelComparisonChart';
 import ResearchDomainsCard from '../../components/charts/ResearchDomainsCard';
 import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
-import FutureTrendsChart from '../../components/charts/FutureTrendsChart'; 
+import FutureTrendsChart from '../../components/charts/FutureTrendsChart';
 import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
 import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
@@ -226,7 +226,7 @@ const MOMOCHEMDashboard = () => {
           <ResearchDomainsCard data={momoChemData} />
           <EngagementLevelsCard data={momoChemData} />
         </div>
-        
+
         <FutureTrendsChart data={momoChemData} />
         <DashboardSummaryCard data={momoChemData} />
         

@@ -1,0 +1,303 @@
+[
+  {
+    "title": "Performance of an eddy diffusivity-mass flux scheme for shallow cumulus boundary layers",
+    "authors": [
+      "WM Angevine",
+      "H Jiang",
+      "T Mauritsen"
+    ],
+    "year": 2010,
+    "doi": "10.1175/2010MWR3142.1",
+    "venue": "Monthly Weather Review"
+  },
+  {
+    "title": "Shallow Cumulus in WRF Parameterizations Evaluated against LASSO Large-Eddy Simulations",
+    "authors": [
+      "WM Angevine",
+      "J Olson",
+      "J Kenyon",
+      "WI Gustafson",
+      "S Endo",
+      "K Suselj",
+      "DD Turner"
+    ],
+    "year": 2018,
+    "doi": "10.1175/MWR-D-18-0115.1",
+    "venue": "Monthly Weather Review"
+  },
+  {
+    "title": "Parameterization interactions in global aquaplanet simulations",
+    "authors": [
+      "R Bhattacharya",
+      "S Bordoni",
+      "K Suselj",
+      "J Teixeira"
+    ],
+    "year": 2018,
+    "doi": "10.1002/2017MS001226",
+    "venue": "Journal of Advances in Modeling Earth Systems"
+  },
+  {
+    "title": "A simple formulation for the eddy-diffusivity parameterization of cloud-topped boundary layers",
+    "authors": [
+      "S Cheinet",
+      "J Teixeira"
+    ],
+    "year": 2003,
+    "doi": "10.1029/2003GL017377",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Improving the representation of shallow cumulus convection with the simplified-higher-order-closure-mass-flux (SHOC+MF v1.0) approach",
+    "authors": [
+      "MJ Chinita",
+      "M Witte",
+      "MJ Kurowski",
+      "J Teixeira",
+      "K Suselj",
+      "G Matheou",
+      "P Bogenschutz"
+    ],
+    "year": 2023,
+    "doi": "10.5194/gmd-16-1909-2023",
+    "venue": "Geoscientific Model Development"
+  },
+  {
+    "title": "Implementation in the NCEP GFS of a Hybrid Eddy-Diffusivity Mass-Flux (EDMF) Boundary Layer Parameterization with Dissipative Heating and Modified Stable Boundary Layer Mixing",
+    "authors": [
+      "J Han",
+      "ML Witek",
+      "J Teixeira",
+      "R Sun",
+      "H Pan",
+      "JK Fletcher",
+      "CS Bretherton"
+    ],
+    "year": 2016,
+    "doi": "10.1175/WAF-D-15-0053.1",
+    "venue": "Weather and Forecasting"
+  },
+  {
+    "title": "TKE-Based Moist Eddy-Diffusivity Mass-Flux (EDMF) Parameterization for Vertical Turbulent Mixing",
+    "authors": [
+      "J Han",
+      "CS Bretherton"
+    ],
+    "year": 2019,
+    "doi": "10.1175/WAF-D-18-0146.1",
+    "venue": "Weather and Forecasting"
+  },
+  {
+    "title": "Towards Unifying the Planetary Boundary Layer and Shallow Convection in CAM5 with the Eddy-Diffusivity/Mass-Flux Approach",
+    "authors": [
+      "MJ Kurowski",
+      "HT Thrastarson",
+      "K Suselj",
+      "J Teixeira"
+    ],
+    "year": 2019,
+    "doi": "10.3390/atmos10090484",
+    "venue": "Atmosphere"
+  },
+  {
+    "title": "Shallow-to-Deep Transition of Continental Moist Convection: Cold Pools, Surface Fluxes, and Mesoscale Organization",
+    "authors": [
+      "MJ Kurowski",
+      "K Suselj",
+      "WW Grabowski",
+      "J Teixeira"
+    ],
+    "year": 2018,
+    "doi": "10.1175/JAS-D-18-0031.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "Is shallow convection sensitive to environmental heterogeneities?",
+    "authors": [
+      "MJ Kurowski",
+      "K Suselj",
+      "WW Grabowski"
+    ],
+    "year": 2019,
+    "doi": "10.1029/2018GL080847",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "A dual mass flux framework for boundary layer convection. Part I: Transport",
+    "authors": [
+      "RAJ Neggers",
+      "M Köhler",
+      "ACM Beljaars"
+    ],
+    "year": 2009,
+    "doi": "10.1175/2008JAS2635.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "A dual mass flux framework for boundary layer convection. Part II: Clouds",
+    "authors": [
+      "RAJ Neggers"
+    ],
+    "year": 2009,
+    "doi": "10.1175/2008JAS2636.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "A description of the MYNN-EDMF scheme and the coupling to other components in WRF-ARW",
+    "authors": [
+      "JB Olson",
+      "JS Kenyon",
+      "WM Angevine",
+      "JM Brown",
+      "M Pagowski",
+      "K Sušelj"
+    ],
+    "year": 2019,
+    "doi": null,
+    "venue": "NOAA Technical Memorandum OAR GSD"
+  },
+  {
+    "title": "Entrainment and detrainment in cumulus convection: an overview",
+    "authors": [
+      "WC de Rooy",
+      "P Bechtold",
+      "K Fröhlich",
+      "C Hohenegger",
+      "H Jonker",
+      "D Mironov",
+      "AP Siebesma",
+      "J Teixeira",
+      "JI Yano"
+    ],
+    "year": 2013,
+    "doi": "10.1002/qj.1959",
+    "venue": "Quarterly Journal of the Royal Meteorological Society"
+  },
+  {
+    "title": "A combined eddy diffusivity mass flux approach for the convective boundary layer",
+    "authors": [
+      "AP Siebesma",
+      "PMM Soares",
+      "J Teixeira"
+    ],
+    "year": 2007,
+    "doi": "10.1175/JAS3888.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "A Novel Framework for Evaluating and Improving Parameterized Subtropical Marine Boundary Layer Cloudiness",
+    "authors": [
+      "M Smalley",
+      "K Sušelj",
+      "M Lebsock",
+      "J Teixeira"
+    ],
+    "year": 2019,
+    "doi": "10.1175/MWR-D-18-0394.1",
+    "venue": "Monthly Weather Review"
+  },
+  {
+    "title": "Coupling warm rain with an eddy diffusivity/mass flux parameterization: 2. Sensitivities and comparison to observations",
+    "authors": [
+      "MA Smalley",
+      "K Suselj",
+      "MD Lebsock",
+      "MK Witte"
+    ],
+    "year": 2022,
+    "doi": "10.1029/2021MS002729",
+    "venue": "Journal of Advances in Modeling Earth Systems"
+  },
+  {
+    "title": "An eddy diffusivity/mass flux parametrization for dry and shallow cumulus convection",
+    "authors": [
+      "PMM Soares",
+      "PMA Miranda",
+      "AP Siebesma",
+      "J Teixeira"
+    ],
+    "year": 2004,
+    "doi": "10.1256/qj.03.223",
+    "venue": "Quarterly Journal of the Royal Meteorological Society"
+  },
+  {
+    "title": "Eddy Diffusivity/Mass Flux and Shallow Cumulus Boundary Layer: An Updraft PDF Multiple Mass Flux Scheme",
+    "authors": [
+      "K Sušelj",
+      "J Teixeira",
+      "G Matheou"
+    ],
+    "year": 2012,
+    "doi": "10.1175/JAS-D-11-090.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "A unified model for moist convective boundary layers based on a stochastic eddy-diffusivity/mass-flux parameterization",
+    "authors": [
+      "K Sušelj",
+      "J Teixeira",
+      "D Chung"
+    ],
+    "year": 2013,
+    "doi": "10.1175/JAS-D-12-0106.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "Implementation of a Stochastic Eddy-Diffusivity/Mass-Flux Parameterization into the Navy Global Environmental Model",
+    "authors": [
+      "K Sušelj",
+      "TF Hogan",
+      "J Teixeira"
+    ],
+    "year": 2014,
+    "doi": "10.1175/WAF-D-14-00043.1",
+    "venue": "Weather and Forecasting"
+  },
+  {
+    "title": "A Unified Eddy-Diffusivity/Mass-Flux Approach for Modeling Atmospheric Convection",
+    "authors": [
+      "K Suselj",
+      "MJ Kurowski",
+      "J Teixeira"
+    ],
+    "year": 2019,
+    "doi": "10.1175/JAS-D-18-0239.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "On the factors controlling development of shallow convection in eddy-diffusivity/mass-flux models",
+    "authors": [
+      "K Suselj",
+      "M Kurowski",
+      "J Teixeira"
+    ],
+    "year": 2019,
+    "doi": "10.1175/JAS-D-18-0121.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "A New Methodology for Observation-Based Parameterization Development",
+    "authors": [
+      "K Suselj",
+      "D Posselt",
+      "M Smalley",
+      "MD Lebsock",
+      "J Teixeira"
+    ],
+    "year": 2020,
+    "doi": "10.1175/MWR-D-19-0369.1",
+    "venue": "Monthly Weather Review"
+  },
+  {
+    "title": "Improving the Representation of Subtropical Boundary Layer Clouds in the NASA GEOS Model with the Eddy-Diffusivity/Mass-Flux Parameterization",
+    "authors": [
+      "K Suselj",
+      "J Teixeira",
+      "MJ Kurowski",
+      "A Molod"
+    ],
+    "year": 2021,
+    "doi": "10.1175/MWR-D-20-0105.1",
+    "venue": "Monthly Weather Review"
+  }
+]

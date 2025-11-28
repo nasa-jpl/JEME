@@ -1,0 +1,241 @@
+[
+  {
+    "title": "Synthetic Observations of the Planetary Boundary Layer from Space: A Retrieval Observing System Simulation Experiment Framework",
+    "authors": [
+      "MJ Kurowski",
+      "J Teixeira",
+      "C Ao",
+      "S Brown",
+      "AB Davis",
+      "L Forster"
+    ],
+    "year": 2023,
+    "doi": "10.1175/BAMS-D-22-0129.1",
+    "venue": "Bulletin of the American Meteorological Society"
+  },
+  {
+    "title": "Understanding Errors in Cloud Liquid Water Path Retrievals Derived from CloudSat Path-Integrated Attenuation",
+    "authors": [
+      "M Lebsock",
+      "H Takahashi",
+      "R Roy",
+      "MJ Kurowski",
+      "L Oreopoulos"
+    ],
+    "year": 2022,
+    "doi": null,
+    "venue": "Journal of Applied Meteorology and Climatology"
+  },
+  {
+    "title": "New sampling strategy mitigates a solar-geometry-induced bias in sub-kilometre vapour scaling statistics derived from imaging spectroscopy",
+    "authors": [
+      "MT Richardson",
+      "DR Thompson",
+      "MJ Kurowski",
+      "MD Lebsock"
+    ],
+    "year": 2022,
+    "doi": "10.5194/amt-15-117-2022",
+    "venue": "Atmospheric Measurement Techniques"
+  },
+  {
+    "title": "Computational Domain Size Effects on Large-Eddy Simulations of Precipitating Shallow Cumulus Convection",
+    "authors": [
+      "O Lamaakel",
+      "R Venters",
+      "J Teixeira",
+      "G Matheou"
+    ],
+    "year": 2023,
+    "doi": null,
+    "venue": "Atmosphere"
+  },
+  {
+    "title": "Large-eddy simulation of cumulus clouds",
+    "authors": [
+      "G Matheou"
+    ],
+    "year": 2022,
+    "doi": "10.1103/PhysRevFluids.7.110507",
+    "venue": "Physical Review Fluids"
+  },
+  {
+    "title": "Organization Development in Precipitating Shallow Cumulus Convection: Evolution of Turbulence Characteristics",
+    "authors": [
+      "O Lamaakel",
+      "G Matheou"
+    ],
+    "year": 2022,
+    "doi": "10.1175/JAS-D-21-0334.1",
+    "venue": "Journal of the Atmospheric Sciences"
+  },
+  {
+    "title": "Large-eddy simulation of very stable boundary layers. Part II: Length scales and anisotropy in stratified atmospheric turbulence",
+    "authors": [
+      "MJ Chinita",
+      "G Matheou",
+      "PMA Miranda"
+    ],
+    "year": 2022,
+    "doi": "10.1002/qj.4272",
+    "venue": "Quarterly Journal of the Royal Meteorological Society"
+  },
+  {
+    "title": "Large-eddy simulation of very stable boundary layers. Part I: Modeling methodology",
+    "authors": [
+      "MJ Chinita",
+      "G Matheou",
+      "PMA Miranda"
+    ],
+    "year": 2022,
+    "doi": "10.1002/qj.4271",
+    "venue": "Quarterly Journal of the Royal Meteorological Society"
+  },
+  {
+    "title": "MethaNet-An AI-driven approach to quantifying methane point-source emission from high-resolution 2-D plume imagery",
+    "authors": [
+      "S Jongaramrungruang",
+      "AK Thorpe",
+      "G Matheou",
+      "C Frankenberg"
+    ],
+    "year": 2022,
+    "doi": "10.1016/j.rse.2021.112809",
+    "venue": "Remote Sensing of Environment"
+  },
+  {
+    "title": "Spaceborne differential absorption radar water vapor retrieval capabilities in tropical and subtropical boundary layer cloud regimes",
+    "authors": [
+      "RJ Roy",
+      "M Lebsock",
+      "MJ Kurowski"
+    ],
+    "year": 2021,
+    "doi": "10.5194/amt-14-6443-2021",
+    "venue": "Atmospheric Measurement Techniques"
+  },
+  {
+    "title": "Boundary layer water vapour statistics from high-spatial-resolution spaceborne imaging spectroscopy",
+    "authors": [
+      "MT Richardson",
+      "DR Thompson",
+      "MJ Kurowski",
+      "MD Lebsock"
+    ],
+    "year": 2021,
+    "doi": "10.5194/amt-14-5555-2021",
+    "venue": "Atmospheric Measurement Techniques"
+  },
+  {
+    "title": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "authors": [
+      "S Jongaramrungruang",
+      "G Matheou",
+      "AK Thorpe",
+      "ZC Zeng",
+      "C Frankenberg"
+    ],
+    "year": 2021,
+    "doi": "10.5194/amt-14-7999-2021",
+    "venue": "Atmospheric Measurement Techniques"
+  },
+  {
+    "title": "Galilean invariance of shallow cumulus convection large-eddy simulations",
+    "authors": [
+      "O Lamaakel",
+      "G Matheou"
+    ],
+    "year": 2021,
+    "doi": "10.1016/j.jcp.2020.110012",
+    "venue": "Journal of Computational Physics"
+  },
+  {
+    "title": "Intercomparison of large-eddy simulations of the Antarctic boundary layer for very stable stratification",
+    "authors": [
+      "F Couvreux",
+      "E Bazile",
+      "Q Rodier",
+      "B Maronga",
+      "G Matheou",
+      "MJ Chinita"
+    ],
+    "year": 2020,
+    "doi": "10.1007/s10546-020-00539-4",
+    "venue": "Boundary-Layer Meteorology"
+  },
+  {
+    "title": "The spiderweb structure of stratocumulus clouds",
+    "authors": [
+      "G Matheou",
+      "AB Davis",
+      "J Teixeira"
+    ],
+    "year": 2020,
+    "doi": "10.3390/atmos11070730",
+    "venue": "Atmosphere"
+  },
+  {
+    "title": "Towards accurate methane point-source quantification from high-resolution 2-D plume imagery",
+    "authors": [
+      "S Jongaramrungruang",
+      "C Frankenberg",
+      "G Matheou",
+      "AK Thorpe"
+    ],
+    "year": 2019,
+    "doi": "10.5194/amt-12-6667-2019",
+    "venue": "Atmospheric Measurement Techniques"
+  },
+  {
+    "title": "Turbulent shear-layer mixing: initial conditions, and direct-numerical and large-eddy simulations",
+    "authors": [
+      "N Sharan",
+      "G Matheou",
+      "PE Dimotakis"
+    ],
+    "year": 2019,
+    "doi": "10.1017/jfm.2019.565",
+    "venue": "Journal of Fluid Mechanics"
+  },
+  {
+    "title": "Sensitivity to physical and numerical aspects of large-eddy simulation of stratocumulus",
+    "authors": [
+      "G Matheou",
+      "J Teixeira"
+    ],
+    "year": 2019,
+    "doi": "10.1175/MWR-D-18-0294.1",
+    "venue": "Monthly Weather Review"
+  },
+  {
+    "title": "Turbulence structure in a stratocumulus cloud",
+    "authors": [
+      "G Matheou"
+    ],
+    "year": 2018,
+    "doi": "10.3390/atmos9100392",
+    "venue": "Atmosphere"
+  },
+  {
+    "title": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
+    "authors": [
+      "N Sharan",
+      "G Matheou",
+      "PE Dimotakis"
+    ],
+    "year": 2018,
+    "doi": "10.1016/j.jcp.2018.05.020",
+    "venue": "Journal of Computational Physics"
+  },
+  {
+    "title": "A joint probability density-based decomposition of turbulence in the atmospheric boundary layer",
+    "authors": [
+      "MJ Chinita",
+      "G Matheou",
+      "J Teixeira"
+    ],
+    "year": 2018,
+    "doi": "10.1175/MWR-D-17-0166.1",
+    "venue": "Monthly Weather Review"
+  }
+]
