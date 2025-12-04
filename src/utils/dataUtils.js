@@ -80,22 +80,55 @@ export const calculateGrowthPercentage = (currentValue, previousValue) => {
 // NEW FUNCTIONS FOR MODEL PROCESSING
 
 // Extract standardized publication data from any model's JSON
+// Handles both Crossref format and simplified citation scraper format
 export const extractPublicationData = (entry) => {
   try {
-    return {
-      title: entry.title?.[0] || 'Untitled',
-      authors: entry.author?.map(a => `${a.given || ''} ${a.family || ''}`.trim()) || [],
-      year: entry['published-print']?.['date-parts']?.[0]?.[0] || null,
-      month: entry['published-print']?.['date-parts']?.[0]?.[1] || null,
-      citations: Number(entry['is-referenced-by-count'] || entry.citations || 0),
-      doi: entry.DOI || '',
-      models: entry.models || [],
-      researchDomain: entry.research_domain || 'Unknown',
-      abstract: entry.abstract || '',
-      publisher: entry.publisher || 'Unknown',
-      journal: entry['container-title']?.[0] || 'Unknown Journal',
-      references: entry['reference-count'] || 0
-    };
+    // Detect format: Crossref has title as array, simplified has title as string
+    const isCrossrefFormat = Array.isArray(entry.title);
+
+    if (isCrossrefFormat) {
+      // Crossref API format
+      return {
+        title: entry.title?.[0] || 'Untitled',
+        authors: entry.author?.map(a => `${a.given || ''} ${a.family || ''}`.trim()) || [],
+        year: entry['published-print']?.['date-parts']?.[0]?.[0] ||
+              entry['published-online']?.['date-parts']?.[0]?.[0] ||
+              entry['created']?.['date-parts']?.[0]?.[0] || null,
+        month: entry['published-print']?.['date-parts']?.[0]?.[1] ||
+               entry['published-online']?.['date-parts']?.[0]?.[1] || null,
+        citations: Number(entry['is-referenced-by-count'] || entry.citations || entry.citation_count || 0),
+        doi: entry.DOI || entry.doi || '',
+        models: entry.models || [],
+        researchDomain: entry.research_domain || 'Unknown',
+        abstract: entry.abstract || '',
+        publisher: entry.publisher || 'Unknown',
+        journal: entry['container-title']?.[0] || 'Unknown Journal',
+        references: entry['reference-count'] || 0,
+        url: entry.URL || entry.url || '',
+        citingTeamPaper: entry.citing_team_paper || null,
+        teamPaperId: entry.team_paper_id || null
+      };
+    } else {
+      // Simplified citation scraper format
+      return {
+        title: entry.title || 'Untitled',
+        authors: Array.isArray(entry.authors) ? entry.authors : [],
+        year: entry.year || null,
+        month: null,
+        citations: Number(entry.citation_count || entry.citations || 0),
+        doi: entry.doi || entry.DOI || '',
+        models: entry.models || [],
+        researchDomain: entry.research_domain || 'Unknown',
+        abstract: entry.abstract || '',
+        publisher: entry.publisher || 'Unknown',
+        journal: entry.venue || entry.journal || 'Unknown Journal',
+        references: 0,
+        url: entry.url || '',
+        paperId: entry.paper_id || null,
+        citingTeamPaper: entry.citing_team_paper || null,
+        teamPaperId: entry.team_paper_id || null
+      };
+    }
   } catch (error) {
     console.error('Error extracting publication data:', error);
     return null;
