@@ -1,0 +1,119 @@
+{
+  "model_name": "ECCO",
+  "total_papers": 31777,
+  "sample_size": 200,
+  "scores": {
+    "MCL-1": {
+      "score": 2.7,
+      "evidence_count": 3,
+      "top_evidence": [
+        "Used to study mixing in stratified Boussinesq flows and available potential energy",
+        "Includes cyclogeostrophy and Ekman components with geostrophy",
+        "Model captures large-scale to submesoscale surface circulation features including fronts"
+      ],
+      "level_description": "State-of-the-art physics with comprehensive process representation"
+    },
+    "MCL-2": {
+      "score": 3.0,
+      "evidence_count": 2,
+      "top_evidence": [
+        "High-resolution product capable of identifying small-scale features detected with finite-size Lyapunov exponents (FSLEs)",
+        "Resolves submesoscale features and fronts"
+      ],
+      "level_description": "All relevant scales fully resolved for intended applications"
+    },
+    "MCL-3": {
+      "score": 1.01,
+      "evidence_count": 1,
+      "top_evidence": [
+        "Used to reconstruct wintertime conditions from summertime observations, indicating seasonal temporal resolution capability"
+      ],
+      "level_description": "Broader set of time scales represented"
+    },
+    "MCL-4": {
+      "score": 1.52,
+      "evidence_count": 2,
+      "top_evidence": [
+        "Circulation physics linked to biogeochemical/biological horizontal distributions",
+        "Used to analyze air-sea CO2 fluxes, implying coupling or interface with atmospheric exchanges"
+      ],
+      "level_description": "Off-line coupling to multiple models OR full coupling between 2 components"
+    },
+    "MCL-5": {
+      "score": 2.02,
+      "evidence_count": 2,
+      "top_evidence": [
+        "Circulation product validated by in situ drifters",
+        "Able to identify water mass pathways and mesoscale structures"
+      ],
+      "level_description": "Routine use for prediction in limited settings"
+    },
+    "MCL-6": {
+      "score": 0.0,
+      "evidence_count": 0,
+      "top_evidence": [],
+      "level_description": "Not scalable, limited to small systems"
+    },
+    "MCL-7": {
+      "score": 2.02,
+      "evidence_count": 2,
+      "top_evidence": [
+        "Product is altimetry-derived (satellite constraint)",
+        "Validated by in situ drifters (observational constraint)"
+      ],
+      "level_description": "Comprehensive observational dataset (NASA missions only)"
+    },
+    "MCL-8": {
+      "score": 2.02,
+      "evidence_count": 2,
+      "top_evidence": [
+        "Provides physical state estimates (stratification/mixing) for diagnostic energy analysis",
+        "Used to reconstruct pseudo observations for periods with sparse historical coverage (winter)"
+      ],
+      "level_description": "Multi-observation DA over long records for limited systems"
+    },
+    "MCL-9": {
+      "score": 0.0,
+      "evidence_count": 0,
+      "top_evidence": [],
+      "level_description": "No uncertainty quantification"
+    },
+    "MCL-10": {
+      "score": 2.02,
+      "evidence_count": 2,
+      "top_evidence": [
+        "Explicit validation against in situ drifter data",
+        "Comparison against finite-size Lyapunov exponents (FSLEs) for front detection"
+      ],
+      "level_description": "Routine validation against multiple datasets for limited cases"
+    },
+    "MCL-11": {
+      "score": 0.0,
+      "evidence_count": 0,
+      "top_evidence": [],
+      "level_description": "No ML/AI integration"
+    },
+    "MCL-12": {
+      "score": 0.0,
+      "evidence_count": 0,
+      "top_evidence": [],
+      "level_description": "No mission support capability"
+    },
+    "MCL-13": {
+      "score": 0.0,
+      "evidence_count": 0,
+      "top_evidence": [],
+      "level_description": "Proprietary, core developers only"
+    },
+    "MCL-14": {
+      "score": 1.04,
+      "evidence_count": 3,
+      "top_evidence": [
+        "Used to estimate air-sea CO2 fluxes (climate research application)",
+        "Used to explain phytoplankton community structure shifts (ecosystem research)",
+        "Used to analyze biogeochemical distributions during cruise campaigns"
+      ],
+      "level_description": "Tested in limited applications"
+    }
+  }
+}
