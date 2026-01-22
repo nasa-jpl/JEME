@@ -192,7 +192,7 @@ const GenericGeographicImpactPage = () => {
           });
         }
         // Otherwise try to extract from author affiliations (Crossref format)
-        else if (citation.author && Array.isArray(citation.author)) {
+        else if (citation.author && Array.isArray(citation.author) && citation.author.length > 0 && typeof citation.author[0] === 'object') {
           // Extract countries from all authors' affiliations
           const countries = new Set();
 
@@ -218,6 +218,67 @@ const GenericGeographicImpactPage = () => {
               region: region,
               allCountries: Array.from(countries)
             });
+          }
+        }
+
+        // Fallback: extract geographic info from title and abstract text
+        if (!primaryCountry) {
+          const title = Array.isArray(citation.title) ? citation.title[0] : (citation.title || '');
+          const abstract = citation.abstract || '';
+          const text = `${title} ${abstract}`;
+
+          // Extended country/region keywords for text extraction
+          const textGeoMappings = [
+            { keywords: ['United States', 'USA', 'U.S.', 'American', 'Mississippi', 'Colorado River', 'Ohio River', 'Missouri River', 'Texas', 'California', 'Florida'], country: 'United States' },
+            { keywords: ['China', 'Chinese', 'Yangtze', 'Yellow River', 'Pearl River'], country: 'China' },
+            { keywords: ['France', 'French', 'Seine', 'Loire', 'Rhone'], country: 'France' },
+            { keywords: ['Germany', 'German', 'Rhine', 'Danube'], country: 'Germany' },
+            { keywords: ['United Kingdom', 'UK', 'British', 'England', 'Scotland', 'Wales', 'Thames'], country: 'United Kingdom' },
+            { keywords: ['Canada', 'Canadian', 'St. Lawrence', 'Mackenzie'], country: 'Canada' },
+            { keywords: ['Australia', 'Australian', 'Murray-Darling', 'Murray River'], country: 'Australia' },
+            { keywords: ['Brazil', 'Brazilian', 'Amazon', 'Amazonas', 'São Francisco'], country: 'Brazil' },
+            { keywords: ['India', 'Indian', 'Ganges', 'Ganga', 'Brahmaputra', 'Indus'], country: 'India' },
+            { keywords: ['Japan', 'Japanese'], country: 'Japan' },
+            { keywords: ['South Korea', 'Korea', 'Korean'], country: 'South Korea' },
+            { keywords: ['Italy', 'Italian', 'Po River'], country: 'Italy' },
+            { keywords: ['Spain', 'Spanish', 'Ebro', 'Tagus'], country: 'Spain' },
+            { keywords: ['Netherlands', 'Dutch'], country: 'Netherlands' },
+            { keywords: ['Switzerland', 'Swiss'], country: 'Switzerland' },
+            { keywords: ['Sweden', 'Swedish'], country: 'Sweden' },
+            { keywords: ['Norway', 'Norwegian'], country: 'Norway' },
+            { keywords: ['Denmark', 'Danish'], country: 'Denmark' },
+            { keywords: ['Belgium', 'Belgian'], country: 'Belgium' },
+            { keywords: ['Austria', 'Austrian'], country: 'Austria' },
+            { keywords: ['Finland', 'Finnish'], country: 'Finland' },
+            { keywords: ['Mexico', 'Mexican'], country: 'Mexico' },
+            { keywords: ['Argentina', 'Argentine', 'Paraná'], country: 'Argentina' },
+            { keywords: ['Chile', 'Chilean'], country: 'Chile' },
+            { keywords: ['Peru', 'Peruvian'], country: 'Peru' },
+            { keywords: ['Africa', 'African', 'Nile', 'Congo River', 'Niger River', 'Zambezi'], country: 'Africa' },
+            { keywords: ['Europe', 'European'], country: 'Europe' },
+            { keywords: ['Asia', 'Asian'], country: 'Asia' }
+          ];
+
+          for (const mapping of textGeoMappings) {
+            const found = mapping.keywords.some(keyword =>
+              text.toLowerCase().includes(keyword.toLowerCase())
+            );
+            if (found) {
+              primaryCountry = mapping.country;
+              region = getRegionFromCountry(primaryCountry);
+              // Handle continental-level entries
+              if (primaryCountry === 'Africa') region = 'Africa';
+              if (primaryCountry === 'Europe') region = 'Europe';
+              if (primaryCountry === 'Asia') region = 'Asia';
+
+              entriesWithGeo.push({
+                ...citation,
+                country: primaryCountry,
+                region: region,
+                allCountries: [primaryCountry]
+              });
+              break;
+            }
           }
         }
       });

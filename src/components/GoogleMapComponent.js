@@ -1,8 +1,74 @@
 // src/components/GoogleMapComponent.js
-// Simple Google Maps component for geographic visualization
+// Google Maps component for geographic visualization with region-colored bubbles
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
 
+// Region color mapping
+const REGION_COLORS = {
+  'North America': { fill: '#3B82F6', stroke: '#2563EB', name: 'North America' },
+  'South America': { fill: '#10B981', stroke: '#059669', name: 'South America' },
+  'Europe': { fill: '#8B5CF6', stroke: '#7C3AED', name: 'Europe' },
+  'Africa': { fill: '#F59E0B', stroke: '#D97706', name: 'Africa' },
+  'Asia': { fill: '#EF4444', stroke: '#DC2626', name: 'Asia' },
+  'Oceania': { fill: '#06B6D4', stroke: '#0891B2', name: 'Oceania' },
+  'Other': { fill: '#6B7280', stroke: '#4B5563', name: 'Other' }
+};
+
+// Country to region mapping
+const COUNTRY_TO_REGION = {
+  'United States': 'North America',
+  'Canada': 'North America',
+  'Mexico': 'North America',
+  'Brazil': 'South America',
+  'Argentina': 'South America',
+  'Chile': 'South America',
+  'Peru': 'South America',
+  'Colombia': 'South America',
+  'France': 'Europe',
+  'Germany': 'Europe',
+  'United Kingdom': 'Europe',
+  'Italy': 'Europe',
+  'Spain': 'Europe',
+  'Netherlands': 'Europe',
+  'Switzerland': 'Europe',
+  'Sweden': 'Europe',
+  'Norway': 'Europe',
+  'Denmark': 'Europe',
+  'Belgium': 'Europe',
+  'Austria': 'Europe',
+  'Finland': 'Europe',
+  'Poland': 'Europe',
+  'Portugal': 'Europe',
+  'China': 'Asia',
+  'Japan': 'Asia',
+  'South Korea': 'Asia',
+  'India': 'Asia',
+  'Bangladesh': 'Asia',
+  'Bhutan': 'Asia',
+  'Nepal': 'Asia',
+  'Thailand': 'Asia',
+  'Vietnam': 'Asia',
+  'Indonesia': 'Asia',
+  'Malaysia': 'Asia',
+  'Cambodia': 'Asia',
+  'Laos': 'Asia',
+  'Myanmar': 'Asia',
+  'Pakistan': 'Asia',
+  'Ethiopia': 'Africa',
+  'Kenya': 'Africa',
+  'Tanzania': 'Africa',
+  'Uganda': 'Africa',
+  'Egypt': 'Africa',
+  'Sudan': 'Africa',
+  'Ghana': 'Africa',
+  'Nigeria': 'Africa',
+  'South Africa': 'Africa',
+  'Burkina Faso': 'Africa',
+  'Mali': 'Africa',
+  'Australia': 'Oceania',
+  'New Zealand': 'Oceania',
+  'Papua New Guinea': 'Oceania'
+};
 
 const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
   const mapRef = useRef(null);
@@ -10,7 +76,26 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [loadError, setLoadError] = useState(null);
   const markersRef = useRef([]);
-  const circlesRef = useRef([]);
+
+  // Get region for a country
+  const getRegionForCountry = useCallback((country) => {
+    if (COUNTRY_TO_REGION[country]) {
+      return COUNTRY_TO_REGION[country];
+    }
+    // Try partial match
+    for (const [countryName, region] of Object.entries(COUNTRY_TO_REGION)) {
+      if (country.includes(countryName) || countryName.includes(country)) {
+        return region;
+      }
+    }
+    return 'Other';
+  }, []);
+
+  // Get color scheme for a country based on its region
+  const getColorForCountry = useCallback((country) => {
+    const region = getRegionForCountry(country);
+    return REGION_COLORS[region] || REGION_COLORS['Other'];
+  }, [getRegionForCountry]);
 
   useEffect(() => {
     if (!apiKey) {
@@ -20,9 +105,7 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
 
     let mounted = true;
 
-    // Load Google Maps API
     const loadGoogleMaps = () => {
-      // Check if already loaded and fully initialized
       if (window.google && window.google.maps && window.google.maps.Map) {
         if (mounted) {
           initializeMap();
@@ -30,13 +113,10 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
         return;
       }
 
-      // Check if script is already being loaded
       const existingScript = document.querySelector('script[src*="maps.googleapis.com"]');
       if (existingScript) {
-        // Wait for it to load
         existingScript.addEventListener('load', () => {
           if (mounted) {
-            // Wait a bit more for Safari to fully initialize
             setTimeout(() => {
               if (mounted && window.google && window.google.maps && window.google.maps.Map) {
                 initializeMap();
@@ -44,7 +124,7 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
             }, 100);
           }
         });
-        existingScript.addEventListener('error', (e) => {
+        existingScript.addEventListener('error', () => {
           if (mounted) {
             setLoadError('Failed to load Google Maps');
             setIsLoading(false);
@@ -53,13 +133,11 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
         return;
       }
 
-      // Create new script
       const script = document.createElement('script');
       const callbackName = `initMap_${Date.now()}`;
 
       window[callbackName] = () => {
         delete window[callbackName];
-        // Additional delay for Safari to ensure all Maps API internals are ready
         setTimeout(() => {
           if (mounted && window.google && window.google.maps && window.google.maps.Map) {
             try {
@@ -98,7 +176,6 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
   }, [apiKey]);
 
   const getCountryCoordinates = useCallback((country) => {
-    // Expanded mapping of country names to coordinates based on RAPID data
     const coordinates = {
       'United States': { lat: 39.8283, lng: -98.5795 },
       'France': { lat: 46.2276, lng: 2.2137 },
@@ -129,15 +206,38 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
       'Papua New Guinea': { lat: -6.314993, lng: 143.95555 },
       'Ghana': { lat: 7.9465, lng: -1.0232 },
       'Burkina Faso': { lat: 12.2383, lng: -1.5616 },
-      'Mali': { lat: 17.5707, lng: -3.9962 }
+      'Mali': { lat: 17.5707, lng: -3.9962 },
+      'United Kingdom': { lat: 55.3781, lng: -3.4360 },
+      'Japan': { lat: 36.2048, lng: 138.2529 },
+      'Australia': { lat: -25.2744, lng: 133.7751 },
+      'Italy': { lat: 41.8719, lng: 12.5674 },
+      'Spain': { lat: 40.4637, lng: -3.7492 },
+      'Mexico': { lat: 23.6345, lng: -102.5528 },
+      'Argentina': { lat: -38.4161, lng: -63.6167 },
+      'South Africa': { lat: -30.5595, lng: 22.9375 },
+      'Nigeria': { lat: 9.0820, lng: 8.6753 },
+      'Netherlands': { lat: 52.1326, lng: 5.2913 },
+      'Switzerland': { lat: 46.8182, lng: 8.2275 },
+      'Sweden': { lat: 60.1282, lng: 18.6435 },
+      'Norway': { lat: 60.4720, lng: 8.4689 },
+      'Poland': { lat: 51.9194, lng: 19.1451 },
+      'Belgium': { lat: 50.5039, lng: 4.4699 },
+      'Austria': { lat: 47.5162, lng: 14.5501 },
+      'Denmark': { lat: 56.2639, lng: 9.5018 },
+      'Finland': { lat: 61.9241, lng: 25.7482 },
+      'Portugal': { lat: 39.3999, lng: -8.2245 },
+      'New Zealand': { lat: -40.9006, lng: 174.8860 },
+      'Colombia': { lat: 4.5709, lng: -74.2973 },
+      'Pakistan': { lat: 30.3753, lng: 69.3451 },
+      'Africa': { lat: 0.0, lng: 20.0 },
+      'Europe': { lat: 54.0, lng: 15.0 },
+      'Asia': { lat: 30.0, lng: 100.0 }
     };
 
-    // Try exact match first
     if (coordinates[country]) {
       return coordinates[country];
     }
 
-    // Try partial matches for complex country strings
     for (const [countryName, coords] of Object.entries(coordinates)) {
       if (country.includes(countryName)) {
         return coords;
@@ -147,146 +247,107 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
     return null;
   }, []);
 
-  const getRegionCoordinates = useCallback((regionName) => {
-    // Regional center coordinates for major geographic regions
-    const regionCoordinates = {
-      'North America': { lat: 45.0, lng: -100.0 },
-      'South America': { lat: -15.0, lng: -60.0 },
-      'Europe': { lat: 54.0, lng: 15.0 },
-      'Africa': { lat: 0.0, lng: 20.0 },
-      'Asia': { lat: 30.0, lng: 100.0 },
-      'Oceania': { lat: -25.0, lng: 140.0 },
-      'Antarctica': { lat: -82.0, lng: 0.0 },
-      'Other': { lat: 0.0, lng: 0.0 }
-    };
-
-    return regionCoordinates[regionName] || null;
-  }, []);
-
   const addCountryMarkers = useCallback((map) => {
     if (!data || data.length === 0 || !window.google || !window.google.maps) return;
 
-    try {
-      console.log('Adding markers for countries:', data.slice(0, 3));
+    // Find max papers for scaling
+    const maxPapers = Math.max(...data.map(d => d.papers || 0), 1);
 
-      data.forEach((item, index) => {
+    try {
+      data.forEach((item) => {
         if (item.country && item.papers > 0) {
           try {
-            console.log(`Processing country: ${item.country}, papers: ${item.papers}, citations: ${item.citations}`);
-
             const countryCoords = getCountryCoordinates(item.country);
             if (countryCoords) {
-              console.log(`Adding marker for ${item.country} at:`, countryCoords);
+              const colorScheme = getColorForCountry(item.country);
+              const region = getRegionForCountry(item.country);
 
-              // Create a custom marker with better visibility and styling
-              const markerSize = Math.max(15, Math.min(item.papers * 3, 40));
-              const intensity = Math.min(item.papers / 10, 1); // Normalize for color intensity
+              // Scale bubble size: min 20, max 50, based on paper count
+              const normalizedSize = item.papers / maxPapers;
+              const bubbleSize = 20 + (normalizedSize * 30);
 
-              // Create custom marker with SVG icon
-              const svgMarker = {
-                path: 'M12,2C8.13,2 5,5.13 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9C19,5.13 15.87,2 12,2M12,7A2,2 0 0,1 14,9A2,2 0 0,1 12,11A2,2 0 0,1 10,9A2,2 0 0,1 12,7Z',
-                fillColor: `hsl(${220 - intensity * 60}, 85%, ${60 - intensity * 20}%)`,
-                fillOpacity: 0.9,
-                strokeColor: '#ffffff',
-                strokeWeight: 2,
-                scale: markerSize / 15,
-                labelOrigin: new window.google.maps.Point(12, 9)
-              };
-
-              console.log(`Creating enhanced marker for ${item.country} with ${item.papers} papers`);
+              // Create circle marker (bubble)
               const marker = new window.google.maps.Marker({
                 position: countryCoords,
                 map: map,
-                title: `${item.country}: ${item.papers} papers, ${item.citations} citations`,
-                icon: svgMarker,
+                title: `${item.country}: ${item.papers} papers`,
+                icon: {
+                  path: window.google.maps.SymbolPath.CIRCLE,
+                  fillColor: colorScheme.fill,
+                  fillOpacity: 0.8,
+                  strokeColor: colorScheme.stroke,
+                  strokeWeight: 2,
+                  scale: bubbleSize / 4
+                },
                 label: {
                   text: item.papers.toString(),
                   color: '#ffffff',
                   fontWeight: 'bold',
-                  fontSize: `${Math.max(10, markerSize / 2)}px`,
-                  className: 'marker-label'
+                  fontSize: '11px'
                 },
-                animation: window.google.maps.Animation.DROP
+                zIndex: item.papers // Larger bubbles on top
               });
-              console.log(`Simple marker created for ${item.country}`);
 
-            // Create info window with enhanced styling
-            const infoWindow = new window.google.maps.InfoWindow({
-              content: `
-                <div style="
-                  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                  padding: 16px;
-                  min-width: 260px;
-                  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
-                  border-radius: 12px;
-                  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
-                ">
-                  <div style="display: flex; align-items: center; margin-bottom: 12px;">
-                    <div style="
-                      width: 8px;
-                      height: 8px;
-                      background: ${svgMarker.fillColor};
-                      border-radius: 50%;
-                      margin-right: 8px;
-                    "></div>
-                    <h3 style="
-                      margin: 0;
-                      color: #1f2937;
-                      font-size: 18px;
-                      font-weight: 600;
-                    ">${item.country}</h3>
-                  </div>
-
-                  <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 12px;">
-                    <div style="
-                      background: #eff6ff;
-                      padding: 8px 12px;
-                      border-radius: 8px;
-                      border-left: 3px solid #3b82f6;
-                    ">
-                      <div style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Papers</div>
-                      <div style="font-size: 20px; font-weight: 700; color: #3b82f6;">${item.papers}</div>
+              // Create info window
+              const infoWindow = new window.google.maps.InfoWindow({
+                content: `
+                  <div style="
+                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+                    padding: 16px;
+                    min-width: 240px;
+                  ">
+                    <div style="display: flex; align-items: center; margin-bottom: 12px;">
+                      <div style="
+                        width: 12px;
+                        height: 12px;
+                        background: ${colorScheme.fill};
+                        border-radius: 50%;
+                        margin-right: 10px;
+                      "></div>
+                      <div>
+                        <h3 style="margin: 0; font-size: 16px; font-weight: 600; color: #1f2937;">
+                          ${item.country}
+                        </h3>
+                        <span style="font-size: 12px; color: ${colorScheme.fill}; font-weight: 500;">
+                          ${region}
+                        </span>
+                      </div>
                     </div>
-                    <div style="
-                      background: #f0fdf4;
-                      padding: 8px 12px;
-                      border-radius: 8px;
-                      border-left: 3px solid #10b981;
-                    ">
-                      <div style="font-size: 11px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px;">Citations</div>
-                      <div style="font-size: 20px; font-weight: 700; color: #10b981;">${item.citations || 0}</div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;">
+                      <div style="
+                        background: #f0f9ff;
+                        padding: 10px;
+                        border-radius: 8px;
+                        text-align: center;
+                      ">
+                        <div style="font-size: 11px; color: #64748b; margin-bottom: 2px;">Papers</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #0369a1;">${item.papers}</div>
+                      </div>
+                      <div style="
+                        background: #f0fdf4;
+                        padding: 10px;
+                        border-radius: 8px;
+                        text-align: center;
+                      ">
+                        <div style="font-size: 11px; color: #64748b; margin-bottom: 2px;">Citations</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #15803d;">${item.citations || 0}</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div style="margin-bottom: 8px;">
-                    <span style="
-                      font-size: 12px;
-                      font-weight: 600;
-                      color: #374151;
-                      background: #e5e7eb;
-                      padding: 2px 6px;
-                      border-radius: 4px;
-                    ">Regions: ${item.regions || 1}</span>
+                    ${item.domains ? `
+                    <div>
+                      <div style="font-size: 11px; color: #64748b; margin-bottom: 4px;">Research Domains</div>
+                      <div style="font-size: 12px; color: #374151; line-height: 1.4;">
+                        ${item.domains.length > 80 ? item.domains.substring(0, 80) + '...' : item.domains}
+                      </div>
+                    </div>
+                    ` : ''}
                   </div>
+                `
+              });
 
-                  <div>
-                    <div style="font-size: 12px; font-weight: 600; color: #374151; margin-bottom: 4px;">Research Domains</div>
-                    <div style="
-                      color: #6b7280;
-                      font-size: 11px;
-                      line-height: 1.4;
-                      max-height: 40px;
-                      overflow: hidden;
-                      text-overflow: ellipsis;
-                    ">${item.domains || 'N/A'}</div>
-                  </div>
-                </div>
-              `
-            });
-
-              // Add click listener
               marker.addListener('click', () => {
-                // Close any open info windows
                 if (window.currentInfoWindow) {
                   window.currentInfoWindow.close();
                 }
@@ -294,10 +355,7 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
                 window.currentInfoWindow = infoWindow;
               });
 
-              // Store marker reference for cleanup
               markersRef.current.push(marker);
-            } else {
-              console.warn(`No coordinates found for country: ${item.country}`);
             }
           } catch (markerError) {
             console.error(`Error creating marker for ${item.country}:`, markerError);
@@ -307,199 +365,23 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
     } catch (error) {
       console.error('Error adding country markers:', error);
     }
-  }, [data, getCountryCoordinates]);
-
-  const addRegionalOverlays = useCallback((map) => {
-    if (!regionalData || regionalData.length === 0 || !window.google || !window.google.maps) return;
-
-    try {
-      console.log('Adding regional overlays:', regionalData);
-
-      regionalData.forEach((region, index) => {
-        try {
-        const regionCoords = getRegionCoordinates(region.name);
-        if (regionCoords) {
-          // Create color based on region and intensity
-          const colors = [
-            { stroke: '#3B82F6', fill: '#3B82F6' }, // Blue
-            { stroke: '#10B981', fill: '#10B981' }, // Green
-            { stroke: '#F59E0B', fill: '#F59E0B' }, // Amber
-            { stroke: '#EF4444', fill: '#EF4444' }, // Red
-            { stroke: '#8B5CF6', fill: '#8B5CF6' }, // Purple
-            { stroke: '#06B6D4', fill: '#06B6D4' }, // Cyan
-          ];
-          const colorScheme = colors[index % colors.length];
-          const intensity = Math.min(region.papers / 20, 1);
-
-          // Create regional circle overlay with enhanced styling
-          const regionCircle = new window.google.maps.Circle({
-            strokeColor: colorScheme.stroke,
-            strokeOpacity: 0.8,
-            strokeWeight: 3,
-            fillColor: colorScheme.fill,
-            fillOpacity: 0.2 + (intensity * 0.15), // Dynamic opacity based on papers
-            map: map,
-            center: regionCoords,
-            radius: Math.max(800000, region.papers * 75000), // Scale radius based on papers
-            clickable: true
-          });
-
-          // Create regional info window with enhanced styling
-          const regionInfoWindow = new window.google.maps.InfoWindow({
-            content: `
-              <div style="
-                font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-                padding: 20px;
-                min-width: 300px;
-                background: linear-gradient(135deg, ${colorScheme.fill}08 0%, ${colorScheme.fill}15 100%);
-                border-radius: 16px;
-                box-shadow: 0 8px 25px -5px rgba(0, 0, 0, 0.1);
-                border: 2px solid ${colorScheme.stroke}40;
-              ">
-                <div style="display: flex; align-items: center; margin-bottom: 16px;">
-                  <div style="
-                    width: 12px;
-                    height: 12px;
-                    background: ${colorScheme.fill};
-                    border-radius: 50%;
-                    margin-right: 10px;
-                    box-shadow: 0 0 0 3px ${colorScheme.fill}30;
-                  "></div>
-                  <h3 style="
-                    margin: 0;
-                    color: #1f2937;
-                    font-size: 20px;
-                    font-weight: 700;
-                  ">${region.name}</h3>
-                  <span style="
-                    margin-left: auto;
-                    font-size: 12px;
-                    background: ${colorScheme.fill}20;
-                    color: ${colorScheme.stroke};
-                    padding: 4px 8px;
-                    border-radius: 12px;
-                    font-weight: 600;
-                  ">Region</span>
-                </div>
-
-                <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-bottom: 16px;">
-                  <div style="
-                    background: #eff6ff;
-                    padding: 12px;
-                    border-radius: 10px;
-                    border-left: 4px solid #3b82f6;
-                    text-align: center;
-                  ">
-                    <div style="font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Total Papers</div>
-                    <div style="font-size: 24px; font-weight: 800; color: #3b82f6;">${region.papers}</div>
-                  </div>
-                  <div style="
-                    background: #f0fdf4;
-                    padding: 12px;
-                    border-radius: 10px;
-                    border-left: 4px solid #10b981;
-                    text-align: center;
-                  ">
-                    <div style="font-size: 12px; color: #64748b; text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px;">Total Citations</div>
-                    <div style="font-size: 24px; font-weight: 800; color: #10b981;">${region.citations || 0}</div>
-                  </div>
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                  <div style="font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 6px;">
-                    <span style="color: #7c3aed;">📍</span> Countries (${region.countries.split(',').length})
-                  </div>
-                  <div style="
-                    color: #6b7280;
-                    font-size: 12px;
-                    background: #f9fafb;
-                    padding: 8px;
-                    border-radius: 6px;
-                    border-left: 3px solid #7c3aed;
-                  ">${region.countries}</div>
-                </div>
-
-                <div style="margin-bottom: 12px;">
-                  <div style="font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 6px;">
-                    <span style="color: #dc2626;">📅</span> Time Period
-                  </div>
-                  <span style="
-                    background: #fef2f2;
-                    color: #dc2626;
-                    padding: 4px 8px;
-                    border-radius: 6px;
-                    font-size: 12px;
-                    font-weight: 600;
-                  ">${region.yearRange || 'N/A'}</span>
-                </div>
-
-                <div>
-                  <div style="font-size: 13px; font-weight: 600; color: #374151; margin-bottom: 6px;">
-                    <span style="color: #059669;">🔬</span> Research Domains
-                  </div>
-                  <div style="
-                    color: #6b7280;
-                    font-size: 11px;
-                    line-height: 1.5;
-                    max-height: 60px;
-                    overflow: hidden;
-                    background: #f9fafb;
-                    padding: 8px;
-                    border-radius: 6px;
-                    border-left: 3px solid #059669;
-                  ">${region.domains || 'N/A'}</div>
-                </div>
-              </div>
-            `
-          });
-
-          // Add click listener to the circle
-          regionCircle.addListener('click', (e) => {
-            // Close any open info windows
-            if (window.currentInfoWindow) {
-              window.currentInfoWindow.close();
-            }
-            regionInfoWindow.setPosition(e.latLng);
-            regionInfoWindow.open(map);
-            window.currentInfoWindow = regionInfoWindow;
-          });
-
-          // Store circle reference for cleanup
-          circlesRef.current.push(regionCircle);
-        }
-        } catch (regionError) {
-          console.error(`Error creating overlay for region ${region.name}:`, regionError);
-        }
-      });
-    } catch (error) {
-      console.error('Error adding regional overlays:', error);
-    }
-  }, [regionalData, getRegionCoordinates]);
+  }, [data, getCountryCoordinates, getColorForCountry, getRegionForCountry]);
 
   const updateMapMarkers = useCallback(() => {
     if (!mapInstanceRef.current || !window.google || !window.google.maps) return;
 
-    // Clear existing markers and circles
+    // Clear existing markers
     markersRef.current.forEach(marker => marker.setMap(null));
-    circlesRef.current.forEach(circle => circle.setMap(null));
     markersRef.current = [];
-    circlesRef.current = [];
 
-    const map = mapInstanceRef.current;
+    addCountryMarkers(mapInstanceRef.current);
+  }, [addCountryMarkers]);
 
-    // Add markers for countries
-    addCountryMarkers(map);
-
-    // Add regional overlays
-    addRegionalOverlays(map);
-  }, [addCountryMarkers, addRegionalOverlays]);
-
-  // Separate effect for updating markers when data changes
   useEffect(() => {
     if (mapInstanceRef.current && !isLoading && !loadError) {
       updateMapMarkers();
     }
-  }, [data, regionalData, isLoading, loadError, updateMapMarkers]);
+  }, [data, isLoading, loadError, updateMapMarkers]);
 
   const initializeMap = useCallback(() => {
     if (!mapRef.current) {
@@ -507,7 +389,6 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
       return;
     }
 
-    // Verify Google Maps API is fully loaded
     if (!window.google || !window.google.maps || !window.google.maps.Map) {
       console.error('Google Maps API not fully loaded');
       setLoadError('Google Maps API not ready');
@@ -516,194 +397,45 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
     }
 
     try {
-      console.log('Initializing map with data:', data);
-      console.log('Data length:', data ? data.length : 'no data');
-
       const map = new window.google.maps.Map(mapRef.current, {
         zoom: 2,
         center: { lat: 20, lng: 0 },
         mapTypeId: 'terrain',
         styles: [
-        {
-          "featureType": "water",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#1e3a8a"
-            },
-            {
-              "lightness": 17
-            }
-          ]
-        },
-        {
-          "featureType": "landscape",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#f5f5f5"
-            },
-            {
-              "lightness": 20
-            }
-          ]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "geometry.fill",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 17
-            }
-          ]
-        },
-        {
-          "featureType": "road.highway",
-          "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 29
-            },
-            {
-              "weight": 0.2
-            }
-          ]
-        },
-        {
-          "featureType": "road.arterial",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 18
-            }
-          ]
-        },
-        {
-          "featureType": "road.local",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 16
-            }
-          ]
-        },
-        {
-          "featureType": "poi",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#f5f5f5"
-            },
-            {
-              "lightness": 21
-            }
-          ]
-        },
-        {
-          "featureType": "poi.park",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#dedede"
-            },
-            {
-              "lightness": 21
-            }
-          ]
-        },
-        {
-          "elementType": "labels.text.stroke",
-          "stylers": [
-            {
-              "visibility": "on"
-            },
-            {
-              "color": "#ffffff"
-            },
-            {
-              "lightness": 16
-            }
-          ]
-        },
-        {
-          "elementType": "labels.text.fill",
-          "stylers": [
-            {
-              "saturation": 36
-            },
-            {
-              "color": "#333333"
-            },
-            {
-              "lightness": 40
-            }
-          ]
-        },
-        {
-          "elementType": "labels.icon",
-          "stylers": [
-            {
-              "visibility": "off"
-            }
-          ]
-        },
-        {
-          "featureType": "transit",
-          "elementType": "geometry",
-          "stylers": [
-            {
-              "color": "#f2f2f2"
-            },
-            {
-              "lightness": 19
-            }
-          ]
-        },
-        {
-          "featureType": "administrative",
-          "elementType": "geometry.fill",
-          "stylers": [
-            {
-              "color": "#fefefe"
-            },
-            {
-              "lightness": 20
-            }
-          ]
-        },
-        {
-          "featureType": "administrative",
-          "elementType": "geometry.stroke",
-          "stylers": [
-            {
-              "color": "#fefefe"
-            },
-            {
-              "lightness": 17
-            },
-            {
-              "weight": 1.2
-            }
-          ]
-        }
-      ],
-        mapTypeControl: true,
-        mapTypeControlOptions: {
-          style: window.google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
-          position: window.google.maps.ControlPosition.TOP_CENTER,
-        },
+          {
+            "featureType": "water",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#e9e9e9" }, { "lightness": 17 }]
+          },
+          {
+            "featureType": "landscape",
+            "elementType": "geometry",
+            "stylers": [{ "color": "#f5f5f5" }, { "lightness": 20 }]
+          },
+          {
+            "featureType": "road",
+            "stylers": [{ "visibility": "off" }]
+          },
+          {
+            "featureType": "poi",
+            "stylers": [{ "visibility": "off" }]
+          },
+          {
+            "featureType": "transit",
+            "stylers": [{ "visibility": "off" }]
+          },
+          {
+            "featureType": "administrative",
+            "elementType": "geometry.stroke",
+            "stylers": [{ "color": "#c9c9c9" }, { "weight": 0.5 }]
+          },
+          {
+            "featureType": "administrative.country",
+            "elementType": "labels.text.fill",
+            "stylers": [{ "color": "#6b7280" }]
+          }
+        ],
+        mapTypeControl: false,
         zoomControl: true,
         zoomControlOptions: {
           position: window.google.maps.ControlPosition.RIGHT_CENTER
@@ -720,28 +452,48 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
       setIsLoading(false);
       setLoadError(null);
 
-      // Add initial markers
       addCountryMarkers(map);
-      addRegionalOverlays(map);
     } catch (error) {
       console.error('Error initializing Google Maps:', error);
       setLoadError(`Map initialization failed: ${error.message}`);
       setIsLoading(false);
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [addCountryMarkers, addRegionalOverlays]);
+  }, [addCountryMarkers]);
+
+  // Get active regions from data for legend
+  const activeRegions = React.useMemo(() => {
+    if (!data) return [];
+    const regions = new Set();
+    data.forEach(item => {
+      if (item.country) {
+        const region = getRegionForCountry(item.country);
+        regions.add(region);
+      }
+    });
+    return Array.from(regions).sort();
+  }, [data, getRegionForCountry]);
+
+  // Calculate size scale based on data
+  const sizeScale = React.useMemo(() => {
+    if (!data || data.length === 0) return { min: 0, max: 0 };
+    const papers = data.map(d => d.papers || 0);
+    return {
+      min: Math.min(...papers),
+      max: Math.max(...papers)
+    };
+  }, [data]);
 
   if (loadError) {
     return (
       <div style={{
         width: '100%',
         height: '400px',
-        borderRadius: '16px',
+        borderRadius: '12px',
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
         backgroundColor: '#FEF2F2',
-        border: '2px solid #FCA5A5'
+        border: '1px solid #FCA5A5'
       }}>
         <div style={{ textAlign: 'center', padding: '20px' }}>
           <div style={{ color: '#DC2626', fontWeight: '600', marginBottom: '8px' }}>
@@ -768,16 +520,16 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
           display: 'flex',
           alignItems: 'center',
           justifyContent: 'center',
-          borderRadius: '16px',
+          borderRadius: '12px',
           zIndex: 1000
         }}>
           <div style={{ textAlign: 'center' }}>
             <div style={{
-              border: '4px solid #f3f4f6',
-              borderTop: '4px solid #3B82F6',
+              border: '3px solid #f3f4f6',
+              borderTop: '3px solid #3B82F6',
               borderRadius: '50%',
-              width: '40px',
-              height: '40px',
+              width: '32px',
+              height: '32px',
               animation: 'spin 1s linear infinite',
               margin: '0 auto 12px'
             }} />
@@ -785,18 +537,88 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
           </div>
         </div>
       )}
+
       <div
         ref={mapRef}
         style={{
           width: '100%',
           height: '400px',
-          borderRadius: '16px',
-          border: 'none',
-          boxShadow: '0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)',
-          overflow: 'hidden',
-          position: 'relative'
+          borderRadius: '12px',
+          overflow: 'hidden'
         }}
       />
+
+      {/* Legend */}
+      {!isLoading && !loadError && (
+        <div style={{
+          position: 'absolute',
+          bottom: '16px',
+          left: '16px',
+          background: 'white',
+          borderRadius: '8px',
+          padding: '12px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+          fontSize: '11px',
+          maxWidth: '200px',
+          zIndex: 100
+        }}>
+          <div style={{ fontWeight: '600', marginBottom: '8px', color: '#374151' }}>
+            Regions
+          </div>
+          <div style={{ display: 'flex', flexDirection: 'column', gap: '4px' }}>
+            {activeRegions.map(region => (
+              <div key={region} style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{
+                  width: '10px',
+                  height: '10px',
+                  borderRadius: '50%',
+                  backgroundColor: REGION_COLORS[region]?.fill || '#6B7280'
+                }} />
+                <span style={{ color: '#4B5563' }}>{region}</span>
+              </div>
+            ))}
+          </div>
+
+          {sizeScale.max > 0 && (
+            <>
+              <div style={{
+                borderTop: '1px solid #e5e7eb',
+                marginTop: '8px',
+                paddingTop: '8px',
+                fontWeight: '600',
+                color: '#374151'
+              }}>
+                Bubble Size
+              </div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '8px', marginTop: '4px' }}>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <div style={{
+                    width: '8px',
+                    height: '8px',
+                    borderRadius: '50%',
+                    backgroundColor: '#9CA3AF',
+                    border: '1px solid #6B7280'
+                  }} />
+                  <span style={{ color: '#6B7280' }}>{sizeScale.min}</span>
+                </div>
+                <span style={{ color: '#9CA3AF' }}>-</span>
+                <div style={{ display: 'flex', alignItems: 'center', gap: '4px' }}>
+                  <div style={{
+                    width: '16px',
+                    height: '16px',
+                    borderRadius: '50%',
+                    backgroundColor: '#9CA3AF',
+                    border: '1px solid #6B7280'
+                  }} />
+                  <span style={{ color: '#6B7280' }}>{sizeScale.max}</span>
+                </div>
+                <span style={{ color: '#9CA3AF', marginLeft: '2px' }}>papers</span>
+              </div>
+            </>
+          )}
+        </div>
+      )}
+
       <style>{`
         @keyframes spin {
           0% { transform: rotate(0deg); }
