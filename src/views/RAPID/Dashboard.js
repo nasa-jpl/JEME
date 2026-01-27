@@ -21,6 +21,7 @@ import FutureTrendsChart from '../../components/charts/FutureTrendsChart';
 import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
 import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
+import MissionsSummary from '../../components/MissionsSummary';
 
 const RAPIDDashboard = () => {
   const [rapidData, setRapidData] = useState([]);
@@ -228,6 +229,11 @@ const RAPIDDashboard = () => {
         </div>
 
         <FutureTrendsChart data={rapidData} />
+
+        <div className="mb-6">
+          <MissionsSummary citationsData={rapidData} maxMissions={8} showDetails={true} />
+        </div>
+
         <DashboardSummaryCard data={rapidData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">

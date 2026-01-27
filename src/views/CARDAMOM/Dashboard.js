@@ -21,6 +21,7 @@ import FutureTrendsChart from '../../components/charts/FutureTrendsChart';
 import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
 import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
+import MissionsSummary from '../../components/MissionsSummary';
 
 const CARDAMOMDashboard = () => {
   const [cardamomData, setCardamomData] = useState([]);
@@ -229,6 +230,11 @@ const CARDAMOMDashboard = () => {
         </div>
 
         <FutureTrendsChart data={cardamomData} />
+
+        <div className="mb-6">
+          <MissionsSummary citationsData={cardamomData} maxMissions={8} showDetails={true} />
+        </div>
+
         <DashboardSummaryCard data={cardamomData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">

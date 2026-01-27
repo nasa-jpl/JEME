@@ -1,8 +1,9 @@
 // Generic Citations Page component that works with any model
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc } from 'lucide-react';
+import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc, Satellite } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
+import { getAgencyColor } from '../utils/dataUtils';
 
 // Multi-select component
 const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
@@ -269,6 +270,11 @@ const GenericCitationsPage = () => {
       const modelNameLower = modelConfig.name.toLowerCase();
       const isOriginalPaper = title.toLowerCase().includes(modelNameLower);
       
+      // Extract missions/instruments if available
+      const missions = Array.isArray(record.missions_instruments)
+        ? record.missions_instruments
+        : [];
+
       return {
         id: index + 1,
         title: title,
@@ -289,7 +295,8 @@ const GenericCitationsPage = () => {
         pages: record.page || '',
         volume: record.volume || '',
         issue: record.issue || '',
-        referenceCount: record['references-count'] || 0
+        referenceCount: record['references-count'] || 0,
+        missions: missions
       };
     });
     
@@ -708,6 +715,12 @@ const GenericCitationsPage = () => {
                         </div>
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        <div className="flex items-center gap-1">
+                          <Satellite size={12} />
+                          <span>Missions</span>
+                        </div>
+                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Journal Info
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -742,6 +755,34 @@ const GenericCitationsPage = () => {
                         <td className="px-6 py-4">
                           <div className="text-xs text-gray-600 max-w-32 truncate" title={citation.research_domain}>
                             {citation.research_domain}
+                          </div>
+                        </td>
+                        <td className="px-6 py-4">
+                          <div className="flex flex-wrap gap-1 max-w-40">
+                            {citation.missions && citation.missions.length > 0 ? (
+                              <>
+                                {citation.missions.slice(0, 3).map((mission, idx) => (
+                                  <span
+                                    key={idx}
+                                    className="inline-flex items-center px-1.5 py-0.5 rounded text-xs font-medium"
+                                    style={{
+                                      backgroundColor: `${getAgencyColor(mission.agency)}15`,
+                                      color: getAgencyColor(mission.agency)
+                                    }}
+                                    title={`${mission.name} (${mission.agency}) - ${mission.usage_context || mission.type}`}
+                                  >
+                                    {mission.name}
+                                  </span>
+                                ))}
+                                {citation.missions.length > 3 && (
+                                  <span className="text-xs text-gray-400">
+                                    +{citation.missions.length - 3}
+                                  </span>
+                                )}
+                              </>
+                            ) : (
+                              <span className="text-xs text-gray-400">-</span>
+                            )}
                           </div>
                         </td>
                         <td className="px-6 py-4">
@@ -799,7 +840,7 @@ const GenericCitationsPage = () => {
                       </tr>
                     )) : (
                       <tr>
-                        <td colSpan="8" className="px-6 py-4 text-center text-gray-500">
+                        <td colSpan="9" className="px-6 py-4 text-center text-gray-500">
                           No publications match your search criteria
                         </td>
                       </tr>

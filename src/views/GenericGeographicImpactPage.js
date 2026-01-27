@@ -4,6 +4,7 @@ import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
 import GoogleMapComponent from '../components/GoogleMapComponent';
+import MissionsSummary from '../components/MissionsSummary';
 
 const GenericGeographicImpactPage = () => {
   const { modelName } = useParams();
@@ -755,6 +756,15 @@ const GenericGeographicImpactPage = () => {
                   </tbody>
                 </table>
               </div>
+            </div>
+
+            {/* Missions & Instruments Used */}
+            <div className="mt-6">
+              <MissionsSummary
+                citationsData={citationsData}
+                maxMissions={10}
+                showDetails={true}
+              />
             </div>
           </>
         )}

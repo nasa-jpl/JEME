@@ -11,6 +11,7 @@ import CitationTrendsChart from '../components/charts/CitationTrendsChart';
 import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
 import FutureTrendsChart from '../components/charts/FutureTrendsChart';
 import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
+import MissionsSummary from '../components/MissionsSummary';
 
 const GenericDashboard = ({ modelName, citationsData }) => {
   const [refreshing, setRefreshing] = useState(false);
@@ -470,6 +471,11 @@ const GenericDashboard = ({ modelName, citationsData }) => {
 
           {/* Engagement Levels */}
           <EngagementLevelsCard data={citationsData} />
+        </div>
+
+        {/* Missions & Instruments */}
+        <div className="mb-8">
+          <MissionsSummary citationsData={citationsData} maxMissions={8} showDetails={true} />
         </div>
 
         {/* Future Trends */}

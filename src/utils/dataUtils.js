@@ -284,7 +284,7 @@ export const processCitationTrends = (citationsData) => {
   try {
     const publications = citationsData.map(extractPublicationData).filter(Boolean);
     const yearlyData = {};
-    
+
     publications.forEach(pub => {
       if (pub.year) {
         if (!yearlyData[pub.year]) {
@@ -296,27 +296,244 @@ export const processCitationTrends = (citationsData) => {
             cumulativeCitations: 0
           };
         }
-        
+
         yearlyData[pub.year].papers += 1;
         yearlyData[pub.year].citations += pub.citations;
       }
     });
-    
+
     // Calculate cumulative values
     const sortedYears = Object.keys(yearlyData).map(Number).sort();
     let cumulativePapers = 0;
     let cumulativeCitations = 0;
-    
+
     sortedYears.forEach(year => {
       cumulativePapers += yearlyData[year].papers;
       cumulativeCitations += yearlyData[year].citations;
       yearlyData[year].cumulativePapers = cumulativePapers;
       yearlyData[year].cumulativeCitations = cumulativeCitations;
     });
-    
+
     return Object.values(yearlyData);
   } catch (error) {
     console.error('Error processing citation trends:', error);
     return [];
   }
+};
+
+// ============================================
+// MISSION/INSTRUMENT DATA PROCESSING
+// ============================================
+
+/**
+ * Extract missions/instruments from a publication entry
+ * @param {Object} entry - Publication entry with missions_instruments field
+ * @returns {Array} - Array of mission objects
+ */
+export const extractMissions = (entry) => {
+  if (!entry || !entry.missions_instruments) {
+    return [];
+  }
+  return Array.isArray(entry.missions_instruments) ? entry.missions_instruments : [];
+};
+
+/**
+ * Process all missions from citations data
+ * @param {Array} citationsData - Array of publication entries
+ * @returns {Object} - Processed mission statistics
+ */
+export const processMissionData = (citationsData) => {
+  try {
+    if (!citationsData || !Array.isArray(citationsData)) {
+      return {
+        totalMissions: 0,
+        uniqueMissions: 0,
+        byAgency: {},
+        byType: {},
+        byMission: {},
+        topMissions: [],
+        papersWithMissions: 0
+      };
+    }
+
+    const allMissions = [];
+    let papersWithMissions = 0;
+
+    citationsData.forEach(entry => {
+      const missions = extractMissions(entry);
+      if (missions.length > 0) {
+        papersWithMissions++;
+        allMissions.push(...missions);
+      }
+    });
+
+    // Group by agency
+    const byAgency = {};
+    allMissions.forEach(m => {
+      const agency = m.agency || 'Unknown';
+      if (!byAgency[agency]) {
+        byAgency[agency] = { count: 0, missions: new Set() };
+      }
+      byAgency[agency].count++;
+      byAgency[agency].missions.add(m.name);
+    });
+
+    // Convert Sets to arrays
+    Object.keys(byAgency).forEach(agency => {
+      byAgency[agency].missions = Array.from(byAgency[agency].missions);
+    });
+
+    // Group by type
+    const byType = {};
+    allMissions.forEach(m => {
+      const type = m.type || 'Unknown';
+      if (!byType[type]) {
+        byType[type] = { count: 0, missions: new Set() };
+      }
+      byType[type].count++;
+      byType[type].missions.add(m.name);
+    });
+
+    // Convert Sets to arrays
+    Object.keys(byType).forEach(type => {
+      byType[type].missions = Array.from(byType[type].missions);
+    });
+
+    // Group by mission name
+    const byMission = {};
+    allMissions.forEach(m => {
+      const name = m.name || 'Unknown';
+      if (!byMission[name]) {
+        byMission[name] = {
+          name: name,
+          agency: m.agency || 'Unknown',
+          type: m.type || 'Unknown',
+          count: 0,
+          products: new Set(),
+          contexts: []
+        };
+      }
+      byMission[name].count++;
+      if (m.product && m.product !== 'Not specified') {
+        byMission[name].products.add(m.product);
+      }
+      if (m.usage_context) {
+        byMission[name].contexts.push(m.usage_context);
+      }
+    });
+
+    // Convert Sets to arrays and create top missions list
+    const topMissions = Object.values(byMission)
+      .map(m => ({
+        ...m,
+        products: Array.from(m.products)
+      }))
+      .sort((a, b) => b.count - a.count);
+
+    return {
+      totalMissions: allMissions.length,
+      uniqueMissions: Object.keys(byMission).length,
+      byAgency,
+      byType,
+      byMission,
+      topMissions,
+      papersWithMissions
+    };
+  } catch (error) {
+    console.error('Error processing mission data:', error);
+    return {
+      totalMissions: 0,
+      uniqueMissions: 0,
+      byAgency: {},
+      byType: {},
+      byMission: {},
+      topMissions: [],
+      papersWithMissions: 0
+    };
+  }
+};
+
+/**
+ * Get mission statistics by geographic region
+ * @param {Array} citationsData - Array of publication entries with geographic and mission data
+ * @returns {Object} - Missions grouped by region
+ */
+export const getMissionsByRegion = (citationsData) => {
+  try {
+    const regionMissions = {};
+
+    citationsData.forEach(entry => {
+      const region = entry.region || entry.country || 'Unknown';
+      const missions = extractMissions(entry);
+
+      if (missions.length > 0) {
+        if (!regionMissions[region]) {
+          regionMissions[region] = {
+            region,
+            missions: {},
+            totalUsages: 0
+          };
+        }
+
+        missions.forEach(m => {
+          const name = m.name || 'Unknown';
+          if (!regionMissions[region].missions[name]) {
+            regionMissions[region].missions[name] = {
+              name,
+              agency: m.agency,
+              count: 0
+            };
+          }
+          regionMissions[region].missions[name].count++;
+          regionMissions[region].totalUsages++;
+        });
+      }
+    });
+
+    // Convert to array format
+    return Object.values(regionMissions).map(r => ({
+      ...r,
+      missions: Object.values(r.missions).sort((a, b) => b.count - a.count)
+    }));
+  } catch (error) {
+    console.error('Error getting missions by region:', error);
+    return [];
+  }
+};
+
+/**
+ * Get agency color for visualization
+ * @param {string} agency - Agency name
+ * @returns {string} - Color hex code
+ */
+export const getAgencyColor = (agency) => {
+  const colors = {
+    'NASA': '#0B3D91',      // NASA blue
+    'ESA': '#003247',       // ESA dark blue
+    'JAXA': '#E60012',      // JAXA red
+    'NOAA': '#003087',      // NOAA blue
+    'ECMWF': '#1E4D8C',     // ECMWF blue
+    'USGS': '#006400',      // USGS green
+    'Other': '#6B7280',     // Gray
+    'Unknown': '#9CA3AF'    // Light gray
+  };
+  return colors[agency] || colors['Other'];
+};
+
+/**
+ * Get mission type icon name (for lucide-react)
+ * @param {string} type - Mission type
+ * @returns {string} - Icon name
+ */
+export const getMissionTypeIcon = (type) => {
+  const icons = {
+    'Satellite': 'satellite',
+    'Instrument': 'radio',
+    'Sensor': 'scan',
+    'Data Product': 'database',
+    'Reanalysis': 'refresh-cw',
+    'Model Output': 'cpu',
+    'Unknown': 'help-circle'
+  };
+  return icons[type] || icons['Unknown'];
 };

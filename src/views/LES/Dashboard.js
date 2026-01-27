@@ -19,6 +19,7 @@ import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
 import FutureTrendsChart from '../../components/charts/FutureTrendsChart';
 import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
+import MissionsSummary from '../../components/MissionsSummary';
 
 const LESDashboard = () => {
   const [lesData, setLesData] = useState([]);
@@ -228,6 +229,11 @@ const LESDashboard = () => {
         </div>
 
         <FutureTrendsChart data={lesData} />
+
+        <div className="mb-6">
+          <MissionsSummary citationsData={lesData} maxMissions={8} showDetails={true} />
+        </div>
+
         <DashboardSummaryCard data={lesData} />
 
         <div className="grid grid-cols-1 gap-6 mb-6">
