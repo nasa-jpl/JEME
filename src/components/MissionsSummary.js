@@ -56,14 +56,10 @@ const MissionsSummary = ({ citationsData, maxMissions = 10, showDetails = true }
       </div>
 
       {/* Summary Stats */}
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-6">
+      <div className="grid grid-cols-3 gap-3 mb-6">
         <div className="bg-blue-50 rounded-lg p-3">
           <div className="text-xs text-blue-600 font-medium">Total Usages</div>
           <div className="text-xl font-bold text-blue-900">{missionData.totalMissions}</div>
-        </div>
-        <div className="bg-green-50 rounded-lg p-3">
-          <div className="text-xs text-green-600 font-medium">Unique Missions</div>
-          <div className="text-xl font-bold text-green-900">{missionData.uniqueMissions}</div>
         </div>
         <div className="bg-purple-50 rounded-lg p-3">
           <div className="text-xs text-purple-600 font-medium">Agencies</div>
