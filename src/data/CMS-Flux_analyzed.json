@@ -20506,50 +20506,6 @@
     ]
   },
   {
-    "title": "Supplementary material to \"Data reduction for inverse modeling: an adaptive approach v1.0\"",
-    "authors": [
-      "Xiaolin Liu",
-      "August L. Weinbren",
-      "He Chang",
-      "J. Tadić",
-      "M. Mountain",
-      "M. Trudeau",
-      "A. Andrews",
-      "Zichong Chen",
-      "Scot M. Miller"
-    ],
-    "year": 2020,
-    "doi": "10.5194/GMD-14-4683-2021",
-    "venue": "Geoscientific Model Development",
-    "citation_count": 8,
-    "paper_id": "588f2511a6a7d23245f9e447032407496731df39",
-    "url": "https://www.semanticscholar.org/paper/588f2511a6a7d23245f9e447032407496731df39",
-    "abstract": "Abstract. The number of greenhouse gas (GHG) observing satellites has greatly expanded in recent years, and these new datasets provide an unprecedented constraint on global GHG sources and sinks. However, a continuing challenge for inverse models that are used to estimate these sources and sinks is the sheer number of satellite observations, sometimes in the millions per day. These massive datasets often make it prohibitive to implement inverse modeling calculations and/or assimilate the observations using many types of atmospheric models. Although these satellite datasets are very large, the information content of any single observation is often modest and non-exclusive due to redundancy with neighboring observations and due to measurement noise. In this study, we develop an adaptive approach to reduce the size of satellite datasets using geostatistics. A guiding principle is to reduce the data more in regions with little variability in the observations and less in regions with high variability. We subsequently tune and evaluate the approach using synthetic and real data case studies for North America from NASA's Orbiting Carbon Observatory-2 (OCO-2) satellite. The proposed approach to data reduction yields more accurate CO2 flux estimates than the commonly-used method of binning and averaging the satellite data. We further develop a metric for choosing a level of data reduction; we can reduce the satellite dataset to an average of one observation per ~80–140 km for the specific case studies here without substantially compromising the flux estimate, but we find that reducing the data further quickly degrades the accuracy of the estimated fluxes. Overall, the approach developed here could be applied to a range of inverse problems that use very large trace gas datasets.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The 2015–2016 carbon cycle as seen from OCO-2 and the global in situ network",
-    "team_paper_id": "eef335f95f509aa734ce2e2d2d352164467b1fee",
-    "research_domain": "Remote Sensing & Satellite",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": [
-      {
-        "name": "Orbiting Carbon Observatory-2 (OCO-2)",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Used for real data case studies for North America to tune and evaluate the data reduction approach for CO2 flux estimates."
-      }
-    ]
-  },
-  {
     "title": "On the relationship between tropospheric CO and CO2 during KORUS-AQ\nand its role in constraining anthropogenic CO2",
     "authors": [
       "W. Tang",
@@ -20943,55 +20899,6 @@
     "research_domain": "Modeling & Simulation",
     "engagement_level": "Level 4: Foundational Method",
     "missions_instruments": []
-  },
-  {
-    "title": "Supplementary material to \"Linking global terrestrial CO2 fluxes and environmental drivers using OCO-2 and a geostatistical inverse model\"",
-    "authors": [
-      "Zichong Chen",
-      "Junjie Liu",
-      "D. Henze",
-      "D. Huntzinger",
-      "K. C. Wells",
-      "Scot M. Miller"
-    ],
-    "year": 2020,
-    "doi": "10.5194/acp-2020-285-supplement",
-    "venue": "",
-    "citation_count": 2,
-    "paper_id": "ad57daadef600627798c2b145576eac757214ed4",
-    "url": "https://www.semanticscholar.org/paper/ad57daadef600627798c2b145576eac757214ed4",
-    "abstract": "Abstract. Observations from the OCO-2 satellite, launched in July 2014, have been used to estimate CO2 fluxes in many regions of the globe and provide new insight on the global carbon cycle. A challenge now is to not only estimate fluxes using satellite observations but also to understand how these fluxes are connected to variations in environmental conditions. In this study, we specifically evaluate the capabilities and limitations of utilizing current OCO-2 observations to infer connections between CO2 fluxes and underlying environmental variables. To do so, we adapt geostatistical inverse modeling to satellite-based applications and evaluate a case study for year 2016 using OCO-2. One unique aspect of the geostatistical approach is that we can use estimates of environmental and meteorological variables to help estimate CO2 fluxes in place of a traditional prior flux model. We are able to quantify the relationships between CO2 fluxes and a few environmental variables across global biomes; we find that a simple combination of air temperature, daily precipitation, and photosynthetically active radiation (PAR) can describe almost 90 % of the variability in CO2 fluxes as seen through OCO-2 observations. PAR is an adept predictor of fluxes across mid-to-high latitudes, whereas a combined set of air temperature and precipitation shows strong explanatory power across tropical biomes. However, we are unable to quantify relationships with additional environmental variables because many variables are correlated or colinear when passed through an atmospheric model and averaged across a total atmospheric column. Overall, we estimate a global net biospheric flux of −1.73 ± 0.53 GtC in year 2016, in close agreement with recent inverse modeling studies using OCO-2 retrievals as observational constraints.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The 2015–2016 carbon cycle as seen from OCO-2 and the global in situ network",
-    "team_paper_id": "eef335f95f509aa734ce2e2d2d352164467b1fee",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": [
-      {
-        "name": "OCO-2",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "A satellite launched in July 2014, whose observations are used to estimate CO2 fluxes and evaluate connections between fluxes and environmental variables."
-      },
-      {
-        "name": "OCO-2 retrievals",
-        "agency": "NASA",
-        "type": "Data Product",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Used as observational constraints in inverse modeling studies to estimate global net biospheric CO2 flux."
-      }
-    ]
   },
   {
     "title": "Geostatistical inverse modeling with very large datasets: an example from the Orbiting Carbon Observatory 2 (OCO-2) satellite",
@@ -30784,50 +30691,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Computation and analysis of atmospheric carbon dioxide annual mean growth rates from satellite observations during 2003–2016” by Michael Buchwitz et al",
-    "authors": [
-      "M. Buchwitz"
-    ],
-    "year": 2018,
-    "doi": "10.5194/acp-2018-158",
-    "venue": "",
-    "citation_count": 1,
-    "paper_id": "c979b2fdce5da8d43cbd3ce7a6e482f9434c36e3",
-    "url": "https://www.semanticscholar.org/paper/c979b2fdce5da8d43cbd3ce7a6e482f9434c36e3",
-    "abstract": "frared satellite sensors over almost a decade and a half. The authors show that their estimated growth rates are in line with NOAA growth rates computed from marine boundary layer sites, and variations in the growth rate are correlated with expected mechanisms such as the ENSO cycle and anthropogenic emissions. This is all reasonable. However, I do not think that Atmospheric Chemistry and Physics is the correct journal for publishing this manuscript, because the manuscript does not present anything new about either the atmosphere or surface processes that influence the atmosphere (my comments on variation partitioning follow later). What I learned from this manuscript is that the merged XCO2 data product Obs4MIPs gives global CO2 growth rates that are reasonable, in line with other estimates, and can be correlated with known factors influencing the carbon budget. This is a perfectly fine message, but it’s primarily a message about the Obs4MIPs data product, and therefore a better venue for it would be an alternative measurementor data-focused journal such as Atmospheric Measurement Techniques or Earth System Science Data. If the authors insist on publishing this in ACP and the editor agrees, I would strongly suggest making this a technical note instead of a research article.",
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Contrasting carbon cycle responses of the tropical continents to the 2015-2016 El Nino",
-    "team_paper_id": "fe5a00037f2a5653b94f9df1c8f182c1950457a4",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": [
-      {
-        "name": "Infrared satellite sensors",
-        "agency": "Other",
-        "type": "Sensor",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The source of satellite observations used to derive atmospheric carbon dioxide growth rates."
-      },
-      {
-        "name": "Obs4MIPs",
-        "agency": "Other",
-        "type": "Data Product",
-        "product": "XCO2",
-        "data_level": "Not specified",
-        "usage_context": "A merged XCO2 data product that provides global CO2 growth rates for analysis."
-      }
-    ]
-  },
-  {
     "title": "Differences of the inverted terrestrial ecosystem carbon flux between using GO-1 SAT and OCO-2 XCO 2 retrievals 2",
     "authors": [
       "Hengmao Wang",
@@ -36042,43 +35905,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Role of emission sources and atmospheric sink on the seasonal cycle of CH4 and δ13-CH4: analysis based on the atmospheric chemistry transport model TM5\"",
-    "authors": [
-      "Vilma Kangasaho",
-      "A. Tsuruta",
-      "L. Backman",
-      "Pyry Mäkinen",
-      "S. Houweling",
-      "A. Segers",
-      "M. Krol",
-      "E. Dlugokencky",
-      "S. Michel",
-      "James White",
-      "T. Aalto"
-    ],
-    "year": 2021,
-    "doi": "10.5194/acp-2021-843-supplement",
-    "venue": "Atmosphere",
-    "citation_count": 0,
-    "paper_id": "5089e8fa0478a23fcbdaa557b5ddc4e5cf1a4488",
-    "url": "https://www.semanticscholar.org/paper/5089e8fa0478a23fcbdaa557b5ddc4e5cf1a4488",
-    "abstract": "Abstract. This study investigates the contribution of different CH4 sources to the seasonal cycle of 𝛿13C during years 2000–2012 using the TM5 atmospheric transport model. The seasonal cycles of anthropogenic emissions from two versions of the EDGAR inventories, v4.3.2 and v5.0 are examined. Those includes emissions from Enteric Fermentation and Manure Management (EFMM), rice cultivation and residential sources. Those from wetlands obtained from LPX-Bern v1.4 are also examined in addition to other sources such as fires and ocean sources. We use spatially varying isotopic source signatures for EFMM, coal, oil and gas, wetlands, fires and geological emission and for other sources a global uniform value. We analysed the results as zonal means for 30° latitudinal bands. Seasonal cycles of 𝛿13C are found to be an inverse of CH4 cycles in general, with a peak-to-peak amplitude of 0.07–0.26 ‰. However, due to emissions, the phase ellipses do not form straight lines, and the anti-correlations between CH4 and 𝛿13C are weaker (−0.35 to −0.91) in north of 30° S. We found that wetland emissions are the dominant driver in the 𝛿13C seasonal cycle in the Northern Hemisphere and Tropics, such that the timing of 𝛿13C seasonal minimum is shifted by ∼90 days in 60° N–90° N from the end of the year to the beginning of the year when seasonality of wetland emissions is removed. The results also showed that in the Southern Hemisphere Tropics, emissions from fires contribute to the enrichment of 𝛿13C in July–October. In addition, we also compared the results against observations from the South Pole, Antarctica, Alert, Nunavut, Canada and Niwot Ridge, Colorado, USA. In light of this research, comparison to the observation showed that the seasonal cycle of EFMM emissions in EDGAR v5.0 inventory is more realistic than in v4.3.2. In addition, the comparison at Alert showed that modelled 𝛿13C amplitude was approximately half of the observations, mainly because the model could not reproduce the strong depletion in autumn. This indicates that CH4 emission magnitude and seasonal cycle of wetlands may need to be revised. Results from Niwot Ridge indicate that in addition to biogenic emissions, the proportion of biogenic to fossil based emissions may need to be revised.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
-    "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
     "title": "Updated Global Fuel Exploitation Inventory (GFEI) for methane emissions from the oil, gas, and coal sectors: evaluation with inversions of atmospheric methane observations",
     "authors": [
       "T. Scarpelli",
@@ -40332,42 +40158,6 @@
     ]
   },
   {
-    "title": "Interactive comment on “Investigation of the global methane budget over 1980–2017 using GFDL-AM4.1” by Jian He et al",
-    "authors": [
-      "Jian He"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "abf2f00d8d3e29abf00af4932bd8a6744e9a16bd",
-    "url": "https://www.semanticscholar.org/paper/abf2f00d8d3e29abf00af4932bd8a6744e9a16bd",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
-    "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
-    "research_domain": "General Science",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": [
-      {
-        "name": "GFDL-AM4.1",
-        "agency": "NOAA",
-        "type": "Model Output",
-        "product": null,
-        "data_level": null,
-        "usage_context": "The primary atmospheric model investigated in the main paper, which this interactive comment addresses."
-      }
-    ]
-  },
-  {
     "title": "Remote Sensing of Environment Evaluating year-to-year anomalies in tropical wetland methane emissions using satellite CH 4 observations",
     "authors": [
       "Robert J. Parkera",
@@ -41405,46 +41195,6 @@
     "research_domain": "Climate Science",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
-  },
-  {
-    "title": "Supplementary material to \"Geostatistical inverse modeling with very large datasets: an example from the OCO-2 satellite\"",
-    "authors": [
-      "Scot M. Miller",
-      "A. Saibaba",
-      "M. Trudeau",
-      "M. Mountain",
-      "A. Andrews"
-    ],
-    "year": 2019,
-    "doi": "10.5194/gmd-2019-185",
-    "venue": "",
-    "citation_count": 2,
-    "paper_id": "4661efe6d606dc721ccbe27c900e137baba36dfe",
-    "url": "https://www.semanticscholar.org/paper/4661efe6d606dc721ccbe27c900e137baba36dfe",
-    "abstract": "Abstract. Geostatistical inverse modeling (GIM) has become a common approach to estimating greenhouse gas fluxes at the Earth's surface using atmospheric observations. GIMs are unique relative to other commonly-used approaches because they do not require a single emissions inventory or a bottom-up model to serve as an initial guess of the fluxes. Instead, a modeler can incorporate a wide range of environmental, economic, and/or land use data to estimate the fluxes. Traditionally, GIMs have been paired with in situ observations that number in the thousands or tens of thousands. However, the number of available atmospheric greenhouse gas observations has been increasing enormously as the number of satellites, airborne measurement campaigns, and in situ monitoring stations continues to increase. This era of prolific greenhouse gas observations presents computational and statistical challenges for inverse modeling frameworks that have traditionally been paired with a limited number of in situ monitoring sites. In this article, we discuss the challenges of estimating greenhouse gas fluxes using large atmospheric datasets with a particular focus on GIMs. We subsequently discuss several strategies for estimating the fluxes and quantifying uncertainties, strategies that are adapted from hydrology, applied math, or other academic fields and are compatible with a wide variety of atmospheric models. We further evaluate the accuracy and computational burden of each strategy using CO2 observations from NASA's Orbiting Carbon Observatory 2 (OCO-2) satellite. Specifically, we simultaneously estimate a full year of 3-hourly CO2 fluxes across North America in one case study – a total of 9.4 × 106 unknown fluxes using 9.9 × 104 observations. The strategies discussed here provide accurate estimates of CO2 fluxes that are comparable to fluxes calculated directly or analytically. We are also able to approximate posterior uncertainties in the fluxes, but these approximation are typically an over- or underestimate depending upon the strategy employed and the degree of approximation required to make the calculations manageable.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Carbon monitoring system flux estimation and attribution: impact of ACOS-GOSAT XCO2 sampling on the inference of terrestrial biospheric sources and sinks",
-    "team_paper_id": "0bccc7c088bc7c2e22d1579c931c2441af128ea9",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": [
-      {
-        "name": "Orbiting Carbon Observatory 2 (OCO-2)",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "CO2 observations",
-        "data_level": "Not specified",
-        "usage_context": "Used to evaluate the accuracy and computational burden of strategies for estimating CO2 fluxes."
-      }
-    ]
   },
   {
     "title": "Detection of fossil fuel emission trends in the presence of natural carbon cycle variability",
@@ -43452,50 +43202,6 @@
         "product": "Not specified",
         "data_level": "Not specified",
         "usage_context": "The primary data product derived from GOSAT measurements, used to infer estimates of European uptake of CO2."
-      }
-    ]
-  },
-  {
-    "title": "Interactive comment on “Characterizing biospheric carbon balance using CO 2 observations from the OCO-2 satellite” by",
-    "authors": [
-      "Scot M. Miller"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "fa327ccae2b1b31502cbdba50af5ed6550d8ca29",
-    "url": "https://www.semanticscholar.org/paper/fa327ccae2b1b31502cbdba50af5ed6550d8ca29",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Carbon monitoring system flux estimation and attribution: impact of ACOS-GOSAT XCO2 sampling on the inference of terrestrial biospheric sources and sinks",
-    "team_paper_id": "0bccc7c088bc7c2e22d1579c931c2441af128ea9",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": [
-      {
-        "name": "OCO-2",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The satellite providing CO2 observations for characterizing biospheric carbon balance."
-      },
-      {
-        "name": "CO2 observations",
-        "agency": "NASA",
-        "type": "Data Product",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Data derived from the OCO-2 satellite, used for characterizing biospheric carbon balance."
       }
     ]
   },

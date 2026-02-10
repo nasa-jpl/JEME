@@ -15311,40 +15311,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Tropospheric ozone production and chemical regime analysis during the COVID-19 lockdown over Europe\"",
-    "authors": [
-      "Clara M. Nussbaumer",
-      "A. Pozzer",
-      "Ivan Tadic",
-      "Lenard L. Röder",
-      "F. Obersteiner",
-      "H. Harder",
-      "J. Lelieveld",
-      "H. Fischer"
-    ],
-    "year": 2021,
-    "doi": "10.5194/acp-2021-1028-supplement",
-    "venue": "Atmospheric Chemistry and Physics",
-    "citation_count": 15,
-    "paper_id": "ac48622ced1ae1cd15a628d3658a12d72899e0f2",
-    "url": "https://www.semanticscholar.org/paper/ac48622ced1ae1cd15a628d3658a12d72899e0f2",
-    "abstract": "Abstract. The COVID-19 (Coronavirus disease 2019) European lockdowns have lead to a significant reduction in the emissions of primary pollutants such as NO (nitric oxide) and NO2 (nitrogen dioxide). As most photochemical processes are related to nitrogen oxide (NOx ≡ NO + NO2) chemistry, this event has presented an exceptional opportunity to investigate its effects on air quality and secondary pollutants, such as tropospheric ozone (O3). In this study, we present the effects of the COVID-19 lockdown on atmospheric trace gas concentrations, net ozone production rates (NOPR) and the dominant chemical regime throughout the troposphere based on three different research aircraft campaigns across Europe. These are the UTOPIHAN campaigns in 2003 and 2004, the HOOVER campaigns in 2006 and 2007 and the BLUESKY campaign in 2020, the latter performed during the COVID-19 lockdown. We present in situ observations and simulation results from the ECHAM5/MESSy Atmospheric Chemistry model which allows for scenario calculations with business as usual emissions during the BLUESKY campaign, referred to as \"no-lockdown scenario\". We show that the COVID-19 lockdown reduced NO and NO2 mixing ratios in the upper troposphere by around 55 % compared to the no-lockdown scenario due to reduced air traffic. O3 production and loss terms reflected this reduction with a deceleration in O3 cycling due to reduced mixing ratios of NOx while NOPRs were largely unaffected. We also study the role of methyl peroxyradicals forming HCHO (αCH3O2) to show that the COVID-19 lockdown shifted the chemistry in the upper troposphere/tropopause region to a NOx limited regime during BLUESKY. In comparison, we find a VOC limited regime to be dominant during UTOPIHAN.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
-    "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
-    "research_domain": "Atmospheric Science",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
     "title": "New Insights into Unexpected Severe PM2.5 Pollution during the SARS and COVID-19 Pandemic Periods in Beijing.",
     "authors": [
       "Peijie Zuo",
@@ -32962,82 +32928,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Comparison of Optimal Estimation HDO/H2O Retrievals from AIRS with ORACLES measurements\"",
-    "authors": [
-      "R. Herman",
-      "J. Worden",
-      "D. Noone",
-      "D. Henze",
-      "K. Bowman",
-      "K. Cady-Pereira",
-      "V. Payne",
-      "S. Kulawik",
-      "D. Fu"
-    ],
-    "year": 2019,
-    "doi": "10.5194/amt-2019-195",
-    "venue": "",
-    "citation_count": 4,
-    "paper_id": "163496fb6121b075f17329d3ff7f695f369d3cc1",
-    "url": "https://www.semanticscholar.org/paper/163496fb6121b075f17329d3ff7f695f369d3cc1",
-    "abstract": "Abstract. In this paper we evaluate new retrievals of the deuterium content of water vapor from the Aqua Atmospheric InfraRed Sounder (AIRS) with aircraft measurements of HDO and H2O from the ObseRvations of Aerosols above Clouds and their intEractionS (ORACLES) field mission. Single footprint AIRS radiances are processed with an optimal estimation algorithm that provides a vertical profile of the HDO/H2O ratio, characterized uncertainties, and instrument operators (or averaging kernel matrix). These retrievals are compared to vertical profiles of the HDO/H2O from the Oregon State University Water Isotope Spectrometer for Precipitation and Entrainment Research (WISPER) on the ORACLES NASA P-3B Orion aircraft. Measurements were taken over the Southeast Atlantic Ocean from 31 August to 25 September 2016. HDO/H2O is commonly reported in delta-D notation, which is the fractional deviation of the HDO/H2O ratio from the standard reference ratio. For collocated measurements, the satellite operator (averaging kernels and a priori constraint) is applied to the aircraft profile measurements. We find that AIRS delta-D bias relative to the aircraft is well within the estimated measurement uncertainty. In the lower troposphere, 1000 to 800 hPa, AIRS delta-D bias is −6.6‰ and the Root Mean Square (RMS) deviation is 20.9‰, consistent with the calculated uncertainty of 19.1‰. In the mid-troposphere, 800 to 500 hPa, AIRS delta-D bias is 6.8‰ and RMS 44.9‰, comparable to the calculated uncertainty of 25.8‰.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
-    "team_paper_id": "df8d7f00435506b3fa672660e6338fcc75173c17",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": [
-      {
-        "name": "Aqua",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The satellite platform hosting the AIRS instrument, from which HDO/H2O retrievals are evaluated."
-      },
-      {
-        "name": "AIRS",
-        "agency": "NASA",
-        "type": "Instrument",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The Atmospheric InfraRed Sounder on the Aqua satellite, used to generate new HDO/H2O retrievals."
-      },
-      {
-        "name": "AIRS Radiances",
-        "agency": "NASA",
-        "type": "Data Product",
-        "product": "Not specified",
-        "data_level": "L1",
-        "usage_context": "Single footprint radiances from AIRS that are processed with an optimal estimation algorithm to derive HDO/H2O profiles."
-      },
-      {
-        "name": "HDO/H2O Retrievals",
-        "agency": "NASA",
-        "type": "Data Product",
-        "product": "Not specified",
-        "data_level": "L2",
-        "usage_context": "New retrievals of the deuterium content of water vapor from AIRS, which are evaluated against aircraft measurements."
-      },
-      {
-        "name": "delta-D notation",
-        "agency": "NASA",
-        "type": "Data Product",
-        "product": "Not specified",
-        "data_level": "L2",
-        "usage_context": "The common reporting format for the HDO/H2O ratio, derived from AIRS retrievals and used for comparison with aircraft data."
-      }
-    ]
-  },
-  {
     "title": "Direct retrieval of isoprene from satellite-based infrared measurements",
     "authors": [
       "D. Fu",
@@ -33739,58 +33629,6 @@
     "research_domain": "Climate Science",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Linearization of the effect of slit function changes for improving OMI ozone profile retrievals ” by Juseon Bak et al",
-    "authors": [
-      "A. Referee"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "1d08e8a3aeb0ebc4d26939af0585c25822a69361",
-    "url": "https://www.semanticscholar.org/paper/1d08e8a3aeb0ebc4d26939af0585c25822a69361",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
-    "team_paper_id": "df8d7f00435506b3fa672660e6338fcc75173c17",
-    "research_domain": "Atmospheric Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": [
-      {
-        "name": "OMI",
-        "agency": "NASA",
-        "type": "Instrument",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The primary instrument whose ozone profile retrievals are the subject of improvement through linearization of slit function changes."
-      },
-      {
-        "name": "Aura",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The satellite platform hosting the OMI instrument, which is the focus of the study."
-      },
-      {
-        "name": "OMI Ozone Profile Data",
-        "agency": "NASA",
-        "type": "Data Product",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The specific data product from OMI that the study aims to improve by addressing slit function changes."
-      }
-    ]
   },
   {
     "title": "Estimating and Reporting Uncertainties in Remotely Sensed Atmospheric Composition and Temperature",
@@ -39476,36 +39314,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Improving NO2 and ozone simulations through global NOx emission inversions\"",
-    "authors": [
-      "Z. Qu",
-      "D. Henze",
-      "O. Cooper",
-      "J. Neu"
-    ],
-    "year": 2020,
-    "doi": "10.5194/acp-2020-307-supplement",
-    "venue": "",
-    "citation_count": 2,
-    "paper_id": "e54e038fd77a54b9a59982f81c467c09d2005ac7",
-    "url": "https://www.semanticscholar.org/paper/e54e038fd77a54b9a59982f81c467c09d2005ac7",
-    "abstract": "Tropospheric ozone simulations have large uncertainties, but their biases, seasonality and trends can be improved with more accurate estimates of precursor gas emissions. We perform global top-down estimates of monthly NOx emissions using two OMI NO2 retrievals (NASAv3 and DOMINOv2) from 2005 to 2016 through a hybrid 4D-Var / mass balance inversion. The 12-year averages of regional NOx budgets from the NASA posterior emissions are 37% to 53% smaller than the DOMINO posterior. Compared to surface NO2 measurements, GEOS-Chem adjoint NO2 simulations using the 15 DOMINO posterior NOx emissions have smaller biases in China (by 15%) and the US (by 22%), but NO2 trends have more consistent decreases (by 26%) with the measurements (by 32%) in the US from 2006 to 2016 when using the NASA posterior. The two posterior NOx emissions datasets have different strengths with respect to simulation of ozone concentrations. Simulations using NASA-based emissions provide better agreement for polluted conditions. Ozone from these shows the highest correlation (R = 0.88) with annual MDA8 ozone trends and alleviates the double peak in the prior 20 simulation of global ozone seasonality. The DOMINO-based emissions, on the other hand, are better for simulating ozone at remote sites, making them well-suited to generation of boundary conditions for regional models, and in capturing the interannual variability of daytime-average (R = 0.72 0.81) and 24-hour average (R = 0.88 – 0.96) surface ozone. We recommend using NOx emission datasets that have the best performance in the corresponding spatial domain and temporal focus to improve ozone simulations. 25",
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
-    "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
-    "research_domain": "Atmospheric Science",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
     "title": "Development of an Activity-based Windowing Approach to Evaluate Real-World NOx Emissions from Modern Medium and Heavy-Duty Diesel Trucks",
     "authors": [
       "Rasik Pondicherry"
@@ -44721,73 +44529,6 @@
     "research_domain": "Climate Science",
     "engagement_level": "Level 4: Foundational Method",
     "missions_instruments": []
-  },
-  {
-    "title": "Supplementary material to \"A new method for inferring city emissions and lifetimes of nitrogen oxides from high-resolution nitrogen dioxide observations: A model study\"",
-    "authors": [
-      "Fei Liu",
-      "Z. Tao",
-      "S. Beirle",
-      "J. Joiner",
-      "Y. Yoshida",
-      "Steven J. Smith",
-      "K. E. Knowland",
-      "T. Wagner"
-    ],
-    "year": 2021,
-    "doi": "10.5194/acp-2021-642-supplement",
-    "venue": "Atmospheric Chemistry and Physics",
-    "citation_count": 1,
-    "paper_id": "ce457c8ce032994b89a95102f3d2f55497326599",
-    "url": "https://www.semanticscholar.org/paper/ce457c8ce032994b89a95102f3d2f55497326599",
-    "abstract": "Abstract. We present a new method to infer nitrogen oxides (NOx) emissions and lifetimes based on tropospheric nitrogen dioxide (NO2) observations together with reanalysis wind fields for cities located in polluted backgrounds. Since the accuracy of the method is difficult to assess due to lack of “true values” that can be used as a benchmark, we apply the method to synthetic NO2 observations derived from the NASA-Unified Weather Research and Forecasting (NU-WRF) model at a high horizontal spatial resolution of 4 km × 4 km for cities over the continental US. We compare the inferred emissions and lifetimes with the values given by the NU-WRF model to evaluate the method. The method is applicable to 26 US cities. The derived results are generally in good agreement with the values given by the model, with the relative differences of 2 % ± 17 % (mean ± standard deviation) and 15 % ± 25 % for lifetimes and emissions, respectively. Our investigation suggests that the use of wind data prior to satellite overpass time improves the performance of the method. The correlation coefficients between inferred and NU-WRF lifetimes increase from 0.56 to 0.79 and for emissions increase from 0.88 to 0.96 when comparing results based on wind fields sampled simultaneously with satellite observations and averaged over 9 hours data prior to satellite observations, respectively. We estimate that uncertainties in NOx lifetime and emissions arising from the method are approximately 15 % and 20 %, respectively, for typical (US) cities. We expect this new method to be applicable to NO2 observations from the TROPOspheric Monitoring Instrument (TROPOMI) and geostationary satellites, such as Geostationary Environment Monitoring Spectrometer (GEMS) or the Tropospheric Emissions: Monitoring Pollution (TEMPO) instrument, to estimate urban NOx emissions and lifetimes globally.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
-    "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": [
-      {
-        "name": "NASA-Unified Weather Research and Forecasting (NU-WRF)",
-        "agency": "NASA",
-        "type": "Model Output",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Used to generate synthetic NO2 observations for evaluating the method's accuracy."
-      },
-      {
-        "name": "TROPOspheric Monitoring Instrument (TROPOMI)",
-        "agency": "ESA",
-        "type": "Instrument",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Expected to be used for NO2 observations to estimate urban NOx emissions and lifetimes globally."
-      },
-      {
-        "name": "Geostationary Environment Monitoring Spectrometer (GEMS)",
-        "agency": "KARI",
-        "type": "Instrument",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Expected to be used for NO2 observations to estimate urban NOx emissions and lifetimes globally."
-      },
-      {
-        "name": "Tropospheric Emissions: Monitoring Pollution (TEMPO) instrument",
-        "agency": "NASA",
-        "type": "Instrument",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Expected to be used for NO2 observations to estimate urban NOx emissions and lifetimes globally."
-      }
-    ]
   },
   {
     "title": "Response of rice (Oryza sativa L.) cultivars to elevated ozone stress",
@@ -50482,77 +50223,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Seasonal and Spatial Changes in Trace Gases over Megacities from AURA TES Observations” by",
-    "authors": [
-      "K. Cady-Pereira"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "7dd7ff616309067b0b40de1c9ed63fec3ed504d6",
-    "url": "https://www.semanticscholar.org/paper/7dd7ff616309067b0b40de1c9ed63fec3ed504d6",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
-    "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": [
-      {
-        "name": "Aura",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The satellite platform hosting the TES instrument, used for observations of trace gases."
-      },
-      {
-        "name": "TES",
-        "agency": "NASA",
-        "type": "Instrument",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Provides observations of trace gases over megacities to study seasonal and spatial changes."
-      }
-    ]
-  },
-  {
-    "title": "Interactive comment on “On the effect of upwind emission controls on ozone in Sequoia National Park” by",
-    "authors": [
-      "C. Buysse"
-    ],
-    "year": 2017,
-    "doi": "10.5194/acp-2017-1006",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "89080a5133e650ced122ec14211d3f6b4e5811e1",
-    "url": "https://www.semanticscholar.org/paper/89080a5133e650ced122ec14211d3f6b4e5811e1",
-    "abstract": "Overall, the paper is well written and is an easy read, but there are some fundamental issues that must be addressed before this paper can be published. In general, there are numerous, rather bold statements, that need to be substantiated. Most things are overstated in the manuscript, and the rudimentary analysis done in Section 3.4, past and future exceedances, is completely unacceptable for any paper that is going to be published in ACP, or any other scientific journal. As far as overstating goes, the first sentence of the abstract is simply not correct:",
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
-    "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
     "title": "Journal of Geophysical Research: Atmospheres Monthly top-down NOx emissions for China (2005–2012): A hybrid inversion method and trend analysis",
     "authors": [
       "Z. Qu",
@@ -50582,31 +50252,6 @@
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
     "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Global atmospheric carbon monoxide budget 2000 – 2017 inferred from multi-species atmospheric inversions ” by Bo",
-    "authors": [],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "cae4848c31d3e13c0902b85ca3fe91090ad51702",
-    "url": "https://www.semanticscholar.org/paper/cae4848c31d3e13c0902b85ca3fe91090ad51702",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
-    "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
-    "research_domain": "Climate Science",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -50964,69 +50609,6 @@
         "product": "Not specified",
         "data_level": "Not specified",
         "usage_context": "Its ozone profile model output was used to evaluate instrumental step changes in the Umkehr record."
-      }
-    ]
-  },
-  {
-    "title": "Supplementary material to \"Ozone and carbon monoxide observations over open oceans on R/V Mirai from 67° S to 75° N during 2012 to 2017: Testing global chemical reanalysis in terms of Arctic processes, low ozone levels at low latitudes, and pollution transport\"",
-    "authors": [
-      "Y. Kanaya",
-      "K. Miyazaki",
-      "F. Taketani",
-      "T. Miyakawa",
-      "H. Takashima",
-      "Y. Komazaki",
-      "Xiaole Pan",
-      "S. Kato",
-      "K. Sudo",
-      "J. Inoue",
-      "Kazutoshi Sato",
-      "K. Oshima"
-    ],
-    "year": 2019,
-    "doi": "10.5194/acp-2018-1354",
-    "venue": "",
-    "citation_count": 23,
-    "paper_id": "9030cc0a1b69897caab918917c971fd9b4968597",
-    "url": "https://www.semanticscholar.org/paper/9030cc0a1b69897caab918917c971fd9b4968597",
-    "abstract": "Abstract. Constraints from ozone (O3) observations over oceans are needed in addition to those from terrestrial regions to fully understand global tropospheric chemistry and its impact on the climate. Here, we provide a large data set of ozone and carbon monoxide (CO) levels observed (for 11 666 and 10 681 h, respectively) over oceans. The data set is derived from observations made during 24 research cruise legs of R/V Mirai during 2012 to 2017, in the Southern, Indian, Pacific, and Arctic Oceans, covering the region from 67° S to 75° N. The data are suitable for critical evaluation of the over-ocean distribution of ozone derived from chemical transport models. We first give an overview of the statistics in the data set and highlight key features in terms of geographical distribution and air mass type. We then use the data set to evaluate ozone concentration fields from Tropospheric Chemistry Reanalysis version 2 (TCR-2), produced by assimilating a suite of satellite observations of multiple species into a chemical transport model, namely CHASER. For long-range transport of polluted air masses from continents to the oceans, during which the effects of forest fires and fossil fuel combustion were recognized, TCR-2 gave an excellent performance in reproducing the observed temporal variations and photochemical buildup of O3 when assessed from ΔO3 / ΔCO ratios. For clean marine conditions with low and stable CO concentrations, two focused analyses were performed. The first was in the Arctic (> 70° N) in September every year from 2013 to 2016; TCR-2 underpredicted O3 levels by 6.7 ppb (21 %) on average. The observed vertical profiles from O3 soundings from R/V Mirai during September 2014 had less steep vertical gradients at low altitudes (> 850 hPa) than those obtained TCR-2. This suggests the possibilities of more efficient descent of the O3-rich air from above or less efficient dry deposition on the surface than were assumed in the model. In the second analysis, over the western Pacific equatorial region (125–165° E, 10° S to 25° N), the observed O3 level frequently decreased to less than 10 ppb in comparison to that obtained with TCR-2, and also those obtained in most of the Atmospheric Chemistry Climate Model Intercomparison Project (ACCMIP) model runs for the decade from 2000. These results imply loss processes that are unaccounted for in the models. We found that the model’s positive bias positively correlated with the daytime residence times of air masses over a particular grid, namely 165–180° E and 15–30° N; an additional loss rate of 0.25 ppb h−1 in the grid best explained the gap. Halogen chemistry, which is commonly omitted from currently used models, might be active in this region and could have contributed to additional losses. Our open data set covering wide ocean regions is complementary to the Tropospheric Ozone Assessment Report data set, which basically comprises ground-based observations, and enables a fully global study of the behavior of O3.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Evaluation of ACCMIP ozone simulations and ozonesonde sampling biases using a satellite-based multi-constituent chemical reanalysis",
-    "team_paper_id": "cbe938429847cf0eac34dbe2310c1252b2c29e17",
-    "research_domain": "Atmospheric Science",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": [
-      {
-        "name": "Tropospheric Chemistry Reanalysis version 2",
-        "agency": "Not specified",
-        "type": "Reanalysis",
-        "product": "TCR-2",
-        "data_level": "Not specified",
-        "usage_context": "Used to evaluate ozone concentration fields over oceans and compared with R/V Mirai observations."
-      },
-      {
-        "name": "CHASER",
-        "agency": "Not specified",
-        "type": "Model Output",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "The chemical transport model used to produce the Tropospheric Chemistry Reanalysis version 2 (TCR-2) by assimilating satellite observations."
-      },
-      {
-        "name": "Atmospheric Chemistry Climate Model Intercomparison Project",
-        "agency": "Not specified",
-        "type": "Model Output",
-        "product": "ACCMIP model runs",
-        "data_level": "Not specified",
-        "usage_context": "Used for comparison with observed O3 levels and TCR-2 results in the western Pacific equatorial region."
       }
     ]
   },
@@ -53356,42 +52938,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “ On biases in atmospheric CO inversions assimilating MOPITT satellite retrievals ” by Yi Yin",
-    "authors": [
-      "Yi Yin"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "96b7c57da6f9f81b8a8a864979fba40fbfeeac7e",
-    "url": "https://www.semanticscholar.org/paper/96b7c57da6f9f81b8a8a864979fba40fbfeeac7e",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "A tropospheric chemistry reanalysis for the years 2005–2012 based on an assimilation of OMI, MLS, TES, and MOPITT satellite data",
-    "team_paper_id": "97f93bffed12d5391b4efbeb3453c667b7633130",
-    "research_domain": "Remote Sensing & Satellite",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": [
-      {
-        "name": "MOPITT",
-        "agency": "NASA",
-        "type": "Instrument",
-        "product": "satellite retrievals",
-        "data_level": "Not specified",
-        "usage_context": "MOPITT satellite retrievals are assimilated into atmospheric CO inversions, and the paper discusses biases related to this assimilation."
-      }
-    ]
-  },
-  {
     "title": "Supplement of Reanalysis of and attribution to near-surface ozone concentrations in Swe- den during 1990–2013",
     "authors": [
       "C. Andersson"
@@ -53430,33 +52976,6 @@
     "citation_count": 31,
     "paper_id": "f002e5c467a554a8c79f6c664db188668930784b",
     "url": "https://www.semanticscholar.org/paper/f002e5c467a554a8c79f6c664db188668930784b",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "A tropospheric chemistry reanalysis for the years 2005–2012 based on an assimilation of OMI, MLS, TES, and MOPITT satellite data",
-    "team_paper_id": "97f93bffed12d5391b4efbeb3453c667b7633130",
-    "research_domain": "Remote Sensing & Satellite",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “On biases in atmospheric CO inversions assimilating MOPITT satellite retrievals” by Yi Yin et al",
-    "authors": [
-      "Yi Yin"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "c89106d636c440757a137bfdd2a94f0ab1b70dfc",
-    "url": "https://www.semanticscholar.org/paper/c89106d636c440757a137bfdd2a94f0ab1b70dfc",
     "abstract": null,
     "indexed": {
       "date-parts": [
@@ -63804,33 +63323,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Inﬂuences of hydroxyl radicals (OH) on top-down estimates of the global and regional methane budgets” by Yuanhong",
-    "authors": [
-      "T. G. N. Ramirez"
-    ],
-    "year": 2020,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "6961dfd5a2c741dcc400de6162b976410a4ed620",
-    "url": "https://www.semanticscholar.org/paper/6961dfd5a2c741dcc400de6162b976410a4ed620",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
-    "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "for evaluating computational models of atmospheric transport and oxidation at regional to global",
     "authors": [
       "P. Simmonds",
@@ -63859,33 +63351,6 @@
     "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
     "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
     "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Strong Sensitivity of the Isotopic Composition of Methane to the Plausible Range of Tropospheric Chlorine” by Sarah A. Strode et al",
-    "authors": [
-      "T. G. N. Ramirez"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "aed92086119f16d4ce00f36b2d3f5d062fa04d5a",
-    "url": "https://www.semanticscholar.org/paper/aed92086119f16d4ce00f36b2d3f5d062fa04d5a",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
-    "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
-    "research_domain": "Modeling & Simulation",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -64105,91 +63570,6 @@
     "research_domain": "Modeling & Simulation",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Seasonal Variability of Stratospheric Methane: Implications for Constraining Tropospheric Methane Budgets Using Total Column Observations” by K. M. Saad",
-    "authors": [],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "e5d8b5bd79f58b3aee472f05ee7e97f860274c0e",
-    "url": "https://www.semanticscholar.org/paper/e5d8b5bd79f58b3aee472f05ee7e97f860274c0e",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
-    "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Seasonal Variability of Stratospheric Methane: Implications for Constraining Tropospheric Methane Budgets",
-    "authors": [
-      "K. M. Saad"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "2b24b055c6878d319e8b9738c54bd25b3fbc3561",
-    "url": "https://www.semanticscholar.org/paper/2b24b055c6878d319e8b9738c54bd25b3fbc3561",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
-    "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": [
-      {
-        "name": "MLS",
-        "agency": "NASA",
-        "type": "Instrument",
-        "product": "Methane (CH4) profiles",
-        "data_level": "Not specified",
-        "usage_context": "Implied to be used for observing stratospheric methane variability."
-      },
-      {
-        "name": "TANSO-FTS",
-        "agency": "JAXA",
-        "type": "Instrument",
-        "product": "Methane (CH4) total column",
-        "data_level": "Not specified",
-        "usage_context": "Implied to be used for observing total column and tropospheric methane for budget constraints."
-      },
-      {
-        "name": "TROPOMI",
-        "agency": "ESA",
-        "type": "Instrument",
-        "product": "Methane (CH4) total column",
-        "data_level": "Not specified",
-        "usage_context": "Implied to be used for observing tropospheric methane for budget constraints."
-      },
-      {
-        "name": "MERRA-2",
-        "agency": "NASA (GMAO)",
-        "type": "Reanalysis",
-        "product": "Methane fields, meteorological fields",
-        "data_level": "L4",
-        "usage_context": "Implied to provide reanalyzed atmospheric conditions and methane fields for context or comparison."
-      }
-    ]
   },
   {
     "title": "The Description and Validation of a Computationally-Efficient CH 4-1 COOH ( ECCOHv 1 . 01 ) Chemistry Module for 3 D Model Applications 2",

@@ -7242,42 +7242,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Using GRACE in a streamflow recession to determine drainable water storage in the Mississippi River Basin” by Heloisa Ehalt Macedo et al",
-    "authors": [
-      "H. E. Macedo"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "3bd34c11c46a21fe4b73e711800e22b9a2841337",
-    "url": "https://www.semanticscholar.org/paper/3bd34c11c46a21fe4b73e711800e22b9a2841337",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Enhanced fixed-size parallel speedup with the Muskingum method using a trans-boundary approach and a large sub-basins approximation",
-    "team_paper_id": "79f1da4ff941ab4c09afcbcd3383616cab4419a7",
-    "research_domain": "Hydrology & Water Resources",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Used to determine drainable water storage in the Mississippi River Basin."
-      }
-    ]
-  },
-  {
     "title": "A new framework to model the distributed transfer and retention of nutrients by incorporating topology structure of small water bodies.",
     "authors": [
       "Yongqiu Xia",
@@ -11346,33 +11310,6 @@
     "citing_team_paper": "Continental Scale River Flow Modeling of the Mississippi River Basin Using High-Resolution NHDPlus Dataset",
     "team_paper_id": "ac2ccc085a9261e909cdb44e603c667684648052",
     "research_domain": "Hydrology & Water Resources",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Answers to the interactive comments from Dr . L . A . Melsen",
-    "authors": [
-      "L. Melsen"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "21f146530e73c81a77b0a0a97e38b6aeecf5a095",
-    "url": "https://www.semanticscholar.org/paper/21f146530e73c81a77b0a0a97e38b6aeecf5a095",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Continental Scale River Flow Modeling of the Mississippi River Basin Using High-Resolution NHDPlus Dataset",
-    "team_paper_id": "ac2ccc085a9261e909cdb44e603c667684648052",
-    "research_domain": "General Science",
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": []
   },

@@ -14592,41 +14592,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Thermal erosion patterns of permafrost peat plateaus in\nnorthern Norway\"",
-    "authors": [
-      "L. Martin",
-      "J. Nitzbon",
-      "J. Scheer",
-      "K. Aas",
-      "T. Eiken",
-      "M. Langer",
-      "S. Filhol",
-      "B. Etzelmüller",
-      "S. Westermann"
-    ],
-    "year": 2020,
-    "doi": "10.5194/tc-2020-338-supplement",
-    "venue": "",
-    "citation_count": 1,
-    "paper_id": "814c3598b773826069eb70cb6d31c77f0af493dc",
-    "url": "https://www.semanticscholar.org/paper/814c3598b773826069eb70cb6d31c77f0af493dc",
-    "abstract": "Abstract. Subarctic peatlands underlain by permafrost contain significant amounts of organic carbon and our ability to quantify the evolution of such permafrost landscapes in numerical models is critical to provide robust predictions of the environmental and climatic changes to come. Yet, the accuracy of large-scale predictions is so far hampered by small-scale physical processes that create a high spatial variability of surface ground thermal regime and thus of permafrost degradation patterns. In this regard, a better understanding of the small-scale interplay between microtopography and lateral fluxes of heat, water and snow can be achieved by field monitoring and process-based numerical modeling. Here, we quantify the topographic changes of the Šuoššjávri peat plateau (Northern Norway) over a three-years period using repeated drone-based high-resolution photogrammetry. Our results show that edge degradation is the main process through which thermal erosion occurs and represents about 80 % of measured subsidence, while most of the inner plateau surface exhibits no detectable subsidence. Based on detailed investigation of eight zones of the plateau edge, we show that this edge degradation corresponds to a volumetric loss of 0.13 ± 0.07 m3 yr−1 m−1 (cubic meter per year and per meter of plateau circumference). Using the CryoGrid land surface model, we show that these degradation patterns can be reproduced in a modeling framework that implements lateral redistribution of snow, subsurface water and heat, as well as ground subsidence due to melting of excess ice. We reproduce prolonged climate-driven edge degradation that is consistent with field observations and present a sensitivity test of the plateau degradation on snow depth over the plateau. Small snow depth variations (from 0 to 30 cm) result in highly different degradation behavior, from stability to fast degradation. These results represent a new step in the modeling of climate-driven landscape development and permafrost degradation in highly heterogeneous landscapes such as peat plateaus. Our approach provides a physically based quantification of permafrost thaw with a new level of realism, notably, regarding feedback mechanisms between the dynamical topography and the lateral fluxes through which a small modification of the snow depth result in dramatic modifications of the permafrost degradation intensity. In this regard, these results also highlight the major control of snow pack characteristics on the ground thermal regime and the potential improvement that accurate snow representation and prediction could bring to projections of permafrost degradation.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Large loss of CO2 in winter observed across the northern permafrost region",
-    "team_paper_id": "07d1d5375846d95bff05bafce7d84c378c207e03",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
     "title": "Addressing Biases in Arctic-Boreal Carbon Cycling in the\nCommunity Land Model Version 5",
     "authors": [
       "L. Birch",
@@ -30323,33 +30288,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Realized ecological forecast through interactive Ecological Platform for Assimilating Data into model (EcoPAD)” by Yuanyuan Huang et al",
-    "authors": [
-      "Yuanyuan Huang"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "19e8d862496943dbe7d8a7ce102632357783b81c",
-    "url": "https://www.semanticscholar.org/paper/19e8d862496943dbe7d8a7ce102632357783b81c",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
-    "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
-    "research_domain": "Machine Learning & Data Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Soil and vegetation carbon turnover times from tropical to boreal forests",
     "authors": [
       "Jinsong Wang",
@@ -30379,33 +30317,6 @@
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Ecosystem & Biogeochemistry",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Inferring the effects of sink strength on plant carbon balance processes from experimental measurements” by",
-    "authors": [
-      "K. Mahmud"
-    ],
-    "year": 2018,
-    "doi": "10.5194/bg-2018-99",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "1113f9d98d1e433849f0395159710276065b3201",
-    "url": "https://www.semanticscholar.org/paper/1113f9d98d1e433849f0395159710276065b3201",
-    "abstract": "The manuscript uses a data-assimilation technique to combine an essential but well thought model of carbon balance and plant growth with observations of photosynthesis, maintenance respiration, changes in biomass and NSC obtained in seedlings of Eucalyptos tereticornis planted in containers of different volumes and freely in the soil. The original experiment of Campany et al 2017 reproduced indeed different degrees of sink limitations. The data-assimilation technique allows the authors to infer time dynamics of model parameters (e.g., allocation fractions) and to quantify the relative",
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
-    "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
-    "research_domain": "Ecosystem & Biogeochemistry",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -30694,31 +30605,6 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Supplementary Information to: A comprehensive land surface vegetation model for multi-stream data assimilation",
-    "authors": [],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 1,
-    "paper_id": "3efbc2c63a1e75b1a6fbcbc54c21964f30a3cce5",
-    "url": "https://www.semanticscholar.org/paper/3efbc2c63a1e75b1a6fbcbc54c21964f30a3cce5",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
-    "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
-    "research_domain": "Ecosystem & Biogeochemistry",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },

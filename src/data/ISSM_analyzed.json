@@ -11353,34 +11353,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Review of: Coupling between ice flow and subglacial hydrology enhances marine ice-sheet retreat by Lu and Kingslake",
-    "authors": [
-      "George Lu",
-      "J. Kingslake"
-    ],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "fc92f0b85ac3a9a88ef2d1f082ec8ed0e204eec4",
-    "url": "https://www.semanticscholar.org/paper/fc92f0b85ac3a9a88ef2d1f082ec8ed0e204eec4",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "Modeling the Deformation Regime of Thwaites Glacier",
-    "team_paper_id": "a91aad8504f253e036aa2bed910d9a8882e14c20",
-    "research_domain": "Ocean & Marine Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Two-way coupling between ice ﬂow and channelized subglacial drainage enhances modeled marine-ice-sheet retreat",
     "authors": [
       "George Lu",
@@ -38287,47 +38259,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Cosmogenic isotope measurements from recently deglaciated bedrock as a new tool to decipher changes in Greenland Ice Sheet size\"",
-    "authors": [
-      "N. Young",
-      "A. Lesnek",
-      "J. Cuzzone",
-      "J. Briner",
-      "J. Badgeley",
-      "Alexandra Balter-Kennedy",
-      "Brandon L. Graham",
-      "A. Cluett",
-      "J. Lamp",
-      "R. Schwartz",
-      "T. Tuna",
-      "E. Bard",
-      "M. Caffee",
-      "S. Zimmerman",
-      "J. Schaefer"
-    ],
-    "year": 2020,
-    "doi": "10.5194/cp-2020-111-supplement",
-    "venue": "",
-    "citation_count": 2,
-    "paper_id": "b48e8ae582a4a9c261cc95271b73f0ab4e8d9950",
-    "url": "https://www.semanticscholar.org/paper/b48e8ae582a4a9c261cc95271b73f0ab4e8d9950",
-    "abstract": "During the middle to late Holocene (8.2 ka BP to present), the Greenland Ice Sheet (GrIS) was smaller than its current configuration. Determining the exact dimensions of the Holocene ice-sheet minimum and the duration that the ice margin rested inboard of its current position remains challenging. Contemporary retreat of the GrIS from its historical maximum extent in southwestern Greenland is exposing a landscape that holds clues regarding the configuration and timing 20 of past ice-sheet minima. To quantify the duration of the time the GrIS margin was near its modern extent we develop a new technique on Greenland that utilizes in situ cosmogenic 10Be-14C-26Al in bedrock samples that have become ice free only in the last few decades by the retreating ice-sheet margin at Kangiata Nunaata Sermia (n=12 sites; KNS), southwest Greenland. To maximize the utility of this approach, we refine the deglaciation history of the region with stand-alone 10Be measurements (n=49) and traditional 14C ages from sedimentary deposits contained in proglacial-threshold lakes. We combine our 25 reconstructed ice-margin history in the KNS region with additional geologic records from southwestern Greenland and recent model simulations of GrIS change, to constrain the timing of the GrIS minimum in southwest Greenland, the magnitude of Holocene inland GrIS retreat, and explore the regional climate history influencing Holocene ice-sheet behavior. Our 10Be-14C26Al measurements reveal that 1) KNS retreated behind its modern margin just before 10 ka, but likely stabilized near the present GrIS margin for several thousand years before retreating farther inland, and 2) pre-Holocene 10Be detected in several 30 of our sample sites is most easily explained by several thousand years of surface exposure during the Last Interglaciation. Moreover, our new results indicate that the minimum extent of the GrIS likely occurred after ~5 ka, and the GrIS margin may have approached its eventual historical maximum extent as early as ~2 ka. Recent simulations of GrIS change are able to match the geologic record of ice-sheet change in regions dominated by surface mass balance, but produce a poorer model-data fit in https://doi.org/10.5194/cp-2020-111 Preprint. Discussion started: 30 September 2020 c © Author(s) 2020. CC BY 4.0 License.",
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Rate of mass loss from the Greenland Ice Sheet will exceed Holocene values this century. Nature",
-    "team_paper_id": "dddb2017669e75420511e28bfb125ef2ca746e14",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "The vertical structure of the troposphere and its connection to the surface mass balance of Flade Isblink in Northeast Greenland",
     "authors": [
       "Jonathan Fipper",
@@ -41463,33 +41394,6 @@
     "citing_team_paper": "Exceptionally high heat flux needed to sustain the Northeast Greenland Ice Stream. The Cryosphere",
     "team_paper_id": "d8e05472dc3977dd70f091c26d7630c1f820d46f",
     "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Comment on “Exceptionally high heat flux needed to sustain the Northeast Greenland Ice Stream” by S. Smith-Johnson et al., The Cryosphere, 14, 841–854, 2020” by Paul D. Bons et al",
-    "authors": [
-      "P. Bons"
-    ],
-    "year": 2021,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "a814381d7dbbde06d9f0d45f74010662b04ed8b4",
-    "url": "https://www.semanticscholar.org/paper/a814381d7dbbde06d9f0d45f74010662b04ed8b4",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Exceptionally high heat flux needed to sustain the Northeast Greenland Ice Stream. The Cryosphere",
-    "team_paper_id": "d8e05472dc3977dd70f091c26d7630c1f820d46f",
-    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -54847,36 +54751,6 @@
     "missions_instruments": []
   },
   {
-    "title": "ODU Digital Commons ODU Digital Commons",
-    "authors": [
-      "Heijkoop",
-      "Hamlington",
-      "Nerem",
-      "Gardner"
-    ],
-    "year": 2023,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "5bc981a72deca79f4f5c3dfae1b7a6d53911bca2",
-    "url": "https://www.semanticscholar.org/paper/5bc981a72deca79f4f5c3dfae1b7a6d53911bca2",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2023,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The causes of sea-level rise since 1900. Nature",
-    "team_paper_id": "42b8107a24a7f8bb3fe89dea5baa5284bb23515d",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "GPS displacement dataset for study of elastic surface mass 1 variations 2",
     "authors": [
       "A. Peidou",
@@ -55599,33 +55473,6 @@
     "team_paper_id": "42b8107a24a7f8bb3fe89dea5baa5284bb23515d",
     "research_domain": "Ocean & Marine Science",
     "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Review article: Sea-level rise in Venice: historic and future trends” by",
-    "authors": [
-      "D. Zanchettin"
-    ],
-    "year": 2020,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "4d4212d87e8dd680e1a23c0f70ccbcf1e150a84a",
-    "url": "https://www.semanticscholar.org/paper/4d4212d87e8dd680e1a23c0f70ccbcf1e150a84a",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The causes of sea-level rise since 1900. Nature",
-    "team_paper_id": "42b8107a24a7f8bb3fe89dea5baa5284bb23515d",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -79683,61 +79530,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary Material to Mas e Braga et al. “Nunataks as barriers to ice flow: implications for palaeo ice-sheet reconstructions” Compilation of sample position relative to ice flow",
-    "authors": [],
-    "year": 2021,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "b087b9fbd01f3a4fb4f7e44b03d23ab2d2fb73d0",
-    "url": "https://www.semanticscholar.org/paper/b087b9fbd01f3a4fb4f7e44b03d23ab2d2fb73d0",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. Nature Geoscience",
-    "team_paper_id": "5107a38b7b5e1451967ebbc8751bd49234915a50",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Supplementary material to \"GREB-ISM v0.3: A coupled ice sheet model for the Global Resolved Energy Balance model for global simulations on time-scales of 100 kyr\"",
-    "authors": [
-      "Zhiang Xie",
-      "D. Dommenget",
-      "F. McCormack",
-      "A. Mackintosh"
-    ],
-    "year": 2021,
-    "doi": "10.5194/gmd-2021-204-supplement",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "a3769af6488d99352353cbbf46dec690e77b8930",
-    "url": "https://www.semanticscholar.org/paper/a3769af6488d99352353cbbf46dec690e77b8930",
-    "abstract": "We introduce a newly developed global ice sheet model coupled to the Globally Resolved Energy Balance (GREB) climate model for the simulation of global ice sheet evolution on time scales of 100 kyr or longer (GREB-ISM v0.3). Ice sheets and ice shelves are simulated on a global grid, fully interacting with the climate simulation of surface temperature, precipitation, albedo, land-sea mask, topography and sea level. Thus, it is a fully coupled atmosphere, ocean, land and ice sheet 10 model. We test the model in ice sheet stand-alone and fully coupled simulations. The ice sheet model dynamics behave similarly to other hybrid SIA (Shallow Ice Approximation) and SSA (Shallow Shelf Approximation) models, but the West Antarctic Ice Sheet accumulates too much ice using present-day boundary conditions. The coupled model simulations produce global equilibrium ice sheet volumes and calving rates similar to observed for present day boundary conditions. We designed a series of idealised experiments driven by oscillating solar radiation forcing on periods of 20 kyr, 50 kyr and 100 kyr in the 15 Northern Hemisphere. These simulations show clear interactions between the climate system and ice sheets, resulting in slow build-up and fast decay of ice-covered areas and global ice volume. The results also show that Northern Hemisphere ice sheets respond more strongly to time scales longer than 100 kyr. The coupling to the atmosphere and sea level leads to climate interactions between the Northern and Southern Hemispheres. The model can run global simulations of 100 kyr per day on a desktop computer, allowing the simulation of the whole Quaternary period (2.6 Myrs) within one month. 20",
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. Nature Geoscience",
-    "team_paper_id": "5107a38b7b5e1451967ebbc8751bd49234915a50",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Antarctica",
     "authors": [
       "C. Siddoway"
@@ -84145,31 +83937,6 @@
     "team_paper_id": "ca0f28296e8a9b91e65ed0d731f7721a0e99d70d",
     "research_domain": "Modeling & Simulation",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Review of: Basal conditions of Denman Glacier from glacier hydrology and ice dynamics modeling",
-    "authors": [],
-    "year": 2023,
-    "doi": null,
-    "venue": "",
-    "citation_count": 1,
-    "paper_id": "adb2aff2e33d2dd8b25383eca46eabbc324105d3",
-    "url": "https://www.semanticscholar.org/paper/adb2aff2e33d2dd8b25383eca46eabbc324105d3",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2023,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "initMIP-Antarctica: an ice sheet model initialization experiment of ISMIP6. The Cryosphere",
-    "team_paper_id": "ca0f28296e8a9b91e65ed0d731f7721a0e99d70d",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -90744,39 +90511,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Past and future response of Greenland's tidewater glaciers to submarine melting\"",
-    "authors": [
-      "D. Slater",
-      "F. Straneo",
-      "D. Felikson",
-      "C. Little",
-      "H. Goelzer",
-      "X. Fettweis",
-      "J. Holte"
-    ],
-    "year": 2019,
-    "doi": "10.5194/TC-2019-98",
-    "venue": "",
-    "citation_count": 2,
-    "paper_id": "38c3774291544847def2fc8799efb58413f8df7f",
-    "url": "https://www.semanticscholar.org/paper/38c3774291544847def2fc8799efb58413f8df7f",
-    "abstract": "Abstract. The effect of the North Atlantic Ocean on the Greenland Ice Sheet through submarine melting of Greenland's tidewater glacier calving fronts is thought to be a key driver of widespread glacier retreat, dynamic mass loss and sea level contribution from the ice sheet. Despite its critical importance, problems of process complexity and scale hinder efforts to represent the influence of submarine melting in ice sheet-scale models. Here we propose parameterizing tidewater glacier terminus position as a simple linear function of submarine melting, with submarine melting in turn estimated as a function of subglacial runoff and ocean temperature. The relationship is tested, calibrated and validated using datasets of terminus position, runoff and ocean temperature covering the full ice sheet and surrounding ocean from the period 1960–present. We demonstrate a statistically significant link between multi-decadal tidewater glacier terminus position and submarine melting and show that the proposed parameterisation has predictive power when considering a population of glaciers. An illustrative 21st century projection is considered suggesting that tidewater glaciers in Greenland will undergo little further retreat in a low emissions RCP2.6 scenario. In contrast, a high emissions RCP8.5 scenario results in a median retreat of ∼6 km, with 35 % of glaciers experiencing retreat exceeding 10 km. Our study provides a long-term and ice sheet-wide assessment of the sensitivity of tidewater glaciers to submarine melting and proposes a practical and empirically validated means of incorporating ocean forcing into models of the Greenland ice sheet.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Modeling the response of northwest Greenland to enhanced ocean thermal forcing and subglacial discharge. The Cryosphere",
-    "team_paper_id": "026831b76540f1927c5f8af56453f8ca00bb3424",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
     "title": "Extracting Glacier Calving Fronts by Deep Learning: The Benefit of Multispectral, Topographic, and Textural Input Features",
     "authors": [
       "Erik Loebel",
@@ -96459,33 +96193,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “ Uncertainty quantification of the multi-centennial response of the Antarctic Ice Sheet to climate change ” by Kevin Bulthuis et al",
-    "authors": [
-      "Aschwanden Referee"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "3f37c4b0709b9fe13e8fd7e92d62a56531f273ce",
-    "url": "https://www.semanticscholar.org/paper/3f37c4b0709b9fe13e8fd7e92d62a56531f273ce",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Retreat of Thwaites Glacier",
-    "team_paper_id": "76918370cc89726c9129fc6088630142196c32fb",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Point by Point response to review 3",
     "authors": [
       "A. Wernecke"
@@ -99808,33 +99515,6 @@
     "citing_team_paper": "Representation of basal melting at the grounding line in ice flow models. The Cryosphere",
     "team_paper_id": "1118bdd43e17911f033c6ecad484ecca9b02d9b0",
     "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Marine ice-sheet experiments with the Community Ice Sheet Model”",
-    "authors": [
-      "G. Leguy"
-    ],
-    "year": 2021,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "bf5c90c64b512a018973b6c037780bd4e077f7d4",
-    "url": "https://www.semanticscholar.org/paper/bf5c90c64b512a018973b6c037780bd4e077f7d4",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2021,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Representation of basal melting at the grounding line in ice flow models. The Cryosphere",
-    "team_paper_id": "1118bdd43e17911f033c6ecad484ecca9b02d9b0",
-    "research_domain": "Ocean & Marine Science",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -107169,169 +106849,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Modeling the response of Greenland outlet glaciers to global warming using a coupled flowline-plume model” by Johanna Beckmann et al",
-    "authors": [
-      "J. Beckmann"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "bf1b422cbb69692a8e3513a272714f2a27e79591",
-    "url": "https://www.semanticscholar.org/paper/bf1b422cbb69692a8e3513a272714f2a27e79591",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Design and results of the ice sheet model initialisation experiments initMIP-Greenland: an ISMIP6 intercomparison. The Cryosphere",
-    "team_paper_id": "33fb69677b7062be6d01c90d199f3d56a6d842f3",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Assessment of the Greenland ice sheet – atmosphere feedbacks for the next century with a regional atmospheric model fully coupled to an ice sheet model” by Sebastien Le clec’h et al",
-    "authors": [
-      "Sébastien Le clec’h"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "44e8b815d727cade85bb03ac44d010439b6a3a1f",
-    "url": "https://www.semanticscholar.org/paper/44e8b815d727cade85bb03ac44d010439b6a3a1f",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Design and results of the ice sheet model initialisation experiments initMIP-Greenland: an ISMIP6 intercomparison. The Cryosphere",
-    "team_paper_id": "33fb69677b7062be6d01c90d199f3d56a6d842f3",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Assessment of the Greenland ice sheet – atmosphere feedbacks for the next century with a regional atmospheric model fully coupled to an ice sheet model ”",
-    "authors": [],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "097b99060659c65cb05ea5cc1f56693c75ceb353",
-    "url": "https://www.semanticscholar.org/paper/097b99060659c65cb05ea5cc1f56693c75ceb353",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Design and results of the ice sheet model initialisation experiments initMIP-Greenland: an ISMIP6 intercomparison. The Cryosphere",
-    "team_paper_id": "33fb69677b7062be6d01c90d199f3d56a6d842f3",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "ODU Digital Commons ODU Digital Commons",
-    "authors": [
-      "Rui M. Ponte",
-      "De Mey-Frémaux",
-      "SM Grifﬁes",
-      "RD Ray",
-      "Santamaría-Gómez Rickards L",
-      "Thompson Thompson K",
-      "M. Carson",
-      "Mauro Cirano",
-      "C. Domingues",
-      "S. Jevrejeva",
-      "Marta Marcos",
-      "G. Mitchum",
-      "R. V. D. Wal",
-      "Philip L. Woodworth",
-      "Michael Ablain",
-      "Fabrice Ardhuin",
-      "V. Ballu",
-      "M. Becker",
-      "J. Benveniste",
-      "F. Birol",
-      "E. Bradshaw",
-      "Anny Cazenave",
-      "P. D. Mey-Frémaux",
-      "F. Durand",
-      "T. Ezer",
-      "Lee-Lueng Fu",
-      "I. Fukumori",
-      "K. Gordon",
-      "Médéric Gravelle",
-      "Stephen M. Grifﬁes",
-      "Weiqing Han",
-      "A. Hibbert",
-      "Chris W. Hughes",
-      "Déborah Idier",
-      "Villy H. Kourafalou",
-      "Christopher M. Little",
-      "Andrew Matthews",
-      "A. Mélet",
-      "Mark Merriﬁeld",
-      "B. Meyssignac",
-      "Shoshiro Minobe",
-      "Thierry Penduff",
-      "Nicolas Picot",
-      "C. Piecuch",
-      "Richard D. Ray",
-      "L. Rickards",
-      "Alvaro Santamaría-Gómez",
-      "D. Stammer",
-      "Joanna Staneva",
-      "L. Testut",
-      "Keith Thompson",
-      "Philip Thompson",
-      "Stefano Vignudelli",
-      "Joanne Williams",
-      "Simon D. P. Williams",
-      "Guy Wöppelmann",
-      "L. Zanna",
-      "Xuebin Zhang"
-    ],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "570335be3a1ffbadef69acf93a7ead868f7b78eb",
-    "url": "https://www.semanticscholar.org/paper/570335be3a1ffbadef69acf93a7ead868f7b78eb",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "Design and results of the ice sheet model initialisation experiments initMIP-Greenland: an ISMIP6 intercomparison. The Cryosphere",
-    "team_paper_id": "33fb69677b7062be6d01c90d199f3d56a6d842f3",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Extending the range and reach of physically-based Greenland ice 1 sheet sea-level projections 2",
     "authors": [
       "H. Goelzer",
@@ -113091,60 +112608,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Assessing global water mass transfers from continents to oceans over the period 1948–2016” by et",
-    "authors": [
-      "Denise Cáceres"
-    ],
-    "year": 2020,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "d19d084fda47f9b98b942354987d66c1e44aca4c",
-    "url": "https://www.semanticscholar.org/paper/d19d084fda47f9b98b942354987d66c1e44aca4c",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "GIA Model Statistics for GRACE Hydrology",
-    "team_paper_id": "2c3ee237b75128110c1b63d9d7d73d8a6739a7ff",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Assessing global water mass transfers from continents to oceans over the period 1948–2016” by al.",
-    "authors": [
-      "Denise Cáceres"
-    ],
-    "year": 2020,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "e0b3ca30e0dff2bb0220e7b78e64e1491774bbfe",
-    "url": "https://www.semanticscholar.org/paper/e0b3ca30e0dff2bb0220e7b78e64e1491774bbfe",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "GIA Model Statistics for GRACE Hydrology",
-    "team_paper_id": "2c3ee237b75128110c1b63d9d7d73d8a6739a7ff",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Combination of Geodetic Data Over the Antarctic Ice Sheet for Monthly Mass Variation Solutions",
     "authors": [
       "R. A. Hardy"
@@ -114905,33 +114368,6 @@
     "citing_team_paper": "Modeling the Response of Nioghalvfjerdsfjorden and Zachariae Isstrøm Glaciers",
     "team_paper_id": "0684707718e457cd760f792d3863d966d146e016",
     "research_domain": "Hydrology & Water Resources",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Submarine melt as a potential trigger of the NEGIS margin retreat during MIS-3 ” by Ilaria Tabone et al",
-    "authors": [
-      "I. Tabone"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "298ff78d8f1613e6361f08f6d8c58aed33dc3358",
-    "url": "https://www.semanticscholar.org/paper/298ff78d8f1613e6361f08f6d8c58aed33dc3358",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Modeling the Response of Nioghalvfjerdsfjorden and Zachariae Isstrøm Glaciers",
-    "team_paper_id": "0684707718e457cd760f792d3863d966d146e016",
-    "research_domain": "Ocean & Marine Science",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -128569,33 +128005,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Authors comments on Reviewer #1 interactive comment on “Drivers for Atlantic-origin waters",
-    "authors": [
-      "L. Gillard"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "8bb4564cf521cd96abcf95d8fe8355a63c0a4a06",
-    "url": "https://www.semanticscholar.org/paper/8bb4564cf521cd96abcf95d8fe8355a63c0a4a06",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Untitled",
-    "team_paper_id": "9f12307d0f8e6522d44a7bc07aa5421a3d710e82",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Holocene Break-up and Reestablishment of the Petermann Ice 1 Tongue , Northwest Greenland 2 3 4 5",
     "authors": [
       "B. Reilly",
@@ -132176,36 +131585,6 @@
     "citation_count": 0,
     "paper_id": "e7da691e7c6ac91ba54c0bbd80087c206881d545",
     "url": "https://www.semanticscholar.org/paper/e7da691e7c6ac91ba54c0bbd80087c206881d545",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Continued retreat of Thwaites Glacier",
-    "team_paper_id": "f02dea0424e67d8ba0bacb638cdc8ba4502d75af",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Snowfall versus sub-shelf melt : response of an idealized 3 D icesheet-shelf system to mass redistribution",
-    "authors": [
-      "J. Feldmann",
-      "R. Reese",
-      "R. Winkelmann",
-      "A. Levermann"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "0772e7c7672d23de044a015a57512381b4aaf08b",
-    "url": "https://www.semanticscholar.org/paper/0772e7c7672d23de044a015a57512381b4aaf08b",
     "abstract": null,
     "indexed": {
       "date-parts": [
@@ -136032,33 +135411,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive Comment on \"Free--Surface Flow as a Variational Inequality (evolve_glacier v1.1): Numerical Aspects of a Glaciological Application\"",
-    "authors": [
-      "A. Wirbel"
-    ],
-    "year": 2020,
-    "doi": "10.5194/gmd-2020-58-ac1",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "9478527888966946964cf1fa92fa7a152614a618",
-    "url": "https://www.semanticscholar.org/paper/9478527888966946964cf1fa92fa7a152614a618",
-    "abstract": "Like any gravitationally driven flow that is not constrained at the upper surface, glaciers and ice sheets feature a free– surface, which becomes a free boundary problem within simulations. A kinematic boundary condition is often used to describe the evolution of this free–surface. However, in the case of glaciers and ice sheets, the naturally occurring constraint that the ice surface elevation (S) can not fall below the bed topography (B), (S−B ≥ 0) in combination with a non–zero mass balance rate complicates the matter substantially. We present an open–source numerical simulation framework to simulate the free–surface 5 evolution of glaciers that directly incorporates this natural constraint. It is based on the finite element software package FEniCS solving the Stokes equations for ice flow and a suitable transport equation, i.e. ’kinematic boundary condition’, for the free– surface evolution. The evolution of the free–surface is treated as a variational inequality, constrained by the bedrock underlying the glacier or the topography of the surrounding ground. To solve this problem :::: This ::::::: problem :: is :::::: solved :::: using :: a ::::::: ’reduced :::::: space’ ::::::: method, ::::: where : a ::::::: Newton ::: line :::::: search :: is :::::::: performed ::: on : a :::::: subset :: of ::: the ::::::: problem ::::::::::::::::::::::: (Benson and Munson, 2006). ::::::::: Therefore, the ’con10 strained’ non–linear problem solving capabilities of PETSc’s SNES :::::::: (Portable, ::::::::: Extensible :::::: Toolkit ::: for :::::::: Scientific :::::::::::: Computation, :::::::::::::::: Balay et al. (2018c)) :::::: SNES :::::::: (Scalable ::::::::: Non-linear ::::::::: Equations :::::: Solver) : interface are used. As the constraint is considered in the solving process, this approach does not require any ad–hoc post–processing steps to enforce no–negativity of ice thickness as well as ::: and :::::::::::: corresponding : mass conservation. The simulation framework provides the possibility to partition ::::: divide the computational domain ::: into ::::::: different :::::::::: subdomains : so that individual forms of the relevant equations can be solved for different 15 subdomains all at once. In the presented setup, this is used to distinguish between glacierized and ice–free regions. The option to chose different time discretizations, spatial stabilisation schemes and adaptive mesh refinement make it a versatile tool for glaciological applications. We present a set of benchmark tests that highlight the simulation framework is able to reproduce the free–surface evolution of complex geometries under different conditions for which it is mass conserving and numerically stable. Real–world glacier 20 examples demonstrate high resolution change in glacier geometry due to fully–resolved 3D velocities and spatially variable mass balance rate, whereby realistic glacier recession and advance states can be simulated. Additionally, we provide a thorough analysis of different spatial stabilisation techniques as well as time discretization methods. We discuss their applicability and suitability for different glaciological applications.",
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
-    "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
     "title": "Glacier runoff variations since 1955 in the Maipo River basin, in the semiarid Andes of central Chile",
     "authors": [
       "Á. Ayala",
@@ -138871,33 +138223,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Numerical modeling of the dynamics of Mer de Glace glacier, French Alps: comparison with past observations and forecasting of near future",
-    "authors": [
-      "V. Peyaud"
-    ],
-    "year": 2020,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "7b0ac23b9e7855dc2db896e7d59708d5cfdd1d73",
-    "url": "https://www.semanticscholar.org/paper/7b0ac23b9e7855dc2db896e7d59708d5cfdd1d73",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
-    "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
     "title": "IM AUFTRAG DES BUNDESAMTES FÜR UMWELT BAFU – FEBRUAR 2020 EINE STUDIE IM RAHMEN DES NCCS THEMENSCHWERPUNKTES “HYDROLOGISCHE GRUNDLAGEN ZUM KLIMAWANDEL” DES NATIONAL CENTRE FOR CLIMATE SERVICES",
     "authors": [
       "D. F. A. AYALA",
@@ -138923,33 +138248,6 @@
     "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
     "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
     "research_domain": "Climate Science",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Modelling the effects of ice transport and sediment sources on the form of detrital thermochronological age probability distributions from glacial settings” by Maxime Bernard et al",
-    "authors": [
-      "M. Bernard"
-    ],
-    "year": 2020,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "22dd1fa552437fb4f7ba21c30720d1ba8c57199d",
-    "url": "https://www.semanticscholar.org/paper/22dd1fa552437fb4f7ba21c30720d1ba8c57199d",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2020,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
-    "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
-    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": []
   },
@@ -139011,33 +138309,6 @@
     "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
     "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
     "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Impact of frontal ablation on the ice thickness estimation of marine-terminating glaciers in Alaska ” by Beatriz",
-    "authors": [
-      "Beatriz Recinos"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "0915279be3caece8ad110b172d1d512d703ae452",
-    "url": "https://www.semanticscholar.org/paper/0915279be3caece8ad110b172d1d512d703ae452",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
-    "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
-    "research_domain": "Ocean & Marine Science",
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": []
   },
@@ -139314,33 +138585,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “ Application of a two-step approach for mapping ice thickness to various glacier types on Svalbard ” by Johannes Jakob Fürst",
-    "authors": [
-      "D. Brinkerhoff"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "5db99ec020c2ed5263a02b9358e035fc92828225",
-    "url": "https://www.semanticscholar.org/paper/5db99ec020c2ed5263a02b9358e035fc92828225",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
-    "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
     "title": "Point by point response to the reviewers - revision",
     "authors": [],
     "year": null,
@@ -139391,33 +138635,6 @@
     "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
     "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
     "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "ODU Digital Commons ODU Digital Commons",
-    "authors": [
-      "Anny Cazenave"
-    ],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "85d0f9c03be3834ea7e50f04868f6f7ebeac20bd",
-    "url": "https://www.semanticscholar.org/paper/85d0f9c03be3834ea7e50f04868f6f7ebeac20bd",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
-    "team_paper_id": "947c3fe2db4c8ac3267e06f347d337518664ccbf",
-    "research_domain": "General Science",
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": []
   },
@@ -141222,33 +140439,6 @@
     "team_paper_id": "d758a6cbdd7674b662f9c79a494a99c22427a2b7",
     "research_domain": "Ocean & Marine Science",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Uncertainty in Satellite estimate of Global Mean Sea Level changes , trend and acceleration ” by Michaël Ablain et al",
-    "authors": [
-      "M. Ablain"
-    ],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "7021d352edd544159da1330da2e93bd0de009642",
-    "url": "https://www.semanticscholar.org/paper/7021d352edd544159da1330da2e93bd0de009642",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "Untitled",
-    "team_paper_id": "d758a6cbdd7674b662f9c79a494a99c22427a2b7",
-    "research_domain": "Ocean & Marine Science",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -144428,33 +143618,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Exploration of Antarctic Ice Sheet 100-year contribution to sea level rise and associated model uncertainties using the ISSM framework” by Nicole-Jeanne Schlegel et al",
-    "authors": [
-      "N. Schlegel"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "00f0bbab0f0be0dc68425f4809a80392dcb9b52d",
-    "url": "https://www.semanticscholar.org/paper/00f0bbab0f0be0dc68425f4809a80392dcb9b52d",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "On ISSM and leveraging the Cloud towards faster quantification of the uncertainty in ice-sheet mass balance projections. Computers & Geosciences",
-    "team_paper_id": "8dd45a1a55a2d3603d90b2f8f5ee4912264535bc",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "A JavaScript API for the Ice Sheet System Model: towards on online interactive model for the Cryosphere Community",
     "authors": [
       "F. Habbal",
@@ -147260,33 +146423,6 @@
         "usage_context": "Mentioned as a source of inherent biases when used for model initial conditions."
       }
     ]
-  },
-  {
-    "title": "Interactive comment on “An ice sheet model validation framework for the Greenland ice sheet” by Stephen F. Price et al",
-    "authors": [
-      "S. Price"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "1faa15edd6444ef02d8daf7838cef094df8a7b8e",
-    "url": "https://www.semanticscholar.org/paper/1faa15edd6444ef02d8daf7838cef094df8a7b8e",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Greenland Ice Sheet seasonal and spatial mass variability from model simulations and GRACE (2003–2012). The Cryosphere",
-    "team_paper_id": "5025a8534a319583c26caa3ba0eb76f259392efe",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
   },
   {
     "title": "Decadal Evolution of Ice‐Ocean Interactions at a Large East Greenland Glacier Resolved at Fjord Scale With Downscaled Ocean Models and Observations",
@@ -151640,39 +150776,6 @@
     "missions_instruments": []
   },
   {
-    "title": "ODU Digital Commons ODU Digital Commons",
-    "authors": [
-      "B. Hamlington",
-      "S. H. Cheon",
-      "P. R. Thompson",
-      "M. Merrifield",
-      "R. S. Nerem",
-      "R. Leben",
-      "K.-Y. Kim"
-    ],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "bc3c7da8259eea88ef14b92de8e9e28529745101",
-    "url": "https://www.semanticscholar.org/paper/bc3c7da8259eea88ef14b92de8e9e28529745101",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "Untitled",
-    "team_paper_id": "4bd35a088912a4ccd713cdbc18970abbed5a1064",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "A Kalman filter-based framework for assimilating remote sensing observations into a surface mass balance model",
     "authors": [
       "Oskar Herrmann",
@@ -155799,33 +154902,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “ A statistical fracture model for Antarctic glaciers ” by Veronika Emetc",
-    "authors": [
-      "Veronika Emetc"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "64eb1a606557a95abd485e5227ec5e1325693a33",
-    "url": "https://www.semanticscholar.org/paper/64eb1a606557a95abd485e5227ec5e1325693a33",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "A constitutive framework for predicting weakening and reduced buttressing of ice shelves based on observations of the progressive deterioration of the remnant Larsen B Ice Shelf. Geophysical Research Letters",
-    "team_paper_id": "fbb66afa506ebf192d3c4f9f3f195cd6dd6b2c61",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
     "title": "Interannual-to-Multidecadal Responses of Antarctic Ice Shelf–Ocean Interaction and Coastal Water Masses during the Twentieth Century and the Early Twenty-First Century to Dynamic and Thermodynamic Forcing",
     "authors": [
       "K. Kusahara"
@@ -156245,51 +155321,6 @@
     "team_paper_id": "bc9fe23d210c4b243af80cdcd2f6b219ec3db3ab",
     "research_domain": "Climate Science",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Supplementary material to \"The penultimate deglaciation: protocol for PMIP4 transient numerical simulations between 140 and 127 ka, version 1.0\"",
-    "authors": [
-      "L. Menviel",
-      "E. Capron",
-      "A. Govin",
-      "A. Dutton",
-      "L. Tarasov",
-      "A. Abe‐Ouchi",
-      "R. Drysdale",
-      "P. Gibbard",
-      "L. Gregoire",
-      "F. He",
-      "R. Ivanović",
-      "M. Kageyama",
-      "K. Kawamura",
-      "A. Landais",
-      "B. Otto‐Bliesner",
-      "Ikumi Oyabu",
-      "P. Tzedakis",
-      "E. Wolff",
-      "Xu Zhang"
-    ],
-    "year": 2019,
-    "doi": "10.5194/GMD-2019-41",
-    "venue": "",
-    "citation_count": 5,
-    "paper_id": "52f8762836eba00c1d8f2c73ef09a58e23157dcf",
-    "url": "https://www.semanticscholar.org/paper/52f8762836eba00c1d8f2c73ef09a58e23157dcf",
-    "abstract": "Abstract. The penultimate deglaciation (PDG, ~ 138–128 thousand years before present, hereafter ka) is the transition from the penultimate glacial maximum to the Last Interglacial (LIG, ~ 129–116 ka). The LIG stands out as one of the warmest interglacials of the last 800 ka, with high-latitude temperature warmer than today and global sea level likely higher by at least 6 meters. Considering the transient nature of the Earth system, the LIG climate and ice-sheets evolution were certainly influenced by the changes occurring during the penultimate deglaciation. It is thus important to investigate, with coupled Atmosphere-Ocean General Circulation Models (AOGCMs), the climate and environmental response to the large changes in boundary conditions (i.e. orbital configuration, atmospheric greenhouse gas concentrations, ice-sheet geometry, and associated meltwater fluxes) occurring during the penultimate deglaciation. A deglaciation working group has recently been set up as part of the Paleoclimate Modelling Intercomparison Project (PMIP) phase 4, with a protocol to perform transient simulations of the last deglaciation (19–11 ka; although the protocol covers 26–0 ka). Similar to the last deglaciation, the disintegration of continental ice-sheets during the penultimate deglaciation led to significant changes in the oceanic circulation during Heinrich Stadial 11 (~ 136–129 ka). However, the two deglaciations bear significant differences in magnitude and temporal evolution of climate and environmental changes. Here, as part of the PAGES-PMIP working group on Quaternary Interglacials, we propose a protocol to perform transient simulations of the penultimate deglaciation under the auspices of PMIP4. This design includes time-varying changes in orbital forcing, greenhouse gas concentrations, continental ice-sheets as well as freshwater input from the disintegration of continental ice-sheets. This experiment is designed for AOGCMs to assess the coupled response of the climate system to all forcings. Additional sensitivity experiments are proposed to evaluate the response to each forcing. Finally, a selection of paleo records representing different parts of the climate system is presented, providing an appropriate benchmark for upcoming model-data comparisons across the penultimate deglaciation.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "A new sub-grid surface mass balance and flux model for continental-scale ice sheet modelling: testing and last glacial cycle. Geoscientific Model Development",
-    "team_paper_id": "bc9fe23d210c4b243af80cdcd2f6b219ec3db3ab",
-    "research_domain": "Climate Science",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -158315,46 +157346,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"An updated seabed bathymetry beneath Larsen C Ice Shelf, west Antarctic\"",
-    "authors": [
-      "A. Brisbourne",
-      "B. Kulessa",
-      "Thomas Hudson",
-      "Lianne C. Harrison",
-      "P. Holland",
-      "A. Luckman",
-      "S. Bevan",
-      "D. Ashmore",
-      "B. Hubbard",
-      "E. Pearce",
-      "James White",
-      "Adam Booth",
-      "Keith Nichols",
-      "A. Smith"
-    ],
-    "year": 2019,
-    "doi": "10.5194/essd-2019-205-supplement",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "100329a96a4893b636cf009a6e24a5f5ee2f43f3",
-    "url": "https://www.semanticscholar.org/paper/100329a96a4893b636cf009a6e24a5f5ee2f43f3",
-    "abstract": "Abstract. In recent decades, rapid ice-shelf disintegration along the Antarctic Peninsula has had a global impact through enhancing outlet glacier flow, and hence sea level rise, and the freshening of Antarctic Bottom Water. Ice shelf thinning due to basal melting results from the circulation of relatively warm water in the underlying ocean cavity. However, the effect of sub-shelf circulation on future ice-shelf stability cannot be predicted accurately with computer simulations if the geometry of the ice-shelf cavity is unknown. To address this deficit for Larsen C Ice Shelf, west Antarctica, we integrate new water-column thickness measurements with existing observations. We present these new data here along with an updated bathymetry grid of the ocean cavity. Key findings include relatively deep seabed to the south-east of the Kenyon Peninsula, along the grounding line and around the key ice shelf pinning point of Bawden Ice Rise. In addition, we can confirm that the cavity’s southern trough stretches from Mobiloil Inlet to the open ocean. These areas of deep seabed will influence ocean circulation and tidal mixing, and will therefore affect the basal-melt distribution. These results will help constrain models of ice-shelf cavity circulation with the aim of improving our understanding of sub-shelf processes and their potential influence on ice shelf stability. The data set comprises all point measurements of seabed depth and a gridded data product, derived using additional measurements of both offshore seabed depth and the thickness of grounded ice. We present all new depth measurements here as well as a compilation of previously published measurements used in the gridding process. The gridded data product is included in the supplementary material. The underlying seismic data sets which were used to determine bed depth and ice thickness are available at https://doi.org/10.5285/315740B1-A7B9-4CF0-9521-86F046E33E9A (Brisbourne et al., 2019), https://doi.org/10.5285/5D63777D-B375-4791-918F-9A5527093298 (Booth, 2019), https://doi.org/10.5285/FFF8AFEE-4978-495E-9210-120872983A8D (Kulessa and Bevan, 2019) and https://doi.org/10.5285/147BAF64-B9AF-4A97-8091-26AEC0D3C0BB (Booth et al., 2019).\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "The evolving instability of the remnant Larsen B Ice Shelf and its tributary glaciers. Earth and Planetary Science Letters",
-    "team_paper_id": "f3587214784467feee86f5f011acf0315ed0ca41",
-    "research_domain": "Ocean & Marine Science",
-    "engagement_level": "Level 4: Foundational Method",
-    "missions_instruments": []
-  },
-  {
     "title": "Variations in the extent and elevation of the Larsen A and B ice shelves, Antarctica, derived from multiple datasets",
     "authors": [
       "Jun Chen",
@@ -159769,33 +158760,6 @@
     "team_paper_id": "e2ce2d6a3adc67bcf10bdb581fae196c036ccf9a",
     "research_domain": "Modeling & Simulation",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Modelling last glacial cycle ice dynamics in the Alps” by Julien Seguinot et al",
-    "authors": [
-      "Julien Seguinot"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "9d89aa7b61a882b33c94bbbfe1bf6ae2380a9346",
-    "url": "https://www.semanticscholar.org/paper/9d89aa7b61a882b33c94bbbfe1bf6ae2380a9346",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Enthalpy benchmark experiments for numerical ice sheet models. The Cryosphere",
-    "team_paper_id": "e2ce2d6a3adc67bcf10bdb581fae196c036ccf9a",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -161770,87 +160734,6 @@
     "citing_team_paper": "Hydrostatic grounding line parameterization in ice sheet models. The Cryosphere",
     "team_paper_id": "b927f96e5e897a45ecc003c91119208dffb71d27",
     "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “A full Stokes subgrid model for simulation of grounding line migration in ice sheets using Elmer/ICE(v8.3)” by Gong Cheng et al",
-    "authors": [
-      "G. Cheng"
-    ],
-    "year": 2019,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "67ecd36d5222d106b09e022ace576bfd1ab1f7a3",
-    "url": "https://www.semanticscholar.org/paper/67ecd36d5222d106b09e022ace576bfd1ab1f7a3",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2019,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Hydrostatic grounding line parameterization in ice sheet models. The Cryosphere",
-    "team_paper_id": "b927f96e5e897a45ecc003c91119208dffb71d27",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “A comparison of two Stokes ice sheet models applied to the Marine Ice Sheet Model Intercomparison Project for plan view models (MISMIP3d)” by Tong Zhang et al",
-    "authors": [
-      "Tong Zhang"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "b2bc97b5032ffec02eb9337a30eea65a1a6a63fd",
-    "url": "https://www.semanticscholar.org/paper/b2bc97b5032ffec02eb9337a30eea65a1a6a63fd",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Hydrostatic grounding line parameterization in ice sheet models. The Cryosphere",
-    "team_paper_id": "b927f96e5e897a45ecc003c91119208dffb71d27",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “A comparison of two Stokes ice sheet models applied to the Marine Ice Sheet Model Intercomparison Project for plan view",
-    "authors": [
-      "Tong Zhang"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "ea219114b112c2a197beb87156d56219f8859605",
-    "url": "https://www.semanticscholar.org/paper/ea219114b112c2a197beb87156d56219f8859605",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Hydrostatic grounding line parameterization in ice sheet models. The Cryosphere",
-    "team_paper_id": "b927f96e5e897a45ecc003c91119208dffb71d27",
-    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -165936,37 +164819,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Supplementary material to \"Ice shelf basal melt rates from a high-resolution DEM record for Pine Island Glacier, Antarctica\"",
-    "authors": [
-      "D. Shean",
-      "I. Joughin",
-      "P. Dutrieux",
-      "Ben E. Smith",
-      "E. Berthier"
-    ],
-    "year": 2018,
-    "doi": "10.5194/TC-2018-209",
-    "venue": "",
-    "citation_count": 15,
-    "paper_id": "379437835b59778f596ec3744485de125dc8c193",
-    "url": "https://www.semanticscholar.org/paper/379437835b59778f596ec3744485de125dc8c193",
-    "abstract": "Abstract. Ocean-induced basal melting is directly and indirectly responsible for much of the Amundsen Sea Embayment ice loss in recent decades, but the total magnitude and spatiotemporal evolution of this melt is poorly constrained. To address this problem, we generated a record of high-resolution Digital Elevation Models (DEMs) for Pine Island Glacier (PIG) using commercial sub-meter satellite stereo imagery and integrated additional 2002–2015 DEM/altimetry data. We implemented a Lagrangian elevation change (Dh/Dt) framework to estimate ice shelf basal melt rates at 32–256-m resolution. We describe this methodology and consider basal melt rates and elevation change over the PIG shelf and lower catchment from 2008–2015. We document the evolution of Eulerian elevation change (dh/dt) and upstream propagation of thinning signals following the end of rapid grounding line retreat around 2010. Mean full-shelf basal melt rates for the 2008–2015 period were ~82–93 Gt/yr, with ~ 200–250 m/yr basal melt rates within large channels near the grounding line, ~ 10–30 m/yr over the main shelf, and ~ 0–10 m/yr over the North and South shelves, with the notable exception of a small area with rates of ~ 50–100 m/yr near the grounding line of a fast-flowing tributary on the South shelf. The observed basal melt rates show excellent agreement with, and provide context for, in situ basal melt rate observations. We also document the relative melt rates for km-scale basal channels and keels at different locations on the shelf and consider implications for ocean circulation and heat content. These methods and results offer new indirect observations of ice-ocean interaction and constraints on the processes driving sub-shelf melting beneath vulnerable ice shelves in West Antarctica.\n",
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Improved representation of East Antarctic surface mass balance in a regional atmospheric climate model. Journal of Glaciology",
-    "team_paper_id": "1a48278d56fa260bdb4e7217f6e3addd16f7aed0",
-    "research_domain": "Ocean & Marine Science",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
     "title": "Antarctic ice shelf thickness change from multimission lidar mapping",
     "authors": [
       "T. Sutterley",
@@ -169696,33 +168548,6 @@
     "citing_team_paper": "Improved representation of East Antarctic surface mass balance in a regional atmospheric climate model. Journal of Glaciology",
     "team_paper_id": "1a48278d56fa260bdb4e7217f6e3addd16f7aed0",
     "research_domain": "Ocean & Marine Science",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Elevated melt causes varied response of Crosson and Dotson Ice Shelves in West Antarctica” by David A. Lilien et al",
-    "authors": [
-      "D. Lilien"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "7b4769d26de2938051af119950e7d4c68b3b4b23",
-    "url": "https://www.semanticscholar.org/paper/7b4769d26de2938051af119950e7d4c68b3b4b23",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Improved representation of East Antarctic surface mass balance in a regional atmospheric climate model. Journal of Glaciology",
-    "team_paper_id": "1a48278d56fa260bdb4e7217f6e3addd16f7aed0",
-    "research_domain": "General Science",
     "engagement_level": "Level 3: Model Adaptation",
     "missions_instruments": []
   },
@@ -190123,35 +188948,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Response to Interactive Comments",
-    "authors": [
-      "T. Mikkelsen",
-      "A. Grinsted",
-      "Peter D. Ditlevsen"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "ee9b60e425d54976803b800d3c63336bc0a0122b",
-    "url": "https://www.semanticscholar.org/paper/ee9b60e425d54976803b800d3c63336bc0a0122b",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Widespread",
-    "team_paper_id": "c6c2729b6714f8e698482c0381764f9e89156583",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "The drivers of inter-annual outlet glacier terminus change in Victoria Land, Oates Land and George V Land, East Antarctica (1972-2013)",
     "authors": [
       "A. Lovell"
@@ -191055,34 +189851,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Dynamic inﬂuence of pinning points on marine ice-sheet stability: a numerical study in Dronning Maud Land, East Antarctica”",
-    "authors": [
-      "Maud Land",
-      "L. Favier"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "d416eb0a999f557271b113f33ab7e176d00e8d46",
-    "url": "https://www.semanticscholar.org/paper/d416eb0a999f557271b113f33ab7e176d00e8d46",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Widespread",
-    "team_paper_id": "c6c2729b6714f8e698482c0381764f9e89156583",
-    "research_domain": "Ocean & Marine Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Living Infrastructure: Being, Time, and Government in New York City",
     "authors": [
       "Stephanie Wakefield"
@@ -191369,33 +190137,6 @@
     "team_paper_id": "c6c2729b6714f8e698482c0381764f9e89156583",
     "research_domain": "Climate Science",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on \"Committed near-future retreat of Smith, Pope, and Kohler Glaciers inferred by transient model calibration\" by D. N. Goldberg et al.",
-    "authors": [
-      "Mathieu Morlighem"
-    ],
-    "year": 2015,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "23c285acef89f41b310fb4d55be90f49b091e753",
-    "url": "https://www.semanticscholar.org/paper/23c285acef89f41b310fb4d55be90f49b091e753",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2015,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Widespread",
-    "team_paper_id": "c6c2729b6714f8e698482c0381764f9e89156583",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -192264,35 +191005,6 @@
     "missions_instruments": []
   },
   {
-    "title": "ODU Digital Commons ODU Digital Commons",
-    "authors": [
-      "P. St-Laurent",
-      "J. Klinck",
-      "M. Dinniman"
-    ],
-    "year": null,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "4d74384dcd47976adf4e16c4222bc3ab35a82712",
-    "url": "https://www.semanticscholar.org/paper/4d74384dcd47976adf4e16c4222bc3ab35a82712",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2025,
-          11,
-          11
-        ]
-      ]
-    },
-    "citing_team_paper": "Widespread",
-    "team_paper_id": "c6c2729b6714f8e698482c0381764f9e89156583",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Response to reviewer comments for the manuscript Results of the second Ice Shelf – Ocean Model Intercomparison Project (ISOMIP+)",
     "authors": [
       "C. K. Yung",
@@ -192590,34 +191302,6 @@
     "citing_team_paper": "High-resolution ice-thickness mapping in South Greenland. Annals of Glaciology",
     "team_paper_id": "4a22febdd0f75516f84c7cdadb13491fd76ecadd",
     "research_domain": "Climate Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on \"A high-resolution bedrock map for the Antarctic Peninsula\" by M.",
-    "authors": [
-      "D. Farinotti",
-      "M. Huss"
-    ],
-    "year": 2014,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "e812ce7570f5a230e6115d7a67d0bc1d1e6bae82",
-    "url": "https://www.semanticscholar.org/paper/e812ce7570f5a230e6115d7a67d0bc1d1e6bae82",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2014,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "High-resolution ice-thickness mapping in South Greenland. Annals of Glaciology",
-    "team_paper_id": "4a22febdd0f75516f84c7cdadb13491fd76ecadd",
-    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -194057,33 +192741,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Response to the Interactive comment on “ Basal drag of Fleming Glacier , Antarctica , Part A : sensitivity of inversion to temperature and bedrock uncertainty",
-    "authors": [
-      "Chen Zhao"
-    ],
-    "year": 2018,
-    "doi": "10.5194/tc-2017-241",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "9fc0efd85ffba8767584f8af50c1084ab2875dec",
-    "url": "https://www.semanticscholar.org/paper/9fc0efd85ffba8767584f8af50c1084ab2875dec",
-    "abstract": "Many glaciers in West Antarctica and the Antarctic Peninsula are now rapidly losing ice 15 mass. Understanding of the dynamics of these fast-flowing glaciers, and their potential future behavior, can be improved through ice sheet modeling studies. Inverse methods are commonly used in ice sheet models to infer the spatial distribution of a basal shear stressfriction coefficient, which has a large effect on the basal velocity and internal ice deformation. Here we use the full-Stokes Elmer/Ice model to simulate the Wordie Ice Shelf20 Fleming Glacier system in the southern Antarctic Peninsula. With an control inverse method, we model infer the pattern of the basal dragfriction coefficient from the surface velocities observed in 2008. We propose a threemulti-cycle spin-up scheme to remove reduce the influence of the assumed initial englacial temperature field on the final inversion. This is particularly important for glaciers like with significant temperature-dependent internal 25 deformation. We find that the Fleming Glacier, which has have areas of strong, ly temperature-dependent, deformational flow in the fast-flowing regions. Sensitivity tests using various bed elevation datasets, and ice front positions and boundary conditions demonstrate the importance of high-accuracy ice thickness/bed geometry data and precise location of the ice front boundary. 30",
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
-    "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
     "title": "Response to referee 1 : ' Ice shelf fracture parameterization in an ice sheet model ' by 5",
     "authors": [
       "Sainan Sun"
@@ -194248,88 +192905,6 @@
     "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
     "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
     "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on \"Combining damage and fracture mechanics to model calving\" by J. Krug et al.",
-    "authors": [
-      "C. Borstad"
-    ],
-    "year": 2014,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "6d69fd60d9286abad18d3ba508881ce8d3a4e6b0",
-    "url": "https://www.semanticscholar.org/paper/6d69fd60d9286abad18d3ba508881ce8d3a4e6b0",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2014,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
-    "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
-    "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on \"Fracture-induced softening for large-scale ice dynamics\" by",
-    "authors": [
-      "T. Albrecht",
-      "A. Levermann"
-    ],
-    "year": 2014,
-    "doi": null,
-    "venue": "",
-    "citation_count": 1,
-    "paper_id": "c251d990878f8ad9a9d6c62d4f70e7e61822d8c0",
-    "url": "https://www.semanticscholar.org/paper/c251d990878f8ad9a9d6c62d4f70e7e61822d8c0",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2014,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
-    "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Combining damage and fracture mechanics to model calving” by J. Krug et al",
-    "authors": [
-      "D. Benn"
-    ],
-    "year": 2014,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "99bd71bd1b58a7dd2faac15e6ccddd9f648ea294",
-    "url": "https://www.semanticscholar.org/paper/99bd71bd1b58a7dd2faac15e6ccddd9f648ea294",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2014,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
-    "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
-    "research_domain": "Modeling & Simulation",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -198309,35 +196884,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “ Comparing ice discharge through West Antarctic Gateways : Weddell vs . Amundsen Sea warming ” by M . A . Martin et al",
-    "authors": [
-      "M. Martin",
-      "A. Levermann",
-      "R. Winkelmann"
-    ],
-    "year": 2015,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "53b098e6677da1b5efa3a6287e0883245a04a952",
-    "url": "https://www.semanticscholar.org/paper/53b098e6677da1b5efa3a6287e0883245a04a952",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2015,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Insights into spatial sensitivities of ice mass response to environmental change from the SeaRISE ice sheet modeling project II: Greenland. Journal of Geophysical Research: Earth Surface",
-    "team_paper_id": "3c308da4fbc682920f543980db533bd9e9bf53bb",
-    "research_domain": "Hydrology & Water Resources",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Ice-water dynamics over a land-terminating sector of western Greenland",
     "authors": [
       "T. Meierbachtol"
@@ -198673,33 +197219,6 @@
     "team_paper_id": "09d3727069a205bbf8c890159a002a2447ea9ec0",
     "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 3: Model Adaptation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ Towards a better ice sheet model initialisation and basal knowledge using data assimilation ” by Cyrille Mosbeux et al .",
-    "authors": [
-      "C. Mosbeux"
-    ],
-    "year": 2016,
-    "doi": "10.5194/gmd-2016-7-rc1",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "9d84429220f7a342818a200722697debfa1409dc",
-    "url": "https://www.semanticscholar.org/paper/9d84429220f7a342818a200722697debfa1409dc",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Insights into spatial sensitivities of ice mass response to environmental change from the SeaRISE ice sheet modeling project I: Antarctica. Journal of Geophysical Research: Earth Surface",
-    "team_paper_id": "09d3727069a205bbf8c890159a002a2447ea9ec0",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -203492,33 +202011,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “ A Theory of Pleistocene Glacial Rhythmicity ” by Mikhail Y . Verbitsky",
-    "authors": [
-      "M. Verbitsky"
-    ],
-    "year": 2018,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "bcfa3aa781892a921b3e527f79ed3dd23ef35a99",
-    "url": "https://www.semanticscholar.org/paper/bcfa3aa781892a921b3e527f79ed3dd23ef35a99",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2018,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Grounding-line migration in plan-view marine ice-sheet models: results of the ice2sea MISMIP3d intercomparison. Journal of Glaciology",
-    "team_paper_id": "ffe5a421da321a15b18ab8d1673b7ac214149051",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Supplement of Grounding-line flux formula applied as a flux condition in numerical simulations fails for buttressed Antarctic ice streams",
     "authors": [
       "R. Reese"
@@ -203696,33 +202188,6 @@
     "citing_team_paper": "Grounding-line migration in plan-view marine ice-sheet models: results of the ice2sea MISMIP3d intercomparison. Journal of Glaciology",
     "team_paper_id": "ffe5a421da321a15b18ab8d1673b7ac214149051",
     "research_domain": "Modeling & Simulation",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “ From Heinrich Events to cyclic ice streaming : the grow-and-surge instability in the Parallel Ice Sheet Model ” by",
-    "authors": [
-      "A. Levermann"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "6cecd02bf70a4fb20f4da8ac62dd6c83b076a7b6",
-    "url": "https://www.semanticscholar.org/paper/6cecd02bf70a4fb20f4da8ac62dd6c83b076a7b6",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Grounding-line migration in plan-view marine ice-sheet models: results of the ice2sea MISMIP3d intercomparison. Journal of Glaciology",
-    "team_paper_id": "ffe5a421da321a15b18ab8d1673b7ac214149051",
-    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
@@ -206297,40 +204762,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Application of GRACE to the evaluation of an ice flow model of the Greenland Ice Sheet” by N.-J. Schlegel et al",
-    "authors": [],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "73e4c7310ad1d24084b0af05f2944d5ef6956769",
-    "url": "https://www.semanticscholar.org/paper/73e4c7310ad1d24084b0af05f2944d5ef6956769",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Coupling ice flow models of varying orders of complexity with the Tiling method. Journal of Glaciology",
-    "team_paper_id": "dc5481e2d85ed1eebf7efa89ef0fdda7aa79f98a",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite Mission",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Applied to the evaluation of an ice flow model of the Greenland Ice Sheet."
-      }
-    ]
-  },
-  {
     "title": "The Cryosphere Manufactured solutions and the verification of three-dimensional Stokes icesheet models",
     "authors": [
       "W. Leng",
@@ -207839,34 +206270,6 @@
     "team_paper_id": "50f996dce5876970981835006a3ac06e85c28f2b",
     "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 2: Data Usage",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on \"A linear algorithm for solving non-linear isothermal ice-shelf equations\"",
-    "authors": [
-      "A. Sargent",
-      "J. Fastook"
-    ],
-    "year": 2014,
-    "doi": "10.5194/GMDD-7-1829-2014",
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "475cf7d89e4d509ca3c718cf0df8b6f3c26b5303",
-    "url": "https://www.semanticscholar.org/paper/475cf7d89e4d509ca3c718cf0df8b6f3c26b5303",
-    "abstract": "Abstract. A linear non-iterative algorithm is suggested for solving nonlinear isothermal steady-state Morland–MacAyeal ice shelf equations. The idea of the algorithm is in replacing the problem of solving the non-linear second order differential equations for velocities with a system of linear first order differential equations for stresses. The resulting system of linear equations can be solved numerically with direct methods which are faster than iterative methods for solving corresponding non-linear equations. The suggested algorithm is applicable if the boundary conditions for stresses can be specified. The efficiency of the linear algorithm is demonstrated for one-dimensional and two-dimensional ice shelf equations by comparing the linear algorithm and the traditional iterative algorithm on derived manufactured solutions. The linear algorithm is shown to be as accurate as the traditional iterative algorithm but significantly faster. The method may be valuable as the way to increase the efficiency of complex ice sheet models a part of which requires solving the ice shelf model as well as to solve efficiently two-dimensional ice-shelf equations.",
-    "indexed": {
-      "date-parts": [
-        [
-          2014,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Continental scale",
-    "team_paper_id": "50f996dce5876970981835006a3ac06e85c28f2b",
-    "research_domain": "Cryosphere & Glaciology",
-    "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
   {
@@ -215365,33 +213768,6 @@
     "missions_instruments": []
   },
   {
-    "title": "Interactive comment on “Effects of undercutting and sliding on calving: a coupled approach applied to Kronebreen, Svalbard” by Dorothée Vallot et al",
-    "authors": [
-      "D. Vallot"
-    ],
-    "year": 2017,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "c8246fc12339f9f7217c048f5943f8503df6a792",
-    "url": "https://www.semanticscholar.org/paper/c8246fc12339f9f7217c048f5943f8503df6a792",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2017,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Spatial patterns of basal drag inferred using control methods from a full-Stokes and simpler models for Pine Island Glacier",
-    "team_paper_id": "950ad8ae6bd702d1a2ecb34c9aec9d3d60168263",
-    "research_domain": "General Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
     "title": "Causes of underpressure in natural CO2 reservoirs and implications for geological storage",
     "authors": [
       "D. Akhbari",
@@ -215416,33 +213792,6 @@
     "citing_team_paper": "Spatial patterns of basal drag inferred using control methods from a full-Stokes and simpler models for Pine Island Glacier",
     "team_paper_id": "950ad8ae6bd702d1a2ecb34c9aec9d3d60168263",
     "research_domain": "Climate Science",
-    "engagement_level": "Level 1: Simple Citation",
-    "missions_instruments": []
-  },
-  {
-    "title": "Interactive comment on “Regional modeling of the Shirase Drainage Basin, East Antarctica: Full-Stokes vs. shallow-ice dynamics” by",
-    "authors": [
-      "H. Seddik"
-    ],
-    "year": 2016,
-    "doi": null,
-    "venue": "",
-    "citation_count": 0,
-    "paper_id": "fcdf7cbc0ebc38148b1571c4f8ffa107a850a51d",
-    "url": "https://www.semanticscholar.org/paper/fcdf7cbc0ebc38148b1571c4f8ffa107a850a51d",
-    "abstract": null,
-    "indexed": {
-      "date-parts": [
-        [
-          2016,
-          1,
-          1
-        ]
-      ]
-    },
-    "citing_team_paper": "Spatial patterns of basal drag inferred using control methods from a full-Stokes and simpler models for Pine Island Glacier",
-    "team_paper_id": "950ad8ae6bd702d1a2ecb34c9aec9d3d60168263",
-    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Level 1: Simple Citation",
     "missions_instruments": []
   },
