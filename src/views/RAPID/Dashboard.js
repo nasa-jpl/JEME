@@ -1,7 +1,8 @@
 // RAPID Dashboard - matches the comprehensive main dashboard layout
 import React, { useState, useEffect } from 'react';
-import { Search, Bell, Settings, ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight, CloudLightning, Layers } from 'lucide-react';
+import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import NavBar from '../../components/NavBar';
 
 // Import components
 import PaperInfo from '../../components/PaperInfo';
@@ -94,33 +95,7 @@ const RAPIDDashboard = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
-      <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
-        <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-          <div className="flex items-center gap-3">
-            <div className="h-10 w-10 bg-blue-400 rounded-md flex items-center justify-center text-white">
-              <span className="font-bold">JEME</span>
-            </div>
-            <div>
-              <h1 className="text-lg font-semibold text-blue-900">JEME Dashboard</h1>
-              <p className="text-sm text-gray-600">JPL's Earth Modeling Enterprise</p>
-            </div>
-          </div>
-          
-          <div className="flex gap-8">
-            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">Dashboard</Link>
-            <a href="#" className="text-blue-600 border-b-2 border-blue-600 font-medium text-sm">RAPID</a>
-            <Link to="/science-model-dashboard/CMS-Flux" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CMS-Flux</Link>
-            <Link to="/science-model-dashboard/ECCO" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ECCO</Link>
-            <Link to="/science-model-dashboard/ISSM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">ISSM</Link>
-            <Link to="/science-model-dashboard/MOMO-CHEM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">MOMO-CHEM</Link>
-            <Link to="/science-model-dashboard/CARDAMOM" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">CARDAMOM</Link>
-            <Link to="/science-model-dashboard/LES" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">LES</Link>
-            <Link to="/science-model-dashboard/EDMF" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">EDMF</Link>
-            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm border-b-2 border-transparent">How It Works</Link>
-          </div>
-          
-        </div>
-      </header>
+      <NavBar activeItem="RAPID" />
       
       <main className="max-w-7xl mx-auto px-4 py-6">
         

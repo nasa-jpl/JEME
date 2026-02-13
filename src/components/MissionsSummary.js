@@ -5,7 +5,7 @@ import React from 'react';
 import { Satellite, Database, Radio, RefreshCw, HelpCircle } from 'lucide-react';
 import { processMissionData, getAgencyColor } from '../utils/dataUtils';
 
-const MissionsSummary = ({ citationsData, maxMissions = 10, showDetails = true }) => {
+const MissionsSummary = ({ citationsData, maxMissions = 8, showDetails = true }) => {
   const missionData = React.useMemo(() => {
     return processMissionData(citationsData);
   }, [citationsData]);
@@ -53,22 +53,6 @@ const MissionsSummary = ({ citationsData, maxMissions = 10, showDetails = true }
         <span className="text-sm text-gray-500">
           {missionData.papersWithMissions} of {citationsData?.length || 0} papers
         </span>
-      </div>
-
-      {/* Summary Stats */}
-      <div className="grid grid-cols-3 gap-3 mb-6">
-        <div className="bg-blue-50 rounded-lg p-3">
-          <div className="text-xs text-blue-600 font-medium">Total Usages</div>
-          <div className="text-xl font-bold text-blue-900">{missionData.totalMissions}</div>
-        </div>
-        <div className="bg-purple-50 rounded-lg p-3">
-          <div className="text-xs text-purple-600 font-medium">Agencies</div>
-          <div className="text-xl font-bold text-purple-900">{Object.keys(missionData.byAgency).length}</div>
-        </div>
-        <div className="bg-amber-50 rounded-lg p-3">
-          <div className="text-xs text-amber-600 font-medium">Data Types</div>
-          <div className="text-xl font-bold text-amber-900">{Object.keys(missionData.byType).length}</div>
-        </div>
       </div>
 
       {/* Top Missions */}
