@@ -148,7 +148,7 @@ const EngagementLevelsCard = ({ data }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Engagement Level Distribution</div>
           <div className="text-sm text-gray-500 mt-1">
-            How deeply is this model being utilized in research? • {(data || []).length} total papers
+            How deeply each citing paper engages with this model, from simple references to foundational use • {(data || []).length} papers
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">

@@ -462,7 +462,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           <div className="bg-white rounded-lg shadow-sm border">
             <div className="p-6 border-b">
               <h3 className="text-lg font-semibold text-gray-900">Citation Trends</h3>
-              <p className="text-sm text-gray-600">Publications and citations over time</p>
+              <p className="text-sm text-gray-600">Number of papers citing this model published each year, showing research adoption over time</p>
             </div>
             <div className="p-6">
               <CitationTrendsChart data={citationsData} />

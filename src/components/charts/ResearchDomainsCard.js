@@ -92,7 +92,7 @@ const ResearchDomainsCard = ({ data = [] }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Research Domains</div>
           <div className="text-sm text-gray-500 mt-1">
-            Distribution across fields • {totalDomains} total domains
+            Scientific fields of papers citing this model • {totalDomains} domains identified
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">

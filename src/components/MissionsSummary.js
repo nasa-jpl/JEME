@@ -45,7 +45,7 @@ const MissionsSummary = ({ citationsData, maxMissions = 8, showDetails = true })
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6">
-      <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center justify-between mb-1">
         <div className="flex items-center gap-2">
           <Satellite className="text-blue-600" size={20} />
           <h3 className="text-lg font-semibold text-gray-800">Missions & Instruments</h3>
@@ -54,6 +54,9 @@ const MissionsSummary = ({ citationsData, maxMissions = 8, showDetails = true })
           {missionData.papersWithMissions} of {citationsData?.length || 0} papers
         </span>
       </div>
+      <p className="text-sm text-gray-500 mb-4">
+        Satellite missions and instruments whose data was actively used in papers citing this model — not just mentioned, but integrated into the research methodology or analysis.
+      </p>
 
       {/* Top Missions */}
       <div>

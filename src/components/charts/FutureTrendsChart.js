@@ -109,7 +109,7 @@ const FutureTrendsChart = ({ data }) => {
       <div className="mb-6">
         <div className="text-xl font-bold text-gray-900">Emerging Research Directions</div>
         <div className="text-sm text-gray-600 mt-1">
-          Trending research areas and growth drivers
+          Research domains with growing activity since 2020 compared to 2015–2019, and factors likely driving increased adoption
         </div>
       </div>
 
