@@ -222,15 +222,16 @@ const GenericCitationsPage = () => {
       const authors = formatAuthors(record.author || record.authors);
       
       // Extract journal/source info
-      const source = Array.isArray(record['container-title']) 
-        ? record['container-title'][0] 
-        : record['container-title'] || record.publisher || 'Unknown';
+      const source = Array.isArray(record['container-title'])
+        ? record['container-title'][0]
+        : record['container-title'] || record.venue || record.publisher || 'Unknown';
       
       // Extract abstract
       const abstract = extractAbstract(record.abstract);
       
       // Construct URL
-      const url = record.URL || (record.DOI ? `https://doi.org/${record.DOI}` : '');
+      const doi = record.DOI || record.doi || '';
+      const url = record.URL || record.url || (doi ? `https://doi.org/${doi}` : '');
       
       // Use engagement level from JSON file if available, otherwise use default
       let engagementLevel = record.engagement_level || 'Level 1: Simple Citation';
@@ -282,11 +283,11 @@ const GenericCitationsPage = () => {
         year: publishedYear || 'Unknown',
         source: source,
         publisher: record.publisher || '',
-        doi: record.DOI || '',
+        doi: doi,
         cites: record['is-referenced-by-count'] || record.citation_count || record.cites || record.citations || 0,
         url: url,
         fulltext_url: url,
-        cites_url: record.DOI ? `https://scholar.google.com/scholar?cites=${record.DOI}` : '',
+        cites_url: doi ? `https://scholar.google.com/scholar?cites=${doi}` : '',
         abstract: abstract,
         engagement_level: engagementLevel,
         research_domain: researchDomain,
