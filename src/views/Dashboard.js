@@ -31,29 +31,12 @@ const Dashboard = () => {
 
   // Load all models' data for multi-model comparison
   useEffect(() => {
-    const loadAllModelsData = async () => {
+    const loadData = async () => {
       try {
-        const [rapidModule, cmsFluxModule, eccoModule, issmModule, momoChemModule, cardamomModule, lesModule, edmfModule] = await Promise.all([
-          import('../data/RAPID_analyzed.json'),
-          import('../data/CMS-Flux_analyzed.json'),
-          import('../data/ECCO_analyzed.json'),
-          import('../data/ISSM_analyzed.json'),
-          import('../data/MOMO-CHEM_analyzed.json'),
-          import('../data/CARDAMOM_analyzed.json'),
-          import('../data/LES_analyzed.json'),
-          import('../data/EDMF_analyzed.json')
-        ]);
-
-        setAllModelsData({
-          RAPID: rapidModule.default || rapidModule,
-          'CMS-Flux': cmsFluxModule.default || cmsFluxModule,
-          ECCO: eccoModule.default || eccoModule,
-          ISSM: issmModule.default || issmModule,
-          'MOMO-CHEM': momoChemModule.default || momoChemModule,
-          CARDAMOM: cardamomModule.default || cardamomModule,
-          LES: lesModule.default || lesModule,
-          EDMF: edmfModule.default || edmfModule
-        });
+        const { loadAllModelsData } = await import('../utils/dataLoader');
+        const models = ['RAPID', 'CMS-Flux', 'ECCO', 'ISSM', 'MOMO-CHEM', 'CARDAMOM', 'LES', 'EDMF'];
+        const data = await loadAllModelsData(models);
+        setAllModelsData(data);
         setLoading(false);
       } catch (error) {
         console.error('Failed to load models data:', error);
@@ -61,7 +44,7 @@ const Dashboard = () => {
       }
     };
 
-    loadAllModelsData();
+    loadData();
   }, []);
 
   // Perform network analysis

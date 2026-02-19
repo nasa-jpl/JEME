@@ -5,8 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, MapPin, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Import the JSON data directly
-import citationsData from '../data/RAPID_analyzed.json';
+import { loadModelData } from '../utils/dataLoader';
 
 // Import Google Maps component
 import GoogleMapComponent from '../components/GoogleMapComponent';
@@ -20,7 +19,11 @@ const GeographicImpactPage = () => {
   const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
   
   useEffect(() => {
-    processGeographicData();
+    const loadData = async () => {
+      const citationsData = await loadModelData('RAPID');
+      processGeographicData(citationsData);
+    };
+    loadData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
@@ -104,7 +107,7 @@ const GeographicImpactPage = () => {
     return regionMappings[country] || 'Other';
   };
 
-  const processGeographicData = () => {
+  const processGeographicData = (citationsData) => {
     try {
       console.log('RAPID citations data loaded:', citationsData.length);
       console.log('First few entries:', citationsData.slice(0, 1));

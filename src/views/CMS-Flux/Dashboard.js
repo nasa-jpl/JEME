@@ -31,8 +31,8 @@ const CMSFluxDashboard = () => {
   useEffect(() => {
     const loadCmsFluxData = async () => {
       try {
-        const cmsFluxModule = await import('../../data/CMS-Flux_analyzed.json');
-        const data = cmsFluxModule.default || cmsFluxModule;
+        const { loadModelData } = await import('../../utils/dataLoader');
+        const data = await loadModelData('CMS-Flux');
         setCmsFluxData(data);
       } catch (error) {
         console.error('Failed to load CMS-Flux data:', error);

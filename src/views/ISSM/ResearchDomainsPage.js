@@ -2,13 +2,14 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Import the JSON data directly
-import citationsData from '../../data/ISSM_analyzed.json';
+import { loadModelData } from '../../utils/dataLoader';
 
 // Define consistent colors for domains (moved outside component for better accessibility) - Same order as RAPID
 const domainColors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
 
 const ISSMResearchDomainsPage = () => {
+  const [citationsData, setCitationsData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedDomain, setSelectedDomain] = useState('all');
   const [processedData, setProcessedData] = useState({
     domainStats: {},
@@ -17,8 +18,25 @@ const ISSMResearchDomainsPage = () => {
     domains: []
   });
 
-  // Process the JSON data on component mount
+  // Load data on mount
   useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await loadModelData('ISSM');
+        setCitationsData(data);
+      } catch (error) {
+        console.error('Error loading ISSM data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Process the JSON data when citationsData changes or domain filter changes
+  useEffect(() => {
+    if (citationsData.length === 0) return;
+
     const processData = () => {
       // Extract unique research domains
       const domains = [...new Set(citationsData
@@ -29,17 +47,17 @@ const ISSMResearchDomainsPage = () => {
       // Count papers by domain
       const domainStats = {};
       domains.forEach(domain => {
-        domainStats[domain] = citationsData.filter(paper => 
+        domainStats[domain] = citationsData.filter(paper =>
           paper.research_domain === domain
         ).length;
       });
 
       // Group papers by year - FIXED: Filter by selected domain first
       const yearlyData = {};
-      const filteredDataForYear = selectedDomain === 'all' 
-        ? citationsData 
+      const filteredDataForYear = selectedDomain === 'all'
+        ? citationsData
         : citationsData.filter(paper => paper.research_domain === selectedDomain);
-      
+
       filteredDataForYear.forEach(paper => {
         // Extract year from multiple possible sources
         let year = null;
@@ -52,7 +70,7 @@ const ISSMResearchDomainsPage = () => {
         } else if (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0]) {
           year = paper['published-print']['date-parts'][0][0];
         }
-        
+
         if (year && year > 2000) {
           if (!yearlyData[year]) yearlyData[year] = 0;
           yearlyData[year]++;
@@ -60,7 +78,7 @@ const ISSMResearchDomainsPage = () => {
       });
 
       // Filter papers for display
-      const filteredPapers = selectedDomain === 'all' 
+      const filteredPapers = selectedDomain === 'all'
         ? citationsData.slice(0, 50) // Show first 50 papers
         : citationsData.filter(paper => paper.research_domain === selectedDomain).slice(0, 50);
 
@@ -73,7 +91,7 @@ const ISSMResearchDomainsPage = () => {
     };
 
     processData();
-  }, [selectedDomain]);
+  }, [selectedDomain, citationsData]);
 
   // Calculate engagement level stats
   const engagementStats = React.useMemo(() => {
@@ -84,7 +102,7 @@ const ISSMResearchDomainsPage = () => {
       stats[level]++;
     });
     return stats;
-  }, []);
+  }, [citationsData]);
 
   // Top research domains by paper count
   const topDomains = React.useMemo(() => {
@@ -177,6 +195,17 @@ const ISSMResearchDomainsPage = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+  if (loading) {
+    return (
+      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-cyan-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading research domains data...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen">

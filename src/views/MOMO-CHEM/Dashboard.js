@@ -31,8 +31,8 @@ const MOMOCHEMDashboard = () => {
   useEffect(() => {
     const loadMomoChemData = async () => {
       try {
-        const momoChemModule = await import('../../data/MOMO-CHEM_analyzed.json');
-        const data = momoChemModule.default || momoChemModule;
+        const { loadModelData } = await import('../../utils/dataLoader');
+        const data = await loadModelData('MOMO-CHEM');
         setMomoChemData(data);
       } catch (error) {
         console.error('Failed to load MOMO-CHEM data:', error);

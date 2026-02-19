@@ -100,37 +100,9 @@ const GenericCitationsPage = () => {
         console.log(`Model name: ${modelName}`);
         console.log(`Data path: ${modelConfig.dataPath}`);
         
-        // Import the model's JSON data
-        let dataModule;
-        switch(modelName) {
-          case 'RAPID':
-            dataModule = await import('../data/RAPID_analyzed.json');
-            break;
-          case 'CMS-Flux':
-            dataModule = await import('../data/CMS-Flux_analyzed.json');
-            break;
-          case 'ECCO':
-            dataModule = await import('../data/ECCO_analyzed.json');
-            break;
-          case 'ISSM':
-            dataModule = await import('../data/ISSM_analyzed.json');
-            break;
-          case 'MOMO-CHEM':
-            dataModule = await import('../data/MOMO-CHEM_analyzed.json');
-            break;
-          case 'CARDAMOM':
-            dataModule = await import('../data/CARDAMOM_analyzed.json');
-            break;
-          case 'LES':
-            dataModule = await import('../data/LES_analyzed.json');
-            break;
-          case 'EDMF':
-            dataModule = await import('../data/EDMF_analyzed.json');
-            break;
-          default:
-            throw new Error(`Unknown model: ${modelName}`);
-        }
-        const citationsData = dataModule.default;
+        // Load the model's JSON data from public/data/
+        const { loadModelData } = await import('../utils/dataLoader');
+        const citationsData = await loadModelData(modelName);
         console.log(`Raw data loaded - type: ${typeof citationsData}, length: ${Array.isArray(citationsData) ? citationsData.length : 'not array'}`);
         
         processCitationsData(citationsData);

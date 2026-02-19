@@ -3,10 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Import the JSON data directly
-// Note: You'll need to place the crossref_data.json file in the same directory as this component
-// or adjust the path accordingly
-import citationsData from '../data/RAPID_analyzed.json';
+import { loadModelData } from '../utils/dataLoader';
 
 // Multi-select component
 const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
@@ -85,19 +82,22 @@ const CitationsPage = () => {
   const [yearRange, setYearRange] = useState([2011, 2025]);
   const [error, setError] = useState(null);
   
-  // Process the imported JSON data
+  // Load and process citation data
   useEffect(() => {
-    try {
-      setLoading(true);
-      console.log('Processing Crossref citation data');
-      processCrossrefData(citationsData);
-    } catch (error) {
-      console.error('Error processing imported data:', error);
-      setError(`Error: ${error.message}`);
-      setDemoData();
-    } finally {
-      setLoading(false);
-    }
+    const loadData = async () => {
+      try {
+        setLoading(true);
+        const citationsData = await loadModelData('RAPID');
+        processCrossrefData(citationsData);
+      } catch (error) {
+        console.error('Error loading citation data:', error);
+        setError(`Error: ${error.message}`);
+        setDemoData();
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadData();
   // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   

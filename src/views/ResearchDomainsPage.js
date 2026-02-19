@@ -2,10 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-// Import the JSON data directly
-import citationsData from '../data/RAPID_analyzed.json';
+import { loadModelData } from '../utils/dataLoader';
 
 const ResearchDomainsPage = () => {
+  const [citationsData, setCitationsData] = useState([]);
+  const [loading, setLoading] = useState(true);
   const [selectedDomain, setSelectedDomain] = useState('all');
   const [processedData, setProcessedData] = useState({
     domainStats: {},
@@ -14,8 +15,25 @@ const ResearchDomainsPage = () => {
     domains: []
   });
 
-  // Process the JSON data on component mount
+  // Load data on mount
   useEffect(() => {
+    const loadData = async () => {
+      try {
+        const data = await loadModelData('RAPID');
+        setCitationsData(data);
+      } catch (error) {
+        console.error('Error loading RAPID data:', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+    loadData();
+  }, []); // eslint-disable-line react-hooks/exhaustive-deps
+
+  // Process the JSON data when citationsData changes or domain filter changes
+  useEffect(() => {
+    if (citationsData.length === 0) return;
+
     const processData = () => {
       // Extract unique research domains
       const domains = [...new Set(citationsData
@@ -70,7 +88,7 @@ const ResearchDomainsPage = () => {
     };
 
     processData();
-  }, [selectedDomain]);
+  }, [selectedDomain, citationsData]);
 
   // Calculate engagement level stats
   const engagementStats = React.useMemo(() => {
@@ -81,7 +99,7 @@ const ResearchDomainsPage = () => {
       stats[level]++;
     });
     return stats;
-  }, []);
+  }, [citationsData]);
 
   // Top research domains by paper count
   const topDomains = React.useMemo(() => {
@@ -164,6 +182,17 @@ const ResearchDomainsPage = () => {
     link.click();
     document.body.removeChild(link);
   };
+
+  if (loading) {
+    return (
+      <div className="bg-gray-100 min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading research domains data...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="bg-gray-100 min-h-screen">

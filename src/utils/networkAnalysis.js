@@ -9,50 +9,23 @@ import { getModelList } from '../config/modelConfig';
  */
 export const loadAllModelData = async () => {
   const models = getModelList();
-  const modelData = {};
+  const { loadAllModelsData } = await import('./dataLoader');
 
-  for (const modelName of models) {
-    try {
-      let data;
-      switch(modelName) {
-        case 'RAPID':
-          data = await import('../data/RAPID_analyzed.json');
-          break;
-        case 'CARDAMOM':
-          data = await import('../data/CARDAMOM_analyzed.json');
-          break;
-        case 'CMS-Flux':
-          data = await import('../data/CMS-Flux_analyzed.json');
-          break;
-        case 'ECCO':
-          data = await import('../data/ECCO_analyzed.json');
-          break;
-        case 'ISSM':
-          data = await import('../data/ISSM_analyzed.json');
-          break;
-        case 'MOMO-CHEM':
-          data = await import('../data/MOMO-CHEM_analyzed.json');
-          break;
-        case 'LES':
-          data = await import('../data/LES_analyzed.json');
-          break;
-        case 'EDMF':
-          data = await import('../data/EDMF_analyzed.json');
-          break;
-        default:
-          console.warn(`Unknown model: ${modelName}`);
-          continue;
-      }
-
-      modelData[modelName] = data.default || data;
-      console.log(`Loaded ${modelData[modelName].length} papers for ${modelName}`);
-    } catch (error) {
-      console.error(`Error loading data for ${modelName}:`, error);
+  try {
+    const modelData = await loadAllModelsData(models);
+    for (const modelName of models) {
+      console.log(`Loaded ${(modelData[modelName] || []).length} papers for ${modelName}`);
+    }
+    return modelData;
+  } catch (error) {
+    console.error('Error loading model data:', error);
+    // Return empty arrays as fallback
+    const modelData = {};
+    for (const modelName of models) {
       modelData[modelName] = [];
     }
+    return modelData;
   }
-
-  return modelData;
 };
 
 /**

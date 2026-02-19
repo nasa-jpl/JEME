@@ -31,8 +31,8 @@ const ISSMDashboard = () => {
   useEffect(() => {
     const loadIssmData = async () => {
       try {
-        const issmModule = await import('../../data/ISSM_analyzed.json');
-        const data = issmModule.default || issmModule;
+        const { loadModelData } = await import('../../utils/dataLoader');
+        const data = await loadModelData('ISSM');
         setIssmData(data);
       } catch (error) {
         console.error('Failed to load ISSM data:', error);
