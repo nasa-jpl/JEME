@@ -223,20 +223,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
 
   const originalPaper = modelPapers[modelName] || modelPapers['RAPID'];
 
-  // Model-specific related papers (now all loaded dynamically)
-  const modelRelatedPapers = {
-    'RAPID': [], // Will be loaded dynamically
-    'CMS-Flux': [], // Will be loaded dynamically
-    'ECCO': [], // Will be loaded dynamically
-    'ISSM': [], // Will be loaded dynamically
-    'MOMO-CHEM': [], // Will be loaded dynamically
-    'CARDAMOM': [], // Will be loaded dynamically
-    'LES': [], // Will be loaded dynamically
-    'EDMF': [] // Will be loaded dynamically
-  };
-
   // Get the appropriate related papers for the current model
-  // All models now use dynamically loaded papers
   const relatedPapers =
     (modelName === 'RAPID' && rapidTeamPapers.length > 0) ? rapidTeamPapers :
     (modelName === 'CMS-Flux' && cmsFluxTeamPapers.length > 0) ? cmsFluxTeamPapers :

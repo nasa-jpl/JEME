@@ -1,8 +1,8 @@
 // src/components/charts/GitHubMetricsCard.js
 // Card showing GitHub repository metrics with live data from GitHub API
 
-import React, { useState, useEffect } from 'react';
-import { ExternalLink, Loader2, GitBranch, Star, GitFork, AlertCircle, Users, Calendar, Code } from 'lucide-react';
+import React, { useState, useEffect, useCallback } from 'react';
+import { ExternalLink, Loader2, GitBranch, Star, GitFork, AlertCircle, Users, Code } from 'lucide-react';
 
 const GitHubMetricsCard = ({ owner = 'c-h-david', repo = 'rapid' }) => {
   const [metrics, setMetrics] = useState([]);
@@ -11,10 +11,10 @@ const GitHubMetricsCard = ({ owner = 'c-h-david', repo = 'rapid' }) => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
-  const fetchGitHubData = async () => {
+  const fetchGitHubData = useCallback(async () => {
     try {
       setLoading(true);
-      
+
       // Fetch repository data
       const repoResponse = await fetch(`https://api.github.com/repos/${owner}/${repo}`);
       if (!repoResponse.ok) throw new Error('Failed to fetch repository data');
@@ -61,7 +61,7 @@ const GitHubMetricsCard = ({ owner = 'c-h-david', repo = 'rapid' }) => {
           color: 'text-yellow-600'
         },
         {
-          metric: 'Forks', 
+          metric: 'Forks',
           value: repoData.forks_count?.toLocaleString() || '0',
           icon: GitFork,
           color: 'text-blue-600'
@@ -101,11 +101,11 @@ const GitHubMetricsCard = ({ owner = 'c-h-david', repo = 'rapid' }) => {
     } finally {
       setLoading(false);
     }
-  };
+  }, [owner, repo]);
 
   useEffect(() => {
     fetchGitHubData();
-  }, [owner, repo]);
+  }, [fetchGitHubData]);
 
   // Language colors mapping
   const getLanguageColor = (language) => {

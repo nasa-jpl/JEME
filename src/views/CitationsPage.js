@@ -81,7 +81,7 @@ const CitationsPage = () => {
   const [sortDirection, setSortDirection] = useState('desc');
   const [filterEngagement, setFilterEngagement] = useState('all');
   const [filterDomain, setFilterDomain] = useState([]);
-  const [filterCountry, setFilterCountry] = useState('all');
+  const [filterCountry] = useState('all');
   const [yearRange, setYearRange] = useState([2011, 2025]);
   const [error, setError] = useState(null);
   
@@ -98,6 +98,7 @@ const CitationsPage = () => {
     } finally {
       setLoading(false);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   // Extract year from date-parts array

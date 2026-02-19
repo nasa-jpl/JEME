@@ -22,8 +22,8 @@ const SummarySection = ({ title, items }) => (
 );
 
 const DashboardSummaryCard = ({ data = [] }) => {
-  // Use the data prop and ensure it's always an array
-  const citationsData = data || [];
+  // Stabilize the data reference to avoid useMemo dependency issues
+  const citationsData = useMemo(() => data || [], [data]);
   // Process all metrics from the JSON data
   const metrics = useMemo(() => {
     // Early return if no data

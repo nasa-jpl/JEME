@@ -24,7 +24,7 @@ import CMSFluxDashboard from './views/CMS-Flux/Dashboard';
 import ECCODashboard from './views/ECCO/Dashboard';
 import ISSMDashboard from './views/ISSM/Dashboard';
 import MOMOCHEMDashboard from './views/MOMO-CHEM/Dashboard';
-import CARDAMOM_Dashboard from './views/CARDAMOM/Dashboard';
+import CARDAMOMDashboard from './views/CARDAMOM/Dashboard';
 import LESDashboard from './views/LES/Dashboard';
 import EDMFDashboard from './views/EDMF/Dashboard';
 
@@ -44,7 +44,7 @@ function AppWithRouting() {
         <Route path="/science-model-dashboard/ECCO" element={<ECCODashboard />} />
         <Route path="/science-model-dashboard/ISSM" element={<ISSMDashboard />} />
         <Route path="/science-model-dashboard/MOMO-CHEM" element={<MOMOCHEMDashboard />} />
-        <Route path="/science-model-dashboard/CARDAMOM" element={<CARDAMOM_Dashboard />} />
+        <Route path="/science-model-dashboard/CARDAMOM" element={<CARDAMOMDashboard />} />
         {/* LES and EDMF - Now with real citation data! */}
         <Route path="/science-model-dashboard/LES" element={<LESDashboard />} />
         <Route path="/science-model-dashboard/EDMF" element={<EDMFDashboard />} />

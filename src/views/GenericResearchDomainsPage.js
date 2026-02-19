@@ -52,13 +52,13 @@ const GenericResearchDomainsPage = () => {
             dataModule = await import('../data/MOMO-CHEM_analyzed.json');
             break;
           case 'CARDAMOM':
-        case 'LES':
-          dataModule = await import('../data/LES_analyzed.json');
-          break;
-        case 'EDMF':
-          dataModule = await import('../data/EDMF_analyzed.json');
-          break;
             dataModule = await import('../data/CARDAMOM_analyzed.json');
+            break;
+          case 'LES':
+            dataModule = await import('../data/LES_analyzed.json');
+            break;
+          case 'EDMF':
+            dataModule = await import('../data/EDMF_analyzed.json');
             break;
           default:
             throw new Error(`Unknown model: ${modelName}`);
@@ -77,6 +77,7 @@ const GenericResearchDomainsPage = () => {
     };
 
     loadModelData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modelName, modelConfig]);
 
   // Process the JSON data on component mount and when domain filter changes
@@ -84,6 +85,7 @@ const GenericResearchDomainsPage = () => {
     if (citationsData.length > 0) {
       processData(citationsData);
     }
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedDomain, citationsData]);
 
   const processData = (data) => {
@@ -296,20 +298,6 @@ const GenericResearchDomainsPage = () => {
     if (paper.source) return paper.source;
     if (paper.publisher) return paper.publisher;
     return "Unknown Source";
-  };
-
-  // Helper function to extract DOI
-  const extractDOI = (paper) => {
-    return paper.DOI || paper.doi || null;
-  };
-
-  // Helper function to extract abstract
-  const extractAbstract = (paper) => {
-    if (paper.abstract) {
-      // Remove HTML tags from abstract
-      return paper.abstract.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, ' ').trim();
-    }
-    return null;
   };
 
   // Custom tooltip for charts
@@ -573,7 +561,6 @@ const GenericResearchDomainsPage = () => {
                       const title = extractTitle(paper);
                       const source = extractSource(paper);
                       const citations = extractCitations(paper);
-                      const abstract = extractAbstract(paper);
                       
                       return (
                         <tr key={index} className="hover:bg-gray-50">

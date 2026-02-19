@@ -2,7 +2,7 @@
 // Main dashboard view that combines all components
 
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight, CloudLightning, Layers } from 'lucide-react';
+import { Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 

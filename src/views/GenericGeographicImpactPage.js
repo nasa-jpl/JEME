@@ -1,6 +1,6 @@
 // Generic Geographic Impact Page component that works with any model
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Download, Filter, Map, Globe } from 'lucide-react';
+import { ArrowLeft, Download, Map } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
 import GoogleMapComponent from '../components/GoogleMapComponent';
@@ -10,7 +10,6 @@ const GenericGeographicImpactPage = () => {
   const { modelName } = useParams();
   const modelConfig = getModelConfig(modelName);
   
-  const [selectedRegion, setSelectedRegion] = useState('all');
   const [watershedData, setWatershedData] = useState([]);
   const [countryData, setCountryData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,6 +21,7 @@ const GenericGeographicImpactPage = () => {
   
   useEffect(() => {
     loadModelData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [modelName]);
   
   // Load model-specific data
@@ -55,13 +55,13 @@ const GenericGeographicImpactPage = () => {
           dataModule = await import('../data/MOMO-CHEM_analyzed.json');
           break;
         case 'CARDAMOM':
+          dataModule = await import('../data/CARDAMOM_analyzed.json');
+          break;
         case 'LES':
           dataModule = await import('../data/LES_analyzed.json');
           break;
         case 'EDMF':
           dataModule = await import('../data/EDMF_analyzed.json');
-          break;
-          dataModule = await import('../data/CARDAMOM_analyzed.json');
           break;
         default:
           throw new Error(`Unknown model: ${modelName}`);

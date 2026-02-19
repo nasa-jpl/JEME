@@ -10,8 +10,8 @@ const DataContext = createContext();
 
 // Data provider component
 export const DataProvider = ({ children }) => {
-  const [isLoading, setIsLoading] = useState(false);
-  const [error, setError] = useState(null);
+  const [isLoading] = useState(false);
+  const [error] = useState(null);
   
   // Processed data (simplified for this version)
   const processedData = {

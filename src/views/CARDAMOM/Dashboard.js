@@ -1,6 +1,6 @@
 // CARDAMOM Dashboard - matches the comprehensive main dashboard layout
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, ArrowRight, CloudLightning, Layers } from 'lucide-react';
+import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar';
 
@@ -15,7 +15,7 @@ import MetricsOverview from '../sections/MetricsOverview';
 
 // Import chart components
 import CitationTrendsChart from '../../components/charts/CitationTrendsChart';
-import ModelComparisonChart from '../../components/charts/ModelComparisonChart';
+
 import ResearchDomainsCard from '../../components/charts/ResearchDomainsCard';
 import EngagementLevelsCard from '../../components/charts/EngagementLevelsCard';
 import FutureTrendsChart from '../../components/charts/FutureTrendsChart';

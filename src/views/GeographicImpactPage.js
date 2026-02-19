@@ -12,7 +12,6 @@ import citationsData from '../data/RAPID_analyzed.json';
 import GoogleMapComponent from '../components/GoogleMapComponent';
 
 const GeographicImpactPage = () => {
-  const [selectedRegion, setSelectedRegion] = useState('all');
   const [regionData, setRegionData] = useState([]);
   const [countryData, setCountryData] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -22,6 +21,7 @@ const GeographicImpactPage = () => {
   
   useEffect(() => {
     processGeographicData();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   
   // Helper function to extract country from affiliation string

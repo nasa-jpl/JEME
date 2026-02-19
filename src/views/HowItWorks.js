@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { ArrowLeft, FileText, Database, Settings, BarChart3, Globe, Cpu, GitBranch, Shield, Rocket } from 'lucide-react';
+import { ArrowLeft } from 'lucide-react';
 import NavBar from '../components/NavBar';
 
 const HowItWorks = () => {
@@ -20,8 +20,6 @@ const HowItWorks = () => {
           themeVariables: {
             primaryColor: '#E0E7FF',
             primaryTextColor: '#1F2937',
-            primaryBorderColor: '#6366F1',
-            lineColor: '#6B7280',
             secondaryColor: '#F3F4F6',
             tertiaryColor: '#F9FAFB',
             background: '#FFFFFF',

@@ -2,7 +2,7 @@
 // Chart showing papers published trends over time
 
 import React, { useMemo } from 'react';
-import { ComposedChart, Bar, Line, Area, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import { ComposedChart, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 import { Expand, MoreHorizontal } from 'lucide-react';
 import colors from '../../utils/colors';
 
@@ -66,8 +66,6 @@ const CitationTrendsChart = ({ data }) => {
 
     // Group papers by year and calculate metrics
     const yearlyStats = {};
-    let totalPapers = 0;
-
     // Use provided data or empty array as fallback
     const citationsData = data || [];
 
@@ -109,7 +107,6 @@ const CitationTrendsChart = ({ data }) => {
         }
       }
 
-      totalPapers += 1;
     });
 
     // Convert to array and sort by year

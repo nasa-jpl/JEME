@@ -80,11 +80,6 @@ const EngagementLevelsCard = ({ data }) => {
     return processedData;
   }, [data]);
 
-  // Calculate total classified papers
-  const totalClassified = engagementData
-    .filter(item => item.fullName !== "Unclassified")
-    .reduce((sum, item) => sum + item.value, 0);
-
   const unclassifiedCount = engagementData.find(item => item.fullName === "Unclassified")?.value || 0;
 
   // Custom tooltip
@@ -117,29 +112,6 @@ const EngagementLevelsCard = ({ data }) => {
       "Level 4: Foundational Method": "Model is foundational to the research"
     };
     return descriptions[level] || "";
-  };
-
-  // Calculate engagement quality score (weighted average)
-  const calculateEngagementScore = () => {
-    const weights = {
-      "Level 1: Simple Citation": 1,
-      "Level 2: Data Usage": 2,
-      "Level 3: Model Adaptation": 3,
-      "Level 4: Foundational Method": 4
-    };
-
-    let totalWeightedScore = 0;
-    let totalPapers = 0;
-
-    engagementData.forEach(item => {
-      if (item.fullName !== "Unclassified") {
-        const weight = weights[item.fullName] || 0;
-        totalWeightedScore += weight * item.value;
-        totalPapers += item.value;
-      }
-    });
-
-    return totalPapers > 0 ? (totalWeightedScore / totalPapers).toFixed(1) : "0.0";
   };
 
   return (

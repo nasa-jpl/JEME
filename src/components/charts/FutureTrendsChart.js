@@ -56,7 +56,6 @@ const FutureTrendsChart = ({ data }) => {
   // Calculate potential growth drivers based on recent trends
   const growthDrivers = useMemo(() => {
     // Analyze keywords and themes from recent papers
-    const keywordAnalysis = {};
     const recentPapers = (data || []).filter(paper => {
       const year = paper.year || 
         (paper.published && paper.published['date-parts'] && paper.published['date-parts'][0] && paper.published['date-parts'][0][0]);

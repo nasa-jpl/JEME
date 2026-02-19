@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Download, Filter, BarChart3 } from 'lucide-react';
+import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 // Import the JSON data directly
@@ -132,60 +132,14 @@ const ResearchDomainsPage = () => {
     return null;
   };
 
-  // Helper function to extract authors from paper
-  const extractAuthors = (paper) => {
-    if (paper.authors && Array.isArray(paper.authors)) {
-      return paper.authors;
-    }
-    if (paper.author && Array.isArray(paper.author)) {
-      return paper.author.map(author => {
-        if (typeof author === 'string') return author;
-        if (author.given && author.family) return `${author.given} ${author.family}`;
-        if (author.family) return author.family;
-        return 'Unknown Author';
-      });
-    }
-    return [];
-  };
-
   // Helper function to extract citations count
   const extractCitations = (paper) => {
     return paper['is-referenced-by-count'] || paper.cites || paper.citations || 0;
   };
 
-  // Helper function to extract title
-  const extractTitle = (paper) => {
-    if (paper.title) {
-      if (Array.isArray(paper.title)) {
-        return paper.title[0] || "Untitled Paper";
-      }
-      return paper.title;
-    }
-    return "Untitled Paper";
-  };
-
-  // Helper function to extract publisher/source
-  const extractSource = (paper) => {
-    if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
-      return paper['container-title'][0];
-    }
-    if (paper.source) return paper.source;
-    if (paper.publisher) return paper.publisher;
-    return "Unknown Source";
-  };
-
   // Helper function to extract DOI
   const extractDOI = (paper) => {
     return paper.DOI || paper.doi || null;
-  };
-
-  // Helper function to extract abstract
-  const extractAbstract = (paper) => {
-    if (paper.abstract) {
-      // Remove HTML tags from abstract
-      return paper.abstract.replace(/<[^>]*>/g, '').replace(/&[^;]+;/g, ' ').trim();
-    }
-    return null;
   };
 
   // Export function
@@ -522,13 +476,9 @@ const ResearchDomainsPage = () => {
                 </thead>
                 <tbody className="bg-white divide-y divide-gray-200">
                   {processedData.papers.map((paper, index) => {
-                    const authors = extractAuthors(paper);
                     const citations = extractCitations(paper);
                     const year = extractYear(paper);
-                    const title = extractTitle(paper);
-                    const source = extractSource(paper);
                     const doi = extractDOI(paper);
-                    const abstract = extractAbstract(paper);
                     
                     return (
                       <tr key={paper.DOI || index} className="hover:bg-gray-50">

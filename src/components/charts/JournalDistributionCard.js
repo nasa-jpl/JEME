@@ -5,8 +5,8 @@ import React, { useMemo } from 'react';
 import { MoreHorizontal } from 'lucide-react';
 
 const JournalDistributionCard = ({ data = [] }) => {
-  // Use the data prop and ensure it's always an array
-  const citationsData = data || [];
+  // Stabilize the data reference to avoid useMemo dependency issues
+  const citationsData = useMemo(() => data || [], [data]);
   // Process the journal distribution data
   const journalData = useMemo(() => {
     // Early return if no data

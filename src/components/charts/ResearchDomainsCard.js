@@ -7,8 +7,8 @@ import { MoreHorizontal } from 'lucide-react';
 import colors from '../../utils/colors';
 
 const ResearchDomainsCard = ({ data = [] }) => {
-  // Use the data prop and ensure it's always an array
-  const citationsData = data || [];
+  // Stabilize the data reference to avoid useMemo dependency issues
+  const citationsData = useMemo(() => data || [], [data]);
   // Process the research domains data
   const domainData = useMemo(() => {
     // Count papers by research domain
