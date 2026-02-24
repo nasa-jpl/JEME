@@ -1,12 +1,13 @@
 // src/components/charts/UncertaintyOverviewCard.js
 // Summary card: avg composite confidence, distribution histogram
 
-import React, { useMemo } from 'react';
+import React, { useState, useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ShieldCheck } from 'lucide-react';
+import { ShieldCheck, Info, X } from 'lucide-react';
 import { calculateUncertaintyMetrics, bucketConfidenceScores, getConfidenceColor, getConfidenceLabel } from '../../utils/uncertaintyUtils';
 
 const UncertaintyOverviewCard = ({ data }) => {
+  const [showMethodology, setShowMethodology] = useState(false);
   const metrics = useMemo(() => calculateUncertaintyMetrics(data), [data]);
   const buckets = useMemo(() => bucketConfidenceScores(data), [data]);
 
@@ -29,8 +30,17 @@ const UncertaintyOverviewCard = ({ data }) => {
     <div className="bg-white rounded-lg p-5 shadow-sm h-full">
       <div className="flex items-center gap-2 mb-4">
         <ShieldCheck size={20} className="text-blue-600" />
-        <div>
-          <div className="text-base font-semibold text-gray-800">Classification Confidence</div>
+        <div className="flex-1">
+          <div className="flex items-center gap-1.5">
+            <span className="text-base font-semibold text-gray-800">Classification Confidence</span>
+            <button
+              onClick={() => setShowMethodology(true)}
+              className="text-gray-400 hover:text-blue-600 transition-colors"
+              title="How confidence is calculated"
+            >
+              <Info size={15} />
+            </button>
+          </div>
           <div className="text-sm text-gray-500">
             How reliable are the automated classifications
           </div>
@@ -99,36 +109,65 @@ const UncertaintyOverviewCard = ({ data }) => {
         </div>
       </div>
 
-      {/* Methodology explanation */}
-      <div className="mt-4 pt-3 border-t border-gray-100">
-        <div className="text-xs font-semibold text-gray-700 mb-2">How Confidence Is Calculated</div>
-        <div className="text-xs text-gray-500 space-y-1.5">
-          <p>
-            Each paper's <span className="font-medium text-gray-700">composite confidence</span> combines
-            two independent signals plus a disagreement penalty:
-          </p>
-          <div className="pl-2 space-y-1">
-            <p>
-              <span className="font-medium text-gray-700">Evidence confidence (40%)</span> — weighted sum of
-              data completeness: has abstract (35%), has DOI (15%), has venue (15%),
-              has full authors (10%), and domain keyword match score (25%).
-            </p>
-            <p>
-              <span className="font-medium text-gray-700">Reasoning confidence (40%)</span> — heuristic
-              proxy for LLM classification reliability. Currently 0.7 when an abstract is available
-              (richer context), 0.4 without (title-only).
-            </p>
-            <p>
-              <span className="font-medium text-gray-700">Pipeline variance penalty (20%)</span> — measures
-              disagreement between the keyword-based classifier and the LLM (Gemini) labels. Domain mismatch
-              adds 0.5, engagement mismatch adds 0.5.
-            </p>
+      {/* Methodology popup */}
+      {showMethodology && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setShowMethodology(false)}>
+          <div className="bg-white rounded-lg shadow-xl max-w-lg w-full" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <div className="flex items-center gap-2">
+                <ShieldCheck size={18} className="text-blue-600" />
+                <h3 className="font-semibold text-gray-900">How Confidence Is Calculated</h3>
+              </div>
+              <button onClick={() => setShowMethodology(false)} className="text-gray-400 hover:text-gray-600">
+                <X size={20} />
+              </button>
+            </div>
+            <div className="p-4 text-sm text-gray-600 space-y-3">
+              <p>
+                Each paper's <span className="font-medium text-gray-800">composite confidence</span> combines
+                two independent signals plus a disagreement penalty:
+              </p>
+              <div className="space-y-2.5">
+                <div className="flex gap-3 p-3 bg-blue-50 rounded-lg">
+                  <div className="text-blue-600 font-bold text-lg leading-none mt-0.5">40%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Evidence Confidence</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      Weighted sum of data completeness: has abstract (35%), has DOI (15%), has venue (15%),
+                      has full authors (10%), and domain keyword match score (25%).
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 p-3 bg-green-50 rounded-lg">
+                  <div className="text-green-600 font-bold text-lg leading-none mt-0.5">40%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Reasoning Confidence</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      Heuristic proxy for LLM classification reliability. Currently 0.7 when an abstract
+                      is available (richer context), 0.4 without (title-only).
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 p-3 bg-red-50 rounded-lg">
+                  <div className="text-red-500 font-bold text-lg leading-none mt-0.5">20%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Pipeline Variance Penalty</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      Measures disagreement between the keyword-based classifier and the LLM (Gemini) labels.
+                      Domain mismatch adds 0.5, engagement mismatch adds 0.5.
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3 bg-gray-50 rounded-lg text-center">
+                <div className="text-xs text-gray-500 mb-1">Formula</div>
+                <code className="text-sm text-gray-700">0.4 &times; evidence + 0.4 &times; reasoning &minus; 0.2 &times; variance</code>
+                <div className="text-xs text-gray-400 mt-1">Clamped to [5%, 99%]</div>
+              </div>
+            </div>
           </div>
-          <p className="pt-1">
-            Formula: <code className="bg-gray-100 px-1 rounded text-gray-600">0.4 &times; evidence + 0.4 &times; reasoning &minus; 0.2 &times; variance</code>, clamped to [5%, 99%].
-          </p>
         </div>
-      </div>
+      )}
     </div>
   );
 };
