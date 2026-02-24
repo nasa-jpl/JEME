@@ -106,7 +106,8 @@ export const extractPublicationData = (entry) => {
         references: entry['reference-count'] || 0,
         url: entry.URL || entry.url || '',
         citingTeamPaper: entry.citing_team_paper || null,
-        teamPaperId: entry.team_paper_id || null
+        teamPaperId: entry.team_paper_id || null,
+        uncertainty: entry.uncertainty || null
       };
     } else {
       // Simplified citation scraper format
@@ -126,7 +127,8 @@ export const extractPublicationData = (entry) => {
         url: entry.url || '',
         paperId: entry.paper_id || null,
         citingTeamPaper: entry.citing_team_paper || null,
-        teamPaperId: entry.team_paper_id || null
+        teamPaperId: entry.team_paper_id || null,
+        uncertainty: entry.uncertainty || null
       };
     }
   } catch (error) {

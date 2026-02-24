@@ -4,6 +4,7 @@ import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc, Satellite } fro
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
 import { getAgencyColor } from '../utils/dataUtils';
+import UncertaintyBadge from '../components/UncertaintyBadge';
 
 // Multi-select component
 const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
@@ -270,7 +271,8 @@ const GenericCitationsPage = () => {
         volume: record.volume || '',
         issue: record.issue || '',
         referenceCount: record['references-count'] || 0,
-        missions: missions
+        missions: missions,
+        uncertainty: record.uncertainty || null
       };
     });
     
@@ -722,8 +724,9 @@ const GenericCitationsPage = () => {
                           <div className="text-sm font-medium text-gray-900">{citation.cites}</div>
                         </td>
                         <td className="px-6 py-4">
-                          <div className="text-xs text-gray-600 max-w-32">
-                            {citation.engagement_level.replace('Level ', 'L')}
+                          <div className="text-xs text-gray-600 max-w-32 flex items-center gap-1">
+                            <span>{citation.engagement_level.replace('Level ', 'L')}</span>
+                            {citation.uncertainty && <UncertaintyBadge uncertainty={citation.uncertainty} />}
                           </div>
                         </td>
                         <td className="px-6 py-4">

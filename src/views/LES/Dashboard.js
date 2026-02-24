@@ -1,6 +1,6 @@
 // LES Dashboard - matches the comprehensive main dashboard layout
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
+import { ExternalLink, Database, Globe, BarChart3, ShieldCheck, Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar';
 
@@ -21,6 +21,8 @@ import FutureTrendsChart from '../../components/charts/FutureTrendsChart';
 import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
 import MissionsSummary from '../../components/MissionsSummary';
+import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
+import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
 
 const LESDashboard = () => {
   const [lesData, setLesData] = useState([]);
@@ -148,7 +150,7 @@ const LESDashboard = () => {
             This dashboard provides visualizations based on actual citation data. You can explore and verify the raw data using the following detailed views:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
               to="/science-model-dashboard/LES/citations"
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
@@ -190,6 +192,20 @@ const LESDashboard = () => {
               </div>
               <ExternalLink size={16} className="ml-auto text-purple-400" />
             </Link>
+
+            <Link
+              to="/science-model-dashboard/LES/uncertainty"
+              className="flex items-center p-4 bg-amber-50 rounded-lg border border-amber-100 hover:bg-amber-100 transition-colors"
+            >
+              <div className="mr-4 bg-amber-100 p-3 rounded-full">
+                <ShieldCheck size={24} className="text-amber-600" />
+              </div>
+              <div>
+                <div className="font-medium text-amber-900">Uncertainty Analysis</div>
+                <div className="text-sm text-amber-700">Classification confidence</div>
+              </div>
+              <ExternalLink size={16} className="ml-auto text-amber-400" />
+            </Link>
           </div>
         </div>
 
@@ -202,6 +218,13 @@ const LESDashboard = () => {
           <ResearchDomainsCard data={lesData} />
           <EngagementLevelsCard data={lesData} />
         </div>
+
+        {lesData.length > 0 && lesData[0]?.uncertainty && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <UncertaintyOverviewCard data={lesData} />
+            <UncertaintyMatrixCard data={lesData} />
+          </div>
+        )}
 
         <FutureTrendsChart data={lesData} />
 

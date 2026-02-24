@@ -28,6 +28,9 @@ import CARDAMOMDashboard from './views/CARDAMOM/Dashboard';
 import LESDashboard from './views/LES/Dashboard';
 import EDMFDashboard from './views/EDMF/Dashboard';
 
+// Uncertainty Analysis page
+import GenericUncertaintyPage from './views/GenericUncertaintyPage';
+
 // How It Works page
 import HowItWorks from './views/HowItWorks';
 
@@ -70,6 +73,7 @@ function AppWithRouting() {
         <Route path="/science-model-dashboard/:modelName/citations" element={<GenericCitationsPage />} />
         <Route path="/science-model-dashboard/:modelName/geographic-impact" element={<GenericGeographicImpactPage />} />
         <Route path="/science-model-dashboard/:modelName/research-domains" element={<GenericResearchDomainsPage />} />
+        <Route path="/science-model-dashboard/:modelName/uncertainty" element={<GenericUncertaintyPage />} />
 
         {/* Fallback route for any unmatched paths */}
         <Route path="*" element={<Navigate to="/science-model-dashboard" />} />

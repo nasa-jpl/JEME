@@ -1,6 +1,6 @@
 // MOMO-CHEM Dashboard - matches the comprehensive main dashboard layout
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
+import { ExternalLink, Database, Globe, BarChart3, ShieldCheck, Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar';
 
@@ -23,6 +23,8 @@ import DashboardSummaryCard from '../../components/charts/DashboardSummaryCard';
 import JournalDistributionCard from '../../components/charts/JournalDistributionCard';
 
 import MissionsSummary from '../../components/MissionsSummary';
+import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
+import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
 
 const MOMOCHEMDashboard = () => {
   const [momoChemData, setMomoChemData] = useState([]);
@@ -150,9 +152,9 @@ const MOMOCHEMDashboard = () => {
             This dashboard provides visualizations based on actual citation data. You can explore and verify the raw data using the following detailed views:
           </p>
           
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <Link 
-              to="/science-model-dashboard/MOMO-CHEM/citations" 
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+            <Link
+              to="/science-model-dashboard/MOMO-CHEM/citations"
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -164,9 +166,9 @@ const MOMOCHEMDashboard = () => {
               </div>
               <ExternalLink size={16} className="ml-auto text-blue-400" />
             </Link>
-            
-            <Link 
-              to="/science-model-dashboard/MOMO-CHEM/geographic-impact" 
+
+            <Link
+              to="/science-model-dashboard/MOMO-CHEM/geographic-impact"
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -178,9 +180,9 @@ const MOMOCHEMDashboard = () => {
               </div>
               <ExternalLink size={16} className="ml-auto text-green-400" />
             </Link>
-            
-            <Link 
-              to="/science-model-dashboard/MOMO-CHEM/research-domains" 
+
+            <Link
+              to="/science-model-dashboard/MOMO-CHEM/research-domains"
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">
@@ -192,6 +194,20 @@ const MOMOCHEMDashboard = () => {
               </div>
               <ExternalLink size={16} className="ml-auto text-purple-400" />
             </Link>
+
+            <Link
+              to="/science-model-dashboard/MOMO-CHEM/uncertainty"
+              className="flex items-center p-4 bg-amber-50 rounded-lg border border-amber-100 hover:bg-amber-100 transition-colors"
+            >
+              <div className="mr-4 bg-amber-100 p-3 rounded-full">
+                <ShieldCheck size={24} className="text-amber-600" />
+              </div>
+              <div>
+                <div className="font-medium text-amber-900">Uncertainty Analysis</div>
+                <div className="text-sm text-amber-700">Classification confidence</div>
+              </div>
+              <ExternalLink size={16} className="ml-auto text-amber-400" />
+            </Link>
           </div>
         </div>
         
@@ -202,6 +218,13 @@ const MOMOCHEMDashboard = () => {
           <ResearchDomainsCard data={momoChemData} />
           <EngagementLevelsCard data={momoChemData} />
         </div>
+
+        {momoChemData.length > 0 && momoChemData[0]?.uncertainty && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <UncertaintyOverviewCard data={momoChemData} />
+            <UncertaintyMatrixCard data={momoChemData} />
+          </div>
+        )}
 
         <FutureTrendsChart data={momoChemData} />
 

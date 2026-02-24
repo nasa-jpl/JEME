@@ -1,7 +1,7 @@
 // Generic Dashboard component that works with any model
 import React, { useState, useMemo, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp, CloudLightning, Layers } from 'lucide-react';
+import { Award, TrendingUp, GitBranch, Droplet, ArrowRight, Download, RefreshCw, ExternalLink, Zap, Wind, Waves, Mountain, Atom, Leaf, ChevronDown, ChevronUp, CloudLightning, Layers, ShieldCheck } from 'lucide-react';
 import MetricCard from '../components/MetricCard';
 import { calculateMetrics, processCitationTrends } from '../utils/dataUtils';
 import { getModelConfig } from '../config/modelConfig';
@@ -12,6 +12,8 @@ import EngagementLevelsCard from '../components/charts/EngagementLevelsCard';
 import FutureTrendsChart from '../components/charts/FutureTrendsChart';
 import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
 import MissionsSummary from '../components/MissionsSummary';
+import UncertaintyOverviewCard from '../components/charts/UncertaintyOverviewCard';
+import UncertaintyMatrixCard from '../components/charts/UncertaintyMatrixCard';
 
 const GenericDashboard = ({ modelName, citationsData }) => {
   const [refreshing, setRefreshing] = useState(false);
@@ -512,6 +514,14 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           )}
         </div>
 
+        {/* Uncertainty Analysis */}
+        {citationsData && citationsData.length > 0 && citationsData[0]?.uncertainty && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
+            <UncertaintyOverviewCard data={citationsData} />
+            <UncertaintyMatrixCard data={citationsData} />
+          </div>
+        )}
+
         {/* Quick Navigation */}
         <div className="bg-white rounded-lg shadow-sm border">
           <div className="p-6 border-b">
@@ -519,7 +529,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             <p className="text-sm text-gray-600">Dive deeper into specific aspects of {modelConfig.displayName} research</p>
           </div>
           <div className="p-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <Link
                 to={`/science-model-dashboard/${modelName}/citations`}
                 className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors"
@@ -549,6 +559,20 @@ const GenericDashboard = ({ modelName, citationsData }) => {
                 <div>
                   <h4 className="font-medium text-gray-900">Research Domains</h4>
                   <p className="text-sm text-gray-600">Scientific fields and applications</p>
+                </div>
+                <ArrowRight className="w-5 h-5 text-gray-400" />
+              </Link>
+
+              <Link
+                to={`/science-model-dashboard/${modelName}/uncertainty`}
+                className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors"
+              >
+                <div>
+                  <div className="flex items-center gap-1">
+                    <ShieldCheck className="w-4 h-4 text-blue-600" />
+                    <h4 className="font-medium text-gray-900">Uncertainty Analysis</h4>
+                  </div>
+                  <p className="text-sm text-gray-600">Classification confidence and data quality</p>
                 </div>
                 <ArrowRight className="w-5 h-5 text-gray-400" />
               </Link>
