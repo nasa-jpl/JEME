@@ -1,11 +1,12 @@
 // src/components/charts/UncertaintyMatrixCard.js
 // 2D heatmap: evidence confidence (x) x reasoning confidence (y)
 
-import React, { useMemo } from 'react';
-import { Grid } from 'lucide-react';
+import React, { useState, useMemo } from 'react';
+import { Grid, Info, X } from 'lucide-react';
 import { buildConfidenceMatrix } from '../../utils/uncertaintyUtils';
 
 const UncertaintyMatrixCard = ({ data }) => {
+  const [showInfo, setShowInfo] = useState(false);
   const matrixData = useMemo(() => buildConfidenceMatrix(data), [data]);
 
   if (!matrixData || matrixData.maxCount === 0) return null;
@@ -27,8 +28,17 @@ const UncertaintyMatrixCard = ({ data }) => {
     <div className="bg-white rounded-lg p-5 shadow-sm h-full">
       <div className="flex items-center gap-2 mb-4">
         <Grid size={20} className="text-purple-600" />
-        <div>
-          <div className="text-base font-semibold text-gray-800">Confidence Matrix</div>
+        <div className="flex-1">
+          <div className="flex items-center gap-1.5">
+            <span className="text-base font-semibold text-gray-800">Confidence Matrix</span>
+            <button
+              onClick={() => setShowInfo(true)}
+              className="text-gray-400 hover:text-purple-600 transition-colors"
+              title="How to read this matrix"
+            >
+              <Info size={15} />
+            </button>
+          </div>
           <div className="text-sm text-gray-500">
             Evidence quality vs reasoning confidence
           </div>
@@ -96,8 +106,61 @@ const UncertaintyMatrixCard = ({ data }) => {
             <span>Most</span>
           </div>
         </div>
-        <span>Click cells for details</span>
+        <span>Hover cells for details</span>
       </div>
+
+      {/* Info popup */}
+      {showInfo && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setShowInfo(false)}>
+          <div className="bg-white rounded-lg shadow-xl max-w-lg w-full" onClick={(e) => e.stopPropagation()}>
+            <div className="flex items-center justify-between p-4 border-b border-gray-200">
+              <div className="flex items-center gap-2">
+                <Grid size={18} className="text-purple-600" />
+                <h3 className="font-semibold text-gray-900">How to Read the Confidence Matrix</h3>
+              </div>
+              <button onClick={() => setShowInfo(false)} className="text-gray-400 hover:text-gray-600">
+                <X size={20} />
+              </button>
+            </div>
+            <div className="p-4 text-sm text-gray-600 space-y-3">
+              <p>
+                This 3x3 heatmap plots each paper by its two confidence dimensions to reveal
+                where classification quality is strongest and weakest.
+              </p>
+              <div className="space-y-2.5">
+                <div className="flex gap-3 p-3 bg-blue-50 rounded-lg">
+                  <div className="text-blue-600 font-bold text-sm leading-none mt-0.5">X-axis</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Evidence Confidence</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      How complete the paper's metadata is. Weighted sum of: has abstract (35%),
+                      has DOI (15%), has venue (15%), has full authors (10%), keyword match (25%).
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 p-3 bg-green-50 rounded-lg">
+                  <div className="text-green-600 font-bold text-sm leading-none mt-0.5">Y-axis</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Reasoning Confidence</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      How reliable the LLM classification is likely to be. Currently a heuristic:
+                      0.7 with abstract (richer context), 0.4 without (title-only).
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3 bg-gray-50 rounded-lg space-y-1.5">
+                <div className="font-medium text-gray-800 text-xs">Reading the cells</div>
+                <div className="text-xs text-gray-500 space-y-1">
+                  <p><span className="font-medium text-gray-700">Top-right (High/High):</span> Best-supported classifications — rich metadata and reliable reasoning.</p>
+                  <p><span className="font-medium text-gray-700">Bottom-left (Low/Low):</span> Least reliable — sparse metadata and weak reasoning signal. Candidates for manual review.</p>
+                  <p><span className="font-medium text-gray-700">Color intensity:</span> Darker cells contain more papers. Most entries cluster where abstract availability determines the reasoning tier.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 };
