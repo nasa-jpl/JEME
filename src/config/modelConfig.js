@@ -87,6 +87,30 @@ export const MODELS = {
     github: null,
     website: null,
     fullDescription: 'Eddy Diffusivity Mass Flux (EDMF) parameterization scheme for representing turbulent mixing and convective transport in atmospheric models.'
+  },
+  GRACE: {
+    name: 'GRACE',
+    displayName: 'GRACE',
+    description: 'Gravity Recovery and Climate Experiment',
+    dataPath: '../data/GRACE_analyzed.json',
+    color: '#0369A1', // Sky-800
+    domain: 'Geophysics & Geodesy',
+    github: null,
+    website: 'https://gracefo.jpl.nasa.gov/',
+    fullDescription: 'The Gravity Recovery and Climate Experiment (GRACE) and its successor GRACE-FO track changes in Earth\'s gravity field to monitor water storage, ice mass balance, and sea level change.',
+    type: 'mission'
+  },
+  SWOT: {
+    name: 'SWOT',
+    displayName: 'SWOT',
+    description: 'Surface Water and Ocean Topography',
+    dataPath: '../data/SWOT_analyzed.json',
+    color: '#0E7490', // Cyan-700
+    domain: 'Ocean & Marine Science',
+    github: null,
+    website: 'https://swot.jpl.nasa.gov/',
+    fullDescription: 'The Surface Water and Ocean Topography (SWOT) mission uses Ka-band radar interferometry to measure water surface elevation, providing unprecedented observations of ocean and inland water.',
+    type: 'mission'
   }
 };
 
@@ -98,11 +122,17 @@ export const MODEL_ROUTES = {
   ISSM: '/science-model-dashboard/ISSM',
   'MOMO-CHEM': '/science-model-dashboard/MOMO-CHEM',
   LES: '/science-model-dashboard/LES',
-  EDMF: '/science-model-dashboard/EDMF'
+  EDMF: '/science-model-dashboard/EDMF',
+  GRACE: '/science-model-dashboard/GRACE',
+  SWOT: '/science-model-dashboard/SWOT'
 };
 
 
-export const getModelList = () => Object.keys(MODELS);
+export const getModelList = () => Object.keys(MODELS).filter(k => !MODELS[k].type);
+
+export const getMissionList = () => Object.keys(MODELS).filter(k => MODELS[k].type === 'mission');
+
+export const getAllEntryList = () => Object.keys(MODELS);
 
 export const getModelConfig = (modelName) => MODELS[modelName];
 

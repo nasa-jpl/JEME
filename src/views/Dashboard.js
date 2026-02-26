@@ -2,7 +2,7 @@
 // Main dashboard view that combines all components
 
 import React, { useState, useEffect } from 'react';
-import { Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
+import { Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers, Satellite } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 
@@ -34,7 +34,7 @@ const Dashboard = () => {
     const loadData = async () => {
       try {
         const { loadAllModelsData } = await import('../utils/dataLoader');
-        const models = ['RAPID', 'CMS-Flux', 'ECCO', 'ISSM', 'MOMO-CHEM', 'CARDAMOM', 'LES', 'EDMF'];
+        const models = ['RAPID', 'CMS-Flux', 'ECCO', 'ISSM', 'MOMO-CHEM', 'CARDAMOM', 'LES', 'EDMF', 'GRACE', 'SWOT'];
         const data = await loadAllModelsData(models);
         setAllModelsData(data);
         setLoading(false);
@@ -71,7 +71,7 @@ const Dashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} style={{ color: '#3b82f6' }} />,  // Blue
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
+      link: "/science-model-dashboard/RAPID"
     },
     {
       name: "CMS-Flux",
@@ -166,6 +166,49 @@ const Dashboard = () => {
                 </div>
               </Link>
             ))}
+          </div>
+
+          {/* Missions subsection */}
+          <div className="mt-6 pt-6 border-t border-gray-200">
+            <h3 className="text-lg font-semibold text-gray-900 mb-3">NASA Missions</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              <Link
+                to="/science-model-dashboard/GRACE"
+                className="group p-4 border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-sky-50 transition-colors">
+                    <Satellite size={20} style={{ color: '#0369A1' }} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-sky-900 transition-colors">
+                      GRACE
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                      Gravity Recovery and Climate Experiment - Tracking changes in Earth's gravity field to monitor water storage, ice mass, and sea level
+                    </p>
+                  </div>
+                </div>
+              </Link>
+              <Link
+                to="/science-model-dashboard/SWOT"
+                className="group p-4 border border-gray-200 rounded-lg hover:border-sky-300 hover:shadow-md transition-all duration-200"
+              >
+                <div className="flex items-start gap-3">
+                  <div className="p-2 bg-gray-50 rounded-lg group-hover:bg-sky-50 transition-colors">
+                    <Satellite size={20} style={{ color: '#0E7490' }} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="font-semibold text-gray-900 group-hover:text-sky-900 transition-colors">
+                      SWOT
+                    </h3>
+                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">
+                      Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </div>
           </div>
         </div>
 

@@ -27,6 +27,8 @@ import MOMOCHEMDashboard from './views/MOMO-CHEM/Dashboard';
 import CARDAMOMDashboard from './views/CARDAMOM/Dashboard';
 import LESDashboard from './views/LES/Dashboard';
 import EDMFDashboard from './views/EDMF/Dashboard';
+import GRACEDashboard from './views/GRACE/Dashboard';
+import SWOTDashboard from './views/SWOT/Dashboard';
 
 // Uncertainty Analysis page
 import GenericUncertaintyPage from './views/GenericUncertaintyPage';
@@ -51,6 +53,9 @@ function AppWithRouting() {
         {/* LES and EDMF - Now with real citation data! */}
         <Route path="/science-model-dashboard/LES" element={<LESDashboard />} />
         <Route path="/science-model-dashboard/EDMF" element={<EDMFDashboard />} />
+        {/* Mission dashboards */}
+        <Route path="/science-model-dashboard/GRACE" element={<GRACEDashboard />} />
+        <Route path="/science-model-dashboard/SWOT" element={<SWOTDashboard />} />
 
         {/* How It Works page */}
         <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />
