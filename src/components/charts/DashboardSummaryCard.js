@@ -24,7 +24,7 @@ const SummarySection = ({ title, items }) => (
 const DashboardSummaryCard = ({ data = [] }) => {
   // Stabilize the data reference to avoid useMemo dependency issues
   const citationsData = useMemo(() => data || [], [data]);
-  // Process all metrics from the JSON data
+  // Process all metrics from the JSON data (peer-reviewed papers only)
   const metrics = useMemo(() => {
     // Early return if no data
     if (!citationsData || citationsData.length === 0) {
@@ -46,6 +46,9 @@ const DashboardSummaryCard = ({ data = [] }) => {
         totalDomains: 0
       };
     }
+    // Filter to peer-reviewed papers only for metrics
+    const peerReviewedData = citationsData.filter(p => p.is_peer_reviewed === true);
+
     // Helper function to extract year from paper
     const extractYear = (paper) => {
       if (paper.year) return paper.year;
@@ -86,15 +89,15 @@ const DashboardSummaryCard = ({ data = [] }) => {
              sourceLower.includes('master');
     };
 
-    // Calculate total citations
-    const totalCitations = citationsData.reduce((sum, paper) => sum + extractCitations(paper), 0);
-    
+    // Calculate total citations (peer-reviewed only)
+    const totalCitations = peerReviewedData.reduce((sum, paper) => sum + extractCitations(paper), 0);
+
     // Calculate average citations per paper
-    const avgCitations = totalCitations / citationsData.length;
+    const avgCitations = peerReviewedData.length > 0 ? totalCitations / peerReviewedData.length : 0;
 
     // Count papers by year to find peak year
     const yearCounts = {};
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       const year = extractYear(paper);
       if (year && year >= 2010) {
         yearCounts[year] = (yearCounts[year] || 0) + 1;
@@ -112,7 +115,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
     let level3Count = 0;
     let level4Count = 0;
 
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       const level = paper.engagement_level;
       if (level) {
         // Use flexible matching based on level prefix
@@ -128,13 +131,13 @@ const DashboardSummaryCard = ({ data = [] }) => {
     const highEngagementCount = level3Count + level4Count;
 
     // Implementation score
-    const implementationScore = ((highEngagementCount / citationsData.length) * 100);
+    const implementationScore = peerReviewedData.length > 0 ? ((highEngagementCount / peerReviewedData.length) * 100) : 0;
 
     // Count unique countries and regions
     const uniqueCountries = new Set();
     const uniqueRegions = new Set();
 
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       if (paper.country && paper.country !== 'Unknown' && paper.country !== 'Not specified') {
         uniqueCountries.add(paper.country);
       }
@@ -144,11 +147,11 @@ const DashboardSummaryCard = ({ data = [] }) => {
     });
 
     // Count theses/dissertations
-    const thesesCount = citationsData.filter(paper => isThesisDissertation(paper)).length;
+    const thesesCount = peerReviewedData.filter(paper => isThesisDissertation(paper)).length;
 
     // Count research domains
     const domainCounts = {};
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       const domain = paper.research_domain;
       if (domain && domain !== "Unknown" && domain !== "Not specified") {
         domainCounts[domain] = (domainCounts[domain] || 0) + 1;
@@ -162,7 +165,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
 
     // Get most common regions
     const regionCounts = {};
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       if (paper.region && paper.region !== 'Unknown' && paper.region !== 'Not specified' && paper.region !== 'Global') {
         regionCounts[paper.region] = (regionCounts[paper.region] || 0) + 1;
       }
@@ -174,7 +177,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
 
     // Identify growth areas (domains with good recent activity)
     const recentDomains = {};
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       const year = extractYear(paper);
       const domain = paper.research_domain;
       if (year >= 2020 && domain && domain !== "Unknown") {
@@ -187,7 +190,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
 
     // Identify strengths based on highest engagement levels with flexible matching
     const strengthDomains = {};
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       const domain = paper.research_domain;
       const level = paper.engagement_level;
       if (domain && domain !== "Unknown" && level &&
@@ -201,7 +204,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
       .sort(([,a], [,b]) => b - a)[0];
 
     return {
-      totalPublications: citationsData.length,
+      totalPublications: peerReviewedData.length,
       totalCitations,
       avgCitations,
       peakYear,
@@ -341,7 +344,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold text-blue-600">
-              {((metrics.highEngagementCount / metrics.totalPublications) * 100).toFixed(0)}%
+              {metrics.totalPublications > 0 ? ((metrics.highEngagementCount / metrics.totalPublications) * 100).toFixed(0) : 0}%
             </div>
             <div className="text-xs text-gray-500">Deep Integration</div>
           </div>

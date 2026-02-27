@@ -9,7 +9,7 @@ const MetricsOverview = ({ data = [] }) => {
   // Use the data prop
   const citationsData = data;
   
-  // Calculate metrics from the JSON data
+  // Calculate metrics from the JSON data (peer-reviewed papers only)
   const metrics = useMemo(() => {
     // Early return if no data
     if (!citationsData || citationsData.length === 0) {
@@ -36,6 +36,10 @@ const MetricsOverview = ({ data = [] }) => {
         }
       };
     }
+    // Filter to peer-reviewed papers only for metrics
+    const peerReviewedData = citationsData.filter(p => p.is_peer_reviewed === true);
+    const peerReviewedCount = peerReviewedData.length;
+
     // Helper function to extract year from paper
     const extractYear = (paper) => {
       if (paper.year) return paper.year;
@@ -77,24 +81,21 @@ const MetricsOverview = ({ data = [] }) => {
       return 'Other';
     };
 
-    // 1. TOTAL CITATIONS
-    const totalCitations = citationsData.reduce((sum, paper) => sum + extractCitations(paper), 0);
-    
-    // Peer-reviewed papers (assuming all papers in academic database are peer-reviewed)
-    const peerReviewedCount = citationsData.length;
-    
+    // 1. TOTAL CITATIONS (peer-reviewed only)
+    const totalCitations = peerReviewedData.reduce((sum, paper) => sum + extractCitations(paper), 0);
+
     // High-impact papers (>100 citations)
-    const highImpactCount = citationsData.filter(paper => extractCitations(paper) > 100).length;
-    
+    const highImpactCount = peerReviewedData.filter(paper => extractCitations(paper) > 100).length;
+
     // Recent papers (2020+)
-    const recentCount = citationsData.filter(paper => {
+    const recentCount = peerReviewedData.filter(paper => {
       const year = extractYear(paper);
       return year && year >= 2020;
     }).length;
 
-    // 2. H-INDEX CALCULATION
+    // 2. H-INDEX CALCULATION (peer-reviewed only)
     // Sort papers by citation count in descending order
-    const sortedCitations = citationsData
+    const sortedCitations = peerReviewedData
       .map(paper => extractCitations(paper))
       .sort((a, b) => b - a);
     
@@ -109,16 +110,16 @@ const MetricsOverview = ({ data = [] }) => {
     }
     
     // Average citations per paper
-    const avgCitations = totalCitations / citationsData.length;
+    const avgCitations = peerReviewedData.length > 0 ? totalCitations / peerReviewedData.length : 0;
 
-    // 3. IMPLEMENTATION RATE
+    // 3. IMPLEMENTATION RATE (peer-reviewed only)
     // Count different engagement levels - use flexible matching to support different naming conventions
     const engagementStats = {};
     let modelAdaptationCount = 0;
     let foundationalMethodCount = 0;
     let dataUsageCount = 0;
 
-    citationsData.forEach(paper => {
+    peerReviewedData.forEach(paper => {
       const level = paper.engagement_level || "Unknown";
       engagementStats[level] = (engagementStats[level] || 0) + 1;
 
@@ -134,15 +135,15 @@ const MetricsOverview = ({ data = [] }) => {
 
     // Implementation rate calculation (Level 3 and 4 vs total)
     const implementationCount = modelAdaptationCount + foundationalMethodCount;
-    const implementationRate = ((implementationCount / citationsData.length) * 100);
+    const implementationRate = peerReviewedData.length > 0 ? ((implementationCount / peerReviewedData.length) * 100) : 0;
 
-    // 4. GEOGRAPHIC REACH
+    // 4. GEOGRAPHIC REACH (peer-reviewed only)
     // Extract unique countries/regions
     const uniqueCountries = new Set();
     const uniqueRegions = new Set();
     const regionCounts = { 'North America': 0, 'Europe': 0, 'Asia': 0, 'Other': 0 };
-    
-    citationsData.forEach(paper => {
+
+    peerReviewedData.forEach(paper => {
       if (paper.country && 
           paper.country !== 'Unknown' && 
           paper.country !== 'Not specified') {
