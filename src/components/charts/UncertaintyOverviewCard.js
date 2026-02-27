@@ -47,37 +47,25 @@ const UncertaintyOverviewCard = ({ data }) => {
         </div>
       </div>
 
-      {/* Summary metrics */}
-      <div className="grid grid-cols-3 gap-3 mb-4">
-        <div className="bg-gray-50 rounded-lg p-3 text-center">
-          <div className="text-2xl font-bold" style={{ color: getConfidenceColor(metrics.avgComposite) }}>
-            {Math.round(metrics.avgComposite * 100)}%
-          </div>
-          <div className="text-xs text-gray-500 mt-1">Avg Confidence</div>
-        </div>
-        <div className="bg-gray-50 rounded-lg p-3 text-center">
-          <div className="text-2xl font-bold text-green-600">
-            {Math.round((metrics.highCount / metrics.totalWithUncertainty) * 100)}%
-          </div>
-          <div className="text-xs text-gray-500 mt-1">High Confidence</div>
-        </div>
-        <div className="bg-gray-50 rounded-lg p-3 text-center">
-          <div className="text-2xl font-bold text-red-500">
-            {metrics.lowCount + metrics.veryLowCount}
-          </div>
-          <div className="text-xs text-gray-500 mt-1">Low Confidence</div>
-        </div>
-      </div>
-
-      {/* Histogram */}
-      <div className="h-48">
+      {/* Histogram with avg confidence label */}
+      <div className="h-56">
         <ResponsiveContainer width="100%" height="100%">
-          <BarChart data={buckets} margin={{ top: 5, right: 10, left: 10, bottom: 5 }}>
+          <BarChart data={buckets} margin={{ top: 20, right: 10, left: 10, bottom: 5 }}>
             <CartesianGrid strokeDasharray="3 3" vertical={false} />
             <XAxis dataKey="range" tick={{ fontSize: 10 }} />
             <YAxis tick={{ fontSize: 10 }} />
             <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="count" radius={[4, 4, 0, 0]}>
+            <Bar dataKey="count" radius={[4, 4, 0, 0]} label={({ x, y, width, index }) => {
+              const avg = metrics.avgComposite;
+              const ranges = [[0, 0.2], [0.2, 0.4], [0.4, 0.6], [0.6, 0.8], [0.8, 1.0]];
+              const avgIdx = ranges.findIndex(([lo, hi]) => avg >= lo && (avg < hi || hi === 1.0));
+              if (index !== avgIdx) return null;
+              return (
+                <text x={x + width / 2} y={y - 6} textAnchor="middle" fontSize={11} fontWeight="bold" fill={getConfidenceColor(avg)}>
+                  Avg: {Math.round(avg * 100)}%
+                </text>
+              );
+            }}>
               {buckets.map((bucket, idx) => (
                 <Cell key={idx} fill={bucket.color} />
               ))}
@@ -101,8 +89,7 @@ const UncertaintyOverviewCard = ({ data }) => {
             }}
           />
         </div>
-        <div className="mt-2 flex justify-between text-xs text-gray-500">
-          <span>Miscalibration: {metrics.miscalibrationDistribution.high} high risk</span>
+        <div className="mt-2 text-right text-xs text-gray-500">
           <span>
             Overall: {getConfidenceLabel(metrics.avgComposite)}
           </span>
