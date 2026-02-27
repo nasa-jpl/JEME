@@ -14,6 +14,8 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   const [cardamomTeamPapers, setCardamomTeamPapers] = useState([]);
   const [lesTeamPapers, setLesTeamPapers] = useState([]);
   const [edmfTeamPapers, setEdmfTeamPapers] = useState([]);
+  const [graceTeamPapers, setGraceTeamPapers] = useState([]);
+  const [swotTeamPapers, setSwotTeamPapers] = useState([]);
 
   // Load RAPID team papers from JSON file
   useEffect(() => {
@@ -161,6 +163,38 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     }
   }, [modelName]);
 
+  // Load GRACE team papers from JSON file
+  useEffect(() => {
+    if (modelName === 'GRACE') {
+      fetch('/science-model-dashboard/data/grace_team_papers.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.GRACE) {
+            setGraceTeamPapers(data.GRACE);
+          }
+        })
+        .catch(error => {
+          console.error('Failed to load GRACE team papers:', error);
+        });
+    }
+  }, [modelName]);
+
+  // Load SWOT team papers from JSON file
+  useEffect(() => {
+    if (modelName === 'SWOT') {
+      fetch('/science-model-dashboard/data/swot_team_papers.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.SWOT) {
+            setSwotTeamPapers(data.SWOT);
+          }
+        })
+        .catch(error => {
+          console.error('Failed to load SWOT team papers:', error);
+        });
+    }
+  }, [modelName]);
+
   // Model-specific paper data
   const modelPapers = {
     'RAPID': {
@@ -218,6 +252,20 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
       journal: "Monthly Weather Review (2010), Volume 138, Issue 7, Pages 2895-2912",
       doi: "10.1175/2010MWR3142.1",
       link: "https://doi.org/10.1175/2010MWR3142.1"
+    },
+    'GRACE': {
+      title: "GRACE measurements of mass variability in the Earth system",
+      authors: "Tapley, B. D., Bettadpur, S., Ries, J. C., Thompson, P. F., Watkins, M. M.",
+      journal: "Science (2004), Volume 305, Issue 5683, Pages 503-505",
+      doi: "10.1126/science.1099192",
+      link: "https://doi.org/10.1126/science.1099192"
+    },
+    'SWOT': {
+      title: "Global observations of fine-scale ocean surface topography with the Surface Water and Ocean Topography (SWOT) mission",
+      authors: "Morrow, R., Fu, L.-L., Ardhuin, F., Benkiran, M., Cravatte, S., et al.",
+      journal: "Frontiers in Marine Science (2019), Volume 6, Article 232",
+      doi: "10.3389/fmars.2019.00232",
+      link: "https://doi.org/10.3389/fmars.2019.00232"
     }
   };
 
@@ -233,6 +281,8 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     (modelName === 'CARDAMOM' && cardamomTeamPapers.length > 0) ? cardamomTeamPapers :
     (modelName === 'LES' && lesTeamPapers.length > 0) ? lesTeamPapers :
     (modelName === 'EDMF' && edmfTeamPapers.length > 0) ? edmfTeamPapers :
+    (modelName === 'GRACE' && graceTeamPapers.length > 0) ? graceTeamPapers :
+    (modelName === 'SWOT' && swotTeamPapers.length > 0) ? swotTeamPapers :
     [];
 
   return (

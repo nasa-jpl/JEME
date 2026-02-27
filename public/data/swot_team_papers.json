@@ -1,0 +1,788 @@
+{
+  "SWOT": [
+    {
+      "authors": "Wang, JB, Lucas, AJ, Stalin, S, Lankhorst, M, Send, U, Schofield, O, Kachelein, L, Haines, B, Meinig, C, Pinkel, R, Farrar, JT, Fu, LL",
+      "title": "SWOT Mission Validation of Sea Surface Height Measurements at Sub-100 km Scales",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2025GL114936",
+      "link": "https://doi.org/10.1029/2025GL114936"
+    },
+    {
+      "authors": "Srinivasan, M, Tsontos, V, Bonnema, M, Pe\u221a\u00b1a-Luque, S, de Amorim-Teixeira, A, Araujo, AA, Beighley, E, Birkett, C, Chen, CR, Croneborg-Jones, L, David, C, Desai, S, Dib, A, Doorn, B, Dudley, R, Fatima, B, Fenoglio, L, Frasson, RPD, Gangodagamage, C, Granger, S, Houghton, I, Jacobs, G, Jayaluxmi, I, Le Traon, PY, Nickles, C, Picot, N, Schumann, G, Tchonang, B, Zaffaroni, PT, van Oevelen, P, Wang, JB, Wegiel, J",
+      "title": "Launching Into Societal Benefits From the Surface Water and Ocean Topography (SWOT) Mission",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024WR038436",
+      "link": "https://doi.org/10.1029/2024WR038436"
+    },
+    {
+      "authors": "Ke, SQ, Tourian, MJ, Sneeuw, N, Frasson, RPD, Paiva, RCD, Durand, M, Gleason, C, Elmi, O, Malaterre, PO, David, C",
+      "title": "A Kalman Filter Approach for Estimating Daily Discharge Using Space-Based Discharge Estimates",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024WR037667",
+      "link": "https://doi.org/10.1029/2024WR037667"
+    },
+    {
+      "authors": "Kica, S, Pavelsky, TM, Fayne, JV, Williams, BA",
+      "title": "SWOT Water Surface Elevation in Herbaceous Wetlands of Florida's Everglades",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2025GL114956",
+      "link": "https://doi.org/10.1029/2025GL114956"
+    },
+    {
+      "authors": "Torres, HS, Wineteer, A, Rodriguez, E, Klein, P, Thompson, AF, Perkovic-Martin, D, Molemaker, J, Hypolite, D, Callies, J, Farrar, JT, D'Asaro, E, Freilich, MA",
+      "title": "Submesoscale Eddy Contribution to Ocean Vertical Heat Flux Diagnosed From Airborne Observations",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL112278",
+      "link": "https://doi.org/10.1029/2024GL112278"
+    },
+    {
+      "authors": "Buzzanga, B, Hamlington, BD, Bekaert, DPS, Pavelsky, T, Handwerger, A, Bonnema, M, Lee, C",
+      "title": "Monitoring Water From Space: An Illustration in Death Valley, California",
+      "journal": "California",
+      "year": 2025,
+      "doi": "10.1029/2024GL110250",
+      "link": "https://doi.org/10.1029/2024GL110250"
+    },
+    {
+      "authors": "Boh\u221a\u00a9, A, Chen, A, Chen, C, Dubois, P, Fore, A, Molero, B, Peral, E, Raynal, M, Stiles, B, Ardhuin, F, Hay, A, Legresy, B, Lenain, L, Boas, ABV",
+      "title": "Measuring Significant Wave Height Fields in Two Dimensions at Kilometric Scales With SWOT",
+      "journal": "Ieee Transactions On Geoscience And Remote Sensing",
+      "year": 2025,
+      "doi": "10.1109/TGRS.2025.3551605",
+      "link": "https://doi.org/10.1109/TGRS.2025.3551605"
+    },
+    {
+      "authors": "Chahat, NE, Gonzales, E, Decrossas, E, Stevens, A, Keyawa, M, Narvaez, PS",
+      "title": "EMI-EMC Qualification of the NASA SWOT Mission Using High Fidelity Modeling",
+      "journal": "Ieee Journal Of Microwaves",
+      "year": 2025,
+      "doi": "10.1109/JMW.2024.3522819",
+      "link": "https://doi.org/10.1109/JMW.2024.3522819"
+    },
+    {
+      "authors": "Caspar-Cohen, Z, Ponte, A, Lahaye, N, Zaron, ED, Arbic, BK, Yu, XL, Legentil, S, Menemenlis, D",
+      "title": "Combining surface drifters and high resolution global simulations enables the mapping of internal tide surface energy",
+      "journal": "Scientific Reports",
+      "year": 2025,
+      "doi": "10.1038/s41598-025-92662-w",
+      "link": "https://doi.org/10.1038/s41598-025-92662-w"
+    },
+    {
+      "authors": "Wade, J, David, CH, Altenau, EH, Collins, EL, Oubanas, H, Coss, S, Cerbelaud, A, Tom, M, Durand, M, Pavelsky, TM",
+      "title": "Bidirectional Translations Between Observational and Topography-Based Hydrographic Data Sets: MERIT-Basins and the SWOT River Database (SWORD)",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024WR038633",
+      "link": "https://doi.org/10.1029/2024WR038633"
+    },
+    {
+      "authors": "Andreadis, KM, Coss, SP, Durand, M, Gleason, CJ, Simmons, TT, Tebaldi, N, Bjerklie, DM, Brinkerhoff, C, Dudley, RW, Gejadze, I, Larnier, K, Malaterre, PO, Oubanas, H, Allen, GH, Bates, PD, David, CH, Domeneghetti, A, Elmi, O, Marc, LF, Frasson, RPD, Friedmann, E, Garambois, PA, Gehring, J, Getirana, A, Hughes, M, Lee, J, Matte, P, Minear, JT, Monnier, J, Muhebwa, A, Tourian, MJ, Pavelsky, TM, Riggs, RM, Rodr\u221a\u2260guez, E, Sikder, MS, Smith, LC, Stuurman, C, Taneja, J, Tarpanelli, A, Wang, JD, Williams, BA, Yadav, B",
+      "title": "A First Look at River Discharge Estimation From SWOT Satellite Observations",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL114185",
+      "link": "https://doi.org/10.1029/2024GL114185"
+    },
+    {
+      "authors": "Kacimi, S., Jaruwatanadilok, S., Kwok, R.",
+      "title": "SWOT Observations Over Sea Ice: A First Look",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2025GL116079",
+      "link": "https://doi.org/10.1029/2025GL116079"
+    },
+    {
+      "authors": "Archer, M., Wang, J., Klein, P., Dibarboure, G., Fu, L-L",
+      "title": "Wide-swath satellite altimetry unveils global submesoscale ocean dynamics",
+      "journal": "Nature",
+      "year": 2025,
+      "doi": "10.1038/s41586-025-08722-8",
+      "link": "https://doi.org/10.1038/s41586-025-08722-8"
+    },
+    {
+      "authors": "Durand, M, Dai, CL, Moortgat, J, Yadav, B, Frasson, RPD, Li, ZW, Wadkwoski, K, Howat, I, Pavelsky, TM",
+      "title": "Using river hypsometry to improve remote sensing of river discharge",
+      "journal": "Remote Sensing Of Environment",
+      "year": 2024,
+      "doi": "10.1016/j.rse.2024.114455",
+      "link": "https://doi.org/10.1016/j.rse.2024.114455"
+    },
+    {
+      "authors": "Tchonang, BC, Archer, MR, Gopalakrishnan, G, Cornuelle, B, Mazloff, MR, Wang, JB, Fu, LL",
+      "title": "Evaluation of a 4DVAR Assimilation System in the California Current at the SWOT Calibration/Validation Site",
+      "journal": "Journal Of Atmospheric And Oceanic Technology",
+      "year": 2024,
+      "doi": "10.1175/JTECH-D-23-0112.1",
+      "link": "https://doi.org/10.1175/JTECH-D-23-0112.1"
+    },
+    {
+      "authors": "Martin, SA, Manucharyan, GE, Klein, P",
+      "title": "Deep Learning Improves Global Satellite Observations of Ocean Eddy Dynamics",
+      "journal": "Geophysical Research Letters",
+      "year": 2024,
+      "doi": "10.1029/2024GL110059",
+      "link": "https://doi.org/10.1029/2024GL110059"
+    },
+    {
+      "authors": "Pascolini-Campbell, M, Reager, JT",
+      "title": "An Investigation of the Spatial and Temporal Characteristics of Extreme Dry and Wet Events across NLDAS-2 Models",
+      "journal": "Journal Of Hydrometeorology",
+      "year": 2024,
+      "doi": "10.1175/JHM-D-23-0038.1",
+      "link": "https://doi.org/10.1175/JHM-D-23-0038.1"
+    },
+    {
+      "authors": "Torres, HS, Rodriguez, E, Wineteer, A, Klein, P, Thompson, AF, Callies, J, D'Asaro, E, Perkovic-Martin, D, Farrar, JT, Polverari, F, Akbar, R",
+      "title": "Airborne observations of fast-evolving ocean submesoscale turbulence",
+      "journal": "Communications Earth & Environment",
+      "year": 2024,
+      "doi": "10.1038/s43247-024-01917-3",
+      "link": "https://doi.org/10.1038/s43247-024-01917-3"
+    },
+    {
+      "authors": "Fu, LL, Pavelsky, T, Cretaux, JF, Morrow, R, Farrar, JT, Vaze, P, Sengenes, P, Vinogradova-Shiffer, N, Sylvestre-Baron, A, Picot, N, Dibarboure, G",
+      "title": "The Surface Water and Ocean Topography Mission: A Breakthrough in Radar Remote Sensing of the Ocean and Land Surface Water",
+      "journal": "Geophysical Research Letters",
+      "year": 2024,
+      "doi": "10.1029/2023GL107652",
+      "link": "https://doi.org/10.1029/2023GL107652"
+    },
+    {
+      "authors": "Qiu, B, Chen, SM, Wang, JB, Fu, LL",
+      "title": "Seasonal and Fortnight Variations in Internal Solitary Waves in the Indonesian Seas From the SWOT Measurements",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2024,
+      "doi": "10.1029/2024JC021086",
+      "link": "https://doi.org/10.1029/2024JC021086"
+    },
+    {
+      "authors": "Peral, E, Esteban-Fern\u221a\u00b0ndez, D, Rodr\u221a\u2260guez, E, McWatters, D, De Bleser, JW, Ahmed, R, Chen, AC, Slimko, E, Somawardhana, R, Knarr, K, Johnson, M, Jaruwatanadilok, S, Chan, S, Wu, XQ, Clark, D, Peters, K, Chen, CW, Mao, P, Khayatian, B, Chen, J, Hodges, RE, Boussalis, D, Stiles, B, Srinivasan, K",
+      "title": "KaRIn, the Ka-Band Radar Interferometer of the SWOT Mission: Design and in-Flight Performance",
+      "journal": "the Ka-Band Radar Interferometer of the SWOT Mission: Design and in-Flight Performance",
+      "year": 2024,
+      "doi": "10.1109/TGRS.2024.3405343",
+      "link": "https://doi.org/10.1109/TGRS.2024.3405343"
+    },
+    {
+      "authors": "Kachelein, L, Gille, ST, Mazloff, MR, Cornuelle, BD",
+      "title": "Characterizing Non-Phase-Locked Tidal Currents in the California Current System Using High-Frequency Radar",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2024,
+      "doi": "10.1029/2023JC020340",
+      "link": "https://doi.org/10.1029/2023JC020340"
+    },
+    {
+      "authors": "Fayne, JV, Smith, LC, Liao, TH, Pitcher, LH, Denbina, M, Chen, AC, Simard, M, Chen, CW, Williams, BA",
+      "title": "Characterizing Near-Nadir and Low Incidence Ka-Band SAR Backscatter From Wet Surfaces and Diverse Land Covers",
+      "journal": "Ieee Journal Of Selected Topics In Applied Earth Observations And Remote Sensing",
+      "year": 2024,
+      "doi": "10.1109/JSTARS.2023.3317502",
+      "link": "https://doi.org/10.1109/JSTARS.2023.3317502"
+    },
+    {
+      "authors": "Yu, Y, Sandwell, DT, Dibarboure, G, Chen, C, Wang, J",
+      "title": "Accuracy and Resolution of SWOT Altimetry: Foundation Seamounts",
+      "journal": "Earth And Space Science",
+      "year": 2024,
+      "doi": "10.1029/2024EA003581",
+      "link": "https://doi.org/10.1029/2024EA003581"
+    },
+    {
+      "authors": "Hamlington, BD, Willis, JK, Vinogradova, N",
+      "title": "The Emerging Golden Age of Satellite Altimetry to Prepare Humanity for Rising Seas",
+      "journal": "Earths Future",
+      "year": 2023,
+      "doi": "10.1029/2023EF003673",
+      "link": "https://doi.org/10.1029/2023EF003673"
+    },
+    {
+      "authors": "Lin, PR, Feng, DM, Gleason, CJ, Pan, M, Brinkerhoff, CB, Yang, X, Beck, HE, Frasson, RPD",
+      "title": "Inversion of river discharge from remotely sensed river widths: A critical assessment at three-thousand global river gauges",
+      "journal": "Remote Sensing Of Environment",
+      "year": 2023,
+      "doi": "10.1016/j.rse.2023.113489",
+      "link": "https://doi.org/10.1016/j.rse.2023.113489"
+    },
+    {
+      "authors": "Durand, M, Gleason, CJ, Pavelsky, TM, Frasson, RPD, Turmon, M, David, CH, Altenau, EH, Tebaldi, N, Larnier, K, Monnier, J, Malaterre, PO, Oubanas, H, Allen, GH, Astifan, B, Brinkerhoff, C, Bates, PD, Bjerklie, D, Coss, S, Dudley, R, Fenoglio, L, Garambois, PA, Getirana, A, Lin, PR, Margulis, SA, Matte, P, Minear, JT, Muhebwa, A, Pan, M, Peters, D, Riggs, R, Sikder, MS, Simmons, T, Stuurman, C, Taneja, J, Tarpanelli, A, Schulze, K, Tourian, MJ, Wang, JD",
+      "title": "A Framework for Estimating Global River Discharge From the Surface Water and Ocean Topography Satellite Mission",
+      "journal": "Water Resources Research",
+      "year": 2023,
+      "doi": "10.1029/2021WR031614",
+      "link": "https://doi.org/10.1029/2021WR031614"
+    },
+    {
+      "authors": "Lin, Peirong, Feng, Dongmei, Gleason, Colin J., Pan, Ming, Brinkerhoff, Craig B., Yang, Xiao, Beck, Hylke E., Frasson, Renato Prata de Moraes",
+      "title": "Triple collocation-based multi-source evaporation and transpiration merging",
+      "journal": "Remote Sensing Of Environment",
+      "year": 2023,
+      "doi": "10.1016/j.rse.2023.113489",
+      "link": "https://doi.org/10.1016/j.rse.2023.113489"
+    },
+    {
+      "authors": "Frasson, Renato Prata de Moraes, Turmon, Michael J., Durand, Michael T., David, Cedric H.",
+      "title": "Estimating the Relative Impact of Measurement, Parameter, and Flow Law Errors on Discharge from the Surface Water and Ocean Topography Mission",
+      "journal": "",
+      "year": 2023,
+      "doi": "10.1175/JHM-D-22-0078.1",
+      "link": "https://doi.org/10.1175/JHM-D-22-0078.1"
+    },
+    {
+      "authors": "Marechal, Gwendal, de Marez, Charly",
+      "title": "Variability of surface gravity wave field over a realistic cyclonic eddy",
+      "journal": "Ocean Science",
+      "year": 2022,
+      "doi": "10.5194/os-18-1275-2022",
+      "link": "https://doi.org/10.5194/os-18-1275-2022"
+    },
+    {
+      "authors": "Qiu, Bo, Nakano, Toshiya, Chen, Shuiming, Klein, Patrice",
+      "title": "Bi-Directional Energy Cascades in the Pacific Ocean From Equator to Subarctic Gyre",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2022GL097713",
+      "link": "https://doi.org/10.1029/2022GL097713"
+    },
+    {
+      "authors": "Lawrence, Albion, Callies, Jorn",
+      "title": "Seasonality and Spatial Dependence of Mesoscale and Submesoscale Ocean Currents from Along-Track Satellite Altimetry",
+      "journal": "Journal Of Physical Oceanography",
+      "year": 2022,
+      "doi": "10.1175/JPO-D-22-0007.1",
+      "link": "https://doi.org/10.1175/JPO-D-22-0007.1"
+    },
+    {
+      "authors": "Kachelein, Luke, Cornuelle, Bruce D., Gille, Sarah T., Mazloff, Matthew R.",
+      "title": "Harmonic Analysis of Non-Phase-Locked Tides with Red Noise Using the red_tide Package",
+      "journal": "Journal Of Atmospheric And Oceanic Technology",
+      "year": 2022,
+      "doi": "10.1175/JTECH-D-21-0034.1",
+      "link": "https://doi.org/10.1175/JTECH-D-21-0034.1"
+    },
+    {
+      "authors": "Archer, Matthew R., Li, Zhijin, Wang, Jinbo, Fu, Lee-Lueng",
+      "title": "Reconstructing Fine-Scale Ocean Variability via Data Assimilation of the SWOT Pre-Launch In Situ Observing System",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2022,
+      "doi": "10.1029/2021JC017362",
+      "link": "https://doi.org/10.1029/2021JC017362"
+    },
+    {
+      "authors": "Bonnema, Matthew, David, Cedric H., Frasson, Renato Prata de Moraes, Oaida, Catalina, Yun, Sang-Ho",
+      "title": "The Global Surface Area Variations of Lakes and Reservoirs as Seen From Satellite Remote Sensing",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2022GL098987",
+      "link": "https://doi.org/10.1029/2022GL098987"
+    },
+    {
+      "authors": "Thakur, Ritabrata, Arbic, Brian K., Menemenlis, Dimitris, Momeni, Kayhan, Pan, Yulin, Peltier, W. R., Skitka, Joseph, Alford, Matthew H., Ma, Yuchen",
+      "title": "Impact of Vertical Mixing Parameterizations on Internal Gravity Wave Spectra in Regional Ocean Models",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2022GL099614",
+      "link": "https://doi.org/10.1029/2022GL099614"
+    },
+    {
+      "authors": "Emery, Charlotte M., Paris, Adrien, Biancamaria, Sylvain, Boone, Aaron, Calmant, Stephane, Garambois, Pierre-Andre, Da Silva, Joecilia Santos, David, Cedric H.",
+      "title": "Discharge Estimation via Assimilation of Multisatellite-Based Discharge Products: Case Study Over the Amazon Basin",
+      "journal": "Ieee Geoscience And Remote Sensing Letters",
+      "year": 2022,
+      "doi": "10.1109/LGRS.2020.3020285",
+      "link": "https://doi.org/10.1109/LGRS.2020.3020285"
+    },
+    {
+      "authors": "Eldardiry, Hisham, Hossain, Faisal, Srinivasan, Margaret, Tsontos, Vardis",
+      "title": "Success Stories of Satellite Radar Altimeter Applications",
+      "journal": "Bulletin Of The American Meteorological Society",
+      "year": 2022,
+      "doi": "10.1175/BAMS-D-21-0065.1",
+      "link": "https://doi.org/10.1175/BAMS-D-21-0065.1"
+    },
+    {
+      "authors": "Wang, Jinbo, Fu, Lee-Lueng, Haines, Bruce, Lankhorst, Matthias, Lucas, Andrew J., Farrar, J. Thomas, Send, Uwe, Meinig, Christian, Schofield, Oscar, Ray, Richard, Archer, Matthew, Aragon, David, Bigorre, Sebastien, Chao, Yi, Kerfoot, John, Pinkel, Robert, Sandwell, David, Stalin, Scott",
+      "title": "On the Development of SWOT In Situ Calibration/Validation for Short-Wavelength Ocean Topography",
+      "journal": "Journal Of Atmospheric And Oceanic Technology",
+      "year": 2022,
+      "doi": "10.1175/JTECH-D-21-0039.1",
+      "link": "https://doi.org/10.1175/JTECH-D-21-0039.1"
+    },
+    {
+      "authors": "Ahmed, Razi, Esteban-Fernandez, Daniel, Hensley, Scott",
+      "title": "Analytical Models for Multipath and Switch Leakage for the SWOT Interferometer",
+      "journal": "Sensors",
+      "year": 2022,
+      "doi": "10.3390/s22051931",
+      "link": "https://doi.org/10.3390/s22051931"
+    },
+    {
+      "authors": "Hossain, Faisal, Srinivasan, Margaret, Picot, Nicolas, Pena-Luque, Santiago, Doorn, Bradley",
+      "title": "Engaging Potential Users of the Planned Surface Water and Ocean Topography (SWOT) Mission in the Year of Launch",
+      "journal": "Bulletin Of The American Meteorological Society",
+      "year": 2022,
+      "doi": "10.1175/BAMS-D-22-0107.1",
+      "link": "https://doi.org/10.1175/BAMS-D-22-0107.1"
+    },
+    {
+      "authors": "Dibarboure, Gerald, Ubelmann, Clement, Flamant, Benjamin, Briol, Frederic, Peral, Eva, Bracher, Geoffroy, Vergara, Oscar, Faugere, Yannice, Soulat, Francois, Picot, Nicolas",
+      "title": "Data-Driven Calibration Algorithm and Pre-Launch Performance Simulations for the SWOT Mission",
+      "journal": "Remote Sensing",
+      "year": 2022,
+      "doi": "10.3390/rs14236070",
+      "link": "https://doi.org/10.3390/rs14236070"
+    },
+    {
+      "authors": "Hossain, Faisal, Das, Pritam, Srinivasan, Margaret, Tsontos, Vardis, Oaida, Catalina M., Nickles, Cassandra, McNelis, Jack, Bonnema, Matthew, Picot, Nicolas, Pena-Luque, Santiago, Doorn, Bradley, Vinogradova-Shiffer, Nadya, Andral, Alice, Gaultier, Lucile, Jayaluxmi, Indu, Zhu, John, Fernando, Nelun, Ul-Hasan, Faizan, Fatima, Bareerah, Ahsan, Mufeezah, Dhanya, C. T., Jayasinghe, Susantha, Meechaiya, Chinaporn, Barajas, Miguel, Balakrishnan, Vivek, Eldardiry, Hisham, Elkholy, Mohamed, Abdelrazek, Ahmed, Fenoglio, Luciana, Durand, Mike, Wei, Rui, Pavelsky, Tamlin",
+      "title": "Building User-Readiness for Satellite Earth Observing Missions: The Case of the Surface Water and Ocean Topography (SWOT) Mission",
+      "journal": "Agu Advances",
+      "year": 2022,
+      "doi": "10.1029/2022AV000680",
+      "link": "https://doi.org/10.1029/2022AV000680"
+    },
+    {
+      "authors": "Armitage, TWK, Kwok, R",
+      "title": "SWOT and the ice-covered polar oceans: An exploratory analysis",
+      "journal": "Advances In Space Research",
+      "year": 2021,
+      "doi": "10.1016/j.asr.2019.07.006",
+      "link": "https://doi.org/10.1016/j.asr.2019.07.006"
+    },
+    {
+      "authors": "Sikder, Md Safat, Bonnema, Matthew, Emery, Charlotte M., David, Cedric H., Lin, Peirong, Pan, Ming, Biancamaria, Sylvain, Gierach, Michelle M.",
+      "title": "A Synthetic Data Set Inspired by Satellite Altimetry and Impacts of Sampling on Global Spaceborne Discharge Characterization",
+      "journal": "Water Resources Research",
+      "year": 2021,
+      "doi": "10.1029/2020WR029035",
+      "link": "https://doi.org/10.1029/2020WR029035"
+    },
+    {
+      "authors": "Sinha, Anirban, Abernathey, Ryan",
+      "title": "Estimating Ocean Surface Currents With Machine Learning",
+      "journal": "Frontiers In Marine Science",
+      "year": 2021,
+      "doi": "10.3389/fmars.2021.672477",
+      "link": "https://doi.org/10.3389/fmars.2021.672477"
+    },
+    {
+      "authors": "Benkiran, Mounir, Ruggiero, Giovanni, Greiner, Eric, Le Traon, Pierre-Yves, Remy, Elisabeth, Lellouche, Jean Michel, Bourdalle-Badie, Romain, Drillet, Yann, Tchonang, Babette",
+      "title": "Assessing the Impact of the Assimilation of SWOT Observations in a Global High-Resolution Analysis and Forecasting System Part 1: Methods",
+      "journal": "Frontiers In Marine Science",
+      "year": 2021,
+      "doi": "10.3389/fmars.2021.691955",
+      "link": "https://doi.org/10.3389/fmars.2021.691955"
+    },
+    {
+      "authors": "Yu, Xiaolong, Ponte, Aurelien L., Lahaye, Noe, Caspar-Cohen, Zoe, Menemenlis, Dimitris",
+      "title": "Geostrophy Assessment and Momentum Balance of the Global Oceans in a Tide- and Eddy-Resolving Model",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2021,
+      "doi": "10.1029/2021JC017422",
+      "link": "https://doi.org/10.1029/2021JC017422"
+    },
+    {
+      "authors": "Hausman, Jessica, Moroni, David, Gangl, Michael, Zlotnicki, Victor, Vazquez-Cuervo, Jorge, Armstrong, Edward M., Oaida, Catalina, Gierach, Michelle, Finch, Christopher, Schroeder, Colleen",
+      "title": "The evolution of the PO.DAAC: Seasat to SWOT",
+      "journal": "Advances In Space Research",
+      "year": 2021,
+      "doi": "10.1016/j.asr.2019.11.030",
+      "link": "https://doi.org/10.1016/j.asr.2019.11.030"
+    },
+    {
+      "authors": "Frasson, Renato Prata de Moraes, Durand, Michael T., Larnier, Kevin, Gleason, Colin, Andreadis, Konstantinos M., Hagemann, Mark, Dudley, Robert, Bjerklie, David, Oubanas, Hind, Garambois, Pierre-Andre, Malaterre, Pierre-Olivier, Lin, Peirong, Pavelsky, Tamlin M., Monnier, Jerome, Brinkerhoff, Craig B., David, Cedric H.",
+      "title": "Exploring the Factors Controlling the Error Characteristics of the Surface Water and Ocean Topography Mission Discharge Estimates",
+      "journal": "Water Resources Research",
+      "year": 2021,
+      "doi": "10.1029/2020WR028519",
+      "link": "https://doi.org/10.1029/2020WR028519"
+    },
+    {
+      "authors": "Altenau, Elizabeth H., Pavelsky, Tamlin M., Durand, Michael T., Yang, Xiao, Frasson, Renato Prata de Moraes, Bendezu, Liam",
+      "title": "The Surface Water and Ocean Topography (SWOT) Mission River Database (SWORD): A Global River Network for Satellite Data Products",
+      "journal": "Water Resources Research",
+      "year": 2021,
+      "doi": "10.1029/2021WR030054",
+      "link": "https://doi.org/10.1029/2021WR030054"
+    },
+    {
+      "authors": "Hossain, F, Bonnema, M, Srinivasan, M, Beighley, E, Andral, A, Doorn, B, Jayaluxmi, I, Jayasinghe, S, Kaheil, Y, Fatima, B, Elmer, N, Fenoglio, L, Bales, J, Lefevre, F, Legrand, S, Brunel, D, Le Traon, PY",
+      "title": "The Early Adopter Program for the Surface Water Ocean Topography Satellite Mission: Lessons Learned in Building User Engagement during the Prelaunch Era",
+      "journal": "Bulletin Of The American Meteorological Society",
+      "year": 2020,
+      "doi": "10.1175/BAMS-D-19-0235.1",
+      "link": "https://doi.org/10.1175/BAMS-D-19-0235.1"
+    },
+    {
+      "authors": "Siegelman, Lia, Klein, Patrice, Riviere, Pascal, Thompson, Andrew F., Torres, Hector S., Flexas, Mar, Menemenlis, Dimitris",
+      "title": "Enhanced upward heat transport at deep submesoscale ocean fronts",
+      "journal": "Nature Geoscience",
+      "year": 2020,
+      "doi": "10.1038/s41561-019-0489-1",
+      "link": "https://doi.org/10.1038/s41561-019-0489-1"
+    },
+    {
+      "authors": "Mauzole, Y. L., Torres, H. S., Fu, L. -L.",
+      "title": "Patterns and Dynamics of SST Fronts in the California Current System",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2020,
+      "doi": "10.1029/2019JC015499",
+      "link": "https://doi.org/10.1029/2019JC015499"
+    },
+    {
+      "authors": "Su, Zhan, Torres, Hector, Klein, Patrice, Thompson, Andrew F., Siegelman, Lia, Wang, Jinbo, Menemenlis, Dimitris, Hill, Christopher",
+      "title": "High-Frequency Submesoscale Motions Enhance the Upward Vertical Heat Transport in the Global Ocean",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2020,
+      "doi": "10.1029/2020JC016544",
+      "link": "https://doi.org/10.1029/2020JC016544"
+    },
+    {
+      "authors": "Emery, Charlotte Marie, Biancamaria, Sylvain, Boone, Aaron, Ricci, Sophie, Rochoux, Melanie C., Pedinotti, Vanessa, David, Cedric H.",
+      "title": "Assimilation of wide-swath altimetry water elevation anomalies to correct large-scale river routing model parameters",
+      "journal": "Hydrology And Earth System Sciences",
+      "year": 2020,
+      "doi": "10.5194/hess-24-2207-2020",
+      "link": "https://doi.org/10.5194/hess-24-2207-2020"
+    },
+    {
+      "authors": "Fayne, Jessica, V, Smith, Laurence C., Pitcher, Lincoln H., Kyzivat, Ethan D., Cooley, Sarah W., Cooper, Matthew G., Denbina, Michael W., Chen, Albert C., Chen, Curtis W., Pavelsky, Tamlin M.",
+      "title": "Airborne observations of arctic-boreal water surface elevations from AirSWOT Ka-Band InSAR and LVIS LiDAR",
+      "journal": "Environmental Research Letters",
+      "year": 2020,
+      "doi": "10.1088/1748-9326/abadcc",
+      "link": "https://doi.org/10.1088/1748-9326/abadcc"
+    },
+    {
+      "authors": "Emery, Charlotte M., David, Cedric H., Andreadis, Konstantinos M., Turmon, Michael J., Reager, John T., Hobbs, Jonathan M., Pan, Ming, Famiglietti, James S., Beighley, Edward, Rodell, Matthew",
+      "title": "Underlying Fundamentals of Kalman Filtering for River Network Modeling",
+      "journal": "Journal Of Hydrometeorology",
+      "year": 2020,
+      "doi": "10.1175/JHM-D-19-0084.1",
+      "link": "https://doi.org/10.1175/JHM-D-19-0084.1"
+    },
+    {
+      "authors": "Archer, Matthew R., Li, Zhijin, Fu, LeeLueng",
+      "title": "Increasing the Space-Time Resolution of Mapped Sea Surface Height From Altimetry",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2020,
+      "doi": "10.1029/2019JC015878",
+      "link": "https://doi.org/10.1029/2019JC015878"
+    },
+    {
+      "authors": "Durand, Michael, Chen, Curtis, de Moraes Frasson, Renato Prata, Pavelsky, Tamlin M., Williams, Brent, Yang, Xiao, Fore, Alex",
+      "title": "How will radar layover impact SWOT measurements of water surface elevation and slope, and estimates of river discharge?",
+      "journal": "and estimates of river discharge?",
+      "year": 2020,
+      "doi": "10.1016/j.rse.2020.111883",
+      "link": "https://doi.org/10.1016/j.rse.2020.111883"
+    },
+    {
+      "authors": "Clark, Evan B., Branch, Andrew, Chien, Steve, Mirza, Faiz, Farrara, John D., Chao, Yi, Fratantoni, David, Aragon, David, Schofield, Oscar, Flexas, Mar M., Thompson, Andrew",
+      "title": "Station-Keeping Underwater Gliders Using a Predictive Ocean Circulation Model and Applications to SWOT Calibration and Validation",
+      "journal": "Ieee Journal Of Oceanic Engineering",
+      "year": 2020,
+      "doi": "10.1109/JOE.2018.2886092",
+      "link": "https://doi.org/10.1109/JOE.2018.2886092"
+    },
+    {
+      "authors": "Rodriguez, Ernesto, Durand, Michael, Frasson, Renato Prata de Moraes",
+      "title": "Observing Rivers With Varying Spatial Scales",
+      "journal": "Water Resources Research",
+      "year": 2020,
+      "doi": "10.1029/2019WR026476",
+      "link": "https://doi.org/10.1029/2019WR026476"
+    },
+    {
+      "authors": "Qiu, Bo, Chen, Shuiming, Klein, Patrice, Torres, Hector, Wang, Jinbo, Fu, Lee-Lueng, Menemenlis, Dimitris",
+      "title": "Reconstructing Upper-Ocean Vertical Velocity Field from Sea Surface Height in the Presence of Unbalanced Motion",
+      "journal": "Journal Of Physical Oceanography",
+      "year": 2020,
+      "doi": "10.1175/JPO-D-19-0172.1",
+      "link": "https://doi.org/10.1175/JPO-D-19-0172.1"
+    },
+    {
+      "authors": "Nickles, Cassandra, Beighley, Edward, Durand, Michael, Frasson, Renato Prata de Moraes",
+      "title": "Integrating Lateral Inflows Into a SWOT Mission River Discharge Algorithm",
+      "journal": "Water Resources Research",
+      "year": 2020,
+      "doi": "10.1029/2019WR026589",
+      "link": "https://doi.org/10.1029/2019WR026589"
+    },
+    {
+      "authors": "Yu, Xiaolong, Ponte, Aurelien L., Elipot, Shane, Menemenlis, Dimitris, Zaron, Edward D., Abernathey, Ryan",
+      "title": "Surface Kinetic Energy Distributions in the Global Oceans From a High-Resolution Numerical Model and Surface Drifter Observations",
+      "journal": "Geophysical Research Letters",
+      "year": 2019,
+      "doi": "10.1029/2019GL083074",
+      "link": "https://doi.org/10.1029/2019GL083074"
+    },
+    {
+      "authors": "Siegelman, Lia, O'Toole, Malcolm, Flexas, Mar, Riviere, Pascal, Klein, Patrice",
+      "title": "Submesoscale ocean fronts act as biological hotspot for southern elephant seal",
+      "journal": "Scientific Reports",
+      "year": 2019,
+      "doi": "10.1038/s41598-019-42117-w",
+      "link": "https://doi.org/10.1038/s41598-019-42117-w"
+    },
+    {
+      "authors": "Riviere, Pascal, Jaud, Thomas, Siegelman, Lia, Klein, Patrice, Cotte, Cedric, Le Sommer, Julien, Dencausse, Guillaume, Guinet, Christophe",
+      "title": "Sub-mesoscale fronts modify elephant seals foraging behavior",
+      "journal": "Limnology And Oceanography Letters",
+      "year": 2019,
+      "doi": "10.1002/lol2.10121",
+      "link": "https://doi.org/10.1002/lol2.10121"
+    },
+    {
+      "authors": "Callies, Jorn, Wu, Weiguang",
+      "title": "Some Expectations for Submesoscale Sea Surface Height Variance Spectra",
+      "journal": "Journal Of Physical Oceanography",
+      "year": 2019,
+      "doi": "10.1175/JPO-D-18-0272.1",
+      "link": "https://doi.org/10.1175/JPO-D-18-0272.1"
+    },
+    {
+      "authors": "Wang, Jinbo, Fu, Lee-Lueng, Torres, Hector S., Chen, Shuiming, Qiu, Bo, Menemenlis, Dimitris",
+      "title": "On the Spatial Scales to be Resolved by the Surface Water and Ocean Topography Ka-Band Radar Interferometer",
+      "journal": "Journal Of Atmospheric And Oceanic Technology",
+      "year": 2019,
+      "doi": "10.1175/JTECH-D-18-0119.1",
+      "link": "https://doi.org/10.1175/JTECH-D-18-0119.1"
+    },
+    {
+      "authors": "Klein, Patrice, Lapeyre, Guillaume, Siegelman, Lia, Qiu, Bo, Fu, Lee-Lueng, Torres, Hector, Su, Zhan, Menemenlis, Dimitris, Le Gentil, Sylvie",
+      "title": "Ocean-Scale Interactions From Space",
+      "journal": "Earth And Space Science",
+      "year": 2019,
+      "doi": "10.1029/2018EA000492",
+      "link": "https://doi.org/10.1029/2018EA000492"
+    },
+    {
+      "authors": "Denbina, Michael, Simard, Marc, Rodriguez, Ernesto, Wu, Xiaoqing, Chen, Albert, Pavelsky, Tamlin",
+      "title": "Mapping Water Surface Elevation and Slope in the Mississippi River Delta Using the AirSWOT Ka-Band Interferometric Synthetic Aperture Radar",
+      "journal": "Remote Sensing",
+      "year": 2019,
+      "doi": "10.3390/rs11232739",
+      "link": "https://doi.org/10.3390/rs11232739"
+    },
+    {
+      "authors": "Nickles, Cassandra, Beighley, Edward, Zhao, Yuanhao, Durand, Michael, David, Cedric, Lee, Hyongki",
+      "title": "How Does the Unique Space-Time Sampling of the SWOT Mission Influence River Discharge Series Characteristics?",
+      "journal": "Geophysical Research Letters",
+      "year": 2019,
+      "doi": "10.1029/2019GL083886",
+      "link": "https://doi.org/10.1029/2019GL083886"
+    },
+    {
+      "authors": "Lin, Peirong, Pan, Ming, Beck, Hylke E., Yang, Yuan, Yamazaki, Dai, Frasson, Renato, David, Cedric H., Durand, Michael, Pavelsky, Tamlin M., Allen, George H., Gleason, Colin J., Wood, Eric F.",
+      "title": "Global Reconstruction of Naturalized River Flows at 2.94 Million Reaches",
+      "journal": "Water Resources Research",
+      "year": 2019,
+      "doi": "10.1029/2019WR025287",
+      "link": "https://doi.org/10.1029/2019WR025287"
+    },
+    {
+      "authors": "Yang, Yuan, Lin, Peirong, Fisher, Colby K., Turmon, Michael, Hobbs, Jonathan, Emery, Charlotte M., Reager, John T., David, Cedric H., Lu, Hui, Yang, Kun, Hong, Yang, Wood, Eric F., Pan, Ming",
+      "title": "Enhancing SWOT discharge assimilation through spatiotemporal correlations",
+      "journal": "Remote Sensing Of Environment",
+      "year": 2019,
+      "doi": "10.1016/j.rse.2019.111450",
+      "link": "https://doi.org/10.1016/j.rse.2019.111450"
+    },
+    {
+      "authors": "Langhorst, Theodore, Payelskyl, Tamlin M., Frasson, Renato Prata de Moraes, Wei, Rui, Domeneghetti, Alessio, Altenau, Elizabeth H., Durand, Michael T., Minear, J. Toby, Wegmann, Karl W., Fuller, Matthew R.",
+      "title": "Anticipated Improvements to River Surface Elevation Profiles From the Surface Water and Ocean Topography Mission",
+      "journal": "Frontiers In Earth Science",
+      "year": 2019,
+      "doi": "10.3389/feart.2019.00102",
+      "link": "https://doi.org/10.3389/feart.2019.00102"
+    },
+    {
+      "authors": "Armstrong, Edward M., Bourassa, Mark A., Cram, Thomas A., DeBellis, Maya, Elya, Jocelyn, Greguska, Frank R., III, Huang, Thomas, Jacob, Joseph C., Ji, Zaihua, Jiang, Yongyao, Li, Yun, Quach, Nga, McGibbney, Lewis, Smith, Shawn, Tsontos, Vardis M., Wilson, Brian, Worley, Steven J., Yang, Chaowei, Yam, Elizabeth",
+      "title": "An Integrated Data Analytics Platform",
+      "journal": "Frontiers In Marine Science",
+      "year": 2019,
+      "doi": "10.3389/fmars.2019.00354",
+      "link": "https://doi.org/10.3389/fmars.2019.00354"
+    },
+    {
+      "authors": "Bonnema, M. and Hossain, F.",
+      "title": "Assessing the Potential of the Surface Water and Ocean Topography Mission for Reservoir Monitoring in the Mekong River Basin",
+      "journal": "Water Res. Res.",
+      "year": 2019,
+      "doi": "",
+      "link": "https://agupubs.onlinelibrary.wiley.com/doi/full/10.1029/2018WR023743"
+    },
+    {
+      "authors": "Frasson, R.P.M., Schumann, G.J.-P., Kettner, A.J., Brakenridge, G.R., and Krajewski, W.F.",
+      "title": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
+      "journal": "Geophys. Res. Lett.",
+      "year": 2019,
+      "doi": "",
+      "link": "https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2019GL084686"
+    },
+    {
+      "authors": "Frasson, R.P. M., Pavelsky, T.M., Fonstad, M.A., Durand, M.T., Allen, G.H., Schumann, G., Lion, C., Beighley, R.E., and Yang, X.",
+      "title": "Global Relationships Between River Width, Slope, Catchment Area, Meander Wavelength, Sinuosity, and Discharge",
+      "journal": "Slope",
+      "year": 2019,
+      "doi": "",
+      "link": "https://doi.org/10.1029/2019GL082027"
+    },
+    {
+      "authors": "Nouguier, Frederic, Chapron, Bertrand, Collard, Fabrice, Mouche, Alexis A., Rascle, Nicolas, Ardhuin, Fabrice, Wu, Xiaoqing",
+      "title": "Sea Surface Kinematics From Near-Nadir Radar Measurements",
+      "journal": "Ieee Transactions On Geoscience And Remote Sensing",
+      "year": 2018,
+      "doi": "10.1109/TGRS.2018.2833200",
+      "link": "https://doi.org/10.1109/TGRS.2018.2833200"
+    },
+    {
+      "authors": "Wang, Jida, Song, Chunqiao, Reager, John T., Yao, Fangfang, Famiglietti, James S., Sheng, Yongwei, MacDonald, Glen M., Brun, Fanny, Schmied, Hannes Mueller, Marston, Richard A., Wada, Yoshihide",
+      "title": "Recent global decline in endorheic basin water storages",
+      "journal": "Nature Geoscience",
+      "year": 2018,
+      "doi": "10.1038/s41561-018-0265-7",
+      "link": "https://doi.org/10.1038/s41561-018-0265-7"
+    },
+    {
+      "authors": "Torres, Hector S., Klein, Patrice, Menemenlis, Dimitris, Qiu, Bo, Su, Zhan, Wang, Jinbo, Chen, Shuiming, Fu, Lee-Lueng",
+      "title": "Partitioning Ocean Motions Into Balanced Motions and Internal Gravity Waves: A Modeling Study in Anticipation of Future Space Missions",
+      "journal": "Journal Of Geophysical Research Oceans",
+      "year": 2018,
+      "doi": "10.1029/2018JC014438",
+      "link": "https://doi.org/10.1029/2018JC014438"
+    },
+    {
+      "authors": "Troesch, Martina, Chien, Steve, Chao, Yi, Farrara, John, Girton, James, Dunlap, John",
+      "title": "Autonomous control of marine floats in the presence of dynamic, uncertain ocean currents",
+      "journal": "uncertain ocean currents",
+      "year": 2018,
+      "doi": "10.1016/j.robot.2018.04.004",
+      "link": "https://doi.org/10.1016/j.robot.2018.04.004"
+    },
+    {
+      "authors": "Frasson, R.P.M., Wei, R., Durand, M., Minear, J.T., Domeneghetti, A., Schumann, G., and Garambois, P.-A.",
+      "title": "Automated River Reach Definition Strategies: Applications for the Surface Water and Ocean Topography Mission",
+      "journal": "Water Resour. Res.",
+      "year": 2017,
+      "doi": "",
+      "link": "http://onlinelibrary.wiley.com/doi/10.1002/2017WR020887/abstract"
+    },
+    {
+      "authors": "Bonnema, M. and Hossain, F.",
+      "title": "Inferring Reservoir Operating Patterns Across the Mekong Basin Using Only Space Observations",
+      "journal": "Water Resour. Res.",
+      "year": 2017,
+      "doi": "",
+      "link": "http://onlinelibrary.wiley.com/doi/10.1002/2016WR019978/abstract;jsessionid=C21ABC0CBD7E466C50B9A3CD2CD3C6A6.f04t01"
+    },
+    {
+      "authors": "Chahat, Nacer, Amaro, Luis R., Harrell, Jefferson, Wang, Charles, Estabrook, Polly, Butman, Stanley A.",
+      "title": "X-Band Choke Ring Horn Telecom Antenna for Interference Mitigation on NASA's SWOT Mission",
+      "journal": "Ieee Transactions On Antennas And Propagation",
+      "year": 2016,
+      "doi": "10.1109/TAP.2016.2546298",
+      "link": "https://doi.org/10.1109/TAP.2016.2546298"
+    },
+    {
+      "authors": "Lei, Yang, Siqueira, Paul, Treuhaft, Robert",
+      "title": "A dense medium electromagnetic scattering model for the InSAR correlation of snow",
+      "journal": "Radio Science",
+      "year": 2016,
+      "doi": "10.1002/2015RS005926",
+      "link": "https://doi.org/10.1002/2015RS005926"
+    },
+    {
+      "authors": "Bonnema, M., Sikder, S., Mao, Y., Chen, X., Hossain, F., Pervin, I.A., Rahman, S.M.M., and Lee, H.",
+      "title": "Understanding Satellite-based Monthly-to-Seasonal Reservoir Outflow Estimation as a Function of Hydrologic Controls",
+      "journal": "Water Resour. Res.",
+      "year": 2016,
+      "doi": "",
+      "link": "https://onlinelibrary.wiley.com/doi/10.1002/2015WR017830/full"
+    },
+    {
+      "authors": "Bonnema, M., Sikder, S., Hossain, F., Bjerklie, D., Durand M., and Gleason, C.",
+      "title": "Benchmarking Wide Swath Altimetry Based River Discharge Estimation Algorithms for the Ganges River System",
+      "journal": "Water Resour. Res.",
+      "year": 2016,
+      "doi": "",
+      "link": "https://onlinelibrary.wiley.com/doi/10.1002/2015WR017296/full"
+    },
+    {
+      "authors": "Peral, Eva, Rodriguez, Ernesto, Esteban-Fernandez, Daniel",
+      "title": "Impact of Surface Waves on SWOT's Projected Ocean Accuracy",
+      "journal": "Remote Sensing",
+      "year": 2015,
+      "doi": "10.3390/rs71114509",
+      "link": "https://doi.org/10.3390/rs71114509"
+    },
+    {
+      "authors": "Ubelmann, Clement, Klein, Patrice, Fu, Lee-Lueng",
+      "title": "Dynamic Interpolation of Sea Surface Height and Potential Applications for Future High-Resolution Altimetry Mapping",
+      "journal": "Journal Of Atmospheric And Oceanic Technology",
+      "year": 2015,
+      "doi": "10.1175/JTECH-D-14-00152.1",
+      "link": "https://doi.org/10.1175/JTECH-D-14-00152.1"
+    },
+    {
+      "authors": "Fu, Lee-Lueng, Ubelmann, Clement",
+      "title": "On the Transition from Profile Altimeter to Swath Altimeter for Observing Global Ocean Surface Topography",
+      "journal": "Journal Of Atmospheric And Oceanic Technology",
+      "year": 2014,
+      "doi": "10.1175/JTECH-D-13-00109.1",
+      "link": "https://doi.org/10.1175/JTECH-D-13-00109.1"
+    },
+    {
+      "authors": "Bates, Paul D., Neal, Jefferey C., Alsdorf, Douglas, Schumann, Guy J-P",
+      "title": "Observing Global Surface Water Flood Dynamics",
+      "journal": "Surveys In Geophysics",
+      "year": 2014,
+      "doi": "10.1007/s10712-013-9269-4",
+      "link": "https://doi.org/10.1007/s10712-013-9269-4"
+    },
+    {
+      "authors": "Dibarboure, Gerald, Ubelmann, Clement",
+      "title": "Investigating the Performance of Four Empirical Cross-Calibration Methods for the Proposed SWOT Mission",
+      "journal": "Remote Sensing",
+      "year": 2014,
+      "doi": "10.3390/rs6064831",
+      "link": "https://doi.org/10.3390/rs6064831"
+    },
+    {
+      "authors": "Yoon, Yeosang, Durand, Michael, Merry, Carolyn J., Clark, Elizabeth A., Andreadis, Konstantinos M., Alsdorf, Douglas E.",
+      "title": "Estimating river bathymetry from data assimilation of synthetic SWOT measurements",
+      "journal": "Journal Of Hydrology",
+      "year": 2012,
+      "doi": "10.1016/j.jhydrol.2012.07.028",
+      "link": "https://doi.org/10.1016/j.jhydrol.2012.07.028"
+    },
+    {
+      "authors": "Biancamaria, S., Durand, M., Andreadis, K. M., Bates, P. D., Boone, A., Mognard, N. M., Rodriguez, E., Alsdorf, D. E., Lettenmaier, D. P., Clark, E. A.",
+      "title": "Assimilation of virtual wide swath altimetry to improve Arctic river modeling",
+      "journal": "Remote Sensing Of Environment",
+      "year": 2011,
+      "doi": "10.1016/j.rse.2010.09.008",
+      "link": "https://doi.org/10.1016/j.rse.2010.09.008"
+    },
+    {
+      "authors": "Biancamaria, Sylvain, Andreadis, Kostas M., Durand, Michael, Clark, Elizabeth A., Rodriguez, Ernesto, Mognard, Nelly M., Alsdorf, Doug E., Lettenmaier, Dennis P., Oudin, Yannick",
+      "title": "Preliminary Characterization of SWOT Hydrology Error Budget and Global Capabilities",
+      "journal": "Ieee Journal Of Selected Topics In Applied Earth Observations And Remote Sensing",
+      "year": 2010,
+      "doi": "10.1109/JSTARS.2009.2034614",
+      "link": "https://doi.org/10.1109/JSTARS.2009.2034614"
+    },
+    {
+      "authors": "Durand, Michael, Rodriguez, Ernesto, Alsdorf, Douglas E., Trigg, Mark",
+      "title": "Estimating River Depth From Remote Sensing Swath Interferometry Measurements of River Height, Slope, and Width",
+      "journal": "Slope",
+      "year": 2010,
+      "doi": "10.1109/JSTARS.2009.2033453",
+      "link": "https://doi.org/10.1109/JSTARS.2009.2033453"
+    }
+  ]
+}
