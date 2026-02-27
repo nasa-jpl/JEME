@@ -129,7 +129,7 @@ const UncertaintyOverviewCard = ({ data }) => {
               </p>
               <div className="space-y-2.5">
                 <div className="flex gap-3 p-3 bg-blue-50 rounded-lg">
-                  <div className="text-blue-600 font-bold text-lg leading-none mt-0.5">40%</div>
+                  <div className="text-blue-600 font-bold text-lg leading-none mt-0.5">45%</div>
                   <div>
                     <div className="font-medium text-gray-800">Evidence Confidence</div>
                     <div className="text-xs text-gray-500 mt-0.5">
@@ -139,17 +139,17 @@ const UncertaintyOverviewCard = ({ data }) => {
                   </div>
                 </div>
                 <div className="flex gap-3 p-3 bg-green-50 rounded-lg">
-                  <div className="text-green-600 font-bold text-lg leading-none mt-0.5">40%</div>
+                  <div className="text-green-600 font-bold text-lg leading-none mt-0.5">45%</div>
                   <div>
                     <div className="font-medium text-gray-800">Reasoning Confidence</div>
                     <div className="text-xs text-gray-500 mt-0.5">
-                      Heuristic proxy for LLM classification reliability. Currently 0.7 when an abstract
-                      is available (richer context), 0.4 without (title-only).
+                      Heuristic proxy for LLM classification reliability. Set to 0.85 when an abstract
+                      is available (richer context), 0.5 without (title-only).
                     </div>
                   </div>
                 </div>
                 <div className="flex gap-3 p-3 bg-red-50 rounded-lg">
-                  <div className="text-red-500 font-bold text-lg leading-none mt-0.5">20%</div>
+                  <div className="text-red-500 font-bold text-lg leading-none mt-0.5">10%</div>
                   <div>
                     <div className="font-medium text-gray-800">Pipeline Variance Penalty</div>
                     <div className="text-xs text-gray-500 mt-0.5">
@@ -161,7 +161,7 @@ const UncertaintyOverviewCard = ({ data }) => {
               </div>
               <div className="p-3 bg-gray-50 rounded-lg text-center">
                 <div className="text-xs text-gray-500 mb-1">Formula</div>
-                <code className="text-sm text-gray-700">0.4 &times; evidence + 0.4 &times; reasoning &minus; 0.2 &times; variance</code>
+                <code className="text-sm text-gray-700">0.45 &times; evidence + 0.45 &times; reasoning &minus; 0.1 &times; variance</code>
                 <div className="text-xs text-gray-400 mt-1">Clamped to [5%, 99%]</div>
               </div>
             </div>

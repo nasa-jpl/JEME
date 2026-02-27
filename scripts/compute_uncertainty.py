@@ -103,6 +103,8 @@ MODEL_CORE_KEYWORDS = {
     "CARDAMOM": ["cardamom", "carbon data model", "terrestrial carbon", "ecosystem carbon"],
     "LES": ["large eddy", "les ", "turbulence resolving", "boundary layer simulation"],
     "EDMF": ["edmf", "eddy diffusivity", "mass flux", "convective parameterization"],
+    "GRACE": ["grace", "grace-fo", "gravity recovery", "satellite gravimetry", "mascon", "terrestrial water storage", "mass change"],
+    "SWOT": ["swot", "surface water and ocean topography", "karin", "wide-swath altimetry", "swath altimeter", "water surface elevation"],
 }
 
 
@@ -291,8 +293,8 @@ def compute_composite_confidence(evidence_conf, reasoning_conf, pipeline_var):
     Weighted heuristic combining evidence, reasoning, and pipeline penalty.
     Clamped to [0.05, 0.99].
     """
-    # Weights: evidence 0.4, reasoning 0.4, pipeline penalty 0.2
-    raw = 0.4 * evidence_conf + 0.4 * reasoning_conf - 0.2 * pipeline_var
+    # Weights: evidence 0.45, reasoning 0.45, pipeline penalty 0.1
+    raw = 0.45 * evidence_conf + 0.45 * reasoning_conf - 0.1 * pipeline_var
     return round(max(0.05, min(0.99, raw)), 3)
 
 
@@ -310,9 +312,9 @@ def compute_entry_uncertainty(paper, model_name):
     evidence_flags["team_paper_relevance_tier"] = tier
 
     # Reasoning confidence: heuristic default (Phase 1)
-    # 0.7 with abstract, 0.4 without
+    # 0.85 with abstract, 0.5 without
     has_abstract = evidence_flags["has_abstract"]
-    reasoning_conf = 0.7 if has_abstract else 0.4
+    reasoning_conf = 0.85 if has_abstract else 0.5
 
     # Pipeline variance
     pipeline_var, domain_agreement, engagement_agreement = compute_pipeline_variance(paper)
@@ -421,7 +423,7 @@ def main():
     project_root = script_dir.parent
     data_dir = project_root / "public" / "data"
 
-    models = ["CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "ISSM", "LES", "MOMO-CHEM", "RAPID"]
+    models = ["CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE", "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT"]
 
     if args.model:
         if args.model not in models:
