@@ -43,13 +43,13 @@ const SWOTDashboard = () => {
   const missions = [
     {
       name: "GRACE",
-      icon: <Satellite size={20} style={{ color: '#0369A1' }} />,
+      icon: <Satellite size={20} style={{ color: '#D946EF' }} />,
       description: "Gravity Recovery and Climate Experiment - Tracking changes in Earth's gravity field to monitor water storage, ice mass, and sea level",
       link: "/science-model-dashboard/GRACE"
     },
     {
       name: "SWOT",
-      icon: <Satellite size={20} style={{ color: '#0E7490' }} />,
+      icon: <Satellite size={20} style={{ color: '#F59E0B' }} />,
       description: "Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements",
       link: "/science-model-dashboard/SWOT"
     }

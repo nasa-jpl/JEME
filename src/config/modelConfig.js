@@ -93,7 +93,7 @@ export const MODELS = {
     displayName: 'GRACE',
     description: 'Gravity Recovery and Climate Experiment',
     dataPath: '../data/GRACE_analyzed.json',
-    color: '#0369A1', // Sky-800
+    color: '#D946EF', // Fuchsia
     domain: 'Geophysics & Geodesy',
     github: null,
     website: 'https://gracefo.jpl.nasa.gov/',
@@ -105,7 +105,7 @@ export const MODELS = {
     displayName: 'SWOT',
     description: 'Surface Water and Ocean Topography',
     dataPath: '../data/SWOT_analyzed.json',
-    color: '#0E7490', // Cyan-700
+    color: '#F59E0B', // Amber
     domain: 'Ocean & Marine Science',
     github: null,
     website: 'https://swot.jpl.nasa.gov/',

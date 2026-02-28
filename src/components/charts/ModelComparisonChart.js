@@ -15,7 +15,9 @@ const ModelComparisonChart = ({ allModelsData = {} }) => {
       'MOMO-CHEM': '#8b5cf6',  // Purple
       'CARDAMOM': '#eab308',   // Yellow
       'LES': '#2E8B57',        // Sea Green
-      'EDMF': '#FF6347'        // Tomato
+      'EDMF': '#FF6347',       // Tomato
+      'GRACE': '#D946EF',      // Fuchsia
+      'SWOT': '#F59E0B'        // Amber
     };
 
     return Object.entries(allModelsData).map(([modelName, data]) => {
