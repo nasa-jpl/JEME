@@ -16,7 +16,9 @@ export const extractUncertainty = (entry) => {
     compositeConfidence: u.composite_confidence ?? null,
     evidenceFlags: u.evidence_flags || {},
     classificationProvenance: u.classification_provenance || {},
-    errorEstimates: u.error_estimates || {}
+    errorEstimates: u.error_estimates || {},
+    stochasticVariance: u.error_estimates?.stochastic_variance ?? null,
+    skepticReview: u.skeptic_review || null
   };
 };
 
@@ -48,6 +50,17 @@ export const calculateUncertaintyMetrics = (citationsData) => {
   let miscMedium = 0;
   let miscLow = 0;
 
+  // Stochastic variance stats
+  let stochVarCount = 0;
+  let stochVarSum = 0;
+  let stochHighAgreement = 0; // < 0.2
+  let stochLowAgreement = 0;  // > 0.5
+
+  // Skeptic review stats
+  let skepticReviewed = 0;
+  let skepticOverrides = 0;
+  let skepticAgreementSum = 0;
+
   // Per engagement level and per domain
   const byEngagement = {};
   const byDomain = {};
@@ -68,6 +81,25 @@ export const calculateUncertaintyMetrics = (citationsData) => {
     else veryLowCount++;
 
     if (u.evidence_flags && u.evidence_flags.has_abstract) abstractCount++;
+
+    // Stochastic variance
+    const sv = u.error_estimates?.stochastic_variance;
+    if (sv !== null && sv !== undefined) {
+      stochVarCount++;
+      stochVarSum += sv;
+      if (sv < 0.2) stochHighAgreement++;
+      if (sv > 0.5) stochLowAgreement++;
+    }
+
+    // Skeptic review
+    const sr = u.skeptic_review;
+    if (sr && sr.reviewed) {
+      skepticReviewed++;
+      if (sr.override_flag) skepticOverrides++;
+      if (sr.skeptic_agreement !== null && sr.skeptic_agreement !== undefined) {
+        skepticAgreementSum += sr.skeptic_agreement;
+      }
+    }
 
     const risk = u.error_estimates?.miscalibration_risk;
     if (risk === 'high') miscHigh++;
@@ -122,7 +154,20 @@ export const calculateUncertaintyMetrics = (citationsData) => {
       low: miscLow
     },
     confidenceByEngagement,
-    confidenceByDomain
+    confidenceByDomain,
+    // Phase 2: stochastic variance
+    stochasticVariance: {
+      count: stochVarCount,
+      avg: stochVarCount > 0 ? parseFloat((stochVarSum / stochVarCount).toFixed(3)) : null,
+      highAgreement: stochHighAgreement,
+      lowAgreement: stochLowAgreement
+    },
+    // Phase 3: skeptic review
+    skepticReview: {
+      reviewed: skepticReviewed,
+      overrides: skepticOverrides,
+      avgAgreement: skepticReviewed > 0 ? parseFloat((skepticAgreementSum / skepticReviewed).toFixed(3)) : null
+    }
   };
 };
 

@@ -112,8 +112,11 @@ const UncertaintyOverviewCard = ({ data }) => {
             <div className="p-4 text-sm text-gray-600 space-y-3">
               <p>
                 Each paper's <span className="font-medium text-gray-800">composite confidence</span> combines
-                two independent signals plus a disagreement penalty:
+                independent signals plus a disagreement penalty:
               </p>
+
+              {/* Phase 1 formula */}
+              <div className="text-xs font-medium text-gray-500 uppercase tracking-wide">Phase 1 (Metadata-based)</div>
               <div className="space-y-2.5">
                 <div className="flex gap-3 p-3 bg-blue-50 rounded-lg">
                   <div className="text-blue-600 font-bold text-lg leading-none mt-0.5">45%</div>
@@ -130,8 +133,7 @@ const UncertaintyOverviewCard = ({ data }) => {
                   <div>
                     <div className="font-medium text-gray-800">Reasoning Confidence</div>
                     <div className="text-xs text-gray-500 mt-0.5">
-                      Heuristic proxy for LLM classification reliability. Set to 0.85 when an abstract
-                      is available (richer context), 0.5 without (title-only).
+                      Heuristic proxy: 0.85 with abstract, 0.5 without (title-only).
                     </div>
                   </div>
                 </div>
@@ -140,15 +142,56 @@ const UncertaintyOverviewCard = ({ data }) => {
                   <div>
                     <div className="font-medium text-gray-800">Pipeline Variance Penalty</div>
                     <div className="text-xs text-gray-500 mt-0.5">
-                      Measures disagreement between the keyword-based classifier and the LLM (Gemini) labels.
-                      Domain mismatch adds 0.5, engagement mismatch adds 0.5.
+                      Keyword vs LLM label disagreement. Domain mismatch +0.5, engagement mismatch +0.5.
                     </div>
                   </div>
                 </div>
               </div>
               <div className="p-3 bg-gray-50 rounded-lg text-center">
-                <div className="text-xs text-gray-500 mb-1">Formula</div>
+                <div className="text-xs text-gray-500 mb-1">Phase 1 Formula</div>
                 <code className="text-sm text-gray-700">0.45 &times; evidence + 0.45 &times; reasoning &minus; 0.1 &times; variance</code>
+                <div className="text-xs text-gray-400 mt-1">Clamped to [5%, 99%]</div>
+              </div>
+
+              {/* Phase 2 formula */}
+              <div className="text-xs font-medium text-gray-500 uppercase tracking-wide mt-4">Phase 2 (LLM-enhanced, when available)</div>
+              <div className="space-y-2.5">
+                <div className="flex gap-3 p-3 bg-blue-50 rounded-lg">
+                  <div className="text-blue-600 font-bold text-lg leading-none mt-0.5">35%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Evidence Confidence</div>
+                    <div className="text-xs text-gray-500 mt-0.5">Same as Phase 1.</div>
+                  </div>
+                </div>
+                <div className="flex gap-3 p-3 bg-green-50 rounded-lg">
+                  <div className="text-green-600 font-bold text-lg leading-none mt-0.5">35%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Reasoning Confidence</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      Average of Gemini's self-assessed confidence across 3 temperature runs, normalized 0-1.
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 p-3 bg-purple-50 rounded-lg">
+                  <div className="text-purple-600 font-bold text-lg leading-none mt-0.5">20%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Stochastic Agreement</div>
+                    <div className="text-xs text-gray-500 mt-0.5">
+                      1 &minus; stochastic_variance. Rewards consistent labeling across temperatures.
+                    </div>
+                  </div>
+                </div>
+                <div className="flex gap-3 p-3 bg-red-50 rounded-lg">
+                  <div className="text-red-500 font-bold text-lg leading-none mt-0.5">10%</div>
+                  <div>
+                    <div className="font-medium text-gray-800">Pipeline Variance Penalty</div>
+                    <div className="text-xs text-gray-500 mt-0.5">Same as Phase 1.</div>
+                  </div>
+                </div>
+              </div>
+              <div className="p-3 bg-gray-50 rounded-lg text-center">
+                <div className="text-xs text-gray-500 mb-1">Phase 2 Formula</div>
+                <code className="text-sm text-gray-700">0.35 &times; evidence + 0.35 &times; reasoning + 0.20 &times; (1 &minus; stochastic) &minus; 0.1 &times; variance</code>
                 <div className="text-xs text-gray-400 mt-1">Clamped to [5%, 99%]</div>
               </div>
             </div>

@@ -10,6 +10,8 @@ import UncertaintyOverviewCard from '../components/charts/UncertaintyOverviewCar
 import UncertaintyMatrixCard from '../components/charts/UncertaintyMatrixCard';
 import ConfidenceByClassificationChart from '../components/charts/ConfidenceByClassificationChart';
 import EvidenceGapsCard from '../components/charts/EvidenceGapsCard';
+import StochasticVarianceCard from '../components/charts/StochasticVarianceCard';
+import SkepticReviewCard from '../components/charts/SkepticReviewCard';
 
 const GenericUncertaintyPage = () => {
   const { modelName } = useParams();
@@ -180,6 +182,18 @@ const GenericUncertaintyPage = () => {
               <EvidenceGapsCard data={citationsData} />
             </div>
 
+            {/* Phase 2: Stochastic Variance + Phase 3: Skeptic Review */}
+            {(metrics.stochasticVariance?.count > 0 || metrics.skepticReview?.reviewed > 0) && (
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+                {metrics.stochasticVariance?.count > 0 && (
+                  <StochasticVarianceCard data={citationsData} />
+                )}
+                {metrics.skepticReview?.reviewed > 0 && (
+                  <SkepticReviewCard data={citationsData} />
+                )}
+              </div>
+            )}
+
             {/* Error source breakdown */}
             <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
               <div className="text-base font-semibold text-gray-800 mb-4">Error Source Breakdown</div>
@@ -280,18 +294,26 @@ const GenericUncertaintyPage = () => {
               <div className="text-sm font-semibold text-blue-900 mb-2">About This Analysis</div>
               <div className="text-sm text-blue-800 space-y-2">
                 <p>
-                  <strong>Phase 1 (Current):</strong> Deterministic uncertainty estimation using metadata signals.
+                  <strong>Phase 1 (Active):</strong> Deterministic uncertainty estimation using metadata signals.
                   No LLM API calls required. Evidence confidence is computed from data completeness (abstract, DOI, venue, authors, keyword matches).
-                  Reasoning confidence uses a heuristic default (0.7 with abstract, 0.4 without).
-                  Pipeline variance measures disagreement between keyword classifiers and LLM labels.
+                  {metrics.stochasticVariance?.count > 0
+                    ? ' Reasoning confidence is provided by Phase 2 LLM sampling.'
+                    : ' Reasoning confidence uses a heuristic default (0.85 with abstract, 0.5 without).'}
+                  {' '}Pipeline variance measures disagreement between keyword classifiers and LLM labels.
                 </p>
                 <p>
-                  <strong>Phase 2 (Future):</strong> LLM-enhanced confidence via multi-temperature sampling
-                  and self-assessed reasoning scores. Stochastic variance will replace the current null placeholder.
+                  <strong>Phase 2 {metrics.stochasticVariance?.count > 0 ? '(Active)' : '(Pending)'}:</strong> LLM-enhanced confidence via multi-temperature sampling (3 runs at t=0.1, 0.5, 1.0)
+                  and self-assessed reasoning scores. Stochastic variance measures label agreement across temperatures.
+                  {metrics.stochasticVariance?.count > 0
+                    ? ` ${metrics.stochasticVariance.count.toLocaleString()} entries processed.`
+                    : ' Run phase2_llm_confidence.py to generate.'}
                 </p>
                 <p>
-                  <strong>Phase 3 (Future):</strong> Skeptic agent for adversarial review of high-impact/low-evidence
-                  classifications, plus calibration against known-good/known-bad datasets.
+                  <strong>Phase 3 {metrics.skepticReview?.reviewed > 0 ? '(Active)' : '(Pending)'}:</strong> Skeptic agent for adversarial review of high-risk entries.
+                  Reviews entries with high miscalibration risk, high stochastic variance, or high engagement with low confidence.
+                  {metrics.skepticReview?.reviewed > 0
+                    ? ` ${metrics.skepticReview.reviewed.toLocaleString()} entries reviewed, ${metrics.skepticReview.overrides} overrides flagged.`
+                    : ' Run phase3_skeptic_agent.py to generate.'}
                 </p>
               </div>
             </div>

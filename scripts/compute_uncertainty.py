@@ -288,13 +288,24 @@ def compute_miscalibration_risk(has_abstract, pipeline_variance, composite):
     return "low"
 
 
-def compute_composite_confidence(evidence_conf, reasoning_conf, pipeline_var):
+def compute_composite_confidence(evidence_conf, reasoning_conf, pipeline_var,
+                                  stochastic_var=None):
     """
-    Weighted heuristic combining evidence, reasoning, and pipeline penalty.
+    Weighted heuristic combining evidence, reasoning, and pipeline/stochastic signals.
     Clamped to [0.05, 0.99].
+
+    Phase 1 (stochastic_var is None):
+        0.45 * evidence + 0.45 * reasoning - 0.10 * pipeline_variance
+    Phase 2 (stochastic_var is not None):
+        0.35 * evidence + 0.35 * reasoning + 0.20 * (1 - stochastic_variance) - 0.10 * pipeline_variance
     """
-    # Weights: evidence 0.45, reasoning 0.45, pipeline penalty 0.1
-    raw = 0.45 * evidence_conf + 0.45 * reasoning_conf - 0.1 * pipeline_var
+    if stochastic_var is not None:
+        raw = (0.35 * evidence_conf +
+               0.35 * reasoning_conf +
+               0.20 * (1.0 - stochastic_var) -
+               0.10 * pipeline_var)
+    else:
+        raw = 0.45 * evidence_conf + 0.45 * reasoning_conf - 0.1 * pipeline_var
     return round(max(0.05, min(0.99, raw)), 3)
 
 
@@ -311,37 +322,65 @@ def compute_entry_uncertainty(paper, model_name):
     tier = compute_team_paper_relevance_tier(paper, model_name)
     evidence_flags["team_paper_relevance_tier"] = tier
 
-    # Reasoning confidence: heuristic default (Phase 1)
-    # 0.85 with abstract, 0.5 without
+    # Check for existing Phase 2 data
+    existing_u = paper.get("uncertainty", {})
+    existing_err = existing_u.get("error_estimates", {})
+    phase2_stochastic = existing_err.get("stochastic_variance")
+    phase2_reasoning = existing_u.get("reasoning_confidence")
+
     has_abstract = evidence_flags["has_abstract"]
-    reasoning_conf = 0.85 if has_abstract else 0.5
+
+    # Reasoning confidence: use Phase 2 value if present, else heuristic
+    if phase2_stochastic is not None and phase2_reasoning is not None:
+        reasoning_conf = phase2_reasoning
+    else:
+        reasoning_conf = 0.85 if has_abstract else 0.5
 
     # Pipeline variance
     pipeline_var, domain_agreement, engagement_agreement = compute_pipeline_variance(paper)
 
-    # Composite
-    composite = compute_composite_confidence(evidence_conf, reasoning_conf, pipeline_var)
+    # Composite — use Phase 2 formula when stochastic_variance is available
+    composite = compute_composite_confidence(
+        evidence_conf, reasoning_conf, pipeline_var,
+        stochastic_var=phase2_stochastic
+    )
 
     # Miscalibration risk
     misc_risk = compute_miscalibration_risk(has_abstract, pipeline_var, composite)
 
-    return {
+    # Build provenance
+    provenance = {
+        "engagement_source": "gemini",
+        "domain_source": "gemini",
+        "engagement_agreement": engagement_agreement,
+        "domain_agreement": domain_agreement
+    }
+    # Preserve Phase 2 provenance fields if present
+    existing_prov = existing_u.get("classification_provenance", {})
+    for key in ("phase2_engagement_agreement", "phase2_domain_agreement",
+                "phase2_majority_engagement", "phase2_majority_domain"):
+        if key in existing_prov:
+            provenance[key] = existing_prov[key]
+
+    # Build result, preserving skeptic_review if present
+    result = {
         "reasoning_confidence": reasoning_conf,
         "evidence_confidence": evidence_conf,
         "composite_confidence": composite,
         "evidence_flags": evidence_flags,
-        "classification_provenance": {
-            "engagement_source": "gemini",
-            "domain_source": "gemini",
-            "engagement_agreement": engagement_agreement,
-            "domain_agreement": domain_agreement
-        },
+        "classification_provenance": provenance,
         "error_estimates": {
-            "stochastic_variance": None,
+            "stochastic_variance": phase2_stochastic,
             "pipeline_variance": pipeline_var,
             "miscalibration_risk": misc_risk
         }
     }
+
+    # Preserve skeptic_review from Phase 3 if present
+    if "skeptic_review" in existing_u:
+        result["skeptic_review"] = existing_u["skeptic_review"]
+
+    return result
 
 
 def process_model(model_name, data_dir, dry_run=False):
