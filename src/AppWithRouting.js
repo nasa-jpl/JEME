@@ -29,6 +29,7 @@ import LESDashboard from './views/LES/Dashboard';
 import EDMFDashboard from './views/EDMF/Dashboard';
 import GRACEDashboard from './views/GRACE/Dashboard';
 import SWOTDashboard from './views/SWOT/Dashboard';
+import JEOEDashboard from './views/JEOEDashboard';
 
 // Uncertainty Analysis page
 import GenericUncertaintyPage from './views/GenericUncertaintyPage';
@@ -53,6 +54,8 @@ function AppWithRouting() {
         {/* LES and EDMF - Now with real citation data! */}
         <Route path="/science-model-dashboard/LES" element={<LESDashboard />} />
         <Route path="/science-model-dashboard/EDMF" element={<EDMFDashboard />} />
+        {/* JEOE Dashboard */}
+        <Route path="/science-model-dashboard/JEOE" element={<JEOEDashboard />} />
         {/* Mission dashboards */}
         <Route path="/science-model-dashboard/GRACE" element={<GRACEDashboard />} />
         <Route path="/science-model-dashboard/SWOT" element={<SWOTDashboard />} />
