@@ -40,7 +40,7 @@
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
-      "reasoning_confidence": 0.5,
+      "reasoning_confidence": 0.8,
       "evidence_confidence": 0.425,
       "composite_confidence": 0.416,
       "evidence_flags": {
@@ -55,10 +55,14 @@
         "engagement_source": "gemini",
         "domain_source": "gemini",
         "engagement_agreement": 1.0,
-        "domain_agreement": 1.0
+        "domain_agreement": 1.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 3: Model Adaptation",
+        "phase2_majority_domain": "Hydrology & Water Resources"
       },
       "error_estimates": {
-        "stochastic_variance": null,
+        "stochastic_variance": 0.0,
         "pipeline_variance": 0.0,
         "miscalibration_risk": "medium"
       }
@@ -101,7 +105,7 @@
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
-      "reasoning_confidence": 0.5,
+      "reasoning_confidence": 0.8,
       "evidence_confidence": 0.45,
       "composite_confidence": 0.427,
       "evidence_flags": {
@@ -116,10 +120,14 @@
         "engagement_source": "gemini",
         "domain_source": "gemini",
         "engagement_agreement": 1.0,
-        "domain_agreement": 1.0
+        "domain_agreement": 1.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 3: Model Adaptation",
+        "phase2_majority_domain": "Hydrology & Water Resources"
       },
       "error_estimates": {
-        "stochastic_variance": null,
+        "stochastic_variance": 0.0,
         "pipeline_variance": 0.0,
         "miscalibration_risk": "medium"
       }
@@ -161,7 +169,7 @@
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
-      "reasoning_confidence": 0.85,
+      "reasoning_confidence": 0.933,
       "evidence_confidence": 0.85,
       "composite_confidence": 0.765,
       "evidence_flags": {
@@ -176,10 +184,14 @@
         "engagement_source": "gemini",
         "domain_source": "gemini",
         "engagement_agreement": 1.0,
-        "domain_agreement": 1.0
+        "domain_agreement": 1.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Hydrology & Water Resources"
       },
       "error_estimates": {
-        "stochastic_variance": null,
+        "stochastic_variance": 0.0,
         "pipeline_variance": 0.0,
         "miscalibration_risk": "low"
       }
@@ -222,7 +234,7 @@
     "engagement_level": "Level 2: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
-      "reasoning_confidence": 0.85,
+      "reasoning_confidence": 0.867,
       "evidence_confidence": 1.0,
       "composite_confidence": 0.782,
       "evidence_flags": {
@@ -237,10 +249,14 @@
         "engagement_source": "gemini",
         "domain_source": "gemini",
         "engagement_agreement": 0.0,
-        "domain_agreement": 1.0
+        "domain_agreement": 1.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Hydrology & Water Resources"
       },
       "error_estimates": {
-        "stochastic_variance": null,
+        "stochastic_variance": 0.334,
         "pipeline_variance": 0.5,
         "miscalibration_risk": "low"
       }
@@ -277,7 +293,7 @@
     "engagement_level": "Level 3: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
-      "reasoning_confidence": 0.85,
+      "reasoning_confidence": 0.8,
       "evidence_confidence": 0.975,
       "composite_confidence": 0.821,
       "evidence_flags": {
@@ -292,10 +308,14 @@
         "engagement_source": "gemini",
         "domain_source": "gemini",
         "engagement_agreement": 1.0,
-        "domain_agreement": 1.0
+        "domain_agreement": 1.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Hydrology & Water Resources"
       },
       "error_estimates": {
-        "stochastic_variance": null,
+        "stochastic_variance": 0.167,
         "pipeline_variance": 0.0,
         "miscalibration_risk": "low"
       }

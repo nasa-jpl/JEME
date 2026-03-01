@@ -257,6 +257,73 @@ sequenceDiagram
     UI-->>User: Interactive dashboard
 ```
 
+## Uncertainty Quantification
+
+The dashboard includes a three-phase uncertainty quantification pipeline that measures how confident we are in each citation's automated classification.
+
+### Phase 1: Deterministic Scoring
+
+Every citation entry receives an uncertainty score computed purely from metadata signals — no LLM API calls required.
+
+- **Evidence Confidence** (0-1): Weighted sum of data completeness signals — has abstract (35%), has DOI (15%), has venue (15%), has full authors (10%), and domain keyword match score (25%).
+- **Pipeline Variance** (0-1): Measures disagreement between a keyword-based classifier and the LLM (Gemini) labels. Domain mismatch adds 0.5, engagement level mismatch adds 0.5.
+- **Reasoning Confidence**: Heuristic proxy — 0.85 when an abstract is available, 0.5 without (title-only classification is less reliable).
+- **Composite Confidence**: `0.45 * evidence + 0.45 * reasoning - 0.10 * pipeline_variance`, clamped to [5%, 99%].
+- **Miscalibration Risk**: Flags entries at risk of systematic error (no abstract + high pipeline variance = "high" risk).
+
+### Phase 2: Multi-Temperature LLM Sampling
+
+For each entry, the system calls Gemini three times at different temperatures (0.1, 0.5, 1.0) and asks it to classify the engagement level, research domain, and self-assess its confidence.
+
+- **Stochastic Variance** (0.0-0.67): Fraction of runs that disagree with the majority label. 0.0 means all three runs agree (high reliability), 0.67 means all three gave different answers (low reliability).
+- **Reasoning Confidence**: Average of Gemini's self-assessed confidence across runs, normalized from a 1-5 scale to 0-1.
+- **Updated Composite**: When Phase 2 data is available, the formula shifts to reward agreement: `0.35 * evidence + 0.35 * reasoning + 0.20 * (1 - stochastic_variance) - 0.10 * pipeline_variance`.
+
+### Phase 3: Skeptic Agent
+
+A final adversarial review targets the highest-risk entries — typically 10-20% of the total — where classifications are least certain:
+
+- Entries with high miscalibration risk
+- Entries with stochastic variance above 0.3
+- Entries classified at high engagement (Level 3-4) but with composite confidence below 0.5
+
+For each flagged entry, a skeptic prompt asks Gemini to *challenge* the existing classification and rate its agreement (1-5). If the skeptic strongly disagrees (agreement <= 2/5), an override flag is set, alerting reviewers that the entry's classification may need manual correction.
+
+```mermaid
+graph LR
+    subgraph "Phase 1"
+        A[Metadata Signals] --> B[Evidence Confidence]
+        A --> C[Pipeline Variance]
+        B --> D[Composite Score]
+        C --> D
+    end
+
+    subgraph "Phase 2"
+        E[Gemini x3<br/>t=0.1, 0.5, 1.0] --> F[Stochastic Variance]
+        E --> G[Reasoning Confidence]
+        F --> H[Updated Composite]
+        G --> H
+    end
+
+    subgraph "Phase 3"
+        H --> I{High Risk?}
+        I -->|Yes| J[Skeptic Review]
+        J --> K[Override Flag]
+        I -->|No| L[Final Score]
+        K --> L
+    end
+```
+
+### Uncertainty Dashboard
+
+Each model's uncertainty analysis is available at `/{modelName}/uncertainty`. The page displays:
+- Composite confidence distribution and averages
+- Evidence vs reasoning confidence matrix
+- Confidence breakdown by engagement level and research domain
+- Evidence gaps analysis
+- Stochastic variance distribution (when Phase 2 data is available)
+- Skeptic review summary and override-flagged entries (when Phase 3 data is available)
+
 ## Technical Stack
 
 ### Frontend

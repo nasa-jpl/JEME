@@ -135,7 +135,7 @@ def call_gemini(api_key, prompt, temperature):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": temperature,
-            "maxOutputTokens": 256,
+            "maxOutputTokens": 2048,
             "topP": 0.8,
             "topK": 10,
         },
