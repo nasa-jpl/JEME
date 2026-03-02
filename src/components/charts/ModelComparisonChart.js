@@ -4,7 +4,7 @@
 import React, { useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 
-const ModelComparisonChart = ({ allModelsData = {} }) => {
+const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
   // Calculate comparison data from all models
   const comparisonData = useMemo(() => {
     const modelColors = {
@@ -59,8 +59,8 @@ const ModelComparisonChart = ({ allModelsData = {} }) => {
     <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
       <div className="flex justify-between items-start mb-4">
         <div>
-          <div className="text-base font-semibold text-gray-800">Science Models Impact Comparison</div>
-          <div className="text-sm text-gray-500 mt-1">Citation analysis across Earth system models</div>
+          <div className="text-base font-semibold text-gray-800">{isJEOE ? 'Missions' : 'Science Models'} Impact Comparison</div>
+          <div className="text-sm text-gray-500 mt-1">Citation analysis across {isJEOE ? 'missions' : 'Earth system models'}</div>
         </div>
       </div>
 
@@ -68,7 +68,7 @@ const ModelComparisonChart = ({ allModelsData = {} }) => {
       <div className="max-w-3xl mx-auto">
         <div className="mb-3">
           <div className="text-sm font-semibold text-gray-700">Total Publications</div>
-          <div className="text-sm font-semibold text-gray-700">by Model</div>
+          <div className="text-sm font-semibold text-gray-700">by {isJEOE ? 'Mission' : 'Model'}</div>
           <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
         </div>
         <div className="h-80">

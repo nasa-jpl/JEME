@@ -87,7 +87,7 @@ const JEOEDashboard = () => {
         ) : (
           <>
             {/* Mission Comparison Section */}
-            <ModelComparisonChart allModelsData={allMissionsData} />
+            <ModelComparisonChart allModelsData={allMissionsData} isJEOE />
 
             {/* Citation trends across missions */}
             <MultiModelCitationTrendsChart allModelsData={allMissionsData} isJEOE />
