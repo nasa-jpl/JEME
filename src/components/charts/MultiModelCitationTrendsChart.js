@@ -4,7 +4,7 @@
 import { useMemo } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
 
-const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
+const MultiModelCitationTrendsChart = ({ allModelsData = {}, isJEOE = false }) => {
   // Sort models by total publications (descending)
   const sortedModelEntries = useMemo(() => {
     return Object.entries(allModelsData).sort((a, b) => {
@@ -103,9 +103,9 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {} }) => {
 
   return (
     <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
-      <h2 className="text-xl font-bold text-gray-900 mb-2">Publication Trends Across Models</h2>
+      <h2 className="text-xl font-bold text-gray-900 mb-2">Publication Trends Across {isJEOE ? 'Missions' : 'Models'}</h2>
       <p className="text-sm text-gray-600 mb-4">
-        Cumulative publications over time for all JEME models (Log Scale)
+        Cumulative publications over time for all {isJEOE ? 'JEOE missions' : 'JEME models'} (Log Scale)
       </p>
 
       <div className="h-96">

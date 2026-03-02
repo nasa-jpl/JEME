@@ -90,7 +90,7 @@ const JEOEDashboard = () => {
             <ModelComparisonChart allModelsData={allMissionsData} />
 
             {/* Citation trends across missions */}
-            <MultiModelCitationTrendsChart allModelsData={allMissionsData} />
+            <MultiModelCitationTrendsChart allModelsData={allMissionsData} isJEOE />
           </>
         )}
 
