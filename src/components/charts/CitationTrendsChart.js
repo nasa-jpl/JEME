@@ -26,23 +26,30 @@ const CitationTrendsChart = ({ data }) => {
 
     // Helper function to determine if paper is peer-reviewed
     const isPeerReviewed = (paper) => {
-      // Most papers in academic databases are peer-reviewed
-      // We can identify by journal vs other sources
+      // Check explicit is_peer_reviewed field (simplified format)
+      if (paper.is_peer_reviewed === true) return true;
+      if (paper.is_peer_reviewed === false) return false;
+
+      // Check venue field (simplified format)
+      const venue = paper.venue || '';
+      const venueLower = venue.toLowerCase();
+      if (venueLower.includes('journal') || venueLower.includes('proceedings')) return true;
+
+      // Check Crossref format fields
       let source = '';
       if (paper['container-title'] && Array.isArray(paper['container-title']) && paper['container-title'][0]) {
         source = paper['container-title'][0];
       } else if (paper.source) {
         source = paper.source;
       }
-      
+
       const type = paper.type || '';
       const sourceLower = source ? source.toLowerCase() : '';
-      
-      // Typically journal articles are peer-reviewed
-      return type === 'journal-article' || 
+
+      return type === 'journal-article' ||
              sourceLower.includes('journal') ||
              sourceLower.includes('proceedings') ||
-             paper.publisher; // Has academic publisher
+             !!paper.publisher;
     };
 
     // Helper function to determine if it's popular press
