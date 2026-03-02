@@ -2,7 +2,7 @@
 // Main dashboard view that combines all components
 
 import React, { useState, useEffect } from 'react';
-import { Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers, ArrowRight } from 'lucide-react';
+import { Zap, Wind, Waves, Mountain, Atom, Leaf, CloudLightning, Layers } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 
@@ -137,13 +137,6 @@ const Dashboard = () => {
 
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL's Earth Modeling Enterprise (JEME) Dashboard</h2>
-            <p className="text-gray-600">
-              Comprehensive dashboard of Earth system models for climate, hydrology, oceanography, and atmospheric research
-            </p>
-          </div>
-          
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
             {models.map((model, index) => (
               <Link 
@@ -168,21 +161,6 @@ const Dashboard = () => {
             ))}
           </div>
 
-          {/* Link to JEOE Missions */}
-          <div className="mt-6 pt-6 border-t border-gray-200">
-            <Link
-              to="/science-model-dashboard/JEOE"
-              className="block bg-sky-50 border border-sky-200 rounded-lg p-4 hover:bg-sky-100 transition-colors group"
-            >
-              <div className="flex items-center justify-between">
-                <div>
-                  <h3 className="font-semibold text-sky-900">Looking for NASA Missions?</h3>
-                  <p className="text-sm text-sky-700 mt-1">Visit the JEOE Dashboard for GRACE, SWOT, and other Earth observation missions</p>
-                </div>
-                <ArrowRight size={20} className="text-sky-400 group-hover:text-sky-600 transition-colors" />
-              </div>
-            </Link>
-          </div>
         </div>
 
         {loading ? (

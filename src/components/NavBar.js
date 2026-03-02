@@ -79,7 +79,7 @@ const NavBar = ({ activeItem }) => {
                 to="/science-model-dashboard/JEOE"
                 className={activeItem === 'JEOE Dashboard' ? activeClass : inactiveClass}
               >
-                Dashboard
+                JEOE
               </Link>
 
               {/* Missions dropdown */}
@@ -125,7 +125,7 @@ const NavBar = ({ activeItem }) => {
                 to="/science-model-dashboard"
                 className={activeItem === 'Dashboard' ? activeClass : inactiveClass}
               >
-                Dashboard
+                JEME
               </Link>
 
               {/* Models dropdown */}

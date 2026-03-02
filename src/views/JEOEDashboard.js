@@ -2,7 +2,7 @@
 // JEOE (JPL Earth Observation Enterprise) Dashboard - Missions only
 
 import React, { useState, useEffect } from 'react';
-import { Satellite, ArrowRight } from 'lucide-react';
+import { Satellite } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../components/NavBar';
 import Footer from '../components/Footer';
@@ -53,16 +53,8 @@ const JEOEDashboard = () => {
 
       <main className="max-w-7xl mx-auto px-4 py-6">
 
-        {/* JEOE Header */}
+        {/* JEOE Mission Cards */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">JPL Earth Observation Enterprise (JEOE) Dashboard</h2>
-            <p className="text-gray-600">
-              Citation impact dashboard for NASA's mission-based Earth observation programs, tracking scientific publications and research influence
-            </p>
-          </div>
-
-          {/* Mission Cards */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {missions.map((mission, index) => (
               <Link
@@ -87,20 +79,6 @@ const JEOEDashboard = () => {
             ))}
           </div>
         </div>
-
-        {/* Link to JEME */}
-        <Link
-          to="/science-model-dashboard"
-          className="block bg-blue-50 border border-blue-200 rounded-lg p-4 mb-6 hover:bg-blue-100 transition-colors group"
-        >
-          <div className="flex items-center justify-between">
-            <div>
-              <h3 className="font-semibold text-blue-900">JPL's Earth Modeling Enterprise (JEME)</h3>
-              <p className="text-sm text-blue-700 mt-1">Explore 8 JPL science models for climate, hydrology, oceanography, and atmospheric research</p>
-            </div>
-            <ArrowRight size={20} className="text-blue-400 group-hover:text-blue-600 transition-colors" />
-          </div>
-        </Link>
 
         {loading ? (
           <div className="bg-white rounded-lg p-8 shadow-sm mb-6 text-center">
