@@ -116,7 +116,7 @@ const JEOEDashboard = () => {
           </>
         )}
 
-        <Footer />
+        <Footer isJEOE />
       </main>
     </div>
   );

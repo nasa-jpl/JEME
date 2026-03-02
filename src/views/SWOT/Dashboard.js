@@ -214,7 +214,7 @@ const SWOTDashboard = () => {
           <JournalDistributionCard data={swotData} />
         </div>
 
-        <Footer />
+        <Footer isJEOE />
       </main>
     </div>
   );

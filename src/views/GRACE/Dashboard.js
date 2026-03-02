@@ -214,7 +214,7 @@ const GRACEDashboard = () => {
           <JournalDistributionCard data={graceData} />
         </div>
 
-        <Footer />
+        <Footer isJEOE />
       </main>
     </div>
   );
