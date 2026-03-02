@@ -186,12 +186,6 @@ const CitationTrendsChart = () => {
               {`${entry.name}: ${entry.value.toLocaleString()}`}
             </p>
           ))}
-          {payload[0] && payload[0].payload && (
-            <>
-              <p className="text-sm text-gray-600">{`Peer-Reviewed: ${payload[0].payload.peerReviewed}`}</p>
-              <p className="text-sm text-gray-600">{`Popular Press: ${payload[0].payload.popularPress}`}</p>
-            </>
-          )}
         </div>
       );
     }
