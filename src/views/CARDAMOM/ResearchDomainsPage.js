@@ -125,15 +125,16 @@ const CARDAMOMResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Carbon Cycle": "bg-green-100 text-green-800",
-      "Ecosystem Modeling": "bg-emerald-100 text-emerald-800",
-      "Climate Science": "bg-cyan-100 text-cyan-800",
-      "Biogeochemistry": "bg-teal-100 text-teal-800",
-      "Forest Dynamics": "bg-green-100 text-green-800",
-      "Remote Sensing": "bg-indigo-100 text-indigo-800",
-      "Data Assimilation": "bg-blue-100 text-blue-800",
-      "Environmental Monitoring": "bg-emerald-100 text-emerald-800",
-      "Carbon Sequestration": "bg-green-100 text-green-800"
+      "Terrestrial Carbon Cycle": "bg-green-100 text-green-800",
+      "Vegetation & Forest Dynamics": "bg-emerald-100 text-emerald-800",
+      "Soil & Peatland Carbon": "bg-amber-100 text-amber-800",
+      "Fire & Disturbance Ecology": "bg-red-100 text-red-800",
+      "Land Use & Land Cover Change": "bg-lime-100 text-lime-800",
+      "Carbon Data Assimilation": "bg-blue-100 text-blue-800",
+      "Arctic & Permafrost Carbon": "bg-cyan-100 text-cyan-800",
+      "Remote Sensing of Ecosystems": "bg-indigo-100 text-indigo-800",
+      "Climate Projections & Feedbacks": "bg-rose-100 text-rose-800",
+      "General Science": "bg-gray-100 text-gray-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

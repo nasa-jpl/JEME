@@ -122,15 +122,16 @@ const ResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Water Resources": "bg-blue-100 text-blue-800",
-      "Flood Prediction": "bg-red-100 text-red-800",
-      "River Modeling": "bg-green-100 text-green-800",
-      "Global River Modeling": "bg-teal-100 text-teal-800",
-      "Flow Analysis": "bg-purple-100 text-purple-800",
-      "Streamflow": "bg-indigo-100 text-indigo-800",
-      "Hydrological Modeling": "bg-cyan-100 text-cyan-800",
-      "Hydrology": "bg-emerald-100 text-emerald-800",
-      "Hydrologic Modeling": "bg-sky-100 text-sky-800"
+      "River Routing & Discharge": "bg-blue-100 text-blue-800",
+      "Flood Modeling & Prediction": "bg-red-100 text-red-800",
+      "Watershed & Catchment Hydrology": "bg-green-100 text-green-800",
+      "Water Resource Management": "bg-teal-100 text-teal-800",
+      "Groundwater & Aquifer": "bg-purple-100 text-purple-800",
+      "Remote Sensing Applications": "bg-indigo-100 text-indigo-800",
+      "Machine Learning for Hydrology": "bg-violet-100 text-violet-800",
+      "Climate & Water Cycle": "bg-cyan-100 text-cyan-800",
+      "General Hydrologic Science": "bg-sky-100 text-sky-800",
+      "General Science": "bg-gray-100 text-gray-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

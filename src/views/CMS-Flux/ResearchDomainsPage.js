@@ -125,15 +125,16 @@ const CMSFluxResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Environmental Science/Climate Change": "bg-amber-100 text-amber-800",
-      "Oceanography/Climate Science": "bg-blue-100 text-blue-800",
-      "Atmospheric Science/Climate Change": "bg-cyan-100 text-cyan-800",
-      "Environmental Science/Oceanography/Climate Change": "bg-teal-100 text-teal-800",
-      "Oceanography/Marine Biogeochemistry": "bg-green-100 text-green-800",
-      "Environmental Science/Climatology": "bg-purple-100 text-purple-800",
-      "Carbon Cycle": "bg-emerald-100 text-emerald-800",
-      "Climate Modeling": "bg-indigo-100 text-indigo-800",
-      "Carbon Flux": "bg-orange-100 text-orange-800"
+      "CO2 Flux & Carbon Budget": "bg-green-100 text-green-800",
+      "Atmospheric CO2 Inversions": "bg-sky-100 text-sky-800",
+      "Ocean Carbon Uptake": "bg-blue-100 text-blue-800",
+      "Fossil Fuel & Urban Emissions": "bg-orange-100 text-orange-800",
+      "Land-Atmosphere Exchange": "bg-emerald-100 text-emerald-800",
+      "Methane & Trace Gases": "bg-amber-100 text-amber-800",
+      "Biomass & Fire Emissions": "bg-red-100 text-red-800",
+      "Satellite Carbon Observations": "bg-indigo-100 text-indigo-800",
+      "Carbon Cycle Modeling": "bg-teal-100 text-teal-800",
+      "General Science": "bg-gray-100 text-gray-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

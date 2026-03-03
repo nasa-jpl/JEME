@@ -125,15 +125,15 @@ const MOMOCHEMResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Ocean Biogeochemistry": "bg-purple-100 text-purple-800",
-      "Marine Ecosystems": "bg-violet-100 text-violet-800",
-      "Climate Science": "bg-cyan-100 text-cyan-800",
-      "Ocean Modeling": "bg-blue-100 text-blue-800",
-      "Biogeochemical Cycles": "bg-purple-100 text-purple-800",
-      "Marine Chemistry": "bg-indigo-100 text-indigo-800",
-      "Ecosystem Dynamics": "bg-violet-100 text-violet-800",
-      "Environmental Science": "bg-emerald-100 text-emerald-800",
-      "Marine Biology": "bg-purple-100 text-purple-800"
+      "Ozone & Stratospheric Chemistry": "bg-blue-100 text-blue-800",
+      "Aerosol Processes & Effects": "bg-orange-100 text-orange-800",
+      "Air Quality & Health": "bg-red-100 text-red-800",
+      "Methane & Trace Gases": "bg-amber-100 text-amber-800",
+      "Chemical Transport Modeling": "bg-purple-100 text-purple-800",
+      "Wildfire & Biomass Burning": "bg-rose-100 text-rose-800",
+      "Satellite Atmospheric Observations": "bg-indigo-100 text-indigo-800",
+      "Climate-Chemistry Interactions": "bg-cyan-100 text-cyan-800",
+      "General Science": "bg-gray-100 text-gray-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

@@ -125,15 +125,16 @@ const ISSMResearchDomainsPage = () => {
 
   const getDomainColor = (domain) => {
     const colors = {
-      "Glaciology": "bg-cyan-100 text-cyan-800",
-      "Ice Sheet Modeling": "bg-blue-100 text-blue-800",
-      "Climate Science": "bg-cyan-100 text-cyan-800",
-      "Polar Science": "bg-teal-100 text-teal-800",
-      "Geophysics": "bg-green-100 text-green-800",
-      "Sea Level Research": "bg-indigo-100 text-indigo-800",
-      "Cryosphere": "bg-cyan-100 text-cyan-800",
-      "Environmental Science": "bg-emerald-100 text-emerald-800",
-      "Arctic Research": "bg-orange-100 text-orange-800"
+      "Ice Sheet Dynamics & Flow": "bg-blue-100 text-blue-800",
+      "Ice Shelf & Calving": "bg-cyan-100 text-cyan-800",
+      "Glacier Retreat & Mass Balance": "bg-sky-100 text-sky-800",
+      "Sea Level Contribution": "bg-indigo-100 text-indigo-800",
+      "Subglacial & Basal Processes": "bg-purple-100 text-purple-800",
+      "Polar Ocean & Ice-Ocean Interaction": "bg-teal-100 text-teal-800",
+      "Snow & Firn Processes": "bg-emerald-100 text-emerald-800",
+      "Remote Sensing of Ice": "bg-violet-100 text-violet-800",
+      "Ice Sheet Modeling & Methods": "bg-amber-100 text-amber-800",
+      "General Science": "bg-gray-100 text-gray-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

@@ -49,17 +49,7 @@ PROMPT_TEMPLATE = """You are a scientific paper classifier. Analyze the followin
    - "Level 1: Simple Citation" — mentions or references the model briefly
 
 2. **research_domain**: The primary research domain. Choose one:
-   - Hydrology & Water Resources
-   - Ocean & Marine Science
-   - Climate Science
-   - Atmospheric Science
-   - Cryosphere & Glaciology
-   - Remote Sensing & Satellite
-   - Ecosystem & Biogeochemistry
-   - Machine Learning & Data Science
-   - Modeling & Simulation
-   - Geophysics & Geodesy
-   - General Science
+{domain_list}
 
 3. **confidence**: Your self-assessed confidence in these classifications (1-5 scale):
    - 5 = Very confident (clear signals in title/abstract)
@@ -231,15 +221,21 @@ def majority_label(responses, field):
 # Processing
 # ---------------------------------------------------------------------------
 
-def process_entry(entry, api_key, dry_run=False):
+def process_entry(entry, api_key, dry_run=False, model_name=None):
     """Run multi-temperature sampling on a single entry. Returns Phase 2 data."""
     title, abstract, venue, citing = extract_text_fields(entry)
+
+    # Build model-specific domain list for the prompt
+    from classify_papers import get_domain_list
+    domains = get_domain_list(model_name)
+    domain_list_str = "\n".join(f"   - {d}" for d in domains)
 
     prompt = PROMPT_TEMPLATE.format(
         title=title or "(no title)",
         abstract=abstract or "(no abstract available)",
         venue=venue or "(unknown venue)",
         citing_team_paper=citing or "(unknown)",
+        domain_list=domain_list_str,
     )
 
     if dry_run:
@@ -302,7 +298,7 @@ def process_model(model_name, data_dir, api_key, cache, sample=None, dry_run=Fal
             skipped += 1
             continue
 
-        result = process_entry(entry, api_key, dry_run=dry_run)
+        result = process_entry(entry, api_key, dry_run=dry_run, model_name=model_name)
         if result is None:
             print(f"    [{i+1}/{len(entries_to_process)}] FAILED — no valid responses")
             continue
