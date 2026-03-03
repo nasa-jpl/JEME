@@ -1,279 +1,187 @@
-# JPL's Earth Modeling Enterprise (JEME) Dashboard - How It Works 
+# JPL's Earth Modeling Enterprise (JEME) Dashboard - How It Works
 
 ## Summary
 
-The JPL's Earth Modeling Enterprise (JEME) Dashboard is a multi-component system designed for analyzing and visualizing scientific citation data across six NASA models: RAPID, CARDAMOM, CMS-Flux, ECCO, ISSM, and MOMO-CHEM. The system comprises three integrated components: a React-based web dashboard for visualization, an LLM-powered citation analyzer using Ollama, and a machine learning publication classifier using deep learning techniques.
+The JPL's Earth Modeling Enterprise (JEME) Dashboard is a multi-component system for analyzing and visualizing scientific citation data across JPL Earth science models and NASA missions. It comprises two integrated sites:
+
+- **JEME** — 8 science models: RAPID, CARDAMOM, CMS-Flux, ECCO, ISSM, MOMO-CHEM, LES, EDMF
+- **JEOE** (JPL Earth Observation Enterprise) — NASA missions: GRACE, SWOT
+
+The system includes a React-based web dashboard for visualization, a multi-agent data verification pipeline, a keyword-based domain classifier with model-specific taxonomies, and a three-phase uncertainty quantification pipeline using Gemini LLM.
 
 ## System Architecture Overview
 
 ```mermaid
 graph TB
     subgraph "Data Sources"
-        A[Raw Citation Data<br/>JSON Files] 
+        A[Semantic Scholar API]
         B[CrossRef API]
-        C[Publication Databases]
+        C[Seed/Team Papers]
     end
-    
-    subgraph "Processing Pipeline"
-        D[Publication Classifier<br/>Jupyter/Python]
-        E[LLM Paper Analytics<br/>Python/Ollama]
-        F[Data Processing<br/>dataUtils.js]
+
+    subgraph "Data Verification Pipeline"
+        D[Team Paper Categorizer]
+        E[Crossref Agent]
+        F[Semantic Scholar Agent]
+        G[Keyword Classifier]
+        H[Deduplication Agent]
     end
-    
+
+    subgraph "Classification & Uncertainty"
+        I[Domain Classifier<br/>Model-Specific Taxonomies]
+        J[Phase 1: Deterministic Scoring]
+        K[Phase 2: Multi-Temp LLM Sampling]
+        L[Phase 3: Skeptic Agent]
+    end
+
     subgraph "Storage"
-        G[Model JSON Files<br/>*_analyzed.json]
-        H[Visualization Assets<br/>PNG Files]
+        M[Model JSON Files<br/>public/data/*_analyzed.json]
     end
-    
+
     subgraph "Frontend Application"
-        I[React Dashboard<br/>science-model-dashboard]
-        J[Model-Specific Views]
-        K[Generic Components]
-        L[Chart Components<br/>Recharts]
+        N[React Dashboard]
+        O[JEME Site — 8 Models]
+        P[JEOE Site — Missions]
+        Q[Chart Components<br/>Recharts]
     end
-    
+
+    C --> A
     A --> D
-    B --> D
-    C --> D
+    B --> E
+    A --> F
     D --> G
-    A --> E
     E --> G
-    G --> F
-    F --> I
+    F --> G
+    G --> H
+    H --> M
+    M --> I
     I --> J
-    I --> K
-    J --> L
+    J --> K
     K --> L
+    L --> M
+    M --> N
+    N --> O
+    N --> P
+    O --> Q
+    P --> Q
 ```
 
-## Component Deep Dive
+## Data Collection
 
-### 1. JPL's Earth Modeling Enterprise (JEME) Dashboard (React Application)
+Citation data is collected from **Semantic Scholar** using seed (team) papers for each model. A seed paper is a foundational publication that defines, describes, or formally introduces a modeling system. The Semantic Scholar API returns all papers that cite each seed paper, forming the citation corpus.
 
-#### Architecture Pattern
-The dashboard implements a **hybrid architecture** combining generic and model-specific components:
+### Seed Papers
+
+Seed papers (also referred to as team papers) typically include:
+1. **Model Development & Description** — Papers presenting the design, formulation, or technical basis of the system.
+2. **Core Applications** — Studies that demonstrate the model's capability and serve as reference examples.
+3. **Reference Works** — Papers that the broader community consistently cites when applying, validating, or extending the system.
+
+These seed papers form the core bibliography for each model and are prominently featured in the dashboard.
+
+## Multi-Agent Data Verification
+
+A multi-agent pipeline cross-validates citation entries to ensure data quality:
+
+1. **Team Paper Categorizer** — Classifies each team paper by relevance tier (Core > Infrastructure > Data/Methods > Domain Science > Tangential/Unrelated) using hierarchical keyword matching against the team paper title.
+2. **Crossref Agent** — Resolves DOIs to validate existence and retrieve journal/venue metadata.
+3. **Semantic Scholar Agent** — Batch API for title recovery (broken metadata) and venue enrichment for DOI-less entries.
+4. **Keyword Classifier** — Scores citing paper relevance via domain-specific keyword matching on title + abstract.
+5. **Deduplication Agent** — DOI-first, title-fallback duplicate detection.
+
+### Verification Outcomes
+- **ECCO**: Removed ~3,900 entries (off-topic geodesy, island biogeography, PFAS chemistry); enriched 7,600+ venue fields.
+- **ISSM**: Repaired 1,904 broken team paper titles (42 "Untitled"/truncated IDs resolved via Semantic Scholar).
+- **All other models**: Verified clean (91-96% keyword relevance match).
+
+### Data Cleaning
+
+A supplementary cleaning script (`scripts/clean_citation_data.js`) removes spam and metadata noise from citation JSON files. Three filter categories:
+1. "Review of:" spam entries (auto-generated nano-electronics papers)
+2. Placeholder/corrupted entries ("Insight Review Articles", "Digital Commons", etc.)
+3. Supplementary material/metadata (interactive comments, printer-friendly versions)
+
+## Research Domain Classification
+
+### Model-Specific Taxonomies
+
+Each model has a tailored set of 7-11 research domain categories with domain-specific keyword dictionaries, replacing the original shared 11-category generic taxonomy. This produces far more meaningful classification — for example, ECCO papers are classified into "Ocean Circulation & Transport", "Sea Level Change & Variability", and "Mesoscale & Submesoscale Dynamics" rather than a single "Ocean & Marine Science" bucket.
 
 ```mermaid
 graph LR
-    subgraph "Routing Layer"
-        A[AppWithRouting.js]
+    subgraph "Input"
+        A[Paper Title + Abstract + Venue]
     end
-    
-    subgraph "Configuration"
-        B[modelConfig.js]
+
+    subgraph "Model-Specific Keywords"
+        B[RAPID: 9 domains<br/>River Routing, Flood Modeling, ...]
+        C[ECCO: 11 domains<br/>Ocean Circulation, Sea Level, ...]
+        D[ISSM: 10 domains<br/>Ice Sheet Dynamics, Ice Shelf, ...]
+        E[... 7 more models]
     end
-    
-    subgraph "Views"
-        C[Generic Views<br/>GenericDashboard.js]
-        D[Model-Specific Views<br/>RAPID/Dashboard.js]
+
+    subgraph "Output"
+        F[research_domain field]
     end
-    
-    subgraph "Components"
-        E[Chart Components]
-        F[UI Components]
-    end
-    
-    subgraph "Utilities"
-        G[dataUtils.js]
-        H[chartUtils.js]
-    end
-    
+
     A --> B
     A --> C
     A --> D
-    C --> E
-    D --> E
+    A --> E
+    B --> F
     C --> F
     D --> F
-    E --> G
-    E --> H
+    E --> F
 ```
 
-#### Key Features
-- **Multi-Model Support**: Centralized configuration system in `modelConfig.js`
-- **Dynamic Routing**: URL-based navigation with model-specific and generic routes
-- **Data Processing Pipeline**: Standardized data extraction and transformation
-- **Responsive Design**: Tailwind CSS with mobile-first approach
-- **Interactive Visualizations**: Recharts-based charts with dynamic updates
+#### Model Domain Taxonomies
 
-#### Model Configuration System
-Each model is configured with:
-- Display name and description
-- Data path to JSON file
-- Color theme
-- Research domain
-- GitHub and website links
+**RAPID** (river routing): River Routing & Discharge, Flood Modeling & Prediction, Watershed & Catchment Hydrology, Water Resource Management, Groundwater & Aquifer, Remote Sensing Applications, Machine Learning for Hydrology, Climate & Water Cycle, General Hydrologic Science
 
-#### Routing Architecture
-```
-/science-model-dashboard                     → Main dashboard
-/science-model-dashboard/{modelName}         → Model dashboard
-/science-model-dashboard/{modelName}/citations → Citations page
-/science-model-dashboard/{modelName}/geographic-impact → Geographic analysis
-/science-model-dashboard/{modelName}/research-domains → Domain analysis
-```
+**CARDAMOM** (carbon data-model): Terrestrial Carbon Cycle, Vegetation & Forest Dynamics, Soil & Peatland Carbon, Fire & Disturbance Ecology, Land Use & Land Cover Change, Carbon Data Assimilation, Arctic & Permafrost Carbon, Remote Sensing of Ecosystems, Climate Projections & Feedbacks, General Science
 
-### 2. LLM Paper Analytics
+**CMS-Flux** (carbon monitoring): CO2 Flux & Carbon Budget, Atmospheric CO2 Inversions, Ocean Carbon Uptake, Fossil Fuel & Urban Emissions, Land-Atmosphere Exchange, Methane & Trace Gases, Biomass & Fire Emissions, Satellite Carbon Observations, Carbon Cycle Modeling, General Science
 
-#### System Architecture
+**ECCO** (ocean circulation): Ocean Circulation & Transport, Sea Level Change & Variability, Mesoscale & Submesoscale Dynamics, Ocean Heat & Energy Budget, Arctic & Polar Ocean, Coastal & Regional Ocean, Marine Biogeochemistry, Ocean-Ice Interaction, Satellite Oceanography, Ocean Modeling & Data Assimilation, General Science
 
-```mermaid
-classDiagram
-    class CitationAnalyzer {
-        -config: Dict
-        +__init__(config_file)
-        +build_prompt(title, abstract, reference_method)
-        +analyze_with_ollama(prompt)
-        +analyze_papers(papers, reference_method)
-        -_extract_json_response(output)
-        -_default_response()
-    }
-    
-    class OllamaService {
-        <<interface>>
-        +run(model, prompt)
-    }
-    
-    class Configuration {
-        +model_name: str
-        +timeout: int
-        +sleep_between_requests: int
-        +analysis_categories: Dict
-    }
-    
-    CitationAnalyzer --> OllamaService : uses
-    CitationAnalyzer --> Configuration : contains
-```
+**EDMF** (boundary layer): Boundary Layer Turbulence, Convection & Cloud Processes, Weather Prediction & NWP, Air Quality & Pollution, Aerosol & Radiation, Tropical Cyclones & Storms, Parameterization Development, General Atmospheric Science
 
-#### Key Features
-- **Flexible Configuration**: Customizable analysis categories and engagement levels
-- **Multiple LLM Support**: Works with any Ollama-compatible model
-- **Robust Error Handling**: Graceful fallbacks for failed analyses
-- **Batch Processing**: Sequential processing with rate limiting
-- **Paper Classification**: 
-    - Engagement levels (1-4)
-    - Research domains
-    - Geographic regions
-    - Country identification
+**ISSM** (ice sheet model): Ice Sheet Dynamics & Flow, Ice Shelf & Calving, Glacier Retreat & Mass Balance, Sea Level Contribution, Subglacial & Basal Processes, Polar Ocean & Ice-Ocean Interaction, Snow & Firn Processes, Remote Sensing of Ice, Ice Sheet Modeling & Methods, General Science
 
-#### Seed Papers Definition
-**Seed papers** (also referred to as team papers) are the foundational publications that define, describe, or formally introduce a given modeling system. They typically include:
-1. **Model Development & Description** – Papers presenting the design, formulation, or technical basis of the system.
-2. **Core Applications** – Studies that demonstrate the model's capability and serve as reference examples.
-3. **Reference Works** – Papers that the broader community consistently cites when applying, validating, or extending the system.
+**LES** (large eddy simulation): Cloud & Stratocumulus Simulation, Boundary Layer Turbulence, Methane Detection & Plumes, Fire & Smoke Modeling, Atmospheric Chemistry LES, Wind & Urban Applications, Remote Sensing & AI Methods, General Science
 
-These seed papers form the core bibliography for each model and are prominently featured in the dashboard as they represent the essential works that established each modeling framework.
+**MOMO-CHEM** (atmospheric chemistry): Ozone & Stratospheric Chemistry, Aerosol Processes & Effects, Air Quality & Health, Methane & Trace Gases, Chemical Transport Modeling, Wildfire & Biomass Burning, Satellite Atmospheric Observations, Climate-Chemistry Interactions, General Science
 
-#### Engagement Level Classification
-- **Level 1**: Acknowledgement Citation
-   - The work is mentioned only as background or context (e.g., in the introduction or related work) without using its data, methods, or results.
-   - Example: "We build on prior work in X [Author, Year]."
-- **Level 2**: Data/Method Usage
-   - The work's data, tools, or methods are applied as-is without modification. The citing paper relies on the resource to support its own results.
-   - Example: Using a dataset or off-the-shelf model from the cited work.
-- **Level 3**: Model/Method Adaptation
-   - The work's approach, data, or model is adapted, modified, or improved for new purposes. The citing paper adds innovation while leveraging the foundation.
-   - Example: Altering an algorithm for a new domain, fine-tuning a model, or combining methods from multiple sources.
-- **Level 4**: Foundational Method
-   - The cited work provides a conceptual or methodological foundation that is central to the citing research. Without it, the work would not exist in its current form.
-   - Example: A theory, framework, or algorithm that becomes the main driver of the new research.
+**GRACE** (gravity mission): Terrestrial Water Storage, Groundwater Depletion, Ice Mass Balance, Ocean Mass & Sea Level, Gravity Field & Geodesy, Drought & Flood Detection, River Basin Hydrology, GRACE Instrument & Methods, General Science
 
-### 3. Publication Classifier
+**SWOT** (surface water/ocean topography): River & Lake Monitoring, Flood Mapping & Detection, Ocean Surface Topography, Coastal & Estuarine Dynamics, Altimetry Methods & Calibration, Reservoir & Water Management, Bathymetry & Seafloor, General Science
 
-#### Machine Learning Architecture
+### Engagement Level Classification
 
-```mermaid
-graph TD
-    subgraph "Input Processing"
-        A[Publication Data] --> B[Text Preprocessing]
-        B --> C[Feature Extraction]
-    end
-    
-    subgraph "Classification Models"
-        C --> D[Deep Learning Classifier<br/>Research Areas]
-        C --> E[Sentence Transformers<br/>Semantic Matching]
-        C --> F[Fuzzy Matching<br/>Keyword Analysis]
-    end
-    
-    subgraph "Ensemble & Validation"
-        D --> G[Confidence Scoring]
-        E --> G
-        F --> G
-        G --> H[Context Validation]
-        H --> I[Model Assignment]
-    end
-    
-    subgraph "Output"
-        I --> J[Model Classification<br/>with Confidence Score]
-        I --> K[Performance Metrics]
-        I --> L[Visualizations]
-    end
-```
+Each citation is also classified by how deeply it engages with the cited model:
 
-#### Key Features
-- **Multi-Model Classification**: Assigns publications to appropriate NASA models
-- **Deep Learning Models**: For research area and keyword classification
-- **Semantic Understanding**: Sentence transformers for context matching
-- **Fuzzy Matching**: Flexible keyword matching with context validation
-- **Performance Analysis**: Comprehensive metrics including F1, MCC, calibration
-- **Visualization Suite**: 16+ different metric visualizations
-
-#### Supported Models
-- **ECCO**: Ocean circulation and climate
-- **RAPID**: River discharge computation
-- **ISSM**: Ice sheet modeling
-- **CMS-Flux**: Carbon monitoring
-- **CARDAMOM**: Carbon cycle framework
-- **MOMO-CHEM**: Atmospheric chemistry
-
-## Data Flow Pipeline
-
-```mermaid
-sequenceDiagram
-    participant Raw as Raw Citations
-    participant Class as Publication Classifier
-    participant LLM as LLM Analytics
-    participant Data as Data Processing
-    participant UI as React Dashboard
-    participant User as End User
-    
-    Raw->>Class: Classify publications
-    Class->>Class: Apply ML models
-    Class-->>Raw: Model assignments
-    
-    Raw->>LLM: Analyze citations
-    LLM->>LLM: Generate prompts
-    LLM->>LLM: Call Ollama API
-    LLM-->>Raw: Enriched data
-    
-    Raw->>Data: Process JSON files
-    Data->>Data: Extract publications
-    Data->>Data: Calculate metrics
-    Data->>Data: Process geography
-    Data-->>UI: Standardized data
-    
-    UI->>UI: Route to views
-    UI->>UI: Render charts
-    UI-->>User: Interactive dashboard
-```
+- **Level 1: Acknowledgement Citation** — The work is mentioned only as background or context without using its data, methods, or results.
+- **Level 2: Data/Method Usage** — The work's data, tools, or methods are applied as-is without modification.
+- **Level 3: Model/Method Adaptation** — The work's approach is adapted, modified, or improved for new purposes.
+- **Level 4: Foundational Method** — The cited work provides a conceptual or methodological foundation central to the citing research.
 
 ## Uncertainty Quantification
 
-The dashboard includes a three-phase uncertainty quantification pipeline that measures how confident we are in each citation's automated classification.
+The dashboard includes a three-phase uncertainty quantification pipeline that measures confidence in each citation's automated classification.
 
 ### Phase 1: Deterministic Scoring
 
 Every citation entry receives an uncertainty score computed purely from metadata signals — no LLM API calls required.
 
 - **Evidence Confidence** (0-1): Weighted sum of data completeness signals — has abstract (35%), has DOI (15%), has venue (15%), has full authors (10%), and domain keyword match score (25%).
-- **Pipeline Variance** (0-1): Measures disagreement between a keyword-based classifier and the LLM (Gemini) labels. Domain mismatch adds 0.5, engagement level mismatch adds 0.5.
+- **Pipeline Variance** (0-1): Measures disagreement between the keyword-based classifier and LLM (Gemini) labels. Domain mismatch adds 0.5, engagement level mismatch adds 0.5.
 - **Reasoning Confidence**: Heuristic proxy — 0.85 when an abstract is available, 0.5 without (title-only classification is less reliable).
 - **Composite Confidence**: `0.45 * evidence + 0.45 * reasoning - 0.10 * pipeline_variance`, clamped to [5%, 99%].
 - **Miscalibration Risk**: Flags entries at risk of systematic error (no abstract + high pipeline variance = "high" risk).
 
 ### Phase 2: Multi-Temperature LLM Sampling
 
-For each entry, the system calls Gemini three times at different temperatures (0.1, 0.5, 1.0) and asks it to classify the engagement level, research domain, and self-assess its confidence.
+For each entry, the system calls Gemini three times at different temperatures (0.1, 0.5, 1.0) and asks it to classify the engagement level, research domain (using the model-specific taxonomy), and self-assess its confidence.
 
 - **Stochastic Variance** (0.0-0.67): Fraction of runs that disagree with the majority label. 0.0 means all three runs agree (high reliability), 0.67 means all three gave different answers (low reliability).
 - **Reasoning Confidence**: Average of Gemini's self-assessed confidence across runs, normalized from a 1-5 scale to 0-1.
@@ -324,189 +232,118 @@ Each model's uncertainty analysis is available at `/{modelName}/uncertainty`. Th
 - Stochastic variance distribution (when Phase 2 data is available)
 - Skeptic review summary and override-flagged entries (when Phase 3 data is available)
 
-## Technical Stack
+## Network Analysis
 
-### Frontend
-- **Framework**: React 18.x
-- **Routing**: React Router v6
-- **Styling**: Tailwind CSS
-- **Charts**: Recharts
-- **Icons**: Lucide React
-- **Build**: Create React App
-- **Deployment**: GitHub Pages
+The main dashboard includes a cross-model connectivity analysis that identifies relationships between models through shared citations:
 
-### Backend Processing
-- **Language**: Python 3.7+
-- **LLM Integration**: Ollama
-- **ML Libraries**: PyTorch, Transformers, scikit-learn
-- **NLP**: spaCy, SentenceTransformers
-- **Data Processing**: pandas, numpy
-- **Fuzzy Matching**: RapidFuzz
+- **Bridge Papers**: Publications cited by multiple models, revealing cross-disciplinary connections.
+- **Connection Matrix**: Pairwise connectivity between all models based on shared papers.
+- **Cross-Model Authors**: Researchers who contribute to multiple model communities.
+- **Domain Overlap**: Shared research domains across models.
 
-### Data Storage
-- **Format**: JSON files
-- **Structure**: Standardized citation objects
-- **Naming**: `{MODEL_NAME}_analyzed.json`
+## Dashboard Architecture
 
-## Key Design Patterns
+### JEME/JEOE Dual-Site Design
 
-### 1. Configuration-Driven Development
-- Centralized model configuration
-- Flexible analysis categories
-- Dynamic route generation
+The dashboard operates as two context-aware sites with shared infrastructure:
 
-### 2. Component Composition
-- Generic base components
-- Model-specific overrides
-- Shared chart components
+- **JEME** (`/science-model-dashboard/`) — 8 science models with model-specific dashboards, citations pages, geographic impact, research domains, and uncertainty analysis.
+- **JEOE** (`/science-model-dashboard/JEOE`) — NASA missions (GRACE, SWOT) with mission-specific dashboards and the same analytics pages.
 
-### 3. Data Standardization
-- Common extraction functions
-- Unified data structure
-- Consistent field naming
+The NavBar, logo, title, subtitle, favicon, and browser tab title all swap dynamically based on context.
 
-### 4. Error Resilience
-- Graceful degradation
-- Default fallbacks
-- Comprehensive error handling
-
-## System Integration Points
+### Component Architecture
 
 ```mermaid
 graph LR
-    subgraph "External APIs"
-        A[CrossRef API]
-        B[Ollama API]
+    subgraph "Routing Layer"
+        A[AppWithRouting.js]
     end
-    
-    subgraph "Data Processing"
-        C[Citation Analyzer]
-        D[Publication Classifier]
+
+    subgraph "Configuration"
+        B[modelConfig.js]
     end
-    
-    subgraph "Data Layer"
-        E[JSON Files]
-        F[Model Configs]
+
+    subgraph "Views"
+        C[Generic Views<br/>GenericDashboard.js<br/>GenericCitationsPage.js<br/>GenericResearchDomainsPage.js<br/>GenericUncertaintyPage.js]
+        D[Model-Specific Views<br/>RAPID/Dashboard.js<br/>ECCO/Dashboard.js<br/>etc.]
     end
-    
-    subgraph "Presentation"
-        G[React Dashboard]
-        H[Chart Components]
+
+    subgraph "Shared Components"
+        E[Chart Components<br/>Recharts]
+        F[Network Analysis<br/>NetworkGraph, ConnectionMatrix]
+        G[NavBar, DataLoader]
     end
-    
+
+    A --> B
+    A --> C
     A --> D
-    B --> C
     C --> E
     D --> E
-    E --> G
-    F --> G
-    G --> H
+    C --> G
+    D --> G
+    C --> F
 ```
 
-## Performance Characteristics
+### Routing
 
-### Dashboard Performance
-- **Initial Load**: ~2-3 seconds
-- **Route Changes**: <500ms
-- **Chart Updates**: Real-time
-- **Data Processing**: Client-side, optimized
-
-### LLM Analytics Performance
-- **Per Paper**: 1-5 minutes (model dependent)
-- **Batch Size**: Sequential processing
-- **Timeout**: Configurable (default 600s)
-- **Rate Limiting**: 1 second between requests
-
-### Classifier Performance
-- **Accuracy**: Model-specific F1 scores (0.xx-0.yy)
-- **Processing Speed**: ~100 papers/minute
-- **Memory Usage**: <2GB for full pipeline
-
-## Deployment Architecture
-
-```mermaid
-graph TD
-    subgraph "Development"
-        A[Local Development<br/>npm start]
-    end
-    
-    subgraph "Build Process"
-        B[npm run build]
-        C[Static Assets]
-    end
-    
-    subgraph "Deployment"
-        D[GitHub Pages<br/>npm run deploy]
-    end
-    
-    subgraph "Analytics Pipeline"
-        E[Ollama Server<br/>Local/Remote]
-        F[Python Scripts<br/>Local Execution]
-    end
-    
-    A --> B
-    B --> C
-    C --> D
-    E --> F
-    F --> C
+```
+/science-model-dashboard                          → JEME main dashboard (8 models)
+/science-model-dashboard/JEOE                     → JEOE main dashboard (missions)
+/science-model-dashboard/{modelName}              → Model/mission dashboard
+/science-model-dashboard/{modelName}/citations    → Citations page
+/science-model-dashboard/{modelName}/geographic-impact → Geographic analysis
+/science-model-dashboard/{modelName}/research-domains  → Research domains
+/science-model-dashboard/{modelName}/uncertainty  → Uncertainty analysis
+/science-model-dashboard/how-it-works             → This page
 ```
 
-## Security Considerations
+### Data Flow
 
-1. **Data Privacy**: All processing happens locally
-2. **API Security**: No sensitive data in client code
-3. **Input Validation**: Sanitized user inputs
-4. **Error Messages**: No sensitive information exposed
-5. **Dependencies**: Regular security updates
+Each model's data is stored as a JSON file (`public/data/{MODEL_NAME}_analyzed.json`) containing citation entries in a standardized format with fields including title, authors, year, DOI, abstract, venue, citation count, research domain, engagement level, and uncertainty scores.
 
-## Scalability Considerations
+The frontend loads these files dynamically and processes them client-side using utility functions in `dataUtils.js` that normalize differences between Crossref and Semantic Scholar data formats.
 
-### Current Limitations
-- Sequential LLM processing
-- Client-side data processing
-- Static file storage
+## Technical Stack
 
-### Scaling Opportunities
-1. **Parallel Processing**: Implement concurrent LLM calls
-2. **Server-Side Processing**: Move heavy computations to backend
-3. **Database Integration**: Replace JSON files with database
-4. **Caching Layer**: Implement Redis/Memcached for frequent queries
-5. **CDN Distribution**: Serve static assets via CDN
+### Frontend
+- **Framework**: React 18.x with Create React App
+- **Routing**: React Router v6
+- **Styling**: Tailwind CSS
+- **Charts**: Recharts
+- **Maps**: D3 + TopoJSON
+- **Icons**: Lucide React
+- **Diagrams**: Mermaid.js
 
-## Future Enhancement Opportunities
+### Processing Pipeline
+- **Language**: Python 3
+- **LLM Integration**: Google Gemini API (Phase 2 & 3)
+- **Data Sources**: Semantic Scholar API, CrossRef API
+- **Classification**: Keyword-based with model-specific taxonomies
+- **Data Format**: JSON files
 
-### Short-term
-1. Real-time citation updates via API integration
-2. User authentication for personalized views
-3. Export functionality for charts and data
-4. Advanced filtering and search capabilities
+### Deployment
+- **Production**: `http://34.31.165.25:3000/science-model-dashboard/`
+- **Server**: Node.js serving the built React application
+- **Data Processing**: Local Python scripts run offline to generate/update JSON data files
 
-### Medium-term
-1. GraphQL API for efficient data fetching
-2. Server-side rendering for improved SEO
-3. Progressive Web App capabilities
-4. Integration with citation databases
+## Data Pipeline Commands
 
-### Long-term
-1. Machine learning predictions for citation trends
-2. Collaborative features for researchers
-3. API for third-party integrations
-4. Multi-language support
+```
+# Classification
+python scripts/classify_papers.py --model RAPID       # Classify one model
+python scripts/classify_papers.py --all                # Classify all models
 
-## Maintenance Guidelines
+# Uncertainty quantification
+python scripts/compute_uncertainty.py --model RAPID    # Phase 1 deterministic
+python scripts/phase2_llm_confidence.py --model RAPID  # Phase 2 LLM sampling
+python scripts/phase3_skeptic_agent.py --model RAPID   # Phase 3 skeptic review
 
-### Regular Tasks
-1. **Weekly**: Update citation data from sources
-2. **Monthly**: Re-run LLM analysis for new papers
-3. **Quarterly**: Retrain classification models
-4. **Annually**: Review and update model configurations
-
-### Monitoring Points
-1. Dashboard load times
-2. LLM processing success rates
-3. Classification accuracy metrics
-4. User engagement analytics
+# Data cleaning
+node scripts/clean_citation_data.js --all --dry-run    # Preview cleanup
+node scripts/clean_citation_data.js --model ECCO       # Clean specific model
+```
 
 ## Conclusion
 
-The JPL's Earth Modeling Enterprise (JEME) Dashboard represents a comprehensive solution for scientific citation analysis, combining modern web technologies with advanced machine learning and LLM capabilities. The modular architecture ensures maintainability and extensibility, while the multi-model support provides flexibility for diverse research domains. The system successfully bridges the gap between raw citation data and actionable insights through intelligent processing and intuitive visualization.
+The JEME/JEOE Dashboard provides a comprehensive solution for scientific citation analysis across JPL's Earth science modeling portfolio. It combines automated keyword classification with model-specific domain taxonomies, multi-phase uncertainty quantification using Gemini LLM, and cross-model network analysis — all presented through an interactive React dashboard serving both the modeling and mission observation communities.
