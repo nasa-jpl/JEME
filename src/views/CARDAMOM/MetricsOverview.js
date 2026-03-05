@@ -170,7 +170,7 @@ const MetricsOverview = () => {
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
           { label: "Peer-reviewed", value: metrics.peerReviewedCount.toString() },
-          { label: "High-impact (>100)", value: metrics.highImpactCount.toString() },
+          { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
         ]}
       />

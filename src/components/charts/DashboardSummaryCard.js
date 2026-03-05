@@ -112,23 +112,37 @@ const DashboardSummaryCard = ({ data = [] }) => {
     const current2025Papers = yearCounts[2025] || 0;
 
     // Count engagement levels with flexible matching
+    // Supports both 4-level model format and 3-level mission format
     let level3Count = 0;
     let level4Count = 0;
+    let dataUsageCount = 0;
+    let reviewPaperCount = 0;
+
+    const isMissionFormat = peerReviewedData.some(p => {
+      const l = p.engagement_level || "";
+      return l === "Simple Citation" || l === "Data Usage" || l === "Review Paper";
+    });
 
     peerReviewedData.forEach(paper => {
       const level = paper.engagement_level;
       if (level) {
-        // Use flexible matching based on level prefix
-        if (level.includes('Level 3:') || level.includes('Level 3 ')) {
-          level3Count++;
-        } else if (level.includes('Level 4:') || level.includes('Level 4 ')) {
-          level4Count++;
+        if (isMissionFormat) {
+          if (level === "Data Usage") dataUsageCount++;
+          else if (level === "Review Paper") reviewPaperCount++;
+        } else {
+          if (level.includes('Level 3:') || level.includes('Level 3 ')) {
+            level3Count++;
+          } else if (level.includes('Level 4:') || level.includes('Level 4 ')) {
+            level4Count++;
+          }
         }
       }
     });
 
-    // High engagement (Levels 3-4)
-    const highEngagementCount = level3Count + level4Count;
+    // High engagement: L3+L4 for models, Data Usage + Review Paper for missions
+    const highEngagementCount = isMissionFormat
+      ? (dataUsageCount + reviewPaperCount)
+      : (level3Count + level4Count);
 
     // Implementation score
     const implementationScore = peerReviewedData.length > 0 ? ((highEngagementCount / peerReviewedData.length) * 100) : 0;

@@ -14,59 +14,81 @@ const EngagementLevelsCard = ({ data }) => {
     // Use provided data or empty array as fallback
     const citationsData = data || [];
     
+    // Detect whether data uses mission 3-level format or model 4-level format
+    let isMissionFormat = false;
+
+    citationsData.forEach(paper => {
+      const level = paper.engagement_level;
+      if (level === "Simple Citation" || level === "Data Usage" || level === "Review Paper") {
+        isMissionFormat = true;
+      }
+    });
+
     citationsData.forEach(paper => {
       const level = paper.engagement_level;
       if (level && level !== "Unknown" && level !== "Not specified") {
-        // Use flexible matching based on level prefix instead of exact string matching
         let standardLevel = "Unclassified";
 
-        if (level.includes("Level 1:") || level.includes("Level 1 ")) {
-          standardLevel = "Level 1: Simple Citation";
-        } else if (level.includes("Level 2:") || level.includes("Level 2 ")) {
-          standardLevel = "Level 2: Data Usage";
-        } else if (level.includes("Level 3:") || level.includes("Level 3 ")) {
-          standardLevel = "Level 3: Model Adaptation";
-        } else if (level.includes("Level 4:") || level.includes("Level 4 ")) {
-          standardLevel = "Level 4: Foundational Method";
+        if (isMissionFormat) {
+          // Mission 3-level format
+          if (level === "Simple Citation") standardLevel = "Simple Citation";
+          else if (level === "Data Usage") standardLevel = "Data Usage";
+          else if (level === "Review Paper") standardLevel = "Review Paper";
+        } else {
+          // Model 4-level format
+          if (level.includes("Level 1:") || level.includes("Level 1 ")) {
+            standardLevel = "Level 1: Simple Citation";
+          } else if (level.includes("Level 2:") || level.includes("Level 2 ")) {
+            standardLevel = "Level 2: Data Usage";
+          } else if (level.includes("Level 3:") || level.includes("Level 3 ")) {
+            standardLevel = "Level 3: Model Adaptation";
+          } else if (level.includes("Level 4:") || level.includes("Level 4 ")) {
+            standardLevel = "Level 4: Foundational Method";
+          }
         }
 
         engagementCounts[standardLevel] = (engagementCounts[standardLevel] || 0) + 1;
       } else {
-        // Handle papers without engagement level classification
         engagementCounts["Unclassified"] = (engagementCounts["Unclassified"] || 0) + 1;
       }
     });
 
-    // Define engagement level order and colors
-    const levelOrder = [
-      "Level 1: Simple Citation",
-      "Level 2: Data Usage", 
-      "Level 3: Model Adaptation",
-      "Level 4: Foundational Method",
-      "Unclassified"
-    ];
+    // Define engagement level order and colors based on format
+    const levelOrder = isMissionFormat
+      ? ["Simple Citation", "Data Usage", "Review Paper", "Unclassified"]
+      : ["Level 1: Simple Citation", "Level 2: Data Usage", "Level 3: Model Adaptation", "Level 4: Foundational Method", "Unclassified"];
 
-    const levelColors = {
-      "Level 1: Simple Citation": "#93C5FD",     // Light blue
-      "Level 2: Data Usage": "#60A5FA",          // Blue
-      "Level 3: Model Adaptation": "#3B82F6",    // Darker blue
-      "Level 4: Foundational Method": "#1D4ED8", // Dark blue
-      "Unclassified": "#D1D5DB"                  // Gray
-    };
+    const levelColors = isMissionFormat
+      ? {
+          "Simple Citation": "#93C5FD",     // Light blue
+          "Data Usage": "#3B82F6",          // Blue
+          "Review Paper": "#1D4ED8",        // Dark blue
+          "Unclassified": "#D1D5DB"         // Gray
+        }
+      : {
+          "Level 1: Simple Citation": "#93C5FD",
+          "Level 2: Data Usage": "#60A5FA",
+          "Level 3: Model Adaptation": "#3B82F6",
+          "Level 4: Foundational Method": "#1D4ED8",
+          "Unclassified": "#D1D5DB"
+        };
 
     // Create ordered array with proper names and colors
     const processedData = levelOrder
       .map(level => {
         const count = engagementCounts[level] || 0;
         let displayName = level;
-        
+
         // Shorten names for better display
-        if (level.includes("Level 1")) displayName = "L1: Citation";
-        else if (level.includes("Level 2")) displayName = "L2: Data Usage";
-        else if (level.includes("Level 3")) displayName = "L3: Adaptation";
-        else if (level.includes("Level 4")) displayName = "L4: Foundation";
-        else if (level === "Unclassified") displayName = "Unclassified";
-        
+        if (isMissionFormat) {
+          // Mission format names are already short enough
+        } else {
+          if (level.includes("Level 1")) displayName = "L1: Citation";
+          else if (level.includes("Level 2")) displayName = "L2: Data Usage";
+          else if (level.includes("Level 3")) displayName = "L3: Adaptation";
+          else if (level.includes("Level 4")) displayName = "L4: Foundation";
+        }
+
         return {
           name: displayName,
           fullName: level,
@@ -107,9 +129,12 @@ const EngagementLevelsCard = ({ data }) => {
   const getEngagementDescription = (level) => {
     const descriptions = {
       "Level 1: Simple Citation": "References the paper without using the model",
-      "Level 2: Data Usage": "Uses methodology or data", 
+      "Level 2: Data Usage": "Uses methodology or data",
       "Level 3: Model Adaptation": "Modifies or extends the model",
-      "Level 4: Foundational Method": "Model is foundational to the research"
+      "Level 4: Foundational Method": "Model is foundational to the research",
+      "Simple Citation": "References the mission without using its data",
+      "Data Usage": "Uses mission data or products in analysis",
+      "Review Paper": "Review, survey, or overview paper"
     };
     return descriptions[level] || "";
   };
@@ -192,34 +217,15 @@ const EngagementLevelsCard = ({ data }) => {
       <div className="bg-gray-100 rounded-lg p-4">
         <div className="text-sm font-semibold text-gray-700 mb-2">Engagement Level Definitions</div>
         <div className="space-y-1 text-xs text-gray-600">
-          <div className="flex justify-between py-1 border-b border-dashed border-gray-200">
-            <div className="flex items-center">
-              <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#93C5FD" }}></div>
-              <span>Level 1: Simple Citation</span>
+          {engagementData.filter(item => item.fullName !== "Unclassified").map((item, index, arr) => (
+            <div key={item.fullName} className={`flex justify-between py-1 ${index < arr.length - 1 ? 'border-b border-dashed border-gray-200' : ''}`}>
+              <div className="flex items-center">
+                <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: item.color }}></div>
+                <span>{item.fullName}</span>
+              </div>
+              <div className="text-right max-w-xs">{getEngagementDescription(item.fullName)}</div>
             </div>
-            <div className="text-right max-w-xs">References the paper without using the model</div>
-          </div>
-          <div className="flex justify-between py-1 border-b border-dashed border-gray-200">
-            <div className="flex items-center">
-              <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#60A5FA" }}></div>
-              <span>Level 2: Data Usage</span>
-            </div>
-            <div className="text-right max-w-xs">Uses methodology or data</div>
-          </div>
-          <div className="flex justify-between py-1 border-b border-dashed border-gray-200">
-            <div className="flex items-center">
-              <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#3B82F6" }}></div>
-              <span>Level 3: Model Adaptation</span>
-            </div>
-            <div className="text-right max-w-xs">Modifies or extends the model</div>
-          </div>
-          <div className="flex justify-between py-1">
-            <div className="flex items-center">
-              <div className="w-2 h-2 rounded-full mr-2" style={{ backgroundColor: "#1D4ED8" }}></div>
-              <span>Level 4: Foundation</span>
-            </div>
-            <div className="text-right max-w-xs">Model is foundational to the research</div>
-          </div>
+          ))}
         </div>
         
         {unclassifiedCount > 0 && (

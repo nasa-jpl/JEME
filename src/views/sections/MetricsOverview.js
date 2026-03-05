@@ -21,9 +21,11 @@ const MetricsOverview = ({ data = [] }) => {
         hIndex: 0,
         avgCitations: 0,
         implementationRate: 0,
+        isMissionFormat: false,
         modelAdaptationCount: 0,
         foundationalMethodCount: 0,
         dataUsageCount: 0,
+        reviewPaperCount: 0,
         countriesCount: 0,
         regionsCount: 0,
         globalStudies: 0,
@@ -113,28 +115,48 @@ const MetricsOverview = ({ data = [] }) => {
     const avgCitations = peerReviewedData.length > 0 ? totalCitations / peerReviewedData.length : 0;
 
     // 3. IMPLEMENTATION RATE (peer-reviewed only)
-    // Count different engagement levels - use flexible matching to support different naming conventions
+    // Count different engagement levels - supports both 4-level model and 3-level mission formats
     const engagementStats = {};
     let modelAdaptationCount = 0;
     let foundationalMethodCount = 0;
     let dataUsageCount = 0;
+    let reviewPaperCount = 0;
+
+    // Detect mission 3-level format
+    const isMissionFormat = peerReviewedData.some(p => {
+      const l = p.engagement_level || "";
+      return l === "Simple Citation" || l === "Data Usage" || l === "Review Paper";
+    });
 
     peerReviewedData.forEach(paper => {
       const level = paper.engagement_level || "Unknown";
       engagementStats[level] = (engagementStats[level] || 0) + 1;
 
-      // Flexible matching for different naming conventions
-      if (level.startsWith('Level 3:')) {
-        modelAdaptationCount++;
-      } else if (level.startsWith('Level 4:')) {
-        foundationalMethodCount++;
-      } else if (level.startsWith('Level 2:')) {
-        dataUsageCount++;
+      if (isMissionFormat) {
+        // Mission 3-level: Data Usage and Review Paper are the "deep engagement" levels
+        if (level === "Data Usage") {
+          dataUsageCount++;
+        } else if (level === "Review Paper") {
+          reviewPaperCount++;
+        }
+      } else {
+        // Model 4-level format
+        if (level.startsWith('Level 3:')) {
+          modelAdaptationCount++;
+        } else if (level.startsWith('Level 4:')) {
+          foundationalMethodCount++;
+        } else if (level.startsWith('Level 2:')) {
+          dataUsageCount++;
+        }
       }
     });
 
-    // Implementation rate calculation (Level 3 and 4 vs total)
-    const implementationCount = modelAdaptationCount + foundationalMethodCount;
+    // Implementation rate calculation
+    // Model format: (L3 + L4) / Total
+    // Mission format: (Data Usage + Review Paper) / Total
+    const implementationCount = isMissionFormat
+      ? (dataUsageCount + reviewPaperCount)
+      : (modelAdaptationCount + foundationalMethodCount);
     const implementationRate = peerReviewedData.length > 0 ? ((implementationCount / peerReviewedData.length) * 100) : 0;
 
     // 4. GEOGRAPHIC REACH (peer-reviewed only)
@@ -194,9 +216,11 @@ const MetricsOverview = ({ data = [] }) => {
       hIndex,
       avgCitations,
       implementationRate,
+      isMissionFormat,
       modelAdaptationCount,
       foundationalMethodCount,
       dataUsageCount,
+      reviewPaperCount,
       countriesCount: uniqueCountries.size,
       regionsCount: uniqueRegions.size,
       globalStudies: regionCounts['Global'] || 0,
@@ -221,7 +245,7 @@ const MetricsOverview = ({ data = [] }) => {
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
           { label: "Peer-reviewed", value: metrics.peerReviewedCount.toString() },
-          { label: "High-impact (>100)", value: metrics.highImpactCount.toString() },
+          { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
         ]}
       />
@@ -238,13 +262,17 @@ const MetricsOverview = ({ data = [] }) => {
         ]}
       />
       <MetricCard
-        title="Implementation Rate"
+        title={metrics.isMissionFormat ? "Deep Engagement Rate" : "Implementation Rate"}
         value={`${metrics.implementationRate.toFixed(1)}%`}
         icon={<GitBranch size={16} />}
         iconBg="bg-purple-600"
         trend={`+${metrics.trends.implementation.value}% from last quarter`}
         trendUp={metrics.trends.implementation.isUp}
-        breakdown={[
+        breakdown={metrics.isMissionFormat ? [
+          { label: "Formula", value: "(Data Usage + Review) / Total × 100" },
+          { label: "Data Usage", value: metrics.dataUsageCount.toString() },
+          { label: "Review Paper", value: metrics.reviewPaperCount.toString() }
+        ] : [
           { label: "Formula", value: "(L3 + L4) / Total × 100" },
           { label: "Model Adaptation", value: metrics.modelAdaptationCount.toString() },
           { label: "Foundational Method", value: metrics.foundationalMethodCount.toString() },

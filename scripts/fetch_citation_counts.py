@@ -21,7 +21,7 @@ from pathlib import Path
 DATA_DIR = Path(__file__).parent.parent / "public" / "data"
 CACHE_FILE = Path(__file__).parent / "citation_count_cache.json"
 
-ALL_MODELS = ['RAPID', 'CARDAMOM', 'CMS-Flux', 'ECCO', 'ISSM', 'MOMO-CHEM', 'LES', 'EDMF']
+ALL_MODELS = ['RAPID', 'CARDAMOM', 'CMS-Flux', 'ECCO', 'ISSM', 'MOMO-CHEM', 'LES', 'EDMF', 'GRACE', 'SWOT']
 
 S2_BATCH_SIZE = 500
 S2_DELAY = 1.1  # Semantic Scholar rate limit: 1 req/sec for batch

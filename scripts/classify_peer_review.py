@@ -5,7 +5,6 @@ Adds `is_peer_reviewed` field (true/false) to every paper across all model JSON 
 
 Classification logic:
   - Not peer-reviewed if venue matches blocklist patterns (preprints, theses, conferences, etc.)
-  - GRACE special case: uses is_peer_reviewed column from mission_data/grace.publications.csv
   - Default: has DOI + venue doesn't match blocklist → true. No venue and no DOI → false.
 
 Usage:
@@ -116,10 +115,6 @@ def classify_paper(paper, grace_map=None):
     if isinstance(title, list):
         title = title[0] if title else ""
     title_key = title.lower().strip()
-
-    # GRACE special case: check CSV mapping first
-    if grace_map is not None and title_key in grace_map:
-        return grace_map[title_key]
 
     # Check venue against blocklist
     if venue_matches_blocklist(venue):

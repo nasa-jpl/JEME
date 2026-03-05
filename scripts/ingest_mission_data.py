@@ -28,7 +28,7 @@ from pathlib import Path
 SCRIPT_DIR = Path(__file__).parent
 sys.path.insert(0, str(SCRIPT_DIR))
 
-from classify_papers import classify_domain, classify_engagement
+from classify_papers import classify_domain, classify_engagement, classify_mission_engagement, get_domain_keywords
 from compute_uncertainty import compute_entry_uncertainty, MODEL_CORE_KEYWORDS
 
 # Add mission-specific core keywords for uncertainty computation
@@ -196,15 +196,20 @@ def parse_grace_csv(filepath):
 
 
 def parse_swot_excel(filepath):
-    """Parse SWOT Excel Publications_All_Time sheet into list of dicts."""
+    """Parse SWOT Excel into list of dicts.
+
+    The 20260302 format has: row 1 = title row, row 2 = headers, row 3+ = data.
+    Sheet name is "Sheet 1".
+    """
     import openpyxl
 
     wb = openpyxl.load_workbook(filepath, read_only=True)
-    ws = wb["Publications_All_Time"]
+    ws = wb["Sheet 1"]
 
-    header = [cell.value for cell in next(ws.iter_rows(min_row=1, max_row=1))]
+    # Row 1 is a title row, row 2 has headers, data starts at row 3
+    header = [cell.value for cell in next(ws.iter_rows(min_row=2, max_row=2))]
     records = []
-    for row in ws.iter_rows(min_row=2, values_only=True):
+    for row in ws.iter_rows(min_row=3, values_only=True):
         record = {}
         for h, v in zip(header, row):
             if h is not None:
@@ -315,13 +320,22 @@ def _is_team_by_author(record):
     return False
 
 
+_KNOWN_TEAM_DOIS = {
+    "10.1038/s44221-024-00372-w",  # Fu et al. Nature Water SWOT review
+}
+
+
 def is_team_paper(record):
     """Check if the paper is a team (JPL/Caltech) paper.
 
-    Uses two signals:
-    1. author_address contains JPL/Caltech affiliation
-    2. Any author name matches the JPL scientist list (~200 names)
+    Uses three signals:
+    1. DOI matches a known team paper
+    2. author_address contains JPL/Caltech affiliation
+    3. Any author name matches the JPL scientist list (~200 names)
     """
+    doi = str(record.get("doi", "") or "").strip().lower()
+    if doi in _KNOWN_TEAM_DOIS:
+        return True
     return _is_team_by_address(record) or _is_team_by_author(record)
 
 
@@ -395,13 +409,147 @@ def parse_year(raw):
         return None
 
 
+_COUNTRY_NORMALIZE = {
+    "peoples r china": "China", "pr china": "China",
+    "p.r. china": "China", "p. r. china": "China",
+    "china": "China", "usa": "USA", "u.s.a.": "USA",
+    "united states": "USA", "united states of america": "USA",
+    "uk": "UK", "united kingdom": "UK", "england": "UK",
+    "scotland": "UK", "wales": "UK", "northern ireland": "UK",
+    "south korea": "South Korea", "korea": "South Korea",
+    "republic of korea": "South Korea",
+    "taiwan": "Taiwan", "roc": "Taiwan",
+    "russia": "Russia", "russian federation": "Russia",
+    "brasil": "Brazil", "brasil.": "Brazil",
+    "deutschland": "Germany",
+}
+
+# Known country names for validation (lowercase)
+_KNOWN_COUNTRIES = {
+    "afghanistan", "albania", "algeria", "argentina", "armenia", "australia",
+    "austria", "azerbaijan", "bahrain", "bangladesh", "barbados", "belarus",
+    "belgium", "benin", "bhutan", "bolivia", "bosnia", "botswana", "brazil",
+    "brunei", "bulgaria", "burkina faso", "burundi", "cambodia", "cameroon",
+    "canada", "chad", "chile", "china", "colombia", "congo", "costa rica",
+    "croatia", "cuba", "cyprus", "czech republic", "czechia", "denmark",
+    "djibouti", "ecuador", "egypt", "el salvador", "estonia", "eswatini",
+    "ethiopia", "fiji", "finland", "france", "gabon", "gambia", "georgia",
+    "germany", "ghana", "greece", "greenland", "guatemala", "guinea",
+    "guyana", "haiti", "honduras", "hungary", "iceland", "india",
+    "indonesia", "iran", "iraq", "ireland", "israel", "italy", "ivory coast",
+    "jamaica", "japan", "jordan", "kazakhstan", "kenya", "kuwait",
+    "kyrgyzstan", "laos", "latvia", "lebanon", "libya", "liechtenstein",
+    "lithuania", "luxembourg", "madagascar", "malawi", "malaysia", "mali",
+    "malta", "mauritania", "mauritius", "mexico", "moldova", "monaco",
+    "mongolia", "montenegro", "morocco", "mozambique", "myanmar", "namibia",
+    "nepal", "netherlands", "new zealand", "nicaragua", "niger", "nigeria",
+    "north korea", "north macedonia", "norway", "oman", "pakistan", "panama",
+    "papua new guinea", "paraguay", "peru", "philippines", "poland",
+    "portugal", "qatar", "romania", "russia", "rwanda", "saudi arabia",
+    "senegal", "serbia", "sierra leone", "singapore", "slovakia", "slovenia",
+    "somalia", "south africa", "south korea", "south sudan", "spain",
+    "sri lanka", "sudan", "suriname", "sweden", "switzerland", "syria",
+    "taiwan", "tajikistan", "tanzania", "thailand", "togo", "trinidad",
+    "tunisia", "turkey", "turkiye", "turkmenistan", "uganda", "ukraine",
+    "united arab emirates", "uae", "uruguay", "usa", "uk",
+    "uzbekistan", "venezuela", "vietnam", "yemen", "zambia", "zimbabwe",
+    # Common variations in WoS
+    "peoples r china", "pr china", "p.r. china", "p. r. china",
+    "england", "scotland", "wales", "northern ireland",
+    "republic of korea", "south korea",
+}
+
+# US state abbreviations (to detect "City, ST ZIP USA" patterns)
+_US_STATES = {
+    "al", "ak", "az", "ar", "ca", "co", "ct", "de", "fl", "ga", "hi",
+    "id", "il", "in", "ia", "ks", "ky", "la", "me", "md", "ma", "mi",
+    "mn", "ms", "mo", "mt", "ne", "nv", "nh", "nj", "nm", "ny", "nc",
+    "nd", "oh", "ok", "or", "pa", "ri", "sc", "sd", "tn", "tx", "ut",
+    "vt", "va", "wa", "wv", "wi", "wy", "dc",
+}
+
+
+def extract_country(record):
+    """Extract lead author's country from author_address field.
+
+    Handles Web of Science format like:
+      [Author, Name] Univ Somewhere, Dept XYZ, City, Country; ...
+    """
+    addr = str(record.get("author_address", "") or "").strip()
+    if not addr or addr == NULL_SENTINEL:
+        return None
+
+    # Extract the first complete affiliation block.
+    # WoS format: [Author1; Author2] Institution, Dept, City, Country; [Author3] ...
+    # Must handle semicolons inside [...] brackets correctly.
+    if addr.startswith("["):
+        # Find closing bracket, then find the next semicolon after it
+        bracket_end = addr.find("]")
+        if bracket_end == -1:
+            return None
+        rest = addr[bracket_end + 1:]
+        # Find next semicolon that starts a new affiliation block
+        next_semi = rest.find("; [")
+        if next_semi == -1:
+            next_semi = rest.find(";")
+        first_block = rest[:next_semi].strip() if next_semi != -1 else rest.strip()
+    else:
+        first_block = addr.split(";")[0].strip()
+        first_block = re.sub(r"^\[.*?\]\s*", "", first_block)
+
+    # Split on commas and work backwards to find the country
+    parts = [p.strip().rstrip(".") for p in first_block.split(",") if p.strip()]
+    if not parts:
+        return None
+
+    # Check the last few parts (country is usually last, but sometimes
+    # there's a postal code or "USA" after a state abbreviation)
+    for candidate_raw in reversed(parts[-3:]):
+        # Strip postal codes
+        candidate = re.sub(r"\b\d{4,}\b", "", candidate_raw).strip()
+        candidate = re.sub(r"\b[A-Z]\d[A-Z]\s*\d[A-Z]\d\b", "", candidate).strip()  # Canadian
+        candidate = candidate.strip().rstrip(".")
+        if not candidate or len(candidate) < 2:
+            continue
+
+        lower = candidate.lower().strip()
+
+        # Check normalization map
+        if lower in _COUNTRY_NORMALIZE:
+            return _COUNTRY_NORMALIZE[lower]
+
+        # Check known countries
+        if lower in _KNOWN_COUNTRIES:
+            return candidate.title()
+
+        # Check for US state abbreviation pattern → USA
+        bare = re.sub(r"\s+\d+$", "", candidate).strip()
+        if bare.lower() in _US_STATES:
+            return "USA"
+
+        # Check for "STATE ZIP USA" or "STATE USA" patterns
+        if "usa" in lower:
+            return "USA"
+
+    return None
+
+
 def map_to_dashboard_schema(record, mission_name, is_team, team_paper_title=None, team_paper_id=None):
     """Convert a raw record to the dashboard JSON schema."""
     title = str(record.get("title", "")).strip()
     doi_raw = record.get("doi")
     doi = "" if is_null(doi_raw) else str(doi_raw).strip()
     link = str(record.get("link", "") or "").strip()
+
+    # Extract DOI from link URL if doi field is empty
+    if not doi and link:
+        doi_match = re.search(r'(?:doi\.org/|dx\.doi\.org/)(10\.\S+)', link, re.IGNORECASE)
+        if doi_match:
+            doi = doi_match.group(1).rstrip(".")
+        elif link.startswith("10."):
+            doi = link.strip().rstrip(".")
     abstract = None if is_null(record.get("abstract")) else str(record["abstract"]).strip()
+    country = extract_country(record)
 
     entry = {
         "title": title,
@@ -413,6 +561,7 @@ def map_to_dashboard_schema(record, mission_name, is_team, team_paper_title=None
         "paper_id": make_paper_id(record, mission_name),
         "url": link if link and link != NULL_SENTINEL else "",
         "abstract": abstract,
+        "country": country,
         "citing_team_paper": team_paper_title if not is_team else None,
         "team_paper_id": team_paper_id if not is_team else None,
         "research_domain": None,  # filled later
@@ -508,7 +657,7 @@ def process_mission(mission_name, project_root, dry_run=False):
     if mission_name == "GRACE":
         raw_records = parse_grace_csv(mission_data_dir / "grace.publications.csv")
     elif mission_name == "SWOT":
-        raw_records = parse_swot_excel(mission_data_dir / "SWOT_Publications_20250912.xlsx")
+        raw_records = parse_swot_excel(mission_data_dir / "20260302-SWOT-Publications.xlsx")
     else:
         print(f"  ERROR: Unknown mission '{mission_name}'")
         return None
@@ -551,14 +700,15 @@ def process_mission(mission_name, project_root, dry_run=False):
         print(f"  Removed {removed} entries with invalid years")
 
     # 7. Classify domain and engagement
+    domain_keywords = get_domain_keywords(mission_name)
     domain_counts = {}
     engagement_counts = {}
     for entry in entries:
-        domain = classify_domain(entry)
+        domain = classify_domain(entry, domain_keywords)
         entry["research_domain"] = domain
         domain_counts[domain] = domain_counts.get(domain, 0) + 1
 
-        engagement = classify_engagement(entry)
+        engagement = classify_mission_engagement(entry, mission_name)
         entry["engagement_level"] = engagement
         engagement_counts[engagement] = engagement_counts.get(engagement, 0) + 1
 

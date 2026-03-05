@@ -526,57 +526,50 @@ MODEL_SPECIFIC_DOMAINS = {
     },
 
     "GRACE": {
-        "Terrestrial Water Storage": [
-            "terrestrial water storage", "tws", "water storage",
-            "total water storage", "soil moisture", "groundwater storage",
-            "water balance", "hydrological", "land water",
-            "water", "freshwater", "lake", "wetland", "snow",
-            "evapotranspiration", "land surface"
+        "Magnetic Field": [
+            "magnetic", "magnetometer", "geomagnetic", "magnetosphere",
+            "aurora", "ionosphere magnetic"
         ],
-        "Groundwater Depletion": [
-            "groundwater", "aquifer", "depletion", "groundwater depletion",
-            "water table", "well", "pumping", "extraction",
-            "overdraft", "sustainable yield", "recharge"
+        "Atmosphere": [
+            "atmosphere", "atmospheric", "weather", "climate", "temperature",
+            "precipitation", "evapotranspiration", "troposphere", "stratosphere",
+            "monsoon", "enso", "aerosol", "cloud"
         ],
-        "Ice Mass Balance": [
-            "ice sheet", "ice mass", "glacier", "ice loss", "greenland",
-            "antarctica", "mass balance", "cryosphere", "ice cap",
-            "polar", "glacial", "ice volume", "arctic", "antarctic",
-            "sea ice", "ice flow", "firn"
+        "Solid Earth": [
+            "earthquake", "tectonic", "crustal", "mantle", "lithosphere",
+            "seismic", "volcanic", "gia", "glacial isostatic",
+            "post-glacial rebound", "deformation", "fault", "uplift", "subsidence"
         ],
-        "Ocean Mass & Sea Level": [
-            "ocean mass", "sea level", "ocean bottom pressure",
-            "steric", "barystatic", "mean sea level",
-            "sea level budget", "ocean heat", "thermosteric",
-            "ocean", "marine", "coastal"
+        "Processing/Algorithms": [
+            "algorithm", "processing", "filtering", "destriping", "mascon",
+            "spherical harmonic", "leakage", "signal separation", "inversion",
+            "data assimilation", "regularization", "decorrelation",
+            "spatial resolution", "noise", "error", "correction",
+            "model", "simulation", "calibration", "validation"
         ],
-        "Gravity Field & Geodesy": [
-            "gravity field", "gravity", "geoid", "spherical harmonic",
-            "mascon", "mass concentration", "geodesy", "geodetic",
-            "geopotential", "gia", "glacial isostatic", "crustal",
-            "geophysic", "tectonic", "seismic", "isostatic"
+        "Cryosphere": [
+            "ice sheet", "glacier", "ice mass", "greenland", "antarctica",
+            "sea ice", "permafrost", "firn", "polar", "arctic", "cryosphere",
+            "snow", "ice loss", "ice volume"
         ],
-        "Drought & Flood Detection": [
-            "drought", "flood", "extreme", "anomaly", "deficit",
-            "wet", "dry", "precipitation", "water stress",
-            "disaster", "hazard", "monitoring", "climate",
-            "temperature", "warming"
+        "Oceanography": [
+            "ocean", "sea level", "marine", "coastal", "tide", "salinity",
+            "thermohaline", "ocean bottom pressure", "steric", "barystatic",
+            "sea surface", "ocean heat", "ocean mass", "oceanograph"
         ],
-        "River Basin Hydrology": [
-            "river basin", "basin", "watershed", "catchment",
-            "discharge", "runoff", "streamflow", "river",
-            "amazon", "ganges", "mississippi", "congo", "nile",
-            "irrigation", "dam", "reservoir"
+        "Geodesy": [
+            "geodesy", "geodetic", "geoid", "gravity field", "geopotential",
+            "reference frame", "satellite gravimetry", "gravity", "mascon",
+            "mass concentration", "spherical harmonic"
         ],
-        "GRACE Instrument & Methods": [
-            "grace", "grace-fo", "follow-on", "twin satellite",
-            "ranging", "accelerometer", "k-band", "laser ranging",
-            "data processing", "destriping", "filtering", "leakage",
-            "signal separation", "spatial resolution",
-            "satellite", "remote sensing", "earth observation",
-            "model", "simulation", "inversion", "data assimilation"
+        "Hydrology": [
+            "water storage", "groundwater", "aquifer", "drought", "flood",
+            "river", "basin", "watershed", "soil moisture", "evapotranspiration",
+            "tws", "water balance", "terrestrial water", "recharge", "runoff",
+            "streamflow", "lake", "wetland", "irrigation", "dam", "reservoir",
+            "freshwater", "hydrology", "hydrological"
         ],
-        "General Science": [
+        "Other": [
             "grace"
         ]
     },
@@ -627,6 +620,11 @@ MODEL_SPECIFIC_DOMAINS = {
         "Bathymetry & Seafloor": [
             "bathymetry", "seafloor", "depth", "bottom topography",
             "submarine", "ocean floor", "sonar", "submerged"
+        ],
+        "Geodesy": [
+            "geodesy", "geodetic", "geoid", "gravity", "geopotential",
+            "datum", "reference frame", "ellipsoid", "geophysic",
+            "mass change", "earth orientation"
         ],
         "General Science": [
             "swot"
@@ -714,11 +712,94 @@ def classify_domain(paper, domain_keywords=None):
     if domain_scores:
         return max(domain_scores, key=domain_scores.get)
 
-    # Find the "General" fallback in the keyword dict
+    # Find the fallback domain in the keyword dict
     for domain_name in domain_keywords:
-        if domain_name.startswith("General"):
+        if domain_name.startswith("General") or domain_name == "Other":
             return domain_name
     return "General Science"
+
+
+# ---------------------------------------------------------------------------
+# Mission-specific engagement (3-level: Review Paper, Data Usage, Simple Citation)
+# ---------------------------------------------------------------------------
+
+_KNOWN_REVIEW_DOIS = {
+    "10.1038/s44221-024-00372-w",  # Fu et al. Nature Water SWOT review
+}
+
+# Data product terms that indicate actual usage of mission data
+_MISSION_DATA_TERMS = {
+    "SWOT": [
+        "karin", "wide-swath", "swath altimetry", "water surface elevation",
+        "level-2", "l2 product", "l2 data", "ssh from swot", "swot data",
+        "swot observation", "swot measurement", "pixel cloud",
+        "river single pass", "raster product",
+    ],
+    "GRACE": [
+        "mascon", "tws", "terrestrial water storage", "level-2", "l2 product",
+        "l2 data", "grace data", "grace observation", "grace measurement",
+        "grace-fo data", "spherical harmonic", "csr", "gfz", "jpl mascon",
+        "grace solution", "grace product", "grace estimate",
+    ],
+}
+
+# Phrases indicating the paper actually *uses* mission data (not just mentions it)
+_USAGE_PHRASES = [
+    r"we\s+(?:use|used|utilize|utilized|employ|employed|analyze|analyzed|analyse|analysed)",
+    r"(?:observations?|measurements?|data|products?|estimates?)\s+from",
+    r"(?:based on|derived from|obtained from|retrieved from)\s+",
+    r"(?:using|applying)\s+(?:the\s+)?",
+]
+
+
+def classify_mission_engagement(paper, mission_name):
+    """Classify mission paper engagement into 3 levels.
+
+    - "Review Paper" — review/survey/overview papers
+    - "Data Usage" — papers that actually use the mission's data
+    - "Simple Citation" — default fallback
+    """
+    title = str(paper.get("title", "") or "").lower()
+    abstract = str(paper.get("abstract", "") or "").lower()
+    venue = str(paper.get("venue", "") or "").lower()
+    doi = str(paper.get("doi", "") or "").strip().lower()
+    text = f"{title} {abstract}"
+
+    # --- Review Paper ---
+    if doi in _KNOWN_REVIEW_DOIS:
+        return "Review Paper"
+
+    review_keywords = [
+        "review", "survey", "overview", "perspective", "synthesis",
+        "progress in", "state of the art", "state-of-the-art",
+    ]
+    for kw in review_keywords:
+        if kw in title or kw in abstract:
+            return "Review Paper"
+    if "review" in venue:
+        return "Review Paper"
+
+    # --- Data Usage ---
+    mission_lower = mission_name.lower()
+
+    # Check mission-specific data product terms
+    data_terms = _MISSION_DATA_TERMS.get(mission_name, [])
+    for term in data_terms:
+        if term in text:
+            return "Data Usage"
+
+    # Check usage phrases near mission name
+    for phrase_pat in _USAGE_PHRASES:
+        pattern = phrase_pat + r".{0,40}" + re.escape(mission_lower)
+        if re.search(pattern, text):
+            return "Data Usage"
+        # Also check mission name before the phrase
+        pattern2 = re.escape(mission_lower) + r".{0,40}" + phrase_pat
+        if re.search(pattern2, text):
+            return "Data Usage"
+
+    # --- Simple Citation (default) ---
+    return "Simple Citation"
 
 
 def classify_engagement(paper):
@@ -765,9 +846,9 @@ def process_file(input_path, output_path, model_name=None):
         data = json.load(f)
 
     # Filter out papers with invalid years
-    # Valid range: 1990 (reasonable start) to current year (2025)
+    # Valid range: 1990 (reasonable start) to current year (2026)
     MIN_YEAR = 1990
-    MAX_YEAR = 2025
+    MAX_YEAR = 2026
 
     original_count = len(data)
     filtered_data = []
@@ -794,8 +875,11 @@ def process_file(input_path, output_path, model_name=None):
         paper['research_domain'] = domain
         domain_counts[domain] = domain_counts.get(domain, 0) + 1
 
-        # Add engagement level
-        engagement = classify_engagement(paper)
+        # Add engagement level (missions use 3-level system)
+        if model_name in ("GRACE", "SWOT"):
+            engagement = classify_mission_engagement(paper, model_name)
+        else:
+            engagement = classify_engagement(paper)
         paper['engagement_level'] = engagement
         engagement_counts[engagement] = engagement_counts.get(engagement, 0) + 1
 
