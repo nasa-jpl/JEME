@@ -62,25 +62,39 @@ const GenericResearchDomainsPage = () => {
 
   const processData = (data) => {
     try {
-      // Extract unique research domains
-      const domains = [...new Set(data
-        .map(paper => paper.research_domain)
-        .filter(domain => domain && domain !== "Unknown" && domain !== "Not specified")
-      )];
+      // Extract unique research domains (multi-label aware)
+      const domainSet = new Set();
+      data.forEach(paper => {
+        const paperDomains = (paper.research_domains && paper.research_domains.length > 0)
+          ? paper.research_domains
+          : (paper.research_domain ? [paper.research_domain] : []);
+        paperDomains.forEach(d => {
+          if (d && d !== "Unknown" && d !== "Not specified") domainSet.add(d);
+        });
+      });
+      const domains = [...domainSet];
 
-      // Count papers by domain
+      // Count papers by domain (a paper can count in multiple domains)
       const domainStats = {};
       domains.forEach(domain => {
-        domainStats[domain] = data.filter(paper => 
-          paper.research_domain === domain
-        ).length;
+        domainStats[domain] = data.filter(paper => {
+          const paperDomains = (paper.research_domains && paper.research_domains.length > 0)
+            ? paper.research_domains
+            : (paper.research_domain ? [paper.research_domain] : []);
+          return paperDomains.includes(domain);
+        }).length;
       });
 
       // Group papers by year - Filter by selected domain first
       const yearlyData = {};
-      const filteredDataForYear = selectedDomain === 'all' 
-        ? data 
-        : data.filter(paper => paper.research_domain === selectedDomain);
+      const filteredDataForYear = selectedDomain === 'all'
+        ? data
+        : data.filter(paper => {
+            const paperDomains = (paper.research_domains && paper.research_domains.length > 0)
+              ? paper.research_domains
+              : (paper.research_domain ? [paper.research_domain] : []);
+            return paperDomains.includes(selectedDomain);
+          });
       
       filteredDataForYear.forEach(paper => {
         // Extract year from multiple possible sources
@@ -102,9 +116,14 @@ const GenericResearchDomainsPage = () => {
       });
 
       // Filter papers for display
-      const filteredPapers = selectedDomain === 'all' 
-        ? data.slice(0, 50) // Show first 50 papers
-        : data.filter(paper => paper.research_domain === selectedDomain).slice(0, 50);
+      const filteredPapers = selectedDomain === 'all'
+        ? data.slice(0, 50)
+        : data.filter(paper => {
+            const paperDomains = (paper.research_domains && paper.research_domains.length > 0)
+              ? paper.research_domains
+              : (paper.research_domain ? [paper.research_domain] : []);
+            return paperDomains.includes(selectedDomain);
+          }).slice(0, 50);
 
       setProcessedData({
         domainStats,
@@ -644,9 +663,21 @@ const GenericResearchDomainsPage = () => {
                             <div className="text-sm text-gray-900">{year || 'Unknown'}</div>
                           </td>
                           <td className="px-6 py-4">
-                            <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium ${getDomainColor(paper.research_domain || 'Unknown')}`}>
-                              {paper.research_domain || 'Unknown'}
-                            </span>
+                            <div className="flex flex-wrap gap-1">
+                              {((paper.research_domains && paper.research_domains.length > 0)
+                                ? paper.research_domains.slice(0, 3)
+                                : [paper.research_domain || 'Unknown']
+                              ).map((domain, di) => (
+                                <span key={di} className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium ${getDomainColor(domain)}`}>
+                                  {domain}
+                                </span>
+                              ))}
+                              {paper.research_domains && paper.research_domains.length > 3 && (
+                                <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-gray-100 text-gray-600">
+                                  +{paper.research_domains.length - 3}
+                                </span>
+                              )}
+                            </div>
                           </td>
                           <td className="px-6 py-4">
                             <div className="text-xs text-gray-600 max-w-32">

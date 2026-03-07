@@ -100,6 +100,7 @@ export const extractPublicationData = (entry) => {
         doi: entry.DOI || entry.doi || '',
         models: entry.models || [],
         researchDomain: entry.research_domain || 'Unknown',
+        researchDomains: entry.research_domains || (entry.research_domain ? [entry.research_domain] : []),
         abstract: entry.abstract || '',
         publisher: entry.publisher || 'Unknown',
         journal: entry['container-title']?.[0] || 'Unknown Journal',
@@ -120,6 +121,7 @@ export const extractPublicationData = (entry) => {
         doi: entry.doi || entry.DOI || '',
         models: entry.models || [],
         researchDomain: entry.research_domain || 'Unknown',
+        researchDomains: entry.research_domains || (entry.research_domain ? [entry.research_domain] : []),
         abstract: entry.abstract || '',
         publisher: entry.publisher || 'Unknown',
         journal: entry.venue || entry.journal || 'Unknown Journal',
@@ -245,27 +247,34 @@ export const calculateMetrics = (citationsData) => {
   }
 };
 
-// Process research domains data
+// Process research domains data (supports multi-label research_domains array)
 export const processResearchDomains = (citationsData) => {
   try {
     const publications = citationsData.map(extractPublicationData).filter(Boolean);
     const domainStats = {};
-    
+
     publications.forEach(pub => {
-      const domain = pub.researchDomain;
-      if (!domainStats[domain]) {
-        domainStats[domain] = {
-          name: domain,
-          papers: 0,
-          citations: 0,
-          avgCitations: 0,
-          publications: []
-        };
-      }
-      
-      domainStats[domain].papers += 1;
-      domainStats[domain].citations += pub.citations;
-      domainStats[domain].publications.push(pub);
+      // Use multi-label domains if available, otherwise fall back to single domain
+      const domains = (pub.researchDomains && pub.researchDomains.length > 0)
+        ? pub.researchDomains
+        : [pub.researchDomain];
+
+      domains.forEach(domain => {
+        if (!domain || domain === 'Unknown') return;
+        if (!domainStats[domain]) {
+          domainStats[domain] = {
+            name: domain,
+            papers: 0,
+            citations: 0,
+            avgCitations: 0,
+            publications: []
+          };
+        }
+
+        domainStats[domain].papers += 1;
+        domainStats[domain].citations += pub.citations;
+        domainStats[domain].publications.push(pub);
+      });
     });
     
     // Calculate averages

@@ -64,7 +64,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Radar Meteorology",
+      "Atmospheric Measurement Techniques",
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "The Effect of Surface Observations on Enhancing the GIIRS Thermodynamic Profile Retrieval",
@@ -147,7 +156,15 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Data Assimilation",
+      "Boundary Layer Turbulence",
+      "Atmospheric Measurement Techniques",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Dynamic Targeting Scenario to Study the Planetary Boundary Layer",
@@ -208,7 +225,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Satellite Mission Design",
+      "Boundary Layer Turbulence",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Joint 1DVar retrievals of tropospheric temperature and water vapor from Global Navigation Satellite System radio occultation (GNSS-RO) and microwave radiometer observations",
@@ -303,7 +326,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Data Assimilation",
+      "Weather Prediction",
+      "Global Navigation Satellite Systems",
+      "Atmospheric Measurement Techniques"
+    ]
   },
   {
     "title": "Next-Generation Satellite Architecture Planning-Scientific Arguments for Fusing Hyperspectral Microwave/Infrared Data Using Machine Learning",
@@ -360,7 +391,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Satellite Mission Design",
+      "Atmospheric Science",
+      "Data Assimilation",
+      "Atmospheric Measurement Techniques",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Joint 1DVar Retrievals of Tropospheric Temperature and Water Vapor from GNSS-RO and Microwave Radiometer Observations",
@@ -463,7 +503,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Weather Prediction",
+      "Data Assimilation",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Synthetic Observations of the Planetary Boundary Layer from Space: A Retrieval Observing System Simulation Experiment Framework",
@@ -589,7 +636,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Observing System Design",
+      "Satellite Meteorology"
+    ]
   },
   {
     "title": "Warming from cold pools: A pathway for mesoscale organization to alter Earth's radiation budget",
@@ -647,7 +701,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Climate Modeling",
+      "Climate Science"
+    ]
   },
   {
     "title": "The Influence of Parameterized Shallow Convection on Trade‐Wind Clouds and Circulations in the HARMONIE‐AROME Mesoscale Model",
@@ -706,7 +766,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Weather Prediction",
+      "Atmospheric Science",
+      "Convection & Cloud Physics",
+      "Mesoscale Meteorology",
+      "Cloud Parameterization",
+      "Atmospheric Modeling",
+      "Model Intercomparison"
+    ]
   },
   {
     "title": "Symmetry in Mesoscale Circulations Explains Weak Impact of Trade Cumulus Self‐Organization on the Radiation Budget in Large‐Eddy Simulations",
@@ -766,7 +835,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Modeling",
+      "Atmospheric Science",
+      "Climate Science",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "The Unique Behavior of Vertical Velocity in Developing Deep Convection",
@@ -824,7 +900,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Cloud Botany: Shallow Cumulus Clouds in an Ensemble of Idealized Large‐Domain Large‐Eddy Simulations of the Trades",
@@ -890,7 +972,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Modeling",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "High-Performance Computing"
+    ]
   },
   {
     "title": "Computational Domain Size Effects on Large-Eddy Simulations of Precipitating Shallow Cumulus Convection",
@@ -949,7 +1038,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Modeling",
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "Boundary layer moisture variability at the Atmospheric Radiation Measurement (ARM) Eastern North Atlantic observatory during marine conditions",
@@ -1017,7 +1113,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Observational Meteorology",
+      "Weather Prediction",
+      "Climate Modeling",
+      "Atmospheric Water Cycle"
+    ]
   },
   {
     "title": "The Time Scale of Shallow Convective Self‐Aggregation in Large‐Eddy Simulations Is Sensitive to Numerics",
@@ -1087,7 +1191,13 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Atmospheric Modeling",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "Boundary layer moisture variability at the ARM Eastern North Atlantic Observatory",
@@ -1146,7 +1256,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Observational Meteorology",
+      "Weather Prediction",
+      "Climate Modeling",
+      "Atmospheric Water Cycle"
+    ]
   },
   {
     "title": "Classification of Fog Life‐Cycle Phases Using Ground‐Based and Satellite‐Based Observations",
@@ -1222,7 +1340,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Observational Meteorology",
+      "Weather Prediction",
+      "Algorithm Development & Evaluation"
+    ]
   },
   {
     "title": "A Detailed Performance Evaluation of the GK2A Fog Detection Algorithm Using Ground-Based Visibility Meter Data (2021–2023, Part I)",
@@ -1296,7 +1421,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Algorithm Development & Evaluation",
+      "Atmospheric Science",
+      "Observational Meteorology",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Multi-field coupling analysis on the driving risk of expressways in a rain and fog mixed environment",
@@ -1355,7 +1487,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Traffic Engineering",
+      "Atmospheric Science",
+      "Risk Assessment",
+      "Numerical Methods",
+      "Civil Engineering"
+    ]
   },
   {
     "title": "Algorithm for continual monitoring of fog based on geostationary satellite imagery",
@@ -1449,7 +1588,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Science",
+      "Satellite Meteorology",
+      "Algorithm Development"
+    ]
   },
   {
     "title": "A satellite-based analysis of semi-direct effects of biomass burning aerosols on fog and low-cloud dissipation in the Namib Desert",
@@ -1527,7 +1673,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry",
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Climate Science",
+      "Ecosystem Science",
+      "Boundary Layer Meteorology"
+    ]
   },
   {
     "title": "Challenges in modelling and forecasting radiation fog with atypical dissipation during the night: a case study at Zagreb Airport",
@@ -1589,7 +1743,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Weather Prediction",
+      "Atmospheric Science",
+      "Numerical Weather Prediction",
+      "Cloud Physics",
+      "Boundary Layer Meteorology",
+      "Observational Meteorology"
+    ]
   },
   {
     "title": "Observations and quantification of fog droplet deposition made during the SOFOG3D campaign",
@@ -1645,7 +1807,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Boundary Layer Turbulence",
+      "Observational Meteorology",
+      "Hydrology & Water Resources",
+      "Numerical Weather Prediction"
+    ]
   },
   {
     "title": "Bayesian Neural Networks for Satellite Fog Detection: Quantifying Epistemic and Aleatoric Uncertainties",
@@ -1703,7 +1873,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Synoptic Scale Controls and Aerosol Effects on Fog and Low Stratus Life Cycle Processes in the Po Valley, Italy",
@@ -1779,7 +1955,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Aerosol Science",
+      "Remote Sensing",
+      "Machine Learning",
+      "Climate Science",
+      "Geophysics"
+    ]
   },
   {
     "title": "An analysis of fog and low stratus life‐cycle regimes over central Europe",
@@ -1838,7 +2022,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Machine Learning",
+      "Climate Science",
+      "Applied Meteorology",
+      "Geographic Information Science"
+    ]
   },
   {
     "title": "Role of thermodynamic and turbulence processes on the fog life cycle during SOFOG3D experiment",
@@ -1904,7 +2096,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Remote Sensing",
+      "Convection & Cloud Physics",
+      "Field Experimentation",
+      "Meteorological Instrumentation"
+    ]
   },
   {
     "title": "Role of thermodynamic and turbulence processes on the fog life cycle during SOFOF3D experiment",
@@ -1972,7 +2172,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Remote Sensing",
+      "Convection & Cloud Physics",
+      "Field Experimentation",
+      "Meteorological Instrumentation"
+    ]
   },
   {
     "title": "Landslide Responses to Typhoon Events in Taiwan During 2019 and 2023",
@@ -2062,7 +2270,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Natural Hazards",
+      "Geomorphology",
+      "Remote Sensing",
+      "Tropical Meteorology",
+      "Geographic Information Systems (GIS)",
+      "Disaster Risk Management"
+    ]
   },
   {
     "title": "Analysis of profuse winter rainfall over Northern Taiwan and weather-type association",
@@ -2122,7 +2338,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Precipitation Science",
+      "Boundary Layer Meteorology",
+      "Meteorology",
+      "Climate Variability & Teleconnections",
+      "Cloud Physics"
+    ]
   },
   {
     "title": "An Idealized Cloud-Resolving Modeling Study on Rainfall in Taiwan Under Uniform Northeasterly Flow in Winter, Part I: Effects of Wind Direction, Speed, and Moisture Amount",
@@ -2181,7 +2405,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Modeling",
+      "Cloud-Resolving Modeling",
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Precipitation Science",
+      "Atmospheric Science",
+      "Meteorology"
+    ]
   },
   {
     "title": "A case study of offshore evaporation ducts in northeastern Taiwan during summer time",
@@ -2239,7 +2472,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Meteorology",
+      "Meteorological Instrumentation",
+      "Air-Sea Interaction",
+      "Atmospheric Propagation",
+      "Remote Sensing (Atmospheric)"
+    ]
   },
   {
     "title": "Regional discrepancies in the microphysical attributes of summer season rainfall over Taiwan using GPM DPR",
@@ -2314,7 +2555,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Precipitation Science",
+      "Cloud Physics",
+      "Radar Meteorology",
+      "Satellite Meteorology",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Identifying the Deep‐Inflow Mixing Features in Orographically‐Locked Diurnal Convection",
@@ -2374,7 +2623,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Atmospheric Dynamics",
+      "Precipitation Processes"
+    ]
   },
   {
     "title": "Analysis of the Interdecadal and Interannual Variability of Autumn Extreme Rainfall in Taiwan Using a Deep-Learning-Based Weather Typing Approach",
@@ -2436,7 +2692,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Atmospheric Science",
+      "Climate Variability & Change",
+      "Precipitation Processes",
+      "Tropical Meteorology",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Evaluate the Impact of Power-Law Scattering Amplitude Fitting on Dual-Polarization Radar Data Assimilation—Summertime Cases Study",
@@ -2497,7 +2761,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Data Assimilation",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Precipitation Processes",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Operational machine learning for remote spectroscopic detection of CH$_{4}$ point sources",
@@ -2593,7 +2865,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring",
+      "Satellite Missions",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "Satellite-Based Methane Emission Monitoring: A Review Across Industries",
@@ -2675,7 +2955,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry",
+      "Satellite Missions",
+      "Carbon Cycle",
+      "Data Analysis & Interpretation"
+    ]
   },
   {
     "title": "Review of methane emission source tracing methods in oilfield regions",
@@ -2735,7 +3023,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Climate Change",
+      "Environmental Monitoring",
+      "Machine Learning",
+      "Data Fusion",
+      "Oil & Gas Engineering"
+    ]
   },
   {
     "title": "Tightening up methane plume source rate estimation in EnMAP and PRISMA images",
@@ -2813,7 +3110,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Science",
+      "Climate Change",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "A baseline slope index to detect natural gas microleakage-stressed vegetation considering shadow removal in hyperspectral imagery",
@@ -2876,7 +3181,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Vegetation Science",
+      "Natural Gas Engineering",
+      "Image Processing",
+      "Methane Emissions"
+    ]
   },
   {
     "title": "Robust Small Methane Plume Segmentation in Satellite Imagery",
@@ -2961,7 +3274,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Machine Learning",
+      "Climate Change",
+      "Image Processing"
+    ]
   },
   {
     "title": "kMetha-Mamba: K-means clustering mamba for methane plumes segmentation",
@@ -3025,7 +3345,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Machine Learning",
+      "Image Processing",
+      "Climate Change"
+    ]
   },
   {
     "title": "Airborne Remote Sensing for Environmental and Disaster Management Applications",
@@ -3092,7 +3419,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Disaster Management",
+      "Environmental Science",
+      "Methane Emissions",
+      "Hydrology & Water Resources",
+      "Urban Planning",
+      "Forestry",
+      "Climate Change"
+    ]
   },
   {
     "title": "Optimizing Methane Detection On Board Satellites: Speed, Accuracy, and Low-Power Solutions for Resource-Constrained Hardware",
@@ -3150,7 +3487,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Satellite Technology",
+      "Algorithm Development",
+      "Climate Change",
+      "Computer Vision",
+      "Embedded Systems"
+    ]
   },
   {
     "title": "AI and Machine Learning for Optimizing Waste Management and Reducing Air Pollution",
@@ -3208,7 +3554,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Waste Management",
+      "Air Quality",
+      "Environmental Science",
+      "Urban Planning",
+      "Data Science",
+      "Policy & Governance"
+    ]
   },
   {
     "title": "SSRMF: A sparse spectral reconstruction enhanced matched filter for improving point-source methane emission detection in complex terrain",
@@ -3271,7 +3626,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Signal Processing",
+      "Algorithm Development",
+      "Geospatial Analysis",
+      "Environmental Monitoring",
+      "Climate Change"
+    ]
   },
   {
     "title": "PlumeBed: A Multispectral Satellite Methane Plume Detector Enabled by Transfer Learning of a Multi‐Source Hyperspectral Data Set",
@@ -3356,7 +3720,17 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Science",
+      "Satellite Technology",
+      "Data Science",
+      "Climate Change",
+      "Geophysics"
+    ]
   },
   {
     "title": "Multiplatform Methane Plume Detection via Model and Domain Adaptation",
@@ -3452,7 +3826,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Climate Change",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Advancements in satellite-based methane point source monitoring: A systematic review",
@@ -3513,7 +3895,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Climate Change",
+      "Environmental Monitoring",
+      "Spectroscopy"
+    ]
   },
   {
     "title": "Towards Operational Automated Greenhouse Gas Plume Detection",
@@ -3578,7 +3968,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Greenhouse Gas Monitoring",
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Climate Change"
+    ]
   },
   {
     "title": "Domain adaptation based high-fidelity prediction for hydrogen-blended natural gas leakage and dispersion",
@@ -3640,7 +4038,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Energy Systems",
+      "Chemical Transport",
+      "Numerical Methods",
+      "Environmental Engineering",
+      "Atmospheric Science",
+      "Risk Assessment"
+    ]
   },
   {
     "title": "Assessment of Elevated CO2 and CH4 Emission Using Airborne and Spaceborne Observations through Spectral Normalized Matched Filter Algorithm",
@@ -3704,7 +4111,16 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Greenhouse Gas Monitoring",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Spectroscopy",
+      "Environmental Monitoring",
+      "Air Quality",
+      "Climate Change"
+    ]
   },
   {
     "title": "A data-efficient deep transfer learning framework for methane super-emitter detection in oil and gas fields using the Sentinel-2 satellite",
@@ -3789,7 +4205,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Methane Emissions",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring",
+      "Satellite Imagery Analysis"
+    ]
   },
   {
     "title": "Linear integrated mass enhancement: A method for estimating hotspot emission rates from space-based plume observations",
@@ -3849,7 +4273,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Emission Estimation",
+      "Atmospheric Measurement Techniques",
+      "Numerical Methods",
+      "Atmospheric Chemistry",
+      "Atmospheric Modeling"
+    ]
   },
   {
     "title": "Quantifying the Impact of Environmental Factors on the Methane Point-Source Emission Algorithm",
@@ -3911,7 +4343,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Methane Emissions",
+      "Emission Estimation",
+      "Atmospheric Measurement Techniques",
+      "Atmospheric Chemistry",
+      "Numerical Methods",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Hyperspectral image methane detection based on DETR",
@@ -3986,7 +4427,15 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Methane Emissions",
+      "Image Processing",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Separating and quantifying facility-level methane emissions with overlapping plumes for spaceborne methane monitoring",
@@ -4046,7 +4495,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Emission Estimation",
+      "Atmospheric Measurement Techniques",
+      "Atmospheric Modeling",
+      "Numerical Methods",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Optical gas imaging and deep learning for quantifying enteric methane emissions from rumen fermentation in vitro",
@@ -4105,7 +4563,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Image Processing",
+      "Environmental Monitoring",
+      "Agricultural Science",
+      "Greenhouse Gas Emissions",
+      "Biogeochemistry"
+    ]
   },
   {
     "title": "PRISMethaNet: A novel deep learning model for landfill methane detection using PRISMA satellite data",
@@ -4174,7 +4640,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Environmental Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Waste Management",
+      "Photogrammetry"
+    ]
   },
   {
     "title": "Multi-task deep learning for quantifying methane emissions from 2-D plume imagery with Low Signal-to-Noise Ratio",
@@ -4250,7 +4725,15 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Signal Processing"
+    ]
   },
   {
     "title": "Analyzing Methane Emissions Using Satellite Imagery and Artificial Intelligence",
@@ -4325,7 +4808,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Environmental Monitoring",
+      "Greenhouse Gas Emissions",
+      "Energy Systems",
+      "Climate Change",
+      "Atmospheric Chemistry"
+    ]
   },
   {
     "title": "A hybrid expert neural network for predicting hydrogen concentration under the ceiling in underground garage",
@@ -4388,7 +4880,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Building Science",
+      "Safety Engineering",
+      "Risk Assessment",
+      "Chemical Transport",
+      "Sensor Networks"
+    ]
   },
   {
     "title": "HyperspectralViTs: General Hyperspectral Models for On-Board Remote Sensing",
@@ -4462,7 +4962,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Deep Learning",
+      "Hyperspectral Imaging",
+      "Satellite Technology"
+    ]
   },
   {
     "title": "Intensified greenhouse gas prediction: Configuring Gate with Fine-Tuning Shifts with Bi-LSTM and GRU System",
@@ -4530,7 +5037,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Climate Change",
+      "Machine Learning",
+      "Deep Learning",
+      "Atmospheric Science",
+      "Carbon Cycle",
+      "Emissions Monitoring"
+    ]
   },
   {
     "title": "Satellite‐Based Surveys Reveal Substantial Methane Point‐Source Emissions in Major Oil & Gas Basins of North America During 2022–2023",
@@ -4612,7 +5128,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Emissions Monitoring",
+      "Satellite Technology",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Hyperspectral Image Segmentation of Methane Plumes Using Large Machine Learning Model",
@@ -4681,7 +5206,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Machine Learning",
+      "Computer Vision",
+      "Hyperspectral Imaging",
+      "Remote Sensing",
+      "Emissions Monitoring",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Deep Learning-Based quantifications of methane emissions with field applications",
@@ -4740,7 +5274,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Deep Learning",
+      "Machine Learning",
+      "Remote Sensing",
+      "Emissions Monitoring",
+      "Atmospheric Modeling",
+      "Climate Change",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Segmenting hyperspectral images of methane plumes with a large machine learning model",
@@ -4800,7 +5344,18 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Image Processing",
+      "Air Quality",
+      "Geospatial AI/ML",
+      "Carbon Cycle",
+      "Chemical Transport"
+    ]
   },
   {
     "title": "The ddeq Python library for point source quantification from remote sensing images (version 1.0)",
@@ -4899,7 +5454,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Software Development",
+      "Numerical Methods",
+      "Chemical Transport",
+      "Air Quality"
+    ]
   },
   {
     "title": "Deep learning for hazard quantification from imagery",
@@ -4957,7 +5521,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Hazard Assessment",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Volcanology",
+      "Chemical Transport",
+      "Air Quality"
+    ]
   },
   {
     "title": "U-Plume: automated algorithm for plume detection and source quantification by satellite point-source imagers",
@@ -5025,7 +5599,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Image Processing",
+      "Air Quality",
+      "Chemical Transport"
+    ]
   },
   {
     "title": "CH4Net: a deep learning model for monitoring methane super-emitters with Sentinel-2 imagery",
@@ -5095,7 +5678,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Air Quality",
+      "Geospatial AI/ML",
+      "Carbon Cycle",
+      "Chemical Transport"
+    ]
   },
   {
     "title": "Quantitative imaging of carbon dioxide plumes using a ground-based shortwave infrared spectral camera",
@@ -5159,7 +5752,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Measurement Techniques",
+      "Remote Sensing",
+      "Atmospheric Chemistry & Composition",
+      "Spectroscopy",
+      "Carbon Cycle",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Unlocking the Potential: Multi-task Deep Learning for Spaceborne Quantitative Monitoring of Fugitive Methane Plumes",
@@ -5234,7 +5835,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Chemistry & Composition",
+      "Deep Learning",
+      "Environmental Monitoring",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "Detection of methane plumes using Sentinel-2 satellite images and deep neural networks trained on synthetically created label data",
@@ -5326,7 +5935,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Chemistry & Composition",
+      "Deep Learning",
+      "Data Science",
+      "Atmospheric Modeling",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Semantic segmentation of methane plumes with hyperspectral machine learning models",
@@ -5412,7 +6030,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Chemistry & Composition",
+      "Deep Learning",
+      "Data Science",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "S2MetNet: A novel dataset and deep learning benchmark for methane point source quantification using Sentinel-2 satellite imagery",
@@ -5496,7 +6122,15 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Chemistry & Composition",
+      "Data Science",
+      "Deep Learning",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Autonomous Detection of Methane Emissions in Multispectral Satellite Data Using Deep Learning",
@@ -5564,7 +6198,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Air Quality",
+      "Carbon Cycle",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Toward On-Board Methane Detection in Hyperspectral Images",
@@ -5630,7 +6272,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Science",
+      "Space Systems Engineering",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Atmospheric remote sensing for anthropogenic methane emissions: Applications and research opportunities.",
@@ -5689,7 +6338,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Air Quality",
+      "Carbon Cycle",
+      "Environmental Policy & Management"
+    ]
   },
   {
     "title": "GEO-Bench: Toward Foundation Models for Earth Monitoring",
@@ -5761,7 +6418,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Computer Vision",
+      "Data Science",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Real-time hydrogen release and dispersion modelling of hydrogen refuelling station by using deep learning probability approach",
@@ -5825,7 +6489,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Chemical Transport",
+      "Machine Learning",
+      "Numerical Methods",
+      "Environmental Engineering",
+      "Risk Assessment & Management",
+      "Energy Systems",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "MethaneMapper: Spectral Absorption Aware Hyperspectral Transformer for Methane Detection",
@@ -5901,7 +6574,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Climate Change",
+      "Computer Vision"
+    ]
   },
   {
     "title": "Understanding the potential of Sentinel-2 for monitoring methane point emissions",
@@ -5993,7 +6674,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Satellite Remote Sensing",
+      "Climate Change Mitigation",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Detecting Methane Plumes using PRISMA: Deep Learning Model and Data Augmentation",
@@ -6094,7 +6783,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Satellite Remote Sensing",
+      "Computer Vision"
+    ]
   },
   {
     "title": "Deep-Learning-Based Gas Leak Source Localization From Sparse Sensor Data",
@@ -6153,7 +6850,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Sensor Networks",
+      "Inverse Problems",
+      "Environmental Monitoring",
+      "Atmospheric Science",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Special issue on remote sensing of greenhouse gas emissions",
@@ -6213,7 +6918,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Climate Change",
+      "Atmospheric Science",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Quantifying methane emissions from the global scale down to point sources using satellite observations of atmospheric methane",
@@ -6404,7 +7116,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gases",
+      "Atmospheric Science",
+      "Inverse Modeling",
+      "Chemical Transport"
+    ]
   },
   {
     "title": "Real-time natural gas release forecasting by using physics-guided deep learning probability model",
@@ -6467,7 +7186,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Air Quality",
+      "Chemical Transport",
+      "Atmospheric Science",
+      "Carbon Cycle",
+      "Numerical Methods",
+      "Climate Change"
+    ]
   },
   {
     "title": "Toward Foundation Models for Earth Monitoring: Proposal for a Climate Change Benchmark",
@@ -6534,7 +7262,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Climate Change",
+      "Earth System Science"
+    ]
   },
   {
     "title": "MPSUNet: A Deep Learning-Based Segmentation Framework for Methane Plume Detection With Space-Based Hyperspectral and Multispectral Imagery",
@@ -6620,7 +7354,15 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Air Quality",
+      "Chemical Transport",
+      "Climate Change",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "CELNet: A comprehensive efficient learning network for atmospheric plume identification from remotely sensed methane concentration images",
@@ -6680,7 +7422,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Machine Learning",
+      "Air Quality",
+      "Chemical Transport",
+      "Climate Change",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Hyperspectral Methane Plume Segmentation Through Foundation Computer Vision Models",
@@ -6749,7 +7499,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Air Quality",
+      "Chemical Transport",
+      "Climate Change",
+      "Atmospheric Science",
+      "Environmental Science"
+    ]
   },
   {
     "title": "A framework for describing and classifying methane reporting requirements, emission sources, and monitoring methods",
@@ -6812,7 +7571,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Environmental Monitoring",
+      "Atmospheric Science",
+      "Data Management",
+      "Environmental Science"
+    ]
   },
   {
     "title": "Using a deep neural network to detect methane point sources 1 and quantify emissions from PRISMA hyperspectral satellite 2 images 3",
@@ -6886,7 +7652,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Satellite Imagery Analysis",
+      "Climate Change"
+    ]
   },
   {
     "title": "煤炭行业甲烷排放卫星遥感研究进展与展望",
@@ -6947,7 +7722,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Industrial Emissions",
+      "Climate Change",
+      "Air Quality",
+      "Geospatial Data Science",
+      "Biogeochemistry"
+    ]
   },
   {
     "title": "Single-blind test of nine methane-sensing satellite systems from three continents",
@@ -7010,7 +7795,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Satellite Technology",
+      "Climate Change"
+    ]
   },
   {
     "title": "Using a deep neural network to detect methane point sources and 1 quantify emissions from PRISMA hyperspectral satellite images",
@@ -7084,7 +7877,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Satellite Imagery Analysis",
+      "Climate Change"
+    ]
   },
   {
     "title": "GHGPSE-Net: A method towards spaceborne automated extraction of greenhouse-gas point sources using point-object-detection deep neural network",
@@ -7152,7 +7954,17 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Satellite Imagery Analysis",
+      "Climate Change Mitigation",
+      "Environmental Policy & Regulation"
+    ]
   },
   {
     "title": "Using a deep neural network to detect methane point sources and quantify emissions from PRISMA hyperspectral satellite images",
@@ -7234,7 +8046,14 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Carbon Cycle",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "HyperspectralViTs: Fast and Accurate methane detection on-board satellites",
@@ -7291,7 +8110,12 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "A data-efﬁcient deep transfer learning framework for methane super-emitter detection in oil and gas ﬁelds using the Sentinel-2 satellite",
@@ -7365,7 +8189,14 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "Considering the observation and illumination angular configuration for an improved detection and quantification of methane emissions",
@@ -7424,7 +8255,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Environmental Monitoring",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "On-orbit calibration and performance of the EMIT imaging spectrometer",
@@ -7544,7 +8382,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Instrument Science & Technology",
+      "Calibration & Validation",
+      "Geology & Geochemistry",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Differential absorption lidar measurements of water vapor by the High Altitude Lidar Observatory (HALO): retrieval framework and first results",
@@ -7624,7 +8469,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Lidar",
+      "Remote Sensing",
+      "Atmospheric Measurement Techniques",
+      "Atmospheric Science",
+      "Water Vapor",
+      "Aerosol Science",
+      "Cloud Physics"
+    ]
   },
   {
     "title": "New sampling strategy mitigates a solar-geometry-induced bias in sub-kilometre vapour scaling statistics derived from imaging spectroscopy",
@@ -7692,7 +8546,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Measurement Techniques",
+      "Planetary Boundary Layer",
+      "Atmospheric Modeling",
+      "Atmospheric Science",
+      "Convection & Cloud Physics"
+    ]
   },
   {
     "title": "The Planetary Boundary Layer – where are we now?",
@@ -7748,7 +8610,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Planetary Boundary Layer",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Large Eddy Simulation of the Diurnal Cycle of Shallow Convection in the Central Amazon",
@@ -7805,7 +8671,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Climate Modeling",
+      "Atmospheric Science",
+      "Tropical Meteorology",
+      "Observational Meteorology"
+    ]
   },
   {
     "title": "Investigating Turbulent Dynamics in the Nocturnal Boundary Layer: A Large Eddy Simulation Study of the South Fork Wind Farm",
@@ -7864,7 +8738,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wind Energy",
+      "Planetary Boundary Layer",
+      "Atmospheric Modeling",
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Computational Fluid Dynamics"
+    ]
   },
   {
     "title": "Improving the representation of shallow cumulus convection with the simplified-higher-order-closure–mass-flux (SHOC+MF v1.0) approach",
@@ -7927,7 +8809,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Boundary Layer Turbulence",
+      "Climate Modeling",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Model Development"
+    ]
   },
   {
     "title": "Model and Observation for surface–atmosphere interactions over heterogeneous landscape: MOSAI project",
@@ -8004,7 +8894,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Land-Atmosphere Interactions",
+      "Atmospheric Modeling",
+      "Atmospheric Measurement Techniques",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "A Satellite Remote Sensing and Doppler LiDAR-based Framework for Evaluating Mesoscale Flows Driven by Surface Heterogeneity",
@@ -8073,7 +8969,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Mesoscale Meteorology",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "Mean turbulent momentum fluxes and wind deficits in nocturnal stable atmospheric boundary layers",
@@ -8132,7 +9034,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Fluid Dynamics",
+      "Analytical Modeling"
+    ]
   },
   {
     "title": "Evaluation of Six Subgrid-Scale Models for LES of Wind Farms in Stable and Conventionally-Neutral Atmospheric Stratification",
@@ -8191,7 +9099,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Large-Eddy Simulation",
+      "Numerical Methods",
+      "Wind Energy",
+      "Boundary Layer Turbulence",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "The global properties of nocturnal stable atmospheric boundary layers",
@@ -8250,7 +9165,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Large-Eddy Simulation",
+      "Numerical Methods",
+      "Fluid Dynamics"
+    ]
   },
   {
     "title": "Standardized Daily High‐Resolution Large‐Eddy Simulations of the Arctic Boundary Layer and Clouds During the Complete MOSAiC Drift",
@@ -8318,7 +9240,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Large-Eddy Simulation",
+      "Atmospheric Science",
+      "Polar Meteorology",
+      "Convection & Cloud Physics",
+      "Observational Data Analysis",
+      "Numerical Methods",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "Challenges of high-fidelity air quality modeling in urban environments – PALM sensitivity study during stable conditions",
@@ -8390,7 +9321,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality",
+      "Atmospheric Science",
+      "Urban Meteorology",
+      "Numerical Methods",
+      "Environmental Modeling",
+      "Model Evaluation",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "Designing a Fully‐Tunable and Versatile TKE‐l Turbulence Parameterization for the Simulation of Stable Boundary Layers",
@@ -8460,7 +9400,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Atmospheric Modeling",
+      "Model Development"
+    ]
   },
   {
     "title": "Moisture and Aerosols as Key Drivers of the Turbulent State of Arctic Mixed‐Phase Clouds During Idealized Moist Intrusions",
@@ -8518,7 +9465,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Polar Meteorology",
+      "Boundary Layer Turbulence",
+      "Aerosol Science",
+      "Numerical Methods",
+      "Sea Ice Dynamics"
+    ]
   },
   {
     "title": "Stable Boundary Layers with Subsidence: Scaling and Similarity of the Steady State",
@@ -8584,7 +9540,14 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Atmospheric Dynamics",
+      "Fluid Dynamics"
+    ]
   },
   {
     "title": "A Study of Intermittent Turbulence in Stable Arctic Boundary Layers",
@@ -8642,7 +9605,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Polar Meteorology",
+      "Observational Meteorology",
+      "Atmospheric Measurement",
+      "Uncrewed Aircraft Systems (UAS)"
+    ]
   },
   {
     "title": "Unsteady Land‐Sea Breeze Circulations in the Presence of a Synoptic Pressure Forcing",
@@ -8700,7 +9671,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Meteorology",
+      "Atmospheric Modeling",
+      "Numerical Methods",
+      "Mesoscale Meteorology"
+    ]
   },
   {
     "title": "Cold‐air pool development in a small Alpine valley",
@@ -8767,7 +9745,15 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Atmospheric Modeling",
+      "Field Experimentation",
+      "Mesoscale Meteorology",
+      "Boundary Layer Meteorology",
+      "Mountain Meteorology"
+    ]
   },
   {
     "title": "Effects of subgrid‐scale turbulence parametrization on the representation of clear‐air turbulence using kilometre‐ to hectometre‐scale numerical simulations",
@@ -8826,7 +9812,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Modeling",
+      "Atmospheric Turbulence",
+      "Numerical Methods",
+      "Model Evaluation",
+      "Atmospheric Science",
+      "Mesoscale Meteorology",
+      "Numerical Weather Prediction"
+    ]
   },
   {
     "title": "Evaluation of Surface Layer Stability Functions and Their Extension to First Order Turbulent Closures for Weakly and Strongly Stratified Stable Boundary Layer",
@@ -8885,7 +9880,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Meteorology",
+      "Atmospheric Turbulence",
+      "Numerical Methods",
+      "Atmospheric Modeling",
+      "Model Evaluation",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Inferring surface energy fluxes using drone data assimilation in large eddy simulations",
@@ -8949,7 +9952,19 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Data Assimilation",
+      "Remote Sensing",
+      "Atmospheric Modeling",
+      "Boundary Layer Meteorology",
+      "Numerical Methods",
+      "Hydrology & Water Resources",
+      "Ecosystem Science",
+      "Atmospheric Science",
+      "Field Experimentation",
+      "Climate Modeling"
+    ]
   },
   {
     "title": "Wind farm flow control: prospects and challenges",
@@ -9012,7 +10027,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wind Energy",
+      "Control Systems",
+      "Boundary Layer Turbulence",
+      "Energy Systems",
+      "Renewable Energy"
+    ]
   },
   {
     "title": "Impact of Clouds and Blowing Snow on Surface and Atmospheric Boundary Layer Properties Over Dome C, Antarctica",
@@ -9079,7 +10101,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cryosphere & Glaciology",
+      "Remote Sensing",
+      "Convection & Cloud Physics",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "Ice fog observed at cirrus temperatures at Dome C, Antarctic Plateau",
@@ -9141,7 +10170,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Cryosphere & Glaciology",
+      "Atmospheric Chemistry",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "On the Application of an Observations‐Based Machine Learning Parameterization of Surface Layer Fluxes Within an Atmospheric Large‐Eddy Simulation Model",
@@ -9210,7 +10246,13 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "On the effect of nocturnal radiation fog on the development of the daytime convective boundary layer: A large‐eddy simulation study",
@@ -9267,7 +10309,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Boundary Layer Turbulence",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Modification of k-ε Model for Sensible Heat and Momentum Flux Reconstruction from Surface Temperature Data",
@@ -9324,7 +10373,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Weather Prediction",
+      "Data Assimilation"
+    ]
   },
   {
     "title": "Are general circulation models obsolete?",
@@ -9385,7 +10441,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Modeling",
+      "Earth System Modeling",
+      "Model Development & Evaluation",
+      "Numerical Methods",
+      "Computational Science"
+    ]
   },
   {
     "title": "Large‐eddy simulation of very stable boundary layers. Part I: Modeling methodology",
@@ -9443,7 +10506,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Weather Prediction",
+      "Climate Modeling"
+    ]
   },
   {
     "title": "Large‐eddy simulation of very stable boundary layers. Part II: Length scales and anisotropy in stratified atmospheric turbulence",
@@ -9501,7 +10571,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Cryosphere & Glaciology",
+      "Polar Oceanography"
+    ]
   },
   {
     "title": "Numerical Analysis of the Atmospheric Boundary-Layer Turbulence Influence on Microscale Transport of Pollutant in an Idealized Urban Environment",
@@ -9561,7 +10638,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality",
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Chemical Transport",
+      "Urban Meteorology"
+    ]
   },
   {
     "title": "GABLS4 intercomparison of snow models at Dome C in Antarctica",
@@ -9627,7 +10712,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cryosphere & Glaciology",
+      "Numerical Methods",
+      "Weather Prediction",
+      "Climate Modeling",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "10 years of temperature and wind observation on a 45 m tower at Dome C, East Antarctic plateau",
@@ -9699,7 +10791,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Climatology",
+      "Cryosphere & Glaciology",
+      "Observational Meteorology",
+      "Polar Research",
+      "Data Analysis"
+    ]
   },
   {
     "title": "Transitional Atmospheric Boundary Layer in the GABLS4 Experiment Modelled Using the Explicit Algebraic Reynolds-stress Model",
@@ -9758,7 +10859,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Modeling",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Turbulence Modeling"
+    ]
   },
   {
     "title": "Impact of modified turbulent diffusion of PM2.5 aerosol in WRF-Chem simulations in Eastern China",
@@ -9824,7 +10932,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality",
+      "Atmospheric Modeling",
+      "Boundary Layer Turbulence",
+      "Atmospheric Chemistry",
+      "Chemical Transport",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Cumulant lattice Boltzmann simulations of turbulent flow above rough surfaces",
@@ -9882,7 +10998,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Fluid Dynamics (CFD)",
+      "Boundary Layer Turbulence",
+      "Fluid Dynamics",
+      "Turbulence Modeling",
+      "Experimental Fluid Dynamics"
+    ]
   },
   {
     "title": "Application of Turbulent Diffusion Term of Aerosols in Mesoscale Model",
@@ -9941,7 +11065,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Modeling",
+      "Air Quality",
+      "Chemical Transport",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Observational Meteorology"
+    ]
   },
   {
     "title": "A review on turbulent flow over rough surfaces: Fundamentals and theories",
@@ -9999,7 +11132,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Fluid Dynamics",
+      "Turbulence Modeling",
+      "Heat Transfer",
+      "Numerical Methods",
+      "Computational Fluid Dynamics"
+    ]
   },
   {
     "title": "Modeling the GABLS4 Strongly‐Stable Boundary Layer With a GCM Turbulence Parameterization: Parametric Sensitivity or Intrinsic Limits?",
@@ -10058,7 +11198,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Turbulence Modeling",
+      "Boundary Layer Turbulence",
+      "Climate Modeling",
+      "Weather Prediction",
+      "Numerical Methods",
+      "Polar Meteorology"
+    ]
   },
   {
     "title": "Large-Eddy Simulations of Stability-Varying Atmospheric Boundary Layer Flow over Isolated Buildings",
@@ -10117,7 +11266,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Computational Fluid Dynamics",
+      "Turbulence Modeling",
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Urban Meteorology"
+    ]
   },
   {
     "title": "Galilean invariance of shallow cumulus convection large-eddy simulations",
@@ -10182,7 +11339,14 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Atmospheric Modeling",
+      "Convection & Cloud Physics",
+      "Boundary Layer Turbulence",
+      "Computational Fluid Dynamics"
+    ]
   },
   {
     "title": "Representation of Boundary-Layer Processes in Numerical Weather Prediction and Climate Models",
@@ -10249,7 +11413,14 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Numerical Weather Prediction",
+      "Climate Modeling",
+      "Atmospheric Science",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Are GCMs obsolete?",
@@ -10310,7 +11481,13 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Climate Modeling",
+      "Earth System Modeling",
+      "Atmospheric Modeling",
+      "Ocean Modeling"
+    ]
   },
   {
     "title": "Modiﬁcation of k - ε Model for Sensible Heat and Momentum Flux Reconstruction from Surface Temperature Data",
@@ -10367,7 +11544,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Turbulence Modeling",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Heat Transfer",
+      "Data Assimilation"
+    ]
   },
   {
     "title": "Quantifying the Stable Boundary Layer Depth in the Arctic Region of Northern Finland",
@@ -10426,7 +11611,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Polar Meteorology",
+      "Remote Sensing",
+      "Observational Meteorology",
+      "Climate Modeling"
+    ]
   },
   {
     "title": "Decoding the Stable Boundary Layer: Comparing Stable Conditions in the Arctic Stable Boundary Layer over Finland and Alaska",
@@ -10485,7 +11678,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Polar Meteorology",
+      "Cryosphere & Glaciology"
+    ]
   },
   {
     "title": "Challenges of high-ﬁdelity air quality modeling in urban environments – PALM sensitivity study during stable conditions",
@@ -10557,7 +11756,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Air Quality",
+      "Urban Meteorology",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Environmental Modeling"
+    ]
   },
   {
     "title": "Do Subsampling Strategies Reduce the Confounding Effect of Errors in Bispectral Retrievals on Estimates of Aerosol Cloud Interactions?",
@@ -10624,7 +11830,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Aerosol-Cloud Interactions",
+      "Remote Sensing",
+      "Cloud Physics",
+      "Atmospheric Radiation",
+      "Atmospheric Science",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Greenhouse gas emission mapping and quantification based on 3D transport modeling and Bayesian state estimation",
@@ -10682,7 +11896,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Inverse Problems",
+      "Data Assimilation",
+      "Atmospheric Chemistry",
+      "Remote Sensing",
+      "Numerical Methods",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "A High-Resolution Satellite Survey of Methane Emissions from 60 North American Municipal Solid Waste Landfills.",
@@ -10753,7 +11976,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Methane Emissions",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Waste Management",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry"
+    ]
   },
   {
     "title": "Towards Supporting Satellite Design Through the Top-Down Approach: A General Model for Assessing the Ability of Future Satellite Missions to Quantify Point Source Emissions",
@@ -10818,7 +12049,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Satellite Engineering & Design",
+      "Environmental Monitoring",
+      "Emission Inventories"
+    ]
   },
   {
     "title": "Fossil Fuel CO2 Emission Signatures Over India Captured by OCO‐2 Satellite Measurements",
@@ -10908,7 +12147,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Carbon Cycle",
+      "Environmental Monitoring",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Monitoring and regression analysis of landfill surface temperatures using remote sensing and image processing techniques",
@@ -10975,7 +12222,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Image Processing",
+      "Machine Learning",
+      "Waste Management",
+      "Land Use & Land Cover Change"
+    ]
   },
   {
     "title": "Detecting Methane Emissions from Space Over India: Analysis Using EMIT and Sentinel-5P TROPOMI Datasets",
@@ -11068,7 +12323,14 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Chemical Transport"
+    ]
   },
   {
     "title": "First validation of high-resolution satellite-derived methane emissions from an active gas leak in the UK",
@@ -11164,7 +12426,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Measurement Techniques",
+      "Oil & Gas Industry"
+    ]
   },
   {
     "title": "Methane point source quantification using MethaneAIR: a new airborne imaging spectrometer",
@@ -11268,7 +12538,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Instrument Development",
+      "Spectroscopy",
+      "Algorithm Development",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Comparing airborne algorithms for greenhouse gas flux measurements over the Alberta oil sands",
@@ -11334,7 +12613,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Algorithm Development",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Air Quality",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "In-flight performance of the Multi-band Uncooled Radiometer Instrument (MURI) thermal sensor",
@@ -11396,7 +12683,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Instrument Development",
+      "Sensor Technology",
+      "Satellite Technology",
+      "Thermal Remote Sensing"
+    ]
   },
   {
     "title": "MethaNet – An AI-driven approach to quantifying methane point-source emission from high-resolution 2-D plume imagery",
@@ -11455,7 +12749,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Image Processing",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Single photon Lidar gas imagers for practical and widespread continuous methane monitoring",
@@ -11517,7 +12819,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Lidar",
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Spectroscopy",
+      "Instrument Development",
+      "Sensor Technology",
+      "Atmospheric Science",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Using satellites to uncover large methane emissions from landfills",
@@ -11620,7 +12932,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Waste Management",
+      "Atmospheric Chemistry",
+      "Atmospheric Science",
+      "Data Assimilation",
+      "Environmental Monitoring",
+      "Urban Planning"
+    ]
   },
   {
     "title": "Joint Use of in-Scene Background Radiance Estimation and Optimal Estimation Methods for Quantifying Methane Emissions Using PRISMA Hyperspectral Satellite Data: Application to the Korpezhe Industrial Site",
@@ -11690,7 +13012,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Data Assimilation",
+      "Numerical Methods",
+      "Climate Change",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Mapping methane plumes at very high spatial resolution with the WorldView-3 satellite",
@@ -11767,7 +13098,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Satellite Remote Sensing",
+      "Spectroscopy",
+      "Climate Change Mitigation",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
@@ -11827,7 +13167,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Atmospheric Measurement Techniques",
+      "Climate Change",
+      "Instrument Design & Calibration",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "High-frequency monitoring of anomalous methane point sources with multispectral Sentinel-2 satellite observations",
@@ -11945,7 +13294,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Satellite Remote Sensing",
+      "Atmospheric Measurement Techniques",
+      "Spectroscopy",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Improved methane emission estimates using AVIRIS-NG and an Airborne Doppler Wind Lidar",
@@ -12011,7 +13369,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Chemistry",
+      "Lidar Remote Sensing",
+      "Atmospheric Measurement Techniques",
+      "Atmospheric Science",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "An evaluation of airborne SWIR imaging spectrometers for CH4 mapping: Implications of band positioning, spectral sampling and noise",
@@ -12152,7 +13519,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Greenhouse Gas Monitoring",
+      "Instrument Development",
+      "Spectroscopy",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Determination of the emission rates of CO2 point sources with airborne lidar",
@@ -12214,7 +13589,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Greenhouse Gas Monitoring",
+      "Lidar",
+      "Environmental Monitoring",
+      "Carbon Cycle",
+      "Climate Change Mitigation"
+    ]
   },
   {
     "title": "Regional Surveys of CH4 Point Sources Across North America: Campaigns, Algorithms, and Results",
@@ -12297,7 +13681,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Greenhouse Gas Monitoring",
+      "Algorithm Development",
+      "Environmental Monitoring",
+      "Ecosystem Science",
+      "Spectroscopy",
+      "Geospatial Analysis"
+    ]
   },
   {
     "title": "The GHGSat-D imaging spectrometer",
@@ -12394,7 +13788,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Satellite Remote Sensing",
+      "Instrument Development",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Spectroscopy",
+      "Retrieval Algorithms",
+      "Radiative Transfer"
+    ]
   },
   {
     "title": "Detection and quantification of CH4 plumes using the WFM-DOAS retrieval on AVIRIS-NG hyperspectral data",
@@ -12467,7 +13870,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Greenhouse Gas Monitoring",
+      "Algorithm Development",
+      "Spectroscopy",
+      "Data Analysis",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "A Statistical Evaluation of WRF-LES Trace Gas Dispersion Using Project Prairie Grass Measurements",
@@ -12526,7 +13938,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Modeling",
+      "Atmospheric Science",
+      "Chemical Transport",
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Data Analysis",
+      "Air Quality"
+    ]
   },
   {
     "title": "Quantifying Time-Averaged Methane Emissions from Individual Coal Mine Vents with GHGSat-D Satellite Observations.",
@@ -12602,7 +14023,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Chemical Transport",
+      "Environmental Monitoring",
+      "Carbon Cycle",
+      "Atmospheric Modeling",
+      "Data Analysis"
+    ]
   },
   {
     "title": "Fast and Accurate Retrieval of Methane Concentration From Imaging Spectrometer Data Using Sparsity Prior",
@@ -12673,7 +14103,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Algorithm Development",
+      "Data Processing",
+      "Chemical Transport",
+      "Numerical Methods",
+      "Environmental Monitoring"
+    ]
   },
   {
     "title": "Towards spaceborne monitoring of localized CO2 emissions: an instrument concept and first performance assessment",
@@ -12778,7 +14217,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Carbon Cycle",
+      "Atmospheric Science",
+      "Instrument Development",
+      "Environmental Monitoring",
+      "Environmental Policy",
+      "Satellite Technology"
+    ]
   },
   {
     "title": "Satellite Discovery of Anomalously Large Methane Point Sources From Oil/Gas Production",
@@ -12867,7 +14315,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Carbon Cycle",
+      "Chemical Transport",
+      "Climate Change",
+      "Energy Systems"
+    ]
   },
   {
     "title": "Sensitivity and Uncertainty in Matched-Filter-Based Gas Detection With Imaging Spectroscopy",
@@ -12949,7 +14406,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Chemical Transport",
+      "Machine Learning",
+      "Environmental Science",
+      "Geoscience"
+    ]
   },
   {
     "title": "Regional Surveys of CH<inf>4</inf> Point Sources Across North America: Campaigns, Algorithms, and Results",
@@ -13059,7 +14524,14 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Chemical Transport",
+      "Environmental Science",
+      "Machine Learning"
+    ]
   },
   {
     "title": "Galilean Invariance in Large-Eddy Simulation of Shallow Convection",
@@ -13117,7 +14589,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Climate Modeling",
+      "Numerical Methods",
+      "Boundary Layer Turbulence"
+    ]
   },
   {
     "title": "A ug 2 02 0 Galilean invariance of shallow cumulus convection large-eddy simulations",
@@ -13174,7 +14653,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Computational Fluid Dynamics",
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Turbulence Modeling",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Detection of Point-Source Methane Enhancements from MethaneSAT 1 Observations with Target-Driven Spectral Matching Algorithm",
@@ -13245,7 +14731,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Chemical Transport",
+      "Machine Learning",
+      "Environmental Science"
+    ]
   },
   {
     "title": "Effect of Real-World Perturbations on Wave Breaking due to a Sharp-Crested Superharmonic Instability",
@@ -13304,7 +14797,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Fluid Dynamics",
+      "Oceanography",
+      "Numerical Methods",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "On the role of unsteadiness in impulsive-flow-driven shear instabilities: precursors of fragmentation",
@@ -13361,7 +14860,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Fluid Dynamics",
+      "Geophysics",
+      "Numerical Methods",
+      "Experimental Fluid Dynamics",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "The superharmonic instability and wave breaking in Whitham equations",
@@ -13421,7 +14927,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Fluid Dynamics",
+      "Wave Dynamics",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "Stability analysis of deep-water waves on a linear shear current using unsteady conformal mapping",
@@ -13478,7 +14989,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Fluid Dynamics",
+      "Wave Dynamics",
+      "Applied Mathematics",
+      "Numerical Methods",
+      "Ocean Circulation"
+    ]
   },
   {
     "title": "The Role of Sea Breeze in the Coastal Stratocumulus Dissipation Transition in Antofagasta and San Diego",
@@ -13537,7 +15055,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Boundary Layer Meteorology",
+      "Coastal Meteorology",
+      "Observational Meteorology"
+    ]
   },
   {
     "title": "Sensitivities of Large Eddy Simulations of Aerosol Plume Transport and Cloud Response",
@@ -13598,7 +15123,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Aerosol Science",
+      "Atmospheric Modeling",
+      "Boundary Layer Turbulence",
+      "Geoengineering",
+      "Climate Modeling"
+    ]
   },
   {
     "title": "Diurnal evolution of non-precipitating marine stratocumuli in a large-eddy simulation ensemble",
@@ -13660,7 +15194,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Atmospheric Modeling",
+      "Boundary Layer Meteorology",
+      "Aerosol Science"
+    ]
   },
   {
     "title": "Simulation of marine stratocumulus using the super-droplet method: numerical convergence and comparison to a double-moment bulk scheme using SCALE-SDM 5.2.6-2.3.1",
@@ -13719,7 +15260,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cloud Microphysics",
+      "Numerical Methods",
+      "Atmospheric Modeling",
+      "Convection & Cloud Physics",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "The sensitivity of a mid-latitude maritime stratocumulus cloud to surface fluxes",
@@ -13777,7 +15325,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Boundary Layer",
+      "Atmospheric Modeling",
+      "Ocean-Atmosphere Interaction",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Stratus over rolling terrain: Large‐eddy simulation reference and sensitivity to grid spacing and numerics",
@@ -13836,7 +15391,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Atmospheric Modeling",
+      "Atmospheric Radiation",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Exploring Subtropical Stratocumulus Multiple Equilibria using a Mixed-Layer Model",
@@ -13893,7 +15455,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Dynamics",
+      "Convection & Cloud Physics",
+      "Atmospheric Radiation",
+      "Climate Modeling",
+      "Ocean-Atmosphere Interaction",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "Technical note: Parameterising cloud base updraft velocity of marine stratocumuli",
@@ -13962,7 +15532,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Atmospheric Modeling",
+      "Convection & Cloud Physics",
+      "Cloud Microphysics",
+      "Atmospheric Boundary Layer",
+      "Atmospheric Chemistry",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Large-eddy simulations with ClimateMachine v0.2.0: a new open-source code for atmospheric simulations on GPUs and CPUs",
@@ -14031,7 +15610,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Climate Modeling",
+      "Numerical Methods",
+      "High-Performance Computing",
+      "Software Engineering",
+      "Computational Fluid Dynamics"
+    ]
   },
   {
     "title": "Parameterising cloud base updraft velocity of marine stratocumuli",
@@ -14100,7 +15687,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Climate Modeling",
+      "Machine Learning",
+      "Numerical Methods",
+      "Boundary Layer Meteorology"
+    ]
   },
   {
     "title": "Effects of Surface and Top Wind Shear on the Spatial Organization of Marine Stratocumulus‐Topped Boundary Layers",
@@ -14158,7 +15753,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Ocean-Atmosphere Interaction"
+    ]
   },
   {
     "title": "Improving the Representation of Subtropical Boundary Layer Clouds in the NASA GEOS Model with the Eddy-Diffusivity/Mass-Flux Parameterization",
@@ -14226,7 +15828,17 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Climate Modeling",
+      "Weather Prediction",
+      "Convection & Cloud Physics",
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Model Development & Evaluation",
+      "Large Eddy Simulation"
+    ]
   },
   {
     "title": "Marine Low Clouds and their Parameterization in Climate Models",
@@ -14283,7 +15895,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Climate Modeling",
+      "Observational Meteorology"
+    ]
   },
   {
     "title": "The Spiderweb Structure of Stratocumulus Clouds",
@@ -14341,7 +15959,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Numerical Methods",
+      "Computational Fluid Dynamics"
+    ]
   },
   {
     "title": "On the Parameterization of Convective Downdrafts for Marine Stratocumulus Clouds",
@@ -14402,7 +16026,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Weather Prediction",
+      "Climate Modeling"
+    ]
   },
   {
     "title": "Residual cross-grid flow numerical error in large-eddy simulations of cumulus-topped boundary layers",
@@ -14459,7 +16091,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Fluid Dynamics",
+      "Atmospheric Science",
+      "Boundary Layer Meteorology"
+    ]
   },
   {
     "title": "Effects of surface and top wind shear on the spatial organization of marine Stratocumulus-topped boundary layers",
@@ -14517,7 +16155,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Ocean-Atmosphere Interaction"
+    ]
   },
   {
     "title": "EARLY ONLINE RELEASE",
@@ -14574,7 +16219,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Atmospheric Science",
+      "Tropical Meteorology",
+      "Atmospheric Chemistry",
+      "Observational Studies"
+    ]
   },
   {
     "title": "Accelerating Large‐Eddy Simulations of Clouds With Tensor Processing Units",
@@ -14635,7 +16286,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Climate Modeling",
+      "Numerical Methods",
+      "Machine Learning",
+      "High-Performance Computing",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Robust forecasting using predictive generalized synchronization in reservoir computing.",
@@ -14695,7 +16354,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Nonlinear Dynamics",
+      "Time Series Analysis",
+      "Forecasting",
+      "Computational Science"
+    ]
   },
   {
     "title": "Forecasting Using Reservoir Computing: The Role of Generalized Synchronization",
@@ -14755,7 +16421,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Machine Learning",
+      "Nonlinear Dynamics",
+      "Time Series Analysis",
+      "Forecasting",
+      "Computational Science"
+    ]
   },
   {
     "title": "Cloud-Top Entrainment in Mixed-Phase Stratocumulus and Its Process-Level Representation in Large-Eddy Simulation",
@@ -14812,7 +16485,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Boundary Layer Turbulence",
+      "Polar Meteorology",
+      "Observational Studies"
+    ]
   },
   {
     "title": "Sampling error in aircraft flux measurements based on a high-resolution large eddy simulation of the marine boundary layer",
@@ -14868,7 +16549,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Atmospheric Measurement Techniques",
+      "Ocean-Atmosphere Interaction"
+    ]
   },
   {
     "title": "Sensitivity of idealized mixed‐phase stratocumulus to climate perturbations",
@@ -14934,7 +16622,16 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Modeling",
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Polar Oceanography",
+      "Cryosphere & Glaciology"
+    ]
   },
   {
     "title": "Comparison of Different Techniques to Calculate Properties of Atmospheric Turbulence from Low-Resolution Data",
@@ -14994,7 +16691,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Data Analysis & Signal Processing",
+      "Atmospheric Measurement Techniques",
+      "Numerical Methods"
+    ]
   },
   {
     "title": "Sensitivity to Physical and Numerical Aspects of Large-Eddy Simulation of Stratocumulus",
@@ -15051,7 +16755,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Cloud Physics",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Climate Modeling"
+    ]
   },
   {
     "title": "Possible climate transitions from breakup of stratocumulus decks under greenhouse warming",
@@ -15109,7 +16820,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Modeling",
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Ocean-Atmosphere Interaction",
+      "Numerical Methods",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "Fractal reconstruction of sub-grid scales for large eddy simulation of atmospheric turbulence",
@@ -15168,7 +16887,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Fluid Dynamics",
+      "Numerical Methods",
+      "Computational Fluid Dynamics",
+      "Turbulence Modeling"
+    ]
   },
   {
     "title": "Optimising 4th-Order Runge-Kutta Methods: A Dynamic Heuristic Approach for Efficiency and Low Storage",
@@ -15226,7 +16952,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Numerical Methods",
+      "Machine Learning",
+      "Optimization",
+      "Computational Science",
+      "Weather Prediction",
+      "Aerodynamics",
+      "Computational Biology"
+    ]
   },
   {
     "title": "A computational approach to developing two-derivative ODE-solving formulations: γβI-(2+3)P method",
@@ -15282,7 +17017,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Science",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "Algebraically stable SDIRK methods with controllable numerical dissipation for first/second-order time-dependent problems",
@@ -15341,7 +17081,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Nonlinear Dynamics",
+      "Computational Physics",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "A hybrid linear dynamic absorber and nonlinear energy sink for broadband absorption of a circular ring",
@@ -15402,7 +17148,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Nonlinear Dynamics",
+      "Mechanical Engineering",
+      "Vibration & Acoustics",
+      "Applied Physics",
+      "Structural Engineering"
+    ]
   },
   {
     "title": "A three-sub-step composite method for the analysis of rigid body rotations with Euler parameters",
@@ -15459,7 +17212,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Mechanics",
+      "Nonlinear Dynamics",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "Efficiency of diagonally implicit Runge-Kutta time integration schemes in incompressible two-phase flow simulations",
@@ -15518,7 +17277,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Computational Fluid Dynamics (CFD)",
+      "Numerical Methods",
+      "Fluid Dynamics",
+      "Scientific Computing",
+      "Naval Architecture & Ocean Engineering"
+    ]
   },
   {
     "title": "Third- and Fourth-Order ESDIRK Methods for Stiff and Differential-Algebraic Problems",
@@ -15574,7 +17340,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Ordinary Differential Equations (ODEs)",
+      "Differential-Algebraic Equations (DAEs)",
+      "Applied Mathematics",
+      "Scientific Computing"
+    ]
   },
   {
     "title": "Performance of implicit A-stable time integration methods for multibody system dynamics",
@@ -15633,7 +17406,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Multibody Dynamics",
+      "Computational Mechanics",
+      "Differential-Algebraic Equations (DAEs)",
+      "Scientific Computing"
+    ]
   },
   {
     "title": "Computing the solutions of the van der Pol equation to arbitrary precision",
@@ -15689,7 +17469,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Ordinary Differential Equations (ODEs)",
+      "Scientific Computing",
+      "Applied Mathematics",
+      "Nonlinear Dynamics",
+      "Computational Physics"
+    ]
   },
   {
     "title": "Highly precise and efficient solution strategy for linear heat conduction and structural dynamics",
@@ -15746,7 +17534,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Mechanics",
+      "Heat Transfer",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "An unconditionally stable time integration method with controllable dissipation for second-order nonlinear dynamics",
@@ -15812,7 +17606,13 @@
         "review_reason": "high_stochastic_variance"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Nonlinear Dynamics",
+      "Computational Mechanics",
+      "Applied Mathematics"
+    ]
   },
   {
     "title": "Complexity matters: highly-accurate numerical models of coupled radiative-conductive heat transfer in a laser flash experiment",
@@ -15870,7 +17670,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Heat Transfer",
+      "Numerical Methods",
+      "Materials Science",
+      "Thermal Physics",
+      "Computational Physics"
+    ]
   },
   {
     "title": "Incomplete angle reconstruction algorithm with the sparse optimization and the image optimal criterions",
@@ -15928,7 +17735,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Image Processing",
+      "Optimization",
+      "Computer Vision",
+      "Machine Learning"
+    ]
   },
   {
     "title": "Diagonally implicit Runge–Kutta methods for stiff ODEs",
@@ -15985,7 +17798,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Applied Mathematics",
+      "Computational Science"
+    ]
   },
   {
     "title": "Time-Accurate and highly-Stable Explicit operators for stiff differential equations",
@@ -16043,7 +17861,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Physics"
+    ]
   },
   {
     "title": "Cell-Centered Finite Volume Methods",
@@ -16099,7 +17921,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Numerical Methods",
+      "Computational Physics",
+      "Plasma Physics",
+      "Space Physics"
+    ]
   },
   {
     "title": "Optimization of Diagonal-Norm Multidimensional Summation-by-Parts Operators on Simplices by",
@@ -16155,7 +17983,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Numerical Methods",
+      "Numerical Analysis",
+      "Optimization"
+    ]
   },
   {
     "title": "Numerical optimization of fourth-order diagonally-implicit multistep Runge-Kutta methods",
@@ -16212,7 +18045,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Numerical Methods",
+      "Optimization",
+      "Numerical Analysis"
+    ]
   },
   {
     "title": "Lagrangian Stochastic Modeling of Stratified Atmospheric Boundary Layer",
@@ -16269,7 +18107,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Turbulence Modeling",
+      "Numerical Methods",
+      "Stochastic Processes"
+    ]
   },
   {
     "title": "Coherent subsiding structures in large‐eddy simulations of atmospheric boundary layers",
@@ -16328,7 +18173,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Atmospheric Modeling"
+    ]
   },
   {
     "title": "Boundary‐layer plumes over mountainous terrain in idealized large‐eddy simulations",
@@ -16388,7 +18240,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Atmospheric Dynamics"
+    ]
   },
   {
     "title": "Diurnal Cycle of Rapid Air Temperature Fluctuations at Jezero Crater: Probability Distributions, Exponential Tails, Scaling, and Intermittency",
@@ -16458,7 +18317,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Planetary Science",
+      "Planetary Atmospheres",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Statistical Analysis",
+      "Instrumentation",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Coupling Warm Rain With an Eddy Diffusivity/Mass Flux Parameterization: 1. Model Description and Validation",
@@ -16528,7 +18396,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Cloud Physics",
+      "Numerical Methods",
+      "Convection & Cloud Physics",
+      "Model Development"
+    ]
   },
   {
     "title": "Size‐Dependent Characteristics of Surface‐Rooted Three‐Dimensional Convective Objects in Continental Shallow Cumulus Simulations",
@@ -16586,7 +18461,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Convection & Cloud Physics",
+      "Atmospheric Modeling",
+      "Atmospheric Boundary Layer",
+      "Numerical Methods",
+      "Earth System Modeling"
+    ]
   },
   {
     "title": "Connection Between Mass Flux Transport and Eddy Diffusivity in Convective Atmospheric Boundary Layers",
@@ -16644,7 +18527,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Climate Modeling",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Diffusive–Nondiffusive Flux Decompositions in Atmospheric Boundary Layers",
@@ -16702,7 +18592,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Boundary Layer",
+      "Turbulence Modeling",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Convection & Cloud Physics"
+    ]
   },
   {
     "title": "Characterising the shape, size, and orientation of cloud‐feeding coherent boundary‐layer structures",
@@ -16762,7 +18659,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Convection & Cloud Physics",
+      "Atmospheric Modeling",
+      "Atmospheric Science",
+      "Data Analysis & Visualization"
+    ]
   },
   {
     "title": "The effect of ambient shear on coherent boundary layer structures.",
@@ -16822,7 +18726,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": false
+    "is_peer_reviewed": false,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Process‐Based Climate Model Development Harnessing Machine Learning: I. A Calibration Tool for Parameterization Improvement",
@@ -16894,7 +18802,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Machine Learning",
+      "Climate Modeling",
+      "Weather Prediction",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Data Assimilation"
+    ]
   },
   {
     "title": "Organized Turbulence in a Cold-Air Outbreak: Evaluating a Large-Eddy Simulation with Respect to Airborne Measurements",
@@ -16953,7 +18869,16 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Air-Sea Interaction",
+      "Numerical Methods",
+      "Climate Modeling",
+      "Weather Prediction",
+      "Observational Meteorology"
+    ]
   },
   {
     "title": "Diagnosing Coherent Structures in the Convective Boundary Layer by Optimizing Their Vertical Turbulent Scalar Transfer",
@@ -17011,7 +18936,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Atmospheric Modeling",
+      "Fluid Dynamics"
+    ]
   },
   {
     "title": "Object‐Oriented Identification of Coherent Structures in Large Eddy Simulations: Importance of Downdrafts in Stratocumulus",
@@ -17071,7 +19003,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Boundary Layer Turbulence",
+      "Atmospheric Science",
+      "Chemical Transport"
+    ]
   },
   {
     "title": "Atmospheric turbulence interference compensation for missile-borne infrared attitude measurement",
@@ -17130,7 +19069,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Optics",
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Aerospace Engineering",
+      "Instrumentation",
+      "Signal Processing"
+    ]
   },
   {
     "title": "On the Factors Controlling the Development of Shallow Convection in Eddy-Diffusivity/Mass-Flux Models",
@@ -17188,7 +19135,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Atmospheric Science",
+      "Boundary Layer Turbulence",
+      "Climate Modeling",
+      "Weather Prediction"
+    ]
   },
   {
     "title": "Turbulence Structure in a Stratocumulus Cloud",
@@ -17244,7 +19199,15 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cloud Physics",
+      "Atmospheric Modeling",
+      "Boundary Layer Turbulence",
+      "Convection & Cloud Physics",
+      "Numerical Methods",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Subgrid turbulence mixing",
@@ -17300,6 +19263,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Turbulence",
+      "Numerical Methods",
+      "Weather Prediction",
+      "Atmospheric Science"
+    ]
   }
 ]

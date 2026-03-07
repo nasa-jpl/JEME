@@ -11,14 +11,19 @@ const ResearchDomainsCard = ({ data = [] }) => {
   const citationsData = useMemo(() => data || [], [data]);
   // Process the research domains data
   const domainData = useMemo(() => {
-    // Count papers by research domain
+    // Count papers by research domain (multi-label aware)
     const domainCounts = {};
-    
+
     citationsData.forEach(paper => {
-      const domain = paper.research_domain;
-      if (domain && domain !== "Unknown" && domain !== "Not specified") {
-        domainCounts[domain] = (domainCounts[domain] || 0) + 1;
-      }
+      const domains = (paper.research_domains && paper.research_domains.length > 0)
+        ? paper.research_domains
+        : (paper.research_domain ? [paper.research_domain] : []);
+
+      domains.forEach(domain => {
+        if (domain && domain !== "Unknown" && domain !== "Not specified") {
+          domainCounts[domain] = (domainCounts[domain] || 0) + 1;
+        }
+      });
     });
 
     // Convert to array and sort by count
@@ -61,11 +66,14 @@ const ResearchDomainsCard = ({ data = [] }) => {
   const totalDomains = useMemo(() => {
     const uniqueDomains = new Set();
     citationsData.forEach(paper => {
-      if (paper.research_domain && 
-          paper.research_domain !== "Unknown" && 
-          paper.research_domain !== "Not specified") {
-        uniqueDomains.add(paper.research_domain);
-      }
+      const domains = (paper.research_domains && paper.research_domains.length > 0)
+        ? paper.research_domains
+        : (paper.research_domain ? [paper.research_domain] : []);
+      domains.forEach(d => {
+        if (d && d !== "Unknown" && d !== "Not specified") {
+          uniqueDomains.add(d);
+        }
+      });
     });
     return uniqueDomains.size;
   }, [citationsData]);
