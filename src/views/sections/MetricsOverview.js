@@ -65,22 +65,17 @@ const MetricsOverview = ({ data = [] }) => {
     // Helper function to determine region from country
     const getRegion = (country) => {
       if (!country || typeof country !== 'string') return 'Other';
-      const countryLower = country.toLowerCase();
-      if (countryLower.includes('usa') || countryLower.includes('united states') || 
-          countryLower.includes('canada') || countryLower.includes('mexico')) {
-        return 'North America';
-      }
-      if (countryLower.includes('europe') || countryLower.includes('uk') || 
-          countryLower.includes('germany') || countryLower.includes('france') ||
-          countryLower.includes('spain') || countryLower.includes('italy')) {
-        return 'Europe';
-      }
-      if (countryLower.includes('asia') || countryLower.includes('china') || 
-          countryLower.includes('japan') || countryLower.includes('india') ||
-          countryLower.includes('korea')) {
-        return 'Asia';
-      }
-      return 'Other';
+      const regionMappings = {
+        'United States': 'North America', 'Canada': 'North America', 'Mexico': 'North America',
+        'United Kingdom': 'Europe', 'France': 'Europe', 'Germany': 'Europe', 'Spain': 'Europe',
+        'Italy': 'Europe', 'Netherlands': 'Europe', 'Switzerland': 'Europe', 'Sweden': 'Europe',
+        'Norway': 'Europe', 'Denmark': 'Europe', 'Russia': 'Europe',
+        'China': 'Asia', 'Japan': 'Asia', 'India': 'Asia', 'South Korea': 'Asia', 'Indonesia': 'Asia',
+        'Australia': 'Oceania',
+        'Brazil': 'South America', 'Argentina': 'South America', 'Chile': 'South America', 'Peru': 'South America',
+        'South Africa': 'Africa', 'Nigeria': 'Africa',
+      };
+      return regionMappings[country] || 'Other';
     };
 
     // 1. TOTAL CITATIONS (peer-reviewed only)
@@ -160,34 +155,101 @@ const MetricsOverview = ({ data = [] }) => {
     const implementationRate = peerReviewedData.length > 0 ? ((implementationCount / peerReviewedData.length) * 100) : 0;
 
     // 4. GEOGRAPHIC REACH (peer-reviewed only)
-    // Extract unique countries/regions
+    // Extract unique countries/regions from data fields or text extraction
     const uniqueCountries = new Set();
     const uniqueRegions = new Set();
     const regionCounts = { 'North America': 0, 'Europe': 0, 'Asia': 0, 'Other': 0 };
 
+    // Text-based geographic extraction mappings (fallback when country field is missing)
+    const textGeoMappings = [
+      { keywords: ['United States', 'USA', 'U.S.', 'American', 'Mississippi', 'Colorado River', 'Ohio River', 'Missouri River', 'Texas', 'California', 'Florida'], country: 'United States' },
+      { keywords: ['China', 'Chinese', 'Yangtze', 'Yellow River', 'Pearl River'], country: 'China' },
+      { keywords: ['France', 'French', 'Seine', 'Loire', 'Rhone'], country: 'France' },
+      { keywords: ['Germany', 'German', 'Rhine'], country: 'Germany' },
+      { keywords: ['United Kingdom', 'UK', 'British', 'England', 'Scotland', 'Wales', 'Thames'], country: 'United Kingdom' },
+      { keywords: ['Canada', 'Canadian', 'St. Lawrence', 'Mackenzie'], country: 'Canada' },
+      { keywords: ['Australia', 'Australian', 'Murray-Darling', 'Murray River'], country: 'Australia' },
+      { keywords: ['Brazil', 'Brazilian', 'Amazon', 'Amazonas'], country: 'Brazil' },
+      { keywords: ['India', 'Indian', 'Ganges', 'Ganga', 'Brahmaputra', 'Indus'], country: 'India' },
+      { keywords: ['Japan', 'Japanese'], country: 'Japan' },
+      { keywords: ['South Korea', 'Korea', 'Korean'], country: 'South Korea' },
+      { keywords: ['Italy', 'Italian', 'Po River'], country: 'Italy' },
+      { keywords: ['Spain', 'Spanish', 'Ebro', 'Tagus'], country: 'Spain' },
+      { keywords: ['Netherlands', 'Dutch'], country: 'Netherlands' },
+      { keywords: ['Switzerland', 'Swiss'], country: 'Switzerland' },
+      { keywords: ['Sweden', 'Swedish'], country: 'Sweden' },
+      { keywords: ['Norway', 'Norwegian'], country: 'Norway' },
+      { keywords: ['Denmark', 'Danish'], country: 'Denmark' },
+      { keywords: ['Mexico', 'Mexican'], country: 'Mexico' },
+      { keywords: ['Argentina', 'Argentine'], country: 'Argentina' },
+      { keywords: ['Chile', 'Chilean'], country: 'Chile' },
+      { keywords: ['Peru', 'Peruvian'], country: 'Peru' },
+      { keywords: ['Russia', 'Russian', 'Siberia'], country: 'Russia' },
+      { keywords: ['South Africa', 'South African'], country: 'South Africa' },
+      { keywords: ['Indonesia', 'Indonesian'], country: 'Indonesia' },
+      { keywords: ['Nigeria', 'Nigerian'], country: 'Nigeria' },
+    ];
+
+    const invalidCountryValues = new Set(['Unknown', 'Not specified', 'Not Applicable', 'Global', 'Not Geographic']);
+
     peerReviewedData.forEach(paper => {
-      if (paper.country && 
-          paper.country !== 'Unknown' && 
-          paper.country !== 'Not specified') {
-        uniqueCountries.add(paper.country);
-        
-        // Count regions
-        const region = getRegion(paper.country);
-        uniqueRegions.add(region);
-        regionCounts[region] = (regionCounts[region] || 0) + 1;
+      let country = null;
+
+      // Try existing country field first
+      if (paper.country && !invalidCountryValues.has(paper.country)) {
+        country = paper.country;
       }
-      
-      // Also check for geographic keywords in abstracts/titles
-      if (paper.abstract || paper.title) {
-        const text = (paper.abstract || '') + ' ' + (paper.title || '');
-        if (text.toLowerCase().includes('global')) {
+      // Fallback: extract from author affiliations (Crossref format)
+      else if (paper.author && Array.isArray(paper.author) && paper.author.length > 0 && typeof paper.author[0] === 'object') {
+        for (const author of paper.author) {
+          if (author.affiliation && Array.isArray(author.affiliation)) {
+            for (const aff of author.affiliation) {
+              if (aff.name) {
+                const affText = aff.name.toLowerCase();
+                for (const mapping of textGeoMappings) {
+                  if (mapping.keywords.some(k => affText.includes(k.toLowerCase()))) {
+                    country = mapping.country;
+                    break;
+                  }
+                }
+                if (country) break;
+              }
+            }
+          }
+          if (country) break;
+        }
+      }
+
+      // Fallback: extract from title/abstract text
+      if (!country) {
+        const title = Array.isArray(paper.title) ? paper.title[0] : (paper.title || '');
+        const abstract = paper.abstract || '';
+        const text = `${title} ${abstract}`.toLowerCase();
+
+        for (const mapping of textGeoMappings) {
+          if (mapping.keywords.some(k => text.includes(k.toLowerCase()))) {
+            country = mapping.country;
+            break;
+          }
+        }
+
+        // Check for global studies
+        if (!country && text.includes('global')) {
           uniqueRegions.add('Global');
         }
+      }
+
+      if (country) {
+        uniqueCountries.add(country);
+        const region = getRegion(country);
+        uniqueRegions.add(region);
+        regionCounts[region] = (regionCounts[region] || 0) + 1;
       }
     });
 
     // Calculate trends (mock data for demonstration - in real app you'd compare with previous periods)
     const calculateTrend = (current, previous) => {
+      if (!previous || previous <= 0) return { value: '0.0', isUp: true };
       const change = ((current - previous) / previous) * 100;
       return {
         value: Math.abs(change).toFixed(1),
@@ -200,7 +262,7 @@ const MetricsOverview = ({ data = [] }) => {
       totalCitations: Math.round(totalCitations * 0.89), // Assume 11% growth
       hIndex: hIndex - 2,
       implementationRate: implementationRate - 4.7,
-      geographicReach: uniqueCountries.size - 5
+      geographicReach: Math.max(1, Math.round(uniqueCountries.size * 0.85))
     };
 
     const citationsTrend = calculateTrend(totalCitations, previousMetrics.totalCitations);
