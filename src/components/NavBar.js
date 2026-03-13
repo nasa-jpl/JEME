@@ -128,7 +128,7 @@ const NavBar = ({ activeItem }) => {
                 JEME
               </Link>
 
-              {/* Models dropdown */}
+              {/* Models dropdown - placed before Earth System */}
               <div className="relative" ref={dropdownRef}>
                 <button
                   onClick={() => setModelsOpen(!modelsOpen)}
@@ -157,6 +157,20 @@ const NavBar = ({ activeItem }) => {
                   </div>
                 )}
               </div>
+
+              <Link
+                to="/science-model-dashboard/earth-system"
+                className={activeItem === 'Earth System' ? activeClass : inactiveClass}
+              >
+                Earth System
+              </Link>
+
+              <Link
+                to="/science-model-dashboard/model-maturity"
+                className={activeItem === 'Model Maturity' ? activeClass : inactiveClass}
+              >
+                Model Maturity
+              </Link>
 
               <Link
                 to="/science-model-dashboard/JEOE"

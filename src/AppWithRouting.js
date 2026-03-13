@@ -37,6 +37,13 @@ import GenericUncertaintyPage from './views/GenericUncertaintyPage';
 // How It Works page
 import HowItWorks from './views/HowItWorks';
 
+// Earth System Interconnections page
+import EarthSystemPage from './views/EarthSystemPage';
+
+// Model Maturity pages
+import ModelMaturityPage from './views/ModelMaturityPage';
+import GenericMaturityPage from './views/GenericMaturityPage';
+
 function AppWithRouting() {
   return (
     <BrowserRouter>
@@ -59,6 +66,13 @@ function AppWithRouting() {
         {/* Mission dashboards */}
         <Route path="/science-model-dashboard/GRACE" element={<GRACEDashboard />} />
         <Route path="/science-model-dashboard/SWOT" element={<SWOTDashboard />} />
+
+        {/* Earth System Interconnections page */}
+        <Route path="/science-model-dashboard/earth-system" element={<EarthSystemPage />} />
+
+        {/* Model Maturity pages */}
+        <Route path="/science-model-dashboard/model-maturity" element={<ModelMaturityPage />} />
+        <Route path="/science-model-dashboard/:modelName/maturity" element={<GenericMaturityPage />} />
 
         {/* How It Works page */}
         <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />

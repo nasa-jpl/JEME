@@ -1,0 +1,402 @@
+{
+  "ECCO": {
+    "tier1": {
+      "process_representation": { "score": 3, "evidence": "State-of-the-art ocean general circulation model based on MITgcm with comprehensive representation of ocean dynamics, thermodynamics, sea ice, and biogeochemistry. Validated against extensive observational datasets." },
+      "spatial_resolution": { "score": 2, "evidence": "LLC90 (~1° global) to LLC270 (~1/3°) grid configurations. Unstructured lat-lon-cap grid supports regional refinement but not full eddy-resolving global coverage." },
+      "temporal_resolution": { "score": 3, "evidence": "Hourly to multi-decadal simulations. ECCO v4r4 covers 1992-2017 with daily to monthly output fields spanning the full ocean state." },
+      "process_coupling": { "score": 2, "evidence": "Ocean-sea ice coupling is fully interactive. Coupled to atmospheric forcing fields. Ongoing work on coupling to ISSM for ice sheet-ocean interactions." },
+      "predictive_skill": { "score": 3, "evidence": "Demonstrated skill in ocean state estimation, sea level prediction, and ocean heat content trends. Used in IPCC assessments and CMIP-class intercomparisons." },
+      "computational_performance": { "score": 2, "evidence": "Scales well on HPC systems (NASA Pleiades). MITgcm supports MPI parallelism. GPU support under development but not yet standard." },
+      "observational_constraint": { "score": 3, "evidence": "Assimilates satellite altimetry, Argo floats, XBTs, CTDs, SST, sea ice concentration, ocean bottom pressure (GRACE). Multi-source, multi-platform constraint." },
+      "retrospective_analysis": { "score": 3, "evidence": "ECCO v4r4 is a fully integrated, dynamically consistent ocean reanalysis product (1992-2017). Benchmarked against independent observations and other reanalyses." },
+      "uq_attribution": { "score": 2, "evidence": "Adjoint-based sensitivity analysis and formal uncertainty propagation for key state variables. Ensemble approaches used for specific studies but not routine." },
+      "vv_framework": { "score": 3, "evidence": "Extensive validation against independent datasets. Participation in OceanPredict, GODAE, and CMIP intercomparisons. Systematic benchmarking documented in peer-reviewed publications." },
+      "ml_ai_integration": { "score": 1, "evidence": "ML used in limited research contexts for parameterization discovery and data gap-filling. Not yet integrated into core production workflow." },
+      "mission_support": { "score": 3, "evidence": "Key contributor to GRACE/GRACE-FO, SWOT, and Sentinel-6 mission formulation. OSSEs conducted for satellite mission planning. Provides synthetic observations for mission concept studies." },
+      "interoperability": { "score": 3, "evidence": "Fully open source (MITgcm on GitHub). Standardized output formats (NetCDF). Active community with external contributors from MIT, UT Austin, AER, SIO." },
+      "stakeholder_adoption": { "score": 2, "evidence": "Used by NOAA for ocean monitoring, by coastal planning agencies for sea level projections. Growing adoption but not yet core operational tool for decision-makers." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 3, "evidence": "Comprehensive ocean physics including mesoscale eddies, mixing, boundary currents, overturning circulation." },
+        "coupling_fidelity": { "score": 2, "evidence": "Strong ocean-sea ice coupling. Atmosphere treated as external forcing. Ocean-ice sheet coupling in development." },
+        "community_recognition": { "score": 3, "evidence": "Widely cited in IPCC AR5/AR6, WCRP assessments. Over 600 peer-reviewed publications using ECCO products." },
+        "extreme_events": { "score": 2, "evidence": "Can represent marine heatwaves and extreme sea level events at resolved scales. Limited by resolution for coastal extremes." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 3, "evidence": "Assimilates 14+ observation types from multiple satellite missions and in-situ networks." },
+        "error_correction": { "score": 3, "evidence": "Adjoint-based 4DVAR provides rigorous, dynamically consistent bias correction across the full state vector." },
+        "prediction_impact": { "score": 2, "evidence": "Significant improvement in ocean state estimates. Forecast skill demonstrated for seasonal-to-decadal timescales." },
+        "operational_use": { "score": 2, "evidence": "Products used operationally by multiple agencies. Not yet embedded in real-time operational prediction systems." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 3, "evidence": "MITgcm has rigorous code verification with automated test suites and regression testing." },
+        "ml_in_processes": { "score": 1, "evidence": "Research-stage ML for parameterization and emulation. Not in production." },
+        "vvuq_ml_emulators": { "score": 0, "evidence": "No formal VVUQ framework for ML components yet." },
+        "independent_validation": { "score": 3, "evidence": "Extensive validation against withheld datasets, independent reanalyses, and field campaign observations." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 3, "evidence": "Full OSSE framework used for SWOT, GRACE-FO mission design. Synthetic observation capability well-established." },
+        "da_readiness": { "score": 2, "evidence": "New satellite data types can be incorporated but require significant development for each new instrument." },
+        "decadal_alignment": { "score": 3, "evidence": "Directly supports multiple Decadal Survey priority areas: sea level, ocean circulation, ice-ocean interaction." },
+        "community_adoption_mission": { "score": 3, "evidence": "Core tool for NASA ocean mission formulation. Used by ESA, NOAA for mission planning." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 1, "evidence": "Products available but require expert interpretation. Not packaged for direct operational use." },
+        "regulatory_relevance": { "score": 2, "evidence": "Sea level projections used in coastal planning regulations. Referenced in IPCC policy-relevant chapters." },
+        "uncertainty_communication": { "score": 2, "evidence": "Formal uncertainty estimates available for key variables. Communication to non-expert users needs improvement." },
+        "community_training": { "score": 2, "evidence": "Regular tutorials at scientific conferences. Growing online documentation. Limited direct stakeholder engagement." }
+      }
+    }
+  },
+  "ISSM": {
+    "tier1": {
+      "process_representation": { "score": 3, "evidence": "Comprehensive ice sheet dynamics including higher-order stress balance, grounding line migration, calving, solid Earth deformation, and sea level fingerprinting. Three coupled sub-models (ice, solid Earth, sea level)." },
+      "spatial_resolution": { "score": 3, "evidence": "Adaptive mesh refinement from continent-scale to sub-kilometer resolution at ice stream margins. Unstructured finite element mesh supports multi-scale representation." },
+      "temporal_resolution": { "score": 2, "evidence": "Sub-annual to multi-millennial simulations. Time-stepping adapted to process timescales. Some limitations in representing very short-term dynamics." },
+      "process_coupling": { "score": 3, "evidence": "Fully coupled ice sheet-solid Earth-sea level system. Coupling to ECCO ocean model in development. Represents gravitational, rotational, and deformational effects." },
+      "predictive_skill": { "score": 2, "evidence": "Used in ice sheet projections for IPCC AR6. Demonstrates skill in hindcasting observed ice loss but uncertainty remains large for future projections." },
+      "computational_performance": { "score": 2, "evidence": "Parallel finite element solver scales on HPC. Demonstrated scaling to thousands of cores. GPU acceleration under development." },
+      "observational_constraint": { "score": 2, "evidence": "Assimilates satellite velocity fields, surface elevation, gravity data (GRACE). Limited by sparse observations in basal conditions." },
+      "retrospective_analysis": { "score": 2, "evidence": "Inversions for basal conditions using satellite observations. Multi-decadal reconstructions of ice sheet evolution, but not continuous reanalysis." },
+      "uq_attribution": { "score": 2, "evidence": "Adjoint-based sensitivity analysis and sampling-based UQ for projections. Attribution of ice loss to atmospheric vs oceanic forcing." },
+      "vv_framework": { "score": 3, "evidence": "Participation in ISMIP6, initMIP, and other international ice sheet model intercomparison projects. Rigorous benchmarking against analytical solutions." },
+      "ml_ai_integration": { "score": 1, "evidence": "ML explored for emulating ice sheet response and parameter estimation. Not yet in core workflow." },
+      "mission_support": { "score": 2, "evidence": "Supports GRACE/GRACE-FO and ICESat-2 mission science. Contributes to NISAR planning for ice velocity measurements." },
+      "interoperability": { "score": 3, "evidence": "Open source on GitHub. Active external collaborator network (UC Irvine). Standard file formats and documented API." },
+      "stakeholder_adoption": { "score": 2, "evidence": "Sea level projections used in coastal planning and IPCC scenarios. Growing engagement with policy community." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 3, "evidence": "State-of-the-art ice dynamics with higher-order stress balance, damage mechanics, and hydrology." },
+        "coupling_fidelity": { "score": 3, "evidence": "Three-way coupling between ice sheet, solid Earth, and sea level. Validated coupling framework." },
+        "community_recognition": { "score": 3, "evidence": "Lead contributor to ISMIP6/IPCC projections. Widely cited in cryosphere and sea level research." },
+        "extreme_events": { "score": 1, "evidence": "Can simulate rapid ice loss events but limited skill in predicting timing and magnitude of ice cliff instability." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 2, "evidence": "Satellite velocity, elevation, and gravity observations. Limited subsurface/basal observations available." },
+        "error_correction": { "score": 2, "evidence": "Adjoint-based inversion for basal drag and ice rheology. Systematic error reduction through iterative optimization." },
+        "prediction_impact": { "score": 2, "evidence": "DA significantly improves initial conditions for projections. Impact on long-term predictability still being quantified." },
+        "operational_use": { "score": 1, "evidence": "Not used in operational prediction systems. Products used for planning-horizon projections." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 3, "evidence": "Rigorous code verification against analytical benchmarks. Automated test suites." },
+        "ml_in_processes": { "score": 1, "evidence": "Research-stage ML for emulation and parameter estimation." },
+        "vvuq_ml_emulators": { "score": 0, "evidence": "No formal VVUQ for ML components." },
+        "independent_validation": { "score": 2, "evidence": "Validated against independent satellite observations and field measurements. Limited by observation availability at depth." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 1, "evidence": "Limited OSSE capability. Can generate synthetic observations but no systematic framework." },
+        "da_readiness": { "score": 2, "evidence": "Can incorporate new satellite data types with moderate development effort." },
+        "decadal_alignment": { "score": 3, "evidence": "Directly supports Decadal Survey priorities on ice sheets and sea level." },
+        "community_adoption_mission": { "score": 2, "evidence": "Used in NASA mission science teams. Growing adoption in ESA mission planning." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 1, "evidence": "Projections require expert interpretation. Not packaged for direct decision support use." },
+        "regulatory_relevance": { "score": 2, "evidence": "Sea level projections referenced in IPCC, used in coastal planning regulations." },
+        "uncertainty_communication": { "score": 2, "evidence": "Probabilistic projections with uncertainty bounds. Communication framework improving." },
+        "community_training": { "score": 1, "evidence": "Conference tutorials and documentation. Limited direct stakeholder engagement." }
+      }
+    }
+  },
+  "CMS-Flux": {
+    "tier1": {
+      "process_representation": { "score": 2, "evidence": "Atmospheric transport model (GEOS-Chem) with flux inversion framework. Represents CO2 transport, biospheric and oceanic exchange, fossil fuel emissions." },
+      "spatial_resolution": { "score": 2, "evidence": "Global inversions at 4°x5° to 2°x2.5°. Regional nested grids at higher resolution. Limited by atmospheric transport model resolution." },
+      "temporal_resolution": { "score": 2, "evidence": "Monthly to sub-daily flux estimates. Multi-decadal flux records from satellite era." },
+      "process_coupling": { "score": 1, "evidence": "Off-line coupling: atmospheric transport driven by meteorological reanalysis. Biospheric models provide prior fluxes. No interactive coupling." },
+      "predictive_skill": { "score": 2, "evidence": "Demonstrates skill in reproducing observed CO2 concentrations and seasonal cycles. Used for carbon budget assessments." },
+      "computational_performance": { "score": 1, "evidence": "Runs on HPC systems. Adjoint model requires significant computation. Limited GPU/cloud deployment." },
+      "observational_constraint": { "score": 3, "evidence": "Assimilates OCO-2, OCO-3, GOSAT satellite CO2, surface flask networks, aircraft profiles, and in-situ tower data. Multi-source constraint." },
+      "retrospective_analysis": { "score": 2, "evidence": "Multi-year flux inversions providing consistent carbon flux records. Not continuous operational reanalysis." },
+      "uq_attribution": { "score": 2, "evidence": "Formal uncertainty propagation through adjoint-based framework. Attribution of CO2 fluxes to regions and processes." },
+      "vv_framework": { "score": 2, "evidence": "Validated against independent observations and other inversion systems. Participates in TransCom intercomparisons." },
+      "ml_ai_integration": { "score": 1, "evidence": "ML explored for flux downscaling and gap-filling. Not in core workflow." },
+      "mission_support": { "score": 2, "evidence": "Key system for OCO-2/OCO-3 mission science. Supports future GeoCarb and carbon monitoring mission concepts." },
+      "interoperability": { "score": 2, "evidence": "Data products publicly available. Core inversion code shared with collaborators. Not fully open source." },
+      "stakeholder_adoption": { "score": 2, "evidence": "Products used by Global Carbon Project, national carbon inventories. Growing policy relevance for emissions verification." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 2, "evidence": "Captures key carbon cycle processes through transport and flux inversion. Limited by prior flux model fidelity." },
+        "coupling_fidelity": { "score": 1, "evidence": "Off-line coupling limits feedback representation. Atmospheric transport prescribed from reanalysis." },
+        "community_recognition": { "score": 2, "evidence": "Well-cited in carbon cycle research. Products used in Global Carbon Budget reports." },
+        "extreme_events": { "score": 1, "evidence": "Can detect anomalous carbon flux events (droughts, fires) but limited temporal resolution for extreme event analysis." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 3, "evidence": "Assimilates multiple satellite and in-situ CO2 observation networks." },
+        "error_correction": { "score": 2, "evidence": "Adjoint-based optimization corrects transport and flux biases. Bias correction for satellite retrievals included." },
+        "prediction_impact": { "score": 2, "evidence": "DA significantly improves flux estimates relative to prior models." },
+        "operational_use": { "score": 1, "evidence": "Not in operational prediction systems. Used for research and retrospective analysis." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 2, "evidence": "Code verification through comparison with established transport models." },
+        "ml_in_processes": { "score": 1, "evidence": "Exploratory ML applications only." },
+        "vvuq_ml_emulators": { "score": 0, "evidence": "No ML VVUQ framework." },
+        "independent_validation": { "score": 2, "evidence": "Validated against TCCON, aircraft campaigns, and independent inversion systems." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 2, "evidence": "OSSEs conducted for OCO-3 and GeoCarb mission design." },
+        "da_readiness": { "score": 2, "evidence": "Can incorporate new CO2 satellite data with moderate development." },
+        "decadal_alignment": { "score": 2, "evidence": "Supports carbon cycle priorities in Decadal Survey." },
+        "community_adoption_mission": { "score": 2, "evidence": "Used by NASA OCO science teams and carbon monitoring community." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 1, "evidence": "Products require expert interpretation for policy use." },
+        "regulatory_relevance": { "score": 2, "evidence": "Growing relevance for national emissions verification and Paris Agreement stocktake." },
+        "uncertainty_communication": { "score": 2, "evidence": "Formal uncertainty estimates on flux products. Improving communication to policy audiences." },
+        "community_training": { "score": 1, "evidence": "Scientific community engagement through publications and conferences." }
+      }
+    }
+  },
+  "RAPID": {
+    "tier1": {
+      "process_representation": { "score": 2, "evidence": "Muskingum river routing with lateral inflow from land surface models. Represents river network connectivity and flow propagation. Simplified hydraulics." },
+      "spatial_resolution": { "score": 2, "evidence": "Global river network at varying resolution (HydroSHEDS-based). Represents hundreds of thousands of river reaches worldwide." },
+      "temporal_resolution": { "score": 2, "evidence": "Sub-daily to monthly routing time steps. Output at 3-hourly to daily frequency for most applications." },
+      "process_coupling": { "score": 2, "evidence": "Coupled to multiple land surface models (Noah-MP, CLM, VIC) through the NASA Land Information System (LIS). Off-line coupling to atmospheric forcing." },
+      "predictive_skill": { "score": 2, "evidence": "Validated streamflow predictions at thousands of USGS gauging stations. Demonstrates skill for flood forecasting in limited settings." },
+      "computational_performance": { "score": 2, "evidence": "Highly parallelized (namesake: Routing Application for Parallel computatIon of Discharge). Scales efficiently on HPC. Demonstrated cloud deployment." },
+      "observational_constraint": { "score": 2, "evidence": "Assimilates satellite altimetry (SWOT concept), gauge data, and GRACE-derived water storage. Growing observational constraint." },
+      "retrospective_analysis": { "score": 2, "evidence": "Multi-decadal streamflow records produced using reanalysis-driven land surface models. Used for water resource assessment." },
+      "uq_attribution": { "score": 1, "evidence": "Limited UQ through ensemble forcing and parameter perturbation. No formal probabilistic framework." },
+      "vv_framework": { "score": 2, "evidence": "Validated against USGS gauges globally. Participates in model intercomparisons. Systematic benchmarking for major river basins." },
+      "ml_ai_integration": { "score": 1, "evidence": "ML explored for parameter estimation and runoff prediction. Not in core workflow." },
+      "mission_support": { "score": 2, "evidence": "Key supporting model for SWOT mission. Demonstrates value of satellite hydrology observations." },
+      "interoperability": { "score": 3, "evidence": "Fully open source on GitHub. Standard interfaces for coupling with land surface models. Active external community." },
+      "stakeholder_adoption": { "score": 2, "evidence": "Used by NOAA NWS for experimental flood forecasting. Adopted by international water resource agencies." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 2, "evidence": "Good representation of river routing processes. Simplified relative to full hydrodynamic models." },
+        "coupling_fidelity": { "score": 2, "evidence": "Well-integrated with land surface models. Off-line atmospheric coupling." },
+        "community_recognition": { "score": 2, "evidence": "Well-cited in hydrology community. Used in large-scale water resource assessments." },
+        "extreme_events": { "score": 2, "evidence": "Demonstrates skill for large-scale flood events. Limited by Muskingum simplifications for extreme floods." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 2, "evidence": "Satellite and gauge observations. SWOT will significantly expand coverage." },
+        "error_correction": { "score": 1, "evidence": "Limited formal bias correction. Relies on calibration against observed discharge." },
+        "prediction_impact": { "score": 2, "evidence": "DA improves streamflow estimates, particularly in gauged basins." },
+        "operational_use": { "score": 1, "evidence": "Experimental operational use at NOAA NWS. Not yet core operational tool." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 2, "evidence": "Code verification through benchmark tests and analytical solutions." },
+        "ml_in_processes": { "score": 1, "evidence": "Exploratory ML for parameter estimation." },
+        "vvuq_ml_emulators": { "score": 0, "evidence": "No ML VVUQ framework." },
+        "independent_validation": { "score": 2, "evidence": "Validated against USGS gauges and satellite altimetry." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 2, "evidence": "OSSEs conducted for SWOT mission concept. Can generate synthetic river observations." },
+        "da_readiness": { "score": 2, "evidence": "Ready for SWOT data incorporation. Framework adaptable to new observation types." },
+        "decadal_alignment": { "score": 2, "evidence": "Supports surface water priorities in Decadal Survey." },
+        "community_adoption_mission": { "score": 2, "evidence": "Key tool for SWOT pre-launch science team." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 2, "evidence": "Streamflow products accessible. NOAA NWS experimental use demonstrates operational potential." },
+        "regulatory_relevance": { "score": 1, "evidence": "Limited regulatory use. Potential for flood zone delineation." },
+        "uncertainty_communication": { "score": 1, "evidence": "Limited uncertainty quantification in products." },
+        "community_training": { "score": 2, "evidence": "Open source community, tutorials, documentation. International collaborations." }
+      }
+    }
+  },
+  "CARDAMOM": {
+    "tier1": {
+      "process_representation": { "score": 2, "evidence": "Simplified but comprehensive terrestrial carbon cycle model. Represents photosynthesis, respiration, allocation, turnover, decomposition, and fire." },
+      "spatial_resolution": { "score": 1, "evidence": "Typically 1° to 4° gridded applications. Resolution limited by computational cost of Bayesian inference at each grid cell." },
+      "temporal_resolution": { "score": 2, "evidence": "Monthly to annual carbon flux estimates. Multi-decadal retrievals from satellite era." },
+      "process_coupling": { "score": 1, "evidence": "Driven by meteorological forcing and satellite observations. No interactive coupling to atmospheric or hydrological models." },
+      "predictive_skill": { "score": 2, "evidence": "Demonstrates skill in reproducing observed carbon stocks, fluxes, and their interannual variability. Validated against eddy covariance and inventory data." },
+      "computational_performance": { "score": 1, "evidence": "MCMC inference is computationally expensive. Parallelizable across grid cells. Limited HPC optimization." },
+      "observational_constraint": { "score": 2, "evidence": "Assimilates satellite LAI, biomass, soil carbon, and burned area. Multi-source constraint on terrestrial carbon cycle." },
+      "retrospective_analysis": { "score": 2, "evidence": "Multi-decadal retrievals of terrestrial carbon cycle state and fluxes. Provides consistent long-term records." },
+      "uq_attribution": { "score": 3, "evidence": "Bayesian MCMC framework provides full posterior distributions for all parameters and state variables. Formal uncertainty propagation and attribution." },
+      "vv_framework": { "score": 2, "evidence": "Validated against FLUXNET, forest inventories, and independent satellite products. Benchmarked against other terrestrial biosphere models." },
+      "ml_ai_integration": { "score": 1, "evidence": "ML explored for emulating MCMC inference. Not in core workflow." },
+      "mission_support": { "score": 1, "evidence": "Supports interpretation of satellite vegetation and carbon observations. Limited direct mission formulation role." },
+      "interoperability": { "score": 2, "evidence": "Code available on GitHub. Active collaboration with Stanford, UCSB, Edinburgh. Standard data formats." },
+      "stakeholder_adoption": { "score": 1, "evidence": "Primarily research use. Carbon stock and flux products have potential for forest carbon monitoring." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 2, "evidence": "Captures key terrestrial carbon cycle processes. Simplified relative to full Earth system models." },
+        "coupling_fidelity": { "score": 1, "evidence": "No interactive coupling. Driven by prescribed forcing." },
+        "community_recognition": { "score": 2, "evidence": "Well-cited in terrestrial carbon cycle research. Growing user community." },
+        "extreme_events": { "score": 1, "evidence": "Can detect fire and drought impacts on carbon cycle. Limited resolution for individual extreme events." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 2, "evidence": "Multiple satellite and in-situ observation types assimilated." },
+        "error_correction": { "score": 2, "evidence": "Bayesian framework naturally accounts for model and observation errors." },
+        "prediction_impact": { "score": 2, "evidence": "DA significantly constrains parameter and state uncertainties relative to prior." },
+        "operational_use": { "score": 0, "evidence": "Not used in any operational system." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 2, "evidence": "Code verification through synthetic experiments and comparison with analytical solutions." },
+        "ml_in_processes": { "score": 1, "evidence": "Exploratory ML for accelerating MCMC." },
+        "vvuq_ml_emulators": { "score": 0, "evidence": "No ML VVUQ framework." },
+        "independent_validation": { "score": 2, "evidence": "Validated against independent observations (FLUXNET, inventories)." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 0, "evidence": "No OSSE framework." },
+        "da_readiness": { "score": 1, "evidence": "Can incorporate new satellite data but requires significant adaptation." },
+        "decadal_alignment": { "score": 1, "evidence": "Supports terrestrial ecology priorities but not directly tied to specific missions." },
+        "community_adoption_mission": { "score": 1, "evidence": "Limited mission formulation adoption." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 0, "evidence": "Research tool only. Not packaged for operational use." },
+        "regulatory_relevance": { "score": 1, "evidence": "Potential for forest carbon monitoring and REDD+ verification." },
+        "uncertainty_communication": { "score": 3, "evidence": "Full Bayesian uncertainty quantification. Posterior distributions communicate uncertainty naturally." },
+        "community_training": { "score": 1, "evidence": "Academic training through collaborations. Limited broader outreach." }
+      }
+    }
+  },
+  "MOMO-CHEM": {
+    "tier1": {
+      "process_representation": { "score": 2, "evidence": "Multi-model chemical data assimilation using ensemble of chemistry transport models. Represents tropospheric chemistry, aerosols, and trace gas transport." },
+      "spatial_resolution": { "score": 2, "evidence": "Global coverage at ~1° to 2° resolution. Captures regional-scale pollution features." },
+      "temporal_resolution": { "score": 2, "evidence": "Daily to monthly chemical reanalysis products. Multi-year records spanning satellite era." },
+      "process_coupling": { "score": 2, "evidence": "Multi-model ensemble approach implicitly represents model structural uncertainty. Off-line coupling to meteorological fields." },
+      "predictive_skill": { "score": 2, "evidence": "Demonstrated skill in tropospheric composition analysis. Validated against independent observations and other reanalyses." },
+      "computational_performance": { "score": 1, "evidence": "Multi-model ensemble requires running several CTMs. Computationally expensive. Limited HPC optimization." },
+      "observational_constraint": { "score": 2, "evidence": "Assimilates satellite retrievals of ozone, CO, NO2, and aerosol from multiple instruments (OMI, MOPITT, MODIS)." },
+      "retrospective_analysis": { "score": 2, "evidence": "Multi-year chemical reanalysis products. Used for trend analysis and air quality assessment." },
+      "uq_attribution": { "score": 2, "evidence": "Multi-model spread provides structural uncertainty estimate. Ensemble Kalman filter provides formal UQ." },
+      "vv_framework": { "score": 2, "evidence": "Validated against independent observations (AERONET, ozonesondes, aircraft campaigns). Intercomparison with CAMS reanalysis." },
+      "ml_ai_integration": { "score": 0, "evidence": "No ML/AI integration in current framework." },
+      "mission_support": { "score": 1, "evidence": "Supports interpretation of satellite atmospheric composition observations. Limited direct mission formulation role." },
+      "interoperability": { "score": 1, "evidence": "Code shared with JAMSTEC collaborators. Not publicly available as open source." },
+      "stakeholder_adoption": { "score": 1, "evidence": "Products used in research community. Limited operational or decision support adoption." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 2, "evidence": "Multi-model approach captures range of chemistry representations." },
+        "coupling_fidelity": { "score": 1, "evidence": "Off-line coupling. No interactive atmosphere-chemistry feedback." },
+        "community_recognition": { "score": 1, "evidence": "Growing recognition. Smaller citation base than established reanalyses." },
+        "extreme_events": { "score": 1, "evidence": "Can detect major pollution events and wildfire plumes at resolved scales." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 2, "evidence": "Multiple satellite observations of atmospheric composition assimilated." },
+        "error_correction": { "score": 2, "evidence": "Ensemble approach provides adaptive error correction. Multi-model framework reduces structural bias." },
+        "prediction_impact": { "score": 2, "evidence": "DA significantly improves chemical composition estimates relative to free-running models." },
+        "operational_use": { "score": 0, "evidence": "Not used in operational systems. Research product." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 1, "evidence": "Individual CTMs have their own verification. System-level verification limited." },
+        "ml_in_processes": { "score": 0, "evidence": "No ML integration." },
+        "vvuq_ml_emulators": { "score": 0, "evidence": "No ML components." },
+        "independent_validation": { "score": 2, "evidence": "Validated against independent surface and aircraft observations." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 0, "evidence": "No OSSE framework." },
+        "da_readiness": { "score": 1, "evidence": "Can incorporate new satellite data but requires development." },
+        "decadal_alignment": { "score": 1, "evidence": "Supports atmospheric composition priorities." },
+        "community_adoption_mission": { "score": 1, "evidence": "Limited mission formulation adoption." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 0, "evidence": "Research product only." },
+        "regulatory_relevance": { "score": 1, "evidence": "Potential for air quality monitoring. Not yet used in regulatory context." },
+        "uncertainty_communication": { "score": 1, "evidence": "Multi-model spread provides uncertainty information. Limited formal communication." },
+        "community_training": { "score": 0, "evidence": "Minimal outreach beyond research community." }
+      }
+    }
+  },
+  "LES": {
+    "tier1": {
+      "process_representation": { "score": 3, "evidence": "Explicitly resolves turbulent eddies and cloud microphysics. State-of-the-art representation of boundary layer dynamics, convection, and precipitation processes." },
+      "spatial_resolution": { "score": 3, "evidence": "Meter-scale resolution resolving the inertial subrange of turbulence. Sub-cloud to cloud-resolving scales for diverse atmospheric phenomena." },
+      "temporal_resolution": { "score": 2, "evidence": "Sub-second time stepping for turbulence dynamics. Limited to short simulation periods (hours to days) due to computational cost." },
+      "process_coupling": { "score": 1, "evidence": "Standalone atmospheric process model. Driven by prescribed boundary conditions. No coupling to larger-scale models in production." },
+      "predictive_skill": { "score": 1, "evidence": "High skill for process-level studies. Not used for operational weather prediction. Provides truth-proxy for parameterization development." },
+      "computational_performance": { "score": 2, "evidence": "Highly parallel with demonstrated GPU acceleration. Scalable on HPC systems for large-domain simulations." },
+      "observational_constraint": { "score": 1, "evidence": "Validated against field campaign observations and satellite retrievals. No formal data assimilation." },
+      "retrospective_analysis": { "score": 0, "evidence": "No retrospective analysis or reanalysis capability. Process-study focused." },
+      "uq_attribution": { "score": 1, "evidence": "Ensemble simulations for sensitivity studies. No formal probabilistic UQ framework." },
+      "vv_framework": { "score": 2, "evidence": "Validated against field campaigns (DYCOMS, BOMEX, ARM) and DNS solutions. Benchmarked in LES intercomparisons." },
+      "ml_ai_integration": { "score": 2, "evidence": "Active ML research for developing cloud and turbulence parameterizations from LES output. ML emulators being developed for GCM application." },
+      "mission_support": { "score": 1, "evidence": "Provides process understanding for atmospheric observation missions. Limited direct mission formulation role." },
+      "interoperability": { "score": 1, "evidence": "Code shared within research group. Not publicly open source. Limited external access." },
+      "stakeholder_adoption": { "score": 0, "evidence": "Research tool only. No operational or decision support applications." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 3, "evidence": "Explicitly resolves turbulent processes that are parameterized in GCMs. Highest fidelity atmospheric process model." },
+        "coupling_fidelity": { "score": 1, "evidence": "Standalone model. No multi-model coupling." },
+        "community_recognition": { "score": 2, "evidence": "Respected in atmospheric science community. LES output used for parameterization development worldwide." },
+        "extreme_events": { "score": 2, "evidence": "Can simulate extreme precipitation and convective events at high fidelity." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 0, "evidence": "No data assimilation capability." },
+        "error_correction": { "score": 0, "evidence": "No DA-based error correction." },
+        "prediction_impact": { "score": 0, "evidence": "Not used for prediction." },
+        "operational_use": { "score": 0, "evidence": "Not operational." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 2, "evidence": "Verified against DNS and analytical solutions for idealized cases." },
+        "ml_in_processes": { "score": 2, "evidence": "ML trained on LES output for parameterization development. Active research area." },
+        "vvuq_ml_emulators": { "score": 1, "evidence": "Some validation of ML-derived parameterizations against LES reference simulations." },
+        "independent_validation": { "score": 2, "evidence": "Validated against field campaigns and satellite observations." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 0, "evidence": "No OSSE framework." },
+        "da_readiness": { "score": 0, "evidence": "No DA capability." },
+        "decadal_alignment": { "score": 1, "evidence": "Supports cloud and precipitation process understanding for future missions." },
+        "community_adoption_mission": { "score": 0, "evidence": "Not used in mission formulation." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 0, "evidence": "Research tool only." },
+        "regulatory_relevance": { "score": 0, "evidence": "No regulatory applications." },
+        "uncertainty_communication": { "score": 1, "evidence": "Ensemble simulations provide uncertainty information for process studies." },
+        "community_training": { "score": 1, "evidence": "Academic training through research collaborations." }
+      }
+    }
+  },
+  "EDMF": {
+    "tier1": {
+      "process_representation": { "score": 2, "evidence": "Unified parameterization scheme combining eddy diffusivity and mass flux for boundary layer turbulence and shallow convection. Bridges gap between LES and GCM scales." },
+      "spatial_resolution": { "score": 1, "evidence": "Designed for GCM grid scales (~25-100 km). Represents sub-grid processes through parameterization. Not a resolved-scale model." },
+      "temporal_resolution": { "score": 2, "evidence": "GCM time stepping (minutes to hours). Parameterizes processes across relevant timescales." },
+      "process_coupling": { "score": 2, "evidence": "Designed to couple with GCM dynamical cores. Tested in GFDL AM4, NCAR CAM, and NASA GEOS. Represents coupling between turbulence and convection." },
+      "predictive_skill": { "score": 1, "evidence": "Improves GCM cloud and precipitation representation relative to traditional parameterizations. Demonstrated in limited case studies." },
+      "computational_performance": { "score": 2, "evidence": "Computationally efficient for GCM integration. Comparable cost to traditional parameterizations. Scalable through GCM infrastructure." },
+      "observational_constraint": { "score": 1, "evidence": "Parameterization parameters tuned against LES output and field campaign observations. No formal data assimilation." },
+      "retrospective_analysis": { "score": 0, "evidence": "No standalone reanalysis capability. Contributes through GCM integration." },
+      "uq_attribution": { "score": 2, "evidence": "Bayesian calibration framework for parameter uncertainty. Systematic sensitivity analysis to LES training data." },
+      "vv_framework": { "score": 2, "evidence": "Validated against LES reference simulations, field campaigns, and within GCM climate simulations. Participates in CFMIP experiments." },
+      "ml_ai_integration": { "score": 2, "evidence": "Active research on ML-based calibration of EDMF parameters using LES data. ML used for parameter optimization and uncertainty quantification." },
+      "mission_support": { "score": 0, "evidence": "No direct mission support. Improves GCM cloud representation relevant to Earth observation missions." },
+      "interoperability": { "score": 2, "evidence": "Integrated with multiple GCMs (GFDL, NCAR, NASA GSFC). Code shared with collaborators." },
+      "stakeholder_adoption": { "score": 0, "evidence": "Research parameterization. No direct stakeholder applications." }
+    },
+    "tier2": {
+      "research": {
+        "process_fidelity": { "score": 2, "evidence": "Improved representation of boundary layer and shallow convection relative to traditional schemes." },
+        "coupling_fidelity": { "score": 2, "evidence": "Well-coupled with GCM dynamics. Tested in multiple modeling frameworks." },
+        "community_recognition": { "score": 1, "evidence": "Growing recognition in atmospheric modeling community. Cited in parameterization development literature." },
+        "extreme_events": { "score": 1, "evidence": "Improved representation of convective events in GCMs. Limited assessment of extreme event performance." }
+      },
+      "data_assimilation": {
+        "obs_coverage": { "score": 0, "evidence": "No DA capability as standalone parameterization." },
+        "error_correction": { "score": 0, "evidence": "No DA-based error correction." },
+        "prediction_impact": { "score": 1, "evidence": "Improves GCM forecasts when integrated but not independently evaluated." },
+        "operational_use": { "score": 0, "evidence": "Not in operational systems independently." }
+      },
+      "vvuq_ml": {
+        "verification_level": { "score": 2, "evidence": "Verified against LES and analytical solutions for canonical cases." },
+        "ml_in_processes": { "score": 2, "evidence": "ML calibration of parameterization parameters. Active research area." },
+        "vvuq_ml_emulators": { "score": 1, "evidence": "Some validation of ML-calibrated parameters against LES reference." },
+        "independent_validation": { "score": 2, "evidence": "Validated against LES, field campaigns, and satellite cloud observations." }
+      },
+      "mission_formulation": {
+        "osse_capability": { "score": 0, "evidence": "No OSSE framework." },
+        "da_readiness": { "score": 0, "evidence": "Not applicable as parameterization scheme." },
+        "decadal_alignment": { "score": 1, "evidence": "Supports cloud and climate priorities indirectly through GCM improvement." },
+        "community_adoption_mission": { "score": 0, "evidence": "Not used in mission formulation." }
+      },
+      "decision_support": {
+        "operational_usability": { "score": 0, "evidence": "Research parameterization." },
+        "regulatory_relevance": { "score": 0, "evidence": "No regulatory applications." },
+        "uncertainty_communication": { "score": 1, "evidence": "Bayesian parameter uncertainty provides some uncertainty information." },
+        "community_training": { "score": 1, "evidence": "Academic collaborations and conference presentations." }
+      }
+    }
+  }
+}
