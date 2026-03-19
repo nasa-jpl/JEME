@@ -25,6 +25,7 @@ import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../../components/EarthSystemSection';
 
 const CMSFluxDashboard = () => {
   const [cmsFluxData, setCmsFluxData] = useState([]);
@@ -212,6 +213,9 @@ const CMSFluxDashboard = () => {
         </div>
         
         <MetricsOverview data={cmsFluxData} />
+
+        <EarthSystemSection modelName="CMS-Flux" citationsData={cmsFluxData} />
+
         <CitationTrendsChart data={cmsFluxData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">

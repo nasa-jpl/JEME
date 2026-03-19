@@ -25,6 +25,7 @@ import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../../components/EarthSystemSection';
 
 const ECCODashboard = () => {
   const [eccoData, setEccoData] = useState([]);
@@ -212,6 +213,9 @@ const ECCODashboard = () => {
         </div>
         
         <MetricsOverview data={eccoData} />
+
+        <EarthSystemSection modelName="ECCO" citationsData={eccoData} />
+
         <CitationTrendsChart data={eccoData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">

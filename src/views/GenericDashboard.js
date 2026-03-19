@@ -14,6 +14,7 @@ import GitHubMetricsCard from '../components/charts/GitHubMetricsCard';
 import MissionsSummary from '../components/MissionsSummary';
 import UncertaintyOverviewCard from '../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../components/EarthSystemSection';
 
 const GenericDashboard = ({ modelName, citationsData }) => {
   const [refreshing, setRefreshing] = useState(false);
@@ -457,6 +458,9 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             breakdown={[]}
           />
         </div>
+
+        {/* Earth System Interconnections */}
+        <EarthSystemSection modelName={modelName} citationsData={citationsData} />
 
         {/* Charts Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">

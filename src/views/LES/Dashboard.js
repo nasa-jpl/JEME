@@ -23,6 +23,7 @@ import JournalDistributionCard from '../../components/charts/JournalDistribution
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../../components/EarthSystemSection';
 
 const LESDashboard = () => {
   const [lesData, setLesData] = useState([]);
@@ -212,6 +213,9 @@ const LESDashboard = () => {
 
 
         <MetricsOverview data={lesData} />
+
+        <EarthSystemSection modelName="LES" citationsData={lesData} />
+
         <CitationTrendsChart data={lesData} />
 
         <div className="grid grid-cols-2 gap-6 mb-6">

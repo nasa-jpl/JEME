@@ -25,6 +25,7 @@ import JournalDistributionCard from '../../components/charts/JournalDistribution
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../../components/EarthSystemSection';
 
 const MOMOCHEMDashboard = () => {
   const [momoChemData, setMomoChemData] = useState([]);
@@ -212,6 +213,9 @@ const MOMOCHEMDashboard = () => {
         </div>
         
         <MetricsOverview data={momoChemData} />
+
+        <EarthSystemSection modelName="MOMO-CHEM" citationsData={momoChemData} />
+
         <CitationTrendsChart data={momoChemData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">

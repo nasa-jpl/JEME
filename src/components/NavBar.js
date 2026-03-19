@@ -112,12 +112,6 @@ const NavBar = ({ activeItem }) => {
                 )}
               </div>
 
-              <Link
-                to="/science-model-dashboard"
-                className={inactiveClass}
-              >
-                JEME
-              </Link>
             </>
           ) : (
             <>
@@ -165,19 +159,7 @@ const NavBar = ({ activeItem }) => {
                 Earth System
               </Link>
 
-              <Link
-                to="/science-model-dashboard/model-maturity"
-                className={activeItem === 'Model Maturity' ? activeClass : inactiveClass}
-              >
-                Model Maturity
-              </Link>
 
-              <Link
-                to="/science-model-dashboard/JEOE"
-                className={activeItem === 'JEOE Dashboard' ? activeClass : inactiveClass}
-              >
-                JEOE
-              </Link>
             </>
           )}
 

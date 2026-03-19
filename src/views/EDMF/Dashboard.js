@@ -23,6 +23,7 @@ import JournalDistributionCard from '../../components/charts/JournalDistribution
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../../components/EarthSystemSection';
 
 const EDMFDashboard = () => {
   const [edmfData, setEdmfData] = useState([]);
@@ -212,6 +213,9 @@ const EDMFDashboard = () => {
 
 
         <MetricsOverview data={edmfData} />
+
+        <EarthSystemSection modelName="EDMF" citationsData={edmfData} />
+
         <CitationTrendsChart data={edmfData} />
 
         <div className="grid grid-cols-2 gap-6 mb-6">

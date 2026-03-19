@@ -25,6 +25,7 @@ import GitHubMetricsCard from '../../components/charts/GitHubMetricsCard';
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import EarthSystemSection from '../../components/EarthSystemSection';
 
 const CARDAMOMDashboard = () => {
   const [cardamomData, setCardamomData] = useState([]);
@@ -213,6 +214,9 @@ const CARDAMOMDashboard = () => {
 
         
         <MetricsOverview data={cardamomData} />
+
+        <EarthSystemSection modelName="CARDAMOM" citationsData={cardamomData} />
+
         <CitationTrendsChart data={cardamomData} />
         
         <div className="grid grid-cols-2 gap-6 mb-6">
