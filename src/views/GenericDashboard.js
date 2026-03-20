@@ -459,7 +459,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           />
         </div>
 
-        {/* Earth System Interconnections */}
+        {/* Earth System Spheres */}
         <EarthSystemSection modelName={modelName} citationsData={citationsData} />
 
         {/* Charts Grid */}

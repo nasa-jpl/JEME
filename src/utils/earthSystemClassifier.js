@@ -8,7 +8,7 @@
 
 const SPHERE_DEFINITIONS = {
   Atmosphere: {
-    color: '#60A5FA',
+    color: '#F97316',
     icon: 'Cloud',
     description: 'Atmospheric sciences including chemistry, weather, turbulence, and air quality',
     domainKeywords: [

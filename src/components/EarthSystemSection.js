@@ -68,7 +68,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
 
   const { sphereData } = analysis;
 
-  // Get spheres that have papers for this model, sorted by count
+  // Get all spheres for this model (including those with zero papers), sorted by count
   const modelSpheres = Object.entries(sphereData)
     .filter(([name]) => name !== 'Unclassified')
     .map(([name, data]) => ({
@@ -76,7 +76,6 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
       ...data,
       modelPaperCount: data.models[modelName] || 0,
     }))
-    .filter(s => s.modelPaperCount > 0)
     .sort((a, b) => b.modelPaperCount - a.modelPaperCount);
 
   const totalClassified = modelSpheres.reduce((sum, s) => sum + s.modelPaperCount, 0);
@@ -117,7 +116,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
             <Globe size={24} className="text-blue-600" />
           </div>
           <div>
-            <h2 className="text-xl font-bold text-gray-900">Earth System Interconnections</h2>
+            <h2 className="text-xl font-bold text-gray-900">Earth System Spheres</h2>
             <p className="text-sm text-gray-600">
               How {modelName} research contributes to understanding Earth's interconnected spheres
             </p>
