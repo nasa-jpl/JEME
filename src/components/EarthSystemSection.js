@@ -1,7 +1,8 @@
 // Earth System Section for individual model dashboards
 // Shows how a model's papers distribute across Earth's five spheres
-import React, { useMemo, useState } from 'react';
+import React, { useMemo, useState, useCallback } from 'react';
 import { Link } from 'react-router-dom';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer, Sector } from 'recharts';
 import { Globe, Cloud, Droplets, Snowflake, TreePine, Mountain, HelpCircle,
          ArrowRight, ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
 import { classifyAllPapers } from '../utils/earthSystemClassifier';
@@ -15,14 +16,53 @@ const SPHERE_ICONS = {
   Unclassified: HelpCircle,
 };
 
+// Custom active shape for the pie chart - expands the selected slice
+const renderActiveShape = (props) => {
+  const { cx, cy, innerRadius, outerRadius, startAngle, endAngle, fill, payload, percent } = props;
+  return (
+    <g>
+      <Sector
+        cx={cx} cy={cy}
+        innerRadius={innerRadius - 4}
+        outerRadius={outerRadius + 12}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+        stroke="#fff"
+        strokeWidth={3}
+      />
+      <Sector
+        cx={cx} cy={cy}
+        innerRadius={outerRadius + 16}
+        outerRadius={outerRadius + 20}
+        startAngle={startAngle}
+        endAngle={endAngle}
+        fill={fill}
+        opacity={0.3}
+      />
+      <text x={cx} y={cy - 10} textAnchor="middle" className="text-sm font-bold" fill="#1F2937">
+        {payload.name}
+      </text>
+      <text x={cx} y={cy + 12} textAnchor="middle" className="text-lg font-bold" fill={fill}>
+        {`${(percent * 100).toFixed(0)}%`}
+      </text>
+    </g>
+  );
+};
+
 const EarthSystemSection = ({ modelName, citationsData }) => {
   const [selectedSphere, setSelectedSphere] = useState(null);
+  const [activeIndex, setActiveIndex] = useState(0);
   const [showAllPapers, setShowAllPapers] = useState(false);
 
   const analysis = useMemo(() => {
     if (!citationsData || citationsData.length === 0) return null;
     return classifyAllPapers({ [modelName]: citationsData });
   }, [modelName, citationsData]);
+
+  const onPieEnter = useCallback((_, index) => {
+    setActiveIndex(index);
+  }, []);
 
   if (!analysis) return null;
 
@@ -46,10 +86,27 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
   // Primary sphere = the one with the most papers
   const primarySphere = modelSpheres[0];
 
+  // Prepare pie chart data
+  const pieData = modelSpheres.map(s => ({
+    name: s.name,
+    value: s.modelPaperCount,
+    color: s.color,
+    totalCitations: s.totalCitations || 0,
+  }));
+  if (unclassifiedCount > 0) {
+    pieData.push({ name: 'Unclassified', value: unclassifiedCount, color: '#9CA3AF', totalCitations: 0 });
+  }
+
   const selectedData = selectedSphere ? sphereData[selectedSphere] : null;
   const selectedPapers = selectedData
     ? [...selectedData.papers].sort((a, b) => (b.citation_count || 0) - (a.citation_count || 0)).slice(0, showAllPapers ? 15 : 5)
     : [];
+
+  const handlePieClick = (data) => {
+    const name = data.name;
+    if (name === 'Unclassified') return;
+    setSelectedSphere(selectedSphere === name ? null : name);
+  };
 
   return (
     <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
@@ -74,101 +131,103 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
         </Link>
       </div>
 
-      {/* Sphere Distribution Bar */}
-      <div className="mb-6">
-        <div className="flex items-center justify-between mb-2">
-          <span className="text-sm font-medium text-gray-700">Paper Distribution Across Spheres</span>
-          <span className="text-xs text-gray-500">{totalClassified.toLocaleString()} classified papers</span>
+      {/* Pie Chart + Legend Layout */}
+      <div className="flex flex-col lg:flex-row items-center gap-6 mb-4">
+        {/* Pie Chart */}
+        <div className="w-full lg:w-1/2" style={{ height: 300 }}>
+          <ResponsiveContainer width="100%" height="100%">
+            <PieChart>
+              <Pie
+                activeIndex={activeIndex}
+                activeShape={renderActiveShape}
+                data={pieData}
+                cx="50%"
+                cy="50%"
+                innerRadius={60}
+                outerRadius={100}
+                paddingAngle={2}
+                dataKey="value"
+                onMouseEnter={onPieEnter}
+                onClick={handlePieClick}
+                style={{ cursor: 'pointer', outline: 'none' }}
+              >
+                {pieData.map((entry) => (
+                  <Cell
+                    key={entry.name}
+                    fill={entry.color}
+                    stroke="#fff"
+                    strokeWidth={2}
+                    opacity={selectedSphere && selectedSphere !== entry.name ? 0.4 : 1}
+                  />
+                ))}
+              </Pie>
+              <Tooltip
+                formatter={(value, name) => [`${value.toLocaleString()} papers`, name]}
+                contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '13px' }}
+              />
+            </PieChart>
+          </ResponsiveContainer>
         </div>
-        <div className="h-6 rounded-full overflow-hidden flex bg-gray-100">
+
+        {/* Interactive Legend */}
+        <div className="w-full lg:w-1/2 space-y-2">
           {modelSpheres.map(sphere => {
-            const pct = (sphere.modelPaperCount / totalPapers) * 100;
-            if (pct < 1) return null;
+            const Icon = SPHERE_ICONS[sphere.name];
+            const pct = Math.round((sphere.modelPaperCount / totalPapers) * 100);
+            const isSelected = selectedSphere === sphere.name;
+            const isPrimary = sphere.name === primarySphere?.name;
+
             return (
               <button
                 key={sphere.name}
-                onClick={() => setSelectedSphere(selectedSphere === sphere.name ? null : sphere.name)}
-                className="h-full transition-opacity hover:opacity-80 relative group"
-                style={{ width: `${pct}%`, backgroundColor: sphere.color }}
-                title={`${sphere.name}: ${sphere.modelPaperCount} papers (${Math.round(pct)}%)`}
+                onClick={() => setSelectedSphere(isSelected ? null : sphere.name)}
+                className={`w-full text-left p-3 rounded-lg border-2 transition-all flex items-center gap-3 ${
+                  isSelected
+                    ? 'border-blue-500 shadow-md bg-blue-50'
+                    : 'border-gray-100 hover:border-gray-300 hover:shadow-sm'
+                }`}
               >
-                {pct > 8 && (
-                  <span className="absolute inset-0 flex items-center justify-center text-white text-xs font-medium">
-                    {Math.round(pct)}%
-                  </span>
-                )}
+                {/* Color dot + icon */}
+                <div className="p-2 rounded-lg" style={{ backgroundColor: `${sphere.color}20` }}>
+                  <Icon size={20} style={{ color: sphere.color }} />
+                </div>
+
+                {/* Name + primary badge */}
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <span className="font-semibold text-sm text-gray-900">{sphere.name}</span>
+                    {isPrimary && (
+                      <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-bold">
+                        Primary
+                      </span>
+                    )}
+                  </div>
+                  <p className="text-xs text-gray-500">{(sphere.totalCitations || 0).toLocaleString()} citations</p>
+                </div>
+
+                {/* Percentage bar */}
+                <div className="w-24 flex-shrink-0">
+                  <div className="flex items-center justify-between mb-1">
+                    <span className="text-sm font-bold text-gray-900">{pct}%</span>
+                    <span className="text-xs text-gray-500">{sphere.modelPaperCount.toLocaleString()}</span>
+                  </div>
+                  <div className="h-2 rounded-full bg-gray-100 overflow-hidden">
+                    <div
+                      className="h-full rounded-full transition-all"
+                      style={{ width: `${pct}%`, backgroundColor: sphere.color }}
+                    />
+                  </div>
+                </div>
               </button>
             );
           })}
-          {unclassifiedCount > 0 && (unclassifiedCount / totalPapers) * 100 >= 1 && (
-            <div
-              className="h-full"
-              style={{ width: `${(unclassifiedCount / totalPapers) * 100}%`, backgroundColor: '#9CA3AF' }}
-              title={`Unclassified: ${unclassifiedCount} papers`}
-            />
+          {unclassifiedCount > 0 && (
+            <div className="text-xs text-gray-400 pl-3 pt-1">
+              + {unclassifiedCount.toLocaleString()} unclassified papers
+            </div>
           )}
         </div>
       </div>
-
-      {/* Sphere Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-3 mb-4">
-        {modelSpheres.map(sphere => {
-          const Icon = SPHERE_ICONS[sphere.name];
-          const pct = Math.round((sphere.modelPaperCount / totalPapers) * 100);
-          const isSelected = selectedSphere === sphere.name;
-          const isPrimary = sphere.name === primarySphere?.name;
-
-          return (
-            <button
-              key={sphere.name}
-              onClick={() => setSelectedSphere(isSelected ? null : sphere.name)}
-              className={`text-left p-3 rounded-lg border-2 transition-all ${
-                isSelected
-                  ? 'border-blue-500 shadow-md bg-blue-50'
-                  : 'border-gray-200 hover:border-gray-300 hover:shadow-sm'
-              }`}
-            >
-              <div className="flex items-center gap-2 mb-2">
-                <div className="p-1.5 rounded-md" style={{ backgroundColor: `${sphere.color}20` }}>
-                  <Icon size={16} style={{ color: sphere.color }} />
-                </div>
-                <span className="font-semibold text-sm text-gray-900">{sphere.name}</span>
-                {isPrimary && (
-                  <span className="ml-auto text-xs px-1.5 py-0.5 rounded-full bg-blue-100 text-blue-700 font-medium">
-                    Primary
-                  </span>
-                )}
-              </div>
-              <div className="flex justify-between items-end">
-                <div>
-                  <p className="text-lg font-bold text-gray-900">{sphere.modelPaperCount.toLocaleString()}</p>
-                  <p className="text-xs text-gray-500">papers ({pct}%)</p>
-                </div>
-                <div className="text-right">
-                  <p className="text-sm font-semibold text-gray-700">{(sphere.totalCitations || 0).toLocaleString()}</p>
-                  <p className="text-xs text-gray-500">citations</p>
-                </div>
-              </div>
-            </button>
-          );
-        })}
-      </div>
-
-      {/* Spheres with <1% */}
-      {(() => {
-        const minorSpheres = Object.entries(sphereData)
-          .filter(([name]) => name !== 'Unclassified')
-          .filter(([name, data]) => {
-            const count = data.models[modelName] || 0;
-            return count > 0 && (count / totalPapers) * 100 < 1;
-          });
-        if (minorSpheres.length === 0) return null;
-        return (
-          <p className="text-xs text-gray-400 mb-4">
-            Also contributes to: {minorSpheres.map(([name]) => name).join(', ')} ({'<'}1% each)
-          </p>
-        );
-      })()}
 
       {/* Selected Sphere Detail */}
       {selectedSphere && selectedData && (
