@@ -123,6 +123,9 @@ const Dashboard = () => {
       
       <main className="max-w-7xl mx-auto px-4 py-6">
         
+        {/* JEME Contribution Section */}
+        <JEMEContributionSection />
+
         {/* JEME Image */}
         <div className="mb-6">
           <img
@@ -131,9 +134,6 @@ const Dashboard = () => {
             className="w-full rounded-lg shadow-sm"
           />
         </div>
-
-        {/* JEME Contribution Section */}
-        <JEMEContributionSection />
 
         {/* Model Overview Section */}
         <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
