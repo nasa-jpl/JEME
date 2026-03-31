@@ -14,10 +14,10 @@
 const fs = require('fs');
 const path = require('path');
 
-const DATA_DIR = path.join(__dirname, '..', 'src', 'data');
+const DATA_DIR = path.join(__dirname, '..', 'public', 'data');
 
 // All model data files follow the pattern {MODEL}_analyzed.json
-const MODELS = ['ECCO', 'RAPID', 'CARDAMOM', 'CMS-Flux', 'ISSM', 'MOMO-CHEM'];
+const MODELS = ['ECCO', 'RAPID', 'CARDAMOM', 'CMS-Flux', 'ISSM', 'MOMO-CHEM', 'LES', 'EDMF', 'GRACE', 'SWOT'];
 
 // ── Filter functions ────────────────────────────────────────────────────────
 
@@ -43,12 +43,90 @@ function isSupplementaryMetadata(entry) {
     title.startsWith('supplementary information') ||
     title.endsWith('- supplementary material') ||
     title.includes('interactive comment') ||
-    title.includes('printer-friendly version interactive discussion')
+    title.includes('printer-friendly version interactive discussion') ||
+    title.startsWith('supporting information for')
   );
 }
 
+function isBookChapter(entry) {
+  var doi = (entry.doi || entry.DOI || '').toLowerCase();
+  var title = (entry.title || '').toLowerCase().trim();
+  // Earth 2020 book chapters
+  if (doi.includes('10.11647/obp.0193')) return true;
+  // Field to Palette and similar non-research book chapters
+  if (doi.includes('10.1201/b22355')) return true;
+  return false;
+}
+
+function isEditorialOrReviewerContent(entry) {
+  var title = (entry.title || '').toLowerCase().trim();
+  return (
+    title.startsWith('response to referee') ||
+    title.startsWith('reply to referee') ||
+    title.startsWith('response to reviewer') ||
+    title.startsWith('reply to reviewer') ||
+    title.startsWith('reply on rc') ||
+    title.startsWith('reply to rc') ||
+    /^comment on [a-z]+-\d/.test(title) ||  // "Comment on egusphere-2022-244"
+    /^comment on ``/.test(title) ||
+    title.startsWith('short comment on') ||
+    title === 'issue information' ||
+    title === 'masthead' ||
+    title === 'editorial board' ||
+    title.startsWith('editorial:') ||
+    title === 'contents' ||
+    title === 'open peer review'
+  );
+}
+
+function isFrontMatter(entry) {
+  var title = (entry.title || '').toLowerCase().trim();
+  var frontMatterTitles = [
+    'preface', 'index', 'references', 'foreword', 'introduction',
+    'acknowledgements', 'acknowledgments', 'untitled'
+  ];
+  return frontMatterTitles.includes(title);
+}
+
+function isErrataCorrigenda(entry) {
+  var title = (entry.title || '').toLowerCase().trim();
+  return (
+    title.startsWith('erratum to') ||
+    title.startsWith('erratum:') ||
+    title.startsWith('erratum for') ||
+    title === 'erratum' ||
+    title.startsWith('corrigendum to') ||
+    title.startsWith('corrigendum:') ||
+    title === 'corrigendum' ||
+    title.startsWith('correction to:') ||
+    title.startsWith('correction:') ||
+    (title === 'correction' && !title.includes('correction of'))
+  );
+}
+
+function isFragmentTitle(entry) {
+  var title = (entry.title || '').trim();
+  // Skip empty titles
+  if (!title) return true;
+  // Skip very short titles (<=10 chars) but not Chinese/CJK characters
+  // CJK titles are short in character count but are full titles
+  var hasCJK = /[\u4e00-\u9fff\u3400-\u4dbf\uac00-\ud7af]/.test(title);
+  if (hasCJK) return false;
+  if (title.length <= 10) return true;
+  return false;
+}
+
 function shouldRemove(entry) {
-  return isReviewOfSpam(entry) || isPlaceholderEntry(entry) || isSupplementaryMetadata(entry);
+  return (
+    isReviewOfSpam(entry) ||
+    isPlaceholderEntry(entry) ||
+    isSupplementaryMetadata(entry) ||
+    isBookChapter(entry) ||
+    isEditorialOrReviewerContent(entry) ||
+    isFrontMatter(entry) ||
+    isErrataCorrigenda(entry) ||
+    isFragmentTitle(entry)
+  );
 }
 
 // ── Processing ──────────────────────────────────────────────────────────────
@@ -71,13 +149,22 @@ function cleanModel(modelName, dryRun) {
   }
 
   var originalCount = data.length;
-  var removals = { review_of: [], placeholder: [], supplementary: [] };
+  var removals = {
+    review_of: [], placeholder: [], supplementary: [],
+    book_chapter: [], editorial: [], front_matter: [],
+    errata: [], fragment: []
+  };
 
   var cleaned = data.filter(function (entry) {
     var reasons = [];
     if (isReviewOfSpam(entry)) reasons.push('review_of');
     if (isPlaceholderEntry(entry)) reasons.push('placeholder');
     if (isSupplementaryMetadata(entry)) reasons.push('supplementary');
+    if (isBookChapter(entry)) reasons.push('book_chapter');
+    if (isEditorialOrReviewerContent(entry)) reasons.push('editorial');
+    if (isFrontMatter(entry)) reasons.push('front_matter');
+    if (isErrataCorrigenda(entry)) reasons.push('errata');
+    if (isFragmentTitle(entry)) reasons.push('fragment');
 
     if (reasons.length > 0) {
       var info = {
@@ -97,35 +184,28 @@ function cleanModel(modelName, dryRun) {
   console.log('\n── ' + modelName + ' ──────────────────────────────────────');
   console.log('  Total entries: ' + originalCount);
 
-  if (removals.review_of.length > 0) {
-    console.log('\n  Filter 1 - "Review of:" spam: ' + removals.review_of.length + ' entries');
-    removals.review_of.slice(0, 3).forEach(function (r) {
-      console.log('    - ' + r.title + (r.title.length >= 100 ? '...' : ''));
-    });
-    if (removals.review_of.length > 3) {
-      console.log('    ... and ' + (removals.review_of.length - 3) + ' more');
-    }
-  }
+  var filterLabels = {
+    review_of: 'Filter 1 - "Review of:" spam',
+    placeholder: 'Filter 2 - Placeholder/corrupted',
+    supplementary: 'Filter 3 - Supplementary/metadata',
+    book_chapter: 'Filter 4 - Book chapters (non-research)',
+    editorial: 'Filter 5 - Editorial/reviewer content',
+    front_matter: 'Filter 6 - Front matter (preface, index, etc.)',
+    errata: 'Filter 7 - Errata/corrigenda',
+    fragment: 'Filter 8 - Fragment/empty titles'
+  };
 
-  if (removals.placeholder.length > 0) {
-    console.log('\n  Filter 2 - Placeholder/corrupted: ' + removals.placeholder.length + ' entries');
-    removals.placeholder.slice(0, 5).forEach(function (r) {
-      console.log('    - ' + r.title + ' (year: ' + r.year + ', citations: ' + r.citations + ')');
-    });
-    if (removals.placeholder.length > 5) {
-      console.log('    ... and ' + (removals.placeholder.length - 5) + ' more');
+  Object.keys(filterLabels).forEach(function (key) {
+    if (removals[key].length > 0) {
+      console.log('\n  ' + filterLabels[key] + ': ' + removals[key].length + ' entries');
+      removals[key].slice(0, 3).forEach(function (r) {
+        console.log('    - "' + r.title + '"' + (r.title.length >= 100 ? '...' : '') + ' (' + r.year + ')');
+      });
+      if (removals[key].length > 3) {
+        console.log('    ... and ' + (removals[key].length - 3) + ' more');
+      }
     }
-  }
-
-  if (removals.supplementary.length > 0) {
-    console.log('\n  Filter 3 - Supplementary/metadata: ' + removals.supplementary.length + ' entries');
-    removals.supplementary.slice(0, 3).forEach(function (r) {
-      console.log('    - ' + r.title + (r.title.length >= 100 ? '...' : ''));
-    });
-    if (removals.supplementary.length > 3) {
-      console.log('    ... and ' + (removals.supplementary.length - 3) + ' more');
-    }
-  }
+  });
 
   console.log('\n  Total removed: ' + totalRemoved);
   console.log('  Remaining: ' + cleaned.length);
