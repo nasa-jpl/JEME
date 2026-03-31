@@ -92,14 +92,14 @@ Citation data undergoes a multi-agent verification pipeline that cross-validates
 
 | Model | Entries | Verified | Removed | Confidence |
 |-------|---------|----------|---------|------------|
-| RAPID | 488 | 488 | 0 | High (96% keyword match) |
-| CARDAMOM | 773 | 773 | 0 | High (95% keyword match) |
-| CMS-Flux | 955 | 955 | 0 | High (95% keyword match) |
-| ECCO | 31,452 | 27,456 | 3,996 | Medium-High |
-| ISSM | 5,950 | 5,938 | 12 | High (96% keyword match; metadata repaired) |
-| MOMO-CHEM | 1,658 | 1,658 | 0 | High (95% keyword match) |
+| RAPID | 488 | 483 | 5 | High (96% keyword match) |
+| CARDAMOM | 773 | 737 | 36 | High (95% keyword match) |
+| CMS-Flux | 955 | 946 | 9 | High (95% keyword match) |
+| ECCO | 31,452 | 27,366 | 4,086 | Medium-High |
+| ISSM | 5,950 | 5,613 | 337 | High (96% keyword match; metadata repaired) |
+| MOMO-CHEM | 1,658 | 1,650 | 8 | High (95% keyword match) |
 | LES | 255 | 255 | 0 | High (93% keyword match) |
-| EDMF | 1,178 | 1,178 | 0 | High (91% keyword match) |
+| EDMF | 1,178 | 1,171 | 7 | High (91% keyword match) |
 
 ### Uncertainty Quantification
 
