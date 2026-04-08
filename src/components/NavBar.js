@@ -16,6 +16,7 @@ const MODEL_LINKS = [
 const MISSION_LINKS = [
   { name: 'GRACE', path: '/science-model-dashboard/GRACE' },
   { name: 'SWOT', path: '/science-model-dashboard/SWOT' },
+  { name: 'TROPESS', path: '/science-model-dashboard/TROPESS' },
 ];
 
 const NavBar = ({ activeItem }) => {

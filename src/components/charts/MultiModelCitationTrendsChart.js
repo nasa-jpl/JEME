@@ -14,7 +14,8 @@ const MODEL_COLORS = {
   'LES': '#2E8B57',        // Sea Green
   'EDMF': '#FF6347',       // Tomato
   'GRACE': '#D946EF',      // Fuchsia
-  'SWOT': '#F59E0B'        // Amber
+  'SWOT': '#F59E0B',       // Amber
+  'TROPESS': '#0EA5E9'     // Sky blue
 };
 
 const getYear = (paper) => {

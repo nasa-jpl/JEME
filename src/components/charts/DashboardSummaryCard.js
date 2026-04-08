@@ -24,7 +24,7 @@ const SummarySection = ({ title, items }) => (
 const DashboardSummaryCard = ({ data = [] }) => {
   // Stabilize the data reference to avoid useMemo dependency issues
   const citationsData = useMemo(() => data || [], [data]);
-  // Process all metrics from the JSON data (peer-reviewed papers only)
+  // Process all metrics from the JSON data (pre-filtered to peer-reviewed L2+ papers)
   const metrics = useMemo(() => {
     // Early return if no data
     if (!citationsData || citationsData.length === 0) {
@@ -46,8 +46,8 @@ const DashboardSummaryCard = ({ data = [] }) => {
         totalDomains: 0
       };
     }
-    // Filter to peer-reviewed papers only for metrics
-    const peerReviewedData = citationsData.filter(p => p.is_peer_reviewed === true);
+    // All data is pre-filtered to peer-reviewed L2+ papers
+    const peerReviewedData = citationsData;
 
     // Helper function to extract year from paper
     const extractYear = (paper) => {
@@ -120,7 +120,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
 
     const isMissionFormat = peerReviewedData.some(p => {
       const l = p.engagement_level || "";
-      return l === "Simple Citation" || l === "Data Usage" || l === "Review Paper";
+      return l === "Data Usage" || l === "Review Paper";
     });
 
     peerReviewedData.forEach(paper => {
@@ -130,9 +130,9 @@ const DashboardSummaryCard = ({ data = [] }) => {
           if (level === "Data Usage") dataUsageCount++;
           else if (level === "Review Paper") reviewPaperCount++;
         } else {
-          if (level.includes('Level 3:') || level.includes('Level 3 ')) {
+          if (level.includes('Level 2:') || level.includes('Level 2 ')) {
             level3Count++;
-          } else if (level.includes('Level 4:') || level.includes('Level 4 ')) {
+          } else if (level.includes('Level 3:') || level.includes('Level 3 ')) {
             level4Count++;
           }
         }
@@ -208,8 +208,8 @@ const DashboardSummaryCard = ({ data = [] }) => {
       const domain = paper.research_domain;
       const level = paper.engagement_level;
       if (domain && domain !== "Unknown" && level &&
-          (level.includes('Level 3:') || level.includes('Level 3 ') ||
-           level.includes('Level 4:') || level.includes('Level 4 '))) {
+          (level.includes('Level 2:') || level.includes('Level 2 ') ||
+           level.includes('Level 3:') || level.includes('Level 3 '))) {
         strengthDomains[domain] = (strengthDomains[domain] || 0) + 1;
       }
     });
@@ -273,7 +273,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
   
   const researchImpactItems = [
     { label: "Implementation Score", value: `${metrics.implementationScore.toFixed(1)}%` },
-    { label: "High-Engagement Studies", value: `${metrics.highEngagementCount} papers (Levels 3-4)` },
+    { label: "High-Engagement Studies", value: `${metrics.highEngagementCount} papers (Levels 2-3)` },
     {
       label: "Geographic Reach",
       value: `${metrics.uniqueCountries} countries, ${metrics.uniqueRegions} regions`
@@ -323,7 +323,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Model Impact Dashboard</div>
           <div className="text-sm text-gray-500 mt-1">
-            Citation analysis and research impact metrics • Based on {metrics.totalPublications} papers
+            Citation analysis and research impact metrics • Based on {metrics.totalPublications} peer-reviewed papers (L2+)
           </div>
         </div>
         <button 

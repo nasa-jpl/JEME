@@ -574,6 +574,56 @@ MODEL_SPECIFIC_DOMAINS = {
         ]
     },
 
+    "TROPESS": {
+        "Tropospheric Composition Retrievals": [
+            "retrieval", "retrieved", "muses", "optimal estimation",
+            "vertical profile", "tropospheric column", "averaging kernel",
+            "single-footprint", "single footprint", "spectral fit",
+            "level-2", "l2 product", "muses algorithm", "tropess",
+            "profile retrieval", "concentration profile",
+        ],
+        "Trace Gas Products": [
+            "carbon monoxide", " co ", "methane", "ch4", "ammonia", "nh3",
+            "ozone", "o3", "peroxyacetyl nitrate", "peroxy acyl nitrate",
+            "pan ", "pans ", "hdo", "deuterium", "h2o isotope", "water vapor isotope",
+            "n2o", "formaldehyde", "hcho", "trace gas",
+        ],
+        "Atmospheric Chemistry & Reanalysis": [
+            "tropospheric chemistry", "atmospheric chemistry",
+            "chemical reanalysis", "data assimilation", "tcr-2",
+            "chemical transport", "ctm", "geos-chem", "cam-chem",
+            "emission inversion", "emission estimate", "nox emission",
+        ],
+        "Wildfire & Biomass Burning Emissions": [
+            "wildfire", "biomass burning", "fire emission", "smoke plume",
+            "burned area", "pyroconvection", "fire season",
+            "canadian wildfires", "western us wildfires", "fire-prone",
+        ],
+        "Air Quality & Megacity Studies": [
+            "air quality", "air pollution", "megacity", "urban",
+            "los angeles", "mexico city", "china lockdown", "covid",
+            "exposure", "mortality", "epa", "public health",
+        ],
+        "Carbon Cycle & Flux Inversions": [
+            "carbon cycle", "carbon flux", "co2 flux", "flux inversion",
+            "carbon budget", "carbon emission", "net carbon", "carbon balance",
+            "drought", "carbon recovery",
+        ],
+        "Validation & Intercomparison": [
+            "validation", "intercomparison", "in situ", "aircraft",
+            "atom", "hippo", "discover-aq", "noaa gml", "comparison with",
+            "evaluated against", "ground-based", "ftir",
+        ],
+        "Radiative Transfer & Forward Modeling": [
+            "radiative transfer", "forward model", "single scattering",
+            "scattering", "line-by-line", "absorption", "spectroscopy",
+            "spectral", "jacobian", "weighting function",
+        ],
+        "General Science": [
+            "tropess", "cris", "airs",
+        ]
+    },
+
     "SWOT": {
         "River & Lake Monitoring": [
             "river", "lake", "inland water", "water surface",
@@ -634,7 +684,7 @@ MODEL_SPECIFIC_DOMAINS = {
 
 ALL_MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
-    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT"
+    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT", "TROPESS"
 ]
 
 # Engagement level keywords
@@ -740,6 +790,15 @@ _MISSION_DATA_TERMS = {
         "l2 data", "grace data", "grace observation", "grace measurement",
         "grace-fo data", "spherical harmonic", "csr", "gfz", "jpl mascon",
         "grace solution", "grace product", "grace estimate",
+    ],
+    "TROPESS": [
+        "tropess", "muses", "cris", "airs", "tes ",
+        "tropospheric emission spectrometer",
+        "single-footprint", "single footprint", "vertical profile",
+        "level-2", "l2 product", "averaging kernel",
+        "tropess data", "tropess product", "tropess observation",
+        "muses retrieval", "co profile", "ch4 profile", "ozone profile",
+        "nh3 retrieval", "pan retrieval", "hdo/h2o",
     ],
 }
 

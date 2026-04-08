@@ -105,6 +105,7 @@ MODEL_CORE_KEYWORDS = {
     "EDMF": ["edmf", "eddy diffusivity", "mass flux", "convective parameterization"],
     "GRACE": ["grace", "grace-fo", "gravity recovery", "satellite gravimetry", "mascon", "terrestrial water storage", "mass change"],
     "SWOT": ["swot", "surface water and ocean topography", "karin", "wide-swath altimetry", "swath altimeter", "water surface elevation"],
+    "TROPESS": ["tropess", "tropospheric emission spectrometer", "muses", "cris", "airs", "vertical profile", "single-footprint", "averaging kernel", "tropospheric retrieval"],
 }
 
 
@@ -462,7 +463,7 @@ def main():
     project_root = script_dir.parent
     data_dir = project_root / "public" / "data"
 
-    models = ["CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE", "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT"]
+    models = ["CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE", "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT", "TROPESS"]
 
     if args.model:
         if args.model not in models:

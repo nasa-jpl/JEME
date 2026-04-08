@@ -1,0 +1,299 @@
+{
+  "TROPESS": [
+    {
+      "authors": "D. Fu, K. Bowman, H. Worden, V. Natraj, J. Worden, S. Yu, P. Veefkind, I. Aben, J. Landgraf, L. Strow, Y. Han",
+      "title": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "9",
+      "number": "6",
+      "pages": "2567-2579",
+      "year": 2016,
+      "doi": "10.5194/amt-9-2567-2016",
+      "link": "https://doi.org/10.5194/amt-9-2567-2016"
+    },
+    {
+      "authors": "D. Fu, S. Kulawik, K. Miyazaki, K. Bowman, J. Worden, A. Eldering, N. Livesey, J. Teixeira, F. Irion, R. Herman, G. Osterman, X. Liu, P. Levelt, A. Thompson, M. Luo",
+      "title": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "11",
+      "number": "10",
+      "pages": "5587-5605",
+      "year": 2018,
+      "doi": "10.5194/amt-11-5587-2018",
+      "link": "https://doi.org/10.5194/amt-11-5587-2018"
+    },
+    {
+      "authors": "J. Worden, S. Kulawik, D. Fu, V. Payne, A. Lipton, I. Polonsky, Y. He, K. Cady-Pereira, J. Moncet, R. Herman, F. Irion, K. Bowman",
+      "title": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "12",
+      "number": "4",
+      "pages": "2331-2339",
+      "year": 2019,
+      "doi": "10.5194/amt-12-2331-2019",
+      "link": "https://doi.org/10.5194/amt-12-2331-2019"
+    },
+    {
+      "authors": "K. Miyazaki, T. Sekiya, D. Fu, K. W. Bowman, S. S. Kulawik, K. Sudo, T. Walker, Y. Kanaya, M. Takigawa, K. Ogochi, H. Eskes, K. F. Boersma, A. M. Thompson, B. Gaubert, J. Barre, L. K. Emmons",
+      "title": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
+      "journal": "JGR Atmospheres",
+      "volume": "124",
+      "number": "1",
+      "pages": "387-413",
+      "year": 2019,
+      "doi": "10.1029/2018jd028912",
+      "link": "https://doi.org/10.1029/2018jd028912"
+    },
+    {
+      "authors": "K. Miyazaki, K. Bowman, K. Yumimoto, T. Walker, K. Sudo",
+      "title": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
+      "journal": "Atmos. Chem. Phys.",
+      "volume": "20",
+      "number": "2",
+      "pages": "931-967",
+      "year": 2020,
+      "doi": "10.5194/acp-20-931-2020",
+      "link": "https://doi.org/10.5194/acp-20-931-2020"
+    },
+    {
+      "authors": "K. Miyazaki, K. Bowman, T. Sekiya, H. Eskes, F. Boersma, H. Worden, N. Livesey, V. Payne, K. Sudo, Y. Kanaya, M. Takigawa, K. Ogochi",
+      "title": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+      "journal": "Earth System Science Data",
+      "volume": "12",
+      "number": "3",
+      "pages": "2223-2259",
+      "year": 2020,
+      "doi": "10.5194/essd-12-2223-2020",
+      "link": "https://doi.org/10.5194/essd-12-2223-2020"
+    },
+    {
+      "authors": "K. Miyazaki, K. Bowman, T. Sekiya, Z. Jiang, X. Chen, H. Eskes, M. Ru, Y. Zhang, D. Shindell",
+      "title": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
+      "journal": "Geophys. Res. Lett.",
+      "volume": "47",
+      "number": "19",
+      "pages": "e2020GL089252",
+      "year": 2020,
+      "doi": "10.1029/2020gl089252",
+      "link": "https://doi.org/10.1029/2020gl089252"
+    },
+    {
+      "authors": "R. Herman, J. Worden, D. Noone, D. Henze, K. Bowman, K. Cady-Pereira, V. Payne, S. Kulawik, D. Fu",
+      "title": "Comparison of optimal estimation HDO/H2O retrievals from AIRS with ORACLES measurements",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "13",
+      "number": "4",
+      "pages": "1825-1834",
+      "year": 2020,
+      "doi": "10.5194/amt-13-1825-2020",
+      "link": "https://doi.org/10.5194/amt-13-1825-2020"
+    },
+    {
+      "authors": "B. Byrne, J. Liu, M. Lee, Y. Yin, K. W. Bowman, K. Miyazaki, A. J. Norton, J. Joiner, D. F. Pollard, D. W. T. Griffith, V. A. Velazco, N. M. Deutscher, N. B. Jones, C. Paton-Walsh",
+      "title": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
+      "journal": "AGU Advances",
+      "volume": "2",
+      "number": "4",
+      "pages": "e2021AV000469",
+      "year": 2021,
+      "doi": "10.1029/2021av000469",
+      "link": "https://doi.org/10.1029/2021av000469"
+    },
+    {
+      "authors": "E. Mahieu, E. Fischer, B. Franco, M. Palm, T. Wizenberg, D. Smale, L. Clarisse, C. Clerbaux, P. Coheur, J. Hannigan, E. Lutsch, J. Notholt, I. Cantos, M. Prignon, C. Servais, K. Strong",
+      "title": "First retrievals of peroxyacetyl nitrate (PAN) from ground-based FTIR solar spectra recorded at remote sites, comparison with model and satellite data",
+      "journal": "Elementa: Science of the Anthropocene",
+      "volume": "9",
+      "number": "1",
+      "pages": "00027",
+      "year": 2021,
+      "doi": "10.1525/elementa.2021.00027",
+      "link": "https://doi.org/10.1525/elementa.2021.00027"
+    },
+    {
+      "authors": "H. Cao, D. Henze, K. Cady-Pereira, B. McDonald, C. Harkins, K. Sun, K. Bowman, T. Fu, M. Nawaz",
+      "title": "COVID-19 Lockdowns Afford the First Satellite-Based Confirmation That Vehicles Are an Under-recognized Source of Urban NH3 Pollution in Los Angeles",
+      "journal": "Environmental Science & Technology Letters",
+      "volume": "9",
+      "number": "1",
+      "pages": "3-9",
+      "year": 2021,
+      "doi": "10.1021/acs.estlett.1c00730",
+      "link": "https://doi.org/10.1021/acs.estlett.1c00730"
+    },
+    {
+      "authors": "J. Juncosa Calahorrano, V. Payne, S. Kulawik, B. Ford, F. Flocke, T. Campos, E. Fischer",
+      "title": "Evolution of Acyl Peroxynitrates (PANs) in Wildfire Smoke Plumes Detected by the Cross-Track Infrared Sounder (CrIS) Over the Western U.S. During Summer 2018",
+      "journal": "Geophys. Res. Lett.",
+      "volume": "48",
+      "number": "23",
+      "pages": "e2021GL093405",
+      "year": 2021,
+      "doi": "10.1029/2021gl093405",
+      "link": "https://doi.org/10.1029/2021gl093405"
+    },
+    {
+      "authors": "K. Miyazaki, K. Bowman, T. Sekiya, M. Takigawa, J. Neu, K. Sudo, G. Osterman, H. Eskes",
+      "title": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
+      "journal": "Science Advances",
+      "volume": "7",
+      "number": "24",
+      "pages": "eabf7460",
+      "year": 2021,
+      "doi": "10.1126/sciadv.abf7460",
+      "link": "https://doi.org/10.1126/sciadv.abf7460"
+    },
+    {
+      "authors": "N. Colombi, K. Miyazaki, K. Bowman, J. Neu, D. Jacob",
+      "title": "A new methodology for inferring surface ozone from multispectral satellite measurements",
+      "journal": "Environmental Research Letters",
+      "volume": "16",
+      "number": "10",
+      "pages": "105005",
+      "year": 2021,
+      "doi": "10.1088/1748-9326/ac243d",
+      "link": "https://doi.org/10.1088/1748-9326/ac243d"
+    },
+    {
+      "authors": "R. Buchholz, H. Worden, M. Park, G. Francis, M. Deeter, D. Edwards, L. Emmons, B. Gaubert, J. Gille, S. Martinez-Alonso, W. Tang, R. Kumar, J. Drummond, C. Clerbaux, M. George, P. Coheur, D. Hurtmans, K. Bowman, M. Luo, V. Payne, J. Worden, M. Chin, R. Levy, J. Warner, Z. Wei, S. Kulawik",
+      "title": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
+      "journal": "Remote Sens Environ",
+      "volume": "256",
+      "pages": "112275",
+      "year": 2021,
+      "doi": "10.1016/j.rse.2020.112275",
+      "link": "https://doi.org/10.1016/j.rse.2020.112275"
+    },
+    {
+      "authors": "S. Kulawik, J. Worden, V. Payne, D. Fu, S. Wofsy, K. McKain, C. Sweeney, B. Daube Jr., A. Lipton, I. Polonsky, Y. He, K. Cady-Pereira, E. Dlugokencky, D. Jacob, Y. Yin",
+      "title": "Evaluation of single-footprint AIRS CH4 profile retrieval uncertainties using aircraft profile measurements",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "14",
+      "number": "1",
+      "pages": "335-354",
+      "year": 2021,
+      "doi": "10.5194/amt-14-335-2021",
+      "link": "https://doi.org/10.5194/amt-14-335-2021"
+    },
+    {
+      "authors": "H. Worden, G. Francis, S. Kulawik, K. Bowman, K. Cady-Pereira, D. Fu, J. Hegarty, V. Kantchev, M. Luo, V. Payne, J. Worden, R. Commane, K. McKain",
+      "title": "TROPESS/CrIS carbon monoxide profile validation with NOAA GML and ATom in situ aircraft observations",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "15",
+      "number": "18",
+      "pages": "5383-5398",
+      "year": 2022,
+      "doi": "10.5194/amt-15-5383-2022",
+      "link": "https://doi.org/10.5194/amt-15-5383-2022"
+    },
+    {
+      "authors": "J. Hegarty, K. Cady-Pereira, V. Payne, S. Kulawik, J. Worden, V. Kantchev, H. Worden, K. McKain, J. Pittman, R. Commane, B. Daube Jr., E. Kort",
+      "title": "Validation and error estimation of AIRS MUSES CO profiles with HIPPO, ATom, and NOAA GML aircraft observations",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "15",
+      "number": "1",
+      "pages": "205-223",
+      "year": 2022,
+      "doi": "10.5194/amt-15-205-2022",
+      "link": "https://doi.org/10.5194/amt-15-205-2022"
+    },
+    {
+      "authors": "J. Hu, A. Bailey, J. Nusbaumer, S. Dee, C. Sasser, J. Worden",
+      "title": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
+      "journal": "JGR Atmospheres",
+      "volume": "127",
+      "number": "5",
+      "pages": "e2021JD035355",
+      "year": 2022,
+      "doi": "10.1029/2021jd035355",
+      "link": "https://doi.org/10.1029/2021jd035355"
+    },
+    {
+      "authors": "M. Shi, J. Worden, A. Bailey, D. Noone, C. Risi, R. Fu, S. Worden, R. Herman, V. Payne, T. Pagano, K. Bowman, A. Anthony Bloom, S. Saatchi, J. Liu, J. Fisher",
+      "title": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
+      "journal": "Nature Communications",
+      "volume": "13",
+      "number": "1",
+      "pages": "2686",
+      "year": 2022,
+      "doi": "10.1038/s41467-022-30317-4",
+      "link": "https://doi.org/10.1038/s41467-022-30317-4"
+    },
+    {
+      "authors": "V. Payne, S. Kulawik, E. Fischer, J. Brewer, L. Gregory Huey, K. Miyazaki, J. Worden, K. Bowman, E. Hintsa, F. Moore, J. Elkins, J. Juncosa Calahorrano",
+      "title": "Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder: comparison with ATom aircraft measurements",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "15",
+      "number": "11",
+      "pages": "3497-3511",
+      "year": 2022,
+      "doi": "10.5194/amt-15-3497-2022",
+      "link": "https://doi.org/10.5194/amt-15-3497-2022"
+    },
+    {
+      "authors": "M. Shogrin, V. Payne, S. Kulawik, K. Miyazaki, E. Fischer",
+      "title": "Measurement report: Spatiotemporal variability of peroxy acyl nitrates (PANs) over Mexico City from TES and CrIS satellite measurements",
+      "journal": "Atmos. Chem. Phys.",
+      "volume": "23",
+      "number": "4",
+      "pages": "2667-2682",
+      "year": 2023,
+      "doi": "10.5194/acp-23-2667-2023",
+      "link": "https://doi.org/10.5194/acp-23-2667-2023"
+    },
+    {
+      "authors": "V. Natraj, R. Spurr, A. Gao, T. Le, Z.C. Zeng, S. Fan, Y.L. Yung",
+      "title": "The 2 stream-exact single scattering (2S-ESS) radiative transfer model",
+      "journal": "Journal of Quantitative Spectroscopy and Radiative Transfer",
+      "volume": "295",
+      "pages": "108416",
+      "year": 2023,
+      "doi": "10.1016/j.jqsrt.2022.108416",
+      "link": "https://doi.org/10.1016/j.jqsrt.2022.108416"
+    },
+    {
+      "authors": "B. Byrne, J. Liu, K. Bowman, M. Pascolini-Campbell, A. Chatterjee, S. Pandey, K. Miyazaki, G. van der Werf, D. Wunch, P. Wennberg, C. Roehl, S. Sinha",
+      "title": "Carbon emissions from the 2023 Canadian wildfires",
+      "journal": "Nature",
+      "volume": "633",
+      "number": "8031",
+      "pages": "835-839",
+      "year": 2024,
+      "doi": "10.1038/s41586-024-07878-z",
+      "link": "https://doi.org/10.1038/s41586-024-07878-z"
+    },
+    {
+      "authors": "K. Cady-Pereira, X. Guo, R. Wang, A. Leytem, C. Calkins, E. Berry, K. Sun, M. Muller, A. Wisthaler, V. Payne, M. Shephard, M. Zondlo, V. Kantchev",
+      "title": "Validation of MUSES NH3 observations from AIRS and CrIS against aircraft measurements from DISCOVER-AQ and a surface network in the Magic Valley",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "17",
+      "number": "1",
+      "pages": "15-36",
+      "year": 2024,
+      "doi": "10.5194/amt-17-15-2024",
+      "link": "https://doi.org/10.5194/amt-17-15-2024"
+    },
+    {
+      "authors": "M. Luo, H. Worden, R. Field, K. Tsigaridis, G. Elsaesser",
+      "title": "TROPESS-CrIS CO single-pixel vertical profiles: intercomparisons with MOPITT and model simulations for 2020 western US wildfires",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "17",
+      "number": "9",
+      "pages": "2611-2624",
+      "year": 2024,
+      "doi": "10.5194/amt-17-2611-2024",
+      "link": "https://doi.org/10.5194/amt-17-2611-2024"
+    },
+    {
+      "authors": "M. Shogrin, V. Payne, S. Kulawik, K. Miyazaki, E. Fischer",
+      "title": "Changes to Peroxyacyl Nitrates (PANs) Over Megacities in Response to COVID-19 Tropospheric NO2 Reductions Observed by the Cross-Track Infrared Sounder (CrIS)",
+      "journal": "Geophys. Res. Lett.",
+      "volume": "51",
+      "number": "6",
+      "pages": "e2023GL104854",
+      "year": 2024,
+      "doi": "10.1029/2023gl104854",
+      "link": "https://doi.org/10.1029/2023gl104854"
+    }
+  ]
+}

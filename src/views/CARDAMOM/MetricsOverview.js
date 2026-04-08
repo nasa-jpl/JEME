@@ -42,10 +42,10 @@ const MetricsOverview = () => {
       return 'Other';
     };
 
-    // 1. TOTAL CITATIONS
+    // 1. TOTAL CITATIONS (all data is pre-filtered to peer-reviewed L2+)
     const totalCitations = citationsData.reduce((sum, paper) => sum + extractCitations(paper), 0);
-    
-    // Peer-reviewed papers (assuming all papers in academic database are peer-reviewed)
+
+    // All papers are peer-reviewed L2+
     const peerReviewedCount = citationsData.length;
     
     // High-impact papers (>100 citations)
@@ -84,9 +84,9 @@ const MetricsOverview = () => {
       engagementStats[level] = (engagementStats[level] || 0) + 1;
     });
     
-    const modelAdaptationCount = engagementStats['Level 3: Model Adaptation'] || 0;
-    const foundationalMethodCount = engagementStats['Level 4: Foundational Method'] || 0;
-    const dataUsageCount = engagementStats['Level 2: Data Usage'] || 0;
+    const modelAdaptationCount = engagementStats['Level 2: Model Adaptation'] || 0;
+    const foundationalMethodCount = engagementStats['Level 3: Foundational Method'] || 0;
+    const dataUsageCount = engagementStats['Level 1: Data Usage'] || 0;
     
     // Implementation rate calculation (Level 3 and 4 vs total)
     const implementationCount = modelAdaptationCount + foundationalMethodCount;

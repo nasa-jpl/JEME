@@ -30,12 +30,12 @@ GEMINI_MODEL = "gemini-2.5-flash"
 BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 TEMPERATURES = [0.1, 0.5, 1.0]
 TIMEOUT = 30
-SLEEP_BETWEEN_REQUESTS = 1
+SLEEP_BETWEEN_REQUESTS = 0.3
 MAX_RETRIES = 3
 
 ALL_MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
-    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT"
+    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT", "TROPESS"
 ]
 
 CACHE_FILE = Path(__file__).parent / "phase2_cache.json"

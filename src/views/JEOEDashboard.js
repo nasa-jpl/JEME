@@ -19,7 +19,7 @@ const JEOEDashboard = () => {
     const loadData = async () => {
       try {
         const { loadAllModelsData } = await import('../utils/dataLoader');
-        const missions = ['GRACE', 'SWOT'];
+        const missions = ['GRACE', 'SWOT', 'TROPESS'];
         const data = await loadAllModelsData(missions);
         setAllMissionsData(data);
         setLoading(false);
@@ -44,6 +44,12 @@ const JEOEDashboard = () => {
       icon: <Satellite size={20} style={{ color: '#F59E0B' }} />,
       description: "Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements",
       link: "/science-model-dashboard/SWOT"
+    },
+    {
+      name: "TROPESS",
+      icon: <Satellite size={20} style={{ color: '#0EA5E9' }} />,
+      description: "TROPospheric Emission Spectrometer System - Multi-instrument retrievals of CO, CH4, NH3, O3, PAN, HDO/H2O from CrIS and AIRS via the MUSES algorithm",
+      link: "/science-model-dashboard/TROPESS"
     }
   ];
 

@@ -97,15 +97,15 @@ const DashboardSummaryCard = () => {
       const level = paper.engagement_level;
       if (level) {
         // Use flexible matching based on level prefix
-        if (level.includes('Level 3:') || level.includes('Level 3 ')) {
+        if (level.includes('Level 2:') || level.includes('Level 2 ')) {
           level3Count++;
-        } else if (level.includes('Level 4:') || level.includes('Level 4 ')) {
+        } else if (level.includes('Level 3:') || level.includes('Level 3 ')) {
           level4Count++;
         }
       }
     });
 
-    // High engagement (Levels 3-4)
+    // High engagement (Levels 2-3)
     const highEngagementCount = level3Count + level4Count;
 
     // Implementation score
@@ -172,8 +172,8 @@ const DashboardSummaryCard = () => {
       const domain = paper.research_domain;
       const level = paper.engagement_level;
       if (domain && domain !== "Unknown" && level &&
-          (level.includes('Level 3:') || level.includes('Level 3 ') ||
-           level.includes('Level 4:') || level.includes('Level 4 '))) {
+          (level.includes('Level 2:') || level.includes('Level 2 ') ||
+           level.includes('Level 3:') || level.includes('Level 3 '))) {
         strengthDomains[domain] = (strengthDomains[domain] || 0) + 1;
       }
     });

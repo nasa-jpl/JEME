@@ -111,6 +111,18 @@ export const MODELS = {
     website: 'https://swot.jpl.nasa.gov/',
     fullDescription: 'The Surface Water and Ocean Topography (SWOT) mission uses Ka-band radar interferometry to measure water surface elevation, providing unprecedented observations of ocean and inland water.',
     type: 'mission'
+  },
+  TROPESS: {
+    name: 'TROPESS',
+    displayName: 'TROPESS',
+    description: 'TROPospheric Emission Spectrometer System',
+    dataPath: '../data/TROPESS_analyzed.json',
+    color: '#0EA5E9', // Sky blue
+    domain: 'Atmospheric Composition',
+    github: 'https://github.com/NASA-TROPESS',
+    website: 'https://tes.jpl.nasa.gov/tropess/',
+    fullDescription: 'TROPESS (TROPospheric Emission Spectrometer System) provides multi-instrument retrievals of atmospheric trace gases (CO, CH4, NH3, O3, PAN, HDO/H2O) from CrIS, AIRS, and other infrared sounders using the MUSES optimal-estimation algorithm.',
+    type: 'mission'
   }
 };
 
@@ -124,7 +136,8 @@ export const MODEL_ROUTES = {
   LES: '/science-model-dashboard/LES',
   EDMF: '/science-model-dashboard/EDMF',
   GRACE: '/science-model-dashboard/GRACE',
-  SWOT: '/science-model-dashboard/SWOT'
+  SWOT: '/science-model-dashboard/SWOT',
+  TROPESS: '/science-model-dashboard/TROPESS'
 };
 
 

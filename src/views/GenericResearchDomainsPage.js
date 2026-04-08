@@ -155,7 +155,7 @@ const GenericResearchDomainsPage = () => {
         title: `Example Research Using ${modelConfig.displayName}`,
         year: 2020,
         research_domain: mockDomains[0],
-        engagement_level: 'Level 2: Data Usage'
+        engagement_level: 'Level 1: Data Usage'
       }
     ];
 

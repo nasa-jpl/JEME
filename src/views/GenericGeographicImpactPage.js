@@ -412,7 +412,7 @@ const GenericGeographicImpactPage = () => {
         papers: 5,
         citations: 42,
         domains: modelConfig.domain || 'Unknown',
-        engagementLevels: 'Level 2: Data Usage',
+        engagementLevels: 'Level 1: Data Usage',
         firstYear: 2015,
         lastYear: 2023,
         avgCitations: 8,

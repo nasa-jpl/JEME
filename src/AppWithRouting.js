@@ -29,6 +29,7 @@ import LESDashboard from './views/LES/Dashboard';
 import EDMFDashboard from './views/EDMF/Dashboard';
 import GRACEDashboard from './views/GRACE/Dashboard';
 import SWOTDashboard from './views/SWOT/Dashboard';
+import TROPESSDashboard from './views/TROPESS/Dashboard';
 import JEOEDashboard from './views/JEOEDashboard';
 
 // Uncertainty Analysis page
@@ -66,6 +67,7 @@ function AppWithRouting() {
         {/* Mission dashboards */}
         <Route path="/science-model-dashboard/GRACE" element={<GRACEDashboard />} />
         <Route path="/science-model-dashboard/SWOT" element={<SWOTDashboard />} />
+        <Route path="/science-model-dashboard/TROPESS" element={<TROPESSDashboard />} />
 
         {/* Earth System Interconnections page */}
         <Route path="/science-model-dashboard/earth-system" element={<EarthSystemPage />} />

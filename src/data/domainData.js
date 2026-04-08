@@ -135,10 +135,9 @@ export const domainInsights = {
   },
 
   methodologicalApproaches: {
-    'Level 1: Simple Citation': 48, // Basic reference to RAPID
-    'Level 2: Data Usage': 79,      // Using RAPID outputs
-    'Level 3: Model Adaptation': 106, // Modifying/coupling RAPID
-    'Level 4: Foundational Method': 27 // Building on RAPID principles
+    'Level 1: Data Usage': 79,      // Using RAPID outputs
+    'Level 2: Model Adaptation': 106, // Modifying/coupling RAPID
+    'Level 3: Foundational Method': 27 // Building on RAPID principles
   },
 
   impactMetrics: {

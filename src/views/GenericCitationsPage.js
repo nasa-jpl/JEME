@@ -207,18 +207,18 @@ const GenericCitationsPage = () => {
       const doi = record.DOI || record.doi || '';
       const url = record.URL || record.url || (doi ? `https://doi.org/${doi}` : '');
       
-      // Use engagement level from JSON file if available, otherwise use default
-      let engagementLevel = record.engagement_level || 'Level 1: Simple Citation';
-      
+      // Use engagement level from JSON file if available
+      let engagementLevel = record.engagement_level || 'Level 1: Data Usage';
+
       // If engagement_level is not in the JSON, fall back to citation-based determination
       if (!record.engagement_level) {
         const citationCount = record['is-referenced-by-count'] || record.citation_count || record.cites || record.citations || 0;
         if (citationCount > 500) {
-          engagementLevel = 'Level 4: Foundational Method';
+          engagementLevel = 'Level 3: Foundational Method';
         } else if (citationCount > 100) {
-          engagementLevel = 'Level 3: Model Adaptation';
-        } else if (citationCount > 20) {
-          engagementLevel = 'Level 2: Data Usage';
+          engagementLevel = 'Level 2: Model Adaptation';
+        } else {
+          engagementLevel = 'Level 1: Data Usage';
         }
       }
       
@@ -310,7 +310,7 @@ const GenericCitationsPage = () => {
         doi: "10.1000/example",
         cites: 42,
         url: "https://example.com/paper",
-        engagement_level: "Level 2: Data Usage",
+        engagement_level: "Level 1: Data Usage",
         research_domain: modelConfig.domain || "Unknown",
         country: "Global",
         isOriginalPaper: false,
@@ -568,7 +568,7 @@ const GenericCitationsPage = () => {
                 <div>
                   <div className="text-lg font-semibold text-gray-800">{modelConfig.displayName} Research Publications</div>
                   <p className="text-sm text-gray-500 mt-1">
-                    Academic publications with detailed metadata
+                    Peer-reviewed publications with direct model/mission usage (L2+)
                   </p>
                 </div>
                 <div className="flex gap-2">

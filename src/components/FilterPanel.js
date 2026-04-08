@@ -38,10 +38,9 @@ const FilterPanel = ({ onApplyFilters, initialFilters = {} }) => {
   // Engagement level options
   const engagementLevels = [
     { value: 'all', label: 'All Levels' },
-    { value: 'level-1', label: 'Level 1: Simple Citation' },
-    { value: 'level-2', label: 'Level 2: Data Usage' },
-    { value: 'level-3', label: 'Level 3: Model Adaptation' },
-    { value: 'level-4', label: 'Level 4: Foundation' }
+    { value: 'level-1', label: 'Level 1: Data Usage' },
+    { value: 'level-2', label: 'Level 2: Model Adaptation' },
+    { value: 'level-3', label: 'Level 3: Foundational Method' }
   ];
   
   // Handle filter change

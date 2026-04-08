@@ -38,8 +38,8 @@ const MetricsOverview = ({ data = [] }) => {
         }
       };
     }
-    // Filter to peer-reviewed papers only for metrics
-    const peerReviewedData = citationsData.filter(p => p.is_peer_reviewed === true);
+    // All data is pre-filtered to peer-reviewed L2+ papers
+    const peerReviewedData = citationsData;
     const peerReviewedCount = peerReviewedData.length;
 
     // Helper function to extract year from paper
@@ -117,10 +117,10 @@ const MetricsOverview = ({ data = [] }) => {
     let dataUsageCount = 0;
     let reviewPaperCount = 0;
 
-    // Detect mission 3-level format
+    // Detect mission format
     const isMissionFormat = peerReviewedData.some(p => {
       const l = p.engagement_level || "";
-      return l === "Simple Citation" || l === "Data Usage" || l === "Review Paper";
+      return l === "Data Usage" || l === "Review Paper";
     });
 
     peerReviewedData.forEach(paper => {
@@ -135,19 +135,19 @@ const MetricsOverview = ({ data = [] }) => {
           reviewPaperCount++;
         }
       } else {
-        // Model 4-level format
-        if (level.startsWith('Level 3:')) {
+        // Model 3-level format
+        if (level.startsWith('Level 2:')) {
           modelAdaptationCount++;
-        } else if (level.startsWith('Level 4:')) {
+        } else if (level.startsWith('Level 3:')) {
           foundationalMethodCount++;
-        } else if (level.startsWith('Level 2:')) {
+        } else if (level.startsWith('Level 1:')) {
           dataUsageCount++;
         }
       }
     });
 
     // Implementation rate calculation
-    // Model format: (L3 + L4) / Total
+    // Model format: (L2 + L3) / Total
     // Mission format: (Data Usage + Review Paper) / Total
     const implementationCount = isMissionFormat
       ? (dataUsageCount + reviewPaperCount)
@@ -306,7 +306,7 @@ const MetricsOverview = ({ data = [] }) => {
         trend={`+${metrics.trends.citations.value}% from last quarter`}
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
-          { label: "Peer-reviewed", value: metrics.peerReviewedCount.toString() },
+          { label: "Peer-reviewed papers (L2+)", value: metrics.peerReviewedCount.toString() },
           { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
         ]}
@@ -335,7 +335,7 @@ const MetricsOverview = ({ data = [] }) => {
           { label: "Data Usage", value: metrics.dataUsageCount.toString() },
           { label: "Review Paper", value: metrics.reviewPaperCount.toString() }
         ] : [
-          { label: "Formula", value: "(L3 + L4) / Total × 100" },
+          { label: "Formula", value: "(L2 + L3) / Total × 100" },
           { label: "Model Adaptation", value: metrics.modelAdaptationCount.toString() },
           { label: "Foundational Method", value: metrics.foundationalMethodCount.toString() },
           { label: "Data Usage", value: metrics.dataUsageCount.toString() }

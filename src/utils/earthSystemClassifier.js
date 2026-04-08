@@ -21,7 +21,7 @@ const SPHERE_DEFINITIONS = {
       'satellite atmospheric', 'general atmospheric'
     ],
     modelAffinity: {
-      'MOMO-CHEM': 1.0, 'LES': 1.0, 'EDMF': 1.0, 'CMS-Flux': 0.3, 'CARDAMOM': 0.2,
+      'MOMO-CHEM': 1.0, 'LES': 1.0, 'EDMF': 1.0, 'TROPESS': 1.0, 'CMS-Flux': 0.3, 'CARDAMOM': 0.2,
     }
   },
   Hydrosphere: {

@@ -16,6 +16,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   const [edmfTeamPapers, setEdmfTeamPapers] = useState([]);
   const [graceTeamPapers, setGraceTeamPapers] = useState([]);
   const [swotTeamPapers, setSwotTeamPapers] = useState([]);
+  const [tropessTeamPapers, setTropessTeamPapers] = useState([]);
 
   // Load RAPID team papers from JSON file
   useEffect(() => {
@@ -195,6 +196,22 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     }
   }, [modelName]);
 
+  // Load TROPESS team papers from JSON file
+  useEffect(() => {
+    if (modelName === 'TROPESS') {
+      fetch('/science-model-dashboard/data/tropess_team_papers.json')
+        .then(response => response.json())
+        .then(data => {
+          if (data.TROPESS) {
+            setTropessTeamPapers(data.TROPESS);
+          }
+        })
+        .catch(error => {
+          console.error('Failed to load TROPESS team papers:', error);
+        });
+    }
+  }, [modelName]);
+
   // Model-specific paper data
   const modelPapers = {
     'RAPID': {
@@ -266,6 +283,13 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
       journal: "Frontiers in Marine Science (2019), Volume 6, Article 232",
       doi: "10.3389/fmars.2019.00232",
       link: "https://doi.org/10.3389/fmars.2019.00232"
+    },
+    'TROPESS': {
+      title: "TROPESS/CrIS carbon monoxide profile validation with NOAA GML and ATom in situ aircraft observations",
+      authors: "Worden, H., Francis, G., Kulawik, S., Bowman, K., Cady-Pereira, K., Fu, D., et al.",
+      journal: "Atmospheric Measurement Techniques (2022), Volume 15, Pages 5383-5398",
+      doi: "10.5194/amt-15-5383-2022",
+      link: "https://doi.org/10.5194/amt-15-5383-2022"
     }
   };
 
@@ -283,6 +307,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     (modelName === 'EDMF' && edmfTeamPapers.length > 0) ? edmfTeamPapers :
     (modelName === 'GRACE' && graceTeamPapers.length > 0) ? graceTeamPapers :
     (modelName === 'SWOT' && swotTeamPapers.length > 0) ? swotTeamPapers :
+    (modelName === 'TROPESS' && tropessTeamPapers.length > 0) ? tropessTeamPapers :
     [];
 
   return (

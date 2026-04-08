@@ -38,7 +38,20 @@ MAX_RETRIES = 3
 
 ALL_MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
-    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT"
+    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT", "TROPESS"
+]
+
+# Missions use the 3-level mission engagement vocabulary, models use the
+# 4-level keyword engagement vocabulary. See classify_papers.py.
+MISSIONS = {"GRACE", "SWOT", "TROPESS"}
+
+MISSION_ENGAGEMENT_LABELS = ["Review Paper", "Data Usage", "Simple Citation"]
+
+MODEL_ENGAGEMENT_LABELS = [
+    "Level 4: Foundational Method",
+    "Level 3: Model Adaptation",
+    "Level 2: Data Usage",
+    "Level 1: Simple Citation",
 ]
 
 CACHE_FILE = Path(__file__).parent / "phase3_cache.json"
@@ -55,16 +68,24 @@ Paper information:
 - Venue: {venue}
 - Cited team paper: {citing_team_paper}
 
+ALLOWED LABELS — you MUST choose `skeptic_engagement` and `skeptic_domain` from these exact strings (case-sensitive, no other values are valid):
+
+Allowed engagement levels:
+{engagement_vocabulary}
+
+Allowed research domains:
+{domain_vocabulary}
+
 Questions:
-1. Do you AGREE with the engagement level? Could it be lower than assigned? (e.g., "Level 3: Model Adaptation" might really be "Level 2: Data Usage" if the paper only uses outputs)
-2. Do you AGREE with the research domain? Could a different domain be more appropriate?
+1. Do you AGREE with the engagement level? Could a different level from the allowed list above be more appropriate?
+2. Do you AGREE with the research domain? Could a different domain from the allowed list above be more appropriate?
 3. Rate your agreement with the CURRENT classification (1-5):
    - 5 = Strongly agree, classification is clearly correct
    - 4 = Agree, classification is reasonable
    - 3 = Neutral, could go either way
    - 2 = Disagree, a different classification is more appropriate
    - 1 = Strongly disagree, classification is clearly wrong
-4. What engagement level and domain would YOU assign?
+4. What engagement level and domain would YOU assign? (MUST be exact strings from the allowed lists above. If you would not change the label, repeat the current value verbatim.)
 
 Respond ONLY with valid JSON (no markdown, no explanation):
 {{"agreement": N, "skeptic_engagement": "...", "skeptic_domain": "...", "reasoning": "brief explanation"}}"""
@@ -138,9 +159,10 @@ def call_gemini(api_key, prompt):
         "contents": [{"parts": [{"text": prompt}]}],
         "generationConfig": {
             "temperature": 0.3,
-            "maxOutputTokens": 2048,
+            "maxOutputTokens": 4096,
             "topP": 0.8,
             "topK": 10,
+            "responseMimeType": "application/json",
         },
     }
 
@@ -178,7 +200,10 @@ def call_gemini(api_key, prompt):
             if attempt < MAX_RETRIES - 1:
                 time.sleep(2 ** attempt)
         except json.JSONDecodeError:
-            print(f"    Invalid JSON response (attempt {attempt + 1}/{MAX_RETRIES})")
+            # Don't retry — JSONDecodeError almost always means a truncated/
+            # malformed response from the model and retrying rarely helps.
+            print(f"    Invalid JSON response (giving up on this entry)")
+            return None
 
     return None
 
@@ -187,7 +212,24 @@ def call_gemini(api_key, prompt):
 # Processing
 # ---------------------------------------------------------------------------
 
-def review_entry(entry, api_key, reason, dry_run=False):
+def get_allowed_vocabularies(model_name, allowed_domains):
+    """Return (engagement_labels, domain_labels) tuples for a model."""
+    engagement = MISSION_ENGAGEMENT_LABELS if model_name in MISSIONS else MODEL_ENGAGEMENT_LABELS
+    return engagement, sorted(allowed_domains)
+
+
+def _snap_label(proposed, existing, allowed_set):
+    """If `proposed` isn't in the allowed vocabulary, fall back to `existing`.
+
+    Returns (label, was_in_vocab).
+    """
+    if proposed in allowed_set:
+        return proposed, True
+    return existing, False
+
+
+def review_entry(entry, api_key, reason, model_name, allowed_engagement,
+                 allowed_domains, dry_run=False):
     """Run skeptic review on a single entry."""
     title = entry.get("title", "")
     if isinstance(title, list):
@@ -202,6 +244,9 @@ def review_entry(entry, api_key, reason, dry_run=False):
     engagement = entry.get("engagement_level", "Unknown")
     domain = entry.get("research_domain", "Unknown")
 
+    eng_vocab_str = "\n".join(f"  - {label}" for label in allowed_engagement)
+    dom_vocab_str = "\n".join(f"  - {label}" for label in allowed_domains)
+
     prompt = SKEPTIC_PROMPT.format(
         engagement_level=engagement,
         research_domain=domain,
@@ -209,6 +254,8 @@ def review_entry(entry, api_key, reason, dry_run=False):
         abstract=abstract or "(no abstract available)",
         venue=venue or "(unknown venue)",
         citing_team_paper=citing or "(unknown)",
+        engagement_vocabulary=eng_vocab_str,
+        domain_vocabulary=dom_vocab_str,
     )
 
     if dry_run:
@@ -233,8 +280,14 @@ def review_entry(entry, api_key, reason, dry_run=False):
         agreement = 3
     agreement = max(1, min(5, agreement))
 
-    skeptic_eng = result.get("skeptic_engagement", engagement)
-    skeptic_dom = result.get("skeptic_domain", domain)
+    raw_eng = result.get("skeptic_engagement", engagement)
+    raw_dom = result.get("skeptic_domain", domain)
+
+    eng_set = set(allowed_engagement)
+    dom_set = set(allowed_domains)
+    skeptic_eng, eng_in_vocab = _snap_label(raw_eng, engagement, eng_set)
+    skeptic_dom, dom_in_vocab = _snap_label(raw_dom, domain, dom_set)
+
     override = agreement <= 2
 
     return {
@@ -242,6 +295,8 @@ def review_entry(entry, api_key, reason, dry_run=False):
         "skeptic_agreement": round(agreement / 5.0, 2),
         "skeptic_engagement": skeptic_eng,
         "skeptic_domain": skeptic_dom,
+        "skeptic_engagement_in_vocab": eng_in_vocab,
+        "skeptic_domain_in_vocab": dom_in_vocab,
         "override_flag": override,
         "review_reason": reason,
     }
@@ -256,6 +311,16 @@ def process_model(model_name, data_dir, api_key, cache, dry_run=False):
 
     with open(file_path, "r", encoding="utf-8") as f:
         data = json.load(f)
+
+    # Build the allowed-vocabulary lists for this model. Domain vocabulary
+    # is derived from the labels actually present in the file (which match
+    # what classify_papers.py emits for this model).
+    domain_vocab = sorted({
+        e.get("research_domain") for e in data if e.get("research_domain")
+    })
+    allowed_engagement, allowed_domains = get_allowed_vocabularies(model_name, domain_vocab)
+    print(f"  Allowed engagement vocabulary ({len(allowed_engagement)}): {allowed_engagement}")
+    print(f"  Allowed domain vocabulary ({len(allowed_domains)}): {allowed_domains}")
 
     # Find entries needing review
     flagged = []
@@ -293,7 +358,10 @@ def process_model(model_name, data_dir, api_key, cache, dry_run=False):
             reviewed += 1
             continue
 
-        result = review_entry(entry, api_key, reason, dry_run=dry_run)
+        result = review_entry(
+            entry, api_key, reason, model_name,
+            allowed_engagement, allowed_domains, dry_run=dry_run,
+        )
         if result is None:
             title = entry.get("title", "")
             if isinstance(title, list):
@@ -312,6 +380,12 @@ def process_model(model_name, data_dir, api_key, cache, dry_run=False):
             title = title[0] if title else ""
         flag = " ** OVERRIDE **" if result["override_flag"] else ""
         print(f"    [{idx+1}/{len(flagged)}] agreement={result['skeptic_agreement']}{flag} — {title[:50]}")
+
+        # Periodic save so a Ctrl-C / kill doesn't lose all progress
+        if not dry_run and (idx + 1) % 25 == 0:
+            with open(file_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            save_cache(cache)
 
     print(f"  Done: {reviewed} reviewed ({skipped_cache} from cache), {overrides} overrides flagged")
 

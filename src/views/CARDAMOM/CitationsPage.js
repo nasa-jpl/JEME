@@ -180,17 +180,17 @@ const CitationsPage = () => {
       const url = record.URL || (record.DOI ? `https://doi.org/${record.DOI}` : '');
       
       // Use engagement level from JSON file if available, otherwise use default
-      let engagementLevel = record.engagement_level || 'Level 1: Basic Citation';
-      
+      let engagementLevel = record.engagement_level || 'Level 1: Data Usage';
+
       // If engagement_level is not in the JSON, fall back to citation-based determination
       if (!record.engagement_level) {
         const citationCount = record['is-referenced-by-count'] || 0;
         if (citationCount > 500) {
-          engagementLevel = 'Level 4: Foundational Method';
+          engagementLevel = 'Level 3: Foundational Method';
         } else if (citationCount > 100) {
-          engagementLevel = 'Level 3: Model Adaptation';
-        } else if (citationCount > 20) {
-          engagementLevel = 'Level 2: Data Usage';
+          engagementLevel = 'Level 2: Model Adaptation';
+        } else {
+          engagementLevel = 'Level 1: Data Usage';
         }
       }
       
@@ -272,7 +272,7 @@ const CitationsPage = () => {
         doi: "10.1029/2019WR025287",
         cites: 213,
         url: "https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2019WR025287",
-        engagement_level: "Level 3: Model Adaptation",
+        engagement_level: "Level 2: Model Adaptation",
         research_domain: "River Modeling",
         watershed: "Global",
         country: "Global",

@@ -13,7 +13,7 @@ const ConfidenceByClassificationChart = ({ data }) => {
   }
 
   const chartData = metrics.confidenceByEngagement.map(item => ({
-    name: item.level.replace('Level ', 'L').replace(': Simple Citation', ': Citation').replace(': Foundational Method', ': Foundation'),
+    name: item.level.replace('Level ', 'L').replace(': Foundational Method', ': Foundation'),
     fullName: item.level,
     avgConfidence: Math.round(item.avgConfidence * 100),
     count: item.count,
