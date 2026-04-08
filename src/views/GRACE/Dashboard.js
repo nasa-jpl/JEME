@@ -52,6 +52,12 @@ const GRACEDashboard = () => {
       icon: <Satellite size={20} style={{ color: '#F59E0B' }} />,
       description: "Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements",
       link: "/science-model-dashboard/SWOT"
+    },
+    {
+      name: "TROPESS",
+      icon: <Satellite size={20} style={{ color: '#0EA5E9' }} />,
+      description: "TROPospheric Emission Spectrometer System - Multi-instrument retrievals of atmospheric trace gases (CO, CH4, NH3, O3) from CrIS, AIRS, and other infrared sounders",
+      link: "/science-model-dashboard/TROPESS"
     }
   ];
 
@@ -70,7 +76,7 @@ const GRACEDashboard = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
             {missions.map((mission, index) => (
               <Link
                 key={index}
