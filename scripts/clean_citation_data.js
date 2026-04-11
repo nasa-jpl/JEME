@@ -51,10 +51,14 @@ function isSupplementaryMetadata(entry) {
 function isBookChapter(entry) {
   var doi = (entry.doi || entry.DOI || '').toLowerCase();
   var title = (entry.title || '').toLowerCase().trim();
+  var authors = entry.authors || [];
+  var year = entry.year;
   // Earth 2020 book chapters
   if (doi.includes('10.11647/obp.0193')) return true;
   // Field to Palette and similar non-research book chapters
   if (doi.includes('10.1201/b22355')) return true;
+  // Wiley/Springer book chapters (ISBN-based DOIs) with missing metadata
+  if (/^10\.(1002|1007)\/978/.test(doi) && (authors.length === 0 || !year)) return true;
   return false;
 }
 
@@ -69,6 +73,10 @@ function isEditorialOrReviewerContent(entry) {
     title.startsWith('reply to rc') ||
     /^comment on [a-z]+-\d/.test(title) ||  // "Comment on egusphere-2022-244"
     /^comment on ``/.test(title) ||
+    /^comment on ['"\u2018\u201c]/.test(title) ||  // "Comment on 'Title'" or 'Comment on "Title"'
+    title.startsWith('response to comment on') ||
+    title.startsWith('discussion on ') ||
+    title.startsWith('discussion of ') ||
     title.startsWith('short comment on') ||
     title === 'issue information' ||
     title === 'masthead' ||
@@ -77,6 +85,23 @@ function isEditorialOrReviewerContent(entry) {
     title === 'contents' ||
     title === 'open peer review'
   );
+}
+
+function isIncompleteMetadata(entry) {
+  var title = (entry.title || '').trim();
+  var authors = entry.authors || [];
+  var year = entry.year;
+  var doi = (entry.doi || entry.DOI || '').trim();
+  var venue = (entry.venue || '').trim();
+
+  // No authors AND no year AND no DOI — unreliable entry
+  if (authors.length === 0 && !year && !doi) return true;
+  // Has title but missing year, DOI, AND venue — too little metadata to trust
+  if (title && !year && !doi && !venue) return true;
+  // Book chapter DOI with empty authors (ISBN-based DOI fallback failure)
+  if (authors.length === 0 && /^10\.(1002|1007)\/978/.test(doi)) return true;
+
+  return false;
 }
 
 function isFrontMatter(entry) {
@@ -125,7 +150,8 @@ function shouldRemove(entry) {
     isEditorialOrReviewerContent(entry) ||
     isFrontMatter(entry) ||
     isErrataCorrigenda(entry) ||
-    isFragmentTitle(entry)
+    isFragmentTitle(entry) ||
+    isIncompleteMetadata(entry)
   );
 }
 
@@ -152,7 +178,7 @@ function cleanModel(modelName, dryRun) {
   var removals = {
     review_of: [], placeholder: [], supplementary: [],
     book_chapter: [], editorial: [], front_matter: [],
-    errata: [], fragment: []
+    errata: [], fragment: [], incomplete_metadata: []
   };
 
   var cleaned = data.filter(function (entry) {
@@ -165,6 +191,7 @@ function cleanModel(modelName, dryRun) {
     if (isFrontMatter(entry)) reasons.push('front_matter');
     if (isErrataCorrigenda(entry)) reasons.push('errata');
     if (isFragmentTitle(entry)) reasons.push('fragment');
+    if (isIncompleteMetadata(entry)) reasons.push('incomplete_metadata');
 
     if (reasons.length > 0) {
       var info = {
@@ -180,6 +207,15 @@ function cleanModel(modelName, dryRun) {
 
   var totalRemoved = originalCount - cleaned.length;
 
+  // Detect preprint DOIs on entries with journal venues (warning only)
+  var preprintDoiWarnings = cleaned.filter(function (entry) {
+    var doi = (entry.doi || entry.DOI || '').toLowerCase();
+    var venue = (entry.venue || '').toLowerCase();
+    var isPreprint = /^10\.(48550\/arxiv|1002\/essoar|31223\/|2139\/ssrn)/.test(doi);
+    var hasJournalVenue = venue && !/(arxiv|preprint|essoar|ssrn)/.test(venue);
+    return isPreprint && hasJournalVenue;
+  });
+
   // Print report
   console.log('\n── ' + modelName + ' ──────────────────────────────────────');
   console.log('  Total entries: ' + originalCount);
@@ -192,7 +228,8 @@ function cleanModel(modelName, dryRun) {
     editorial: 'Filter 5 - Editorial/reviewer content',
     front_matter: 'Filter 6 - Front matter (preface, index, etc.)',
     errata: 'Filter 7 - Errata/corrigenda',
-    fragment: 'Filter 8 - Fragment/empty titles'
+    fragment: 'Filter 8 - Fragment/empty titles',
+    incomplete_metadata: 'Filter 9 - Incomplete metadata'
   };
 
   Object.keys(filterLabels).forEach(function (key) {
@@ -209,6 +246,16 @@ function cleanModel(modelName, dryRun) {
 
   console.log('\n  Total removed: ' + totalRemoved);
   console.log('  Remaining: ' + cleaned.length);
+
+  if (preprintDoiWarnings.length > 0) {
+    console.log('\n  ⚠ Preprint DOI with journal venue: ' + preprintDoiWarnings.length + ' entries');
+    preprintDoiWarnings.slice(0, 3).forEach(function (e) {
+      console.log('    - "' + (e.title || '').substring(0, 80) + '" (DOI: ' + (e.doi || e.DOI) + ', venue: ' + e.venue + ')');
+    });
+    if (preprintDoiWarnings.length > 3) {
+      console.log('    ... and ' + (preprintDoiWarnings.length - 3) + ' more');
+    }
+  }
 
   if (totalRemoved === 0) {
     console.log('  No changes needed.');

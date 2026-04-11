@@ -6,9 +6,75 @@ Falls back to DOI, then title for citations without paper_id
 """
 
 import json
+import re
 import sys
 from pathlib import Path
 from typing import List, Dict
+
+PREPRINT_DOI_PATTERNS = [
+    r'^10\.48550/arxiv\.',      # arXiv
+    r'^10\.1002/essoar\.',      # ESSOAR
+    r'^10\.31223/',             # EarthArXiv
+    r'^10\.2139/ssrn\.',        # SSRN
+    r'^10\.1101/',              # bioRxiv/medRxiv
+]
+
+def _is_preprint_doi(doi: str) -> bool:
+    """Check if a DOI belongs to a preprint server."""
+    if not doi:
+        return False
+    doi_lower = doi.lower()
+    return any(re.match(p, doi_lower) for p in PREPRINT_DOI_PATTERNS)
+
+def _normalize_title(title: str) -> str:
+    """Normalize title for fuzzy matching across preprint/published versions."""
+    if not title:
+        return ''
+    t = title.lower().strip()
+    t = re.sub(r'^(a |the |an )', '', t)
+    t = re.sub(r'[^\w\s]', '', t)  # remove punctuation
+    t = re.sub(r'\s+', ' ', t).strip()
+    return t
+
+def _remove_preprint_duplicates(citations: List[Dict]) -> tuple[List[Dict], int]:
+    """
+    Detect preprint/published duplicates by normalized title.
+    When both versions exist, keep the published version.
+    """
+    # Group by normalized title
+    title_groups: Dict[str, List[int]] = {}
+    for i, c in enumerate(citations):
+        norm = _normalize_title(c.get('title', ''))
+        if norm and len(norm) > 15:  # skip very short titles to avoid false matches
+            title_groups.setdefault(norm, []).append(i)
+
+    indices_to_remove = set()
+    for norm_title, indices in title_groups.items():
+        if len(indices) < 2:
+            continue
+
+        entries = [(i, citations[i]) for i in indices]
+        preprints = [(i, c) for i, c in entries if _is_preprint_doi(c.get('doi', ''))]
+        published = [(i, c) for i, c in entries if not _is_preprint_doi(c.get('doi', ''))]
+
+        if preprints and published:
+            # Keep published, drop preprints
+            for i, _ in preprints:
+                indices_to_remove.add(i)
+        elif len(entries) > 1 and not published:
+            # All preprints — keep the one with highest citation count
+            sorted_entries = sorted(entries, key=lambda x: x[1].get('citation_count', 0), reverse=True)
+            for i, _ in sorted_entries[1:]:
+                indices_to_remove.add(i)
+        elif len(entries) > 1 and not preprints:
+            # All published — keep the one with highest citation count
+            sorted_entries = sorted(entries, key=lambda x: x[1].get('citation_count', 0), reverse=True)
+            for i, _ in sorted_entries[1:]:
+                indices_to_remove.add(i)
+
+    result = [c for i, c in enumerate(citations) if i not in indices_to_remove]
+    return result, len(indices_to_remove)
+
 
 def deduplicate_citations(citations: List[Dict]) -> tuple[List[Dict], Dict]:
     """
@@ -66,6 +132,12 @@ def deduplicate_citations(citations: List[Dict]) -> tuple[List[Dict], Dict]:
         'unique_titles': len(seen_titles)
     }
 
+    # Second pass: detect preprint/published duplicates by normalized title
+    deduplicated, preprint_dupes = _remove_preprint_duplicates(deduplicated)
+    stats['preprint_duplicates_removed'] = preprint_dupes
+    stats['duplicates_removed'] += preprint_dupes
+    stats['deduplicated_count'] = len(deduplicated)
+
     return deduplicated, stats
 
 def process_citation_file(input_file: Path, output_file: Path = None) -> Dict:
@@ -95,6 +167,8 @@ def process_citation_file(input_file: Path, output_file: Path = None) -> Dict:
 
     print(f"  After deduplication: {stats['deduplicated_count']:,}")
     print(f"  Duplicates removed: {stats['duplicates_removed']:,}")
+    if stats.get('preprint_duplicates_removed', 0) > 0:
+        print(f"    (of which {stats['preprint_duplicates_removed']} were preprint/published duplicates)")
     print(f"  Deduplication rate: {(stats['duplicates_removed']/original_count*100):.1f}%")
 
     # Save deduplicated version
