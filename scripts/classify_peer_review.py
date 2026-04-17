@@ -26,7 +26,7 @@ GRACE_CSV = os.path.join(PROJECT_DIR, "mission_data", "grace.publications.csv")
 
 MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
-    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT",
+    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT", "TROPESS",
 ]
 
 # Venue patterns that indicate NOT peer-reviewed
@@ -37,6 +37,7 @@ NOT_PEER_REVIEWED_PATTERNS = [
     "eartharxiv",
     "biorxiv",
     "medrxiv",
+    "chemrxiv",
     "ssrn",
     "research square",
     "thesis",
@@ -52,6 +53,11 @@ NOT_PEER_REVIEWED_PATTERNS = [
     "technical report",
     "working paper",
     "conference abstract",
+    "discussions",
+    "discussion papers",
+    "egusphere",
+    "poster",
+    "expanded abstracts",
 ]
 
 

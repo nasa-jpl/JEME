@@ -17,7 +17,7 @@ const path = require('path');
 const DATA_DIR = path.join(__dirname, '..', 'public', 'data');
 
 // All model data files follow the pattern {MODEL}_analyzed.json
-const MODELS = ['ECCO', 'RAPID', 'CARDAMOM', 'CMS-Flux', 'ISSM', 'MOMO-CHEM', 'LES', 'EDMF', 'GRACE', 'SWOT'];
+const MODELS = ['ECCO', 'RAPID', 'CARDAMOM', 'CMS-Flux', 'ISSM', 'MOMO-CHEM', 'LES', 'EDMF', 'GRACE', 'SWOT', 'TROPESS'];
 
 // ── Filter functions ────────────────────────────────────────────────────────
 

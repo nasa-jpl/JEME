@@ -39203,69 +39203,6 @@
     "is_peer_reviewed": true
   },
   {
-    "title": "Characterization of the hydrological functioning of the Niger basin using the ISBA-TRIP model",
-    "authors": [
-      "Pedinotti, V.",
-      "Boone, A.",
-      "Decharme, B.",
-      "Cretaux, J. F.",
-      "Mognard, N.",
-      "Panthou, G.",
-      "Papa, F."
-    ],
-    "year": 2011,
-    "doi": "10.5194/hessd-8-9173-2011",
-    "venue": "Hydrology and Earth System Sciences Discussions",
-    "citation_count": 1,
-    "paper_id": "grace_3783",
-    "url": "http://dx.doi.org/10.5194/hessd-8-9173-2011",
-    "abstract": "During the 70s and 80s, West Africa has faced extreme climate variations with extended extreme drought conditions. Of particular importance is the Niger basin, since it traverses a large part of the Sahel and is thus a critical source of water in this semi arid region. However, the understanding of the hydrological processes over this basin is currently limited by the lack of spatially distributed surface water and discharge measurements. The purpose of this study is to use the ISBA-TRIP continental hydrologic system to explore key processes related to the hydrological cycle of the Niger Basin. The scheme accounts explicitly for the surface river routing, for the floodplains dynamic, and for the water storage using a deep aquifer reservoir. In the current study, simulations are done at a 0.5 by 0.5 degree spatial resolution over the 2002–2007 period using the atmospheric forcing provided by the AMMA Land surface Model Intercomparison Project (ALMIP). The model is intensively compared to in situ discharge measurements as well as satellite derived flood extent, total continental water storage changes and river height changes. The flooding scheme leads to a non-negligible increase of evaporation over large flooded areas, which decrease the Niger river flow by 15% to 50 %, according to the observed station and the rainfall dataset used as forcing. This contributes to improve the simulation of the river discharges confirming for the need to incorporate flood representations into Land Surface Model. The model provides a good estimation of the surface water dynamics and accurately simulates the endorheic property of the Northern part of the basin. Moreover, the deep aquifer reservoir improvesNiger low flows and the recession law during the dry season. This study also gives a basic estimation of aquifer recharge and of the total terrestrial water budget. The comparison with 3 satellite products from the Gravity Recovery and Climated Experiment (GRACE) is really optimistic and show a non negligible contribution of the deeper soil layers to the total storage (26% for groundwater and aquifer). Finally, sensitivity tests have shown that a good parameterization of routing models is required to optimize simulation errors. Indeed, the modification of some key parameters has non-negligible impacts on the model dynamics which gives perspectives for improving the model input parameters using future developments in remote sensing technologies such as the joint CNES-NASA satellite project SWOT (Surface Water Ocean Topography), which will provide water heights and extent at land surface with an unprecedented 50–100m resolution and precision.",
-    "country": null,
-    "citing_team_paper": "Contributions of GRACE to understanding climate change",
-    "team_paper_id": "_1187",
-    "research_domain": "Hydrology",
-    "engagement_level": "Review Paper",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Cites GRACE mission"
-      }
-    ],
-    "uncertainty": {
-      "reasoning_confidence": 1,
-      "evidence_confidence": 1,
-      "composite_confidence": 0.8,
-      "evidence_flags": {
-        "has_abstract": true,
-        "has_doi": true,
-        "has_venue": true,
-        "has_full_authors": true,
-        "keyword_match_score": 1,
-        "team_paper_relevance_tier": "Core"
-      },
-      "classification_provenance": {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
-        "engagement_agreement": 0,
-        "domain_agreement": 0,
-        "phase2_engagement_agreement": 0,
-        "phase2_domain_agreement": 1,
-        "phase2_majority_engagement": "Level 2: Data Usage",
-        "phase2_majority_domain": "Hydrology"
-      },
-      "error_estimates": {
-        "stochastic_variance": 0,
-        "pipeline_variance": 1,
-        "miscalibration_risk": "low"
-      }
-    },
-    "is_peer_reviewed": true
-  },
-  {
     "title": "Effective elastic thickness of South America and its implications for intracontinental deformation",
     "authors": [
       "Perez-Gussinye, M.",
@@ -81351,66 +81288,6 @@
     "is_peer_reviewed": true
   },
   {
-    "title": "A global water cycle reanalysis (2003–2012) reconciling satellite gravimetry and altimetry observations with a hydrological model ensemble",
-    "authors": [
-      "Van Dijk, A. I. J. M.",
-      "Renzullo, L. J.",
-      "Wada, Y.",
-      "Tregoning, P."
-    ],
-    "year": 2013,
-    "doi": "10.5194/hessd-10-15475-2013",
-    "venue": "Hydrology and Earth System Sciences Discussions",
-    "citation_count": 2,
-    "paper_id": "grace_4479",
-    "url": "http://dx.doi.org/10.5194/hessd-10-15475-2013",
-    "abstract": "We present a global water cycle reanalysis that reconciles water balance estimates derived from the GRACE satellite mission, satellite water level altimetry and off-line estimates from several hydrological models. Error estimates for the sequential data assimilation scheme were derived from available uncertainty information and the triple collocation technique. Errors in four GRACE storage products were estimated to be 11-12mm over land areas, while errors in monthly storage changes derived from five global hydrological models were estimated to be 17–28 mm. Prior and posterior estimates were evaluated against independent observations of river water level and discharge, snow water storage and glacier mass loss. Data assimilation improved or maintained agreement overall, although results varied regionally. Uncertainties were greatest in regions where glacier mass loss and sub-surface storage decline are both plausible but poorly constrained. We calculated a global water budget for 2003–2012. The main changes were a net loss of polar ice (−341 Gt yr−1) and mountain glaciers (−185Gt yr−1), with an additional decrease in seasonal snow pack (−19 Gt yr−1). Storage in lakes increased by +77 Gt yr−1, due to new reservoir impoundments (+87 Gt yr−1), water level change in the Caspian Sea (−27 Gt yr−1) and net increases in the remaining lakes combined (+17 Gt yr−1). There was no change in subsurface storage, because groundwater depletion (−90 Gt yr−1) was offset by increased water storage in the seasonally wet tropics of South America and southern Africa (+87 Gt yr−1), which agrees with observed and predicted changes in the tropical monsoon.",
-    "country": "Australia",
-    "citing_team_paper": "Global Glacier Mass Loss During the GRACE Satellite Mission (2002-2016)",
-    "team_paper_id": "_1171",
-    "research_domain": "Hydrology",
-    "engagement_level": "Data Usage",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Cites GRACE mission"
-      }
-    ],
-    "uncertainty": {
-      "reasoning_confidence": 1,
-      "evidence_confidence": 1,
-      "composite_confidence": 0.8,
-      "evidence_flags": {
-        "has_abstract": true,
-        "has_doi": true,
-        "has_venue": true,
-        "has_full_authors": true,
-        "keyword_match_score": 1,
-        "team_paper_relevance_tier": "Core"
-      },
-      "classification_provenance": {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
-        "engagement_agreement": 0,
-        "domain_agreement": 0,
-        "phase2_engagement_agreement": 0,
-        "phase2_domain_agreement": 1,
-        "phase2_majority_engagement": "Level 2: Data Usage",
-        "phase2_majority_domain": "Hydrology"
-      },
-      "error_estimates": {
-        "stochastic_variance": 0,
-        "pipeline_variance": 1,
-        "miscalibration_risk": "low"
-      }
-    },
-    "is_peer_reviewed": true
-  },
-  {
     "title": "Spectral assessment of isostatic gravity models against CHAMP, GRACE, GOCE satellite-only and combined gravity models",
     "authors": [
       "Tsoulis, Dimitrios",
@@ -84165,64 +84042,6 @@
       },
       "error_estimates": {
         "stochastic_variance": 0,
-        "pipeline_variance": 1,
-        "miscalibration_risk": "low"
-      }
-    },
-    "is_peer_reviewed": true
-  },
-  {
-    "title": "A study on the gravity variations related to a rainfall from TRMM and GRACE",
-    "authors": [
-      "Yu, S.",
-      "Min, K."
-    ],
-    "year": 2006,
-    "doi": "",
-    "venue": "in 2006 Western Pacific Geophysics Meeting",
-    "citation_count": 0,
-    "paper_id": "grace_4776",
-    "url": "",
-    "abstract": "Satellite observing of the Earth has an advantage to obtain time-variable geo-information, and this property is also able to estimate long time environmental changes of the Earth. Recently, some geodesist and geophysicist notice that lots of rainfall is bring on a change of the Earths gravity field. The GRACE make possible to survey microscopic gravity changes in guaranteed resolutions. In the eastern Asia, during 12 months (Jul. 2003 to Jun. 2004), gravity effects are calculated from TRMM and are compared with time-variable gravity anomaly from GRACE. Gravity variations from GRACE show particular features that seem to be related to seasonal rainfall variations. In the summer of the rainy season (Jul. 2003 to Sept. 2003), gravity anomalies are increased, but in the winter of when evaporation is more than rainfall, gravity anomalies are decreased. Especially, residual gravity effects are still remained after the rainy season (Oct. 2003) because water mass are exist on or below the Earths surface.",
-    "country": null,
-    "citing_team_paper": "Global Glacier Mass Loss During the GRACE Satellite Mission (2002-2016)",
-    "team_paper_id": "_1171",
-    "research_domain": "Geodesy",
-    "engagement_level": "Review Paper",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Cites GRACE mission"
-      }
-    ],
-    "uncertainty": {
-      "reasoning_confidence": 0.933,
-      "evidence_confidence": 0.7,
-      "composite_confidence": 0.638,
-      "evidence_flags": {
-        "has_abstract": true,
-        "has_doi": false,
-        "has_venue": true,
-        "has_full_authors": true,
-        "keyword_match_score": 0.4,
-        "team_paper_relevance_tier": "Core"
-      },
-      "classification_provenance": {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
-        "engagement_agreement": 0,
-        "domain_agreement": 0,
-        "phase2_engagement_agreement": 0,
-        "phase2_domain_agreement": 1,
-        "phase2_majority_engagement": "Level 2: Data Usage",
-        "phase2_majority_domain": "Geodesy"
-      },
-      "error_estimates": {
-        "stochastic_variance": 0.167,
         "pipeline_variance": 1,
         "miscalibration_risk": "low"
       }
@@ -89675,67 +89494,6 @@
     "is_peer_reviewed": true
   },
   {
-    "title": "A Simple Groundwater Model (SIMGM) for use in Climate Models - The Impacts of Groundwater Dynamics on Soil Moisture and Evapotranspiration",
-    "authors": [
-      "Niu, G.",
-      "Yang, Z.",
-      "Dickinson, R. E.",
-      "Gulden, L. E.",
-      "Su, H."
-    ],
-    "year": 2006,
-    "doi": "",
-    "venue": "in 2006 Western Pacific Geophysics Meeting",
-    "citation_count": 0,
-    "paper_id": "grace_3706",
-    "url": "",
-    "abstract": "Groundwater interacts with soil moisture through the exchanges of water under gravity and capillary forces between the soil and the underlying aquifer. Despite its importance, it is not explicitly represented in climate models, thereby neglecting the impacts of groundwater dynamics on climate especially in regions where the groundwater level is below the model soil column. This paper developed a simple groundwater model (SIMGM) by representing the recharge and discharge processes of the water storage in an unconfined aquifer, which is added as a single integration element below the soil of a land surface model. We first validated SIMGM against the observed water table depth in a small watershed (0.36 km2) in Valdai, Russia. We then evaluated SIMGM globally against the Global Runoff Data Center (GRDC) runoff climatology. SIMGM equipped with a simple TOPMODEL-based runoff parameterization (SIMTOP), in which both surface runoff and subsurface runoff (groundwater discharge) are exponential functions of the water table depth, produced global runoff in a good agreement with the GRDC runoff. For lacking of a global water-table-depth dataset, we evaluated the variations of the modeled water table depth against the Gravity Recovery And Climate Experiment (GRACE) terrestrial water storage change data. We also investigated the impacts of groundwater dynamics on soil moisture and evapotranspiration through the comparison of SIMGM to an additional model run with gravitational free drainage (FD) being the models lower boundary conditions.",
-    "country": null,
-    "citing_team_paper": "Contributions of GRACE to understanding climate change",
-    "team_paper_id": "_1187",
-    "research_domain": "Hydrology",
-    "engagement_level": "Data Usage",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Cites GRACE mission"
-      }
-    ],
-    "uncertainty": {
-      "reasoning_confidence": 1,
-      "evidence_confidence": 0.85,
-      "composite_confidence": 0.747,
-      "evidence_flags": {
-        "has_abstract": true,
-        "has_doi": false,
-        "has_venue": true,
-        "has_full_authors": true,
-        "keyword_match_score": 1,
-        "team_paper_relevance_tier": "Core"
-      },
-      "classification_provenance": {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
-        "engagement_agreement": 0,
-        "domain_agreement": 0,
-        "phase2_engagement_agreement": 0,
-        "phase2_domain_agreement": 1,
-        "phase2_majority_engagement": "Level 2: Data Usage",
-        "phase2_majority_domain": "Hydrology"
-      },
-      "error_estimates": {
-        "stochastic_variance": 0,
-        "pipeline_variance": 1,
-        "miscalibration_risk": "low"
-      }
-    },
-    "is_peer_reviewed": true
-  },
-  {
     "title": "Influences of recent climate change and human activities on water storage variations in Central Asia",
     "authors": [
       "Deng, Haijun",
@@ -89845,64 +89603,6 @@
       },
       "error_estimates": {
         "stochastic_variance": 0,
-        "pipeline_variance": 1,
-        "miscalibration_risk": "low"
-      }
-    },
-    "is_peer_reviewed": true
-  },
-  {
-    "title": "Operational Monitoring of Mesoscale Upper Layer Circulation Fields with Multi-Satellite Technology in the Southwestern Atlantic Ocean",
-    "authors": [
-      "Vianna, M. L.",
-      "Menezes, V. V."
-    ],
-    "year": 2006,
-    "doi": "",
-    "venue": "in 2006 Ocean Sciences Meeting",
-    "citation_count": 0,
-    "paper_id": "grace_4520",
-    "url": "",
-    "abstract": "The capabilities of the Brazilian oceanographic community on multi-satellite monitoring of circulation fields in operational mode seems to be the result of involvement of VM Oceanica Ltda (VM), a consulting company, in a 30 month contract with the most important Brazilian oil company (Petrobras). Part of this contract included a daily update of gridded circulation fields between 12 S and 30 S, west of 34 W, based on global multi-satellite altimetry data. In order to make feasible the operational requirements, VM developed a modular software System for Altimetric Monitoring and Recovery of Temperatures (SMART-for short). It acquires automatically in a daily basis the global collinear SSHA data from available satellites (JASON, GFO, ENVISAT, T-P, etc), executes QC, filtering and interpolation using Singular Spectrum Analysis methodologies, and gridding by space-time objective analysis of SSHA. All the parameters in each module are user-defined for optimally adapting to each target application region. It also computes the best estimate of the Surface Dynamic Topography (DT), using a time- mean DT obtained from the high resolution Levitus climatological data (Boyer and Levitus, 1997), and produces upper layer Geostrophic Circulation fields from this DT. During the period of the contract, a in house research Pilot Project (VMPP) was conducted in parallel to investigate the following questions: (1) Can we devise and compute a more realistic MDT than the one we adopted before, also including the slope and continental shelf regions ? (2) Can we determine the space-time scales of variability in this study region ? (3) Does multiscale statistical analysis of the best available operational multi-satellite microwave SST products give results consistent with those obtained from our altimetry data set ? One of the answers to (1) was obtained by the construction of a high resolution MDT obtained by differencing of the GRACE Gravity Model 02 (GGM02), based on 363 days of data, from a multi-satellite Mean Sea Surface (GSFCMSS00) both mapped into a 0.25 x 0.25 degree grid, produced for us by request to Don Chambers from the GRACE project. This MDT exhibited correlated noise, in the form of quasi-meridional striations, which could be filtered out by our adaptive empirical orthogonal method based on EOF and SSA, giving the expected subgyre- scale geostrophic circulation associated to the Brazil Current. It is consistent with the previous estimates obtained from a high-resolution Levitus climatology. Both are consistent with the double-gyre structure of the subtropical gyre suggested by Tsuchyia (1985), this being an important issue in connection to estimation of currents off the Campos Basin. The study of (2) and (3) showed consistency between SSH and SST variabilities in the mesoscale band (eddies and shelf waves), with larger variances in the 17-25 day periods. Comments on how we project surface fields into the subsurface prior to data assimilation and validation against in situ time series data will be made.",
-    "country": null,
-    "citing_team_paper": "Data-adaptive spatio-temporal filtering of GRACE data",
-    "team_paper_id": "_987",
-    "research_domain": "Processing/Algorithms",
-    "engagement_level": "Data Usage",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Cites GRACE mission"
-      }
-    ],
-    "uncertainty": {
-      "reasoning_confidence": 1,
-      "evidence_confidence": 0.85,
-      "composite_confidence": 0.714,
-      "evidence_flags": {
-        "has_abstract": true,
-        "has_doi": false,
-        "has_venue": true,
-        "has_full_authors": true,
-        "keyword_match_score": 1,
-        "team_paper_relevance_tier": "Core"
-      },
-      "classification_provenance": {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
-        "engagement_agreement": 0,
-        "domain_agreement": 0,
-        "phase2_engagement_agreement": 0,
-        "phase2_domain_agreement": 0,
-        "phase2_majority_engagement": "Level 2: Data Usage",
-        "phase2_majority_domain": "Oceanography"
-      },
-      "error_estimates": {
-        "stochastic_variance": 0.167,
         "pipeline_variance": 1,
         "miscalibration_risk": "low"
       }
@@ -103192,64 +102892,6 @@
       },
       "error_estimates": {
         "stochastic_variance": 0,
-        "pipeline_variance": 1,
-        "miscalibration_risk": "low"
-      }
-    },
-    "is_peer_reviewed": true
-  },
-  {
-    "title": "A Study of Regional Ice Sheet Mass Variation in Antarctica Using GRACE Data",
-    "authors": [
-      "Yamamoto, K.",
-      "Fukuda, Y."
-    ],
-    "year": 2006,
-    "doi": "",
-    "venue": "in 2006 Western Pacific Geophysics Meeting",
-    "citation_count": 0,
-    "paper_id": "grace_4734",
-    "url": "",
-    "abstract": "An accurate knowledge of the mass variation in Antarctic ice sheet is an important problem for the studies of global water mass balance, sea level change and climate change. GRACE satellite gravity data give us the information of the temporal mass variation on the Earth as the gravity field variation in relatively large scale. One of the advantages to use GRACE data for the study of Antarctic ice sheet is to know the continental scale mass variation, which is directly useful to estimate the global scale sea level change. On the other hand, it is well known that the melting speed of the Antarctic ice sheet is different in each region because of the different geographical and geological feature and it is also important to know the smaller regional scale mass balance for the study of the dynamics of ice sheet mass balance in the region and, as a result, the improvement of the ice sheet model in Antarctica. In this study, using GRACE data, we attempted to study the regional scale ice sheet mass balance around Shirase drainage area in Antarctica. In this area, the some decades of glaciological observations, for instance, snow accumulation, ablation, snow density and temperature versus depth profile have been accumulated by JARE (Japan Antarctic Research Expedition), and geodetic and/or geophysical observation such as VLBI, GPS, SG(superconducting gravimeter) measurements have been continued at Syowa Station as well. Therefore the comparison of the GRACE results with the in-situ observation in the area is also interesting from the view point of ground truth. The accuracy of the GRACE data is reported about 1.5 cm of water thickness with 1000 km global filtering. So far, using about 2.5 years GRACE data of 2002-2004 (UTCSR Release 01), we estimated the trends of the mass variation in the East, West Antarctica and in the entire continent. Recently, new GRACE data sets were released from 3 data centers (UTCSR Release 02, GFZ Release 03 and JPL Release 02). In these data sets, the ocean tide models and the short period ocean models employed for the corrections as well as the J2 value are extremely improved. We use the new data sets. Shirase drainage is about 500 km width and 1000 km length, and the expected ice sheet thinning rate is a few cm to several tens cm/year. These parameters suggest the detection of the mass variation in the area is challenging. Although the detection of the actual mass variations is still marginal, we will report the status of the detection by comparing the results obtained from the new data sets.",
-    "country": "Japan",
-    "citing_team_paper": "Snow accumulation, ice discharge and mass balance in Greenland and Antarctica from GRACE",
-    "team_paper_id": "_4498",
-    "research_domain": "Cryosphere",
-    "engagement_level": "Data Usage",
-    "missions_instruments": [
-      {
-        "name": "GRACE",
-        "agency": "NASA",
-        "type": "Satellite",
-        "product": "Not specified",
-        "data_level": "Not specified",
-        "usage_context": "Cites GRACE mission"
-      }
-    ],
-    "uncertainty": {
-      "reasoning_confidence": 0.867,
-      "evidence_confidence": 0.85,
-      "composite_confidence": 0.668,
-      "evidence_flags": {
-        "has_abstract": true,
-        "has_doi": false,
-        "has_venue": true,
-        "has_full_authors": true,
-        "keyword_match_score": 1,
-        "team_paper_relevance_tier": "Core"
-      },
-      "classification_provenance": {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
-        "engagement_agreement": 0,
-        "domain_agreement": 0,
-        "phase2_engagement_agreement": 0,
-        "phase2_domain_agreement": 1,
-        "phase2_majority_engagement": "Level 2: Data Usage",
-        "phase2_majority_domain": "Cryosphere"
-      },
-      "error_estimates": {
-        "stochastic_variance": 0.167,
         "pipeline_variance": 1,
         "miscalibration_risk": "low"
       }

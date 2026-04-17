@@ -348,8 +348,27 @@ def main():
     all_entries = team_entries + citing_entries
     print(f"Total entries (team + citing): {len(all_entries)}")
 
+    # Filter preprints: remove entries whose venue indicates a preprint server,
+    # unless the entry has a DOI (in which case keep it).
+    PREPRINT_VENUES = [
+        "arxiv", "biorxiv", "medrxiv", "chemrxiv", "eartharxiv", "essoar",
+        "ssrn", "preprint", "research square", "authorea", "engrxiv",
+        "techrxiv", "psyarxiv", "socarxiv",
+    ]
+    before_preprint = len(all_entries)
+    filtered_entries = []
+    for e in all_entries:
+        venue_lower = (e.get("venue") or "").lower()
+        is_preprint = any(pv in venue_lower for pv in PREPRINT_VENUES)
+        if is_preprint and not e.get("doi"):
+            continue
+        filtered_entries.append(e)
+    all_entries = filtered_entries
+    if len(all_entries) != before_preprint:
+        print(f"Removed {before_preprint - len(all_entries)} preprint entries (no DOI)")
+
     # Filter invalid years
-    MIN_YEAR, MAX_YEAR = 1990, 2027
+    MIN_YEAR, MAX_YEAR = 2016, 2027
     before = len(all_entries)
     all_entries = [e for e in all_entries if e.get("year") is None or (MIN_YEAR <= e["year"] <= MAX_YEAR)]
     if len(all_entries) != before:

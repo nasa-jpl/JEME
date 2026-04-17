@@ -263,6 +263,17 @@
       "link": "https://doi.org/10.1038/s41586-024-07878-z"
     },
     {
+      "authors": "E. Malina, K. Bowman, V. Kantchev, L. Kuai, T. Kurosu, K. Miyazaki, V. Natraj, G. Osterman, F. Oyafuso, M. Thill",
+      "title": "Joint spectral retrievals of ozone with Suomi NPP CrIS augmented by S5P/TROPOMI",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "17",
+      "number": "17",
+      "pages": "5341-5371",
+      "year": 2024,
+      "doi": "10.5194/amt-17-5341-2024",
+      "link": "https://doi.org/10.5194/amt-17-5341-2024"
+    },
+    {
       "authors": "K. Cady-Pereira, X. Guo, R. Wang, A. Leytem, C. Calkins, E. Berry, K. Sun, M. Muller, A. Wisthaler, V. Payne, M. Shephard, M. Zondlo, V. Kantchev",
       "title": "Validation of MUSES NH3 observations from AIRS and CrIS against aircraft measurements from DISCOVER-AQ and a surface network in the Magic Valley",
       "journal": "Atmos. Meas. Tech.",
@@ -294,6 +305,60 @@
       "year": 2024,
       "doi": "10.1029/2023gl104854",
       "link": "https://doi.org/10.1029/2023gl104854"
+    },
+    {
+      "authors": "O. Cooper, K. Chang, K. Bates, S. Brown, W. Chace, M. Coggon, A. Gorchov Negron, A. Middlebrook, J. Peischl, A. Piasecki, N. Schafer, C. Stockwell, S. Wang, C. Warneke, K. Zuraski, K. Miyazaki, V. Payne, E. Pennington, J. Worden, K. Bowman, B. McDonald",
+      "title": "Early Season 2023 Wildfires Generated Record-Breaking Surface Ozone Anomalies Across the U.S. Upper Midwest",
+      "journal": "Geophys. Res. Lett.",
+      "volume": "51",
+      "number": "22",
+      "year": 2024,
+      "doi": "10.1029/2024gl111481",
+      "link": "https://doi.org/10.1029/2024gl111481"
+    },
+    {
+      "authors": "E. Pennington, G. Osterman, V. Payne, K. Miyazaki, K. Bowman, J. Neu",
+      "title": "Quantifying biases in TROPESS AIRS, CrIS, and joint AIRS+OMI tropospheric ozone products using ozonesondes",
+      "journal": "Atmos. Chem. Phys.",
+      "volume": "25",
+      "number": "15",
+      "pages": "8533-8552",
+      "year": 2025,
+      "doi": "10.5194/acp-25-8533-2025",
+      "link": "https://doi.org/10.5194/acp-25-8533-2025"
+    },
+    {
+      "authors": "A. Boynard, C. Wespes, J. Hadji-Lazaro, S. Sinnathamby, D. Hurtmans, P. Coheur, M. Doutriaux-Boucher, J. Onderwaater, W. Steinbrecht, E. Pennington, K. Bowman, C. Clerbaux",
+      "title": "Assessment of 16-year tropospheric ozone trends from the IASI Climate Data Record",
+      "journal": "Atmos. Chem. Phys.",
+      "volume": "25",
+      "number": "19",
+      "pages": "11719-11755",
+      "year": 2025,
+      "doi": "10.5194/acp-25-11719-2025",
+      "link": "https://doi.org/10.5194/acp-25-11719-2025"
+    },
+    {
+      "authors": "O.R. Cooper, E.A. Pennington, J. Worden, K.W. Bowman, S. Kondragunta, Z. Wei, K. Yang",
+      "title": "Sidebar 2.2: Operational satellite instruments monitor a range of indirect short-lived climate forcers",
+      "journal": "Bull. Amer. Meteor. Soc.",
+      "volume": "106",
+      "number": "8",
+      "pages": "S108-S110",
+      "year": 2025,
+      "doi": "10.1175/BAMS-D-25-0102.1",
+      "link": "https://doi.org/10.1175/BAMS-D-25-0102.1"
+    },
+    {
+      "authors": "J. Laughner, S. Kulawik, V. Payne",
+      "title": "An algorithm to retrieve peroxyacetyl nitrate from AIRS",
+      "journal": "Atmos. Meas. Tech.",
+      "volume": "19",
+      "number": "1",
+      "pages": "249-276",
+      "year": 2026,
+      "doi": "10.5194/amt-19-249-2026",
+      "link": "https://doi.org/10.5194/amt-19-249-2026"
     }
   ]
 }

@@ -42,7 +42,7 @@ REMOVAL_LOG = SCRIPT_DIR / "removed_non_peer_reviewed.json"
 
 MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
-    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT",
+    "ISSM", "LES", "MOMO-CHEM", "RAPID", "SWOT", "TROPESS",
 ]
 
 CROSSREF_URL = "https://api.crossref.org/works"
@@ -84,7 +84,7 @@ NOT_PEER_REVIEWED_PATTERNS = [
     "technical report",
     "working paper",
     "conference abstract",
-    "(discussions)",
+    "discussions",
     "discussion papers",
     "egusphere",
     "monograph series",
@@ -229,8 +229,8 @@ def tier1_classify(paper, grace_map=None):
         if not is_exception:
             return False, "tier1_conference_proceedings"
 
-    # "in AGU" / "in EGU" patterns (conference abstracts)
-    if venue_lower.startswith("in ") and ("agu" in venue_lower or "egu" in venue_lower):
+    # "in ..." patterns (conference abstracts / meeting presentations)
+    if venue_lower.startswith("in ") and ("meeting" in venue_lower or "agu" in venue_lower or "egu" in venue_lower):
         return False, "tier1_conference_abstract"
 
     # AGU meeting patterns
