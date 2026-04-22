@@ -1767,7 +1767,7 @@
     "citing_team_paper": "RAPID applied to the SIM-France model",
     "team_paper_id": "be11acecf0aa7fc7d04edabff270ad783fd1969b",
     "research_domain": "Groundwater & Aquifer",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "SAFRAN",
@@ -1807,6 +1807,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:28Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The AquiFR platform uses \"the river routing scheme based on the Routing Application for Parallel computatIon of Discharge (RAPID) model\" and also mentions \"the RAPID river routing model using a fine-scale river network covering all of France.\"",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:54Z"
         }
       },
       "error_estimates": {
@@ -4465,7 +4474,7 @@
     "citing_team_paper": "RAPID applied to the SIM-France model",
     "team_paper_id": "be11acecf0aa7fc7d04edabff270ad783fd1969b",
     "research_domain": "Groundwater & Aquifer",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -4496,6 +4505,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:31Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -4550,7 +4566,7 @@
     "citing_team_paper": "RAPID applied to the SIM-France model",
     "team_paper_id": "be11acecf0aa7fc7d04edabff270ad783fd1969b",
     "research_domain": "Watershed & Catchment Hydrology",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GRACE-FO",
@@ -4614,6 +4630,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:31Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -4746,7 +4769,7 @@
     "citing_team_paper": "RAPID applied to the SIM-France model",
     "team_paper_id": "be11acecf0aa7fc7d04edabff270ad783fd1969b",
     "research_domain": "River Routing & Discharge",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -4777,6 +4800,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:31Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -15235,7 +15265,7 @@
     "citing_team_paper": "A Cloud-Based High-Resolution National Hydrologic Forecast System Downscaled from a Global Ensemble Land Surface Model",
     "team_paper_id": "69a95d7d7f277b0bd187cbf37e724f5baece890f",
     "research_domain": "Flood Modeling & Prediction",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "ECMWF Ensemble Forecast",
@@ -15283,6 +15313,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:49Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "HIWAT-SPT modeled predictions are estimated by routing HIWAT precipitation forecasts through the same RAPID model but using a higher density stream network. The GLoFAS-RAPID probabilistic forecasts are derived through transforming the ensemble set into a binary probability of flood dichotomy weather",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:54Z"
         }
       },
       "error_estimates": {
@@ -15889,7 +15928,7 @@
     "citing_team_paper": "A Cloud-Based High-Resolution National Hydrologic Forecast System Downscaled from a Global Ensemble Land Surface Model",
     "team_paper_id": "69a95d7d7f277b0bd187cbf37e724f5baece890f",
     "research_domain": "Water Resource Management",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -15920,6 +15959,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:49Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The incorporation of D03 and H06 can be considered as modules in large-scale river routing models such as Routing Application for Parallel computatIon of Discharge (RAPID, David et al., 2011).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:54Z"
         }
       },
       "error_estimates": {
@@ -16048,7 +16096,7 @@
     "citing_team_paper": "A Cloud-Based High-Resolution National Hydrologic Forecast System Downscaled from a Global Ensemble Land Surface Model",
     "team_paper_id": "69a95d7d7f277b0bd187cbf37e724f5baece890f",
     "research_domain": "Flood Modeling & Prediction",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -16079,6 +16127,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:50Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "Recently, AutoRoute has been applied with large-scale river routing models – such as the RAPID model (David et al., 2011; Tavakoly et al., 2017) within SPT – to simulate high-resolution flood inundation maps over large extents",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:54Z"
         }
       },
       "error_estimates": {
@@ -16678,7 +16735,7 @@
     "citing_team_paper": "A Cloud-Based High-Resolution National Hydrologic Forecast System Downscaled from a Global Ensemble Land Surface Model",
     "team_paper_id": "69a95d7d7f277b0bd187cbf37e724f5baece890f",
     "research_domain": "Groundwater & Aquifer",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -16709,6 +16766,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:50Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {

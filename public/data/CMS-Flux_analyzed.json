@@ -3613,7 +3613,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "5ea42c076256ce5a3b293febdc4a1c5df9f5a971",
     "research_domain": "CO2 Flux & Carbon Budget",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -3644,6 +3644,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:16Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Six inversion systems (CAMS-FT24r1, CMS-Flux, GONGGA, COLA, GCASv2, NTFVAR) used satellite XCO2 retrievals from GOSAT and/or OCO-2... three of these inversion systems (CMS-Flux, COLA, NTFVAR) used these XCO2 datasets in addition to the in situ observational CO2 mole fraction records.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -15392,7 +15401,7 @@
     "citing_team_paper": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
     "team_paper_id": "4a7a09d3dcd3ab30270cc49cf223e0b084695b17",
     "research_domain": "CO2 Flux & Carbon Budget",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GRACE",
@@ -15432,6 +15441,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:35Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -16325,7 +16341,7 @@
     "citing_team_paper": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
     "team_paper_id": "4a7a09d3dcd3ab30270cc49cf223e0b084695b17",
     "research_domain": "Ocean Carbon Uptake",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Estimating the Circulation and Climate of the Ocean‐Darwin",
@@ -16365,6 +16381,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:36Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -37235,7 +37258,7 @@
     "citing_team_paper": "Contrasting carbon cycle responses of the tropical continents to the 2015-2016 El Nino",
     "team_paper_id": "fe5a00037f2a5653b94f9df1c8f182c1950457a4",
     "research_domain": "CO2 Flux & Carbon Budget",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "OCO-2 (Orbiting Carbon Observatory-2)",
@@ -37299,6 +37322,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:12Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We employ a large ensemble of atmospheric inversions utilizing different transport models, data assimilation techniques, and prior flux distributions in order to quantify the satellite-informed fluxes from OCO-2 Version 7r land observations and their uncertainties at continental scales. ... A3 ‚CMS-",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -45160,7 +45192,7 @@
     "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
     "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "TROPOspheric Monitoring Instrument (TROPOMI)",
@@ -45208,6 +45240,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:24Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "This work was supported by the Environmental Defense Fund and by NASA's Carbon Monitoring System. ... Financial support This research has been supported by the National Aeronautics and Space Administration (Carbon Monitoring System – NASA – grant no. 80NSSC21K1057)",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -46932,7 +46973,7 @@
     "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
     "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
     "research_domain": "Carbon Cycle Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GOSAT",
@@ -46972,6 +47013,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:26Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "WetCHARTs v1.0 is available from https://doi.org/10.3334/ORNLDAAC/1502 (Bloom et al., 2017b). This study uses v1.2.1, which is available on request from A. Bloom.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -47782,7 +47832,7 @@
     "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
     "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
     "research_domain": "Atmospheric CO2 Inversions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "TROPOspheric Monitoring Instrument (TROPOMI)",
@@ -47846,6 +47896,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:27Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The facility is built on an Integrated Methane Inversion optimal estimation workflow (IMI 1.0) and supported for use on the Amazon Web Services (AWS) cloud. It exploits the GEOS-Chem chemical transport model and TROPOMI data already resident on AWS",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -51264,7 +51323,7 @@
     "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
     "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
     "research_domain": "Atmospheric CO2 Inversions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "Greenhouse Gases Observing Satellite (GOSAT)",
@@ -51320,6 +51379,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:31Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "This research was funded by the NASA Carbon Monitoring System (CMS) program. The paper performs a high-resolution inversion of methane emissions using GOSAT observations, which is a core activity of CMS-Flux.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -54614,7 +54682,7 @@
     "citing_team_paper": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
     "team_paper_id": "43f2ef4a8d41ec2915cd6935800d5bdc102f6083",
     "research_domain": "Atmospheric CO2 Inversions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "GOSAT",
@@ -54678,6 +54746,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:37Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "This research was funded by the Carbon Monitoring System program of the NASA Earth Science Division. Kevin W. Bowman acknowledges support from the NASA Carbon Monitoring System (NNH16ZDA001N-CMS).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:03:43Z"
         }
       },
       "error_estimates": {
@@ -57479,7 +57556,7 @@
     "citing_team_paper": "Carbon monitoring system flux estimation and attribution: impact of ACOS-GOSAT XCO2 sampling on the inference of terrestrial biospheric sources and sinks",
     "team_paper_id": "0bccc7c088bc7c2e22d1579c931c2441af128ea9",
     "research_domain": "Ocean Carbon Uptake",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -57510,6 +57587,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:40Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -58925,7 +59009,7 @@
     "citing_team_paper": "Carbon monitoring system flux estimation and attribution: impact of ACOS-GOSAT XCO2 sampling on the inference of terrestrial biospheric sources and sinks",
     "team_paper_id": "0bccc7c088bc7c2e22d1579c931c2441af128ea9",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Satellite-derived surface water extent",
@@ -58973,6 +59057,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:43Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {

@@ -846,7 +846,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Altimetry Methods & Calibration",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -886,6 +886,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:11Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -927,7 +934,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -967,6 +974,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:11Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1427,7 +1441,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "River & Lake Monitoring",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -1467,6 +1481,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:11Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1511,7 +1532,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -1551,6 +1572,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:11Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1586,7 +1614,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "River & Lake Monitoring",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -1626,6 +1654,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:11Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -2128,7 +2163,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "River & Lake Monitoring",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -2168,6 +2203,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:13Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -2284,7 +2326,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Altimetry Methods & Calibration",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -2324,6 +2366,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:13Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "This paper outlines some analytical multipath models that were used for instrument design, performance analysis and mitigation of the multipath signal.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:57:08Z"
         }
       },
       "error_estimates": {
@@ -2362,7 +2413,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -2402,6 +2453,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:13Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -2611,7 +2669,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Altimetry Methods & Calibration",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -2651,6 +2709,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:14Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -2771,7 +2836,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -2811,6 +2876,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:14Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -3275,7 +3347,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -3315,6 +3387,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:14Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -3604,7 +3683,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -3644,6 +3723,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:15Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -3758,7 +3844,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -3798,6 +3884,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:15Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -4321,7 +4414,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -4361,6 +4454,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:16Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -4546,7 +4646,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Altimetry Methods & Calibration",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -4586,6 +4686,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:16Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "we carried out simulations as a contingency strategy (i.e., to be ready if roll is larger than anticipated) that could be used with ground-based data. We revisit the empirical calibration algorithms with additional solving methods (e.g., based on orbit sub-cycle) and more sophisticated performance a",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:57:08Z"
         }
       },
       "error_estimates": {
@@ -7012,7 +7121,7 @@
     "citing_team_paper": "Deep Learning Improves Global Satellite Observations of Ocean Eddy Dynamics",
     "team_paper_id": "aa0d75e29b9405242a5a13b63e688e7e7d1f3acb",
     "research_domain": "Altimetry Methods & Calibration",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -7052,6 +7161,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:20Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The altimetry data used in this study come from two distinct products: ... MIOST SWOT+nadirs : an experimental product distributed by AVISO that integrates nadir altimetry with swath data from the SWOT mission.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:57:08Z"
         }
       },
       "error_estimates": {
@@ -17108,7 +17226,7 @@
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -17148,6 +17266,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:38Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The Surface Water and Ocean Topography (SWOT) satellite is expected to observe sea surface height (SSH) down to scales approaching ~15 km...presenting a serious challenge for estimating surface velocities from SWOT observations.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:57:08Z"
         }
       },
       "error_estimates": {
@@ -17183,7 +17310,7 @@
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -17223,6 +17350,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:38Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "Our goal is to optimize the design of in situ experiments aimed to reconstruct fine-scale ocean currents (similar to 20 km), such as those that will be conducted to validate the first available tranche of SWOT data.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:57:08Z"
         }
       },
       "error_estimates": {
@@ -24887,7 +25023,7 @@
     "citing_team_paper": "In Situ Validation of Small-Scale Spatial Variability in Significant Wave Height Observations From SWOT",
     "team_paper_id": "f1f1c5890d179450027d3ead7378f1a8c81ca990",
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -24927,6 +25063,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:50Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {

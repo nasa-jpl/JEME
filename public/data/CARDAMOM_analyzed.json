@@ -3383,7 +3383,7 @@
     "citing_team_paper": "Forest productivity recovery or collapse? Model‐data integration insights on drought‐induced tipping points",
     "team_paper_id": "65876f7a70d5530da2f8725ba9e47dd368f2ebfb",
     "research_domain": "Climate Projections & Feedbacks",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -3414,6 +3414,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:14Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -7651,7 +7658,7 @@
     "citing_team_paper": "Covariation of Airborne Biogenic Tracers (CO2, COS, and CO) Supports Stronger Than Expected Growing Season Photosynthetic Uptake in the Southeastern US",
     "team_paper_id": "f70ba14f0b15fddd16cc5fbfbaea20fcb2639f34",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GEOS-CHEM",
@@ -7691,6 +7698,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:21Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -26505,7 +26519,7 @@
     "citing_team_paper": "Inverse Determination of the Influence of Fire on Vegetation Carbon Turnover in the Pantropics",
     "team_paper_id": "8d4f06c95580b262633e1fde9edb84a0c45ee996",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -26536,6 +26550,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:48Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "To evaluate the influence of the biosphere prior on flux estimates, we compare our inversions using the CASA model as land–biosphere prior flux with inversions, using the carbon data model framework (CARDAMOM) (Bloom et al., 2016) as land–biosphere prior flux for South America with 1 ◦ × 1 ◦ spatial",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -28370,7 +28393,7 @@
     "citing_team_paper": "Assimilation of repeated woody biomass observations constrains decadal ecosystem carbon cycle uncertainty in aggrading forests",
     "team_paper_id": "c501bf63c5aad01e71d309757731039f540f64dc",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GRACE/GRACE-FO",
@@ -28410,6 +28433,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:50Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -29258,7 +29288,7 @@
     "citing_team_paper": "Assimilation of repeated woody biomass observations constrains decadal ecosystem carbon cycle uncertainty in aggrading forests",
     "team_paper_id": "c501bf63c5aad01e71d309757731039f540f64dc",
     "research_domain": "Carbon Data Assimilation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -29289,6 +29319,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:51Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We perform the REA procedure three times using different observationally constrained estimates of current NPP: retrievals of the terrestrial carbon cycle with the CARbon DAta Model fraMework (CARDAMOM; Bloom et al., 2016) model–data fusion approach",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -29497,7 +29536,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Remote Sensing of Ecosystems",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GOSAT",
@@ -29585,6 +29624,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:51Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "In the current work, we used data corresponding to the scaling factor with global emissions 166 TgCH4 yr-1, CARDAMOM (CARbon DAta MOdel fraMework) terrestrial C cycle analysis for heterotrophic respiration (Bloom et al., 2016)",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -30183,7 +30231,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -30214,6 +30262,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:52Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "DGVMs were compared against an analysis based on model–data fusion of the land carbon cycle (CARDAMOM) (Bloom and Williams, 2015; Bloom et al., 2016). Results suggest good correspondence between approaches at interannual timescales but divergence in the recent trend in S LAND , with CARDAMOM simulat",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -30790,7 +30847,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -30821,6 +30878,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:54Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -31791,7 +31855,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Carbon Data Assimilation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Cyclone Global Navigation Satellite System (CYGNSS)",
@@ -31839,6 +31903,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:55Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -32256,7 +32327,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -32287,6 +32358,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:55Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "S LAND is estimated from the multi-model mean of 20 DGVMs ... with an additional comparison of DGVMs with a data-driven, carbon data model framework (CARDAMOM)",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -32434,7 +32514,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "CMIP6",
@@ -32474,6 +32554,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:56Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The CARDAMOM analyses made use of resources provided by the Edinburgh Compute and Data Facility (EDCF)",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -33718,7 +33807,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Carbon Data Assimilation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Leaf Area Index (LAI)",
@@ -33766,6 +33855,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:57Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "For this process, we incorporated part of the carbon allocation in the data assimilation linked ecosystem carbon (DALEC) model (Chuter et al., 2015) into the original IBIS model, a simple box model evaluating daily six-carbon pools for deciduous forests.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -34564,7 +34662,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Orbiting Carbon Observatory 2 (OCO-2)",
@@ -34628,6 +34726,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:24:58Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "A net biospheric exchange (NBE) prior has been constructed using the CARDAMOM framework (Carbon Data Model Framework; Bloom et al., 2016). The CARDAMOM data assimilation system explicitly represents the time-resolved uncertainties in the NBE.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -36134,7 +36241,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -36165,6 +36272,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:00Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -36404,7 +36518,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Carbon Data Assimilation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GOSAT",
@@ -36444,6 +36558,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:00Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "For the extended WetCHARTs period of 2009–2018, there is only one heterotrophic-respiration model (CARDAMOM) and two wetland extent parametrisations (using ERA-Interim precipitation) available, giving a total of 18 different configurations.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -37067,7 +37190,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Carbon Data Assimilation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -37098,6 +37221,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:01Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "R ( t , d ) is heterotrophic respiration rate (mgC/d/m 2 of wetland area) taken as the median monthly value from the Carbon Data Model Framework (CARDAMOM; Bloom et al., 2016)",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {
@@ -38689,7 +38821,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Terrestrial Carbon Cycle",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -38720,6 +38852,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:04Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:16Z"
         }
       },
       "error_estimates": {
@@ -42207,7 +42346,7 @@
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
     "research_domain": "Carbon Data Assimilation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -42238,6 +42377,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:08Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The heterotrophic respiration rate (R) is the median output from the carbon data model framework (CARDAMOM; Bloom et al., 2016), and is not varied across that ensemble.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:00:25Z"
         }
       },
       "error_estimates": {

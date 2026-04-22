@@ -2363,7 +2363,7 @@
     "citing_team_paper": "Predictability of fossil fuel CO2 from air quality emissions",
     "team_paper_id": "d9dcf925995325a21dfcd288cc108b1432d73d72",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "TROPOspheric Monitoring Instrument (TROPOMI)",
@@ -2411,6 +2411,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:25Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "To evaluate how representative enhancements between 0 and 2 km are compared to the total tropospheric column enhancements (which can include sources from lightning and aviation), we analyzed vertical distributions of NO x mixing ratios from TCR-2 (Miyazaki et al., 2020).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -2831,7 +2840,7 @@
     "citing_team_paper": "Impact of different sources of precursors on an ozone pollution outbreak over Europe analysed with IASI+GOME2 multispectral satellite observations and model simulations",
     "team_paper_id": "91dab395b76cdf62f09e8830e40262ae27f22ca7",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -2862,6 +2871,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:26Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -4968,7 +4984,7 @@
     "citing_team_paper": "Deep learning to evaluate US NOx emissions using surface ozone predictions",
     "team_paper_id": "d317faa56edadc58d92653aeafbcb217d52f32d9",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GEOS-Chem",
@@ -5008,6 +5024,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:28Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -7859,7 +7882,7 @@
     "citing_team_paper": "Decadal variabilities in tropospheric nitrogen oxides over United States, Europe, and China",
     "team_paper_id": "69c5b475883824c59e4ce270bcdc886fd573408f",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Ozone Monitoring Instrument",
@@ -7907,6 +7930,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:31Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -8072,7 +8102,7 @@
     "citing_team_paper": "Cause of a lower-tropospheric high-ozone layer in spring over Hanoi",
     "team_paper_id": "606628385181f2875b79670d3031ba0cb873395e",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -8103,6 +8133,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:31Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The paper explicitly states: \"The JPL TCR-2 chemical reanalysis (1995–2018) (Miyazaki et al., 2020)\" in the context of simulating ozone burden increases, indicating direct use of the reanalysis product.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -9071,7 +9110,7 @@
     "citing_team_paper": "The carbon cycle of southeast Australia during 2019–2020: Drought, fires, and subsequent recovery",
     "team_paper_id": "bd5b5d848d262402e4c853c952a86ca667205405",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -9102,6 +9141,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:34Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "Using the MUlti-SpEctra, MUlti-SpEcies, MUlti-SEnsors (MUSES) algorithm, the sequential combination of TIR and UV measurements, which follows retrievals from each instrument separately, moderately improves the ability of satellites to characterize global ozone profiles over the use of each instrumen",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -9155,7 +9203,7 @@
     "citing_team_paper": "The carbon cycle of southeast Australia during 2019–2020: Drought, fires, and subsequent recovery",
     "team_paper_id": "bd5b5d848d262402e4c853c952a86ca667205405",
     "research_domain": "Wildfire & Biomass Burning",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Satellite Carbon Monoxide Observations",
@@ -9195,6 +9243,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:34Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -11724,7 +11779,7 @@
     "citing_team_paper": "Societal shifts due to COVID-19 reveal large-scale complexities and feedbacks between atmospheric chemistry and climate change",
     "team_paper_id": "de0845ea1c98b7ef64ec0cfc8abdb6de7248310c",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "CrIS",
@@ -11788,6 +11843,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:36Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -13944,7 +14006,7 @@
     "citing_team_paper": "Societal shifts due to COVID-19 reveal large-scale complexities and feedbacks between atmospheric chemistry and climate change",
     "team_paper_id": "de0845ea1c98b7ef64ec0cfc8abdb6de7248310c",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -13975,6 +14037,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:39Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -14562,7 +14631,7 @@
     "citing_team_paper": "Societal shifts due to COVID-19 reveal large-scale complexities and feedbacks between atmospheric chemistry and climate change",
     "team_paper_id": "de0845ea1c98b7ef64ec0cfc8abdb6de7248310c",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.733,
@@ -14593,6 +14662,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:39Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "As a further reference, we compared the observed changes with equivalent CAMS data (Inness et al., 2019), which assimilate satellite observations of tropospheric NO2 (Sect. 2.1.6).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -15854,7 +15932,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
     "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -15885,6 +15963,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:42Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "First, the regions for which trends are estimated are determined with a correlation analysis between the tropospheric ozone column monthly anomalies retrieved from CAMS.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -16239,7 +16326,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
     "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "GOSAT",
@@ -16279,6 +16366,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:42Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "This study uses an inversion system based on a different transport model from those used in the previous studies. Here we use the Nonhydrostatic Icosahedral Atmospheric Model (NICAM; Satoh et al., 2014)-based Inversion Simulation for Monitoring CH4 (NISMON-CH4) (Sect. 2.1). Using NISMON-CH4, we esti",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -16995,7 +17091,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
     "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Suomi-National Polar-orbiting Partnership",
@@ -17051,6 +17147,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:43Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -17554,7 +17657,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
     "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "TROPOspheric Monitoring Instrument (TROPOMI)",
@@ -17602,6 +17705,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:43Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "We present a versatile, powerful, and user-friendly chemical data assimilation toolkit for simultaneously optimizing emissions and concentrations of chemical species based on atmospheric observations from satellites or suborbital platforms. The CHemistry and Emissions REanalysis Interface with Obser",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -19530,7 +19642,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
     "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
     "research_domain": "Climate-Chemistry Interactions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -19561,6 +19673,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:48Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -20281,7 +20400,7 @@
     "citing_team_paper": "Impacts of horizontal resolution on global data assimilation of satellite measurements for tropospheric chemistry analysis",
     "team_paper_id": "bc0398fc12e54681ecf1254091c4dd189e2f02aa",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "Greenhouse Gases Observing Satellite (GOSAT)",
@@ -20321,6 +20440,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:49Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "Here, we develop a data assimilation system for in situ and column-averaged concentrations using a local ensemble transform Kalman filter (LETKF) to estimate surface emissions of CH4.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -20656,7 +20784,7 @@
     "citing_team_paper": "Intercomparison of Magnitudes and Trends in Anthropogenic Surface Emissions From Bottom‐Up Inventories, Top‐Down Estimates, and Emission Scenarios",
     "team_paper_id": "649c2d913f180825cd2bef571e0782e98431b0a6",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "TROPOMI (TROPOspheric Monitoring Instrument)",
@@ -20704,6 +20832,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:49Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "We introduced TROPOMI satellite observations into the TM5-4DVAR inverse modeling suit to optimize global CO emissions from three distinct emission categories",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -20765,7 +20902,7 @@
     "citing_team_paper": "Intercomparison of Magnitudes and Trends in Anthropogenic Surface Emissions From Bottom‐Up Inventories, Top‐Down Estimates, and Emission Scenarios",
     "team_paper_id": "649c2d913f180825cd2bef571e0782e98431b0a6",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Tropospheric Column Ozone",
@@ -20829,6 +20966,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:49Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Miyazaki et al. (2014) assimilated OMI NO2, MLS and TES (Tropospheric Emission Spectrometer on NASA/Aura) O3, and MOPITT CO into a chemical transport model to provide comprehensive constraints on the global LNOx source, resulting in an estimate of mean PE of 310 moles per flash.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -21050,7 +21196,7 @@
     "citing_team_paper": "Intercomparison of Magnitudes and Trends in Anthropogenic Surface Emissions From Bottom‐Up Inventories, Top‐Down Estimates, and Emission Scenarios",
     "team_paper_id": "649c2d913f180825cd2bef571e0782e98431b0a6",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -21081,6 +21227,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:49Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Comparisons of CAQIEI with previous inventories, including MEIC, ABaCAS, HTAPv3, EDGARv6, CEDS, and TCR-2, on the basis of the natural emissions obtained from CAMS and GFAS showed reasonable agreement for the estimation of NOx, SO2, and NMVOC emissions in China.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -23270,7 +23425,7 @@
     "citing_team_paper": "Intercomparison of Magnitudes and Trends in Anthropogenic Surface Emissions From Bottom‐Up Inventories, Top‐Down Estimates, and Emission Scenarios",
     "team_paper_id": "649c2d913f180825cd2bef571e0782e98431b0a6",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "MOPITT",
@@ -23342,6 +23497,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:52Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "This paper describes the Bayesian variational inverse system PYVAR-CHIMERE, which is now adapted to the inversion of reactive species.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -25239,7 +25403,7 @@
     "citing_team_paper": "Air quality response in China linked to the 2019 novel coronavirus (COVID‐19) lockdown",
     "team_paper_id": "adced0cdd6c7e6e85caff7c6e16e50b56c2215c3",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -25270,6 +25434,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:54Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "We also show that replacing the global 1∘ × 1∘ a priori information in the retrieval by the regional 0.1∘ × 0.1∘ resolution profiles of CAMS leads to significant changes in the TROPOMI-retrieved tropospheric column",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -26332,7 +26505,7 @@
     "citing_team_paper": "Air quality response in China linked to the 2019 novel coronavirus (COVID‐19) lockdown",
     "team_paper_id": "adced0cdd6c7e6e85caff7c6e16e50b56c2215c3",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "OMI",
@@ -26404,6 +26577,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:55Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The Jet Propulsion Laboratory (JPL) chemical reanalysis provides monthly top-down emission estimates at 1.1 ∘ × 1.1 ∘ spatial resolution for 2005–2019 (Miyazaki et al., 2019, 2020a). The NOx emissions from the JPL chemical reanalysis (Fig. 1a) are constrained by assimilating O3, NO2, CO, HNO3, and S",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -28175,7 +28357,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
     "team_paper_id": "e40a04aa82dc527ef57187fd18faee3251a34ba6",
     "research_domain": "Wildfire & Biomass Burning",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Tropospheric Monitoring Instrument (TROPOMI)",
@@ -28263,6 +28445,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:58Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We perform a global inverse modelling analysis to quantify biomass burning emissions of carbon monoxide (CO) from the extreme wildfires in Canada between May and September 2023. Using the GEOS-Chem model, we assimilated observations at 3 d temporal and 2° × 2.5° horizontal resolution from the Tropos",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -28434,7 +28625,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
     "team_paper_id": "e40a04aa82dc527ef57187fd18faee3251a34ba6",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "Tropospheric Ozone Monitoring Instrument (TROPOMI)",
@@ -28514,6 +28705,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:58Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "The present study shows monthly top-down emissions of NOx and VOC at 0.5° resolution over Africa for the year 2019, derived from spaceborne HCHO and NO2 tropospheric column retrievals and an adjoint-based inverse modelling framework built on the chemistry-transport model MAGRITTEv1.1. The main disti",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -29805,7 +30005,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
     "team_paper_id": "e40a04aa82dc527ef57187fd18faee3251a34ba6",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -29836,6 +30036,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:00Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The paper uses \"the monthly 3D distributions of CH4 mass (m(CH4)) during 2000–2009 are from data assimilation of surface CH4 observations from NOAA/ESRL (Dlugokencky et al., 1994) and the Ta distributions are from MERRA-2 reanalysis data (see Sect. 2.2)\" and also mentions \"Updated tropospheric chemi",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -29967,7 +30176,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
     "team_paper_id": "e40a04aa82dc527ef57187fd18faee3251a34ba6",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Ozone Monitoring Instrument",
@@ -30007,6 +30216,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:00Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Miyazaki et al. (2020): Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018. They found a continuous 30% increase in NOx emissions in India since 2005.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -31103,7 +31321,7 @@
     "citing_team_paper": "Evaluation of tropospheric ozone reanalyses with independent ozonesonde observations in East Asia",
     "team_paper_id": "bae9a6bad720e3933a40b7d40b2dbed1afee4a69",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "CAMS reanalysis",
@@ -31151,6 +31369,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:01Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "This study uses two global datasets, namely the reanalysis and the daily forecast of the Copernicus Atmosphere Monitoring Service (CAMS), to assess the capability of these products in presenting ozone's features on regional scales. We obtained 16 relevant meteorological and several pollutant species",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -32126,7 +32353,7 @@
     "citing_team_paper": "Long-term evaluation of atmospheric composition reanalyses from CAMS, TCR-2, and MERRA-2 over South Korea: Insights into applications, implications, and limitations",
     "team_paper_id": "07d93332eb1ce7d913ff2915d2ac729d28029761",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Copernicus Atmosphere Monitoring Service (CAMSRA)",
@@ -32174,6 +32401,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:02Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "In this study, we thoroughly evaluate two global atmospheric composition reanalyses, the Copernicus Atmosphere Monitoring Service (CAMSRA) and the Modern-Era Retrospective Analysis for Research and Applications v2 (MERRA-2), between 2003 and 2020, against independent surface measurements of O3, NO2,",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -33938,7 +34174,7 @@
     "citing_team_paper": "Balance of emission and dynamical controls on ozone during the Korea‐United States Air Quality campaign from multiconstituent satellite data assimilation",
     "team_paper_id": "bb646e539335d6f3dc42820d294256d57b240c48",
     "research_domain": "Aerosol Processes & Effects",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -33969,6 +34205,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:05Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The Weather Research and Forecasting model data assimilation (WRFDA) system, initially designed for meteorological data assimilation, is extended for aerosol data assimilation for the WRF model coupled with chemistry (WRF-Chem). An interface between WRF-Chem and WRFDA is built for the Regional Atmos",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -34122,7 +34367,7 @@
     "citing_team_paper": "Balance of emission and dynamical controls on ozone during the Korea‐United States Air Quality campaign from multiconstituent satellite data assimilation",
     "team_paper_id": "bb646e539335d6f3dc42820d294256d57b240c48",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -34153,6 +34398,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -35278,7 +35530,7 @@
     "citing_team_paper": "Balance of emission and dynamical controls on ozone during the Korea‐United States Air Quality campaign from multiconstituent satellite data assimilation",
     "team_paper_id": "bb646e539335d6f3dc42820d294256d57b240c48",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Aura",
@@ -35326,6 +35578,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:06Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -35613,7 +35872,7 @@
     "citing_team_paper": "Balance of emission and dynamical controls on ozone during the Korea‐United States Air Quality campaign from multiconstituent satellite data assimilation",
     "team_paper_id": "bb646e539335d6f3dc42820d294256d57b240c48",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.733,
@@ -35644,6 +35903,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:07Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -36075,7 +36341,7 @@
     "citing_team_paper": "Satellite data reveal a common combustion emission pathway for major cities in China",
     "team_paper_id": "d0a8e35fa0bdf33e7e8f5f33660f54d276df9f17",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Tropospheric Monitoring Instrument (TROPOMI)",
@@ -36163,6 +36429,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:07Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "This study investigates the use of co-located nitrogen dioxide (NO2) and carbon monoxide (CO) retrievals from the TROPOMI satellite to improve the quantification of burning efficiency and emission factors (EFs) over the megacities of Tehran, Mexico City, Cairo, Riyadh, Lahore, and Los Angeles.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -38482,7 +38757,7 @@
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "df8d7f00435506b3fa672660e6338fcc75173c17",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Satellite data",
@@ -38530,6 +38805,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:11Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "This is further confirmed by the vertical evolutions of humidity and ozone profiles based on radiosonde and satellite data respectively.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -39962,7 +40246,7 @@
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "df8d7f00435506b3fa672660e6338fcc75173c17",
     "research_domain": "Climate-Chemistry Interactions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Aura",
@@ -40026,6 +40310,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:12Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "To benchmark the model-simulated geophysical quantities, a recently developed multi-species multi-satellite Tropospheric Chemistry Reanalysis (TCR) product (Miyazaki et al., 2015) is used in this study to compare to the model results.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -43374,7 +43667,7 @@
     "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
     "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Total Column NO2",
@@ -43430,6 +43723,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:17Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -46757,7 +47057,7 @@
     "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
     "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -46788,6 +47088,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:21Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -47733,7 +48040,7 @@
     "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
     "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "MOPITT",
@@ -47789,6 +48096,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:23Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "In this study, we use a multi-species atmospheric Bayesian inversion approach to attribute satellite-observed atmospheric CO variations to its sources and sinks in order to achieve full closure of the global CO budget during 2000–2017.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -48093,7 +48409,7 @@
     "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
     "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -48124,6 +48440,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:24Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We also use model data for CO and NO2 from the Community Atmosphere Model with Chemistry (CAM-chem; Gaubert et al., 2016) and TCR to derive CO and NO2 abundance ratios associated with the bottom-up emissions used in these models (i.e., RCP in CAM-Chem and EDGAR in CHASER).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -51044,7 +51369,7 @@
     "citing_team_paper": "Intercomparison of NOx emission inventories over East Asia",
     "team_paper_id": "55225c4d40048ab9f81bf71ccba71f1f9fb3535d",
     "research_domain": "Aerosol Processes & Effects",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Global Ozone Monitoring Experiment-2 (GOME-2)",
@@ -51116,6 +51441,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:29Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "An improved AMF calculation with a more accurate knowledge of surface albedo, the a priori NO2 profile, as well as cloud and aerosol correction is described in this paper and is expected to be implemented in an upcoming version of GDP in combination with Liu et al. (2019b).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -51974,7 +52308,7 @@
     "citing_team_paper": "Intercomparison of NOx emission inventories over East Asia",
     "team_paper_id": "55225c4d40048ab9f81bf71ccba71f1f9fb3535d",
     "research_domain": "Climate-Chemistry Interactions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "CAMS reanalysis",
@@ -52078,6 +52412,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:30Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "The Copernicus Atmosphere Monitoring Service (CAMS) reanalysis is the latest global reanalysis dataset of atmospheric composition produced by the European Centre for Medium-Range Weather Forecasts (ECMWF), consisting of three-dimensional time-consistent atmospheric composition fields, including aero",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -52129,7 +52472,7 @@
     "citing_team_paper": "Intercomparison of NOx emission inventories over East Asia",
     "team_paper_id": "55225c4d40048ab9f81bf71ccba71f1f9fb3535d",
     "research_domain": "Climate-Chemistry Interactions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Infrared Atmospheric Sounding Interferometer (IASI)",
@@ -52169,6 +52512,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:30Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Reductions in SO2 and NOx emissions from 2011 to 2015 of 37.5 % and 21 % respectively, as constrained from satellite data, lead to decreased inorganic matter",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -52863,7 +53215,7 @@
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [
       {
         "name": "TROPOMI",
@@ -52927,6 +53279,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:31Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "Here, we developed the Regional Methane Assimilation System (RegGCAS-CH4) based on the WRF-CMAQ model and the EnKF algorithm. By assimilating extensive TROPOMI column-averaged dry CH4 mixing ratio (XCH4) retrievals, we conducted high-resolution nested inversions to quantify daily CH4 emissions acros",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -59942,7 +60303,7 @@
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Ozone Monitoring Instrument",
@@ -60014,6 +60375,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:41Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "We subsequently derive satellite-constrained surface NOx emissions using a mass balance approach based on the relative difference between OMI and WRF-Chem NO2 columns. The method accounts for feedbacks through OH, NO2's dominant daytime oxidant.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -60279,7 +60649,7 @@
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "OMI",
@@ -60367,6 +60737,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:41Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Using the regional OMI NO2 product with only the air mass factor correction applied, we derive the NOx emissions rate from the Seoul metropolitan area to be 484 +/- 201 kt/yr.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -63068,7 +63447,7 @@
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Aura",
@@ -63164,6 +63543,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:44Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -64654,7 +65040,7 @@
     "citing_team_paper": "Impacts of anthropogenic and natural sources on free tropospheric ozone over the Middle East",
     "team_paper_id": "b06cdf4f8a7210e81bdd9e6fc13bb3a531812799",
     "research_domain": "Ozone & Stratospheric Chemistry",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -64685,6 +65071,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:45Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "In this study, we characterize the transport of ozone from Africa to Asia through the analysis of the simulations of a global chemical transport model, GEOS-Chem, from 1987 to 2006.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -67365,7 +67760,7 @@
     "citing_team_paper": "A tropospheric chemistry reanalysis for the years 2005–2012 based on an assimilation of OMI, MLS, TES, and MOPITT satellite data",
     "team_paper_id": "97f93bffed12d5391b4efbeb3453c667b7633130",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -67396,6 +67791,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:48Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -68082,7 +68484,7 @@
     "citing_team_paper": "Quantifying uncertainties in satellite NO2 superobservations for data assimilation and model evaluation",
     "team_paper_id": "f3b538836247124cc4b08d7a4387ad3fc0314dcf",
     "research_domain": "Satellite Atmospheric Observations",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "TROPOMI (TROPOspheric Monitoring Instrument)",
@@ -68146,6 +68548,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:50Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "This dataset can be used for, for example, temporal analysis, emission monitoring, data assimilation and model validation, and atmospheric chemistry studies.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -74504,7 +74915,7 @@
     "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
     "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "GEOS global model",
@@ -74576,6 +74987,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:25:58Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "Here, we aim to deepen our understanding of global TOH trends for more recent years (2005–2019) at 1×1°. To achieve this, we use satellite observations of HCHO and NO2 to constrain simulated TOH using a technique based on a Bayesian data fusion method, alongside a machine learning module named the E",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -81307,7 +81727,7 @@
     "citing_team_paper": "Constraints on surface NOx emissions by assimilating satellite observations of multiple species",
     "team_paper_id": "7312954c9a0ae297ee2bce45c62e29855535a0d6",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -81338,6 +81758,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:06Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "In this study, we updated the WRF-Chem/EnKF (Weather Research and Forecasting – WRF, model coupled with the chemistry/ensemble Kalman filter – Chem/EnKF) system to directly analyze SO2 emissions instead of using emission scaling factors, as in our previous study.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -81756,7 +82185,7 @@
     "citing_team_paper": "Simultaneous assimilation of satellite NO2, O3, CO, HNO3 data for the analysis of tropospheric chemical composition and emissions",
     "team_paper_id": "6f95d80b38acaf1f45faaa22765705705e98c4eb",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -81787,6 +82216,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:09Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "This paper introduces a novel hybrid nonlinear chemical DA system (NAQPMS-PDAF v2.0) to accurately interpret key chemical components (SO42-, NO3-, NH4+, OC, and EC). NAQPMS-PDAF v2.0 improves upon v1.0 by effectively handling and balancing stability and nonlinearity in chemical DA, which is achieved",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:06:32Z"
         }
       },
       "error_estimates": {
@@ -90021,7 +90459,7 @@
     "citing_team_paper": "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns",
     "team_paper_id": "913177eecab25f503ec4365e3d2eff3c96c42557",
     "research_domain": "Chemical Transport Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -90052,6 +90490,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:26:21Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {

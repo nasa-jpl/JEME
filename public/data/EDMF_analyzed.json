@@ -7634,7 +7634,7 @@
     "citing_team_paper": "Performance of an eddy diffusivity-mass flux scheme for shallow cumulus boundary layers",
     "team_paper_id": "e5b354bf0a014d6052e2abd3da874e98e1acee45",
     "research_domain": "Convection & Cloud Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -7665,6 +7665,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:07:01Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The paper investigates 'Causes of WRF surface energy fluxes biases in a stratocumulus region'. Given the cited paper context 'Performance of an eddy diffusivity-mass flux scheme for shallow cumulus boundary layers' and the numerous EDMF-related citations, it's highly probable the WRF model used inco",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:02:13Z"
         }
       },
       "error_estimates": {
@@ -8292,7 +8301,7 @@
     "citing_team_paper": "Shallow Cumulus in WRF Parameterizations Evaluated against LASSO Large-Eddy Simulations",
     "team_paper_id": "c231276fdfaefc069f8d4211e540e168d74b67b0",
     "research_domain": "Weather Prediction & NWP",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -8323,6 +8332,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:07:02Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "An intercomparison between 10 single-column (SCM) and 5 large-eddy simulation (LES) models is presented for a radiation fog case study... Seven of the SCMs represent single-column equivalents of operational numerical weather prediction (NWP) models...",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:02:13Z"
         }
       },
       "error_estimates": {
@@ -14932,7 +14950,7 @@
     "citing_team_paper": "Implementation in the NCEP GFS of a Hybrid Eddy-Diffusivity Mass-Flux (EDMF) Boundary Layer Parameterization with Dissipative Heating and Modified Stable Boundary Layer Mixing",
     "team_paper_id": "8393c73cc59280163b3bac8b2af675dc79ef01c8",
     "research_domain": "Air Quality & Pollution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "GBBEPx",
@@ -15012,6 +15030,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:07:16Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The planetary boundary layer (PBL) scheme is updated to the hybrid eddy-diffusivity mass-flux (EDMF) scheme (Han et al., 2016).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:02:13Z"
         }
       },
       "error_estimates": {
@@ -15467,7 +15494,7 @@
     "citing_team_paper": "TKE-Based Moist Eddy-Diffusivity Mass-Flux (EDMF) Parameterization for Vertical Turbulent Mixing",
     "team_paper_id": "4ab748a32e088082e9317a81e4a4538169e388fb",
     "research_domain": "Air Quality & Pollution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -15498,6 +15525,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:07:16Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The UFS air quality model incorporates the US Environmental Protection Agency (EPA) Community Multiscale Air Quality (CMAQ) model as its main chemistry component. ... The current AQM version 7 (AQMv7) is coupled with an earlier version of CMAQ (version 5.2.1). Here we describe the development of the",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:02:13Z"
         }
       },
       "error_estimates": {
@@ -22156,7 +22192,7 @@
     "citing_team_paper": "A dual mass flux framework for boundary layer convection. Part I: Transport",
     "team_paper_id": "3015bd0f1fb8187de7510dd4473985dc26494842",
     "research_domain": "Convection & Cloud Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -22187,6 +22223,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:07:26Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:45Z"
         }
       },
       "error_estimates": {
@@ -46259,7 +46302,7 @@
     "citing_team_paper": "A combined eddy diffusivity mass flux approach for the convective boundary layer",
     "team_paper_id": "179c16f43db2e9e2f1b9f22ab3862546ff77afb4",
     "research_domain": "Weather Prediction & NWP",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -46290,6 +46333,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:08:13Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The paper evaluates forecast performance of multiple models, including those that likely use EDMF (e.g., ECMWF-IFS), by using merged model data files (MMDFs).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:02:13Z"
         }
       },
       "error_estimates": {
@@ -51168,7 +51220,7 @@
     "citing_team_paper": "A combined eddy diffusivity mass flux approach for the convective boundary layer",
     "team_paper_id": "179c16f43db2e9e2f1b9f22ab3862546ff77afb4",
     "research_domain": "General Atmospheric Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Cloud_cci climate data record",
@@ -51208,6 +51260,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:08:22Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The paper applies the Cloud_cci simulator to the EC-Earth global climate model and the Regional Atmospheric Climate Model (RACMO), which use an EDMF scheme for mixing and cloud processes.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:02:13Z"
         }
       },
       "error_estimates": {
@@ -63689,7 +63750,7 @@
     "citing_team_paper": "Implementation of a Stochastic Eddy-Diffusivity/Mass-Flux Parameterization into the Navy Global Environmental Model",
     "team_paper_id": "84762b4f64ae3c14552679545ad4f997c3280b3e",
     "research_domain": "Convection & Cloud Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -63720,6 +63781,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:08:48Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:45Z"
         }
       },
       "error_estimates": {

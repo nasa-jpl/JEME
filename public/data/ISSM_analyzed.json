@@ -9789,7 +9789,7 @@
     "citing_team_paper": "Seasonal Acceleration of Petermann Glacier",
     "team_paper_id": "422a1d88924d9b21ced52c977a0348be9239fdf9",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1,
@@ -9820,6 +9820,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:16:18Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The paper discusses \"future coupling possibilities of CUAS-MPI with other simulations\" and explicitly states, \"The next step will be the coupling of CUAS-MPI to an ice sheet model, in our case the finite-element-based Ice-sheet and Sea-level System Model (ISSM)\".",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -11386,7 +11395,7 @@
     "citing_team_paper": "Helheim Glacier's Terminus Position Controls Its Seasonal and Inter‐Annual Ice Flow Variability",
     "team_paper_id": "575dbdb9aadd4d119323ea48b64db4c2d2594dbf",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -11417,6 +11426,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:16:21Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "PINNICLE supports a variety of data formats, including CSV, NetCDF, and MATLAB data files. These files can contain scattered data or structured data, such as the model struct from the Ice-sheet and Sea-level System Model (ISSM).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -11779,7 +11797,7 @@
     "citing_team_paper": "Simulating the Holocene deglaciation across a marine-terminating portion of southwestern Greenland in response to marine and atmospheric forcings. The Cryosphere",
     "team_paper_id": "67e72e52155b1e034d81d9c4fdd83076b7f6f147",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.733,
@@ -11810,6 +11828,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:16:21Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -11854,7 +11879,7 @@
     "citing_team_paper": "Inferring time-dependent calving dynamics at Helheim Glacier. Journal of Glaciology",
     "team_paper_id": "e5f65ec611b429370abdf5e7ba39eab10f0922b0",
     "research_domain": "Subglacial & Basal Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -11885,6 +11910,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:16:21Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "We use the implementation of GlaDS within the Ice-sheet and Sea-level System Model (ISSM; Larour et al., 2012; Ehrenfeucht et al., 2023), v4.24...",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -17820,7 +17854,7 @@
     "citing_team_paper": "Antarctic calving loss rivals ice-shelf thinning. Nature",
     "team_paper_id": "d678e2b1106c518bd607c652a4c4f1d424f88559",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Satellite-derived velocities",
@@ -17868,6 +17902,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:16:31Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "GEMB is run as a module of NASA's open-source Ice-sheet and Sea-level System Model (ISSM). It is a column model (no horizontal communication) of intermediate complexity, simulating thermal diffusion, shortwave subsurface penetration, meltwater retention, percolation and refreeze, effective snow grai",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -42477,7 +42520,7 @@
     "citing_team_paper": "Projected land ice contributions to twenty-first-century sea level rise. Nature",
     "team_paper_id": "9c600c3c0893353dbc6512a6125c94475ca3af14",
     "research_domain": "Ice Shelf & Calving",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -42508,6 +42551,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:17:08Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "The ISSM and GEMB models used in this work are open-source and publicly available at https://issm.jpl.nasa.gov.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -48035,7 +48087,7 @@
     "citing_team_paper": "Rate of mass loss from the Greenland Ice Sheet will exceed Holocene values this century. Nature",
     "team_paper_id": "dddb2017669e75420511e28bfb125ef2ca746e14",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -48066,6 +48118,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:17:17Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -48444,7 +48503,7 @@
     "citing_team_paper": "Rate of mass loss from the Greenland Ice Sheet will exceed Holocene values this century. Nature",
     "team_paper_id": "dddb2017669e75420511e28bfb125ef2ca746e14",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -48475,6 +48534,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:17:17Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We utilize recent paleo-simulations of southwestern GrIS change using the high-resolution Ice Sheet and Sea-level System Model (ISSM; Larour et al., 2012; Cuzzone et al., 2018, 2019; Briner et al., 2020).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -67210,7 +67278,7 @@
     "citing_team_paper": "The causes of sea-level rise since 1900. Nature",
     "team_paper_id": "42b8107a24a7f8bb3fe89dea5baa5284bb23515d",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -67241,6 +67309,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:17:48Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -69332,7 +69407,7 @@
     "citing_team_paper": "The causes of sea-level rise since 1900. Nature",
     "team_paper_id": "42b8107a24a7f8bb3fe89dea5baa5284bb23515d",
     "research_domain": "Sea Level Contribution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -69363,6 +69438,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:17:52Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -84236,7 +84318,7 @@
     "citing_team_paper": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. Nature Geoscience",
     "team_paper_id": "5107a38b7b5e1451967ebbc8751bd49234915a50",
     "research_domain": "Subglacial & Basal Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -84267,6 +84349,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:18:15Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "We use a basal energy and water flow model coupled with a 3D full-Stokes ice dynamics model to estimate the basal temperature, basal friction heat and basal melting rate.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -93553,7 +93644,7 @@
     "citing_team_paper": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. Nature Geoscience",
     "team_paper_id": "5107a38b7b5e1451967ebbc8751bd49234915a50",
     "research_domain": "Ice Shelf & Calving",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -93584,6 +93675,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:18:28Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -93780,7 +93878,7 @@
     "citing_team_paper": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. Nature Geoscience",
     "team_paper_id": "5107a38b7b5e1451967ebbc8751bd49234915a50",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -93811,6 +93909,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:18:28Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -104372,7 +104477,7 @@
     "citing_team_paper": "Marine ice sheet instability amplifies and skews uncertainty in projections of future sea-level rise. Proceedings of the National Academy of Sciences",
     "team_paper_id": "124d126fbe394e9d7e14166790f93bbbddb806b0",
     "research_domain": "Sea Level Contribution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -104403,6 +104508,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:18:45Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -109287,7 +109399,7 @@
     "citing_team_paper": "Sea-level fingerprints emergent from GRACE mission data. Earth System Science Data",
     "team_paper_id": "f7a70ab1b05a540d6c50e9d5d402a6bc4f6468a0",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -109318,6 +109430,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:18:52Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -109533,7 +109652,7 @@
     "citing_team_paper": "Sea-level fingerprints emergent from GRACE mission data. Earth System Science Data",
     "team_paper_id": "f7a70ab1b05a540d6c50e9d5d402a6bc4f6468a0",
     "research_domain": "Sea Level Contribution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "TOPEX/Poseidon",
@@ -109653,6 +109772,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:18:52Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -115646,7 +115772,7 @@
     "citing_team_paper": "Quantification of Surface Forcing Requirements for a Greenland Ice Sheet Model Using Uncertainty Analyses. Geophysical Research Letters",
     "team_paper_id": "39100315a7b435ab38b24e48b38670c728420a67",
     "research_domain": "Ice Sheet Modeling & Methods",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -115677,6 +115803,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:02Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 3: Foundational Method",
+          "justification": "Here we present a new coupled surface energy balance and firn model, the Glacier Energy and Mass Balance model (GEMB, the “B” is silent), which has been integrated as a module into the Ice-sheet and Sea-level System Model (ISSM).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -117597,7 +117732,7 @@
     "citing_team_paper": "A confined–unconfined aquifer model for subglacial hydrology and its application to the Northeast Greenland Ice Stream. The Cryosphere",
     "team_paper_id": "4efc156c4eb8115d8a627af7832e0390d65e7f0b",
     "research_domain": "Subglacial & Basal Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1,
@@ -117628,6 +117763,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -120431,7 +120573,7 @@
     "citing_team_paper": "Retreat of Thwaites Glacier",
     "team_paper_id": "76918370cc89726c9129fc6088630142196c32fb",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -120462,6 +120604,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:09Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -123637,7 +123786,7 @@
     "citing_team_paper": "SHMIP The subglacial hydrology model intercomparison Project. Journal of Glaciology",
     "team_paper_id": "bea26fc2daaabbcae2758917d53215776351bbea",
     "research_domain": "Subglacial & Basal Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -123668,6 +123817,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:15Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -136451,7 +136607,7 @@
     "citing_team_paper": "GIA Model Statistics for GRACE Hydrology",
     "team_paper_id": "2c3ee237b75128110c1b63d9d7d73d8a6739a7ff",
     "research_domain": "Remote Sensing of Ice",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GRACE",
@@ -136499,6 +136655,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:33Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Panel (f) is meant to show that our solutions are comparable to those obtained from a well-validated and higher-resolution ISSM sea-level solver (Adhikari et al., 2016); note that the solution discrepancy is within the 1 σ uncertainties (compare with panel d).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -136656,7 +136821,7 @@
     "citing_team_paper": "GIA Model Statistics for GRACE Hydrology",
     "team_paper_id": "2c3ee237b75128110c1b63d9d7d73d8a6739a7ff",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -136687,6 +136852,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:36Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -137057,7 +137229,7 @@
     "citing_team_paper": "GIA Model Statistics for GRACE Hydrology",
     "team_paper_id": "2c3ee237b75128110c1b63d9d7d73d8a6739a7ff",
     "research_domain": "Sea Level Contribution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -137088,6 +137260,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:19:36Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -152065,7 +152244,7 @@
     "citing_team_paper": "BedMachine v3: Complete Bed Topography and Ocean Bathymetry Mapping of Greenland From Multibeam Echo Sounding Combined With Mass Conservation",
     "team_paper_id": "9f12307d0f8e6522d44a7bc07aa5421a3d710e82",
     "research_domain": "Glacier Retreat & Mass Balance",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1,
@@ -152096,6 +152275,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:20:00Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -185428,7 +185614,7 @@
     "citing_team_paper": "Are long tide gauge records in the wrong place to measure global mean sea level rise?",
     "team_paper_id": "d758a6cbdd7674b662f9c79a494a99c22427a2b7",
     "research_domain": "Sea Level Contribution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -185459,6 +185645,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:20:54Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -189387,7 +189580,7 @@
     "citing_team_paper": "Adaptively constraining radar attenuation and temperature across the Thwaites Glacier catchment using bed echoes. Journal of Glaciology",
     "team_paper_id": "e7a03e690f40aa145f8287360774bcf0ac486f50",
     "research_domain": "Subglacial & Basal Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "ICESat-2",
@@ -189459,6 +189652,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:01Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -196776,7 +196976,7 @@
     "citing_team_paper": "Modeling of Store Gletscher’s calving dynamics",
     "team_paper_id": "858dc4d67ef88b05687af644c5592b7abbda7d07",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -196807,6 +197007,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:14Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Data about geometry and velocity used in our statistical model were taken from observations, while other flow and geometry parameters were calculated either using ISSM or independently (described in Sect. 4.2).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -197033,7 +197242,7 @@
     "citing_team_paper": "Modeling of Store Gletscher’s calving dynamics",
     "team_paper_id": "858dc4d67ef88b05687af644c5592b7abbda7d07",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -197064,6 +197273,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:15Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -197528,7 +197744,7 @@
     "citing_team_paper": "Modeling of Store Gletscher’s calving dynamics",
     "team_paper_id": "858dc4d67ef88b05687af644c5592b7abbda7d07",
     "research_domain": "Ice Shelf & Calving",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -197559,6 +197775,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:15Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -197840,7 +198063,7 @@
     "citing_team_paper": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change. Geoscientific Model Development",
     "team_paper_id": "9dcb4d8ebf651440f3513d083529f81f7ec62b0a",
     "research_domain": "Ice Sheet Modeling & Methods",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Global Positioning System (GPS)",
@@ -197896,6 +198119,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:17Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -198017,7 +198247,7 @@
     "citing_team_paper": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change. Geoscientific Model Development",
     "team_paper_id": "9dcb4d8ebf651440f3513d083529f81f7ec62b0a",
     "research_domain": "Sea Level Contribution",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Satellite Altimeter",
@@ -198065,6 +198295,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:17Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -198282,7 +198519,7 @@
     "citing_team_paper": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change. Geoscientific Model Development",
     "team_paper_id": "9dcb4d8ebf651440f3513d083529f81f7ec62b0a",
     "research_domain": "Polar Ocean & Ice-Ocean Interaction",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Global Positioning System (GPS)",
@@ -198330,6 +198567,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:17Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -198377,7 +198621,7 @@
     "citing_team_paper": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change. Geoscientific Model Development",
     "team_paper_id": "9dcb4d8ebf651440f3513d083529f81f7ec62b0a",
     "research_domain": "Ice Sheet Modeling & Methods",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Gravity Recovery and Climate Experiment (GRACE)",
@@ -198425,6 +198669,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:17Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -198714,7 +198965,7 @@
     "citing_team_paper": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change. Geoscientific Model Development",
     "team_paper_id": "9dcb4d8ebf651440f3513d083529f81f7ec62b0a",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GRACE (Gravity Recovery and Climate Experiment)",
@@ -198770,6 +199021,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:20Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -210415,7 +210673,7 @@
     "citing_team_paper": "Inferred basal friction and surface mass balance of the Northeast Greenland Ice Stream using data assimilation of ICESat (Ice Cloud and land Elevation Satellite) surface altimetry and ISSM (Ice Sheet System Model). The Cryosphere",
     "team_paper_id": "8731c58de60e33b18d31a5c14650fdcf589781dc",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -210446,6 +210704,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:39Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -223184,7 +223449,7 @@
     "citing_team_paper": "Improved representation of East Antarctic surface mass balance in a regional atmospheric climate model. Journal of Glaciology",
     "team_paper_id": "1a48278d56fa260bdb4e7217f6e3addd16f7aed0",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -223215,6 +223480,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:21:57Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -228180,7 +228452,7 @@
     "citing_team_paper": "Deeply incised submarine glacial valleys beneath the Greenland ice sheet. Nature Geoscience",
     "team_paper_id": "fbd38b56a5abf35d9949997ea79e17b142e08655",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -228211,6 +228483,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:22:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -228580,7 +228859,7 @@
     "citing_team_paper": "Deeply incised submarine glacial valleys beneath the Greenland ice sheet. Nature Geoscience",
     "team_paper_id": "fbd38b56a5abf35d9949997ea79e17b142e08655",
     "research_domain": "Subglacial & Basal Processes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -228611,6 +228890,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:22:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -258394,7 +258680,7 @@
     "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
     "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -258425,6 +258711,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:22:55Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "H mc for the yellow area is computed using the Ice Sheet System Model's mass conservation method (Morlighem et al., 2011, 2013), based on ice thickness measurements from the Center for Remote Sensing of Ice Sheets (CReSIS)",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T20:16:51Z"
         }
       },
       "error_estimates": {
@@ -259722,7 +260017,7 @@
     "citing_team_paper": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
     "team_paper_id": "803ebc97fde8ee99b3b8bfa06e82a0c183ff29fb",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -259753,6 +260048,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:22:58Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -261049,7 +261351,7 @@
     "citing_team_paper": "High-resolution bed topography mapping of Russell Glacier",
     "team_paper_id": "5f50a9b1ce9b177a244b45957ad8746809534676",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -261080,6 +261382,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:01Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -261124,7 +261433,7 @@
     "citing_team_paper": "High-resolution bed topography mapping of Russell Glacier",
     "team_paper_id": "5f50a9b1ce9b177a244b45957ad8746809534676",
     "research_domain": "Glacier Retreat & Mass Balance",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -261155,6 +261464,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:00Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -261289,7 +261605,7 @@
     "citing_team_paper": "High-resolution bed topography mapping of Russell Glacier",
     "team_paper_id": "5f50a9b1ce9b177a244b45957ad8746809534676",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -261320,6 +261636,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:00Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -275170,7 +275493,7 @@
     "citing_team_paper": "A damage mechanics assessment of the Larsen B ice shelf prior to collapse: Toward a physically‐based calving law",
     "team_paper_id": "37e5472fb981102a98757c0e1d9397cd2e53cac6",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Remote sensing data",
@@ -275218,6 +275541,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:27Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -281676,7 +282006,7 @@
     "citing_team_paper": "A mass conservation approach for mapping glacier ice thickness. Geophysical Research Letters",
     "team_paper_id": "6ca2aca8124017914a7b5ee7badb64e9cd8d5544",
     "research_domain": "Remote Sensing of Ice",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Operation IceBridge data",
@@ -281716,6 +282046,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:37Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -284096,7 +284433,7 @@
     "citing_team_paper": "Ice flux divergence anomalies on 79north Glacier",
     "team_paper_id": "71880ab81f6a53f1e445bef4ce26adb480f9b619",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Satellite Synthetic-Aperture Interferometry",
@@ -284136,6 +284473,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:40Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -291152,7 +291496,7 @@
     "citing_team_paper": "Roles of marine ice, rheology, and fracture in the flow and stability of the Brunt/Stancomb-Wills Ice Shelf",
     "team_paper_id": "b13b565baa87e6dfd104a637d20ca3e5db7b35ac",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -291183,6 +291527,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:51Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -294748,7 +295099,7 @@
     "citing_team_paper": "Processes involved in the propagation of rifts near Hemmen Ice Rise",
     "team_paper_id": "88758ac1f5b2ddb32ed8c9439f5b2d970a65fa8d",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "InSAR",
@@ -294796,6 +295147,13 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:23:56Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {

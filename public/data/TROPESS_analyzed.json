@@ -460,7 +460,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -496,6 +496,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:00Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -605,7 +612,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Carbon Cycle & Flux Inversions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -641,6 +648,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:00Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "CrIS CO is provided by the NASA TRoposperhic Ozone and its Precursors from Earth System Sounding (TROPESS) and available from https://tes.jpl.nasa.gov.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -718,6 +734,20 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:01Z"
+        },
+        "manual_override": {
+          "previous_label": "Data Usage",
+          "new_label": "Simple Citation",
+          "reason": "Primary methodology is ground-based FTIR retrievals; satellite mentioned only for comparison.",
+          "reviewer": "human",
+          "timestamp": "2026-04-22T18:22:36Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -889,7 +919,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -925,6 +955,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:02Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The basic concentration and emission data used in the study can be downloaded freely from https://tes.jpl.nasa.gov/chemical-reanalysis/. K.M. and K.B. acknowledge the support of the NASA Atmospheric Composition: Aura Science Team Program (19-AURAST19-0044) and the TROPESS project.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -955,7 +994,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -991,6 +1030,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:02Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "Here we propose a new method to infer spatial variability in surface ozone by combining multispectral ozone retrievals using radiances from the tropospheric emission spectrometer thermal infrared instrument and the ozone monitoring instrument ultratraviolet/visible instrument with a chemical reanaly",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -1042,7 +1090,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -1078,6 +1126,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:02Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1332,7 +1387,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -1368,6 +1423,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:01Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1408,7 +1470,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -1444,6 +1506,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:02Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1615,7 +1684,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Radiative Transfer & Forward Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -1651,6 +1720,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -1688,7 +1764,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -1724,6 +1800,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -2047,7 +2130,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -2083,6 +2166,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:05Z"
+        },
+        "team_paper_override": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "reason": "Team paper (authored by the model/mission group); minimum engagement level is Data Usage by the by-author rule.",
+          "reviewer": "rule",
+          "timestamp": "2026-04-22T21:09:46Z"
         }
       },
       "error_estimates": {
@@ -2187,7 +2277,7 @@
     "citing_team_paper": null,
     "team_paper_id": null,
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -2223,6 +2313,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:06Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The IASI-CDR ozone product is evaluated against TROPESS (TRopospheric Ozone and its Precursors from Earth System Sounding) O 3 retrievals from the Cross-track Infrared Sounder (CrIS).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -5454,7 +5553,7 @@
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -5490,6 +5589,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:12Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The TROPESS chemical reanalysis product, TCR-2, as part of the MOMO-Chem framework was used in this study and is available on the NASA GED DISC website.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -5870,7 +5978,7 @@
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
     "research_domain": "Radiative Transfer & Forward Modeling",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -5906,6 +6014,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:13Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "This paper gives an overview of the SiFSAP retrieval algorithm and assessment of SiFSAP atmospheric temperature, water vapor, clouds, and surface products derived from the Cross-track Infrared Sounder (CrIS) and Advanced Technology Microwave Sounder (ATMS) data.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -6320,6 +6437,22 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:13Z"
+        },
+        "manual_override": {
+          "previous_label": "Data Usage",
+          "new_label": "Simple Citation",
+          "reason": "Abstract refers to unspecified satellite ozone profiles; no TROPESS/MUSES/CrIS/AIRS/TES instrument named.",
+          "reviewer": "human",
+          "timestamp": "2026-04-22T18:22:36Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "Satellite-based ozone vertical profiles measured by the AIRS and the OMI under the NASA TRopospheric Ozone and Precursors from Earth System Sounding (TROPESS) project were obtained from https://tes.jpl.nasa.gov/tropess/products/o3/",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -7793,7 +7926,7 @@
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -7829,6 +7962,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:17Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The TES products are available at https://asdc.larc.nasa.gov/project/TES/TL2HDOLN_6 . The AIRS products are available via GES DISC at https://disc.gsfc.nasa.gov/datasets?keywords=tropess%20%2B%20airs%20%2B%20reanalysis&page=1 and EarthData at https://www.earthdata.nasa.gov/data/catalog?keyword=TROPE",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -9475,7 +9617,7 @@
     "citing_team_paper": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
     "team_paper_id": "tropess_team_8ce74f979a112381",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -9511,6 +9653,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:19Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "We utilized surface ozone analysis fields from three chemical reanalysis products: the Tropospheric Chemistry Reanalysis Version 2 (TCR-2; Miyazaki et al., 2020b), the Copernicus Atmosphere Monitoring Service reanalysis (CAMS; Inness et al., 2019), and the GEOS-Chem reanalysis (GEOS; Qu et al., 2020",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -11573,7 +11724,7 @@
     "citing_team_paper": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
     "team_paper_id": "tropess_team_8ce74f979a112381",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -11609,6 +11760,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:25Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The paper evaluates tropospheric ozone derived from seven reanalyses, including MERRA2 and TCR-2. MERRA2 is known to assimilate TES/TROPESS data, and TCR-2 is an updated Tropospheric Chemistry Reanalysis.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -14099,7 +14259,7 @@
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -14135,6 +14295,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:30Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "We use the total column water vapor standard physical retrieval as well as the seven water vapor layers listed in Table 1 (Susskind et al., 2014). Multiple studies have evaluated the accuracy of the AIRS H2O (v) column and layers retrievals in the remote tropical atmosphere",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -15572,7 +15741,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Atmospheric Chemistry & Reanalysis",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -15608,6 +15777,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:33Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The paper validates tropospheric NO2 VCD data from the Tropospheric Chemistry Reanalysis version 2 (TCR-2). TCR-2 is an updated reanalysis that ingests TROPESS/TES data.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -16083,7 +16261,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -16119,6 +16297,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:32Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The TCR-2 chemical reanalysis data were downloaded from https://tes.jpl.nasa.gov/tes/chemical-reanalysis/",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -17146,7 +17333,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -17182,6 +17369,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:35Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The paper cites Miyazaki et al. (2020), which is the TCR-2 chemical reanalysis. TCR-2 is explicitly mentioned as providing trends, indicating its use as a data product.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -17346,7 +17542,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Atmospheric Chemistry & Reanalysis",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -17382,6 +17578,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:35Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "we analyzed vertical distributions of NOx mixing ratios from TCR-2 (Miyazaki et al., 2020). TCR-2 is a global chemical reanalysis that includes full physical and chemical processes for various species and assimilates multiple satellite products of NO2, ozone, CO, and SO2.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -18253,7 +18458,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Atmospheric Chemistry & Reanalysis",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -18289,6 +18494,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:36Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The paper explicitly uses \"NASA Tropospheric Chemical Reanalysis products 2 (TCR-2) satellite-inferred inventory\" which is constrained using satellite observations and is a TROPESS-related product.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -18755,7 +18969,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -18791,6 +19005,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:38Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The NOx emissions from the JPL chemical reanalysis (Fig. 1 a) are constrained by assimilating O3, NO2, CO, HNO3, and SO2 from the OMI, GOME-2, SCIAMACHY, MLS, TES, and MOPITT satellite instruments (Miyazaki et al., 2020a)",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -29771,7 +29994,7 @@
     "citing_team_paper": "Evolution of Acyl Peroxynitrates (PANs) in Wildfire Smoke Plumes Detected by the Cross-Track Infrared Sounder (CrIS) Over the Western U.S. During Summer 2018",
     "team_paper_id": "tropess_team_0514a9360de06f7a",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -29807,6 +30030,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:58Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "using data from NASA satellites (Ozone Monitoring Instrument., OMI and Atmospheric Infrared Sounder, AIRS were investigated to provide insight into the spatiotemporal variations of surface temperatures, relative humidity and concentrations of pollutants such as nitrogen dioxide (NO₂), sulphur dioxid",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -30788,7 +31020,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -30824,6 +31056,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:28:59Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The LMAM model demonstrated a strong correlation with TROPESS Chemical Reanalysis (TCR) NOx data (Spearman’s r = 0.71 in 2019; r = 0.70 in 2020), confirming its reliability for trend analysis.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -31473,7 +31714,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -31509,6 +31750,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:29:00Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "This contrast is further supported by opposite anomalies in hemispheric tropospheric ozone observed by satellite.",
+          "confidence": 3,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -31540,7 +31790,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
     "research_domain": "General Science",
-    "engagement_level": "Data Usage",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -31576,6 +31826,13 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:29:00Z"
+        },
+        "manual_override": {
+          "previous_label": "Data Usage",
+          "new_label": "Simple Citation",
+          "reason": "TROPOMI is on Sentinel-5P, not a TROPESS instrument; LLM conflated TROPOMI with TROPESS.",
+          "reviewer": "human",
+          "timestamp": "2026-04-22T18:22:36Z"
         }
       },
       "error_estimates": {
@@ -41045,7 +41302,7 @@
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -41081,6 +41338,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:29:17Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The AIRS data were obtained from https://disc.gsfc.nasa.gov/datasets/ summary accessed on 1 July 2020.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -41110,7 +41376,7 @@
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -41146,6 +41412,15 @@
           "abstract_used": false,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:29:17Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The abstract explicitly cites and links to the \"AIRS/AMSU/HSB version 6 level 3 product user guide\", indicating the use of AIRS data, which is part of TROPESS.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {
@@ -42273,7 +42548,7 @@
     "citing_team_paper": "TROPESS/CrIS carbon monoxide profile validation with NOAA GML and ATom in situ aircraft observations",
     "team_paper_id": "tropess_team_2d9de85fef525ff9",
     "research_domain": "General Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -42309,6 +42584,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:29:20Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "TROPESS CrIS CO data are available at https://doi.org/10.5067/LS66YMQDSPRI (Bowman, 2021).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:29:35Z"
         }
       },
       "error_estimates": {

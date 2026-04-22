@@ -3140,7 +3140,7 @@
     "citing_team_paper": "MethaNet-An AI-driven approach to quantifying methane point-source emission from high-resolution 2-D plume imagery",
     "team_paper_id": "c891dda2b84ec629d88cebf1438d32a04c97fd21",
     "research_domain": "Methane Detection & Plumes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -3171,6 +3171,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:04Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "To validate the proposed method, observation system simulation experiments (OSSEs) of various scenarios are performed. ... The LES-simulated 2-D plume snapshots are available upon request.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:09Z"
         }
       },
       "error_estimates": {
@@ -5111,7 +5120,7 @@
     "citing_team_paper": "MethaNet-An AI-driven approach to quantifying methane point-source emission from high-resolution 2-D plume imagery",
     "team_paper_id": "c891dda2b84ec629d88cebf1438d32a04c97fd21",
     "research_domain": "Methane Detection & Plumes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Sentinel-2",
@@ -5175,6 +5184,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:06Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "We used the Weather and Research Forecasting Model in large-eddy simulation mode (WRF-LES) to generate realistic methane plumes (three-dimensional mass distributions) in the atmospheric boundary layer over time",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:09Z"
         }
       },
       "error_estimates": {
@@ -5315,7 +5333,7 @@
     "citing_team_paper": "MethaNet-An AI-driven approach to quantifying methane point-source emission from high-resolution 2-D plume imagery",
     "team_paper_id": "c891dda2b84ec629d88cebf1438d32a04c97fd21",
     "research_domain": "Methane Detection & Plumes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "GOSAT",
@@ -5467,6 +5485,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:08Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "The effective wind speed U eff in the IME method accounts for the effect of turbulent diffusion in plume dissipation and can be parameterized as a function of an observable 10 m wind speed by using large-eddy simulations (LES) of synthetic plumes sampled with the instrument pixel resolution, plume m",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:09Z"
         }
       },
       "error_estimates": {
@@ -10015,7 +10042,7 @@
     "citing_team_paper": "Towards accurate methane point-source quantification from high-resolution 2-D plume imagery",
     "team_paper_id": "e704f869ee133d4e3e1212158146701677c38e07",
     "research_domain": "Methane Detection & Plumes",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "Sentinel-2",
@@ -10095,6 +10122,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:16Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Our LES ensemble used to calibrate the Sentinel-2 retrievals simulates plume transport at 25â€‰m horizontal and 15â€‰m vertical resolution over a 9â€‰ Ã— â€‰9â€‰ Ã—",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T19:58:09Z"
         }
       },
       "error_estimates": {
