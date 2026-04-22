@@ -34,8 +34,8 @@ const RAPIDDashboard = () => {
   useEffect(() => {
     const loadRapidData = async () => {
       try {
-        const { loadModelData } = await import('../../utils/dataLoader');
-        const data = await loadModelData('RAPID');
+        const { loadEngagedModelData } = await import('../../utils/dataLoader');
+        const data = await loadEngagedModelData('RAPID');
         setRapidData(data);
       } catch (error) {
         console.error('Failed to load RAPID data:', error);

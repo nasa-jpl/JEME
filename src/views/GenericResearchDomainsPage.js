@@ -33,9 +33,9 @@ const GenericResearchDomainsPage = () => {
         setLoading(true);
         console.log(`Loading research domains data for ${modelConfig.displayName}`);
         
-        // Load the model's JSON data from public/data/
-        const { loadModelData } = await import('../utils/dataLoader');
-        const data = await loadModelData(modelName);
+        // Load the model's JSON data from public/data/, excluding Simple Citation
+        const { loadEngagedModelData } = await import('../utils/dataLoader');
+        const data = await loadEngagedModelData(modelName);
         setCitationsData(data);
         
         processData(data);
@@ -115,15 +115,19 @@ const GenericResearchDomainsPage = () => {
         }
       });
 
-      // Filter papers for display
-      const filteredPapers = selectedDomain === 'all'
-        ? data.slice(0, 50)
+      // Filter papers for display, then sort by citation count (desc)
+      const citesOf = (p) => p['is-referenced-by-count'] || p.citation_count || p.cites || p.citations || 0;
+      const matched = selectedDomain === 'all'
+        ? data.slice()
         : data.filter(paper => {
             const paperDomains = (paper.research_domains && paper.research_domains.length > 0)
               ? paper.research_domains
               : (paper.research_domain ? [paper.research_domain] : []);
             return paperDomains.includes(selectedDomain);
-          }).slice(0, 50);
+          });
+      const filteredPapers = matched
+        .sort((a, b) => citesOf(b) - citesOf(a))
+        .slice(0, 50);
 
       setProcessedData({
         domainStats,

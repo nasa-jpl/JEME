@@ -673,14 +673,14 @@ const GenericCitationsPage = () => {
                         onClick={() => handleSort('engagement_level')}
                       >
                         <div className="flex items-center">
-                          <span>Engagement</span>
+                          <span>Engagement (Confidence %)</span>
                           {sortField === 'engagement_level' && (
                             sortDirection === 'asc' ? <SortAsc size={14} className="ml-1" /> : <SortDesc size={14} className="ml-1" />
                           )}
                         </div>
                       </th>
-                      <th 
-                        className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
+                      <th
+                        className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider cursor-pointer"
                         onClick={() => handleSort('research_domain')}
                       >
                         <div className="flex items-center">
@@ -696,7 +696,7 @@ const GenericCitationsPage = () => {
                           <span>Missions</span>
                         </div>
                       </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         Journal Info
                       </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
@@ -708,12 +708,12 @@ const GenericCitationsPage = () => {
                     {sortedCitations.length > 0 ? sortedCitations.map((citation) => (
                       <tr key={citation.id} className={`hover:bg-gray-50 ${citation.isOriginalPaper ? 'bg-blue-50' : ''}`}>
                         <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-sm truncate" title={citation.title}>
+                          <div className="text-sm text-gray-500 max-w-xs break-words" title={citation.title}>
                             {citation.title}
                           </div>
                         </td>
                         <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-sm truncate" title={citation.authors}>
+                          <div className="text-sm text-gray-500 max-w-xs break-words" title={citation.authors}>
                             {citation.authors}
                           </div>
                         </td>
@@ -729,8 +729,8 @@ const GenericCitationsPage = () => {
                             {citation.uncertainty && <UncertaintyBadge uncertainty={citation.uncertainty} />}
                           </div>
                         </td>
-                        <td className="px-6 py-4">
-                          <div className="text-xs text-gray-600 max-w-32 truncate" title={citation.research_domain}>
+                        <td className="px-3 py-4">
+                          <div className="text-xs text-gray-600 max-w-[7rem] truncate" title={citation.research_domain}>
                             {citation.research_domain}
                           </div>
                         </td>
@@ -762,9 +762,9 @@ const GenericCitationsPage = () => {
                             )}
                           </div>
                         </td>
-                        <td className="px-6 py-4">
-                          <div className="text-xs text-gray-600 max-w-32">
-                            <div className="truncate" title={citation.source}>{citation.source}</div>
+                        <td className="px-3 py-4">
+                          <div className="text-xs text-gray-600 max-w-xs">
+                            <div className="break-words" title={citation.source}>{citation.source}</div>
                             {citation.volume && (
                               <div className="text-gray-400">
                                 Vol. {citation.volume}

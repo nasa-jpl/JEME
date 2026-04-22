@@ -33,9 +33,12 @@ const EngagementLevelsCard = ({ data }) => {
           // Mission format
           if (level === "Data Usage") standardLevel = "Data Usage";
           else if (level === "Review Paper") standardLevel = "Review Paper";
+          else if (level === "Simple Citation") standardLevel = "Simple Citation";
         } else {
-          // Model format (L1-L3)
-          if (level.includes("Level 1:") || level.includes("Level 1 ")) {
+          // Model format (L1-L3 plus Simple Citation)
+          if (level === "Simple Citation") {
+            standardLevel = "Simple Citation";
+          } else if (level.includes("Level 1:") || level.includes("Level 1 ")) {
             standardLevel = "Level 1: Data Usage";
           } else if (level.includes("Level 2:") || level.includes("Level 2 ")) {
             standardLevel = "Level 2: Model Adaptation";
@@ -52,16 +55,18 @@ const EngagementLevelsCard = ({ data }) => {
 
     // Define engagement level order and colors based on format
     const levelOrder = isMissionFormat
-      ? ["Data Usage", "Review Paper", "Unclassified"]
-      : ["Level 1: Data Usage", "Level 2: Model Adaptation", "Level 3: Foundational Method", "Unclassified"];
+      ? ["Simple Citation", "Data Usage", "Review Paper", "Unclassified"]
+      : ["Simple Citation", "Level 1: Data Usage", "Level 2: Model Adaptation", "Level 3: Foundational Method", "Unclassified"];
 
     const levelColors = isMissionFormat
       ? {
+          "Simple Citation": "#93C5FD",     // Light blue
           "Data Usage": "#3B82F6",          // Blue
           "Review Paper": "#1D4ED8",        // Dark blue
           "Unclassified": "#D1D5DB"         // Gray
         }
       : {
+          "Simple Citation": "#93C5FD",
           "Level 1: Data Usage": "#60A5FA",
           "Level 2: Model Adaptation": "#3B82F6",
           "Level 3: Foundational Method": "#1D4ED8",
@@ -78,7 +83,8 @@ const EngagementLevelsCard = ({ data }) => {
         if (isMissionFormat) {
           // Mission format names are already short enough
         } else {
-          if (level.includes("Level 1")) displayName = "L1: Data Usage";
+          if (level === "Simple Citation") displayName = "Simple Citation";
+          else if (level.includes("Level 1")) displayName = "L1: Data Usage";
           else if (level.includes("Level 2")) displayName = "L2: Adaptation";
           else if (level.includes("Level 3")) displayName = "L3: Foundation";
         }
@@ -122,6 +128,7 @@ const EngagementLevelsCard = ({ data }) => {
   // Helper function to get engagement level descriptions
   const getEngagementDescription = (level) => {
     const descriptions = {
+      "Simple Citation": "Only cites/mentions as background, does not use",
       "Level 1: Data Usage": "Uses methodology or data",
       "Level 2: Model Adaptation": "Modifies or extends the model",
       "Level 3: Foundational Method": "Model is foundational to the research",

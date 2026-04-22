@@ -30,8 +30,8 @@ const TROPESSDashboard = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const { loadModelData } = await import('../../utils/dataLoader');
-        const data = await loadModelData('TROPESS');
+        const { loadEngagedModelData } = await import('../../utils/dataLoader');
+        const data = await loadEngagedModelData('TROPESS');
         setTropessData(data);
       } catch (error) {
         console.error('Failed to load TROPESS data:', error);

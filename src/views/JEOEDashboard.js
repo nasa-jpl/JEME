@@ -18,9 +18,9 @@ const JEOEDashboard = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const { loadAllModelsData } = await import('../utils/dataLoader');
+        const { loadAllEngagedModelsData } = await import('../utils/dataLoader');
         const missions = ['GRACE', 'SWOT', 'TROPESS'];
-        const data = await loadAllModelsData(missions);
+        const data = await loadAllEngagedModelsData(missions);
         setAllMissionsData(data);
         setLoading(false);
       } catch (error) {

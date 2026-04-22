@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import { loadModelData } from '../utils/dataLoader';
+import { loadEngagedModelData as loadModelData } from '../utils/dataLoader';
 
 const ResearchDomainsPage = () => {
   const [citationsData, setCitationsData] = useState([]);

@@ -34,8 +34,8 @@ const ECCODashboard = () => {
   useEffect(() => {
     const loadEccoData = async () => {
       try {
-        const { loadModelData } = await import('../../utils/dataLoader');
-        const data = await loadModelData('ECCO');
+        const { loadEngagedModelData } = await import('../../utils/dataLoader');
+        const data = await loadEngagedModelData('ECCO');
         setEccoData(data);
       } catch (error) {
         console.error('Failed to load ECCO data:', error);

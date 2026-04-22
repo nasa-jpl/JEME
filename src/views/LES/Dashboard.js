@@ -32,8 +32,8 @@ const LESDashboard = () => {
   useEffect(() => {
     const loadLesData = async () => {
       try {
-        const { loadModelData } = await import('../../utils/dataLoader');
-        const data = await loadModelData('LES');
+        const { loadEngagedModelData } = await import('../../utils/dataLoader');
+        const data = await loadEngagedModelData('LES');
         setLesData(data);
       } catch (error) {
         console.error('Failed to load LES data:', error);

@@ -36,9 +36,9 @@ const GenericGeographicImpactPage = () => {
       setLoading(true);
       console.log(`Loading geographic data for ${modelConfig.displayName}`);
       
-      // Load the model's JSON data from public/data/
-      const { loadModelData } = await import('../utils/dataLoader');
-      const data = await loadModelData(modelName);
+      // Load the model's JSON data from public/data/, excluding Simple Citation
+      const { loadEngagedModelData } = await import('../utils/dataLoader');
+      const data = await loadEngagedModelData(modelName);
       setCitationsData(data);
       
       processGeographicData(data);

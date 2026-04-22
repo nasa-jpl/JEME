@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import { loadModelData } from '../../utils/dataLoader';
+import { loadEngagedModelData as loadModelData } from '../../utils/dataLoader';
 
 // Define consistent colors for domains (moved outside component for better accessibility) - Same order as RAPID
 const domainColors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
@@ -77,10 +77,14 @@ const ECCOResearchDomainsPage = () => {
         }
       });
 
-      // Filter papers for display
-      const filteredPapers = selectedDomain === 'all'
-        ? citationsData.slice(0, 50) // Show first 50 papers
-        : citationsData.filter(paper => paper.research_domain === selectedDomain).slice(0, 50);
+      // Filter papers for display, then sort by citation count (desc)
+      const citesOf = (p) => p['is-referenced-by-count'] || p.citation_count || p.cites || p.citations || 0;
+      const matched = selectedDomain === 'all'
+        ? citationsData.slice()
+        : citationsData.filter(paper => paper.research_domain === selectedDomain);
+      const filteredPapers = matched
+        .sort((a, b) => citesOf(b) - citesOf(a))
+        .slice(0, 50);
 
       setProcessedData({
         domainStats,

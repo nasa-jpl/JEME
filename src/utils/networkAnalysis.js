@@ -9,10 +9,10 @@ import { getModelList } from '../config/modelConfig';
  */
 export const loadAllModelData = async () => {
   const models = getModelList();
-  const { loadAllModelsData } = await import('./dataLoader');
+  const { loadAllEngagedModelsData } = await import('./dataLoader');
 
   try {
-    const modelData = await loadAllModelsData(models);
+    const modelData = await loadAllEngagedModelsData(models);
     for (const modelName of models) {
       console.log(`Loaded ${(modelData[modelName] || []).length} papers for ${modelName}`);
     }

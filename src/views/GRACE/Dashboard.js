@@ -30,8 +30,8 @@ const GRACEDashboard = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const { loadModelData } = await import('../../utils/dataLoader');
-        const data = await loadModelData('GRACE');
+        const { loadEngagedModelData } = await import('../../utils/dataLoader');
+        const data = await loadEngagedModelData('GRACE');
         setGraceData(data);
       } catch (error) {
         console.error('Failed to load GRACE data:', error);
