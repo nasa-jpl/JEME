@@ -8255,7 +8255,7 @@
     "citing_team_paper": "Intercomparison of large-eddy simulations of the Antarctic boundary layer for very stable stratification",
     "team_paper_id": "7573257450b66ed764b348c0ac8cef1b01228993",
     "research_domain": "Boundary Layer Turbulence",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.8,
@@ -8286,6 +8286,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:11Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "the new empirical stability function (i.e., Equation 4e) was derived based on a database of large eddy simulation (LES) for neutral and stable conditions compiled by Esau and Byrkjedal ( 2007).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T00:34:20Z"
         }
       },
       "error_estimates": {
@@ -8646,7 +8655,7 @@
     "citing_team_paper": "The spiderweb structure of stratocumulus clouds",
     "team_paper_id": "f5becb67401a6fd877be34f3227a0223feafe0c3",
     "research_domain": "Cloud & Stratocumulus Simulation",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "MODIS",
@@ -8686,6 +8695,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:11Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We use an ensemble of stochastically‐modeled cloud fields and 3D radiative transfer simulations to study the retrieval errors at a solar zenith angle of 30°.",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T00:34:20Z"
         }
       },
       "error_estimates": {

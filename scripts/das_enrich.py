@@ -40,6 +40,10 @@ USER_AGENT_BROWSER = (
 )
 UNPAYWALL_EMAIL = 'yunkss@gmail.com'
 
+# Publisher TDM tokens (read from env at runtime; never hard-coded)
+WILEY_TDM_TOKEN = os.environ.get('WILEY_TDM_TOKEN', '')
+ELSEVIER_TDM_TOKEN = os.environ.get('ELSEVIER_TDM_TOKEN', '')
+
 # ---------------------------------------------------------------------------
 # Per-model marker patterns
 # These are intentionally specific (full names + acronyms in well-defined contexts)
@@ -159,6 +163,58 @@ def _copernicus_url(doi):
     return f'https://{j}.copernicus.org/articles/{vol}/{page}/{year}/'
 
 
+def _wiley_tdm(doi):
+    """Wiley TDM: returns PDF text or None. Most AGU/Wiley journals."""
+    if not WILEY_TDM_TOKEN:
+        return None
+    try:
+        r = requests.get(
+            f'https://api.wiley.com/onlinelibrary/tdm/v1/articles/{doi}',
+            headers={'Wiley-TDM-Client-Token': WILEY_TDM_TOKEN},
+            timeout=HTTP_TIMEOUT, allow_redirects=True,
+        )
+        if r.status_code != 200:
+            return None
+        ctype = r.headers.get('content-type', '')
+        if 'pdf' not in ctype.lower():
+            # Could be HTML (rare); pass through to downstream parser
+            return r.text if r.text else None
+        # Parse PDF
+        import io
+        from pypdf import PdfReader
+        try:
+            reader = PdfReader(io.BytesIO(r.content))
+            pages = []
+            for p in reader.pages:
+                try:
+                    pages.append(p.extract_text() or '')
+                except Exception:
+                    continue
+            text = ' '.join(pages)
+            return text if text.strip() else None
+        except Exception:
+            return None
+    except Exception:
+        return None
+
+
+def _elsevier_tdm(doi):
+    """Elsevier TDM: returns XML text or None. Most ScienceDirect journals."""
+    if not ELSEVIER_TDM_TOKEN:
+        return None
+    try:
+        r = requests.get(
+            f'https://api.elsevier.com/content/article/doi/{doi}',
+            headers={'X-ELS-APIKey': ELSEVIER_TDM_TOKEN, 'Accept': 'text/xml'},
+            timeout=HTTP_TIMEOUT,
+        )
+        if r.status_code != 200:
+            return None
+        return r.text
+    except Exception:
+        return None
+
+
 def _unpaywall_repo_urls(doi):
     try:
         r = requests.get(
@@ -181,15 +237,30 @@ def _unpaywall_repo_urls(doi):
 
 
 def fetch_html(doi):
+    # 1. Copernicus journals: direct article HTML (always open)
     cu = _copernicus_url(doi)
     if cu:
         text = _http_get(cu)
         if text:
             return text
+    # 2. Publisher TDM APIs (covers Wiley/AGU + Elsevier/ScienceDirect — most paywalled cases)
+    doi_lower = doi.lower()
+    # Wiley publishes AGU (10.1029) and many Wiley journals (10.1002, 10.1111)
+    if doi_lower.startswith(('10.1002/', '10.1029/', '10.1111/')):
+        text = _wiley_tdm(doi)
+        if text:
+            return text
+    # Elsevier / ScienceDirect (10.1016)
+    if doi_lower.startswith('10.1016/'):
+        text = _elsevier_tdm(doi)
+        if text:
+            return text
+    # 3. Unpaywall repository copies (Caltech, arXiv, ESS Open Archive, etc.)
     for u in _unpaywall_repo_urls(doi):
         text = _http_get(u)
         if text:
             return text
+    # 4. Last resort: DOI redirect (often blocked)
     text = _http_get(f'https://doi.org/{doi}')
     return text
 
@@ -315,15 +386,17 @@ def classify(api_key, model_name, entry):
 # Per-entry processing
 # ---------------------------------------------------------------------------
 
-def process(entry, api_key, cache, model_name, marker_pattern):
+def process(entry, api_key, cache, model_name, marker_pattern, retry_failed=False):
     doi = (entry.get('doi') or '').strip()
     if not doi:
         return {'doi': '', 'status': 'no_doi'}
 
     cache_key = f'{model_name}:{doi}'
-    if cache_key in cache:
-        enrichment = cache[cache_key].get('enrichment', '')
-        fetched = cache[cache_key].get('fetched', False)
+    cached = cache.get(cache_key)
+    use_cache = cached is not None and not (retry_failed and not cached.get('fetched', False))
+    if use_cache:
+        enrichment = cached.get('enrichment', '')
+        fetched = cached.get('fetched', False)
     else:
         html = fetch_html(doi)
         enrichment = build_enrichment(html, marker_pattern) if html else ''
@@ -363,7 +436,7 @@ def process(entry, api_key, cache, model_name, marker_pattern):
 # Per-model driver
 # ---------------------------------------------------------------------------
 
-def run_model(model_name, api_key, cache, save_cache_every=200):
+def run_model(model_name, api_key, cache, save_cache_every=200, retry_failed=False):
     data_path = DATA_DIR / f'{model_name}_analyzed.json'
     if not data_path.exists():
         print(f'  WARN: {data_path} not found, skipping')
@@ -385,7 +458,7 @@ def run_model(model_name, api_key, cache, save_cache_every=200):
     start = time.time()
 
     with ThreadPoolExecutor(max_workers=WORKERS) as exe:
-        futs = {exe.submit(process, p, api_key, cache, model_name, marker_pattern): p for p in sc}
+        futs = {exe.submit(process, p, api_key, cache, model_name, marker_pattern, retry_failed): p for p in sc}
         done = 0
         for fut in as_completed(futs):
             entry = futs[fut]
@@ -456,6 +529,8 @@ def main():
     parser.add_argument('--models', type=str, help='Comma-separated list')
     parser.add_argument('--all', action='store_true')
     parser.add_argument('--workers', type=int, default=6)
+    parser.add_argument('--retry-failed', action='store_true',
+                        help='Re-fetch entries that previously failed (cached as fetched=False)')
     args = parser.parse_args()
 
     if not (args.model or args.models or args.all):
@@ -483,7 +558,7 @@ def main():
 
     summary = {}
     for m in models:
-        r = run_model(m, api_key, cache)
+        r = run_model(m, api_key, cache, retry_failed=args.retry_failed)
         if r:
             summary[m] = r
 

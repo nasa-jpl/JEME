@@ -3172,7 +3172,7 @@
     "citing_team_paper": "The worldwide COVID-19 lockdown impacts on global secondary inorganic aerosols and radiative budget",
     "team_paper_id": "ef835a23877aa9a5e6616f93713fbaaa25c8e78f",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Tropospheric Monitoring Instrument (TROPOMI)",
@@ -3220,6 +3220,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:26Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "Moreover, CHASER is a forward model in the chemical reanalysis system (TCR) developed by Miyazaki et al. (2017, 2020).",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T00:37:06Z"
         }
       },
       "error_estimates": {
@@ -28509,7 +28518,7 @@
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
     "team_paper_id": "e40a04aa82dc527ef57187fd18faee3251a34ba6",
     "research_domain": "Air Quality & Health",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [
       {
         "name": "Moderate Resolution Imaging Spectroradiometer (MODIS)",
@@ -28573,6 +28582,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:24:58Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "We have used the 3-D variational (3D-Var) capability of the community Gridpoint Statistical Interpolation (GSI) system (version 3.5) to assimilate the Level-2 MODIS AOD retrievals and the Level-2 MOPITT CO retrievals in CMAQ. ... the MOPITT CO assimilation capability has been developed in this work.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-22T23:27:33Z"
         }
       },
       "error_estimates": {
