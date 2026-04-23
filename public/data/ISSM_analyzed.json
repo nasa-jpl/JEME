@@ -2985,7 +2985,7 @@
     "citing_team_paper": "New perspectives on ice forcing in continental arc magma plumbing systems",
     "team_paper_id": "dc431ad2dd5856c7ff3b272bd7a8e837792d1531",
     "research_domain": "Ice Sheet Dynamics & Flow",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 2: Model Adaptation",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -3016,6 +3016,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:16:08Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 2: Model Adaptation",
+          "justification": "Growth and retreat of the PIS during the last 60 ka is simulated using the Ice Sheet and Sea‐level System Model (ISSM, Larour et al., 2012 ) across the Chilean Lake District, expanding the time frame of the model in Cuzzone et al. ( 2024 ).",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T04:26:35Z"
         }
       },
       "error_estimates": {

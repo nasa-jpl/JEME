@@ -26102,7 +26102,7 @@
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
     "research_domain": "Ocean Surface Topography",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "SWOT",
@@ -26142,6 +26142,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:27:52Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "Finally, a prediction of the future 2-D mesoscale sea level resolution capability of the Surface Water and Ocean Topography (SWOT) mission is given using a simulated error level.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T04:20:46Z"
         }
       },
       "error_estimates": {

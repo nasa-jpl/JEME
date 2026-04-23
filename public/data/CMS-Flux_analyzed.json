@@ -9506,7 +9506,7 @@
     "citing_team_paper": "National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake",
     "team_paper_id": "7894ca03e794bea29416947655547899879eee6e",
     "research_domain": "Methane & Trace Gases",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -9537,6 +9537,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:26Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Here, we present a two‐decade (2000–2019) GHG (CO2, CH4, and N2O) budget for Mexico derived from multiple products. Data from the National GHG Inventory, global observations, and the scientific literature were compared to identify knowledge gaps on GHG flux dynamics and discrepancies among estimates",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T04:21:31Z"
         }
       },
       "error_estimates": {
