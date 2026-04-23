@@ -16003,7 +16003,7 @@
     "citing_team_paper": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
     "team_paper_id": "4a7a09d3dcd3ab30270cc49cf223e0b084695b17",
     "research_domain": "CO2 Flux & Carbon Budget",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 1.0,
@@ -16034,6 +16034,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:35Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "In particular, the Carbon Monitoring System Flux (CMS-Flux)—an atmospheric inversion estimate of net biosphere exchange using satellite observations of atmospheric concentra- tions of CO2—provided information on the carbon balance of the terrestrial ecosystem and constrained multiple aspects of the ",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T21:57:19Z"
         }
       },
       "error_estimates": {
@@ -17555,7 +17564,7 @@
     "citing_team_paper": "Contrasting Regional Carbon Cycle Responses to Seasonal Climate Anomalies Across the East‐West Divide of Temperate North America",
     "team_paper_id": "e1ee261a2b51bce5d26a6dbb3fcb3d06e06784e6",
     "research_domain": "CO2 Flux & Carbon Budget",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "FLUXCOM",
@@ -17603,6 +17612,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:38Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "NEE fluxes of Byrne, Liu, Lee, et al. (2020) can be downloaded from https://cmsflux.jpl.nasa.gov/.",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T21:57:19Z"
         }
       },
       "error_estimates": {
@@ -24680,7 +24698,7 @@
     "citing_team_paper": "The 2015–2016 carbon cycle as seen from OCO-2 and the global in situ network",
     "team_paper_id": "eef335f95f509aa734ce2e2d2d352164467b1fee",
     "research_domain": "Land-Atmosphere Exchange",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.933,
@@ -24711,6 +24729,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:25:47Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "We assessed the impact of terrestrial fluxes derived from different biosphere models in the Multi‐scale Synthesis and Terrestrial Model Intercomparison Project (MsTMIP) on atmospheric CO2 estimations based on a global chemical transport model (GEOS‐Chem) when these fluxes were applied as prior infor",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-23T21:57:19Z"
         }
       },
       "error_estimates": {

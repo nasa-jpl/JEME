@@ -140,19 +140,43 @@ def save_cache(cache):
 # HTTP fetch (multi-strategy)
 # ---------------------------------------------------------------------------
 
+def _parse_pdf_bytes(content):
+    import io, contextlib, logging
+    from pypdf import PdfReader
+    # pypdf emits noisy warnings/prints for malformed PDFs; suppress them.
+    logging.getLogger('pypdf').setLevel(logging.ERROR)
+    with contextlib.redirect_stderr(io.StringIO()):
+        try:
+            reader = PdfReader(io.BytesIO(content))
+            pages = []
+            for p in reader.pages:
+                try:
+                    pages.append(p.extract_text() or '')
+                except Exception:
+                    continue
+            text = ' '.join(pages)
+            return text if text.strip() else None
+        except Exception:
+            return None
+
+
 def _http_get(url):
     try:
         r = requests.get(
             url,
-            headers={'User-Agent': USER_AGENT_BROWSER, 'Accept': 'text/html,application/xhtml+xml,*/*'},
+            headers={'User-Agent': USER_AGENT_BROWSER,
+                     'Accept': 'text/html,application/xhtml+xml,application/pdf,*/*'},
             timeout=HTTP_TIMEOUT,
             allow_redirects=True,
         )
-        if r.status_code == 200 and r.text:
-            return r.text
+        if r.status_code != 200:
+            return None
+        ctype = (r.headers.get('content-type') or '').lower()
+        if 'pdf' in ctype or url.lower().endswith('.pdf'):
+            return _parse_pdf_bytes(r.content)
+        return r.text if r.text else None
     except Exception:
-        pass
-    return None
+        return None
 
 
 def _copernicus_url(doi):
@@ -175,25 +199,10 @@ def _wiley_tdm(doi):
         )
         if r.status_code != 200:
             return None
-        ctype = r.headers.get('content-type', '')
-        if 'pdf' not in ctype.lower():
-            # Could be HTML (rare); pass through to downstream parser
-            return r.text if r.text else None
-        # Parse PDF
-        import io
-        from pypdf import PdfReader
-        try:
-            reader = PdfReader(io.BytesIO(r.content))
-            pages = []
-            for p in reader.pages:
-                try:
-                    pages.append(p.extract_text() or '')
-                except Exception:
-                    continue
-            text = ' '.join(pages)
-            return text if text.strip() else None
-        except Exception:
-            return None
+        ctype = (r.headers.get('content-type') or '').lower()
+        if 'pdf' in ctype:
+            return _parse_pdf_bytes(r.content)
+        return r.text if r.text else None
     except Exception:
         return None
 
@@ -215,7 +224,10 @@ def _elsevier_tdm(doi):
         return None
 
 
-def _unpaywall_repo_urls(doi):
+def _unpaywall_urls(doi):
+    """Return all OA URLs from Unpaywall, PDFs first, then HTML.
+    Prioritises repository copies (often easier to fetch than publisher pages),
+    but includes publisher OA locations too (gold-OA journals)."""
     try:
         r = requests.get(
             f'https://api.unpaywall.org/v2/{doi}',
@@ -225,15 +237,27 @@ def _unpaywall_repo_urls(doi):
         if r.status_code != 200:
             return []
         d = r.json()
-        urls = []
-        for loc in d.get('oa_locations', []) or []:
-            if loc.get('host_type') == 'repository':
-                u = loc.get('url') or loc.get('url_for_landing_page')
-                if u:
-                    urls.append(u)
-        return urls
     except Exception:
         return []
+
+    locs = d.get('oa_locations') or []
+    # Repository first (usually less gated than publisher pages)
+    locs.sort(key=lambda l: 0 if l.get('host_type') == 'repository' else 1)
+
+    urls = []
+    for loc in locs:
+        pdf = loc.get('url_for_pdf')
+        if pdf:
+            urls.append(pdf)
+        html = loc.get('url') or loc.get('url_for_landing_page')
+        if html and html != pdf:
+            urls.append(html)
+    # Deduplicate while preserving order
+    seen = set(); out = []
+    for u in urls:
+        if u not in seen:
+            seen.add(u); out.append(u)
+    return out
 
 
 def fetch_html(doi):
@@ -255,8 +279,8 @@ def fetch_html(doi):
         text = _elsevier_tdm(doi)
         if text:
             return text
-    # 3. Unpaywall repository copies (Caltech, arXiv, ESS Open Archive, etc.)
-    for u in _unpaywall_repo_urls(doi):
+    # 3. Unpaywall OA locations (repositories + publisher gold-OA, PDFs + HTML)
+    for u in _unpaywall_urls(doi):
         text = _http_get(u)
         if text:
             return text
