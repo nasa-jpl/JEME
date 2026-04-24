@@ -1,1 +1,2 @@
 doi,previous_label,new_label,confidence,title,venue,justification
+10.1029/2021GL092555,Simple Citation,Level 1: Data Usage,4,Correcting Weather and Climate Models by Machine Learning Nudged Historical Simulations,Geophysical Research Letters,"Using the FV3GFS model at coarse resolution, we propose a method of machine learning corrective tendencies from a hindcast simulation nudged toward observational analysis. ... Briefly, we use the hybrid eddy-diffusivity mass flux turbulence scheme (Han et al., 2016)"

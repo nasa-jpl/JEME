@@ -27911,7 +27911,7 @@
     "citing_team_paper": "The 2015–2016 carbon cycle as seen from OCO-2 and the global in situ network",
     "team_paper_id": "eef335f95f509aa734ce2e2d2d352164467b1fee",
     "research_domain": "Atmospheric CO2 Inversions",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [
       {
         "name": "XCO2",
@@ -27951,6 +27951,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T15:26:00Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Our ensemble approach quantifies and partitions the uncertainty stemming from atmospheric transport, the biosphere, and large-scale CO2 boundary inflow (boundary conditions). We use meteorological data, CO2 fluxes, and CO2 mole fraction measurements to assure the reliability of the ensemble system. ",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-24T05:12:14Z"
         }
       },
       "error_estimates": {

@@ -14761,7 +14761,7 @@
     "citing_team_paper": "Implementation in the NCEP GFS of a Hybrid Eddy-Diffusivity Mass-Flux (EDMF) Boundary Layer Parameterization with Dissipative Heating and Modified Stable Boundary Layer Mixing",
     "team_paper_id": "8393c73cc59280163b3bac8b2af675dc79ef01c8",
     "research_domain": "General Atmospheric Science",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Level 1: Data Usage",
     "missions_instruments": [],
     "uncertainty": {
       "reasoning_confidence": 0.867,
@@ -14792,6 +14792,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:07:15Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Level 1: Data Usage",
+          "justification": "Using the FV3GFS model at coarse resolution, we propose a method of machine learning corrective tendencies from a hindcast simulation nudged toward observational analysis. ... Briefly, we use the hybrid eddy-diffusivity mass flux turbulence scheme (Han et al., 2016)",
+          "confidence": 4,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-24T05:16:45Z"
         }
       },
       "error_estimates": {

@@ -224,6 +224,49 @@ def _elsevier_tdm(doi):
         return None
 
 
+def _openalex_urls(doi):
+    """OpenAlex often surfaces institutional repository copies that Unpaywall misses."""
+    try:
+        r = requests.get(
+            f'https://api.openalex.org/works/doi:{doi}',
+            headers={'User-Agent': f'das_enrich/1.0 (mailto:{UNPAYWALL_EMAIL})'},
+            timeout=HTTP_TIMEOUT,
+        )
+        if r.status_code != 200:
+            return []
+        d = r.json()
+    except Exception:
+        return []
+
+    urls = []
+    for loc in (d.get('locations') or []):
+        for u in [loc.get('pdf_url'), loc.get('landing_page_url')]:
+            if u:
+                urls.append(u)
+    # Deduplicate, preserve order
+    seen = set(); out = []
+    for u in urls:
+        if u not in seen:
+            seen.add(u); out.append(u)
+    return out
+
+
+def _semantic_scholar_url(doi):
+    """Single-URL fallback from Semantic Scholar's openAccessPdf field."""
+    try:
+        r = requests.get(
+            f'https://api.semanticscholar.org/graph/v1/paper/DOI:{doi}',
+            params={'fields': 'openAccessPdf'},
+            timeout=HTTP_TIMEOUT,
+        )
+        if r.status_code != 200:
+            return None
+        oa = (r.json().get('openAccessPdf') or {}).get('url')
+        return oa or None
+    except Exception:
+        return None
+
+
 def _unpaywall_urls(doi):
     """Return all OA URLs from Unpaywall, PDFs first, then HTML.
     Prioritises repository copies (often easier to fetch than publisher pages),
@@ -284,7 +327,18 @@ def fetch_html(doi):
         text = _http_get(u)
         if text:
             return text
-    # 4. Last resort: DOI redirect (often blocked)
+    # 4. OpenAlex (institutional repos Unpaywall misses — ORA, Soton, Reading, NOAA)
+    for u in _openalex_urls(doi):
+        text = _http_get(u)
+        if text:
+            return text
+    # 5. Semantic Scholar openAccessPdf
+    s2 = _semantic_scholar_url(doi)
+    if s2:
+        text = _http_get(s2)
+        if text:
+            return text
+    # 6. Last resort: DOI redirect (often blocked)
     text = _http_get(f'https://doi.org/{doi}')
     return text
 

@@ -45222,7 +45222,7 @@
     "citing_team_paper": "Global Glacier Mass Loss During the GRACE Satellite Mission (2002-2016)",
     "team_paper_id": "_1171",
     "research_domain": "Geodesy",
-    "engagement_level": "Simple Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "GRACE",
@@ -45262,6 +45262,15 @@
           "abstract_used": true,
           "model": "gemini-2.5-flash",
           "timestamp": "2026-04-22T16:10:13Z"
+        },
+        "das_enrichment": {
+          "previous_label": "Simple Citation",
+          "new_label": "Data Usage",
+          "justification": "The accuracy of the global gravity field will be higher than that of GRACE by a factor of about 121 if we use the following accuracy indexes",
+          "confidence": 5,
+          "source": "DAS / Methods text fetched from publisher HTML",
+          "model": "gemini-2.5-flash",
+          "timestamp": "2026-04-24T05:11:02Z"
         }
       },
       "error_estimates": {
