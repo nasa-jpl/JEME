@@ -123,7 +123,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
           </div>
         </div>
         <Link
-          to="/science-model-dashboard/earth-system"
+          to="/earth-system"
           className="flex items-center gap-1 text-sm text-blue-600 hover:text-blue-800 font-medium"
         >
           View All Models <ArrowRight size={14} />

@@ -45,19 +45,19 @@ const SWOTDashboard = () => {
       name: "GRACE",
       icon: <Satellite size={20} style={{ color: '#D946EF' }} />,
       description: "Gravity Recovery and Climate Experiment - Tracking changes in Earth's gravity field to monitor water storage, ice mass, and sea level",
-      link: "/science-model-dashboard/GRACE"
+      link: "/GRACE"
     },
     {
       name: "SWOT",
       icon: <Satellite size={20} style={{ color: '#F59E0B' }} />,
       description: "Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements",
-      link: "/science-model-dashboard/SWOT"
+      link: "/SWOT"
     },
     {
       name: "TROPESS",
       icon: <Satellite size={20} style={{ color: '#0EA5E9' }} />,
       description: "TROPospheric Emission Spectrometer System - Multi-instrument retrievals of atmospheric trace gases (CO, CH4, NH3, O3) from CrIS, AIRS, and other infrared sounders",
-      link: "/science-model-dashboard/TROPESS"
+      link: "/TROPESS"
     }
   ];
 
@@ -121,7 +121,7 @@ const SWOTDashboard = () => {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
-              to="/science-model-dashboard/SWOT/citations"
+              to="/SWOT/citations"
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -135,7 +135,7 @@ const SWOTDashboard = () => {
             </Link>
 
             <Link
-              to="/science-model-dashboard/SWOT/geographic-impact"
+              to="/SWOT/geographic-impact"
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -149,7 +149,7 @@ const SWOTDashboard = () => {
             </Link>
 
             <Link
-              to="/science-model-dashboard/SWOT/research-domains"
+              to="/SWOT/research-domains"
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">
@@ -163,7 +163,7 @@ const SWOTDashboard = () => {
             </Link>
 
             <Link
-              to="/science-model-dashboard/SWOT/uncertainty"
+              to="/SWOT/uncertainty"
               className="flex items-center p-4 bg-amber-50 rounded-lg border border-amber-100 hover:bg-amber-100 transition-colors"
             >
               <div className="mr-4 bg-amber-100 p-3 rounded-full">

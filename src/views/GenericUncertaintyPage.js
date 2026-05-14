@@ -83,7 +83,7 @@ const GenericUncertaintyPage = () => {
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
             <Link
-              to={`/science-model-dashboard/${modelName}`}
+              to={`/${modelName}`}
               className="flex items-center text-blue-600 hover:text-blue-800 mr-6"
             >
               <ArrowLeft size={18} className="mr-1" />

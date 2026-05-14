@@ -26,7 +26,7 @@ const GenericMaturityPage = () => {
           <div className="bg-white rounded-lg p-8 shadow-sm text-center">
             <Shield size={48} className="text-gray-300 mx-auto mb-4" />
             <p className="text-gray-600">No maturity assessment data available for {modelName}.</p>
-            <Link to="/science-model-dashboard/model-maturity" className="text-blue-600 hover:underline text-sm mt-2 inline-block">
+            <Link to="/model-maturity" className="text-blue-600 hover:underline text-sm mt-2 inline-block">
               Back to Model Maturity Dashboard
             </Link>
           </div>
@@ -70,7 +70,7 @@ const GenericMaturityPage = () => {
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Breadcrumb */}
         <div className="flex items-center gap-2 text-sm text-gray-500 mb-4">
-          <Link to="/science-model-dashboard/model-maturity" className="hover:text-blue-600 flex items-center gap-1">
+          <Link to="/model-maturity" className="hover:text-blue-600 flex items-center gap-1">
             <ArrowLeft size={14} /> Model Maturity
           </Link>
           <ChevronRight size={14} />

@@ -127,17 +127,17 @@ export const MODELS = {
 };
 
 export const MODEL_ROUTES = {
-  RAPID: '/science-model-dashboard/RAPID',
-  CARDAMOM: '/science-model-dashboard/CARDAMOM',
-  'CMS-Flux': '/science-model-dashboard/CMS-Flux',
-  ECCO: '/science-model-dashboard/ECCO',
-  ISSM: '/science-model-dashboard/ISSM',
-  'MOMO-CHEM': '/science-model-dashboard/MOMO-CHEM',
-  LES: '/science-model-dashboard/LES',
-  EDMF: '/science-model-dashboard/EDMF',
-  GRACE: '/science-model-dashboard/GRACE',
-  SWOT: '/science-model-dashboard/SWOT',
-  TROPESS: '/science-model-dashboard/TROPESS'
+  RAPID: '/RAPID',
+  CARDAMOM: '/CARDAMOM',
+  'CMS-Flux': '/CMS-Flux',
+  ECCO: '/ECCO',
+  ISSM: '/ISSM',
+  'MOMO-CHEM': '/MOMO-CHEM',
+  LES: '/LES',
+  EDMF: '/EDMF',
+  GRACE: '/GRACE',
+  SWOT: '/SWOT',
+  TROPESS: '/TROPESS'
 };
 
 

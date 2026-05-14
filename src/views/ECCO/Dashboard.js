@@ -50,49 +50,49 @@ const ECCODashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} style={{ color: '#3b82f6' }} />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "http://34.31.165.25:3000/science-model-dashboard/RAPID"
+      link: "http://34.31.165.25:3000/RAPID"
     },
     {
       name: "CMS-Flux",
       icon: <Wind size={20} style={{ color: '#10b981' }} />,
       description: "Carbon Monitoring System Flux - Atmospheric CO2 inversion system for quantifying carbon sources and sinks",
-      link: "/science-model-dashboard/CMS-Flux"
+      link: "/CMS-Flux"
     },
     {
       name: "ECCO",
       icon: <Waves size={20} style={{ color: '#f97316' }} />,
       description: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation system combining models with observations",
-      link: "/science-model-dashboard/ECCO"
+      link: "/ECCO"
     },
     {
       name: "ISSM",
       icon: <Mountain size={20} style={{ color: '#ef4444' }} />,
       description: "Ice Sheet System Model - Thermomechanical ice sheet model for simulating ice dynamics and sea level change",
-      link: "/science-model-dashboard/ISSM"
+      link: "/ISSM"
     },
     {
       name: "MOMO-CHEM",
       icon: <Atom size={20} style={{ color: '#8b5cf6' }} />,
       description: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model for air quality and atmospheric composition studies",
-      link: "/science-model-dashboard/MOMO-CHEM"
+      link: "/MOMO-CHEM"
     },
     {
       name: "CARDAMOM",
       icon: <Leaf size={20} style={{ color: '#eab308' }} />,
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
-      link: "/science-model-dashboard/CARDAMOM"
+      link: "/CARDAMOM"
     },
     {
       name: "LES",
       icon: <CloudLightning size={20} style={{ color: '#2E8B57' }} />,
       description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
-      link: "/science-model-dashboard/LES"
+      link: "/LES"
     },
     {
       name: "EDMF",
       icon: <Layers size={20} style={{ color: '#FF6347' }} />,
       description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
-      link: "/science-model-dashboard/EDMF"
+      link: "/EDMF"
     }
   ];
 
@@ -155,7 +155,7 @@ const ECCODashboard = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
             <Link
-              to="/science-model-dashboard/ECCO/citations"
+              to="/ECCO/citations"
               className="flex items-center p-4 bg-blue-50 rounded-lg border border-blue-100 hover:bg-blue-100 transition-colors"
             >
               <div className="mr-4 bg-blue-100 p-3 rounded-full">
@@ -169,7 +169,7 @@ const ECCODashboard = () => {
             </Link>
 
             <Link
-              to="/science-model-dashboard/ECCO/geographic-impact"
+              to="/ECCO/geographic-impact"
               className="flex items-center p-4 bg-green-50 rounded-lg border border-green-100 hover:bg-green-100 transition-colors"
             >
               <div className="mr-4 bg-green-100 p-3 rounded-full">
@@ -183,7 +183,7 @@ const ECCODashboard = () => {
             </Link>
 
             <Link
-              to="/science-model-dashboard/ECCO/research-domains"
+              to="/ECCO/research-domains"
               className="flex items-center p-4 bg-purple-50 rounded-lg border border-purple-100 hover:bg-purple-100 transition-colors"
             >
               <div className="mr-4 bg-purple-100 p-3 rounded-full">
@@ -197,7 +197,7 @@ const ECCODashboard = () => {
             </Link>
 
             <Link
-              to="/science-model-dashboard/ECCO/uncertainty"
+              to="/ECCO/uncertainty"
               className="flex items-center p-4 bg-amber-50 rounded-lg border border-amber-100 hover:bg-amber-100 transition-colors"
             >
               <div className="mr-4 bg-amber-100 p-3 rounded-full">

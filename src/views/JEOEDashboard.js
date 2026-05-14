@@ -37,19 +37,19 @@ const JEOEDashboard = () => {
       name: "GRACE",
       icon: <Satellite size={20} style={{ color: '#D946EF' }} />,
       description: "Gravity Recovery and Climate Experiment - Tracking changes in Earth's gravity field to monitor water storage, ice mass, and sea level",
-      link: "/science-model-dashboard/GRACE"
+      link: "/GRACE"
     },
     {
       name: "SWOT",
       icon: <Satellite size={20} style={{ color: '#F59E0B' }} />,
       description: "Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements",
-      link: "/science-model-dashboard/SWOT"
+      link: "/SWOT"
     },
     {
       name: "TROPESS",
       icon: <Satellite size={20} style={{ color: '#0EA5E9' }} />,
       description: "TROPospheric Emission Spectrometer System - Multi-instrument retrievals of CO, CH4, NH3, O3, PAN, HDO/H2O from CrIS and AIRS via the MUSES algorithm",
-      link: "/science-model-dashboard/TROPESS"
+      link: "/TROPESS"
     }
   ];
 

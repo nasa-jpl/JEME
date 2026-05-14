@@ -1,7 +1,7 @@
 {
   "name": "science-model-dashboard",
   "version": "1.0.0",
-  "homepage": "https://yunks128.github.io/science-model-dashboard",
+  "homepage": "https://yunks128.github.io/jeme",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -34,6 +34,7 @@
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
+    "build:gcp": "PUBLIC_URL=/science-model-dashboard react-scripts build",
     "auto-start": "bash scripts/auto-start.sh",
     "ensure-running": "bash scripts/auto-start.sh"
   },

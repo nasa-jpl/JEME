@@ -52,7 +52,7 @@ const HowItWorks = () => {
 
   useEffect(() => {
     // Load the markdown content
-    fetch('/science-model-dashboard/HOW_IT_WORKS.md')
+    fetch('/HOW_IT_WORKS.md')
       .then(response => response.text())
       .then(text => {
         // Extract mermaid diagrams and process them separately
@@ -246,7 +246,7 @@ const HowItWorks = () => {
       {/* Main Content */}
       <main className="max-w-7xl mx-auto px-4 py-6">
         {/* Back to Dashboard Link */}
-        <Link to="/science-model-dashboard" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6">
+        <Link to="/" className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 mb-6">
           <ArrowLeft size={16} />
           <span>Back to Dashboard</span>
         </Link>

@@ -71,49 +71,49 @@ const Dashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} style={{ color: '#3b82f6' }} />,  // Blue
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard/RAPID"
+      link: "/RAPID"
     },
     {
       name: "CMS-Flux",
       icon: <Wind size={20} style={{ color: '#10b981' }} />,  // Green
       description: "Carbon Monitoring System Flux - Atmospheric CO2 inversion system for quantifying carbon sources and sinks",
-      link: "/science-model-dashboard/CMS-Flux"
+      link: "/CMS-Flux"
     },
     {
       name: "ECCO",
       icon: <Waves size={20} style={{ color: '#f97316' }} />,  // Orange
       description: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation system combining models with observations",
-      link: "/science-model-dashboard/ECCO"
+      link: "/ECCO"
     },
     {
       name: "ISSM",
       icon: <Mountain size={20} style={{ color: '#ef4444' }} />,  // Red
       description: "Ice Sheet System Model - Thermomechanical ice sheet model for simulating ice dynamics and sea level change",
-      link: "/science-model-dashboard/ISSM"
+      link: "/ISSM"
     },
     {
       name: "MOMO-CHEM",
       icon: <Atom size={20} style={{ color: '#8b5cf6' }} />,  // Purple
       description: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model for air quality and atmospheric composition studies",
-      link: "/science-model-dashboard/MOMO-CHEM"
+      link: "/MOMO-CHEM"
     },
     {
       name: "CARDAMOM",
       icon: <Leaf size={20} style={{ color: '#eab308' }} />,  // Yellow
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
-      link: "/science-model-dashboard/CARDAMOM"
+      link: "/CARDAMOM"
     },
     {
       name: "LES",
       icon: <CloudLightning size={20} style={{ color: '#2E8B57' }} />,  // Sea Green
       description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
-      link: "/science-model-dashboard/LES"
+      link: "/LES"
     },
     {
       name: "EDMF",
       icon: <Layers size={20} style={{ color: '#FF6347' }} />,  // Tomato
       description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
-      link: "/science-model-dashboard/EDMF"
+      link: "/EDMF"
     }
   ];
 
@@ -129,7 +129,7 @@ const Dashboard = () => {
         {/* JEME Image */}
         <div className="mb-6">
           <img
-            src="/science-model-dashboard/JEME-1slide.jpg"
+            src={process.env.PUBLIC_URL + "/JEME-1slide.jpg"}
             alt="JEME Presentation"
             className="w-full rounded-lg shadow-sm"
           />

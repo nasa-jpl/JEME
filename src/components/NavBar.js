@@ -3,20 +3,20 @@ import { Link } from 'react-router-dom';
 import { ChevronDown } from 'lucide-react';
 
 const MODEL_LINKS = [
-  { name: 'RAPID', path: '/science-model-dashboard/RAPID' },
-  { name: 'CMS-Flux', path: '/science-model-dashboard/CMS-Flux' },
-  { name: 'ECCO', path: '/science-model-dashboard/ECCO' },
-  { name: 'ISSM', path: '/science-model-dashboard/ISSM' },
-  { name: 'MOMO-CHEM', path: '/science-model-dashboard/MOMO-CHEM' },
-  { name: 'CARDAMOM', path: '/science-model-dashboard/CARDAMOM' },
-  { name: 'LES', path: '/science-model-dashboard/LES' },
-  { name: 'EDMF', path: '/science-model-dashboard/EDMF' },
+  { name: 'RAPID', path: '/RAPID' },
+  { name: 'CMS-Flux', path: '/CMS-Flux' },
+  { name: 'ECCO', path: '/ECCO' },
+  { name: 'ISSM', path: '/ISSM' },
+  { name: 'MOMO-CHEM', path: '/MOMO-CHEM' },
+  { name: 'CARDAMOM', path: '/CARDAMOM' },
+  { name: 'LES', path: '/LES' },
+  { name: 'EDMF', path: '/EDMF' },
 ];
 
 const MISSION_LINKS = [
-  { name: 'GRACE', path: '/science-model-dashboard/GRACE' },
-  { name: 'SWOT', path: '/science-model-dashboard/SWOT' },
-  { name: 'TROPESS', path: '/science-model-dashboard/TROPESS' },
+  { name: 'GRACE', path: '/GRACE' },
+  { name: 'SWOT', path: '/SWOT' },
+  { name: 'TROPESS', path: '/TROPESS' },
 ];
 
 const NavBar = ({ activeItem }) => {
@@ -47,10 +47,10 @@ const NavBar = ({ activeItem }) => {
     const favicon = document.querySelector('link[rel="icon"]');
     if (isJEOE) {
       document.title = 'JEOE';
-      if (favicon) favicon.href = '/science-model-dashboard/favicon-jeoe.svg';
+      if (favicon) favicon.href = process.env.PUBLIC_URL + '/favicon-jeoe.svg';
     } else {
       document.title = 'JEME';
-      if (favicon) favicon.href = '/science-model-dashboard/favicon.svg';
+      if (favicon) favicon.href = process.env.PUBLIC_URL + '/favicon.svg';
     }
   }, [isJEOE]);
 
@@ -61,9 +61,9 @@ const NavBar = ({ activeItem }) => {
   return (
     <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
-        <Link to={isJEOE ? "/science-model-dashboard/JEOE" : "/science-model-dashboard"} className="flex items-center gap-3">
+        <Link to={isJEOE ? "/JEOE" : "/"} className="flex items-center gap-3">
           <img
-            src={isJEOE ? "/science-model-dashboard/favicon-jeoe.svg" : "/science-model-dashboard/favicon.svg"}
+            src={isJEOE ? process.env.PUBLIC_URL + "/favicon-jeoe.svg" : process.env.PUBLIC_URL + "/favicon.svg"}
             alt={isJEOE ? "JEOE" : "JEME"}
             className="h-10 w-10 rounded-md"
           />
@@ -77,7 +77,7 @@ const NavBar = ({ activeItem }) => {
           {isJEOE ? (
             <>
               <Link
-                to="/science-model-dashboard/JEOE"
+                to="/JEOE"
                 className={activeItem === 'JEOE Dashboard' ? activeClass : inactiveClass}
               >
                 JEOE
@@ -117,7 +117,7 @@ const NavBar = ({ activeItem }) => {
           ) : (
             <>
               <Link
-                to="/science-model-dashboard"
+                to="/"
                 className={activeItem === 'Dashboard' ? activeClass : inactiveClass}
               >
                 JEME
@@ -154,7 +154,7 @@ const NavBar = ({ activeItem }) => {
               </div>
 
               <Link
-                to="/science-model-dashboard/earth-system"
+                to="/earth-system"
                 className={activeItem === 'Earth System' ? activeClass : inactiveClass}
               >
                 Earth System
@@ -165,7 +165,7 @@ const NavBar = ({ activeItem }) => {
           )}
 
           <Link
-            to="/science-model-dashboard/how-it-works"
+            to="/how-it-works"
             className={activeItem === 'How It Works' ? activeClass : inactiveClass}
           >
             How It Works

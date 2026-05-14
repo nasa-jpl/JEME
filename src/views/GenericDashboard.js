@@ -27,7 +27,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
   useEffect(() => {
     const fetchModelInfo = async () => {
       try {
-        const response = await fetch(`/science-model-dashboard/models/${modelName}.md`);
+        const response = await fetch(`/models/${modelName}.md`);
         if (response.ok) {
           const text = await response.text();
           // Parse markdown sections
@@ -71,49 +71,49 @@ const GenericDashboard = ({ modelName, citationsData }) => {
       name: "RAPID",
       icon: <Zap size={20} className="text-blue-600" />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "/science-model-dashboard/RAPID"
+      link: "/RAPID"
     },
     {
       name: "CMS-Flux",
       icon: <Wind size={20} className="text-green-600" />,
       description: "Carbon Monitoring System Flux - Atmospheric CO2 inversion system for quantifying carbon sources and sinks",
-      link: "/science-model-dashboard/CMS-Flux"
+      link: "/CMS-Flux"
     },
     {
       name: "ECCO",
       icon: <Waves size={20} className="text-teal-600" />,
       description: "Estimating the Circulation and Climate of the Ocean - Global ocean state estimation system combining models with observations",
-      link: "/science-model-dashboard/ECCO"
+      link: "/ECCO"
     },
     {
       name: "ISSM",
       icon: <Mountain size={20} className="text-indigo-600" />,
       description: "Ice Sheet System Model - Thermomechanical ice sheet model for simulating ice dynamics and sea level change",
-      link: "/science-model-dashboard/ISSM"
+      link: "/ISSM"
     },
     {
       name: "MOMO-CHEM",
       icon: <Atom size={20} className="text-purple-600" />,
       description: "Multi-scale Modeling of Atmospheric Chemistry - Chemical transport model for air quality and atmospheric composition studies",
-      link: "/science-model-dashboard/MOMO-CHEM"
+      link: "/MOMO-CHEM"
     },
     {
       name: "CARDAMOM",
       icon: <Leaf size={20} className="text-emerald-600" />,
       description: "Carbon Data Model Framework - Terrestrial carbon cycle data assimilation system for ecosystem carbon stock estimation",
-      link: "/science-model-dashboard/CARDAMOM"
+      link: "/CARDAMOM"
     },
     {
       name: "LES",
       icon: <CloudLightning size={20} className="text-teal-600" />,
       description: "Large Eddy Simulation for Atmospheric Studies - High-resolution atmospheric modeling and boundary layer studies",
-      link: "/science-model-dashboard/LES"
+      link: "/LES"
     },
     {
       name: "EDMF",
       icon: <Layers size={20} className="text-orange-600" />,
       description: "Eddy Diffusivity Mass Flux Scheme - Parameterization scheme for turbulent mixing and convective transport in atmospheric models",
-      link: "/science-model-dashboard/EDMF"
+      link: "/EDMF"
     }
   ];
 
@@ -229,16 +229,16 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           </div>
           
           <div className="flex gap-8">
-            <Link to="/science-model-dashboard" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
-            <Link to="/science-model-dashboard/RAPID" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
-            <Link to="/science-model-dashboard/CMS-Flux" className={`font-medium text-sm ${modelName === 'CMS-Flux' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CMS-Flux</Link>
-            <Link to="/science-model-dashboard/ECCO" className={`font-medium text-sm ${modelName === 'ECCO' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ECCO</Link>
-            <Link to="/science-model-dashboard/ISSM" className={`font-medium text-sm ${modelName === 'ISSM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ISSM</Link>
-            <Link to="/science-model-dashboard/MOMO-CHEM" className={`font-medium text-sm ${modelName === 'MOMO-CHEM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>MOMO-CHEM</Link>
-            <Link to="/science-model-dashboard/CARDAMOM" className={`font-medium text-sm ${modelName === 'CARDAMOM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CARDAMOM</Link>
-            <Link to="/science-model-dashboard/LES" className={`font-medium text-sm ${modelName === 'LES' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>LES</Link>
-            <Link to="/science-model-dashboard/EDMF" className={`font-medium text-sm ${modelName === 'EDMF' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>EDMF</Link>
-            <Link to="/science-model-dashboard/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
+            <Link to="/" className="text-gray-600 hover:text-gray-800 font-medium text-sm">Dashboard</Link>
+            <Link to="/RAPID" className={`font-medium text-sm ${modelName === 'RAPID' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>RAPID</Link>
+            <Link to="/CMS-Flux" className={`font-medium text-sm ${modelName === 'CMS-Flux' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CMS-Flux</Link>
+            <Link to="/ECCO" className={`font-medium text-sm ${modelName === 'ECCO' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ECCO</Link>
+            <Link to="/ISSM" className={`font-medium text-sm ${modelName === 'ISSM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>ISSM</Link>
+            <Link to="/MOMO-CHEM" className={`font-medium text-sm ${modelName === 'MOMO-CHEM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>MOMO-CHEM</Link>
+            <Link to="/CARDAMOM" className={`font-medium text-sm ${modelName === 'CARDAMOM' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>CARDAMOM</Link>
+            <Link to="/LES" className={`font-medium text-sm ${modelName === 'LES' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>LES</Link>
+            <Link to="/EDMF" className={`font-medium text-sm ${modelName === 'EDMF' ? 'text-blue-600 border-b-2 border-blue-600' : 'text-gray-600 hover:text-gray-800'}`}>EDMF</Link>
+            <Link to="/how-it-works" className="text-gray-600 hover:text-gray-800 font-medium text-sm">How It Works</Link>
           </div>
           
           <div className="flex items-center gap-4">
@@ -535,7 +535,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           <div className="p-6">
             <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
               <Link
-                to={`/science-model-dashboard/${modelName}/citations`}
+                to={`/${modelName}/citations`}
                 className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <div>
@@ -546,7 +546,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
               </Link>
               
               <Link
-                to={`/science-model-dashboard/${modelName}/geographic-impact`}
+                to={`/${modelName}/geographic-impact`}
                 className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <div>
@@ -557,7 +557,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
               </Link>
               
               <Link
-                to={`/science-model-dashboard/${modelName}/research-domains`}
+                to={`/${modelName}/research-domains`}
                 className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <div>
@@ -568,7 +568,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
               </Link>
 
               <Link
-                to={`/science-model-dashboard/${modelName}/uncertainty`}
+                to={`/${modelName}/uncertainty`}
                 className="flex items-center justify-between p-4 border rounded-lg hover:bg-gray-50 transition-colors"
               >
                 <div>

@@ -217,7 +217,7 @@ const CMSFluxResearchDomainsPage = () => {
       <header className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
         <div className="max-w-7xl mx-auto px-4 py-4">
           <div className="flex items-center">
-            <Link to="/science-model-dashboard/CMS-Flux" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
+            <Link to="/CMS-Flux" className="flex items-center text-blue-600 hover:text-blue-800 mr-6">
               <ArrowLeft size={18} className="mr-1" />
               <span className="font-medium">Back to CMS-Flux Dashboard</span>
             </Link>

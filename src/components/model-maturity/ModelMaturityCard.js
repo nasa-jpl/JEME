@@ -86,7 +86,7 @@ const ModelMaturityCard = ({ modelName, modelData }) => {
 
       {/* Detail link */}
       <Link
-        to={`/science-model-dashboard/${modelName}/maturity`}
+        to={`/${modelName}/maturity`}
         className="flex items-center justify-center gap-1 text-xs font-medium text-blue-600 hover:text-blue-800 mt-2 py-1.5 border border-blue-200 rounded-lg hover:bg-blue-50 transition-colors"
       >
         View Details <ChevronRight size={12} />

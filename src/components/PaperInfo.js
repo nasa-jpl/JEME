@@ -21,7 +21,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load RAPID team papers from JSON file
   useEffect(() => {
     if (modelName === 'RAPID') {
-      fetch('/science-model-dashboard/data/rapid_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/rapid_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.RAPID) {
@@ -37,7 +37,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load CMS-Flux team papers from JSON file
   useEffect(() => {
     if (modelName === 'CMS-Flux') {
-      fetch('/science-model-dashboard/data/cms_flux_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/cms_flux_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data['CMS-Flux']) {
@@ -53,7 +53,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load ECCO team papers from JSON file
   useEffect(() => {
     if (modelName === 'ECCO') {
-      fetch('/science-model-dashboard/data/ecco_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/ecco_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.ECCO) {
@@ -69,7 +69,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load ISSM team papers from JSON file
   useEffect(() => {
     if (modelName === 'ISSM') {
-      fetch('/science-model-dashboard/data/issm_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/issm_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.ISSM) {
@@ -85,7 +85,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load MOMO-CHEM team papers from JSON file
   useEffect(() => {
     if (modelName === 'MOMO-CHEM') {
-      fetch('/science-model-dashboard/data/momo_chem_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/momo_chem_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data['MOMO-CHEM']) {
@@ -101,7 +101,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load CARDAMOM team papers from JSON file
   useEffect(() => {
     if (modelName === 'CARDAMOM') {
-      fetch('/science-model-dashboard/data/cardamom_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/cardamom_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.CARDAMOM) {
@@ -117,7 +117,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load LES team papers from JSON file
   useEffect(() => {
     if (modelName === 'LES') {
-      fetch('/science-model-dashboard/data/LES_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/LES_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.papers) {
@@ -142,7 +142,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load EDMF team papers from JSON file
   useEffect(() => {
     if (modelName === 'EDMF') {
-      fetch('/science-model-dashboard/data/EDMF_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/EDMF_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.papers) {
@@ -167,7 +167,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load GRACE team papers from JSON file
   useEffect(() => {
     if (modelName === 'GRACE') {
-      fetch('/science-model-dashboard/data/grace_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/grace_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.GRACE) {
@@ -183,7 +183,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load SWOT team papers from JSON file
   useEffect(() => {
     if (modelName === 'SWOT') {
-      fetch('/science-model-dashboard/data/swot_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/swot_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.SWOT) {
@@ -199,7 +199,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   // Load TROPESS team papers from JSON file
   useEffect(() => {
     if (modelName === 'TROPESS') {
-      fetch('/science-model-dashboard/data/tropess_team_papers.json')
+      fetch(process.env.PUBLIC_URL + '/data/tropess_team_papers.json')
         .then(response => response.json())
         .then(data => {
           if (data.TROPESS) {

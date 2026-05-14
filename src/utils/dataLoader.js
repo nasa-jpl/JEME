@@ -6,7 +6,7 @@ const dataCache = new Map();
 
 /**
  * Get the base path for data files.
- * In production (GitHub Pages): /science-model-dashboard/data/
+ * In production (GitHub Pages): /data/
  * In development: /data/
  */
 function getBasePath() {

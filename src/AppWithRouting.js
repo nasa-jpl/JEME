@@ -47,60 +47,58 @@ import GenericMaturityPage from './views/GenericMaturityPage';
 
 function AppWithRouting() {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         {/* Main Dashboard */}
-        <Route path="/science-model-dashboard" element={<Dashboard />} />
-        
+        <Route path="/" element={<Dashboard />} />
+
         {/* Model-specific dashboard routes */}
-        <Route path="/science-model-dashboard/RAPID" element={<RAPIDDashboard />} />
-        <Route path="/science-model-dashboard/CMS-Flux" element={<CMSFluxDashboard />} />
-        <Route path="/science-model-dashboard/ECCO" element={<ECCODashboard />} />
-        <Route path="/science-model-dashboard/ISSM" element={<ISSMDashboard />} />
-        <Route path="/science-model-dashboard/MOMO-CHEM" element={<MOMOCHEMDashboard />} />
-        <Route path="/science-model-dashboard/CARDAMOM" element={<CARDAMOMDashboard />} />
+        <Route path="/RAPID" element={<RAPIDDashboard />} />
+        <Route path="/CMS-Flux" element={<CMSFluxDashboard />} />
+        <Route path="/ECCO" element={<ECCODashboard />} />
+        <Route path="/ISSM" element={<ISSMDashboard />} />
+        <Route path="/MOMO-CHEM" element={<MOMOCHEMDashboard />} />
+        <Route path="/CARDAMOM" element={<CARDAMOMDashboard />} />
         {/* LES and EDMF - Now with real citation data! */}
-        <Route path="/science-model-dashboard/LES" element={<LESDashboard />} />
-        <Route path="/science-model-dashboard/EDMF" element={<EDMFDashboard />} />
+        <Route path="/LES" element={<LESDashboard />} />
+        <Route path="/EDMF" element={<EDMFDashboard />} />
         {/* JEOE Dashboard */}
-        <Route path="/science-model-dashboard/JEOE" element={<JEOEDashboard />} />
+        <Route path="/JEOE" element={<JEOEDashboard />} />
         {/* Mission dashboards */}
-        <Route path="/science-model-dashboard/GRACE" element={<GRACEDashboard />} />
-        <Route path="/science-model-dashboard/SWOT" element={<SWOTDashboard />} />
-        <Route path="/science-model-dashboard/TROPESS" element={<TROPESSDashboard />} />
+        <Route path="/GRACE" element={<GRACEDashboard />} />
+        <Route path="/SWOT" element={<SWOTDashboard />} />
+        <Route path="/TROPESS" element={<TROPESSDashboard />} />
 
         {/* Earth System Interconnections page */}
-        <Route path="/science-model-dashboard/earth-system" element={<EarthSystemPage />} />
+        <Route path="/earth-system" element={<EarthSystemPage />} />
 
         {/* Model Maturity pages */}
-        <Route path="/science-model-dashboard/model-maturity" element={<ModelMaturityPage />} />
-        <Route path="/science-model-dashboard/:modelName/maturity" element={<GenericMaturityPage />} />
+        <Route path="/model-maturity" element={<ModelMaturityPage />} />
+        <Route path="/:modelName/maturity" element={<GenericMaturityPage />} />
 
         {/* How It Works page */}
-        <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />
-        
+        <Route path="/how-it-works" element={<HowItWorks />} />
+
         {/* Legacy routes (keeping RAPID as default for backward compatibility) */}
         <Route path="/citations" element={<CitationsPage />} />
         <Route path="/geographic-impact" element={<GeographicImpactPage />} />
         <Route path="/research-domains" element={<ResearchDomainsPage />} />
-        
-        {/* RAPID uses legacy pages directly */}
-        
+
         {/* Model-specific routes */}
-        <Route path="/science-model-dashboard/CMS-Flux/research-domains" element={<CMSFluxResearchDomainsPage />} />
-        <Route path="/science-model-dashboard/ECCO/research-domains" element={<ECCOResearchDomainsPage />} />
-        <Route path="/science-model-dashboard/ISSM/research-domains" element={<ISSMResearchDomainsPage />} />
-        <Route path="/science-model-dashboard/CARDAMOM/research-domains" element={<CARDAMOMResearchDomainsPage />} />
-        <Route path="/science-model-dashboard/MOMO-CHEM/research-domains" element={<MOMOCHEMResearchDomainsPage />} />
-        
+        <Route path="/CMS-Flux/research-domains" element={<CMSFluxResearchDomainsPage />} />
+        <Route path="/ECCO/research-domains" element={<ECCOResearchDomainsPage />} />
+        <Route path="/ISSM/research-domains" element={<ISSMResearchDomainsPage />} />
+        <Route path="/CARDAMOM/research-domains" element={<CARDAMOMResearchDomainsPage />} />
+        <Route path="/MOMO-CHEM/research-domains" element={<MOMOCHEMResearchDomainsPage />} />
+
         {/* Generic routes for all models - these work with any model name */}
-        <Route path="/science-model-dashboard/:modelName/citations" element={<GenericCitationsPage />} />
-        <Route path="/science-model-dashboard/:modelName/geographic-impact" element={<GenericGeographicImpactPage />} />
-        <Route path="/science-model-dashboard/:modelName/research-domains" element={<GenericResearchDomainsPage />} />
-        <Route path="/science-model-dashboard/:modelName/uncertainty" element={<GenericUncertaintyPage />} />
+        <Route path="/:modelName/citations" element={<GenericCitationsPage />} />
+        <Route path="/:modelName/geographic-impact" element={<GenericGeographicImpactPage />} />
+        <Route path="/:modelName/research-domains" element={<GenericResearchDomainsPage />} />
+        <Route path="/:modelName/uncertainty" element={<GenericUncertaintyPage />} />
 
         {/* Fallback route for any unmatched paths */}
-        <Route path="*" element={<Navigate to="/science-model-dashboard" />} />
+        <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </BrowserRouter>
   );
