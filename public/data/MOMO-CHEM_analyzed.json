@@ -1396,7 +1396,7 @@
     },
     "citing_team_paper": "Predictability of fossil fuel CO2 from air quality emissions",
     "team_paper_id": "d9dcf925995325a21dfcd288cc108b1432d73d72",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Capture Technology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -1438,12 +1438,8 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Carbon Capture & Storage (CCS)",
-      "Materials Science",
-      "Chemical Engineering",
-      "Bioenergy & Biomass Conversion",
-      "Environmental Engineering",
-      "Sustainable Chemistry"
+      "Carbon Capture Technology",
+      "Materials Science"
     ]
   },
   {
@@ -1554,7 +1550,7 @@
     },
     "citing_team_paper": "Predictability of fossil fuel CO2 from air quality emissions",
     "team_paper_id": "d9dcf925995325a21dfcd288cc108b1432d73d72",
-    "research_domain": "General Science",
+    "research_domain": "Hydrogen Energy Systems",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -1596,13 +1592,8 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Hydrogen Energy",
-      "Fuel Cell Technology",
-      "Renewable Energy Systems",
-      "Optimization Algorithms",
-      "Microgrids",
-      "Energy Storage",
-      "Power Systems Engineering"
+      "Hydrogen Energy Systems",
+      "Energy Systems"
     ]
   },
   {
@@ -2572,7 +2563,7 @@
     },
     "citing_team_paper": "Predictability of fossil fuel CO2 from air quality emissions",
     "team_paper_id": "d9dcf925995325a21dfcd288cc108b1432d73d72",
-    "research_domain": "General Science",
+    "research_domain": "Materials Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -2615,11 +2606,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Materials Science",
-      "Nanotechnology",
-      "Wood Science",
-      "Biomaterials",
-      "Chemical Engineering",
-      "Environmental Engineering"
+      "Nanotechnology"
     ]
   },
   {
@@ -19915,7 +19902,7 @@
     },
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 world-wide lockdowns",
     "team_paper_id": "25838dea890680a5ec25032c03325307dcb6dd9f",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Health",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -19959,10 +19946,8 @@
     "research_domains": [
       "Environmental Health",
       "Public Health",
-      "Environmental Science",
-      "Policy & Governance",
-      "Human-Environment Interaction",
-      "Epidemiology"
+      "Environmental Policy",
+      "Climate Change"
     ]
   },
   {
@@ -21910,7 +21895,7 @@
     },
     "citing_team_paper": "Intercomparison of Magnitudes and Trends in Anthropogenic Surface Emissions From Bottom‐Up Inventories, Top‐Down Estimates, and Emission Scenarios",
     "team_paper_id": "649c2d913f180825cd2bef571e0782e98431b0a6",
-    "research_domain": "General Science",
+    "research_domain": "Machine Learning",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -21953,10 +21938,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Machine Learning",
-      "Energy Systems",
-      "Forecasting",
-      "Power Systems Engineering",
-      "Artificial Intelligence"
+      "Energy Systems"
     ]
   },
   {
@@ -26906,7 +26888,7 @@
     },
     "citing_team_paper": "Air quality response in China linked to the 2019 novel coronavirus (COVID‐19) lockdown",
     "team_paper_id": "adced0cdd6c7e6e85caff7c6e16e50b56c2215c3",
-    "research_domain": "General Science",
+    "research_domain": "Corporate Sustainability",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -26948,10 +26930,8 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Business & Finance",
-      "Sustainability Science",
-      "Social Science Research Methods",
-      "Environmental Policy & Management"
+      "Corporate Sustainability",
+      "Business & Finance"
     ]
   },
   {
@@ -45134,7 +45114,7 @@
     },
     "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
     "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
-    "research_domain": "General Science",
+    "research_domain": "Aerosol Processes & Effects",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -45176,10 +45156,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Combustion Science",
+      "Aerosol Processes & Effects",
       "Air Quality",
-      "Material Science",
-      "Automotive Engineering"
+      "Atmospheric Chemistry"
     ]
   },
   {
@@ -47681,7 +47660,7 @@
     },
     "citing_team_paper": "Unexpected slowdown of US pollutant emission reduction in the past decade",
     "team_paper_id": "9148656ce06396af406f06031dc3eabf1a6265fd",
-    "research_domain": "General Science",
+    "research_domain": "Satellite Atmospheric Observations",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -47748,10 +47727,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Satellite Atmospheric Observations",
       "Remote Sensing",
       "Atmospheric Chemistry",
       "Air Quality",
-      "Emissions Modeling"
+      "Environmental Monitoring"
     ]
   },
   {
@@ -50407,7 +50387,7 @@
     },
     "citing_team_paper": "Intercomparison of NOx emission inventories over East Asia",
     "team_paper_id": "55225c4d40048ab9f81bf71ccba71f1f9fb3535d",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -50450,10 +50430,8 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Air Quality",
-      "Atmospheric Science",
-      "Environmental Chemistry",
-      "Biogeochemistry",
-      "Environmental Policy"
+      "Emission Inventories",
+      "Atmospheric Chemistry"
     ]
   },
   {
@@ -56564,7 +56542,7 @@
     },
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
-    "research_domain": "General Science",
+    "research_domain": "Materials Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -56606,11 +56584,7 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Computational Chemistry",
-      "Materials Science",
-      "Catalysis",
-      "Surface Science",
-      "Chemical Engineering"
+      "Materials Science"
     ]
   },
   {
@@ -59061,7 +59035,7 @@
     },
     "citing_team_paper": "Decadal changes in global surface NOx emissions from multi-constituent satellite data assimilation",
     "team_paper_id": "ac764dec8d5980d0e1ffdb5e9c2141ff33997178",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -59104,10 +59078,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Atmospheric Chemistry",
-      "Isotope Geochemistry",
-      "Hydrology & Water Resources",
-      "Air Quality",
-      "Environmental Chemistry"
+      "Environmental Science"
     ]
   },
   {
@@ -71828,7 +71799,7 @@
     },
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "5ea42c076256ce5a3b293febdc4a1c5df9f5a971",
-    "research_domain": "General Science",
+    "research_domain": "Philosophy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -71871,9 +71842,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Philosophy",
-      "Sociology",
-      "Cognitive Science",
-      "Ethics"
+      "Social Sciences"
     ]
   },
   {
@@ -75071,7 +75040,7 @@
     },
     "citing_team_paper": "Observational evidence for interhemispheric hydroxyl-radical parity",
     "team_paper_id": "88660b228bc06d663da2e53f1c1089d238aa202c",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -75113,13 +75082,8 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Environmental Chemistry",
-      "Geochemistry",
-      "Soil Science",
-      "Hydrology & Water Resources",
-      "Photochemistry",
-      "Biogeochemistry",
-      "Mineralogy"
+      "Environmental Science",
+      "Biogeochemistry"
     ]
   },
   {
@@ -83209,7 +83173,7 @@
     },
     "citing_team_paper": "Simultaneous assimilation of satellite NO2, O3, CO, HNO3 data for the analysis of tropospheric chemical composition and emissions",
     "team_paper_id": "6f95d80b38acaf1f45faaa22765705705e98c4eb",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -83252,8 +83216,8 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Atmospheric Chemistry",
-      "Biogeochemistry",
-      "Air Quality"
+      "Air Quality",
+      "Environmental Monitoring"
     ]
   },
   {
@@ -87627,7 +87591,7 @@
     },
     "citing_team_paper": "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns",
     "team_paper_id": "913177eecab25f503ec4365e3d2eff3c96c42557",
-    "research_domain": "General Science",
+    "research_domain": "Materials Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -87670,8 +87634,6 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Materials Science",
-      "Environmental Engineering",
-      "Chemical Engineering",
       "Air Quality"
     ]
   },
@@ -87785,7 +87747,7 @@
     },
     "citing_team_paper": "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns",
     "team_paper_id": "913177eecab25f503ec4365e3d2eff3c96c42557",
-    "research_domain": "General Science",
+    "research_domain": "Materials Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -87828,9 +87790,6 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Materials Science",
-      "Nanotechnology",
-      "Environmental Engineering",
-      "Chemical Engineering",
       "Air Quality"
     ]
   },
@@ -88733,7 +88692,7 @@
     },
     "citing_team_paper": "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns",
     "team_paper_id": "913177eecab25f503ec4365e3d2eff3c96c42557",
-    "research_domain": "General Science",
+    "research_domain": "Ecosystem Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -88776,11 +88735,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Ecosystem Science",
-      "Biogeochemistry",
-      "Climate Change Impacts",
-      "Hydrology & Water Resources",
-      "Plant Ecology",
-      "Soil Science"
+      "Environmental Science"
     ]
   },
   {
@@ -90773,7 +90728,7 @@
     },
     "citing_team_paper": "Global NOx emission estimates derived from an assimilation of OMI tropospheric NO2 columns",
     "team_paper_id": "913177eecab25f503ec4365e3d2eff3c96c42557",
-    "research_domain": "General Science",
+    "research_domain": "Ecosystem Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -90816,11 +90771,9 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Ecosystem Science",
-      "Plant Physiology",
       "Soil Science",
       "Biogeochemistry",
-      "Hydrology & Water Resources",
-      "Land Use Change"
+      "Hydrology & Water Resources"
     ]
   },
   {
@@ -92079,7 +92032,7 @@
     },
     "citing_team_paper": "A comprehensive assessment of yield loss in rice due to surface ozone pollution in India during 2005–2020: A great concern for food security",
     "team_paper_id": "438231ab4ba6793cc2a28be8519a8416014da820",
-    "research_domain": "General Science",
+    "research_domain": "Agronomy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -92121,10 +92074,7 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Agricultural Economics",
-      "Agricultural Statistics",
-      "Crop Science",
-      "Food Security",
+      "Agronomy",
       "Data Analysis"
     ]
   },

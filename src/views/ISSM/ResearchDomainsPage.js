@@ -138,7 +138,7 @@ const ISSMResearchDomainsPage = () => {
       "Snow & Firn Processes": "bg-emerald-100 text-emerald-800",
       "Remote Sensing of Ice": "bg-violet-100 text-violet-800",
       "Ice Sheet Modeling & Methods": "bg-amber-100 text-amber-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

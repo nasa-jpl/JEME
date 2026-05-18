@@ -138,7 +138,7 @@ const CMSFluxResearchDomainsPage = () => {
       "Biomass & Fire Emissions": "bg-red-100 text-red-800",
       "Satellite Carbon Observations": "bg-indigo-100 text-indigo-800",
       "Carbon Cycle Modeling": "bg-teal-100 text-teal-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

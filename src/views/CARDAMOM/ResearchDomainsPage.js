@@ -138,7 +138,7 @@ const CARDAMOMResearchDomainsPage = () => {
       "Arctic & Permafrost Carbon": "bg-cyan-100 text-cyan-800",
       "Remote Sensing of Ecosystems": "bg-indigo-100 text-indigo-800",
       "Climate Projections & Feedbacks": "bg-rose-100 text-rose-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

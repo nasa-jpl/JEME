@@ -9269,7 +9269,7 @@
     },
     "citing_team_paper": "Carbon Flux Variability From a Relatively Simple Ecosystem Model With Assimilated Data Is Consistent With Terrestrial Biosphere Model Estimates",
     "team_paper_id": "75f48e0c1c275e862ca5302867b9193403b08545",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Data Assimilation",
     "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [],
     "uncertainty": {
@@ -9311,15 +9311,14 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Model-Data Fusion",
-      "Carbon Cycle",
-      "Hydrology & Water Resources",
+      "Carbon Data Assimilation",
       "Ecosystem Science",
       "Biogeochemistry",
+      "Carbon Cycle",
       "Land Surface Modeling",
-      "Bayesian Statistics",
-      "Numerical Methods",
-      "Model Development & Evaluation"
+      "Data Assimilation",
+      "Hydrology & Water Resources",
+      "Ecosystem Modeling"
     ]
   },
   {
@@ -24988,7 +24987,7 @@
     },
     "citing_team_paper": "Large loss of CO2 in winter observed across the northern permafrost region",
     "team_paper_id": "07d1d5375846d95bff05bafce7d84c378c207e03",
-    "research_domain": "General Science",
+    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -25032,8 +25031,8 @@
     "research_domains": [
       "Cryosphere & Glaciology",
       "Climate Change",
-      "Remote Sensing",
-      "Climate Science"
+      "Polar Science",
+      "Environmental Monitoring"
     ]
   },
   {
@@ -26994,7 +26993,7 @@
     },
     "citing_team_paper": "Inverse Determination of the Influence of Fire on Vegetation Carbon Turnover in the Pantropics",
     "team_paper_id": "8d4f06c95580b262633e1fde9edb84a0c45ee996",
-    "research_domain": "General Science",
+    "research_domain": "Forest Ecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -27036,10 +27035,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Forest Ecology",
       "Ecosystem Science",
-      "Social Science",
       "Environmental Science",
-      "Conservation Biology"
+      "Vegetation & Forest Dynamics"
     ]
   },
   {
@@ -37275,7 +37274,7 @@
     },
     "citing_team_paper": "The decadal state of the terrestrial carbon cycle: Global retrievals of terrestrial carbon allocation, pools, and residence times",
     "team_paper_id": "0cbca2540d3fea5727c8354c80d4f717d376129a",
-    "research_domain": "General Science",
+    "research_domain": "Ecological Modeling",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -37317,12 +37316,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Ecological Modeling",
       "Ecosystem Science",
-      "Data Science",
       "Machine Learning",
-      "Environmental Science",
-      "Computational Science",
-      "Remote Sensing"
+      "Data Assimilation",
+      "Numerical Methods"
     ]
   },
   {

@@ -137,7 +137,7 @@ const MOMOCHEMResearchDomainsPage = () => {
       "Wildfire & Biomass Burning": "bg-rose-100 text-rose-800",
       "Satellite Atmospheric Observations": "bg-indigo-100 text-indigo-800",
       "Climate-Chemistry Interactions": "bg-cyan-100 text-cyan-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

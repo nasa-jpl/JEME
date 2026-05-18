@@ -1704,7 +1704,7 @@
     },
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "5ea42c076256ce5a3b293febdc4a1c5df9f5a971",
-    "research_domain": "General Science",
+    "research_domain": "Phytochemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -1746,12 +1746,8 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Analytical Chemistry",
-      "Organic Chemistry",
-      "Forestry",
-      "Biochemistry",
-      "Natural Products Chemistry",
-      "Chemical Engineering"
+      "Phytochemistry",
+      "Natural Products Chemistry"
     ]
   },
   {
@@ -2622,7 +2618,7 @@
     },
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "5ea42c076256ce5a3b293febdc4a1c5df9f5a971",
-    "research_domain": "General Science",
+    "research_domain": "Philosophy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -2665,9 +2661,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Philosophy",
-      "Sociology",
-      "Cognitive Science",
-      "Ethics"
+      "Social Sciences"
     ]
   },
   {
@@ -7261,7 +7255,7 @@
     },
     "citing_team_paper": "National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake",
     "team_paper_id": "7894ca03e794bea29416947655547899879eee6e",
-    "research_domain": "General Science",
+    "research_domain": "Data Analysis",
     "engagement_level": "Level 3: Foundational Method",
     "missions_instruments": [],
     "uncertainty": {
@@ -7303,11 +7297,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Data Science",
-      "Carbon Cycle",
-      "Environmental Policy",
-      "Science Communication",
-      "Earth System Science"
+      "Data Analysis",
+      "Numerical Methods",
+      "Environmental Monitoring"
     ]
   },
   {
@@ -15671,7 +15663,7 @@
     },
     "citing_team_paper": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
     "team_paper_id": "4a7a09d3dcd3ab30270cc49cf223e0b084695b17",
-    "research_domain": "General Science",
+    "research_domain": "Climate Change Impacts",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -15721,11 +15713,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Climate Science",
-      "Ecosystem Science",
       "Climate Change Impacts",
-      "Climate Extremes",
-      "Environmental Science"
+      "Ecosystem Science",
+      "Climate Science"
     ]
   },
   {
@@ -32860,7 +32850,7 @@
     },
     "citing_team_paper": "Contrasting carbon cycle responses of the tropical continents to the 2015-2016 El Nino",
     "team_paper_id": "fe5a00037f2a5653b94f9df1c8f182c1950457a4",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -32902,9 +32892,7 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Statistical Methods",
-      "Applied Mathematics",
-      "Complex Systems",
+      "Numerical Methods",
       "Data Analysis"
     ]
   },
@@ -57355,7 +57343,7 @@
     },
     "citing_team_paper": "Carbon monitoring system flux estimation and attribution: impact of ACOS-GOSAT XCO2 sampling on the inference of terrestrial biospheric sources and sinks",
     "team_paper_id": "0bccc7c088bc7c2e22d1579c931c2441af128ea9",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Policy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -57397,12 +57385,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Carbon Cycle",
-      "Remote Sensing",
-      "Ecosystem Science",
-      "Science Communication & Policy",
-      "Data Science",
-      "Arctic Science"
+      "Environmental Policy",
+      "Data Analysis",
+      "Environmental Science"
     ]
   },
   {

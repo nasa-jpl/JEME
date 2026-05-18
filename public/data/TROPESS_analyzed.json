@@ -1386,7 +1386,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1438,7 +1438,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry & Reanalysis",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
@@ -1469,7 +1473,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1521,7 +1525,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder: comparison with ATom aircraft measurements",
@@ -1981,7 +1989,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -2026,7 +2034,13 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison",
+      "Wildfire & Biomass Burning Emissions",
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Changes to Peroxyacyl Nitrates (PANs) Over Megacities in Response to COVID-19 Tropospheric NO2 Reductions Observed by the Cross-Track Infrared Sounder (CrIS)",
@@ -2203,7 +2217,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -2248,7 +2262,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison",
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Assessment of 16-year tropospheric ozone trends from the IASI Climate Data Record",
@@ -2353,7 +2372,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -2398,7 +2417,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "An algorithm to retrieve peroxyacetyl nitrate from AIRS",
@@ -3431,7 +3454,7 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -3476,7 +3499,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Within-City Variation in Ambient Carbon Monoxide Concentrations: Leveraging Low-Cost Monitors in a Spatiotemporal Modeling Framework",
@@ -4297,7 +4324,7 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -4342,7 +4369,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Correcting model biases of CO in East Asia: impact on oxidant distributions during KORUS-AQ.",
@@ -4656,7 +4687,7 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -4701,7 +4732,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry & Reanalysis",
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Validation of Carbon Monoxide Total Column Retrievals from SCIAMACHY Observations with NDACC/TCCON Ground-Based Measurements",
@@ -4987,7 +5023,7 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -5032,7 +5068,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Spectral analysis of atmospheric composition: application to surface ozone model–measurement comparisons",
@@ -5416,7 +5456,7 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -5461,7 +5501,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "High Ozone Concentrations Observed along the Persian Gulf Coast by Ozone Monitoring Instrument",
@@ -6260,7 +6304,7 @@
     "country": null,
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -6305,7 +6349,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison",
+      "Trace Gas Products",
+      "Air Quality & Megacity Studies"
+    ]
   },
   {
     "title": "Vertical distribution of tropospheric ozone and its sources of precursors over Beijing: Results from ∼ 20 years of ozonesonde measurements based on clustering analysis",
@@ -6478,7 +6527,7 @@
     "country": null,
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -6523,7 +6572,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Radiative Transfer & Forward Modeling"
+    ]
   },
   {
     "title": "The influence of the summer tropospheric circulation on the observed ozone mixing ratios at a coastal site in the Eastern Mediterranean",
@@ -7581,7 +7634,7 @@
     "country": null,
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -7626,7 +7679,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "Imprints of terrestrial water fluxes on tropospheric stable water isotopes revealed by satellite observations and complex network analysis",
@@ -7648,7 +7705,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -7693,7 +7750,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "The PAGES CoralHydro2k Seawater\n δ\n 18\n O Database: a FAIR-aligned compilation of seawater\n δ\n 18\n O data to uncover “hidden” insights from the global ocean",
@@ -7722,7 +7783,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Oceanography",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -7767,7 +7828,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Oceanography",
+      "Hydrology",
+      "Paleoclimatology"
+    ]
   },
   {
     "title": "Warming of the Mid‐Troposphere Driven by Evapotranspiration During Compound Heatwave and Drought Events",
@@ -7925,7 +7991,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Agricultural Hydrology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -7979,7 +8045,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Agricultural Hydrology",
+      "Climate Science"
+    ]
   },
   {
     "title": "CLUBB Reduces Low‐Cloud Dependency on Shallow Convective Mixing in the Community Atmosphere Model: Insight From Stable Water Isotopes",
@@ -8210,7 +8280,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -8255,7 +8325,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Toward a process-oriented understanding of water in the climate system: recent insights from stable isotopes",
@@ -8546,7 +8620,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -8591,7 +8665,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology"
+    ]
   },
   {
     "title": "Skill of isotope-enabled climate models for daily surface water vapour in East Asia",
@@ -8622,7 +8699,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Climate Modeling",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -8667,7 +8744,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Modeling",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "The role of continental evapotranspiration on water vapour isotopic variability in the troposphere",
@@ -8687,7 +8768,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Hydrology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -8732,7 +8813,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Hydrology",
+      "Remote Sensing",
+      "Carbon Cycle"
+    ]
   },
   {
     "title": "The Earth‐Observing Aqua Satellite Mission: 20 Years and Counting",
@@ -8749,7 +8835,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Satellite Missions & Instrumentation",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -8794,7 +8880,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Satellite Missions & Instrumentation",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Inverse altitude effect disputes the theoretical foundation of stable isotope paleoaltimetry",
@@ -8821,7 +8911,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Dynamics",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -8866,7 +8956,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Dynamics",
+      "Isotope Geochemistry"
+    ]
   },
   {
     "title": "Remote sensing of atmospheric HDO/H2O in southern California from CLARS-FTS",
@@ -9271,7 +9365,7 @@
     "country": null,
     "citing_team_paper": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
     "team_paper_id": "tropess_team_d530907b9585e4df",
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -9316,7 +9410,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison",
+      "Tropospheric Composition Retrievals",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "First data set of H2O/HDO columns from the Tropospheric Monitoring Instrument (TROPOMI)",
@@ -9408,7 +9507,7 @@
     "country": null,
     "citing_team_paper": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
     "team_paper_id": "tropess_team_8ce74f979a112381",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -9453,7 +9552,10 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies"
+    ]
   },
   {
     "title": "Large and increasing stratospheric contribution to tropospheric ozone over East Asia",
@@ -9545,7 +9647,7 @@
     "country": null,
     "citing_team_paper": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
     "team_paper_id": "tropess_team_8ce74f979a112381",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -9590,7 +9692,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Trace Gas Products",
+      "Validation & Intercomparison",
+      "Air Quality & Megacity Studies"
+    ]
   },
   {
     "title": "Intercomparison of global ground-level ozone datasets for health-relevant metrics",
@@ -12013,7 +12121,7 @@
     "country": null,
     "citing_team_paper": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
     "team_paper_id": "tropess_team_8ce74f979a112381",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -12058,7 +12166,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Fine-Scale Columnar and Surface NOx Concentrations over South Korea: Comparison of Surface Monitors, TROPOMI, CMAQ and CAPSS Inventory",
@@ -12913,7 +13025,7 @@
     "country": null,
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -12958,7 +13070,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "Improve Initial Field Estimation with Deep Learning in Data Assimilation for Climate Models",
@@ -13388,7 +13503,7 @@
     "country": null,
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -13433,7 +13548,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry & Reanalysis",
+      "Carbon Cycle & Flux Inversions"
+    ]
   },
   {
     "title": "Preindustrial-to-present-day changes in atmospheric carbon monoxide: agreement and gaps between ice archives and global model reconstructions",
@@ -13901,7 +14020,7 @@
     "country": null,
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
-    "research_domain": "General Science",
+    "research_domain": "Electrical Engineering",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -13946,7 +14065,10 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Electrical Engineering"
+    ]
   },
   {
     "title": "A comprehensive assessment of yield loss in rice due to surface ozone pollution in India during 2005–2020: A great concern for food security",
@@ -15131,7 +15253,7 @@
     "country": null,
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
-    "research_domain": "General Science",
+    "research_domain": "Computer Vision",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -15176,7 +15298,10 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Computer Vision"
+    ]
   },
   {
     "title": "Assessment of the Meteorological Impact on Improved PM2.5 Air Quality Over North China During 2016–2019 Based on a Regional Joint Atmospheric Composition Reanalysis Data‐Set",
@@ -15337,7 +15462,7 @@
     "country": null,
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Data Science",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -15382,7 +15507,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Environmental Data Science",
+      "Environmental Chemistry"
+    ]
   },
   {
     "title": "Impacts of global NOx inversions on NO2 and ozone simulations",
@@ -16974,7 +17103,7 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "General Science",
+    "research_domain": "Aquatic Biogeochemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -17019,7 +17148,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Aquatic Biogeochemistry",
+      "Atmospheric Chemistry & Reanalysis",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Spatiotemporal Variability of Surface Ozone and Associated Meteorological Conditions over the Arabian Peninsula",
@@ -17889,7 +18023,7 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -17934,7 +18068,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "Meteorological and chemical controls on surface ozone diurnal variability in Beijing: A clustering-based perspective",
@@ -18317,7 +18455,7 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -18362,7 +18500,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Reconciling the bottom-up and top-down estimates of the methane chemical sink using multiple observations",
@@ -18742,7 +18884,7 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -18787,7 +18929,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Machine Learning"
+    ]
   },
   {
     "title": "An intercomparison of ozone taken from the Copernicus atmosphere monitoring service and the second Modern-Era retrospective analysis for research and applications over China during 2018 and 2019.",
@@ -20496,7 +20642,7 @@
     "country": null,
     "citing_team_paper": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
     "team_paper_id": "tropess_team_1bc49f64ec00d99e",
-    "research_domain": "General Science",
+    "research_domain": "Financial Accounting",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -20541,7 +20687,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Financial Accounting",
+      "Business Ethics"
+    ]
   },
   {
     "title": "Impact of COVID-19 restrictions on the concentration and source apportionment of atmospheric ammonia (NH3) across India",
@@ -20969,7 +21119,7 @@
     "country": null,
     "citing_team_paper": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
     "team_paper_id": "tropess_team_1bc49f64ec00d99e",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -21014,7 +21164,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "Four-dimensional variational assimilation for SO2 emission and its application around the COVID-19 lockdown in the spring 2020 over China",
@@ -21103,7 +21257,7 @@
     "country": null,
     "citing_team_paper": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
     "team_paper_id": "tropess_team_1bc49f64ec00d99e",
-    "research_domain": "General Science",
+    "research_domain": "Climate Change",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -21148,7 +21302,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Change",
+      "Remote Sensing",
+      "Climate Science"
+    ]
   },
   {
     "title": "Disentangling drivers of air pollutant and health risk changes during the COVID-19 lockdown in China",
@@ -22484,7 +22643,7 @@
     "country": null,
     "citing_team_paper": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
     "team_paper_id": "tropess_team_1bc49f64ec00d99e",
-    "research_domain": "General Science",
+    "research_domain": "Corporate Sustainability",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -22529,7 +22688,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Corporate Sustainability",
+      "Business & Finance"
+    ]
   },
   {
     "title": "Ozone Anomalies in the Free Troposphere During the COVID‐19 Pandemic",
@@ -23943,7 +24106,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -23988,7 +24151,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Forestry"
+    ]
   },
   {
     "title": "Regional fire dynamics and its contributions to carbon flux variability in South Asia",
@@ -24080,7 +24247,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Ecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -24125,7 +24292,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Ecology",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Seasonal contrast in dryland vegetation response to meteorological drought across South Asia",
@@ -24220,7 +24391,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -24265,7 +24436,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Forestry"
+    ]
   },
   {
     "title": "Improving OCO‐2 XCO2 ${X}_{{\\mathbf{C}\\mathbf{O}}_{\\mathbf{2}}}$ Retrievals Through the Scaling of Singular Value Decomposition‐Based Temperature and Water Vapor Profiles",
@@ -24426,7 +24601,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Agricultural Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -24471,7 +24646,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Agricultural Science",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Global greenhouse gas reconciliation 2022",
@@ -25068,7 +25247,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Ecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -25113,7 +25292,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Ecology",
+      "Fire Ecology",
+      "Restoration Ecology"
+    ]
   },
   {
     "title": "Compound hot–dry events greatly prolong the recovery time of dryland ecosystems",
@@ -25211,7 +25395,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Palaeoecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -25256,7 +25440,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Palaeoecology",
+      "Environmental History",
+      "Geography"
+    ]
   },
   {
     "title": "A global surface CO2 flux dataset (2015–2022) inferred from OCO-2 retrievals using the GONGGA inversion system",
@@ -25556,7 +25745,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -25601,7 +25790,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Climate Change",
+      "Soil Science"
+    ]
   },
   {
     "title": "Regional Inversion Shows Promise in Capturing Extreme‐Event‐Driven CO2 Flux Anomalies but Is Limited by Atmospheric CO2 Observational Coverage",
@@ -25700,7 +25894,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -25745,7 +25939,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Ecosystem Modeling",
+      "Climate Change"
+    ]
   },
   {
     "title": "Solar‐Induced Fluorescence Helps Constrain Global Patterns in Net Biosphere Exchange, as Estimated Using Atmospheric CO2 Observations",
@@ -25836,7 +26035,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -25881,7 +26080,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Remote Sensing",
+      "Fire Management"
+    ]
   },
   {
     "title": "Empirical upscaling of OzFlux eddy covariance for high-resolution monitoring of terrestrial carbon uptake in Australia",
@@ -26604,7 +26808,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -26649,7 +26853,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Remote Sensing",
+      "Climate Variability"
+    ]
   },
   {
     "title": "Enhanced India‐Africa Carbon Uptake and Asia‐Pacific Carbon Release Associated With the 2019 Extreme Positive Indian Ocean Dipole",
@@ -26685,7 +26894,7 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -26730,7 +26939,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Climate Variability",
+      "Ecosystem Modeling"
+    ]
   },
   {
     "title": "Large loss and rapid recovery of vegetation cover and aboveground biomass over forest areas in Australia during 2019–2020",
@@ -29394,7 +29608,7 @@
     "country": null,
     "citing_team_paper": "COVID-19 Lockdowns Afford the First Satellite-Based Confirmation That Vehicles Are an Under-recognized Source of Urban NH3 Pollution in Los Angeles",
     "team_paper_id": "tropess_team_adc9e5a7d3404e32",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -29439,7 +29653,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry & Reanalysis",
+      "Trace Gas Products",
+      "Environmental Science"
+    ]
   },
   {
     "title": "Emulation of a Chemical Transport Model to Assess Air Quality under Future Emission Scenarios for the Southwest of Western Australia",
@@ -30610,7 +30829,7 @@
     "country": null,
     "citing_team_paper": "Evolution of Acyl Peroxynitrates (PANs) in Wildfire Smoke Plumes Detected by the Cross-Track Infrared Sounder (CrIS) Over the Western U.S. During Summer 2018",
     "team_paper_id": "tropess_team_0514a9360de06f7a",
-    "research_domain": "General Science",
+    "research_domain": "Climate Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -30655,7 +30874,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Science"
+    ]
   },
   {
     "title": "Atmospheric Chemistry Insights from the Global COVID-19 Pandemic: A Review",
@@ -31019,7 +31241,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -31073,7 +31295,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Inversion-based assessment of anthropogenic NO\n \n x\n \n emission changes in Ukraine during the 2022–2023 war using TROPOMI satellite data",
@@ -31789,7 +32016,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -31841,7 +32068,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Regional and sectoral contributions of NOx and reactive carbon emission sources to global trends in tropospheric ozone during the 2000–2018 period",
@@ -34181,7 +34412,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Catalysis",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -34226,7 +34457,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Catalysis",
+      "Materials Science"
+    ]
   },
   {
     "title": "Satellite reveals a steep decline in China’s CO2 emissions in early 2022",
@@ -34256,7 +34491,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -34301,7 +34536,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Emissions Background, Climate, and Season Determine the Impacts of Past and Future Pandemic Lockdowns on Atmospheric Composition and Climate",
@@ -34390,7 +34630,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Management",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -34435,7 +34675,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Environmental Management",
+      "Industrial Ecology"
+    ]
   },
   {
     "title": "Methane emissions are predominantly responsible for record-breaking atmospheric methane growth rates in 2020 and 2021",
@@ -34589,7 +34833,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Economics",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -34634,7 +34878,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Environmental Economics",
+      "Environmental Policy"
+    ]
   },
   {
     "title": "Diverging Ozone Trends Above Western North America: Boundary Layer Decreases Versus Free Tropospheric Increases",
@@ -35015,7 +35263,7 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -35060,7 +35308,10 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies"
+    ]
   },
   {
     "title": "Remote Sensing Evidence for Significant Variations in the Global Gross Domestic Product during the COVID-19 Epidemic",
@@ -37657,7 +37908,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -37702,7 +37953,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "Geospatial association between aerosols and its short-lived precursors over South Asia",
@@ -37723,7 +37977,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -37768,7 +38022,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Evaluating CAM‐Chem Modeled Atmospheric Wet Deposition With Observed Long‐Term Records",
@@ -37792,7 +38049,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -37837,7 +38094,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison",
+      "Atmospheric Chemistry & Reanalysis",
+      "Carbon Cycle & Flux Inversions"
+    ]
   },
   {
     "title": "Drastic changes in carbon monoxide pollution in rural India (2000-2019) and its CMIP6 model future (2015-2100) projections.",
@@ -38146,7 +38408,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Combustion Engineering",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -38191,7 +38453,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Combustion Engineering",
+      "Mechanical Engineering"
+    ]
   },
   {
     "title": "Integrated assessment of urban air pollution in South Tangerang, Indonesia: synergizing ground monitoring, Sentinel-5P retrievals, and HYSPLIT trajectory analysis",
@@ -38413,7 +38679,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Materials Science & Engineering",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -38458,7 +38724,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Materials Science & Engineering",
+      "Filtration Technology"
+    ]
   },
   {
     "title": "Principles of Correction for Long-Term Orbital Observations of Atmospheric Composition, Applied to AIRS v.6 CH4 and CO Data",
@@ -39606,7 +39876,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Energy Systems & Emissions Assessment",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -39651,7 +39921,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Energy Systems & Emissions Assessment",
+      "Environmental Policy"
+    ]
   },
   {
     "title": "Anthropic-Induced Variability of Greenhouse Gasses and Aerosols at the WMO/GAW Coastal Site of Lamezia Terme (Calabria, Southern Italy): Towards a New Method to Assess the Weekly Distribution of Gathered Data",
@@ -40490,7 +40764,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -40535,7 +40809,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Sources and long-term variability of carbon monoxide at Mount Kenya and in Nairobi",
@@ -41039,7 +41316,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -41084,7 +41361,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Carbon Cycle & Flux Inversions",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Multi-spatiotemporal AOD trends and association with land use changes over the Guangdong-Hong Kong-Macao Greater Bay Area during 2001–2021",
@@ -41103,7 +41385,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -41148,7 +41430,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Aerosol optical depth regime over megacities of the world",
@@ -41235,7 +41521,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Trace Gas Products",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -41280,7 +41566,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Spatiotemporal variations and relationships of absorbing aerosol-radiation-gross primary productivity over China",
@@ -41301,7 +41591,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -41355,7 +41645,13 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary",
+      "Atmospheric Chemistry & Reanalysis",
+      "Radiative Transfer & Forward Modeling",
+      "Carbon Cycle & Flux Inversions"
+    ]
   },
   {
     "title": "Strong Wildfires in the Russian Federation in 2021 Detected Using Satellite Data",
@@ -41375,7 +41671,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -41429,7 +41725,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions"
+    ]
   },
   {
     "title": "Continental-scale Atmospheric Impacts of the 2020 Western U.S. Wildfires",
@@ -41454,7 +41753,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -41499,7 +41798,12 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Air Quality & Megacity Studies",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Analysis of Long-Term Aerosol Optical Properties Combining AERONET Sunphotometer and Satellite-Based Observations in Hong Kong",
@@ -41648,7 +41952,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -41693,7 +41997,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Atmospheric Chemistry & Reanalysis"
+    ]
   },
   {
     "title": "Interpretable Models Capture the Complex Relationship Between Climate Indices and Fire Season Intensity in Maritime Southeast Asia",
@@ -41780,7 +42088,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Tropical Meteorology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -41825,7 +42133,10 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropical Meteorology"
+    ]
   },
   {
     "title": "Air pollution trends measured from MODIS and TROPOMI: AOD and CO over Pakistan",
@@ -42058,7 +42369,7 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "General Science",
+    "research_domain": "Remote Sensing",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -42103,7 +42414,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Remote Sensing"
+    ]
   },
   {
     "title": "CO Fluxes in Western Europe during 2017-2020 Winter Seasons Inverted by WRF-Chem/Data Assimilation Research Testbed with MOPITT Observations",
@@ -42547,7 +42861,7 @@
     "country": null,
     "citing_team_paper": "TROPESS/CrIS carbon monoxide profile validation with NOAA GML and ATom in situ aircraft observations",
     "team_paper_id": "tropess_team_2d9de85fef525ff9",
-    "research_domain": "General Science",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -42601,7 +42915,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Tropospheric Composition Retrievals",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "A More Transparent Infrared Window",
@@ -42763,7 +43081,7 @@
     "country": null,
     "citing_team_paper": "TROPESS/CrIS carbon monoxide profile validation with NOAA GML and ATom in situ aircraft observations",
     "team_paper_id": "tropess_team_2d9de85fef525ff9",
-    "research_domain": "General Science",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -42808,7 +43126,10 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Validation & Intercomparison"
+    ]
   },
   {
     "title": "A database of aircraft measurements of carbon monoxide (CO) with high temporal and spatial resolution during 2011–2021",
@@ -42963,7 +43284,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43008,7 +43329,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Climate Modeling",
+      "Machine Learning"
+    ]
   },
   {
     "title": "A Generalized Lagrangian Attribution Tool for Hydrometeorological Extremes",
@@ -43027,7 +43353,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Hydrometeorology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43072,7 +43398,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrometeorology",
+      "Atmospheric Dynamics"
+    ]
   },
   {
     "title": "Stable isotopes in atmospheric water vapour: Patterns, mechanisms and perspectives",
@@ -43092,7 +43422,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Isotope Hydrology",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -43137,7 +43467,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Isotope Hydrology",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "High‐Frequency Isotope Compositions Reveal Different Cloud‐Top and Vertical Stratiform Rainfall Structures in the Inland Tropics of Brazil",
@@ -43158,7 +43492,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Cloud Physics",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43203,7 +43537,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cloud Physics",
+      "Isotope Hydrology",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Evaluating TROPOMI δD Column Retrievals With In Situ Airborne Field Campaign Measurements Using Expanded Collocation Criterion",
@@ -43360,7 +43699,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Boundary Layer Meteorology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43405,7 +43744,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Boundary Layer Meteorology",
+      "Cloud Physics",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Water isotopes, climate variability, and the hydrological cycle: recent advances and new frontiers",
@@ -43428,7 +43772,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -43473,7 +43817,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Climate Science",
+      "Isotope Geochemistry"
+    ]
   },
   {
     "title": "How stable water isotope measurements and modelling can help bridge the gap between research on weather and climate time scales",
@@ -43492,7 +43841,7 @@
     "country": null,
     "citing_team_paper": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
     "team_paper_id": "tropess_team_616d8f75c60b486f",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -43537,7 +43886,10 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary"
+    ]
   },
   {
     "title": "Machine-learning models of\n                    <i>δ</i>\n                    <sup>13</sup>\n                    C and\n                    <i>δ</i>\n                    <sup>15</sup>\n                    N isoscapes in Amazonian wood",
@@ -43574,7 +43926,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Biogeochemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43619,7 +43971,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Biogeochemistry",
+      "Environmental Science",
+      "Machine Learning"
+    ]
   },
   {
     "title": "Embolism resistance supports the contribution of dry-season precipitation to transpiration in eastern Amazon forests",
@@ -43717,7 +44074,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43762,7 +44119,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Climate Science"
+    ]
   },
   {
     "title": "Assessing Water Source Stability in the Three River Source Region: A Comprehensive 35‐Year Analysis",
@@ -43785,7 +44146,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43830,7 +44191,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Ecohydrology",
+      "Climate Science"
+    ]
   },
   {
     "title": "Remotely Sensed High‐Resolution Soil Moisture and Evapotranspiration: Bridging the Gap Between Science and Society",
@@ -43940,7 +44306,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -43985,7 +44351,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Water Resources Management"
+    ]
   },
   {
     "title": "The characteristics and changes of the natural social binary water cycle in the Upper Yellow River Basin under the influence of climate change and human activities: A review",
@@ -44007,7 +44377,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -44052,7 +44422,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Water Resources Management",
+      "Climate Change Impacts"
+    ]
   },
   {
     "title": "Assessment of climatic regime and water balance of a Mediterranean-type watershed: the Inaouene watershed upstream of the Idris I dam (Sebou Basin, Morocco)",
@@ -44073,7 +44448,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44118,7 +44493,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Water Resources Management",
+      "Climatology"
+    ]
   },
   {
     "title": "大气水汽稳定同位素: 特征、机制与前景",
@@ -44138,7 +44518,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44183,7 +44563,11 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Dataset of stable isotopes of precipitation in the Eurasian continent",
@@ -44209,7 +44593,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44254,7 +44638,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary",
+      "Hydrology",
+      "Climate Science",
+      "Ecosystem Studies",
+      "Data Science"
+    ]
   },
   {
     "title": "Divergent Responses of Summer Terrestrial Evapotranspiration to Cloud Increase in East Asia",
@@ -44274,7 +44665,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44319,7 +44710,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Hydrology",
+      "Climate Science",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "Interannual variations in stable isotopes of atmospheric water in arid Central Asia due to changes in atmospheric circulation",
@@ -44342,7 +44739,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Atmospheric Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44387,7 +44784,12 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Atmospheric Science",
+      "Hydrology",
+      "Climate Science"
+    ]
   },
   {
     "title": "Evaluating main drivers of terrestrial water storage depletion in the agro-pastoral ecotone of northern China",
@@ -44409,7 +44811,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44454,7 +44856,10 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Hydrology"
+    ]
   },
   {
     "title": "Diurnal Impact of Below-Cloud Evaporation on Isotope Compositions of Precipitation on the Southern Slope of the Altai Mountains, Central Asia",
@@ -44541,7 +44946,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "General Science",
+    "research_domain": "Climate Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -44586,7 +44991,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Science",
+      "Atmospheric Science",
+      "Hydrology"
+    ]
   },
   {
     "title": "Estimating Surface NO2 in Mexico City Using Sentinel-5P and Machine Learning",
@@ -45737,7 +46147,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -45782,7 +46192,14 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary",
+      "Climate Science",
+      "Geoscience",
+      "Hydrology",
+      "Economics"
+    ]
   },
   {
     "title": "Wildfire research and mental health: impacts, reflections, and a call to action",
@@ -45960,7 +46377,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -46005,7 +46422,14 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary",
+      "Climate Science",
+      "Ecology",
+      "Hydrology",
+      "Atmospheric Science"
+    ]
   },
   {
     "title": "Accelerated Carbon and Water Cycles in the Amazon and Congo Basins Revealed From TRENDY Models and Remote Sensing Products",
@@ -46161,7 +46585,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Forestry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -46206,7 +46630,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Forestry",
+      "Ecology"
+    ]
   },
   {
     "title": "Ammonia emissions and depositions over the contiguous United States derived from IASI and CrIS using the directional derivative approach",
@@ -46368,7 +46796,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -46413,7 +46841,10 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary"
+    ]
   },
   {
     "title": "Strong mismatch in climate change adaptation between intentions of private forest owners in Canada and institutional support",
@@ -46434,7 +46865,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Policy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -46479,7 +46910,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Environmental Policy",
+      "Climate Change Adaptation"
+    ]
   },
   {
     "title": "COP29 at the climate crossroads: achievements, gaps, and implications for a warming world",
@@ -46509,7 +46944,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Climate Policy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -46554,7 +46989,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Policy",
+      "Environmental Governance"
+    ]
   },
   {
     "title": "Canadian net forest CO2 uptake enhanced by heat drought via reduced respiration",
@@ -46829,7 +47268,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -46874,7 +47313,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Climate Change Impacts"
+    ]
   },
   {
     "title": "Hysteretic response of Western North American fire weather to CO₂ removal",
@@ -46893,7 +47336,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -46938,7 +47381,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Carbon Cycle & Flux Inversions"
+    ]
   },
   {
     "title": "Global wildfire patterns and drivers under climate change",
@@ -47090,7 +47537,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -47135,7 +47582,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Soil Science",
+      "Forest Ecology"
+    ]
   },
   {
     "title": "Net-zero for Canada: An open-method modeling approach",
@@ -47157,7 +47609,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -47202,7 +47654,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Climate Policy",
+      "Energy Systems Modeling"
+    ]
   },
   {
     "title": "Drought-wildfire synergy drives carbon-source transition and amplifies carbon budget uncertainty of boreal forests in Northeast China",
@@ -47448,7 +47905,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -47493,7 +47950,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Carbon Cycle & Flux Inversions"
+    ]
   },
   {
     "title": "Continuous‐Flow Photocatalytic Degradation of Glyphosate and Aminomethylphosphonic Acid Under Simulated Sunlight with TiO2‐Coated Poly(vinylidene fluoride) Membrane",
@@ -47514,7 +47975,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Chemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -47559,7 +48020,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Environmental Chemistry",
+      "Materials Science"
+    ]
   },
   {
     "title": "A decade of global hourly aerosol observations from DSCOVR/EPIC using near-UV measurements",
@@ -47780,7 +48245,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -47825,7 +48290,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Remote Sensing",
+      "Artificial Intelligence"
+    ]
   },
   {
     "title": "The combined impact of fisheries and climate change on future carbon sequestration by oceanic macrofauna",
@@ -47979,7 +48449,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -48024,7 +48494,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Materials Science",
+      "Environmental Science"
+    ]
   },
   {
     "title": "The role of the tropical carbon balance in determining the large atmospheric CO2 growth rate in 2023",
@@ -48120,7 +48595,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -48165,7 +48640,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Climate Change Mitigation"
+    ]
   },
   {
     "title": "State of Wildfires 2024–2025",
@@ -48376,7 +48855,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -48421,7 +48900,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Carbon Cycle & Flux Inversions",
+      "Bioenergy"
+    ]
   },
   {
     "title": "Methane and Nitrous Oxide Budgets for Australasia: A Regional Assessment of Natural and Anthropogenic Sources and Sinks",
@@ -48588,7 +49072,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -48633,7 +49117,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Atmospheric Chemistry & Reanalysis",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Long-range PM2.5 pollution and health impacts from the 2023 Canadian wildfires",
@@ -48934,7 +49423,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Climate Change Adaptation & Policy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -48979,7 +49468,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Climate Change Adaptation & Policy",
+      "Decision Science",
+      "Environmental Management"
+    ]
   },
   {
     "title": "High-resolution Canada domain disturbance forcings suitable for land surface modeling applications",
@@ -49575,7 +50069,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Phytochemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -49620,7 +50114,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Phytochemistry",
+      "Natural Products Chemistry"
+    ]
   },
   {
     "title": "Up in flames: the human factor behind a megafire in Mediterranean Türkiye",
@@ -49641,7 +50139,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -49686,7 +50184,10 @@
         "miscalibration_risk": "medium"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions"
+    ]
   },
   {
     "title": "Global burn severity in forest ecoregions: trends, climate drivers, and predictive insights",
@@ -49705,7 +50206,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -49750,7 +50251,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions"
+    ]
   },
   {
     "title": "Disentangling the roles of natural variability and climate change in Canada’s 2023 fire season",
@@ -49843,7 +50347,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Soil Science",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -49888,7 +50392,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Soil Science",
+      "Ecology"
+    ]
   },
   {
     "title": "A comprehensive review of recent progress on the drought-flood abrupt alternation",
@@ -50647,7 +51155,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Philosophy",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -50692,7 +51200,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Philosophy",
+      "Social Sciences"
+    ]
   },
   {
     "title": "Surface ozone trend variability across the United States and the impact of heat waves (1990–2023)",
@@ -50903,7 +51415,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Ecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -50948,7 +51460,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Ecology",
+      "Forestry"
+    ]
   },
   {
     "title": "Mitigating Aerosol Emissions Can Effectively Offset Climate Warming Impacts on Snowmelt.",
@@ -50982,7 +51498,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Cross-Disciplinary",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51027,7 +51543,13 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Cross-Disciplinary",
+      "Trace Gas Products",
+      "Hydrology",
+      "Climate Science"
+    ]
   },
   {
     "title": "How air pollution affects cause-specific emergency hospital admissions on days with biomass combustion in Spain?",
@@ -51181,7 +51703,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51226,7 +51748,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Carbon Cycle & Flux Inversions",
+      "Trace Gas Products",
+      "Tropospheric Composition Retrievals"
+    ]
   },
   {
     "title": "Compact dual-wavelength depolarization lidar for aerosol characterization over the subtropical North Atlantic",
@@ -51327,7 +51854,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Ecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51372,7 +51899,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Ecology",
+      "Forestry"
+    ]
   },
   {
     "title": "Summertime Carbonaceous Aerosol in Interior Versus Coastal Northern Alaska",
@@ -51472,7 +52003,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51517,7 +52048,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Air Quality & Megacity Studies",
+      "Trace Gas Products"
+    ]
   },
   {
     "title": "Implementing equitable wildfire response plans.",
@@ -51677,7 +52212,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Catalysis & Materials Chemistry",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51722,7 +52257,11 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Catalysis & Materials Chemistry",
+      "Chemical Engineering"
+    ]
   },
   {
     "title": "Synergistic effects of CO2 dilution and H2 addition on the laminar combustion characteristics of NH3/CH4 blends at high temperature and pressure",
@@ -51812,7 +52351,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51857,7 +52396,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Climate Change Impacts",
+      "Remote Sensing"
+    ]
   },
   {
     "title": "A case study of the effect of permafrost peat on fires in the Arctic using Sentinel-5P data",
@@ -51876,7 +52420,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -51921,7 +52465,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Remote Sensing",
+      "Arctic Studies"
+    ]
   },
   {
     "title": "Novel wildfire regimes under climate change and human activity: patterns, driving mechanisms and ecological impacts",
@@ -52386,7 +52935,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -52431,7 +52980,12 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Carbon Cycle",
+      "Biogeochemistry"
+    ]
   },
   {
     "title": "Global peatland greenhouse gas dynamics: state of the art, processes, and perspectives",
@@ -52584,7 +53138,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -52629,7 +53183,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Wildfire & Biomass Burning Emissions",
+      "Carbon Cycle & Flux Inversions",
+      "Climate Change Impacts"
+    ]
   },
   {
     "title": "Estimating air pollutant emissions from the 2024 wildfires in Canada and the impact on air quality",
@@ -52851,7 +53410,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Environmental Sociology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -52896,7 +53455,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Environmental Sociology",
+      "Future Studies",
+      "Climate Change Policy"
+    ]
   },
   {
     "title": "Historical Simulation and Future Projection of Arctic‐Boreal Fire Carbon Emissions and Related Surface Climate by 17 CMIP6 ESMs",
@@ -53116,7 +53680,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Urban Ecology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -53161,7 +53725,12 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Urban Ecology",
+      "Forestry",
+      "Climate Change Impacts"
+    ]
   },
   {
     "title": "Emerging Trends in Wildfire Detection Through the Lens of Computer Vision and Wildfire Emission Quantification: A Comprehensive Survey",
@@ -53307,7 +53876,7 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "General Science",
+    "research_domain": "Musicology",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -53352,7 +53921,11 @@
         "miscalibration_risk": "low"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "research_domains": [
+      "Musicology",
+      "Cultural Studies"
+    ]
   },
   {
     "title": "Observations of surface CO2 at an urban station in Wuhan, Central China: temporal variations, sources, and sinks",

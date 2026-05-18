@@ -131,7 +131,7 @@ const ResearchDomainsPage = () => {
       "Machine Learning for Hydrology": "bg-violet-100 text-violet-800",
       "Climate & Water Cycle": "bg-cyan-100 text-cyan-800",
       "General Hydrologic Science": "bg-sky-100 text-sky-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };
