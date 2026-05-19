@@ -38,6 +38,8 @@ import GenericUncertaintyPage from './views/GenericUncertaintyPage';
 // How It Works page
 import HowItWorks from './views/HowItWorks';
 
+// Private Sector Engagement page
+
 // Earth System Interconnections page
 import EarthSystemPage from './views/EarthSystemPage';
 
@@ -78,6 +80,9 @@ function AppWithRouting() {
 
         {/* How It Works page */}
         <Route path="/science-model-dashboard/how-it-works" element={<HowItWorks />} />
+
+        {/* Private Sector Engagement page */}
+        <Route path="/science-model-dashboard/pse" element={<PSEPage />} />
         
         {/* Legacy routes (keeping RAPID as default for backward compatibility) */}
         <Route path="/citations" element={<CitationsPage />} />

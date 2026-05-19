@@ -41,7 +41,7 @@ export async function loadModelData(modelName) {
  * @param {string} modelName
  * @returns {Promise<Array>}
  */
-export async function loadEngagedModelData(modelName) {
+export async function loadModelData(modelName) {
   const data = await loadModelData(modelName);
   return data.filter(p => p.engagement_level !== 'Simple Citation');
 }
@@ -66,10 +66,10 @@ export async function loadAllModelsData(modelNames) {
  * @param {string[]} modelNames
  * @returns {Promise<Object>} Map of modelName -> filtered data array
  */
-export async function loadAllEngagedModelsData(modelNames) {
+export async function loadAllModelsData(modelNames) {
   const results = await Promise.all(
     modelNames.map(async (name) => {
-      const data = await loadEngagedModelData(name);
+      const data = await loadModelData(name);
       return [name, data];
     })
   );

@@ -34,8 +34,8 @@ const CARDAMOMDashboard = () => {
   useEffect(() => {
     const loadCardamomData = async () => {
       try {
-        const { loadEngagedModelData } = await import('../../utils/dataLoader');
-        const data = await loadEngagedModelData('CARDAMOM');
+        const { loadModelData } = await import('../../utils/dataLoader');
+        const data = await loadModelData('CARDAMOM');
         setCardamomData(data);
       } catch (error) {
         console.error('Failed to load CARDAMOM data:', error);

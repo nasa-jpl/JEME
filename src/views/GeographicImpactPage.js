@@ -5,7 +5,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, MapPin, Globe2 } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import { loadEngagedModelData as loadModelData } from '../utils/dataLoader';
+import { loadModelData } from '../utils/dataLoader';
 
 // Import Google Maps component
 import GoogleMapComponent from '../components/GoogleMapComponent';

@@ -30,8 +30,8 @@ const SWOTDashboard = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const { loadEngagedModelData } = await import('../../utils/dataLoader');
-        const data = await loadEngagedModelData('SWOT');
+        const { loadModelData } = await import('../../utils/dataLoader');
+        const data = await loadModelData('SWOT');
         setSwotData(data);
       } catch (error) {
         console.error('Failed to load SWOT data:', error);

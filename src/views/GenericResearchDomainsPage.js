@@ -34,8 +34,8 @@ const GenericResearchDomainsPage = () => {
         console.log(`Loading research domains data for ${modelConfig.displayName}`);
         
         // Load the model's JSON data from public/data/, excluding Simple Citation
-        const { loadEngagedModelData } = await import('../utils/dataLoader');
-        const data = await loadEngagedModelData(modelName);
+        const { loadModelData } = await import('../utils/dataLoader');
+        const data = await loadModelData(modelName);
         setCitationsData(data);
         
         processData(data);
