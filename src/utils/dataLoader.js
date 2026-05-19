@@ -35,36 +35,9 @@ export async function loadModelData(modelName) {
 }
 
 /**
- * Load citation data for a single model, excluding "Simple Citation" entries.
- * Use for dashboard metrics/charts where only papers that substantively engage
- * with the model/mission should be counted.
- * @param {string} modelName
- * @returns {Promise<Array>}
- */
-export async function loadModelData(modelName) {
-  const data = await loadModelData(modelName);
-  return data.filter(p => p.engagement_level !== 'Simple Citation');
-}
-
-/**
  * Load citation data for multiple models in parallel.
  * @param {string[]} modelNames - Array of model names
  * @returns {Promise<Object>} Map of modelName -> data array
- */
-export async function loadAllModelsData(modelNames) {
-  const results = await Promise.all(
-    modelNames.map(async (name) => {
-      const data = await loadModelData(name);
-      return [name, data];
-    })
-  );
-  return Object.fromEntries(results);
-}
-
-/**
- * Load multiple models' data in parallel, excluding "Simple Citation" entries.
- * @param {string[]} modelNames
- * @returns {Promise<Object>} Map of modelName -> filtered data array
  */
 export async function loadAllModelsData(modelNames) {
   const results = await Promise.all(
