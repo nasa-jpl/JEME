@@ -34,8 +34,8 @@ const GenericResearchDomainsPage = () => {
         console.log(`Loading research domains data for ${modelConfig.displayName}`);
         
         // Load the model's JSON data from public/data/, excluding Simple Citation
-        const { loadEngagedModelData } = await import('../utils/dataLoader');
-        const data = await loadEngagedModelData(modelName);
+        const { loadModelData } = await import('../utils/dataLoader');
+        const data = await loadModelData(modelName);
         setCitationsData(data);
         
         processData(data);
@@ -313,7 +313,7 @@ const GenericResearchDomainsPage = () => {
       "Reservoir & Water Management": "bg-green-100 text-green-800",
       "Bathymetry & Seafloor": "bg-sky-100 text-sky-800",
       // Generic fallback domains
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
       "Hydrology & Water Resources": "bg-blue-100 text-blue-800",
       "Ocean & Marine Science": "bg-blue-200 text-blue-900",
       "Climate Science": "bg-rose-100 text-rose-800",

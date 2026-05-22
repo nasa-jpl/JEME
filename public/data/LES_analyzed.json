@@ -11039,7 +11039,7 @@
     },
     "citing_team_paper": "Turbulent shear-layer mixing: initial conditions, and direct-numerical and large-eddy simulations",
     "team_paper_id": "90167355acbc78f4071e4e9fa22f7ca59f80be8d",
-    "research_domain": "General Science",
+    "research_domain": "Fluid Dynamics",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -11082,9 +11082,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Fluid Dynamics",
-      "Oceanography",
-      "Numerical Methods",
-      "Applied Mathematics"
+      "Numerical Methods"
     ]
   },
   {
@@ -12113,7 +12111,7 @@
     },
     "citing_team_paper": "Turbulence structure in a stratocumulus cloud",
     "team_paper_id": "c066e33dc03648ca61ab9b52c90a6a67dd4e721f",
-    "research_domain": "General Science",
+    "research_domain": "Machine Learning",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -12156,10 +12154,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Machine Learning",
-      "Nonlinear Dynamics",
-      "Time Series Analysis",
-      "Forecasting",
-      "Computational Science"
+      "Data Science"
     ]
   },
   {
@@ -12714,7 +12709,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -12757,7 +12752,6 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Numerical Methods",
-      "Computational Science",
       "Applied Mathematics"
     ]
   },
@@ -12787,7 +12781,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -12830,8 +12824,6 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Numerical Methods",
-      "Nonlinear Dynamics",
-      "Computational Physics",
       "Applied Mathematics"
     ]
   },
@@ -12863,7 +12855,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Nonlinear Dynamics",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -12906,10 +12898,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Nonlinear Dynamics",
-      "Mechanical Engineering",
-      "Vibration & Acoustics",
-      "Applied Physics",
-      "Structural Engineering"
+      "Applied Mathematics"
     ]
   },
   {
@@ -12936,7 +12925,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Nonlinear Dynamics",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -12978,9 +12967,8 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Numerical Methods",
-      "Computational Mechanics",
       "Nonlinear Dynamics",
+      "Numerical Methods",
       "Applied Mathematics"
     ]
   },
@@ -13008,7 +12996,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -13051,8 +13039,7 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Numerical Methods",
-      "Computational Mechanics",
-      "Heat Transfer",
+      "Nonlinear Dynamics",
       "Applied Mathematics"
     ]
   },
@@ -13081,7 +13068,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -13133,7 +13120,6 @@
     "research_domains": [
       "Numerical Methods",
       "Nonlinear Dynamics",
-      "Computational Mechanics",
       "Applied Mathematics"
     ]
   },
@@ -13236,7 +13222,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Image Processing",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -13279,9 +13265,8 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Image Processing",
-      "Optimization",
-      "Computer Vision",
-      "Machine Learning"
+      "Algorithm Development",
+      "Numerical Methods"
     ]
   },
   {
@@ -13308,7 +13293,7 @@
     },
     "citing_team_paper": "Mixing, scalar boundedness, and numerical dissipation in large-eddy simulations",
     "team_paper_id": "07ba4f8b91c707d40ae636d11bb9b514ed06116f",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Simple Citation",
     "missions_instruments": [],
     "uncertainty": {
@@ -13352,7 +13337,7 @@
     "research_domains": [
       "Numerical Methods",
       "Applied Mathematics",
-      "Computational Science"
+      "Algorithm Development"
     ]
   },
   {

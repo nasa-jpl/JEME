@@ -33,9 +33,9 @@ const Dashboard = () => {
   useEffect(() => {
     const loadData = async () => {
       try {
-        const { loadAllEngagedModelsData } = await import('../utils/dataLoader');
+        const { loadAllModelsData } = await import('../utils/dataLoader');
         const models = ['RAPID', 'CMS-Flux', 'ECCO', 'ISSM', 'MOMO-CHEM', 'CARDAMOM', 'LES', 'EDMF'];
-        const data = await loadAllEngagedModelsData(models);
+        const data = await loadAllModelsData(models);
         setAllModelsData(data);
         setLoading(false);
       } catch (error) {

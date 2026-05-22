@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import { loadEngagedModelData as loadModelData } from '../../utils/dataLoader';
+import { loadModelData } from '../../utils/dataLoader';
 
 // Define consistent colors for domains (moved outside component for better accessibility) - Same order as RAPID
 const domainColors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
@@ -138,7 +138,7 @@ const CARDAMOMResearchDomainsPage = () => {
       "Arctic & Permafrost Carbon": "bg-cyan-100 text-cyan-800",
       "Remote Sensing of Ecosystems": "bg-indigo-100 text-indigo-800",
       "Climate Projections & Feedbacks": "bg-rose-100 text-rose-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-import { loadEngagedModelData as loadModelData } from '../../utils/dataLoader';
+import { loadModelData } from '../../utils/dataLoader';
 
 // Define consistent colors for domains (moved outside component for better accessibility) - Same order as RAPID
 const domainColors = ['#3B82F6', '#EF4444', '#10B981', '#F59E0B', '#8B5CF6', '#06B6D4', '#F97316', '#EC4899'];
@@ -139,7 +139,7 @@ const ECCOResearchDomainsPage = () => {
       "Ocean-Ice Interaction": "bg-sky-100 text-sky-800",
       "Satellite Oceanography": "bg-violet-100 text-violet-800",
       "Ocean Modeling & Data Assimilation": "bg-amber-100 text-amber-800",
-      "General Science": "bg-gray-100 text-gray-700",
+      "Cross-Disciplinary": "bg-purple-100 text-purple-700",
     };
     return colors[domain] || "bg-gray-100 text-gray-800";
   };

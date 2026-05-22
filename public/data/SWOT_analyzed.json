@@ -516,7 +516,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Water Resource Management",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -567,14 +567,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
+      "Water Resource Management",
       "Hydrology & Water Resources",
       "Oceanography",
-      "Satellite Altimetry",
-      "Water Resource Management",
-      "Flood Modeling",
-      "Climate Resilience",
-      "Applied Science"
+      "Remote Sensing"
     ]
   },
   {
@@ -678,7 +674,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -729,13 +725,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
       "Hydrology & Water Resources",
-      "Wetland Ecology",
-      "Satellite Altimetry",
-      "Carbon Cycle",
-      "Ecosystem Science",
-      "Geophysics"
+      "Remote Sensing",
+      "Data Validation"
     ]
   },
   {
@@ -1137,7 +1129,7 @@
     "country": "USA",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "River & Lake Monitoring",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1188,11 +1180,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "River & Lake Monitoring",
       "Hydrology & Water Resources",
       "Remote Sensing",
-      "Satellite Altimetry",
-      "Hydraulic Modeling",
-      "Calibration & Validation"
+      "Data Validation"
     ]
   },
   {
@@ -1210,7 +1201,7 @@
     "country": null,
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1263,9 +1254,8 @@
     "research_domains": [
       "Cryosphere & Glaciology",
       "Remote Sensing",
-      "Polar Oceanography",
       "Satellite Altimetry",
-      "Oceanography"
+      "Data Validation"
     ]
   },
   {
@@ -1359,7 +1349,7 @@
     "country": null,
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "General Science",
+    "research_domain": "Climate Change",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -1410,11 +1400,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Climate Change",
       "Hydrology & Water Resources",
-      "Remote Sensing",
       "Oceanography",
-      "Satellite Altimetry",
-      "Earth System Science"
+      "Remote Sensing"
     ]
   },
   {
@@ -6728,7 +6717,7 @@
     "country": "China",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Coastal & Estuarine Dynamics",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -6779,11 +6768,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Coastal Dynamics",
-      "Remote Sensing",
-      "Satellite Altimetry",
+      "Coastal & Estuarine Dynamics",
       "Geomorphology",
-      "Digital Elevation Models"
+      "Remote Sensing",
+      "Data Processing",
+      "Altimetry Methods & Calibration"
     ]
   },
   {
@@ -7769,7 +7758,7 @@
     "country": null,
     "citing_team_paper": "Assimilation of virtual wide swath altimetry to improve Arctic river modeling",
     "team_paper_id": "4ce0b8f301db2617459043736e198a9a47939ecb",
-    "research_domain": "General Science",
+    "research_domain": "Flood Mapping & Detection",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -7820,12 +7809,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Flood Mapping & Detection",
       "Hydrology & Water Resources",
       "Remote Sensing",
-      "Flood Modeling",
-      "Satellite Altimetry",
-      "Water Resource Management",
-      "Geodesy & Gravity"
+      "Data Validation"
     ]
   },
   {
@@ -8781,7 +8768,7 @@
     "country": "USA",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -8832,10 +8819,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
       "Hydrology & Water Resources",
-      "Satellite Altimetry",
-      "Water Resource Management"
+      "Water Resource Management",
+      "Remote Sensing",
+      "Data Validation"
     ]
   },
   {
@@ -11481,7 +11468,7 @@
     "country": "France",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "River & Lake Monitoring",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -11532,10 +11519,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "River & Lake Monitoring",
       "Remote Sensing",
-      "Hydrology & Water Resources",
       "Satellite Altimetry",
-      "Water Resource Management"
+      "Hydrology & Water Resources"
     ]
   },
   {
@@ -12010,7 +11997,7 @@
     "country": null,
     "citing_team_paper": "Inversion of river discharge from remotely sensed river widths: A critical assessment at three-thousand global river gauges",
     "team_paper_id": "958e8fdf166ce724aa730a680eaf61f308707828",
-    "research_domain": "General Science",
+    "research_domain": "River & Lake Monitoring",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -12061,13 +12048,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Hydrology & Water Resources",
-      "Remote Sensing",
-      "Satellite Altimetry",
+      "River & Lake Monitoring",
+      "Hydraulic Modeling",
       "Flood Modeling",
-      "River Routing",
-      "Data Validation",
-      "Hydraulic Modeling"
+      "Remote Sensing",
+      "Satellite Altimetry"
     ]
   },
   {
@@ -12161,7 +12146,7 @@
     "country": null,
     "citing_team_paper": "The Surface Water and Ocean Topography Mission: A Breakthrough in Radar Remote Sensing of the Ocean and Land Surface Water",
     "team_paper_id": "69c36b4bdaaf9fdbd30fa1f9cdff340c1812a1a0",
-    "research_domain": "General Science",
+    "research_domain": "River & Lake Monitoring",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -12212,11 +12197,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "River & Lake Monitoring",
       "Remote Sensing",
-      "Hydrology & Water Resources",
       "Satellite Altimetry",
-      "Lake Dynamics",
-      "Earth Observation"
+      "Hydrology & Water Resources"
     ]
   },
   {
@@ -12384,7 +12368,7 @@
     "country": null,
     "citing_team_paper": "Airborne observations of arctic-boreal water surface elevations from AirSWOT Ka-Band InSAR and LVIS LiDAR",
     "team_paper_id": "d9e05dc3b740082d55157caf1b4b580677cac0e5",
-    "research_domain": "General Science",
+    "research_domain": "Data Validation",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -12435,11 +12419,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Data Validation",
+      "River & Lake Monitoring",
       "Remote Sensing",
-      "Hydrology & Water Resources",
       "Satellite Altimetry",
-      "River Routing",
-      "Water Resource Management"
+      "Hydrology & Water Resources"
     ]
   },
   {
@@ -13130,7 +13114,7 @@
     "country": null,
     "citing_team_paper": "Assessing Submesoscale Sea Surface Height Signals From the SWOT Mission",
     "team_paper_id": "649f3354c23d7a2c244e78a6099a494b4524a410",
-    "research_domain": "General Science",
+    "research_domain": "Altimetry Methods & Calibration",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -13181,11 +13165,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Altimetry Methods & Calibration",
+      "Data Processing",
       "Satellite Altimetry",
-      "Remote Sensing",
-      "Oceanography",
-      "Measurement Science",
-      "Geodesy & Gravity"
+      "Remote Sensing"
     ]
   },
   {
@@ -13432,7 +13415,7 @@
     "country": null,
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Coastal & Estuarine Dynamics",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -13483,11 +13466,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Coastal & Estuarine Dynamics",
+      "River & Lake Monitoring",
+      "Data Validation",
       "Remote Sensing",
-      "Hydrology & Water Resources",
-      "Coastal Dynamics",
-      "Satellite Altimetry",
-      "Urban Hydrology"
+      "Satellite Altimetry"
     ]
   },
   {
@@ -14742,7 +14725,7 @@
     "country": null,
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "River & Lake Monitoring",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -14793,14 +14776,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "River & Lake Monitoring",
+      "Fluvial Geomorphology",
       "Hydrology & Water Resources",
       "Remote Sensing",
-      "River Routing",
-      "Flood Modeling",
-      "Geomorphology",
-      "Ecosystem Science",
-      "Climate Change Impacts",
-      "Water Resource Management"
+      "Satellite Altimetry"
     ]
   },
   {
@@ -14818,7 +14798,7 @@
     "country": null,
     "citing_team_paper": "Seasonal and Fortnight Variations in Internal Solitary Waves in the Indonesian Seas From the SWOT Measurements",
     "team_paper_id": "5b4b9ceac921efff0c0bbca1bb9a5c6407cd80d9",
-    "research_domain": "General Science",
+    "research_domain": "Ocean Waves",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -14869,11 +14849,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Ocean Dynamics",
-      "Satellite Altimetry",
+      "Ocean Waves",
+      "Physical Oceanography",
+      "Oceanography",
       "Remote Sensing",
-      "Ocean Circulation",
-      "Physical Oceanography"
+      "Satellite Altimetry"
     ]
   },
   {
@@ -15205,7 +15185,7 @@
     "country": null,
     "citing_team_paper": "Mapping Water Surface Elevation and Slope in the Mississippi River Delta Using the AirSWOT Ka-Band Interferometric Synthetic Aperture Radar",
     "team_paper_id": "66560775c6ea86fabb609cd6ad391a16f861fa73",
-    "research_domain": "General Science",
+    "research_domain": "Remote Sensing",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -15258,10 +15238,9 @@
     "research_domains": [
       "Remote Sensing",
       "Coastal Dynamics",
-      "Geodesy & Gravity",
-      "Satellite Altimetry",
-      "Digital Elevation Models (DEMs)",
-      "Unmanned Aerial Vehicles (UAVs)"
+      "Geomorphology",
+      "Altimetry Methods & Calibration",
+      "Data Validation"
     ]
   },
   {
@@ -15910,7 +15889,7 @@
     "country": "China",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Data Validation",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -15961,12 +15940,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Hydrology & Water Resources",
-      "Remote Sensing",
-      "Satellite Altimetry",
       "Data Validation",
-      "Ecosystem Science",
-      "Climate Change"
+      "Hydrology & Water Resources",
+      "River & Lake Monitoring",
+      "Remote Sensing",
+      "Satellite Altimetry"
     ]
   },
   {
@@ -17955,7 +17933,7 @@
     "country": "USA",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -18007,10 +17985,9 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Hydrology & Water Resources",
+      "River & Lake Monitoring",
       "Remote Sensing",
-      "Satellite Altimetry",
-      "River Routing",
-      "Data Assimilation"
+      "Data Analysis"
     ]
   },
   {
@@ -19404,7 +19381,7 @@
     "country": "India",
     "citing_team_paper": "Assessing the Potential of the Surface Water and Ocean Topography Mission for Reservoir Monitoring in the Mekong River Basin",
     "team_paper_id": "00374c7ad6aa19bde75ad9f54b69991ccb869e17",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -19456,10 +19433,9 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Hydrology & Water Resources",
-      "Remote Sensing",
-      "Satellite Altimetry",
       "Water Resource Management",
-      "Numerical Methods"
+      "Hydrologic Modeling",
+      "Remote Sensing"
     ]
   },
   {
@@ -19700,7 +19676,7 @@
     "country": "France",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Altimetry Methods & Calibration",
     "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
@@ -19751,11 +19727,11 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Altimetry Methods & Calibration",
       "Satellite Altimetry",
-      "Remote Sensing",
-      "Sea Level Change",
-      "Geodesy & Gravity",
-      "Oceanography"
+      "Ocean Surface Topography",
+      "Data Processing",
+      "Geodesy"
     ]
   },
   {
@@ -20181,7 +20157,7 @@
     "country": "USA",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrologic Modeling",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -20234,10 +20210,8 @@
     "research_domains": [
       "Hydrologic Modeling",
       "Hydrology & Water Resources",
-      "Remote Sensing",
-      "Data Assimilation",
       "Numerical Methods",
-      "River Routing"
+      "Remote Sensing"
     ]
   },
   {
@@ -21215,7 +21189,7 @@
     "country": "France",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Coastal Dynamics",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -21267,12 +21241,10 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Coastal Dynamics",
-      "Remote Sensing",
-      "Sea Level Change",
-      "Oceanography",
       "Geomorphology",
-      "Water Resource Management",
-      "Satellite Altimetry"
+      "Remote Sensing",
+      "Satellite Altimetry",
+      "Ocean Surface Topography"
     ]
   },
   {
@@ -22012,7 +21984,7 @@
     "country": "USA",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrologic Modeling",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -22064,11 +22036,9 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Hydrologic Modeling",
-      "Remote Sensing",
-      "Satellite Hydrology",
       "Hydrology & Water Resources",
       "Data Assimilation",
-      "River Routing"
+      "Remote Sensing"
     ]
   },
   {
@@ -22090,7 +22060,7 @@
     "country": "USA",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrologic Modeling",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -22143,11 +22113,7 @@
     "research_domains": [
       "Hydrologic Modeling",
       "Remote Sensing",
-      "Satellite Hydrology",
-      "Observing System Simulation Experiment (OSSE)",
-      "Hydrology & Water Resources",
-      "Numerical Modeling",
-      "Data Assimilation"
+      "Numerical Modeling"
     ]
   },
   {
@@ -22574,7 +22540,7 @@
     "country": "USA",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Data Assimilation",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -22626,11 +22592,9 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Data Assimilation",
-      "Hydrology & Water Resources",
-      "Remote Sensing",
-      "Satellite Altimetry",
-      "Numerical Methods",
-      "River Routing"
+      "River & Lake Monitoring",
+      "Hydrodynamic Modeling",
+      "Remote Sensing"
     ]
   },
   {
@@ -22833,7 +22797,7 @@
     "country": "Brazil",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrologic Modeling",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -22884,13 +22848,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
+      "Hydrologic Modeling",
       "Data Assimilation",
-      "Hydrology & Water Resources",
-      "Hydrological Modeling",
-      "Remote Sensing",
-      "Satellite Altimetry",
-      "Numerical Methods",
-      "River Routing"
+      "River & Lake Monitoring",
+      "Remote Sensing"
     ]
   },
   {
@@ -23403,7 +23364,7 @@
     "country": "France",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "River & Lake Monitoring",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -23454,10 +23415,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
+      "River & Lake Monitoring",
       "Hydrology & Water Resources",
-      "Satellite Altimetry",
-      "Ecosystem Science"
+      "Remote Sensing"
     ]
   },
   {
@@ -23579,7 +23539,7 @@
     "country": "Canada",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -23638,11 +23598,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
-      "Satellite Altimetry",
       "Hydrology & Water Resources",
-      "Ocean Circulation",
-      "Geodesy & Gravity"
+      "Remote Sensing",
+      "Satellite Altimetry"
     ]
   },
   {
@@ -24275,7 +24233,7 @@
     "country": null,
     "citing_team_paper": "SWOT and the ice-covered polar oceans: An exploratory analysis",
     "team_paper_id": "efa86109e7779b7ce49c94b358cabf2e68c230b3",
-    "research_domain": "General Science",
+    "research_domain": "Cryosphere & Glaciology",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -24334,12 +24292,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
       "Cryosphere & Glaciology",
-      "Polar Oceanography",
-      "Satellite Altimetry",
       "Oceanography",
-      "Sea Level Change"
+      "Remote Sensing",
+      "Satellite Altimetry"
     ]
   },
   {
@@ -26024,7 +25980,7 @@
     "country": "France",
     "citing_team_paper": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
     "team_paper_id": "346faa768695321ece19f1e46620e267f8bac3a7",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -26077,9 +26033,7 @@
     "research_domains": [
       "Hydrology & Water Resources",
       "Remote Sensing",
-      "Satellite Altimetry",
-      "Global Hydrology",
-      "Geodesy & Gravity"
+      "River & Lake Monitoring"
     ]
   },
   {
@@ -27418,7 +27372,7 @@
     "country": null,
     "citing_team_paper": "Preliminary Characterization of SWOT Hydrology Error Budget and Global Capabilities",
     "team_paper_id": "34e3665882a5a05e6f33dff0c6a28685681e626b",
-    "research_domain": "General Science",
+    "research_domain": "Hydrology & Water Resources",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -27471,9 +27425,7 @@
     "research_domains": [
       "Hydrology & Water Resources",
       "Remote Sensing",
-      "Satellite Altimetry",
-      "Water Resource Management",
-      "Geodesy & Gravity"
+      "River & Lake Monitoring"
     ]
   },
   {
@@ -27571,7 +27523,7 @@
     "country": null,
     "citing_team_paper": "Success Stories of Satellite Radar Altimeter Applications",
     "team_paper_id": "12d4ed76e4bf8fe2625cd96e41b02a3c9f812d8f",
-    "research_domain": "General Science",
+    "research_domain": "Remote Sensing",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -27623,14 +27575,8 @@
     "is_peer_reviewed": true,
     "research_domains": [
       "Remote Sensing",
-      "Satellite Altimetry",
       "Hydrology & Water Resources",
-      "Oceanography",
-      "Sea Level Change",
-      "River Routing",
-      "Flood Modeling",
-      "Earth System Science",
-      "Water Resource Management"
+      "Ocean Surface Topography"
     ]
   },
   {
@@ -27719,7 +27665,7 @@
     "country": null,
     "citing_team_paper": "The Surface Water and Ocean Topography Mission: A Breakthrough in Radar Remote Sensing of the Ocean and Land Surface Water",
     "team_paper_id": "69c36b4bdaaf9fdbd30fa1f9cdff340c1812a1a0",
-    "research_domain": "General Science",
+    "research_domain": "Coastal Dynamics",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -27770,13 +27716,10 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Satellite Altimetry",
-      "Sea Level Change",
-      "Remote Sensing",
       "Coastal Dynamics",
+      "Ocean Surface Topography",
       "Physical Oceanography",
-      "Hydrology & Water Resources",
-      "Ocean Tides"
+      "Remote Sensing"
     ]
   },
   {
@@ -28471,7 +28414,7 @@
     "country": null,
     "citing_team_paper": "Combining surface drifters and high resolution global simulations enables the mapping of internal tide surface energy",
     "team_paper_id": "04ddc3d2f094f3553470c7b4bd23c06415524615",
-    "research_domain": "General Science",
+    "research_domain": "Numerical Methods",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -28522,10 +28465,9 @@
     },
     "is_peer_reviewed": true,
     "research_domains": [
-      "Remote Sensing",
-      "Satellite Altimetry",
-      "Hydrology & Water Resources",
-      "Geostatistics"
+      "Numerical Methods",
+      "Data Analysis",
+      "Remote Sensing"
     ]
   },
   {

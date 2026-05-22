@@ -32,8 +32,8 @@ const EDMFDashboard = () => {
   useEffect(() => {
     const loadEdmfData = async () => {
       try {
-        const { loadEngagedModelData } = await import('../../utils/dataLoader');
-        const data = await loadEngagedModelData('EDMF');
+        const { loadModelData } = await import('../../utils/dataLoader');
+        const data = await loadModelData('EDMF');
         setEdmfData(data);
       } catch (error) {
         console.error('Failed to load EDMF data:', error);
