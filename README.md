@@ -1,12 +1,8 @@
-# Science Model Dashboard
+# JPL Earth Modeling Enterprise (JEME) Dashboard
 
-An interactive dashboard for visualizing citation metrics across multiple NASA scientific models.
+An interactive dashboard for visualizing citation metrics across NASA JPL scientific models and Earth observation missions.
 
-## Live Demo
-
-[https://yunks128.github.io/science-model-dashboard](https://yunks128.github.io/science-model-dashboard)
-
-## Supported Models
+## Supported Models (JEME)
 
 - **RAPID** - River Application for Parallel computation of Discharge
 - **CARDAMOM** - CARbon DAta MOdel framework
@@ -16,6 +12,12 @@ An interactive dashboard for visualizing citation metrics across multiple NASA s
 - **MOMO-CHEM** - Chemistry-Climate Model
 - **LES** - Large Eddy Simulation
 - **EDMF** - Eddy Diffusivity Mass Flux
+
+## Supported Missions (JEOE)
+
+- **GRACE** - Gravity Recovery and Climate Experiment
+- **SWOT** - Surface Water and Ocean Topography
+- **TROPESS** - TRopospheric Ozone and its Precursors from Earth System Sounding
 
 ## Features
 
@@ -47,8 +49,8 @@ An interactive dashboard for visualizing citation metrics across multiple NASA s
 ### Installation
 
 ```bash
-git clone https://github.com/yunks128/science-model-dashboard.git
-cd science-model-dashboard
+git clone https://github.jpl.nasa.gov/kyun/jeme.git
+cd jeme
 npm install
 npm start
 ```
@@ -62,14 +64,14 @@ Open [http://localhost:3000/science-model-dashboard](http://localhost:3000/scien
 | `npm start` | Start development server (binds to `0.0.0.0:3000`) |
 | `npm run build` | Build for production |
 | `npm test` | Run tests |
-| `npm run deploy` | Build and deploy to GitHub Pages |
+| `npm run deploy` | Build and deploy to GitHub Pages (JPL) |
 | `node scripts/clean_citation_data.js --all --dry-run` | Preview citation data cleanup |
 | `node scripts/clean_citation_data.js --model ECCO` | Clean a specific model's data |
 | `python3 scripts/fetch_ecco_venues.py` | Fetch missing journal/venue info for ECCO citations |
 
 ## Data Sources
 
-Citation data is stored as JSON in `src/data/{MODEL_NAME}_analyzed.json`. Two formats coexist:
+Citation data is stored as JSON in `public/data/{MODEL_NAME}_analyzed.json`. Two formats coexist:
 
 - **Crossref format**: Used by RAPID, CMS-Flux, ISSM, CARDAMOM (fields: `title[]`, `author[]`, `DOI`, `container-title[]`)
 - **Simplified format**: Used by ECCO, LES, EDMF, MOMO-CHEM (fields: `title`, `authors`, `doi`, `venue`, `research_domain`, `engagement_level`, `missions_instruments[]`)
@@ -88,41 +90,46 @@ Citation data undergoes a multi-agent verification pipeline that cross-validates
 | **Team Paper Categorizer** | Team paper titles | Classifies team papers into relevance tiers (Core / Infrastructure / Related / Unrelated) |
 | **Deduplication** | DOI + title matching | Removes duplicate entries across data sources |
 
-### Verification Results by Model
+### Verified Papers by Model
 
-| Model | Entries | Verified | Removed | Confidence |
-|-------|---------|----------|---------|------------|
-| RAPID | 488 | 483 | 5 | High (96% keyword match) |
-| CARDAMOM | 773 | 737 | 36 | High (95% keyword match) |
-| CMS-Flux | 955 | 946 | 9 | High (95% keyword match) |
-| ECCO | 31,452 | 27,366 | 4,086 | Medium-High |
-| ISSM | 5,950 | 5,613 | 337 | High (96% keyword match; metadata repaired) |
-| MOMO-CHEM | 1,658 | 1,650 | 8 | High (95% keyword match) |
-| LES | 255 | 255 | 0 | High (93% keyword match) |
-| EDMF | 1,178 | 1,171 | 7 | High (91% keyword match) |
+| Model | Papers in Dashboard | Confidence |
+|-------|-------------------|------------|
+| RAPID | 336 | High (96% keyword match) |
+| CARDAMOM | 514 | High (95% keyword match) |
+| CMS-Flux | 646 | High (95% keyword match) |
+| ECCO | 16,320 | Medium-High |
+| ISSM | 3,491 | High (96% keyword match; metadata repaired) |
+| MOMO-CHEM | 983 | High (95% keyword match) |
+| LES | 168 | High (93% keyword match) |
+| EDMF | 810 | High (91% keyword match) |
+| GRACE | 3,084 | High |
+| SWOT | 371 | High |
+| TROPESS | 771 | High |
+
+All entries are peer-reviewed publications. Non-peer-reviewed entries (preprints, theses, conference abstracts, technical reports) are excluded.
 
 ### Uncertainty Quantification
 
 Each removal decision carries inherent uncertainty from the verification methods used:
 
-| Decision Category | Entries Affected | Uncertainty | Rationale |
-|---|---|---|---|
-| **EGM2008 geodesy removal** (ECCO) | 1,944 | Low (~5%) | EGM2008 is a gravity model, not ECCO. However, some citing papers may use both EGM2008 and ECCO data — these are lost. |
-| **Tangential team paper removal** (ECCO) | 1,557 | Medium (~15%) | Team papers like island biogeography (178) and PFAS chemistry (96) are clearly unrelated. But some ocean-adjacent papers (e.g., "Cyclonic Eddies in the Gulf of Mexico") were removed despite their citing papers being topically relevant — the team paper link was indirect. |
-| **Off-topic citing paper removal** (ECCO) | 39 | Low (~3%) | Papers with full abstracts clearly outside earth/environmental science (dengue epidemiology, shrimp immunology, train wheel defects). Very high confidence these are false positives. |
-| **Duplicate removal** (ECCO + ISSM) | 125 | Very Low (~1%) | DOI-based and title-based deduplication. Small risk of false matches on short/generic titles. |
-| **Unverifiable entries retained** | ~4,100 (ECCO) | Medium (~20%) | Papers with no abstract that passed team-paper-level filtering but couldn't be individually verified. Some may be false positives. |
-| **ISSM metadata repair** | 1,904 | Very Low (~2%) | Title lookup via Semantic Scholar batch API. All 42 broken IDs resolved successfully. Risk is limited to Semantic Scholar returning a wrong paper for an ID. |
+| Decision Category | Uncertainty | Rationale |
+|---|---|---|
+| **EGM2008 geodesy removal** (ECCO) | Low (~5%) | EGM2008 is a gravity model, not ECCO. However, some citing papers may use both. |
+| **Tangential team paper removal** (ECCO) | Medium (~15%) | Clearly unrelated team papers removed, but some ocean-adjacent papers may have been over-removed. |
+| **Off-topic citing paper removal** (ECCO) | Low (~3%) | Papers with abstracts clearly outside earth/environmental science. |
+| **Duplicate removal** (ECCO + ISSM) | Very Low (~1%) | DOI-based and title-based deduplication. |
+| **Unverifiable entries retained** | Medium (~20%) | Papers without abstracts that passed team-paper-level filtering but could not be individually verified. |
+| **ISSM metadata repair** | Very Low (~2%) | Title lookup via Semantic Scholar batch API. All broken IDs resolved. |
 
-**Overall estimated false removal rate**: ~8-12% of removed entries may have been legitimate citations with indirect relevance to the model.
+**Overall estimated false removal rate**: ~8-12% of removed entries may have been legitimate citations with indirect relevance.
 
-**Overall estimated false retention rate**: ~3-5% of retained entries may be false positives (primarily among the ~50% of entries lacking abstracts).
+**Overall estimated false retention rate**: ~3-5% of retained entries may be false positives (primarily among entries lacking abstracts).
 
 ### Methodology Limitations
 
 - **Keyword-based relevance**: Title/abstract keyword matching cannot detect papers that use a model's output without naming it. Estimated miss rate: 5-10%.
-- **Team paper attribution**: The `citing_team_paper` field links citations to team publications, but the definition of "team paper" may be over-inclusive (papers by team members on unrelated topics) or under-inclusive (collaborative papers not attributed to the team).
-- **Abstract availability**: ~50% of ECCO entries and ~4-9% of other models lack abstracts, limiting individual-level verification to title-only matching.
+- **Team paper attribution**: The `citing_team_paper` field links citations to team publications, but the definition of "team paper" may be over-inclusive or under-inclusive.
+- **Abstract availability**: ~50% of ECCO entries and ~4-9% of other models lack abstracts, limiting verification to title-only matching.
 - **Single-pass classification**: Each entry is classified once. A multi-round human-in-the-loop review of borderline cases would improve accuracy.
 
 ## Deployment
@@ -131,7 +138,7 @@ Each removal decision carries inherent uncertainty from the verification methods
 npm run deploy
 ```
 
-Deploys to GitHub Pages at the configured homepage URL.
+Deploys to GitHub Pages at `https://github.jpl.nasa.gov/pages/kyun/jeme/`.
 
 ## Contributing
 
