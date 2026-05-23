@@ -181,7 +181,6 @@ All entries are peer-reviewed publications. Non-peer-reviewed entries (preprints
 ### Methodology Limitations
 
 - **Keyword-based relevance**: Cannot detect papers that use a model's output without naming it. Estimated miss rate: 5–10%.
-- **Abstract availability**: ~50% of ECCO entries and ~4–9% of other models lack abstracts, limiting verification to title-only matching.
 - **Single-pass classification**: Each entry is classified once without human-in-the-loop review of borderline cases.
 
 ---
