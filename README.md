@@ -8,14 +8,11 @@
 
 An interactive dashboard for visualizing citation metrics, research impact, and model capability levels across NASA JPL Earth science models and observation missions.
 
-![JEME Dashboard](public/JEME-1slide.jpg)
-
 ---
 
 ## Table of Contents
 
 - [Overview](#overview)
-- [Screenshots](#screenshots)
 - [Supported Models & Missions](#supported-models--missions)
 - [Features](#features)
 - [Technologies](#technologies)
@@ -37,18 +34,6 @@ The JEME Dashboard is a React-based web application that provides interactive vi
 
 - **JEME** (JPL Earth Modeling Enterprise) — 8 science models
 - **JEOE** (JPL Earth Observation Enterprise) — NASA Earth observation missions
-
----
-
-## Screenshots
-
-### JEME Main Dashboard
-![JEME Dashboard Overview](public/JEME-1slide.jpg)
-
-### Model Dashboard (ECCO example)
-The per-model dashboard shows citation trends, engagement levels, research domain breakdown, geographic impact, and journal distribution.
-
-> Additional screenshots available at the [live site](https://github.jpl.nasa.gov/pages/kyun/jeme/).
 
 ---
 
