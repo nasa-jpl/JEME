@@ -8,6 +8,8 @@
 
 An interactive dashboard for visualizing citation metrics, research impact, and model capability levels across NASA JPL Earth science models and observation missions.
 
+![JEME Dashboard](public/JEME-1slide.jpg)
+
 ---
 
 ## Table of Contents
