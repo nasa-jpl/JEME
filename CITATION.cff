@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+type: software
+title: "JPL Earth Modeling Enterprise (JEME) Dashboard"
+abstract: >
+  An interactive web dashboard for visualizing citation metrics, research impact,
+  and model capability levels across NASA JPL Earth science models and observation
+  missions. Supports multi-model network analysis, uncertainty quantification, and
+  peer-reviewed citation verification.
+authors:
+  - family-names: Yun
+    given-names: Kyongsik
+    affiliation: "Jet Propulsion Laboratory, California Institute of Technology"
+repository-code: "https://github.jpl.nasa.gov/kyun/jeme"
+url: "https://github.jpl.nasa.gov/pages/kyun/jeme/"
+license: MIT
+version: "1.0.0"
+date-released: "2026-05-22"
+keywords:
+  - NASA
+  - JPL
+  - Earth science
+  - citation analysis
+  - dashboard
+  - scientific models
+  - JEME
+  - JEOE
