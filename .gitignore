@@ -23,17 +23,6 @@ __pycache__/
 # Script caches and logs
 scripts/*_cache.json
 scripts/*.log
-scripts/removed_non_peer_reviewed.json
-scripts/tropess_sc_recheck.json
 
-# citation_scraper runtime artifacts
+# citation_scraper runtime logs only (zips are intentionally tracked)
 citation_scraper/*.log
-citation_scraper/*.zip
-
-# Office / binary files
-*.pptx
-*.docx
-*.xlsx
-
-# Screenshots and temp images
-Screenshot*.png
