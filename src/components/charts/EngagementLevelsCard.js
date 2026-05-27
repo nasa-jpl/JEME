@@ -2,7 +2,6 @@
 // Chart showing engagement level distribution
 
 import React, { useMemo } from 'react';
-import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { MoreHorizontal } from 'lucide-react';
 
 const EngagementLevelsCard = ({ data }) => {
@@ -35,15 +34,15 @@ const EngagementLevelsCard = ({ data }) => {
           else if (level === "Review Paper") standardLevel = "Review Paper";
           else if (level === "Simple Citation") standardLevel = "Simple Citation";
         } else {
-          // Model format (L1-L3 plus Simple Citation)
+          // Model format: Level 1–4 (match by prefix to handle any suffix text)
           if (level === "Simple Citation") {
-            standardLevel = "Simple Citation";
-          } else if (level.includes("Level 1:") || level.includes("Level 1 ")) {
-            standardLevel = "Level 1: Data Usage";
-          } else if (level.includes("Level 2:") || level.includes("Level 2 ")) {
-            standardLevel = "Level 2: Model Adaptation";
-          } else if (level.includes("Level 3:") || level.includes("Level 3 ")) {
-            standardLevel = "Level 3: Foundational Method";
+            standardLevel = "Level 1: Simple Citation";
+          } else if (level.startsWith("Level 1:") || level.startsWith("Level 1 ")) {
+            standardLevel = "Level 1: Simple Citation";
+          } else if (level.startsWith("Level 2:") || level.startsWith("Level 2 ")) {
+            standardLevel = "Level 2: Data Usage";
+          } else if (level.startsWith("Level 3:") || level.startsWith("Level 3 ")) {
+            standardLevel = "Level 3: Model Adaptation";
           }
         }
 
@@ -56,7 +55,7 @@ const EngagementLevelsCard = ({ data }) => {
     // Define engagement level order and colors based on format
     const levelOrder = isMissionFormat
       ? ["Simple Citation", "Data Usage", "Review Paper", "Unclassified"]
-      : ["Simple Citation", "Level 1: Data Usage", "Level 2: Model Adaptation", "Level 3: Foundational Method", "Unclassified"];
+      : ["Level 1: Simple Citation", "Level 2: Data Usage", "Level 3: Model Adaptation", "Unclassified"];
 
     const levelColors = isMissionFormat
       ? {
@@ -66,10 +65,9 @@ const EngagementLevelsCard = ({ data }) => {
           "Unclassified": "#D1D5DB"         // Gray
         }
       : {
-          "Simple Citation": "#93C5FD",
-          "Level 1: Data Usage": "#60A5FA",
-          "Level 2: Model Adaptation": "#3B82F6",
-          "Level 3: Foundational Method": "#1D4ED8",
+          "Level 1: Simple Citation": "#93C5FD",
+          "Level 2: Data Usage": "#60A5FA",
+          "Level 3: Model Adaptation": "#1D4ED8",
           "Unclassified": "#D1D5DB"
         };
 
@@ -83,10 +81,9 @@ const EngagementLevelsCard = ({ data }) => {
         if (isMissionFormat) {
           // Mission format names are already short enough
         } else {
-          if (level === "Simple Citation") displayName = "Simple Citation";
-          else if (level.includes("Level 1")) displayName = "L1: Data Usage";
-          else if (level.includes("Level 2")) displayName = "L2: Adaptation";
-          else if (level.includes("Level 3")) displayName = "L3: Foundation";
+          if (level === "Level 1: Simple Citation") displayName = "L1: Simple Citation";
+          else if (level === "Level 2: Data Usage") displayName = "L2: Data Usage";
+          else if (level === "Level 3: Model Adaptation") displayName = "L3: Model Adaptation";
         }
 
         return {
@@ -105,33 +102,12 @@ const EngagementLevelsCard = ({ data }) => {
   const unclassifiedCount = engagementData.find(item => item.fullName === "Unclassified")?.value || 0;
 
   // Custom tooltip
-  const CustomTooltip = ({ active, payload, label }) => {
-    if (active && payload && payload.length) {
-      const data = payload[0].payload;
-      return (
-        <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg max-w-xs">
-          <p className="font-medium text-gray-900">{data.fullName}</p>
-          <p className="text-sm text-gray-600">
-            {`${data.value} papers (${data.percentage}%)`}
-          </p>
-          {data.fullName !== "Unclassified" && (
-            <p className="text-xs text-gray-500 mt-1">
-              {getEngagementDescription(data.fullName)}
-            </p>
-          )}
-        </div>
-      );
-    }
-    return null;
-  };
-
   // Helper function to get engagement level descriptions
   const getEngagementDescription = (level) => {
     const descriptions = {
-      "Simple Citation": "Only cites/mentions as background, does not use",
-      "Level 1: Data Usage": "Uses methodology or data",
-      "Level 2: Model Adaptation": "Modifies or extends the model",
-      "Level 3: Foundational Method": "Model is foundational to the research",
+      "Level 1: Simple Citation": "Cites the model as background without direct use",
+      "Level 2: Data Usage": "Uses model outputs or datasets only",
+      "Level 3: Model Adaptation": "Uses, modifies, extends, or couples the model or methodology",
       "Data Usage": "Uses mission data or products in analysis",
       "Review Paper": "Review, survey, or overview paper"
     };
@@ -144,7 +120,7 @@ const EngagementLevelsCard = ({ data }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Engagement Level Distribution</div>
           <div className="text-sm text-gray-500 mt-1">
-            Engagement depth among peer-reviewed papers that directly use this model/mission • {(data || []).length} papers
+            Engagement depth among all peer-reviewed papers citing this model/mission • {(data || []).length} total papers
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">
@@ -152,41 +128,6 @@ const EngagementLevelsCard = ({ data }) => {
         </button>
       </div>
 
-      <div className="h-64 mb-4">
-        <ResponsiveContainer width="100%" height="100%">
-          <BarChart
-            data={engagementData}
-            layout="vertical"
-            margin={{ top: 5, right: 30, left: 100, bottom: 5 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" horizontal={true} vertical={false} />
-            <XAxis
-              type="number"
-              tick={{ fontSize: 12 }}
-              tickFormatter={(value) => value.toString()}
-            />
-            <YAxis
-              type="category"
-              dataKey="name"
-              width={90}
-              tick={{ fontSize: 11 }}
-            />
-            <Tooltip content={<CustomTooltip />} />
-            <Bar
-              dataKey="value"
-              radius={[0, 4, 4, 0]}
-              stroke="#ffffff"
-              strokeWidth={1}
-            >
-              {engagementData.map((entry, index) => (
-                <Cell key={`cell-${index}`} fill={entry.color} />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
-      </div>
-
-      {/* Engagement Statistics */}
       <div className="mb-4">
 
         {/* Progress indicators for each level */}

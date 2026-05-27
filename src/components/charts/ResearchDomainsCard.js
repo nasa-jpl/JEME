@@ -61,8 +61,6 @@ const ResearchDomainsCard = ({ data = [] }) => {
     return processedData.slice(0, 10);
   }, [citationsData]);
 
-  // Calculate total papers in displayed domains
-  const totalDisplayed = domainData.reduce((sum, item) => sum + item.value, 0);
   const totalDomains = useMemo(() => {
     const uniqueDomains = new Set();
     citationsData.forEach(paper => {
@@ -200,7 +198,7 @@ const ResearchDomainsCard = ({ data = [] }) => {
           </div>
           <div>
             <div className="text-lg font-semibold text-gray-900">
-              {totalDisplayed}
+              {citationsData.length}
             </div>
             <div className="text-xs text-gray-500">Total Papers</div>
           </div>

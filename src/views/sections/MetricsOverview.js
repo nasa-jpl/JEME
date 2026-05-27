@@ -22,9 +22,9 @@ const MetricsOverview = ({ data = [] }) => {
         avgCitations: 0,
         implementationRate: 0,
         isMissionFormat: false,
-        modelAdaptationCount: 0,
-        foundationalMethodCount: 0,
-        dataUsageCount: 0,
+        l1Count: 0,
+        l2Count: 0,
+        l3Count: 0,
         reviewPaperCount: 0,
         countriesCount: 0,
         regionsCount: 0,
@@ -112,9 +112,9 @@ const MetricsOverview = ({ data = [] }) => {
     // 3. IMPLEMENTATION RATE (peer-reviewed only)
     // Count different engagement levels - supports both 4-level model and 3-level mission formats
     const engagementStats = {};
-    let modelAdaptationCount = 0;
-    let foundationalMethodCount = 0;
-    let dataUsageCount = 0;
+    let l1Count = 0;
+    let l2Count = 0;
+    let l3Count = 0;
     let reviewPaperCount = 0;
 
     // Detect mission format
@@ -128,20 +128,18 @@ const MetricsOverview = ({ data = [] }) => {
       engagementStats[level] = (engagementStats[level] || 0) + 1;
 
       if (isMissionFormat) {
-        // Mission 3-level: Data Usage and Review Paper are the "deep engagement" levels
         if (level === "Data Usage") {
-          dataUsageCount++;
+          l2Count++;
         } else if (level === "Review Paper") {
           reviewPaperCount++;
         }
       } else {
-        // Model 3-level format
-        if (level.startsWith('Level 2:')) {
-          modelAdaptationCount++;
+        if (level.startsWith('Level 1:') || level === 'Simple Citation') {
+          l1Count++;
+        } else if (level.startsWith('Level 2:')) {
+          l2Count++;
         } else if (level.startsWith('Level 3:')) {
-          foundationalMethodCount++;
-        } else if (level.startsWith('Level 1:')) {
-          dataUsageCount++;
+          l3Count++;
         }
       }
     });
@@ -150,8 +148,8 @@ const MetricsOverview = ({ data = [] }) => {
     // Model format: (L2 + L3) / Total
     // Mission format: (Data Usage + Review Paper) / Total
     const implementationCount = isMissionFormat
-      ? (dataUsageCount + reviewPaperCount)
-      : (modelAdaptationCount + foundationalMethodCount);
+      ? (l2Count + reviewPaperCount)
+      : (l2Count + l3Count);
     const implementationRate = peerReviewedData.length > 0 ? ((implementationCount / peerReviewedData.length) * 100) : 0;
 
     // 4. GEOGRAPHIC REACH (peer-reviewed only)
@@ -259,13 +257,13 @@ const MetricsOverview = ({ data = [] }) => {
 
     // Mock previous period data for trend calculation
     const previousMetrics = {
-      totalCitations: Math.round(totalCitations * 0.89), // Assume 11% growth
+      totalCitations: Math.round(peerReviewedCount * 0.89),
       hIndex: hIndex - 2,
       implementationRate: implementationRate - 4.7,
       geographicReach: Math.max(1, Math.round(uniqueCountries.size * 0.85))
     };
 
-    const citationsTrend = calculateTrend(totalCitations, previousMetrics.totalCitations);
+    const citationsTrend = calculateTrend(peerReviewedCount, previousMetrics.totalCitations);
     const hIndexTrend = calculateTrend(hIndex, previousMetrics.hIndex);
     const implementationTrend = calculateTrend(implementationRate, previousMetrics.implementationRate);
     const geographicTrend = calculateTrend(uniqueCountries.size, previousMetrics.geographicReach);
@@ -279,9 +277,9 @@ const MetricsOverview = ({ data = [] }) => {
       avgCitations,
       implementationRate,
       isMissionFormat,
-      modelAdaptationCount,
-      foundationalMethodCount,
-      dataUsageCount,
+      l1Count,
+      l2Count,
+      l3Count,
       reviewPaperCount,
       countriesCount: uniqueCountries.size,
       regionsCount: uniqueRegions.size,
@@ -300,13 +298,14 @@ const MetricsOverview = ({ data = [] }) => {
     <div className="grid grid-cols-4 gap-4 mb-6">
       <MetricCard
         title="Total Citations"
-        value={metrics.totalCitations.toLocaleString()}
+        value={metrics.peerReviewedCount.toLocaleString()}
         icon={<Award size={16} />}
         iconBg="bg-blue-400"
         trend={`+${metrics.trends.citations.value}% from last quarter`}
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
-          { label: "Peer-reviewed papers (L2+)", value: metrics.peerReviewedCount.toString() },
+          { label: "L1: Simple Citation", value: metrics.l1Count.toString() },
+          { label: "L2+ (direct use)", value: (metrics.l2Count + metrics.l3Count).toString() },
           { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
         ]}
@@ -332,13 +331,12 @@ const MetricsOverview = ({ data = [] }) => {
         trendUp={metrics.trends.implementation.isUp}
         breakdown={metrics.isMissionFormat ? [
           { label: "Formula", value: "(Data Usage + Review) / Total × 100" },
-          { label: "Data Usage", value: metrics.dataUsageCount.toString() },
+          { label: "Data Usage", value: metrics.l2Count.toString() },
           { label: "Review Paper", value: metrics.reviewPaperCount.toString() }
         ] : [
           { label: "Formula", value: "(L2 + L3) / Total × 100" },
-          { label: "Model Adaptation", value: metrics.modelAdaptationCount.toString() },
-          { label: "Foundational Method", value: metrics.foundationalMethodCount.toString() },
-          { label: "Data Usage", value: metrics.dataUsageCount.toString() }
+          { label: "L2: Data Usage", value: metrics.l2Count.toString() },
+          { label: "L3: Model Adaptation", value: metrics.l3Count.toString() }
         ]}
       />
       <MetricCard

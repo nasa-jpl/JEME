@@ -1,132 +1,283 @@
 {
   "RAPID": [
     {
-      "authors": "David, Cédric H., Florence Habets, David R. Maidment and Zong-Liang Yang",
+      "authors": "David et al. (2011)",
+      "title": "River network routing on the NHDPlus dataset",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2011,
+      "doi": "10.1175/2011JHM1345.1",
+      "link": "https://doi.org/10.1175/2011JHM1345.1",
+      "category": "A. Foundational RAPID and core methodology"
+    },
+    {
+      "authors": "David et al. (2011)",
       "title": "RAPID applied to the SIM-France model",
-      "journal": "Hydrological Processes, 25(22), 3412-3425",
+      "journal": "Hydrological Processes",
       "year": 2011,
       "doi": "10.1002/hyp.8070",
-      "link": "http://dx.doi.org/10.1002/hyp.8070"
+      "link": "https://doi.org/10.1002/hyp.8070",
+      "category": "A. Foundational RAPID and core methodology"
     },
     {
-      "authors": "Saleh, Firas, Nicolas Flipo, Florence Habets, Agnès Ducharne, Ludovic Oudin, Pascal Viennot and Emmanuel Ledoux",
-      "title": "Modeling the impact of in-stream water level fluctuations on stream-aquifer interactions at the regional scale",
-      "journal": "Journal of Hydrology, 400, 490-500",
-      "year": 2011,
-      "doi": "10.1016/j.jhydrol.2011.02.001",
-      "link": "http://dx.doi.org/10.1016/j.jhydrol.2011.02.001"
-    },
-    {
-      "authors": "Flipo, Nicolas, Céline Monteil, Michel Poulin, Chantal de Fouquet and Mohamed Krimissa",
-      "title": "Hybrid fitting of a hydrosystem model: Long-term insight into the Beauce aquifer functioning (France)",
-      "journal": "Water Resources Research, 48, 1-21",
-      "year": 2012,
-      "doi": "10.1029/2011WR011092",
-      "link": "http://dx.doi.org/10.1029/2011WR011092"
-    },
-    {
-      "authors": "Thierion, Charlotte, Laurent Longuevergne, Florence Habets, Emmanuel Ledoux, Philippe Ackerer, Samer Majdalani, Etienne Leblois, Simon Lecluse, Eric Martin, Solen Queguiner and Pascal Viennot",
-      "title": "Assessing the water balance of the Upper Rhine Graben hydrosystem",
-      "journal": "Journal of Hydrology, 424-425, 68-83",
-      "year": 2012,
-      "doi": "10.1016/j.jhydrol.2011.12.028",
-      "link": "http://dx.doi.org/10.1016/j.jhydrol.2011.12.028"
-    },
-    {
-      "authors": "David, Cédric H., Zong-Liang Yang and Seungbum Hong",
-      "title": "Regional-scale river flow modeling using off-the-shelf runoff products, thousands of mapped rivers and hundreds of stream flow gauges",
-      "journal": "Environmental Modelling & Software, 42, 116-132",
-      "year": 2013,
-      "doi": "10.1016/j.envsoft.2012.12.011",
-      "link": "http://dx.doi.org/10.1016/j.envsoft.2012.12.011"
-    },
-    {
-      "authors": "David, Cédric H., Zong-Liang Yang and James S. Famiglietti",
+      "authors": "David et al. (2013)",
       "title": "Quantification of the upstream-to-downstream influence in the Muskingum method, and implications for speedup in parallel computations of river flow",
-      "journal": "Water Resources Research, 49(5), 1-18",
+      "journal": "Water Resources Research",
       "year": 2013,
       "doi": "10.1002/wrcr.20250",
-      "link": "http://dx.doi.org/10.1002/wrcr.20250"
+      "link": "https://doi.org/10.1002/wrcr.20250",
+      "category": "A. Foundational RAPID and core methodology"
     },
     {
-      "authors": "Häfliger, Vincent, Eric Martin, Aaron Boone, Florence Habets, Cédric H. David, Pierre-A. Garambois, Hélène Roux, Sophie Ricci, Lucie Berthon, Anthony Thévenin, and Sylvain Biancamaria",
-      "title": "Evaluation of regional-scale water level simulations using various river routing schemes within a hydrometeorological modelling framework for the preparation of the SWOT mission",
-      "journal": "Journal of Hydrometeorology, 16(4), 1821-1842",
-      "year": 2015,
-      "doi": "10.1175/JHM-D-14-0107.1",
-      "link": "http://dx.doi.org/10.1175/JHM-D-14-0107.1"
+      "authors": "David et al. (2013)",
+      "title": "Regional-scale river flow modeling using off-the-shelf runoff products, thousands of mapped rivers and hundreds of stream flow gauges",
+      "journal": "Environmental Modelling & Software",
+      "year": 2013,
+      "doi": "10.1016/j.envsoft.2012.12.011",
+      "link": "https://doi.org/10.1016/j.envsoft.2012.12.011",
+      "category": "A. Foundational RAPID and core methodology"
     },
     {
-      "authors": "David, Cédric H., James S. Famiglietti, Zong-Liang Yang, and Victor Eijkhout",
+      "authors": "David et al. (2015)",
       "title": "Enhanced fixed-size parallel speedup with the Muskingum method using a trans-boundary approach and a large sub-basins approximation",
-      "journal": "Water Resources Research, 51(9), 1-25",
+      "journal": "Water Resources Research",
       "year": 2015,
       "doi": "10.1002/2014WR016650",
-      "link": "http://dx.doi.org/10.1002/2014WR016650"
+      "link": "https://doi.org/10.1002/2014WR016650",
+      "category": "A. Foundational RAPID and core methodology"
     },
     {
-      "authors": "Tavakoly, Ahmad A., David R. Maidment, James McClelland, Tim Whiteaker, Zong-Liang Yang, Claire Griffin, Cédric H. David, and Lisa Meyer",
-      "title": "A GIS Framework for Regional Modeling of Riverine Nitrogen Transport: Case Study, San Antonio and Guadalupe Basins",
-      "journal": "Journal of the American Water Resources Association, 52(1), 1-15",
-      "year": 2015,
-      "doi": "10.1111/1752-1688.12355",
-      "link": "http://dx.doi.org/10.1111/1752-1688.12355"
-    },
-    {
-      "authors": "Lin, Peirong, Zong-Liang Yang, Xitian Cai, and Cédric H. David",
-      "title": "Development and evaluation of a physically-based lake level model for water resource management: A case study for Lake Buchanan, Texas",
-      "journal": "Journal of Hydrology: Regional Studies, 4(B), 661-674",
-      "year": 2015,
-      "doi": "10.1016/j.ejrh.2015.08.005",
-      "link": "http://dx.doi.org/10.1016/j.ejrh.2015.08.005"
-    },
-    {
-      "authors": "David, Cédric H., James S. Famiglietti, Zong-Liang Yang, and David R. Maidment",
-      "title": "A Decade of RAPID – Reflections on the Development of an Open Source Geoscience Code",
-      "journal": "Earth and Space Science, 3, 1-19",
+      "authors": "David et al. (2016)",
+      "title": "A Decade of RAPID \u2013 Reflections on the Development of an Open Source Geoscience Code",
+      "journal": "Earth and Space Science",
       "year": 2016,
       "doi": "10.1002/2015EA000142",
-      "link": "http://dx.doi.org/10.1002/2015EA000142"
+      "link": "https://doi.org/10.1002/2015EA000142",
+      "category": "A. Foundational RAPID and core methodology"
     },
     {
-      "authors": "Snow, Alan D., Scott D. Christensen, Nathan R. Swain, James Nelson, Daniel P. Ames, Norman L. Jones, Deng Ding, Nawajish Noman, Cédric H. David, Florian Pappenberger",
-      "title": "A Cloud-Based High-Resolution National Hydrologic Forecast System Downscaled from a Global Ensemble Land Surface Model",
-      "journal": "Journal of the American Water Resources Association, 1-15",
+      "authors": "David et al. (2019)",
+      "title": "Analytical Propagation of Runoff Uncertainty into Discharge Uncertainty through a Large River Network",
+      "journal": "Geophysical Research Letters",
+      "year": 2019,
+      "doi": "10.1029/2019GL083342",
+      "link": "https://doi.org/10.1029/2019GL083342",
+      "category": "A. Foundational RAPID and core methodology"
+    },
+    {
+      "authors": "Emery et al. (2020)",
+      "title": "Underlying Fundamentals of Kalman Filtering for River Network Modeling",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2020,
+      "doi": "10.1175/JHM-D-19-0084.1",
+      "link": "https://doi.org/10.1175/JHM-D-19-0084.1",
+      "category": "A. Foundational RAPID and core methodology"
+    },
+    {
+      "authors": "Collins et al. (2024)",
+      "title": "Global patterns in river water storage dependent on residence time",
+      "journal": "Nature Geoscience",
+      "year": 2024,
+      "doi": "10.1038/s41561-024-01421-5",
+      "link": "https://doi.org/10.1038/s41561-024-01421-5",
+      "category": "A. Foundational RAPID and core methodology"
+    },
+    {
+      "authors": "H\u00e4fliger et al. (2015)",
+      "title": "Evaluation of regional-scale water level simulations using various river routing schemes within a hydrometeorological modelling framework for the preparation of the SWOT mission",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2015,
+      "doi": "10.1175/JHM-D-14-0107.1",
+      "link": "https://doi.org/10.1175/JHM-D-14-0107.1",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Lin et al. (2015)",
+      "title": "Development and evaluation of a physically-based lake level model for water resource management: A case study for Lake Buchanan, Texas",
+      "journal": "Journal of Hydrology: Regional Studies",
+      "year": 2015,
+      "doi": "10.1016/j.ejrh.2015.08.005",
+      "link": "https://doi.org/10.1016/j.ejrh.2015.08.005",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Tavakoly et al. (2015)",
+      "title": "A GIS Framework for Regional Modeling of Riverine Nitrogen Transport: Case Study: San Antonio and Guadalupe Basins",
+      "journal": "Journal of the American Water Resources Association",
+      "year": 2015,
+      "doi": "10.1111/1752-1688.12355",
+      "link": "https://doi.org/10.1111/1752-1688.12355",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Snow et al. (2016)",
+      "title": "A High-Resolution National-Scale Hydrologic Forecast System from a Global Ensemble Land Surface Model",
+      "journal": "Journal of the American Water Resources Association",
       "year": 2016,
       "doi": "10.1111/1752-1688.12434",
-      "link": "http://dx.doi.org/10.1111/1752-1688.12434"
+      "link": "https://doi.org/10.1111/1752-1688.12434",
+      "category": "B. Uses RAPID (incl. adding new features)"
     },
     {
-      "authors": "Tavakoly, Ahmad A., Alan D. Snow, Cédric H. David, Michael L. Follum, David R. Maidment, Zong-Liang Yang",
-      "title": "Continental Scale River Flow Modeling of the Mississippi River Basin Using High-Resolution NHDPlus Dataset",
-      "journal": "Journal of the American Water Resources Association, 1-22",
+      "authors": "Tavakoly et al. (2016)",
+      "title": "Continental Scale River Flow Modeling of the Mississippi River Basin Using High Resolution NHDPlus Dataset",
+      "journal": "Journal of the American Water Resources Association",
       "year": 2016,
       "doi": "10.1111/1752-1688.12456",
-      "link": "http://dx.doi.org/10.1111/1752-1688.12456"
+      "link": "https://doi.org/10.1111/1752-1688.12456",
+      "category": "B. Uses RAPID (incl. adding new features)"
     },
     {
-      "authors": "Follum, Michael L., Ahmad A. Tavakoly, Jeffrey D. Niemann, and Alan D. Snow",
-      "title": "AutoRAPID: A Model for Prompt Streamflow Estimation and Flood Inundation Mapping over Regional to Continental Extents",
-      "journal": "Journal of the American Water Resources Association, 1-20",
-      "year": 2016,
-      "doi": "10.1111/1752-1688.12476",
-      "link": "http://dx.doi.org/10.1111/1752-1688.12476"
+      "authors": "Lin et al. (2018)",
+      "title": "Implementation of a vector-based river network routing scheme in the community WRF-Hydro modeling framework for flood discharge simulation",
+      "journal": "Environmental Modelling & Software",
+      "year": 2018,
+      "doi": "10.1016/j.envsoft.2018.05.018",
+      "link": "https://doi.org/10.1016/j.envsoft.2018.05.018",
+      "category": "B. Uses RAPID (incl. adding new features)"
     },
     {
-      "authors": "Swain, Nathan R., Scott D. Christensen, Alan D. Snow, Herman Dolder, Gonzalo Espinoza-Davalos, Erfan Goharian, Norman L. Jones, E. James Nelson, Daniel P. Ames, Steven J. Burian",
-      "title": "A new open source platform for lowering the barrier for environmental web app development",
-      "journal": "Environmental Modelling & Software, 85, 11-26, 1-20",
-      "year": 2016,
-      "doi": "10.1016/j.envsoft.2016.08.003",
-      "link": "http://dx.doi.org/10.1016/j.envsoft.2016.08.003"
+      "authors": "Nelson et al. (2019)",
+      "title": "Enabling Stakeholder Decision-Making with Earth Observation and Modeling Data Using Tethys Platform",
+      "journal": "Frontiers Environmental Science",
+      "year": 2019,
+      "doi": "10.3389/fenvs.2019.00148",
+      "link": "https://doi.org/10.3389/fenvs.2019.00148",
+      "category": "B. Uses RAPID (incl. adding new features)"
     },
     {
-      "authors": "Salas, Fernando R., Marcelo A. Somos-Valenzuela, Aubrey Dugger, David R. Maidment, David J. Gochis, Cédric H. David, Wei Yu, Deng Ding, Edward P. Clark, and Nawajish Noman",
+      "authors": "Sikder et al. (2019)",
+      "title": "Evaluation of Available Global Runoff Datasets through a River Model in Support of Transboundary Water Management in South and Southeast Asia",
+      "journal": "Frontiers in Environmental Science",
+      "year": 2019,
+      "doi": "10.3389/fenvs.2019.00171",
+      "link": "https://doi.org/10.3389/fenvs.2019.00171",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Tavakoly et al. (2023)",
+      "title": "Development of non-data driven reservoir routing in the routing application for parallel computatIon of discharge (RAPID) model",
+      "journal": "Environmental Modelling & Software",
+      "year": 2023,
+      "doi": "10.1016/j.envsoft.2023.105631",
+      "link": "https://doi.org/10.1016/j.envsoft.2023.105631",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Collins et al. (2025)",
+      "title": "River Network Routing and Discharge Partitioning on a Multichannel River Network",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2025WR041417",
+      "link": "https://doi.org/10.1029/2025WR041417",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Tom et al. (2026)",
+      "title": "Event-based serverless environmental modeling on the cloud: A pedagogical guide and river case study",
+      "journal": "Environmental Modelling & Software",
+      "year": 2026,
+      "doi": "10.1016/j.envsoft.2025.106753",
+      "link": "https://doi.org/10.1016/j.envsoft.2025.106753",
+      "category": "B. Uses RAPID (incl. adding new features)"
+    },
+    {
+      "authors": "Salas et al. (2017)",
       "title": "Towards Real-Time Continental Scale Streamflow Simulation in Continuous and Discrete Space",
-      "journal": "JAWRA Journal of the American Water Resources Association",
+      "journal": "Journal of the American Water Resources Association",
       "year": 2017,
       "doi": "10.1111/1752-1688.12586",
-      "link": "http://dx.doi.org/10.1111/1752-1688.12586"
+      "link": "https://doi.org/10.1111/1752-1688.12586",
+      "category": "C. Foundational for community datasets or systems"
+    },
+    {
+      "authors": "Qiao et al. (2019)",
+      "title": "A Systems Approach to Routing Global Gridded Runoff through Local High-Resolution Stream Networks for Flood Early Warning Systems",
+      "journal": "Environmental Modelling & Software",
+      "year": 2019,
+      "doi": "10.1016/j.envsoft.2019.104501",
+      "link": "https://doi.org/10.1016/j.envsoft.2019.104501",
+      "category": "C. Foundational for community datasets or systems"
+    },
+    {
+      "authors": "Lin et al. (2019)",
+      "title": "Global Reconstruction of Naturalized River Flows at 2.94 Million Reaches",
+      "journal": "Water Resources Research",
+      "year": 2019,
+      "doi": "10.1029/2019WR025287",
+      "link": "https://doi.org/10.1029/2019WR025287",
+      "category": "C. Foundational for community datasets or systems"
+    },
+    {
+      "authors": "Yang et al. (2021)",
+      "title": "Global Reach-level 3-hourly River Flood Reanalysis (1980-2019)",
+      "journal": "Bulletin of the American Meteorological Society",
+      "year": 2021,
+      "doi": "10.1175/BAMS-D-20-0057.1",
+      "link": "https://doi.org/10.1175/BAMS-D-20-0057.1",
+      "category": "C. Foundational for community datasets or systems"
+    },
+    {
+      "authors": "Frasson et al. (2021)",
+      "title": "Exploring the factors controlling the error characteristics of the Surface Water and Ocean Topography mission discharge estimates",
+      "journal": "Water Resources Research",
+      "year": 2021,
+      "doi": "10.1029/2020WR028519",
+      "link": "https://doi.org/10.1029/2020WR028519",
+      "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Sikder et al. (2021)",
+      "title": "A Synthetic Dataset Inspired by Satellite Altimetry and Impacts of Sampling on Global Spaceborne Discharge Characterization",
+      "journal": "Water Resources Research",
+      "year": 2021,
+      "doi": "10.1029/2020WR029035",
+      "link": "https://doi.org/10.1029/2020WR029035",
+      "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Durand et al. (2023)",
+      "title": "A framework for estimating global river discharge from the Surface Water and Ocean Topography satellite mission",
+      "journal": "Water Resources Research",
+      "year": 2023,
+      "doi": "10.1029/2021WR031614",
+      "link": "https://doi.org/10.1029/2021WR031614",
+      "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Andreadis et al. (2025)",
+      "title": "A first look at river discharge estimation from SWOT satellite observations",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL114185",
+      "link": "https://doi.org/10.1029/2024GL114185",
+      "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Wade et al. (2025)",
+      "title": "Intrinsic spatial scales of river stores and fluxes and their relative contributions to the global water cycle",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL113052",
+      "link": "https://doi.org/10.1029/2024GL113052",
+      "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Cerbelaud et al. (2026)",
+      "title": "Wide-swath altimetry maps bank shapes and storage changes in global rivers",
+      "journal": "Nature",
+      "year": 2026,
+      "doi": "10.1038/s41586-026-10218-y",
+      "link": "https://doi.org/10.1038/s41586-026-10218-y",
+      "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Wade et al. (2025)",
+      "title": "Bidirectional Translations Between Observational and Topography-based Hydrographic Datasets: MERIT-Basins and the SWOT River Database (SWORD)",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024WR038633",
+      "link": "https://doi.org/10.1029/2024WR038633",
+      "category": "D. Uses datasets produced by RAPID core methodology"
     }
   ]
 }

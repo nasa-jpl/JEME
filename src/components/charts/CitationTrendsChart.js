@@ -210,7 +210,7 @@ const CitationTrendsChart = ({ data }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Papers Published Over Time</div>
           <div className="text-sm text-gray-500 mt-1">
-            Annual and cumulative peer-reviewed papers (L2+) from {chartData.startYear} to {chartData.endYear} • {chartData.totalPapers} total papers
+            Annual and cumulative peer-reviewed papers from {chartData.startYear} to {chartData.endYear} • {chartData.totalPapers} total papers
           </div>
         </div>
         <div className="flex gap-2">

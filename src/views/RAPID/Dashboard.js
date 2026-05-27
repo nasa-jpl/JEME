@@ -214,13 +214,20 @@ const RAPIDDashboard = () => {
         
         <MetricsOverview data={rapidData} />
 
+        <div className="mb-6">
+          <EngagementLevelsCard data={rapidData} />
+        </div>
+
         <EarthSystemSection modelName="RAPID" citationsData={rapidData} />
 
         <CitationTrendsChart data={rapidData} />
-        
-        <div className="grid grid-cols-2 gap-6 mb-6">
+
+        <div className="mb-6">
           <ResearchDomainsCard data={rapidData} />
-          <EngagementLevelsCard data={rapidData} />
+        </div>
+
+        <div className="mb-6">
+          <MissionsSummary citationsData={rapidData} maxMissions={8} showDetails={true} />
         </div>
 
         {rapidData.length > 0 && rapidData[0]?.uncertainty && (
@@ -231,10 +238,6 @@ const RAPIDDashboard = () => {
         )}
 
         <FutureTrendsChart data={rapidData} />
-
-        <div className="mb-6">
-          <MissionsSummary citationsData={rapidData} maxMissions={8} showDetails={true} />
-        </div>
 
         <DashboardSummaryCard data={rapidData} />
         
