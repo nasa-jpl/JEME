@@ -11,7 +11,7 @@ const ModelInfoSection = ({ modelName, modelDisplayName }) => {
   useEffect(() => {
     const fetchModelInfo = async () => {
       try {
-        const response = await fetch(`/models/${modelName}.md`);
+        const response = await fetch(`${process.env.PUBLIC_URL}/models/${modelName}.md`);
         if (response.ok) {
           const text = await response.text();
           // Parse markdown sections

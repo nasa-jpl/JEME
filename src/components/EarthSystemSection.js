@@ -108,7 +108,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+    <div className="bg-white rounded-lg shadow-sm p-6 h-full">
       {/* Header */}
       <div className="flex items-center justify-between mb-5">
         <div className="flex items-center gap-3">
@@ -191,17 +191,11 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
                   <Icon size={20} style={{ color: sphere.color }} />
                 </div>
 
-                {/* Name + primary badge */}
+                {/* Name */}
                 <div className="flex-1 min-w-0">
                   <div className="flex items-center gap-2">
                     <span className="font-semibold text-sm text-gray-900">{sphere.name}</span>
-                    {isPrimary && (
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-blue-100 text-blue-700 font-bold">
-                        Primary
-                      </span>
-                    )}
                   </div>
-                  <p className="text-xs text-gray-500">{(sphere.totalCitations || 0).toLocaleString()} citations</p>
                 </div>
 
                 {/* Percentage bar */}

@@ -214,11 +214,10 @@ const RAPIDDashboard = () => {
         
         <MetricsOverview data={rapidData} />
 
-        <div className="mb-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <EngagementLevelsCard data={rapidData} />
+          <EarthSystemSection modelName="RAPID" citationsData={rapidData} />
         </div>
-
-        <EarthSystemSection modelName="RAPID" citationsData={rapidData} />
 
         <CitationTrendsChart data={rapidData} />
 
