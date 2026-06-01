@@ -1,6 +1,7 @@
 // Generic Citations Page component that works with any model
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc, Satellite } from 'lucide-react';
+import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc, Satellite, ExternalLink, FlaskConical, Globe } from 'lucide-react';
+import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
 import { getAgencyColor } from '../utils/dataUtils';
@@ -272,7 +273,10 @@ const GenericCitationsPage = () => {
         issue: record.issue || '',
         referenceCount: record['references-count'] || 0,
         missions: missions,
-        uncertainty: record.uncertainty || null
+        uncertainty: record.uncertainty || null,
+        paper_type: record.paper_type || '',
+        paper_type_rationale: record.paper_type_rationale || '',
+        engagement_level_rationale: record.engagement_level_rationale || ''
       };
     });
     
@@ -562,6 +566,100 @@ const GenericCitationsPage = () => {
               </div>
             </div>
             
+            {/* Science vs Algorithm Section */}
+            {citations.some(c => c.paper_type) && (() => {
+              const sciencePapers = citations.filter(c => c.paper_type === 'science');
+              const algorithmPapers = citations.filter(c => c.paper_type === 'algorithm');
+              const untyped = citations.filter(c => !c.paper_type);
+              const pieData = [
+                { name: 'Science', value: sciencePapers.length, color: '#10B981' },
+                { name: 'Algorithm', value: algorithmPapers.length, color: '#3B82F6' },
+                ...(untyped.length > 0 ? [{ name: 'Unclassified', value: untyped.length, color: '#D1D5DB' }] : [])
+              ].filter(d => d.value > 0);
+              const [activeType, setActiveType] = React.useState(null);
+              const shownPapers = activeType === 'Science' ? sciencePapers : activeType === 'Algorithm' ? algorithmPapers : [];
+              return (
+                <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
+                  <div className="text-lg font-semibold text-gray-800 mb-1">Paper Type Classification</div>
+                  <div className="text-sm text-gray-500 mb-4">Click a segment to browse papers of that type</div>
+                  <div className="flex flex-col lg:flex-row gap-6">
+                    {/* Pie chart */}
+                    <div className="w-full lg:w-64 flex-shrink-0">
+                      <div className="h-48">
+                        <ResponsiveContainer width="100%" height="100%">
+                          <PieChart>
+                            <Pie data={pieData} cx="50%" cy="50%" innerRadius={50} outerRadius={80}
+                              paddingAngle={2} dataKey="value"
+                              onClick={(entry) => setActiveType(prev => prev === entry.name ? null : entry.name)}>
+                              {pieData.map((entry, i) => (
+                                <Cell key={i} fill={entry.color}
+                                  stroke={activeType === entry.name ? '#1F2937' : '#fff'}
+                                  strokeWidth={activeType === entry.name ? 2 : 1}
+                                  style={{ cursor: 'pointer', opacity: activeType && activeType !== entry.name ? 0.5 : 1 }} />
+                              ))}
+                            </Pie>
+                            <Tooltip formatter={(v, n) => [v + ' papers', n]} />
+                          </PieChart>
+                        </ResponsiveContainer>
+                      </div>
+                      <div className="flex flex-col gap-2 mt-2">
+                        {pieData.map((d, i) => (
+                          <button key={i} onClick={() => setActiveType(prev => prev === d.name ? null : d.name)}
+                            className={`flex items-center gap-2 px-3 py-1.5 rounded-lg text-sm text-left transition-colors ${activeType === d.name ? 'ring-2 ring-offset-1' : 'hover:bg-gray-50'}`}
+                            style={{ ringColor: d.color }}>
+                            <span className="w-3 h-3 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
+                            <span className="font-medium text-gray-700">{d.name}</span>
+                            <span className="ml-auto text-gray-500">{d.value}</span>
+                          </button>
+                        ))}
+                      </div>
+                    </div>
+                    {/* Paper list */}
+                    <div className="flex-1 min-w-0">
+                      {activeType ? (
+                        <>
+                          <div className="flex items-center gap-2 mb-3">
+                            {activeType === 'Science' ? <Globe size={16} className="text-emerald-600" /> : <FlaskConical size={16} className="text-blue-600" />}
+                            <span className="font-semibold text-gray-800">{activeType} Papers</span>
+                            <span className="text-sm text-gray-500">({shownPapers.length})</span>
+                          </div>
+                          <div className="max-h-72 overflow-y-auto divide-y divide-gray-100 border border-gray-200 rounded-lg">
+                            {shownPapers.map((p, i) => (
+                              <div key={i} className="px-3 py-2 hover:bg-gray-50">
+                                <div className="flex items-start gap-1">
+                                  {p.url ? (
+                                    <a href={p.url} target="_blank" rel="noopener noreferrer"
+                                      className="text-xs font-medium text-blue-700 hover:underline flex-1 leading-relaxed">
+                                      {p.title}
+                                    </a>
+                                  ) : (
+                                    <span className="text-xs font-medium text-gray-700 flex-1 leading-relaxed">{p.title}</span>
+                                  )}
+                                  {p.url && <ExternalLink size={11} className="mt-0.5 flex-shrink-0 text-gray-400" />}
+                                </div>
+                                {p.paper_type_rationale && (
+                                  <p className="text-xs text-gray-400 mt-0.5 italic leading-snug">{p.paper_type_rationale}</p>
+                                )}
+                                <div className="flex gap-3 mt-0.5 text-xs text-gray-400">
+                                  {p.year && <span>{p.year}</span>}
+                                  {p.cites > 0 && <span>{p.cites} citations</span>}
+                                  {p.source && <span className="truncate max-w-40">{p.source}</span>}
+                                </div>
+                              </div>
+                            ))}
+                          </div>
+                        </>
+                      ) : (
+                        <div className="flex items-center justify-center h-full text-sm text-gray-400">
+                          Click a type to see its papers
+                        </div>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              );
+            })()}
+
             {/* Citation Table */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
@@ -690,6 +788,9 @@ const GenericCitationsPage = () => {
                           )}
                         </div>
                       </th>
+                      <th className="px-3 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                        Type
+                      </th>
                       <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
                         <div className="flex items-center gap-1">
                           <Satellite size={12} />
@@ -725,14 +826,41 @@ const GenericCitationsPage = () => {
                         </td>
                         <td className="px-6 py-4">
                           <div className="text-xs text-gray-600 max-w-32 flex items-center gap-1">
-                            <span>{citation.engagement_level.replace('Level ', 'L')}</span>
+                            <span title={citation.engagement_level_rationale || undefined}
+                              className={citation.engagement_level_rationale ? 'cursor-help underline decoration-dotted' : ''}>
+                              {citation.engagement_level.replace('Level ', 'L')}
+                            </span>
                             {citation.uncertainty && <UncertaintyBadge uncertainty={citation.uncertainty} />}
                           </div>
+                          {citation.engagement_level_rationale && (
+                            <div className="text-xs text-gray-400 mt-0.5 italic max-w-32 leading-snug line-clamp-2"
+                              title={citation.engagement_level_rationale}>
+                              {citation.engagement_level_rationale}
+                            </div>
+                          )}
                         </td>
                         <td className="px-3 py-4">
                           <div className="text-xs text-gray-600 max-w-[7rem] truncate" title={citation.research_domain}>
                             {citation.research_domain}
                           </div>
+                        </td>
+                        <td className="px-3 py-4">
+                          {citation.paper_type && (
+                            <span title={citation.paper_type_rationale || undefined}
+                              className={`inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium cursor-help ${
+                                citation.paper_type === 'science'
+                                  ? 'bg-emerald-100 text-emerald-800'
+                                  : 'bg-blue-100 text-blue-800'
+                              }`}>
+                              {citation.paper_type === 'science' ? 'Science' : 'Algorithm'}
+                            </span>
+                          )}
+                          {citation.paper_type_rationale && (
+                            <div className="text-xs text-gray-400 mt-0.5 italic max-w-24 leading-snug line-clamp-2"
+                              title={citation.paper_type_rationale}>
+                              {citation.paper_type_rationale}
+                            </div>
+                          )}
                         </td>
                         <td className="px-6 py-4">
                           <div className="flex flex-wrap gap-1 max-w-40">

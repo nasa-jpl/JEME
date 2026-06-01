@@ -55,7 +55,7 @@ Classify each paper into exactly ONE of:
     or other Earth science phenomena.
 
 Also explain the existing engagement_level:
-  - "Simple Citation": briefly references TROPESS or related satellite products without
+  - "Citation": briefly references TROPESS or related satellite products without
     detailed analysis or use of the data.
   - "Data Usage": actively uses TROPESS or closely related satellite retrievals as a
     primary data source in the analysis.

@@ -74,7 +74,7 @@ def build_batch_prompt(papers):
             "paper_id": p.get("paper_id", ""),
             "title": p.get("title", ""),
             "venue": p.get("venue", ""),
-            "current_engagement_level": p.get("engagement_level", "Simple Citation"),
+            "current_engagement_level": p.get("engagement_level", "Citation"),
             "current_rationale": p.get("engagement_level_rationale", ""),
             "abstract_excerpt": abstract,
         })
@@ -129,7 +129,7 @@ def main():
         print(f"Loaded {len(cache)} cached results")
 
     # Only look at Simple Citation papers
-    simple_papers = [p for p in data if p.get("engagement_level") == "Simple Citation"]
+    simple_papers = [p for p in data if p.get("engagement_level") == "Citation"]
     print(f"Total Simple Citation papers: {len(simple_papers)}")
 
     if args.sample:
@@ -173,11 +173,11 @@ def main():
         if pid in cache:
             r = cache[pid]
             new_level = r.get("new_engagement_level", "")
-            if new_level == "Data Usage" and p.get("engagement_level") == "Simple Citation":
+            if new_level == "Data Usage" and p.get("engagement_level") == "Citation":
                 p["engagement_level"] = "Data Usage"
                 p["engagement_level_rationale"] = r.get("rationale", "")
                 reclassified += 1
-            elif new_level == "Simple Citation":
+            elif new_level == "Citation":
                 # Update rationale even if level stays the same
                 if r.get("rationale"):
                     p["engagement_level_rationale"] = r.get("rationale", "")
