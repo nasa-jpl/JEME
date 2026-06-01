@@ -128,7 +128,9 @@ const MetricsOverview = ({ data = [] }) => {
       engagementStats[level] = (engagementStats[level] || 0) + 1;
 
       if (isMissionFormat) {
-        if (level === "Data Usage") {
+        if (level === "Simple Citation") {
+          l1Count++;
+        } else if (level === "Data Usage") {
           l2Count++;
         } else if (level === "Review Paper") {
           reviewPaperCount++;
@@ -297,7 +299,7 @@ const MetricsOverview = ({ data = [] }) => {
   return (
     <div className="grid grid-cols-4 gap-4 mb-6">
       <MetricCard
-        title="Total Citations"
+        title="Total Papers"
         value={metrics.peerReviewedCount.toLocaleString()}
         icon={<Award size={16} />}
         iconBg="bg-blue-400"
@@ -305,7 +307,7 @@ const MetricsOverview = ({ data = [] }) => {
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
           { label: "L1: Simple Citation", value: metrics.l1Count.toString() },
-          { label: "L2+ (direct use)", value: (metrics.l2Count + metrics.l3Count).toString() },
+          { label: metrics.isMissionFormat ? "Data Usage + Review Papers" : "L2+ (direct use)", value: metrics.isMissionFormat ? (metrics.l2Count + metrics.reviewPaperCount).toString() : (metrics.l2Count + metrics.l3Count).toString() },
           { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
         ]}
@@ -318,8 +320,7 @@ const MetricsOverview = ({ data = [] }) => {
         trend={`+${metrics.trends.hIndex.value} from last year`}
         trendUp={metrics.trends.hIndex.isUp}
         breakdown={[
-          { label: "Avg citations", value: metrics.avgCitations.toFixed(1) },
-          { label: "Research impact", value: metrics.hIndex >= 40 ? "High" : metrics.hIndex >= 20 ? "Medium" : "Growing" }
+          { label: "Avg citations", value: metrics.avgCitations.toFixed(1) }
         ]}
       />
       <MetricCard

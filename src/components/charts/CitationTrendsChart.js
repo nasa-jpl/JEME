@@ -177,9 +177,17 @@ const CitationTrendsChart = ({ data }) => {
       }
     }
 
+    // Papers with no extractable year: add to the last year's cumulative so totals stay consistent
+    const undatedCount = citationsData.length - cumulativePapers;
+    if (undatedCount > 0 && completeData.length > 0) {
+      const last = completeData[completeData.length - 1];
+      last.cumulative += undatedCount;
+      last.cumulativePapers += undatedCount;
+    }
+
     return {
       chartData: completeData,
-      totalPapers: cumulativePapers,
+      totalPapers: citationsData.length,
       totalPeerReviewed: cumulativePeerReviewed,
       totalPopularPress: cumulativePopularPress,
       startYear: minYear,

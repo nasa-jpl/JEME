@@ -36,7 +36,7 @@ Tropospheric composition observations have historically come from a patchwork of
 **Lead Institution**: NASA Jet Propulsion Laboratory (JPL)
 **Heritage**: TES on EOS Aura (2004-2018)
 
-## JPL Team Members
+## Team Members
 
 - Kevin Bowman (Project Scientist)
 - John Worden

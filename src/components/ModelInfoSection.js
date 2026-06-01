@@ -105,10 +105,10 @@ const ModelInfoSection = ({ modelName, modelDisplayName }) => {
             </div>
           )}
 
-          {modelInfo['JPL Team Members'] && (
+          {(modelInfo['Team Members'] || modelInfo['JPL Team Members']) && (
             <div>
-              <h3 className="font-semibold text-gray-900 mb-2">JPL Team Members</h3>
-              <MarkdownContent content={modelInfo['JPL Team Members']} className="leading-relaxed" />
+              <h3 className="font-semibold text-gray-900 mb-2">{modelInfo['Team Members'] ? 'Team Members' : 'JPL Team Members'}</h3>
+              <MarkdownContent content={modelInfo['Team Members'] || modelInfo['JPL Team Members']} className="leading-relaxed" />
             </div>
           )}
 

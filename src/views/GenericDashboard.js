@@ -341,10 +341,10 @@ const GenericDashboard = ({ modelName, citationsData }) => {
                   </div>
                 )}
 
-                {modelInfo['JPL Team Members'] && (
+                {(modelInfo['Team Members'] || modelInfo['JPL Team Members']) && (
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-2">JPL Team Members</h3>
-                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['JPL Team Members']}</div>
+                    <h3 className="font-semibold text-gray-900 mb-2">{modelInfo['Team Members'] ? 'Team Members' : 'JPL Team Members'}</h3>
+                    <div className="leading-relaxed whitespace-pre-line">{modelInfo['Team Members'] || modelInfo['JPL Team Members']}</div>
                   </div>
                 )}
 
