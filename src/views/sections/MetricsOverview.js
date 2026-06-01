@@ -306,7 +306,7 @@ const MetricsOverview = ({ data = [] }) => {
         trend={`+${metrics.trends.citations.value}% from last quarter`}
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
-          { label: "L1: Simple Citation", value: metrics.l1Count.toString() },
+          { label: metrics.isMissionFormat ? "Citation" : "L1: Simple Citation", value: metrics.l1Count.toString() },
           { label: metrics.isMissionFormat ? "Data Usage + Review Papers" : "L2+ (direct use)", value: metrics.isMissionFormat ? (metrics.l2Count + metrics.reviewPaperCount).toString() : (metrics.l2Count + metrics.l3Count).toString() },
           { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
