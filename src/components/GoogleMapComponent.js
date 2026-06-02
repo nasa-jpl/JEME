@@ -70,12 +70,13 @@ const COUNTRY_TO_REGION = {
   'Papua New Guinea': 'Oceania'
 };
 
-const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
+const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
   const mapRef = useRef(null);
   const mapInstanceRef = useRef(null);
   const [isLoading, setIsLoading] = useState(true);
   const [loadError, setLoadError] = useState(null);
   const markersRef = useRef([]);
+  const linesRef = useRef([]);
 
   // Get region for a country
   const getRegionForCountry = useCallback((country) => {
@@ -367,15 +368,81 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
     }
   }, [data, getCountryCoordinates, getColorForCountry, getRegionForCountry]);
 
+  const addCollaborationLines = useCallback((map) => {
+    if (!citationsData || !window.google || !window.google.maps) return;
+
+    // Build country-pair collaboration counts from all_countries field
+    const linkCounts = {};
+    citationsData.forEach(paper => {
+      const countries = paper.all_countries;
+      if (!countries || countries.length < 2) return;
+      for (let i = 0; i < countries.length; i++) {
+        for (let j = i + 1; j < countries.length; j++) {
+          const key = [countries[i], countries[j]].sort().join('||');
+          linkCounts[key] = (linkCounts[key] || 0) + 1;
+        }
+      }
+    });
+
+    const maxCount = Math.max(...Object.values(linkCounts), 1);
+
+    Object.entries(linkCounts).forEach(([key, count]) => {
+      const [countryA, countryB] = key.split('||');
+      const coordsA = getCountryCoordinates(countryA);
+      const coordsB = getCountryCoordinates(countryB);
+      if (!coordsA || !coordsB) return;
+
+      // Scale line weight 1–5 based on number of shared papers
+      const weight = 1 + Math.round((count / maxCount) * 4);
+      const opacity = 0.25 + (count / maxCount) * 0.45;
+
+      const line = new window.google.maps.Polyline({
+        path: [coordsA, coordsB],
+        geodesic: true,
+        strokeColor: '#6366f1',
+        strokeOpacity: opacity,
+        strokeWeight: weight,
+        map: map,
+        zIndex: 0
+      });
+
+      // Info window on click
+      const infoWindow = new window.google.maps.InfoWindow({
+        content: `
+          <div style="font-family: -apple-system, sans-serif; padding: 10px; min-width: 180px;">
+            <div style="font-weight: 600; color: #1f2937; margin-bottom: 4px;">
+              ${countryA} ↔ ${countryB}
+            </div>
+            <div style="font-size: 13px; color: #6366f1; font-weight: 500;">
+              ${count} shared paper${count > 1 ? 's' : ''}
+            </div>
+          </div>
+        `
+      });
+
+      line.addListener('click', (e) => {
+        if (window.currentInfoWindow) window.currentInfoWindow.close();
+        infoWindow.setPosition(e.latLng);
+        infoWindow.open(map);
+        window.currentInfoWindow = infoWindow;
+      });
+
+      linesRef.current.push(line);
+    });
+  }, [citationsData, getCountryCoordinates]);
+
   const updateMapMarkers = useCallback(() => {
     if (!mapInstanceRef.current || !window.google || !window.google.maps) return;
 
-    // Clear existing markers
+    // Clear existing markers and lines
     markersRef.current.forEach(marker => marker.setMap(null));
     markersRef.current = [];
+    linesRef.current.forEach(line => line.setMap(null));
+    linesRef.current = [];
 
+    addCollaborationLines(mapInstanceRef.current);
     addCountryMarkers(mapInstanceRef.current);
-  }, [addCountryMarkers]);
+  }, [addCountryMarkers, addCollaborationLines]);
 
   useEffect(() => {
     if (mapInstanceRef.current && !isLoading && !loadError) {
@@ -452,13 +519,14 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
       setIsLoading(false);
       setLoadError(null);
 
+      addCollaborationLines(map);
       addCountryMarkers(map);
     } catch (error) {
       console.error('Error initializing Google Maps:', error);
       setLoadError(`Map initialization failed: ${error.message}`);
       setIsLoading(false);
     }
-  }, [addCountryMarkers]);
+  }, [addCountryMarkers, addCollaborationLines]);
 
   // Get active regions from data for legend
   const activeRegions = React.useMemo(() => {
@@ -578,6 +646,17 @@ const GoogleMapComponent = ({ data, regionalData, apiKey }) => {
               </div>
             ))}
           </div>
+
+          {linesRef.current.length > 0 && (
+            <div style={{ borderTop: '1px solid #e5e7eb', marginTop: '8px', paddingTop: '8px' }}>
+              <div style={{ fontWeight: '600', color: '#374151', marginBottom: '6px' }}>Collaboration</div>
+              <div style={{ display: 'flex', alignItems: 'center', gap: '6px' }}>
+                <div style={{ width: '24px', height: '3px', background: '#6366f1', opacity: 0.6, borderRadius: '2px' }} />
+                <span style={{ color: '#4B5563' }}>Multi-country paper</span>
+              </div>
+              <div style={{ fontSize: '10px', color: '#9CA3AF', marginTop: '3px' }}>Thicker = more papers</div>
+            </div>
+          )}
 
           {sizeScale.max > 0 && (
             <>
