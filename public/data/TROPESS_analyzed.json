@@ -71,8 +71,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI' indicates a focus on the methodology of data retrieval from satellite instruments. The venue 'Atmos. Meas. Tech.' further supports an algorithmic classification.",
-    "engagement_level_rationale": "The paper's title implies it is about generating or improving the retrieval of profiles from CrIS and TROPOMI, which are direct uses or developments related to TROPESS-like data products."
+    "paper_type_rationale": "The abstract describes a 'new, hyper-spectral approach' for retrieving CO profiles, indicating a focus on methodology and data product generation.",
+    "engagement_level_rationale": "The paper presents a new hyper-spectral approach to retrieve CO profiles by combining data from CrIS and TROPOMI, demonstrating active engagement with satellite retrieval development."
   },
   {
     "title": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
@@ -103,7 +103,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -150,8 +150,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation' directly describes the development and validation of a retrieval algorithm. The venue 'Atmos. Meas. Tech.' is also consistent with algorithmic work.",
-    "engagement_level_rationale": "The paper focuses on the methodology and validation of retrievals from AIRS and OMI, which are core to TROPESS data products, indicating active use or development of these data."
+    "paper_type_rationale": "The title explicitly states 'methodology and validation' and the abstract describes a 'multispectral approach' to provide O3 data products, clearly classifying it as an algorithm paper.",
+    "engagement_level_rationale": "The paper develops a new multispectral approach to retrieve O3 profiles using AIRS and OMI data, indicating direct engagement with satellite retrieval methodology."
   },
   {
     "title": "Characterization and evaluation of AIRS-based estimates of the deuterium content of water vapor",
@@ -179,7 +179,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -226,8 +226,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Characterization and evaluation of AIRS-based estimates' indicates a focus on assessing the quality and properties of a satellite retrieval product, which is an algorithmic task. The venue 'Atmos. Meas. Tech.' further supports this classification.",
-    "engagement_level_rationale": "The paper's focus on characterizing and evaluating AIRS-based estimates of water vapor deuterium content directly relates to the quality and utility of TROPESS-relevant data."
+    "paper_type_rationale": "The abstract describes evaluating the 'error characteristics and vertical sensitivity' of AIRS measurements and comparing them to TES data, indicating a focus on retrieval methodology and product validation.",
+    "engagement_level_rationale": "The paper retrieves HDO and H2O concentrations from AIRS radiances using an optimal estimation algorithm and evaluates their characteristics, demonstrating direct engagement with satellite data processing and validation."
   },
   {
     "title": "Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign From Multiconstituent Satellite Data Assimilation",
@@ -259,7 +259,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -306,8 +306,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Balance of Emission and Dynamical Controls on Ozone During the Korea-United States Air Quality Campaign' indicates a focus on understanding atmospheric processes and air quality phenomena. The use of satellite data assimilation serves as a tool for this scientific investigation.",
-    "engagement_level_rationale": "The paper uses 'Multiconstituent Satellite Data Assimilation' to study ozone, implying active use of satellite data, which aligns with TROPESS products."
+    "paper_type_rationale": "The study aims to 'understand the processes controlling air pollution' during the KORUS-AQ campaign and estimate emissions, indicating a focus on Earth science phenomena rather than retrieval methodology.",
+    "engagement_level_rationale": "The paper uses global multiconstituent concentration and emission fields obtained from the assimilation of satellite retrievals, including AIRS/OMI, to study air pollution processes."
   },
   {
     "title": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
@@ -375,8 +375,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Evaluation of a multi-model, multi-constituent assimilation framework' indicates a focus on assessing the methodology and performance of a data processing and reanalysis system. This falls under the development and validation of an algorithm.",
-    "engagement_level_rationale": "The paper evaluates an assimilation framework for chemical reanalysis, which directly involves the processing and integration of satellite data like TROPESS."
+    "paper_type_rationale": "The abstract describes introducing and evaluating a 'Multi-mOdel Multi-cOnstituent Chemical data assimilation (MOMO-Chem) framework' and its optimization capabilities, clearly indicating a focus on methodology and system development.",
+    "engagement_level_rationale": "The paper introduces and evaluates a multi-model, multi-constituent chemical data assimilation framework that ingests measurements from multiple satellite sensors, demonstrating active engagement with data processing and reanalysis."
   },
   {
     "title": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
@@ -450,9 +450,9 @@
       }
     },
     "is_peer_reviewed": true,
-    "paper_type": "science",
-    "paper_type_rationale": "The title 'Updated tropospheric chemistry reanalysis and emission estimates' indicates a focus on understanding and quantifying atmospheric chemistry and emissions over a specific period, which falls under Earth science phenomena.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type": "algorithm",
+    "paper_type_rationale": "The abstract describes the 'reanalysis calculation' conducted using a global chemical transport model and an ensemble Kalman filter technique to optimize concentrations and emissions, indicating a focus on the methodology of data product generation.",
+    "engagement_level_rationale": "The paper presents results from the Tropospheric Chemistry Reanalysis version 2 (TCR-2), which is obtained from the assimilation of multiple satellite measurements, including TES, demonstrating active engagement with satellite data products."
   },
   {
     "title": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
@@ -531,8 +531,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown' clearly indicates an investigation into an Earth science phenomenon (air quality changes due to human activity).",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The study quantifies the impacts of the COVID-19 lockdown on 'air pollution and human health' and analyzes changes in NOx emissions, indicating a focus on Earth science phenomena and societal impacts.",
+    "engagement_level_rationale": "The paper quantifies impacts on air pollution and human health using inverse emissions estimates based on multiple satellite observations, demonstrating active use of satellite data for environmental studies."
   },
   {
     "title": "Comparison of optimal estimation HDO/H2O retrievals from AIRS with ORACLES measurements",
@@ -557,7 +557,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Tropospheric Composition Retrievals",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -604,8 +604,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Comparison of optimal estimation HDO/H2O retrievals from AIRS with ORACLES measurements' and the venue 'Atmos. Meas. Tech.' indicate a focus on validating retrieval methodology and satellite product performance.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The abstract describes evaluating 'new retrievals' and discusses 'characterized uncertainties and instrument operators,' indicating a focus on retrieval methodology, error characteristics, and product validation.",
+    "engagement_level_rationale": "The paper evaluates new HDO/H2O retrievals from AIRS, processed with an optimal estimation algorithm, by comparing them with aircraft measurements, demonstrating active engagement in satellite data validation."
   },
   {
     "title": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
@@ -691,8 +691,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery' focuses on understanding the carbon cycle and its response to natural events, which is an Earth science phenomenon.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The paper uses satellite data to quantify 'carbon cycle anomalies' and 'biomass burning released ... CO2' resulting from drought and fire, which is a study of Earth science phenomena.",
+    "engagement_level_rationale": "The paper actively utilizes 'space-based measurements of trace gases (TROPOspheric Monitoring Instrument X CO, Orbiting Carbon Observatory 2)' as primary data sources to quantify carbon cycle anomalies."
   },
   {
     "title": "First retrievals of peroxyacetyl nitrate (PAN) from ground-based FTIR solar spectra recorded at remote sites, comparison with model and satellite data",
@@ -724,7 +724,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Validation & Intercomparison",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -785,8 +785,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'First retrievals of peroxyacetyl nitrate (PAN) from ground-based FTIR solar spectra... comparison with model and satellite data' indicates the development of a new retrieval method and its validation against other data.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The paper describes 'First retrievals of peroxyacetyl nitrate (PAN) from ground-based FTIR solar spectra' and discusses the 'development of remote-sensing products,' which is an algorithm development.",
+    "engagement_level_rationale": "The paper focuses on 'First retrievals of peroxyacetyl nitrate (PAN)' from ground-based data and includes 'comparison with model and satellite data,' indicating active engagement with satellite-derived trace gas products."
   },
   {
     "title": "COVID-19 Lockdowns Afford the First Satellite-Based Confirmation That Vehicles Are an Under-recognized Source of Urban NH3 Pollution in Los Angeles",
@@ -856,7 +856,10 @@
         "miscalibration_risk": "high"
       }
     },
-    "is_peer_reviewed": true
+    "is_peer_reviewed": true,
+    "paper_type": "science",
+    "engagement_level_rationale": "The paper directly uses 'CrIS NH3' data to report vehicle NH3 emissions, indicating active data usage from a TROPESS-related instrument.",
+    "paper_type_rationale": "The paper uses satellite data to investigate 'urban NH3 pollution' and 'vehicle NH3 emissions' in Los Angeles, studying an atmospheric process related to air quality."
   },
   {
     "title": "Evolution of Acyl Peroxynitrates (PANs) in Wildfire Smoke Plumes Detected by the Cross-Track Infrared Sounder (CrIS) Over the Western U.S. During Summer 2018",
@@ -926,8 +929,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Evolution of Acyl Peroxynitrates (PANs) in Wildfire Smoke Plumes Detected by the Cross-Track Infrared Sounder (CrIS)' indicates a study of atmospheric processes related to wildfires.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The paper uses CrIS data to 'investigate PANs over the western U.S. during the summer 2018 wildfire season' and their evolution in smoke plumes, which is a study of atmospheric processes.",
+    "engagement_level_rationale": "The paper directly uses 'observations of acyl peroxynitrates (PANs) from the Cross-Track Infrared Sounder (CrIS)' as a primary data source."
   },
   {
     "title": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
@@ -951,8 +954,8 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Data Usage",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -1007,8 +1010,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns' focuses on understanding atmospheric chemistry and air quality changes due to human activity.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The paper investigates 'Global tropospheric ozone responses to reduced NOx emissions' and their implications for 'air quality and climate,' which is a study of atmospheric processes and Earth science phenomena.",
+    "engagement_level_rationale": "The provided abstract excerpt does not explicitly mention the use of TROPESS, CrIS, AIRS, MUSES, or closely related satellite retrievals as a primary data source."
   },
   {
     "title": "A new methodology for inferring surface ozone from multispectral satellite measurements",
@@ -1029,7 +1032,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1085,8 +1088,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'A new methodology for inferring surface ozone from multispectral satellite measurements' explicitly states the development of a new retrieval methodology.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The paper describes 'A new methodology for inferring surface ozone from multispectral satellite measurements' and focuses on developing a 'new method' for combining retrievals, which is an algorithm development.",
+    "engagement_level_rationale": "The paper proposes a 'new method to infer spatial variability in surface ozone by combining multispectral ozone retrievals using radiances from the tropospheric emission spectrometer thermal infrared instrument and the ozone monitoring instrument ultratraviolet/visible instrument.'"
   },
   {
     "title": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
@@ -1128,7 +1131,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Wildfire & Biomass Burning Emissions",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1182,8 +1185,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions' indicates a study of air quality and atmospheric processes over different geographical areas.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage', suggesting the paper actively uses TROPESS or related satellite retrievals as a primary data source."
+    "paper_type_rationale": "The paper quantifies 'decadal trends in global carbon monoxide (CO)' and diagnoses 'the drivers of regional differences in the CO trend' using satellite data, which is a study of atmospheric processes.",
+    "engagement_level_rationale": "The paper uses 'long-term records of CO from the Measurements of Pollution in the Troposphere (MOPITT)' and AOD from MODIS, which are satellite observations of trace gases and aerosols."
   },
   {
     "title": "Evaluation of single-footprint AIRS CH4 profile retrieval uncertainties using aircraft profile measurements",
@@ -1214,7 +1217,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Tropospheric Composition Retrievals",
+    "research_domain": "Validation & Intercomparison",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1261,8 +1264,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The paper focuses on the 'Evaluation of ... retrieval uncertainties' of satellite products, which is a core aspect of retrieval methodology and data validation.",
-    "engagement_level_rationale": "The title explicitly mentions 'AIRS CH4 profile retrieval uncertainties' and 'aircraft profile measurements,' indicating active use of satellite retrievals for evaluation."
+    "paper_type_rationale": "The paper focuses on evaluating 'the uncertainties of methane optimal estimation retrievals' from AIRS and comparing them to in situ observations, which is a validation of a retrieval algorithm.",
+    "engagement_level_rationale": "The paper evaluates 'methane optimal estimation retrievals from single-footprint thermal infrared observations from the Atmospheric Infrared Sounder (AIRS),' directly engaging with data from a TROPESS-related instrument."
   },
   {
     "title": "TROPESS/CrIS carbon monoxide profile validation with NOAA GML and ATom in situ aircraft observations",
@@ -1338,8 +1341,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title clearly states 'TROPESS/CrIS carbon monoxide profile validation,' which is a key activity in assessing and improving satellite retrieval algorithms.",
-    "engagement_level_rationale": "The title directly states 'TROPESS/CrIS carbon monoxide profile validation,' confirming active use of TROPESS data for validation."
+    "paper_type_rationale": "The paper's primary goal is the \"validation\" of the TROPESS/CrIS carbon monoxide product, comparing its retrievals with independent aircraft observations, which is a form of algorithm assessment.",
+    "engagement_level_rationale": "The paper explicitly states it \"evaluates\" TROPESS/CrIS CO profile retrievals using in situ observations, indicating active use and assessment of the TROPESS product."
   },
   {
     "title": "Validation and error estimation of AIRS MUSES CO profiles with HIPPO, ATom, and NOAA GML aircraft observations",
@@ -1414,8 +1417,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The paper's focus on 'Validation and error estimation of AIRS MUSES CO profiles' directly relates to the assessment and refinement of satellite retrieval methodologies.",
-    "engagement_level_rationale": "The title explicitly mentions 'Validation and error estimation of AIRS MUSES CO profiles,' indicating active use of satellite retrievals for evaluation."
+    "paper_type_rationale": "The title and abstract clearly indicate a focus on \"Validation and error estimation\" of satellite-derived CO profiles, which falls under the development and assessment of retrieval methodologies.",
+    "engagement_level_rationale": "The paper directly evaluates \"AIRS MUSES CO profiles\" using aircraft observations, demonstrating active engagement with and assessment of these satellite retrievals."
   },
   {
     "title": "Tracking Shallow Convective Mixing and Its Influence on Low-Level Clouds With Stable Water Isotopes in Vapor",
@@ -1495,8 +1498,8 @@
       "Trace Gas Products"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The paper aims to understand 'Shallow Convective Mixing and Its Influence on Low-Level Clouds' using stable water isotopes, which is a study of atmospheric processes.",
-    "engagement_level_rationale": "The 'Data Usage' engagement level and the research domain 'Atmospheric Chemistry & Reanalysis' imply the active use of satellite data (likely TROPESS HDO/H2O) to study atmospheric phenomena."
+    "paper_type_rationale": "The study uses satellite-derived water vapor isotope profiles to investigate the physical process of \"shallow convective mixing\" and its influence on \"low-level clouds,\" which is a scientific inquiry into atmospheric phenomena.",
+    "engagement_level_rationale": "The paper proposes and demonstrates an approach using \"stable water vapor isotope profiles from satellite retrievals\" to track convective mixing, indicating active use of satellite data products."
   },
   {
     "title": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
@@ -1527,7 +1530,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Hydrology",
+    "research_domain": "Carbon Cycle & Flux Inversions",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1585,8 +1588,8 @@
       "Remote Sensing"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The paper focuses on inferring 'Amazonian terrestrial water balance' from satellite data, which is a study of a hydrological Earth science phenomenon.",
-    "engagement_level_rationale": "The title mentions 'satellite-observed water vapor isotopes' to infer 'water balance,' indicating active use of satellite data (likely TROPESS HDO/H2O) for hydrological research."
+    "paper_type_rationale": "The study applies satellite-observed water vapor isotopes to understand the \"Amazonian terrestrial water balance\" and its components, which is a scientific investigation of hydrological and ecological processes.",
+    "engagement_level_rationale": "The paper directly uses \"satellite observations of the HDO/H2O ratio of water vapor\" to infer the Amazonian terrestrial water balance, indicating active use of satellite data products."
   },
   {
     "title": "Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder: comparison with ATom aircraft measurements",
@@ -1661,8 +1664,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The paper describes a 'comparison' of 'Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder' with aircraft data, which is a validation activity for satellite products.",
-    "engagement_level_rationale": "The title explicitly states 'Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder: comparison with ATom aircraft measurements,' confirming active use of satellite data for validation."
+    "paper_type_rationale": "The paper details an \"optimal estimation algorithm to retrieve peroxyacetyl nitrate (PAN) from CrIS\" and validates these retrievals, which is a clear focus on retrieval methodology and product assessment.",
+    "engagement_level_rationale": "The paper presents and compares \"CrIS PAN retrievals\" with aircraft measurements, demonstrating active engagement with and validation of a satellite trace gas product."
   },
   {
     "title": "Measurement report: Spatiotemporal variability of peroxy acyl nitrates (PANs) over Mexico City from TES and CrIS satellite measurements",
@@ -1730,8 +1733,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The paper investigates the 'Spatiotemporal variability of peroxy acyl nitrates (PANs) over Mexico City,' which is an atmospheric chemistry and air quality study.",
-    "engagement_level_rationale": "The title indicates the use of 'TES and CrIS satellite measurements' to study PAN variability, confirming active use of satellite data."
+    "paper_type_rationale": "The study applies satellite measurements to investigate the \"spatiotemporal variability of PANs\" as photochemical pollutants in an urban environment, which is a scientific inquiry into atmospheric processes and air quality.",
+    "engagement_level_rationale": "The paper directly uses \"satellite measurements of PANs from TES and CrIS\" to evaluate their variability over Mexico City, indicating active use of satellite data products."
   },
   {
     "title": "The 2 stream-exact single scattering (2S-ESS) radiative transfer model",
@@ -1808,8 +1811,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The paper describes 'The 2 stream-exact single scattering (2S-ESS) radiative transfer model,' which is a fundamental component of satellite retrieval algorithms and forward modeling.",
-    "engagement_level_rationale": "The 'Data Usage' engagement level, combined with the research domain 'Radiative Transfer & Forward Modeling,' implies that this model is used in the context of processing or understanding satellite data."
+    "paper_type_rationale": "The paper's central focus is the development and description of the \"2 stream-exact single scattering (2S-ESS) radiative transfer model,\" which is a key component of retrieval algorithms and forward modeling.",
+    "engagement_level_rationale": "The paper develops a radiative transfer model specifically for \"remote sensing applications involving the analysis of hyperspectral radiances,\" which is a foundational component for retrieval algorithms like those used by TROPESS, thus representing a deep engagement with the underlying methodology."
   },
   {
     "title": "Carbon emissions from the 2023 Canadian wildfires",
@@ -1891,8 +1894,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The paper focuses on quantifying 'Carbon emissions from the 2023 Canadian wildfires,' which is an Earth science phenomenon related to emissions and climate.",
-    "engagement_level_rationale": "The 'Data Usage' engagement level implies that satellite data (likely TROPESS CO/CH4) is actively used to quantify wildfire emissions."
+    "paper_type_rationale": "The study applies satellite observations and inverse modeling to quantify \"carbon emissions from the 2023 Canadian wildfires,\" focusing on an Earth science phenomenon related to emissions and the carbon cycle.",
+    "engagement_level_rationale": "The paper quantifies carbon emissions using \"inverse modelling of satellite carbon monoxide observations,\" indicating active use of satellite trace gas data, which TROPESS provides."
   },
   {
     "title": "Joint spectral retrievals of ozone with Suomi NPP CrIS augmented by S5P/TROPOMI",
@@ -1918,7 +1921,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -1965,8 +1968,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title explicitly mentions 'Joint spectral retrievals of ozone,' indicating a focus on developing or improving the methodology for retrieving satellite data products.",
-    "engagement_level_rationale": "The title describes 'Joint spectral retrievals of ozone with Suomi NPP CrIS,' confirming active use and methodological development around satellite data."
+    "paper_type_rationale": "The paper focuses on the methodology of 'joint spectral retrievals' of ozone by combining CrIS and TROPOMI radiances, indicating an algorithm development focus.",
+    "engagement_level_rationale": "The paper actively uses co-located TIR measurements from CrIS and UV measurements from TROPOMI to quantify the ability of ozone retrievals."
   },
   {
     "title": "Validation of MUSES NH3 observations from AIRS and CrIS against aircraft measurements from DISCOVER-AQ and a surface network in the Magic Valley",
@@ -2042,8 +2045,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Validation of MUSES NH3 observations from AIRS and CrIS' indicates a focus on assessing the quality of satellite products, which falls under retrieval methodology and validation.",
-    "engagement_level_rationale": "The paper actively uses MUSES NH3 observations from AIRS and CrIS for validation against aircraft measurements, indicating direct data usage."
+    "paper_type_rationale": "The primary focus is on the 'Validation of MUSES NH3 observations from AIRS and CrIS against aircraft measurements', which falls under satellite product validation.",
+    "engagement_level_rationale": "The paper directly validates MUSES NH3 observations derived from AIRS and CrIS against aircraft and surface measurements."
   },
   {
     "title": "TROPESS-CrIS CO single-pixel vertical profiles: intercomparisons with MOPITT and model simulations for 2020 western US wildfires",
@@ -2117,8 +2120,8 @@
       "Tropospheric Composition Retrievals"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'intercomparisons with MOPITT and model simulations' for TROPESS-CrIS CO profiles signifies an assessment of the satellite product, aligning with validation and data processing.",
-    "engagement_level_rationale": "The paper directly intercompares TROPESS-CrIS CO vertical profiles with other satellite data and models, demonstrating active data usage."
+    "paper_type_rationale": "The paper focuses on the 'evaluation' and 'intercomparisons' of TROPESS-CrIS CO retrievals against MOPITT and model simulations, which is a form of satellite product validation.",
+    "engagement_level_rationale": "The paper directly evaluates and intercompares 'TROPESS-CrIS CO single-pixel vertical profiles' with other satellite data and model simulations."
   },
   {
     "title": "Changes to Peroxyacyl Nitrates (PANs) Over Megacities in Response to COVID-19 Tropospheric NO2 Reductions Observed by the Cross-Track Infrared Sounder (CrIS)",
@@ -2186,8 +2189,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title focuses on 'Changes to Peroxyacyl Nitrates (PANs) Over Megacities in Response to COVID-19 Tropospheric NO2 Reductions', which investigates atmospheric chemistry and air quality phenomena.",
-    "engagement_level_rationale": "The paper uses observations from the Cross-Track Infrared Sounder (CrIS) to study changes in PANs, indicating active use of satellite data."
+    "paper_type_rationale": "The paper uses CrIS data to study the impact of COVID-19 NO2 reductions on PANs over megacities and to quantify their seasonal cycle, which is a scientific investigation of atmospheric chemistry and air quality.",
+    "engagement_level_rationale": "The paper actively uses 'satellite measurements of free tropospheric PANs from the Suomi-National Polar-orbiting Partnership Cross-track Infrared Sounder (CrIS)' as a primary data source."
   },
   {
     "title": "Early Season 2023 Wildfires Generated Record-Breaking Surface Ozone Anomalies Across the U.S. Upper Midwest",
@@ -2224,8 +2227,8 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Data Usage",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -2278,8 +2281,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title describes an atmospheric event, 'Early Season 2023 Wildfires Generated Record-Breaking Surface Ozone Anomalies', which is an Earth science phenomenon related to air quality and climate.",
-    "engagement_level_rationale": "The paper investigates ozone anomalies generated by wildfires, implying the use of trace gas products to understand this phenomenon."
+    "paper_type_rationale": "The paper investigates the impact of wildfires on surface ozone and PM2.5 anomalies, analyzing a specific environmental event and its consequences.",
+    "engagement_level_rationale": "The abstract focuses on surface monitoring network data and does not mention the use of TROPESS, CrIS, AIRS, or MUSES data."
   },
   {
     "title": "Quantifying biases in TROPESS AIRS, CrIS, and joint AIRS+OMI tropospheric ozone products using ozonesondes",
@@ -2353,8 +2356,8 @@
       "Tropospheric Composition Retrievals"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Quantifying biases in TROPESS AIRS, CrIS, and joint AIRS+OMI tropospheric ozone products' directly addresses the validation and quality assessment of satellite products.",
-    "engagement_level_rationale": "The paper actively uses TROPESS AIRS, CrIS, and joint AIRS+OMI products to quantify biases, demonstrating direct data usage for product assessment."
+    "paper_type_rationale": "The paper's core objective is to 'Quantify biases' in TROPESS satellite ozone products by comparing them to ozonesonde measurements, which is a key aspect of algorithm and product validation.",
+    "engagement_level_rationale": "The paper directly quantifies biases in 'TROPESS AIRS, CrIS, and joint AIRS+OMI tropospheric ozone products' using ozonesondes."
   },
   {
     "title": "Assessment of 16-year tropospheric ozone trends from the IASI Climate Data Record",
@@ -2382,7 +2385,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -2438,8 +2441,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Assessment of 16-year tropospheric ozone trends from the IASI Climate Data Record' focuses on understanding long-term atmospheric changes, which is a core Earth science objective.",
-    "engagement_level_rationale": "The paper assesses tropospheric ozone trends using the IASI Climate Data Record, indicating active use of satellite data for scientific analysis."
+    "paper_type_rationale": "The paper's main objective is to assess '16-year tropospheric ozone trends' from the IASI Climate Data Record, which is a scientific study of atmospheric variability and climate.",
+    "engagement_level_rationale": "The IASI-CDR ozone product is explicitly 'evaluated against TROPESS O3 retrievals from the Cross-track Infrared Sounder (CrIS)'."
   },
   {
     "title": "Sidebar 2.2: Operational satellite instruments monitor a range of indirect short-lived climate forcers",
@@ -2533,7 +2536,7 @@
     "country": "United States",
     "citing_team_paper": null,
     "team_paper_id": null,
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -2580,8 +2583,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'An algorithm to retrieve peroxyacetyl nitrate from AIRS' explicitly states the development of a retrieval methodology, which is a core algorithm activity.",
-    "engagement_level_rationale": "The paper describes the creation of a retrieval algorithm, which involves active processing and use of AIRS satellite data."
+    "paper_type_rationale": "The paper explicitly describes 'an algorithm to retrieve peroxyacetyl nitrate from AIRS,' detailing the methodology, spectral window selection, and filter development for the retrieval process.",
+    "engagement_level_rationale": "The paper describes the development of an algorithm to retrieve PANs directly from 'radiances observed by the Atmospheric Infrared Sounder (AIRS)'."
   },
   {
     "title": "2025 California Wildfire Observations Using Single Field\u2010of\u2010View Sounder Atmospheric Products (SiFSAP)",
@@ -3612,8 +3615,8 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "Validation & Intercomparison",
-    "engagement_level": "Data Usage",
+    "research_domain": "Trace Gas Products",
+    "engagement_level": "Review Paper",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -3663,8 +3666,8 @@
       "Trace Gas Products"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title indicates a review of the performance and operation of the MOPITT instrument, which relates to instrument calibration and data validation.",
-    "engagement_level_rationale": "The paper is a '20-year Review of the Performance and Operation of the MOPITT Instrument'. MOPITT is a TROPESS-adjacent instrument, and reviewing its performance implies active use and analysis of its data."
+    "paper_type_rationale": "The paper discusses the MOPITT instrument's operation, performance, and unique capabilities for measuring CO, which relates to retrieval methodology and instrument characteristics.",
+    "engagement_level_rationale": "The title explicitly states 'A 20-year Review of the Performance and Operation of the MOPITT Instrument,' indicating a comprehensive survey of the instrument."
   },
   {
     "title": "Within-City Variation in Ambient Carbon Monoxide Concentrations: Leveraging Low-Cost Monitors in a Spatiotemporal Modeling Framework",
@@ -4925,7 +4928,7 @@
     "country": null,
     "citing_team_paper": "High-resolution tropospheric carbon monoxide profiles retrieved from CrIS and TROPOMI",
     "team_paper_id": "tropess_team_1d89a3ab71c53f9c",
-    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -4977,8 +4980,8 @@
       "Tropospheric Composition Retrievals"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'The Tropospheric Emission Spectrometer: From Discovery Mission to Earth System Sounding' suggests an overview of an instrument's capabilities and its contribution to data products and measurement techniques.",
-    "engagement_level_rationale": "The title 'From Discovery Mission to Earth System Sounding' indicates a comprehensive overview or review of the TES instrument's history and impact."
+    "paper_type_rationale": "The paper discusses 'innovations in retrieval methods pioneered by the TES team' and the instrument's role in providing atmospheric composition data, aligning with algorithm development and methodology.",
+    "engagement_level_rationale": "The abstract states, 'We survey some of the major contributions TES has made,' clearly indicating a review of the instrument's impact and methodologies."
   },
   {
     "title": "Validation of Carbon Monoxide Total Column Retrievals from SCIAMACHY Observations with NDACC/TCCON Ground-Based Measurements",
@@ -5833,7 +5836,7 @@
     "country": null,
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Air Quality & Megacity Studies",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -5880,8 +5883,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the paper uses observations ('Observed... by Ozone Monitoring Instrument') to study 'High Ozone Concentrations' in a specific geographical region, focusing on an atmospheric phenomenon.",
-    "engagement_level_rationale": "The title clearly states 'High Ozone Concentrations Observed... by Ozone Monitoring Instrument', indicating active use of OMI data, which is a TROPESS-adjacent instrument."
+    "paper_type_rationale": "The study uses OMI ozone data to investigate air pollution conditions, identify ozone hotspots, and understand atmospheric processes in the Persian Gulf region.",
+    "engagement_level_rationale": "The paper actively analyzes 'seven years of ozone profile data from the newly improved Ozone Monitoring Instrument (OMI) V2 product' as its primary data source."
   },
   {
     "title": "Identifying drivers of surface ozone bias in global chemical reanalysis with explainable machine learning",
@@ -5978,7 +5981,7 @@
     "country": null,
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Tropospheric Composition Retrievals",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -6025,8 +6028,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Remote Sensing of Atmospheric Ozone. 2. Satellite Methods' suggests a broad overview of techniques and methodologies for satellite-based ozone measurement, aligning with measurement technique development.",
-    "engagement_level_rationale": "The provided engagement_level is 'Review Paper'. The title 'Remote Sensing of Atmospheric Ozone. 2. Satellite Methods' suggests a comprehensive survey of the field."
+    "paper_type_rationale": "The paper analyzes various satellite methods for ozone measurement, discussing their advantages, disadvantages, errors, and vertical resolution, which pertains to retrieval methodology and instrument capabilities.",
+    "engagement_level_rationale": "The abstract states that 'Modern satellite methods for measuring total ozone and ozone profiles are analyzed,' indicating a comprehensive review of techniques."
   },
   {
     "title": "Advancing Atmospheric Detection of Weakly Absorbing Reactive Trace Gases Using the FY-3E/HIRAS-II TIR Sounder on a Dawn\u2013Dusk Orbit",
@@ -6436,7 +6439,7 @@
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
     "research_domain": "Tropospheric Composition Retrievals",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -6482,8 +6485,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title focuses on 'Ozone Profiles Retrieved from' a specific 'Hyperspectral Satellite Instrument,' indicating a focus on retrieval methodology and instrument capabilities.",
-    "engagement_level_rationale": "Without an abstract, and with the title only mentioning a 'Chinese Ultraviolet\u2013Visible Hyperspectral Satellite Instrument' without specifying TROPESS-adjacent instruments, there is no evidence of active data usage."
+    "paper_type_rationale": "The paper details the challenges and methodology for retrieving ozone profiles from a hyperspectral satellite instrument and mentions the development of an algorithm for this purpose.",
+    "engagement_level_rationale": "The paper focuses on developing an algorithm for retrieving ozone profiles from a new satellite instrument (EMI), rather than actively using existing TROPESS or related satellite retrieval products as a primary data source."
   },
   {
     "title": "Impact of different sources of precursors on an ozone pollution outbreak over Europe analysed with IASI+GOME2 multispectral satellite observations and model simulations",
@@ -6711,8 +6714,8 @@
       "Air Quality & Megacity Studies"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Comparison between ozonesonde measurements and satellite retrievals' indicates a focus on validating satellite products, which is an 'algorithm' activity.",
-    "engagement_level_rationale": "The title implies active use of 'satellite retrievals' for comparison, which constitutes 'Data Usage' for validation purposes."
+    "paper_type_rationale": "The study's core objective is to compare and validate satellite ozone retrievals (AIRS, MLS, OMI) against independent ozonesonde measurements, which is a key aspect of satellite product validation.",
+    "engagement_level_rationale": "The paper actively uses and evaluates vertical ozone profiles from AIRS, MLS, and OMI satellite retrievals, which are closely related to TROPESS data products."
   },
   {
     "title": "Vertical distribution of tropospheric ozone and its sources of precursors over Beijing: Results from\u00a0\u223c\u00a020\u00a0years of ozonesonde measurements based on clustering analysis",
@@ -6942,8 +6945,8 @@
       "Radiative Transfer & Forward Modeling"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Exploring the Future of Infrared Sounding' and 'Outcomes of a NOAA-NESDIS Virtual Workshop' suggests a discussion of instrument capabilities and future directions, aligning with 'algorithm' development.",
-    "engagement_level_rationale": "The title 'Exploring the Future of Infrared Sounding: Outcomes of a NOAA-NESDIS Virtual Workshop' indicates a broad discussion of the field, consistent with a 'Review Paper'.",
+    "paper_type_rationale": "The paper explores the 'Future of Infrared Sounding,' which inherently involves discussions on retrieval methodology, instrument capabilities, and measurement technique development.",
+    "engagement_level_rationale": "The title indicates the paper presents the 'Outcomes of a NOAA-NESDIS Virtual Workshop,' suggesting a synthesis or review of discussions on infrared sounding.",
     "institutions": [
       "Joint Polar Satellite System, NOAA/NESDIS, Greenbelt, Maryland"
     ]
@@ -7192,8 +7195,8 @@
     "country": null,
     "citing_team_paper": "Retrievals of tropospheric ozone profiles from the synergism of AIRS and OMI: methodology and validation",
     "team_paper_id": "tropess_team_22b12dfa4c7bc25e",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -7239,8 +7242,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The paper focuses on 'satellite monitoring of stratospheric ozone intrusion exceptional events,' which involves understanding specific atmospheric phenomena.",
-    "engagement_level_rationale": "The title mentions 'Satellite monitoring' but does not specify which satellites or products. Without an abstract, there is no evidence of active data usage of TROPESS or related products."
+    "paper_type_rationale": "This study uses satellite and reanalysis data to investigate the spatial-temporal variations and mechanisms of stratospheric ozone intrusion events over China, linking them to surface pollution.",
+    "engagement_level_rationale": "The paper actively uses NASA's AQUA/AIRS data to obtain vertical profiles of ozone, relative humidity, and CO concentrations for its investigation."
   },
   {
     "title": "Combined UV and IR ozone profile retrieval from TROPOMI and CrIS measurements",
@@ -8118,9 +8121,9 @@
       "Tropospheric Composition Retrievals",
       "Atmospheric Chemistry & Reanalysis"
     ],
-    "paper_type": "science",
-    "paper_type_rationale": "The title indicates the paper infers 'Geophysical Trends' from 'AIRS Infrared Global Observations,' which is a primary use of satellite data to understand Earth science phenomena.",
-    "engagement_level_rationale": "The title explicitly states 'Inferred From 20 Years of AIRS Infrared Global Observations,' indicating active use of satellite retrievals (AIRS is a TROPESS-related instrument) as a primary data source.",
+    "paper_type": "algorithm",
+    "paper_type_rationale": "This study develops and applies a novel method operating in radiance space, using a physical retrieval to infer geophysical trends from AIRS observations, focusing on the methodology of data processing and retrieval.",
+    "engagement_level_rationale": "The paper's core methodology involves analyzing 20 years of daily spectral radiance observations from NASA's Atmospheric Infrared Sounder (AIRS).",
     "institutions": [
       "JCET/GESTAR2 University of Maryland Baltimore County  Baltimore MD USA",
       "Department of Physics University of Maryland Baltimore County  Baltimore MD USA",
@@ -13917,7 +13920,7 @@
     "citing_team_paper": "Evaluation of a multi-model, multi-constituent assimilation framework for tropospheric chemical reanalysis",
     "team_paper_id": "tropess_team_638b32ef2cb39bd3",
     "research_domain": "Atmospheric Chemistry & Reanalysis",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -13966,8 +13969,8 @@
       "Atmospheric Chemistry & Reanalysis"
     ],
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title explicitly states 'Description and Evaluation of the Emission and Atmospheric Processes Integrated and Coupled Community (EPICC) Model Version 1.0,' indicating a focus on model development and assessment.",
-    "engagement_level_rationale": "The abstract is not available, so there is no evidence to suggest active use of TROPESS or related satellite products."
+    "paper_type_rationale": "This paper provides a comprehensive description and benchmark evaluation of the Emission and Atmospheric Processes Integrated and Coupled Community (EPICC) model, focusing on its framework and underlying methodologies.",
+    "engagement_level_rationale": "The abstract describes a new chemical transport model and does not mention the use of TROPESS, CrIS, AIRS, or MUSES data."
   },
   {
     "title": "Improve Initial Field Estimation with Deep Learning in Data Assimilation for Climate Models",
@@ -16993,8 +16996,8 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "Atmospheric Chemistry & Reanalysis",
-    "engagement_level": "Data Usage",
+    "research_domain": "Validation & Intercomparison",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -17049,8 +17052,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title clearly indicates the paper is 'Validating tropospheric NO2 column density from GEMS version 3.0 and Tropospheric Chemistry Reanalysis version 2,' which falls under validation of satellite products.",
-    "engagement_level_rationale": "The provided engagement_level is 'Data Usage.' The title suggests active use of GEMS and Tropospheric Chemistry Reanalysis data for validation."
+    "paper_type_rationale": "This study focuses on validating tropospheric NO2 column density data from GEMS and a reanalysis product against independent measurements, which is a key aspect of satellite product validation.",
+    "engagement_level_rationale": "The paper validates NO2 data from GEMS and TCR-2 but does not mention the use of TROPESS, CrIS, AIRS, or MUSES data."
   },
   {
     "title": "Assessment of the impacts of anthropogenic ozone precursors on domestic and transboundary ozone concentrations using a high-resolution global chemistry model",
@@ -17074,8 +17077,8 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -17121,8 +17124,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an 'Assessment of the impacts of anthropogenic ozone precursors on domestic and transboundary ozone concentrations,' which focuses on understanding atmospheric chemistry and air quality.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related products."
+    "paper_type_rationale": "This study uses a high-resolution global chemistry model to investigate the effects of anthropogenic ozone precursor emissions on domestic and transboundary ozone concentrations, focusing on atmospheric processes.",
+    "engagement_level_rationale": "The abstract describes the use of a global chemistry model to assess ozone impacts and does not mention TROPESS, CrIS, AIRS, or MUSES data."
   },
   {
     "title": "Quantifying CO emissions from boreal wildfires by assimilating TROPOMI and TCCON observations",
@@ -17747,8 +17750,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title \"Next Generation Air Quality Models: Dynamical Mesh, New Insights into Mechanism, Datasets and Applications\" indicates a review focused on the development and application of modeling techniques and datasets.",
-    "engagement_level_rationale": "The engagement_level is explicitly stated as \"Review Paper\", and the title implies a broad overview of the field."
+    "paper_type_rationale": "This review paper discusses advancements in air quality modeling, including dynamical meshes, chemical mechanisms, and reanalysis datasets, which are all related to the development and improvement of atmospheric science methodologies.",
+    "engagement_level_rationale": "The abstract explicitly states that the paper conducts a 'literature review focusing on air quality forecasting models and reanalysis datasets.'"
   },
   {
     "title": "What can we learn about tropospheric OH from satellite observations of methane?",
@@ -19189,8 +19192,8 @@
     "country": null,
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Data Usage",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -19235,9 +19238,9 @@
       }
     },
     "is_peer_reviewed": true,
-    "paper_type": "algorithm",
-    "paper_type_rationale": "The title indicates an evaluation of 'Global reanalysis products' against observed 'seasonal and diurnal cycles of tropospheric ozone,' which constitutes a validation of model products.",
-    "engagement_level_rationale": "The provided engagement level is 'Data Usage,' implying that the paper actively uses satellite or model data, likely for the comparison mentioned in the title."
+    "paper_type": "science",
+    "paper_type_rationale": "This study investigates the seasonal and diurnal cycles of tropospheric ozone in the Congo Basin and assesses the performance of global reanalysis products in representing these cycles, focusing on atmospheric processes.",
+    "engagement_level_rationale": "The abstract discusses global reanalysis products and ozone observations but does not mention TROPESS, CrIS, AIRS, or MUSES data."
   },
   {
     "title": "Sensitivity of Modeled Soil NOx Emissions to Soil Moisture",
@@ -23640,7 +23643,7 @@
     "citing_team_paper": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
     "team_paper_id": "tropess_team_1bc49f64ec00d99e",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -23686,8 +23689,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the paper investigates contributions to human health from increased household air pollution exposure during lockdown, linking air quality to health outcomes.",
-    "engagement_level_rationale": "Neither the title nor the provided abstract excerpt mentions TROPESS or any TROPESS-adjacent satellite products."
+    "paper_type_rationale": "This study investigates the impacts of COVID-19 lockdown measures on ambient and household air pollution and their short-term health effects in China, focusing on air quality and its societal implications.",
+    "engagement_level_rationale": "The abstract describes a study on air pollution and health impacts using an emission inventory and chemical transport modeling, without mentioning TROPESS, CrIS, AIRS, or MUSES data."
   },
   {
     "title": "Source apportionment of PM2.5 and sulfate formation during the COVID-19 lockdown in a coastal city of southeast China.",
@@ -25908,8 +25911,8 @@
       "Forestry"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Carbon Emissions from Forest Disturbances Under Global Change' indicates a broad scientific topic, consistent with a review paper.",
-    "engagement_level_rationale": "The provided engagement level is 'Review Paper,' indicating that the article is a survey or review covering the field broadly, as suggested by its title."
+    "paper_type_rationale": "The paper synthesizes current understanding of forest carbon dynamics and emissions, which falls under studying Earth science phenomena rather than developing retrieval methodologies or instrument calibration.",
+    "engagement_level_rationale": "The abstract explicitly states the paper's 'Purpose of Review' and aims to 'synthesize the current understanding' of forest disturbances' impact on carbon dynamics."
   },
   {
     "title": "Regional fire dynamics and its contributions to carbon flux variability in South Asia",
@@ -26004,8 +26007,8 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "Ecology",
-    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle & Flux Inversions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -26054,9 +26057,9 @@
       "Ecology",
       "Remote Sensing"
     ],
-    "paper_type": "science",
-    "paper_type_rationale": "The title indicates an assessment of vegetation disturbance and recovery using remote sensing products, which falls under understanding ecological Earth science phenomena.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active data usage of TROPESS or related satellite products, so the engagement level remains 'Simple Citation'."
+    "paper_type": "algorithm",
+    "paper_type_rationale": "The paper focuses on developing new indices (DVI, RVI) for vegetation disturbance and recovery assessment, which represents a development in measurement technique and data processing.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature."
   },
   {
     "title": "Seasonal contrast in dryland vegetation response to meteorological drought across South Asia",
@@ -26155,7 +26158,7 @@
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
     "research_domain": "Carbon Cycle & Flux Inversions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -26205,8 +26208,8 @@
       "Forestry"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an analysis of forest biomass carbon storage and its sustainability, which is a topic related to the carbon cycle and climate science.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active data usage of TROPESS or related satellite products, so the engagement level remains 'Simple Citation'."
+    "paper_type_rationale": "The paper uses existing biomass carbon maps and multi-source remote sensing data to analyze the spatiotemporal dynamics and stability of forest biomass carbon storage, which is a study of Earth science phenomena.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature."
   },
   {
     "title": "Improving OCO\u20102 XCO2 ${X}_{{\\mathbf{C}\\mathbf{O}}_{\\mathbf{2}}}$ Retrievals Through the Scaling of Singular Value Decomposition\u2010Based Temperature and Water Vapor Profiles",
@@ -27081,8 +27084,8 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "Ecology",
-    "engagement_level": "Citation",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -27133,8 +27136,8 @@
       "Restoration Ecology"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a comparison of vegetation recovery processes after fire disturbances, which is a study of ecological and Earth science phenomena.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest the use of TROPESS or related satellite data."
+    "paper_type_rationale": "The paper compares the effectiveness of artificial restoration and natural regeneration on vegetation recovery dynamics following fire disturbances, which is a study of Earth science phenomena.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature."
   },
   {
     "title": "Compound hot\u2013dry events greatly prolong the recovery time of dryland ecosystems",
@@ -27494,8 +27497,8 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "Carbon Cycle & Flux Inversions",
-    "engagement_level": "Citation",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -27541,8 +27544,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an examination of biophysical feedback on temperature extremes during drought and bushfires, which is an investigation into Earth science phenomena.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest the use of TROPESS or related satellite data."
+    "paper_type_rationale": "The paper uses a coupled land-atmosphere model to examine biophysical feedback on simulated temperature extremes during drought and bushfires, which is a study of atmospheric processes and climate phenomena.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature."
   },
   {
     "title": "Drought threat to terrestrial gross primary production exacerbated by wildfires",
@@ -28096,8 +28099,8 @@
     "country": null,
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
-    "research_domain": "Radiative Transfer & Forward Modeling",
-    "engagement_level": "Citation",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -28143,8 +28146,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the use of Landsat and GEDI data to compare vegetation responses after fire, focusing on an Earth science phenomenon rather than algorithm development.",
-    "engagement_level_rationale": "The title explicitly states the use of \"Landsat time series and bi-temporal GEDI\" data, neither of which are TROPESS or TROPESS-adjacent instruments."
+    "paper_type_rationale": "The paper uses Landsat and GEDI satellite data to investigate vegetation responses after forest fire disturbance, which is a study of Earth science phenomena.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature."
   },
   {
     "title": "Evaluating the consistency between OCO-2 and OCO-3 XCO2 estimates derived from the NASA ACOS version 10 retrieval algorithm",
@@ -28559,7 +28562,7 @@
     "citing_team_paper": "The Carbon Cycle of Southeast Australia During 2019-2020: Drought, Fires, and Subsequent Recovery",
     "team_paper_id": "tropess_team_b433bbf3c95371ad",
     "research_domain": "Carbon Cycle & Flux Inversions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -28604,9 +28607,9 @@
       }
     },
     "is_peer_reviewed": true,
-    "paper_type": "science",
-    "paper_type_rationale": "The title indicates an evaluation of light-use efficiency models against data-driven estimates to understand drought impacts on vegetation productivity, which is an Earth science phenomenon.",
-    "engagement_level_rationale": "With no abstract available and no specific instrument or data product mentioned in the title, there is no evidence of TROPESS-related data usage."
+    "paper_type": "algorithm",
+    "paper_type_rationale": "The paper evaluates the performance of several light-use efficiency models for estimating vegetation productivity against data-driven products, which constitutes a form of model validation and assessment of methodology.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature."
   },
   {
     "title": "Using Orbiting Carbon Observatory-2 (OCO-2) column CO2 retrievals to rapidly detect and estimate biospheric surface carbon flux anomalies",
@@ -30607,7 +30610,7 @@
     "citing_team_paper": "COVID-19 Lockdowns Afford the First Satellite-Based Confirmation That Vehicles Are an Under-recognized Source of Urban NH3 Pollution in Los Angeles",
     "team_paper_id": "tropess_team_adc9e5a7d3404e32",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -30653,8 +30656,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the paper depicts the rebound characteristics of greenhouse gas emissions from vehicles using a high spatiotemporal resolution inventory, focusing on understanding emission trends as an Earth science phenomenon.",
-    "engagement_level_rationale": "Without an abstract, there is no information to suggest the use of TROPESS or related satellite data.",
+    "paper_type_rationale": "The paper develops an inventory of greenhouse gas emissions from vehicles and uses it to analyze the rebound characteristics after the COVID-19 epidemic, which is a study of Earth science phenomena related to urban emissions.",
+    "engagement_level_rationale": "The abstract does not mention TROPESS, CrIS, AIRS, or MUSES, nor does it indicate a review nature.",
     "institutions": [
       "Ministry of Education Laboratory of Earth Surface Processes, College of Urban and Environmental Sciences",
       "Peking University",
@@ -32317,7 +32320,7 @@
     "citing_team_paper": "COVID-19 Lockdowns Afford the First Satellite-Based Confirmation That Vehicles Are an Under-recognized Source of Urban NH3 Pollution in Los Angeles",
     "team_paper_id": "tropess_team_adc9e5a7d3404e32",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -32363,8 +32366,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a commentary on historical developments and scientific next steps in air pollution control, which relates to understanding Earth science phenomena and policy.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active data usage, thus aligning with the 'Simple Citation' level.",
+    "paper_type_rationale": "The paper provides a historical perspective on the causes and abatement of air pollution, fitting the description of using scientific understanding to study Earth science phenomena.",
+    "engagement_level_rationale": "The paper is a commentary on the historical developments in air pollution control and scientific next steps, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite data.",
     "institutions": [
       "C2P Sciences, Evanston, Illinois 60201, United States"
     ]
@@ -32585,8 +32588,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an analysis of long-term trends and chemometric analysis of atmospheric air quality, which is focused on understanding Earth science phenomena.",
-    "engagement_level_rationale": "The title explicitly states 'using NASA GIOVANNI satellite data' for analysis, which directly indicates active data usage."
+    "paper_type_rationale": "The study applies satellite data to analyze long-term trends and spatiotemporal variations of air quality parameters in Nigeria, fitting the description of using data to study atmospheric processes and air quality.",
+    "engagement_level_rationale": "The paper explicitly states it uses data from NASA satellites, including the Atmospheric Infrared Sounder (AIRS), which is a TROPESS-related instrument, for its analysis of atmospheric parameters."
   },
   {
     "title": "Nonlinear and Non\u2010Gaussian Ensemble Assimilation of MOPITT CO",
@@ -33317,8 +33320,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Atmospheric Chemistry Insights from the Global COVID-19 Pandemic: A Review' indicates a synthesis of scientific understanding related to atmospheric processes and chemistry.",
-    "engagement_level_rationale": "The title explicitly states 'A Review,' indicating that this is a survey or review article covering the field broadly.",
+    "paper_type_rationale": "The paper synthesizes existing research on how atmospheric chemistry and composition responded to emission changes during the pandemic, which falls under studying atmospheric processes and chemistry.",
+    "engagement_level_rationale": "The title explicitly identifies the paper as 'A Review,' and the abstract describes it as exploring and synthesizing insights into atmospheric chemistry during the COVID-19 pandemic.",
     "institutions": [
       "Institute for Atmospheric and Climate Science",
       "ETH",
@@ -33529,7 +33532,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -33575,8 +33578,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a focus on 'Changes in ambient ozone concentrations' during the COVID-19 pandemic, which falls under understanding atmospheric chemistry and air quality.",
-    "engagement_level_rationale": "No abstract is available to assess whether TROPESS or related data were actively used in the paper's analysis."
+    "paper_type_rationale": "The paper investigates the effects of anthropogenic activity restrictions on tropospheric ozone concentrations across Japan, which is a study of atmospheric processes and air quality.",
+    "engagement_level_rationale": "The abstract discusses changes in ambient ozone concentrations during the COVID-19 pandemic but does not mention the use of TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Development of a parametrised atmospheric NO\n \n x\n \n chemistry scheme to help quantify fossil fuel CO\n 2\n emission estimates",
@@ -34262,8 +34265,8 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle & Flux Inversions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -34309,8 +34312,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the paper focuses on observing and analyzing long-term and interannual variations of atmospheric methane, which is a topic in atmospheric processes.",
-    "engagement_level_rationale": "No abstract is available to assess whether TROPESS or related data were actively used in the paper's analysis."
+    "paper_type_rationale": "The study uses atmospheric measurement data to investigate long-term and interannual variations of methane, which is a key component of the carbon cycle and climate science.",
+    "engagement_level_rationale": "The paper analyzes atmospheric methane variations using data from the NIES and collaborative observation networks, without specifying the use of TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Critical role of vertical exchange in the boundary layer on urban photochemical pollution.",
@@ -35746,8 +35749,8 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Megacity Studies",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -35793,8 +35796,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a study of 'ozone\u2019s weekly cycle for different seasons in Arizona,' which is an investigation into atmospheric processes and air quality.",
-    "engagement_level_rationale": "Without an abstract, it is not possible to confirm detailed analysis or primary use of TROPESS or related data."
+    "paper_type_rationale": "The paper investigates the temporal cycles of ozone and its relationship with anthropogenic activities and precursors in Arizona, which is a study of atmospheric processes and air quality phenomena.",
+    "engagement_level_rationale": "The abstract describes using data from ground-based measurements in Arizona to study ozone cycles, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Clean air policy makes methane harder to control due to longer lifetime",
@@ -36819,8 +36822,8 @@
     "country": null,
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Megacity Studies",
+    "engagement_level": "Review Paper",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -36866,8 +36869,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'A synergistic ozone-climate control to address emerging ozone pollution challenges' indicates a focus on understanding and managing atmospheric ozone, aligning with Earth science phenomena.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related satellite products."
+    "paper_type_rationale": "The paper synthesizes global surface measurements and discusses the scientific challenges and solutions related to ozone pollution and its climate impacts, fitting the description of studying Earth science phenomena.",
+    "engagement_level_rationale": "The paper is presented as a 'perspective' and compiles global surface measurements to discuss the emerging challenge of ozone pollution, indicating a review or synthesis nature."
   },
   {
     "title": "Responses to Airborne Ozone and Soilborne Metal Pollution in Afforestation Plants with Different Life Forms",
@@ -38266,7 +38269,7 @@
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
     "research_domain": "Air Quality & Megacity Studies",
-    "engagement_level": "Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -38311,9 +38314,9 @@
       }
     },
     "is_peer_reviewed": true,
-    "paper_type": "science",
-    "paper_type_rationale": "The title indicates a focus on 'Reconciliation of asynchronous satellite-based NO2 and XCO2 enhancements with mesoscale modeling,' which is an application of data and models to understand atmospheric composition and processes.",
-    "engagement_level_rationale": "No abstract is available to confirm the specific satellite instruments used. The title's mention of 'satellite-based NO2 and XCO2' is too general to confirm active use of TROPESS or related data."
+    "paper_type": "algorithm",
+    "paper_type_rationale": "The paper focuses on the methodological challenge of reconciling asynchronous satellite-based NO2 and XCO2 data with mesoscale modeling, which involves data processing and integration techniques for satellite products.",
+    "engagement_level_rationale": "The paper explicitly uses 'satellite-based NO2 and XCO2 enhancements' and discusses 'NO2 and CO2 monitoring satellites' as primary data sources for its analysis over urban landscapes."
   },
   {
     "title": "Deep cut of anthropogenic nitrogen oxides emissions to mitigate ozone vegetation damages in China",
@@ -40464,8 +40467,8 @@
     "country": null,
     "citing_team_paper": "A new methodology for inferring surface ozone from multispectral satellite measurements",
     "team_paper_id": "tropess_team_d26d27356cf7dc00",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Radiative Transfer & Forward Modeling",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -40511,8 +40514,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Experimental Study and Simulation of Singlet-Triplet Rovibronic Ozone Bands' indicates a focus on fundamental spectroscopic properties relevant to radiative transfer and measurement techniques.",
-    "engagement_level_rationale": "With no abstract available and a title focused on fundamental spectroscopic studies, there is no evidence of TROPESS or related satellite data usage."
+    "paper_type_rationale": "The paper focuses on creating a compact absorption spectrometer, describing the measurement technique, and simulating ozone absorption spectra, which are fundamental to developing and understanding retrieval algorithms.",
+    "engagement_level_rationale": "The paper describes an experimental lab study of ozone spectroscopy and does not mention the use of TROPESS, CrIS, AIRS, MUSES, or any related satellite data."
   },
   {
     "title": "Accurate absolute absorption cross-sections of the ozone Wulf bands at 1 \u00b5m range: measurements with high-resolution cw-CRDS laser techniques",
@@ -41374,8 +41377,8 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "Combustion Engineering",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -41425,8 +41428,8 @@
       "Mechanical Engineering"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title focuses on combustion engineering and engine characteristics, which is a study of an Earth science phenomenon (emissions from engines).",
-    "engagement_level_rationale": "With no abstract available and a title unrelated to atmospheric science or satellite data, there is no evidence to suggest active use of TROPESS or related products."
+    "paper_type_rationale": "The paper investigates the combustion and emission characteristics of an alternative fuel in diesel engines, which is an applied engineering and environmental science study.",
+    "engagement_level_rationale": "The paper focuses on experimental studies of alternative fuels in compression ignition engines and does not mention TROPESS, CrIS, AIRS, MUSES, or any related satellite data."
   },
   {
     "title": "Integrated assessment of urban air pollution in South Tangerang, Indonesia: synergizing ground monitoring, Sentinel-5P retrievals, and HYSPLIT trajectory analysis",
@@ -41951,8 +41954,8 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Data Usage",
+    "research_domain": "Air Quality & Megacity Studies",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -41998,8 +42001,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title describes a study of 'Spatial and seasonal variations and trends in carbon monoxide,' which is an analysis of atmospheric processes and air quality.",
-    "engagement_level_rationale": "The title implies the active use of data to analyze 'Spatial and seasonal variations and trends in carbon monoxide,' which is consistent with 'Data Usage.'"
+    "paper_type_rationale": "The paper investigates the spatial and seasonal variations and trends of carbon monoxide pollution over China, which is a study of atmospheric processes and air quality.",
+    "engagement_level_rationale": "The paper analyzes CO variations and trends using surface observations and the GEOS-Chem model, without mentioning TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Methodology for Selecting Near-Surface CH4, CO, and CO2 Observations Reflecting Atmospheric Background Conditions at the WMO/GAW Station in Lamezia Terme, Italy",
@@ -42026,7 +42029,7 @@
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
     "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -42072,8 +42075,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
-    "paper_type_rationale": "The title explicitly states 'Methodology for Selecting... Observations,' indicating a focus on developing a specific data processing technique.",
-    "engagement_level_rationale": "No abstract is available, and the title does not suggest the use of TROPESS or related satellite data."
+    "paper_type_rationale": "The paper focuses on developing and testing different methodologies for processing and selecting near-surface trace gas observations to identify atmospheric background conditions.",
+    "engagement_level_rationale": "The paper describes methods for selecting background atmospheric observations from ground-based WMO/GAW station data and does not mention TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Investigation of Carbon Monoxide, Carbon Dioxide, and Methane Source Variability at the WMO/GAW Station of Lamezia Terme (Calabria, Southern Italy) Using the Ratio of Ozone to Nitrogen Oxides as a Proximity Indicator",
@@ -42941,8 +42944,8 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "Energy Systems & Emissions Assessment",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -42992,8 +42995,8 @@
       "Environmental Policy"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an assessment of life cycle greenhouse gas emissions from power plants, which falls under understanding emissions and Earth science phenomena.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active use of TROPESS or related satellite data."
+    "paper_type_rationale": "The paper performs an environmental assessment of greenhouse gas emissions associated with converting a coal-fired power plant to biomass, which is an applied environmental science study.",
+    "engagement_level_rationale": "The paper conducts a life cycle greenhouse gas emissions assessment for power plant conversion and does not mention TROPESS, CrIS, AIRS, MUSES, or any related satellite data."
   },
   {
     "title": "Anthropic-Induced Variability of Greenhouse Gasses and Aerosols at the WMO/GAW Coastal Site of Lamezia Terme (Calabria, Southern Italy): Towards a New Method to Assess the Weekly Distribution of Gathered Data",
@@ -43887,8 +43890,8 @@
     "country": null,
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
-    "research_domain": "Trace Gas Products",
-    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle & Flux Inversions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -43937,8 +43940,8 @@
       "Trace Gas Products"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Analysis of Mixing Ratios of Greenhouse Carbon-Containing Gases' indicates a study focused on understanding atmospheric composition and processes.",
-    "engagement_level_rationale": "The title suggests ground-based measurements. Without an abstract, there is no evidence of detailed analysis or use of TROPESS or related satellite data."
+    "paper_type_rationale": "The paper analyzes observational data to study temporal variations, trends, and seasonal fluctuations of CO2, CH4, and CO, and relates them to emission sources, which is a study of atmospheric processes and the carbon cycle.",
+    "engagement_level_rationale": "The paper analyzes local ground-based measurements of greenhouse gases at an atmospheric monitoring station and does not mention TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Sources and long-term variability of carbon monoxide at Mount Kenya and in Nairobi",
@@ -44910,8 +44913,8 @@
       "Wildfire & Biomass Burning Emissions"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the detection and study of strong wildfires using satellite data, which is an application to understand Earth science phenomena.",
-    "engagement_level_rationale": "Given the 'Data Usage' engagement level, it is inferred that TROPESS or closely related satellite products are actively used as a primary data source for the analysis, despite the lack of an abstract."
+    "paper_type_rationale": "The paper uses satellite data to study the characteristics of large natural fires and quantify their associated trace gas and aerosol emissions, which is a study of Earth science phenomena related to wildfires.",
+    "engagement_level_rationale": "The paper explicitly states it uses 'satellite monitoring data' to detect wildfires and quantify CO, CO2, and PM2.5 emissions, indicating active use of satellite-derived products."
   },
   {
     "title": "Continental-scale Atmospheric Impacts of the 2020 Western U.S. Wildfires",
@@ -44937,7 +44940,7 @@
     "citing_team_paper": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
     "team_paper_id": "tropess_team_88b3da8055d86bb5",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -44988,8 +44991,8 @@
       "Trace Gas Products"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an investigation into the atmospheric impacts of wildfires, which falls under understanding Earth science phenomena.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or closely related products."
+    "paper_type_rationale": "The paper investigates the atmospheric impacts of wildfires on air quality using model simulations, which is a study of Earth science phenomena.",
+    "engagement_level_rationale": "The abstract describes using the Community Atmosphere Model with Chemistry (CAM-chem) for simulations and does not mention TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Analysis of Long-Term Aerosol Optical Properties Combining AERONET Sunphotometer and Satellite-Based Observations in Hong Kong",
@@ -47475,8 +47478,8 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "Hydrology",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -47526,8 +47529,8 @@
       "Climate Science"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a study of climatic conditions and their impact on a river basin, focusing on understanding regional hydrological and climate changes.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest that this paper actively uses TROPESS or closely related satellite data, thus it remains a 'Simple Citation'."
+    "paper_type_rationale": "The paper investigates regional climate and hydrological changes, including precipitation, temperature, and evaporation, which falls under Earth science phenomena.",
+    "engagement_level_rationale": "The abstract states the use of ERA5 reanalysis and CMIP6 multi-model datasets and does not mention TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Assessing Water Source Stability in the Three River Source Region: A Comprehensive 35\u2010Year Analysis",
@@ -47818,7 +47821,7 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "Hydrology",
+    "research_domain": "General Science",
     "engagement_level": "Review Paper",
     "missions_instruments": [
       {
@@ -47870,8 +47873,8 @@
       "Climate Change Impacts"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title explicitly states 'A review' and discusses the characteristics and changes of the water cycle under climate change and human activities, which is a synthesis of scientific understanding.",
-    "engagement_level_rationale": "The title explicitly states 'A review,' confirming its nature as a review article."
+    "paper_type_rationale": "The paper provides a comprehensive overview of changes in a regional water cycle system under climate change and human activities, which is a synthesis of Earth science phenomena.",
+    "engagement_level_rationale": "The title explicitly states 'A review,' and the abstract summarizes previous research results on the water cycle system."
   },
   {
     "title": "Assessment of climatic regime and water balance of a Mediterranean-type watershed: the Inaouene watershed upstream of the Idris I dam (Sebou Basin, Morocco)",
@@ -47965,8 +47968,8 @@
     "country": null,
     "citing_team_paper": "Amazonian terrestrial water balance inferred from satellite-observed water vapor isotopes",
     "team_paper_id": "tropess_team_60d64a396c85489c",
-    "research_domain": "Hydrology",
-    "engagement_level": "Citation",
+    "research_domain": "Tropospheric Composition Retrievals",
+    "engagement_level": "Review Paper",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -48015,9 +48018,9 @@
       "Hydrology",
       "Atmospheric Science"
     ],
-    "paper_type": "science",
-    "paper_type_rationale": "The translated title indicates a focus on the characteristics and mechanisms of atmospheric water vapor stable isotopes, which is an investigation into atmospheric processes.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related satellite products."
+    "paper_type": "algorithm",
+    "paper_type_rationale": "The paper reviews the basic theory, traditional methods, laser absorption spectroscopy, satellite remote sensing retrieval technology, and isotopic atmospheric circulation models, focusing on measurement techniques and retrieval methodology.",
+    "engagement_level_rationale": "The abstract indicates this is a review paper ('summarizes the latest progress') covering atmospheric water vapor stable isotopes, including satellite remote sensing retrieval technology."
   },
   {
     "title": "Dataset of stable isotopes of precipitation in the Eurasian continent",
@@ -48590,7 +48593,7 @@
     "country": "China",
     "citing_team_paper": "Measurement report: Spatiotemporal variability of peroxy acyl nitrates (PANs) over Mexico City from TES and CrIS satellite measurements",
     "team_paper_id": "tropess_team_4ea0ac476e9e3cfe",
-    "research_domain": "Trace Gas Products",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
     "engagement_level": "Data Usage",
     "missions_instruments": [
       {
@@ -48637,8 +48640,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The paper focuses on the 'Interpretation of CrIS Results Using Updated GEOS-Chem' to understand a 'Wintertime Peroxyacetyl Nitrate (PAN) Hotspot over China,' which is an atmospheric chemistry phenomenon.",
-    "engagement_level_rationale": "The title explicitly mentions 'CrIS Results,' indicating active use of data from an instrument (CrIS) that is part of the TROPESS project.",
+    "paper_type_rationale": "The paper uses satellite data and model simulations to investigate the formation and distribution of a PAN hotspot, which is a study of atmospheric chemistry and processes.",
+    "engagement_level_rationale": "The abstract explicitly states, 'We use CrIS satellite observations and GEOS-Chem simulations to identify a persistent hotspot of free tropospheric PAN.'",
     "institutions": [
       "School of Environmental Science and Engineering",
       "Southern University of Science and Technology",
@@ -49599,7 +49602,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -49645,8 +49648,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Severe rapid indian monsoon weakening due to emissions from extreme Canadian wildfires' indicates the paper investigates the impact of wildfire emissions on atmospheric processes, aligning with Earth science phenomena.",
-    "engagement_level_rationale": "No abstract is available, and the title does not provide sufficient information to determine if TROPESS or related data products were actively used."
+    "paper_type_rationale": "The paper investigates the impact of wildfire emissions on the Indian monsoon using model simulations, which is a study of Earth science phenomena.",
+    "engagement_level_rationale": "The abstract describes conducting ensemble simulations with a state-of-the-art Earth System Model and does not mention TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Climate feedback of forest fires amplified by atmospheric chemistry",
@@ -49667,7 +49670,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Atmospheric Chemistry & Reanalysis",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -49713,8 +49716,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Climate feedback of forest fires amplified by atmospheric chemistry' indicates the paper investigates atmospheric processes and their interactions with climate and fires, aligning with Earth science phenomena.",
-    "engagement_level_rationale": "No abstract is available, and the title does not provide sufficient information to determine if TROPESS or related data products were actively used."
+    "paper_type_rationale": "The paper investigates the climate feedback of forest fires amplified by atmospheric chemistry using modeling, which is a study of atmospheric processes and climate phenomena.",
+    "engagement_level_rationale": "The abstract describes using integrated fire-atmospheric chemistry modeling and does not mention TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Geoclimatic Threats of the 21st Century: An Economic Assessment of Global and Russian Risks",
@@ -49812,8 +49815,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -49859,8 +49862,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Wildfire research and mental health: impacts, reflections, and a call to action' indicates a focus on the societal impacts of an Earth science phenomenon (wildfires), aligning with understanding Earth science phenomena.",
-    "engagement_level_rationale": "No abstract is available, and the title focuses on mental health, not suggesting the use of TROPESS or related atmospheric data."
+    "paper_type_rationale": "The paper is a forum piece reflecting on the mental health impacts within the wildfire research community, which contributes to the broader scientific discourse.",
+    "engagement_level_rationale": "The abstract discusses the mental health impacts on wildfire researchers and does not involve the use or citation of TROPESS, CrIS, AIRS, MUSES, or related satellite data."
   },
   {
     "title": "Reduced Vegetation Uptake During the Extreme 2023 Drought Turns the Amazon Into a Weak Carbon Source",
@@ -50158,8 +50161,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle & Flux Inversions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -50205,8 +50208,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Permafrost and wildfire carbon emissions indicate need for additional action to keep Paris Agreement temperature goals within reach' indicates the paper investigates Earth science phenomena (emissions) and their climate implications.",
-    "engagement_level_rationale": "No abstract is available, and the title does not provide sufficient information to determine if TROPESS or related data products were actively used."
+    "paper_type_rationale": "The study uses a compact Earth system model to investigate the impacts of abrupt permafrost thaw and wildfire on carbon budgets and their implications for Paris Agreement temperature goals.",
+    "engagement_level_rationale": "The paper primarily uses an Earth system model (OSCAR v3.0) to estimate impacts on carbon budgets, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals."
   },
   {
     "title": "Seedling field performance on hot, dry forest restoration sites: influence of plant attributes",
@@ -50579,8 +50582,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Environmental Policy",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -50630,8 +50633,8 @@
       "Climate Change Adaptation"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title \"Strong mismatch in climate change adaptation between intentions of private forest owners in Canada and institutional support\" indicates a focus on environmental policy and societal responses to climate change, classifying it as \"science.\"",
-    "engagement_level_rationale": "Without an abstract, it is not possible to determine if this paper actively uses TROPESS or related satellite data for its analysis."
+    "paper_type_rationale": "The paper uses survey data and Bayesian statistical analysis to study human adaptation intentions and policy instruments related to climate change and wildfires.",
+    "engagement_level_rationale": "The study investigates adaptation intentions of private forest owners using surveys and statistical analysis, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals."
   },
   {
     "title": "COP29 at the climate crossroads: achievements, gaps, and implications for a warming world",
@@ -51376,7 +51379,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Carbon Cycle & Flux Inversions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -51427,8 +51430,8 @@
       "Energy Systems Modeling"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title suggests a focus on climate change policy and modeling for net-zero targets in Canada, which is an application of Earth science understanding.",
-    "engagement_level_rationale": "No abstract is available to assess active data usage, so the engagement level remains 'Simple Citation'."
+    "paper_type_rationale": "The study employs an open-source global change analysis model to investigate transition dynamics and policy implications for Canada's net-zero greenhouse gas emissions goal.",
+    "engagement_level_rationale": "The paper uses the Global Change Analysis Model (GCAM) to examine net-zero GHG emissions scenarios, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals."
   },
   {
     "title": "Drought-wildfire synergy drives carbon-source transition and amplifies carbon budget uncertainty of boreal forests in Northeast China",
@@ -51455,7 +51458,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Carbon Cycle & Flux Inversions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -51501,8 +51504,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an investigation into the synergy of drought and wildfire on carbon budgets in boreal forests, which is a study of Earth science phenomena.",
-    "engagement_level_rationale": "No abstract is available to assess active data usage, so the engagement level remains 'Simple Citation'."
+    "paper_type_rationale": "The study develops and applies a model-coupling framework to investigate how drought and wildfire synergy affects carbon dynamics and budget uncertainty in boreal forests.",
+    "engagement_level_rationale": "The paper develops a model-coupling framework to simulate carbon dynamics, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals."
   },
   {
     "title": "Intense wildfire response to Early Jurassic hyperthermal events with impact on floral turnover",
@@ -51683,8 +51686,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -51734,8 +51737,8 @@
       "Carbon Cycle & Flux Inversions"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a study of the performance, pyrolysis mechanism, and environmental functions of biochar, which relates to Earth science phenomena and environmental chemistry.",
-    "engagement_level_rationale": "No abstract is available to assess active data usage, so the engagement level remains 'Simple Citation'."
+    "paper_type_rationale": "The study investigates the chemical composition, performance, and pyrolysis mechanism of biochar derived from forest surface fuels to understand its environmental functions for wildfire fuel management.",
+    "engagement_level_rationale": "The paper focuses on the laboratory production, characterization, and pyrolysis mechanism of biochar from forest fuels, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals."
   },
   {
     "title": "Continuous\u2010Flow Photocatalytic Degradation of Glyphosate and Aminomethylphosphonic Acid Under Simulated Sunlight with TiO2\u2010Coated Poly(vinylidene fluoride) Membrane",
@@ -52693,8 +52696,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -52745,8 +52748,8 @@
       "Bioenergy"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a focus on the performance and prediction of converting biomass into biofuel, aiming to reduce forest fires and save fossil fuel, which falls under applied Earth science and environmental impact.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active use or detailed analysis of TROPESS or related satellite products."
+    "paper_type_rationale": "The study characterizes the components and combustion properties of biofuels derived from forest residual biomass and uses advanced analytical and modeling techniques to predict their performance for energy and wildfire mitigation.",
+    "engagement_level_rationale": "The paper focuses on the production and characterization of solid biofuel from forest residual biomass using laboratory analysis and statistical modeling, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals."
   },
   {
     "title": "Methane and Nitrous Oxide Budgets for Australasia: A Regional Assessment of Natural and Anthropogenic Sources and Sinks",
@@ -52938,7 +52941,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Data Usage",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -52989,8 +52992,8 @@
       "Trace Gas Products"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates the paper aims to reveal the frequency and variability of pyrocumulonimbus and stratospheric smoke plumes, which is an investigation into atmospheric processes.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related products."
+    "paper_type_rationale": "The study compiles and analyzes an inventory of pyrocumulonimbus events and associated stratospheric smoke plumes to understand their frequency, variability, and injection altitudes.",
+    "engagement_level_rationale": "The paper presents a worldwide inventory of pyrocumulonimbus events and smoke injection altitudes, which strongly implies the use of satellite observations for monitoring and characterizing these atmospheric phenomena."
   },
   {
     "title": "Long-range PM2.5 pollution and health impacts from the 2023 Canadian wildfires",
@@ -53092,7 +53095,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -53138,8 +53141,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title suggests an investigation into the response of aerosols and tropospheric gases to wildfire emission scenarios, which falls under understanding atmospheric processes and chemistry.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related products.",
+    "paper_type_rationale": "The paper uses an Earth System Model to investigate how interannual variability in biomass burning emissions affects the variability of aerosol optical depth, carbon monoxide, and ozone tropospheric columns.",
+    "engagement_level_rationale": "The study explicitly states its reliance on the EC-Earth3 Earth System Model to investigate the influence of biomass burning emissions, with no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals.",
     "institutions": [
       "Atmospheric Environment and Climate Change Lab, School of Chemical and Environmental Engineering, Technical University of Crete, 73100 Chania, Greece",
       "Leverhulme Centre for Wildfires, Environment and Society, Imperial College London, London SW7 2AZ, UK",
@@ -53167,7 +53170,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -53213,8 +53216,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title clearly states the paper investigates the 'Large-scale impacts of the 2023 Canadian wildfires on the Northern Hemisphere atmosphere,' which is a study of Earth science phenomena.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related products."
+    "paper_type_rationale": "The paper uses an Earth system model to study the large-scale atmospheric impacts of wildfires, focusing on changes in aerosol abundances, which is a scientific investigation of an Earth system phenomenon.",
+    "engagement_level_rationale": "The abstract describes the use of a 'state-of-the-art Earth system model' to investigate wildfire impacts but does not mention TROPESS, CrIS, AIRS, MUSES, or closely related satellite retrievals."
   },
   {
     "title": "Deep learning for wildfire risk prediction: Integrating remote sensing and environmental data",
@@ -53882,7 +53885,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Review Paper",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -53928,8 +53931,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Wildfire management and the politics of climate change' indicates a focus on the societal and policy aspects related to Earth science phenomena.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related satellite products."
+    "paper_type_rationale": "The paper analyzes the complex feedback loops connecting human activities, wildfire incidence, greenhouse gas emissions, and climate change, which is a study of Earth science phenomena with a socio-political dimension.",
+    "engagement_level_rationale": "The paper is described as a 'Perspective' that 'examines the interplay' and 'illustrate feedback loops,' indicating a synthesis or overview rather than primary data analysis."
   },
   {
     "title": "Quantifying the short-term mortality effects of wildfire smoke in Europe: a multicountry epidemiological study in 654 contiguous regions.",
@@ -54097,7 +54100,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -54146,8 +54149,8 @@
       "Wildfire & Biomass Burning Emissions"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an investigation into the 'human factor behind a megafire,' focusing on understanding the causes and dynamics of an Earth science phenomenon.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active data usage of TROPESS or related products."
+    "paper_type_rationale": "The paper investigates the causes and dynamics of a specific megafire using a combination of climate, meteorological, remote sensing, and modeling data, which constitutes a scientific study of an Earth science event.",
+    "engagement_level_rationale": "The abstract mentions using 'remote sensing datasets' among other data sources, but it does not specify TROPESS, CrIS, AIRS, MUSES, or closely related satellite retrievals."
   },
   {
     "title": "Global burn severity in forest ecoregions: trends, climate drivers, and predictive insights",
@@ -54167,7 +54170,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -54216,8 +54219,8 @@
       "Wildfire & Biomass Burning Emissions"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an analysis of 'trends, climate drivers, and predictive insights' related to global burn severity, which focuses on understanding Earth science phenomena.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active data usage of TROPESS or related products."
+    "paper_type_rationale": "The paper analyzes global trends in forest fire burn severity and their climatic drivers, and develops predictive models, which is a scientific study of an Earth science phenomenon.",
+    "engagement_level_rationale": "The abstract mentions using a 'newly developed 30-m resolution Global Burn Severity Dataset' derived from remote sensing but does not specify TROPESS, CrIS, AIRS, MUSES, or closely related satellite retrievals."
   },
   {
     "title": "Disentangling the roles of natural variability and climate change in Canada\u2019s 2023 fire season",
@@ -54313,8 +54316,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Soil Science",
-    "engagement_level": "Citation",
+    "research_domain": "Wildfire & Biomass Burning Emissions",
+    "engagement_level": "Review Paper",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -54364,8 +54367,8 @@
       "Ecology"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates a global meta-analysis on how fire affects soil properties in forests and grasslands, focusing on understanding Earth science phenomena and their interactions.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest active data usage of TROPESS or related products."
+    "paper_type_rationale": "The paper systematically evaluates the impact of fire on various soil properties in forests and grasslands, which is a scientific investigation into ecological processes and Earth science phenomena.",
+    "engagement_level_rationale": "The paper is a 'global meta-analysis' that constructs a database from 253 existing studies, indicating a synthesis and review of prior research."
   },
   {
     "title": "A comprehensive review of recent progress on the drought-flood abrupt alternation",
@@ -54934,7 +54937,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -54980,8 +54983,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title 'Atmospheric and oceanic drivers behind the 2023 Canadian wildfires' indicates a focus on understanding the causes and mechanisms of a specific Earth science event, classifying it as 'science'.",
-    "engagement_level_rationale": "Without an abstract, there is no evidence to suggest active data usage of TROPESS or related products, so the engagement level remains 'Simple Citation'."
+    "paper_type_rationale": "The paper investigates the atmospheric and oceanic conditions that fueled the 2023 Canadian wildfires, linking them to large-scale climate patterns, which is a scientific study of Earth system phenomena.",
+    "engagement_level_rationale": "The abstract describes demonstrating the drivers of wildfires but does not mention TROPESS, CrIS, AIRS, MUSES, or closely related satellite retrievals as primary data sources."
   },
   {
     "title": "Large live biomass carbon losses from droughts in the northern temperate ecosystems during 2016-2022",
@@ -56320,8 +56323,8 @@
     "country": "China",
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Catalysis & Materials Chemistry",
-    "engagement_level": "Citation",
+    "research_domain": "General Science",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -56370,9 +56373,9 @@
       "Catalysis & Materials Chemistry",
       "Chemical Engineering"
     ],
-    "paper_type": "algorithm",
-    "paper_type_rationale": "The title 'Effect of Axial Ligands on Photocatalytic CO2 Reduction of Zirconium-Based Porphyrins' indicates research into chemical processes and materials, which falls under technique development.",
-    "engagement_level_rationale": "No abstract is available, so there is no evidence to suggest active data usage of TROPESS or related products.",
+    "paper_type": "science",
+    "paper_type_rationale": "The paper investigates the effect of axial ligands on the photocatalytic CO2 reduction performance of zirconium-based porphyrins, which is a fundamental scientific study in chemistry and materials science.",
+    "engagement_level_rationale": "The paper focuses on materials chemistry for CO2 reduction and has no connection to TROPESS, CrIS, AIRS, MUSES, or related satellite retrievals.",
     "institutions": [
       "State Key Lab of High Performance Ceramics and Superfine Microstructure",
       "Shanghai Institute of Ceramics, Chinese Academy of Sciences",
@@ -57135,8 +57138,8 @@
     "country": null,
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
-    "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle & Flux Inversions",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -57187,8 +57190,8 @@
       "Biogeochemistry"
     ],
     "paper_type": "science",
-    "paper_type_rationale": "Based on the title, the paper investigates how wildfires affect carbon transfer, which is an Earth science phenomenon related to the carbon cycle.",
-    "engagement_level_rationale": "No abstract is available, and the title does not provide evidence of active data usage of TROPESS or related satellite products."
+    "paper_type_rationale": "The paper investigates how wildfires affect carbon transfer from land to lakes and subsequent lake carbon cycling, which is a scientific study of ecosystem processes and the carbon cycle.",
+    "engagement_level_rationale": "The abstract describes analyzing carbon concentrations in lakes but does not mention TROPESS, CrIS, AIRS, MUSES, or closely related satellite retrievals."
   },
   {
     "title": "Global peatland greenhouse gas dynamics: state of the art, processes, and perspectives",
@@ -58090,7 +58093,7 @@
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Wildfire & Biomass Burning Emissions",
-    "engagement_level": "Citation",
+    "engagement_level": "Simple Citation",
     "missions_instruments": [
       {
         "name": "TROPESS",
@@ -58136,8 +58139,8 @@
     },
     "is_peer_reviewed": true,
     "paper_type": "science",
-    "paper_type_rationale": "The title indicates an investigation into the spatial association between social vulnerability, wildfire hazard, and mitigation programs, focusing on understanding Earth science phenomena and their societal aspects.",
-    "engagement_level_rationale": "With no abstract available, there is no evidence to suggest that the paper actively uses TROPESS or related satellite data."
+    "paper_type_rationale": "The paper investigates the spatial association between social vulnerability, wildfire hazard, and mitigation programs, using Alaska as a case study. This involves applying scientific methods to study an Earth science phenomenon (wildfires and their societal impacts), rather than developing or validating retrieval algorithms or instruments.",
+    "engagement_level_rationale": "The abstract focuses on quantifying and mapping wildfire risk and social vulnerability in Alaska. There is no mention of TROPESS, CrIS, AIRS, MUSES, or related satellite data products or retrieval methodologies in the provided excerpt."
   },
   {
     "title": "Adaptation, flexibilit\u00e9 et transformation dans la musique orchestrale de Cris Derksen",
