@@ -374,7 +374,8 @@ const GenericGeographicImpactPage = () => {
               citations: 0,
               regions: new Set(),
               domains: new Set(),
-              years: []
+              years: [],
+              papersList: []
             };
           }
           countryStats[country].papers += 1;
@@ -383,19 +384,30 @@ const GenericGeographicImpactPage = () => {
           if (r) countryStats[country].regions.add(r);
           if (citation.research_domain) countryStats[country].domains.add(citation.research_domain);
           if (year) countryStats[country].years.push(year);
+          // Only add to papersList once per unique paper (avoid duplicates from multi-country)
+          if (!countryStats[country].papersList.includes(citation)) {
+            countryStats[country].papersList.push(citation);
+          }
         });
       });
-      
+
       // Convert to array and add derived fields
       const countryArray = Object.values(countryStats).map(cs => ({
         ...cs,
+        region: Array.from(cs.regions)[0] || 'Other',
         regions: Array.from(cs.regions).join(', '),
         domains: Array.from(cs.domains).join(', '),
         avgCitations: cs.papers > 0 ? Math.round(cs.citations / cs.papers) : 0,
         firstYear: cs.years.length > 0 ? Math.min(...cs.years) : null,
-        lastYear: cs.years.length > 0 ? Math.max(...cs.years) : null
+        lastYear: cs.years.length > 0 ? Math.max(...cs.years) : null,
+        yearRange: cs.years.length > 0
+          ? (Math.min(...cs.years) === Math.max(...cs.years)
+              ? `${Math.min(...cs.years)}`
+              : `${Math.min(...cs.years)}–${Math.max(...cs.years)}`)
+          : 'Unknown',
+        papersList: cs.papersList
       }));
-      
+
       // Sort by number of papers (descending)
       countryArray.sort((a, b) => b.papers - a.papers);
       
@@ -547,9 +559,9 @@ const GenericGeographicImpactPage = () => {
                   </div>
                 </div>
                 <div className="bg-purple-50 rounded-lg p-4">
-                  <div className="text-sm text-purple-700 mb-1">Most Active Region</div>
+                  <div className="text-sm text-purple-700 mb-1">Most Active Country</div>
                   <div className="text-lg font-bold text-purple-900">
-                    {watershedData.length > 0 ? watershedData[0].name : 'N/A'}
+                    {countryData.length > 0 ? countryData[0].country : 'N/A'}
                   </div>
                 </div>
               </div>
@@ -591,99 +603,83 @@ const GenericGeographicImpactPage = () => {
               </div>
             </div>
             
-            {/* Watershed Analysis */}
+            {/* Geographic Analysis — merged country + region table */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
+              <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-2">
                 <div>
-                  <div className="text-lg font-semibold text-gray-800">Regional Analysis</div>
+                  <div className="text-lg font-semibold text-gray-800">Geographic Analysis</div>
                   <p className="text-sm text-gray-500 mt-1">
-                    {modelConfig.displayName} applications by geographic region
+                    {modelConfig.displayName} applications by country and region — click a row to see papers
                   </p>
                 </div>
-                <div className="flex gap-2">
-                  <button 
-                    onClick={exportWatershedCSV}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
-                  >
-                    <Download size={16} />
-                    <span>Export CSV</span>
-                  </button>
-                </div>
+                <button
+                  onClick={exportWatershedCSV}
+                  className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 shrink-0"
+                >
+                  <Download size={16} />
+                  <span>Export CSV</span>
+                </button>
               </div>
-              
+              <p className="text-xs text-gray-400 mb-5">
+                Country is based on first-author institution (Crossref / OpenAlex). Multi-national papers are counted under each of their countries.
+                ~{Math.round((1 - countryData.reduce((s,c)=>s+c.papers,0)/Math.max(citationsData.length,1))*100)}% of papers lack institution metadata and are excluded.
+              </p>
+
               <div className="overflow-x-auto">
                 <table className="min-w-full divide-y divide-gray-200">
                   <thead className="bg-gray-50">
                     <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Region
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Countries
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Papers
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Citations
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Research Domains
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Time Period
-                      </th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-40">Country</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-32">Region</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-20">Papers</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-28">Citations</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Research Domains</th>
+                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider w-28">Time Period</th>
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {watershedData.length > 0 ? watershedData.map((region, index) => {
-                      const isExpanded = expandedRegion === region.name;
+                    {countryData.length > 0 ? countryData.map((entry, index) => {
+                      const isExpanded = expandedRegion === entry.country;
                       return (
                         <React.Fragment key={index}>
                           <tr
                             className="hover:bg-gray-50 cursor-pointer select-none"
-                            onClick={() => setExpandedRegion(isExpanded ? null : region.name)}
+                            onClick={() => setExpandedRegion(isExpanded ? null : entry.country)}
                           >
                             <td className="px-6 py-4 whitespace-nowrap">
                               <div className="flex items-center gap-1">
                                 {isExpanded ? <ChevronDown size={14} className="text-gray-400 shrink-0" /> : <ChevronRight size={14} className="text-gray-400 shrink-0" />}
-                                <span className="text-sm font-medium text-gray-900">{region.name}</span>
-                              </div>
-                            </td>
-                            <td className="px-6 py-4">
-                              <div className="text-sm text-gray-500 max-w-xs truncate" title={region.countries}>
-                                {region.countries}
+                                <span className="text-sm font-medium text-gray-900">{entry.country}</span>
                               </div>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm text-gray-900">{region.papers}</div>
+                              <span className="text-xs px-2 py-0.5 rounded-full bg-blue-50 text-blue-700 font-medium">{entry.region}</span>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="text-sm text-gray-900">{entry.papers}</div>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap">
                               <div className="text-sm text-gray-900">
-                                {region.citations}
-                                <div className="text-xs text-gray-500">
-                                  ({region.avgCitations} avg)
-                                </div>
+                                {entry.citations}
+                                <div className="text-xs text-gray-500">({entry.avgCitations} avg)</div>
                               </div>
                             </td>
                             <td className="px-6 py-4">
-                              <div className="text-sm text-gray-500 max-w-xs truncate" title={region.domains}>
-                                {region.domains}
-                              </div>
+                              <div className="text-sm text-gray-500 max-w-xs truncate" title={entry.domains}>{entry.domains}</div>
                             </td>
                             <td className="px-6 py-4 whitespace-nowrap">
-                              <div className="text-sm text-gray-900">{region.yearRange}</div>
+                              <div className="text-sm text-gray-900">{entry.yearRange}</div>
                             </td>
                           </tr>
-                          {isExpanded && region.papersList && region.papersList.length > 0 && (
+                          {isExpanded && entry.papersList && entry.papersList.length > 0 && (
                             <tr>
                               <td colSpan="6" className="px-0 py-0 bg-blue-50 border-b border-blue-100">
                                 <div className="px-6 py-4">
                                   <div className="text-xs font-semibold text-blue-700 mb-3 uppercase tracking-wide">
-                                    Papers in {region.name} ({region.papersList.length})
+                                    Papers — {entry.country} ({entry.papersList.length})
                                   </div>
                                   <div className="space-y-2 max-h-96 overflow-y-auto">
-                                    {region.papersList
+                                    {entry.papersList
                                       .slice()
                                       .sort((a, b) => {
                                         const ca = a['is-referenced-by-count'] || a.citation_count || 0;
@@ -696,11 +692,10 @@ const GenericGeographicImpactPage = () => {
                                         const url = paper.URL || paper.url || (doi ? `https://doi.org/${doi}` : null);
                                         const year = paper.year || (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0] && paper['published-print']['date-parts'][0][0]);
                                         const allPaperCountries = (paper.allCountries && paper.allCountries.length > 0)
-                                          ? paper.allCountries
-                                          : (paper.country ? [paper.country] : []);
+                                          ? paper.allCountries : (paper.country ? [paper.country] : []);
                                         const countryDisplay = allPaperCountries.length > 3
                                           ? allPaperCountries.slice(0, 3).join(', ') + ` +${allPaperCountries.length - 3} more`
-                                          : allPaperCountries.join(', ') || region.name;
+                                          : allPaperCountries.join(', ') || entry.country;
                                         const institutions = paper.institutions;
                                         const firstInstitution = Array.isArray(institutions) ? institutions[0] : (typeof institutions === 'string' ? institutions : null);
                                         const citCount = paper['is-referenced-by-count'] || paper.citation_count || 0;
@@ -758,81 +753,7 @@ const GenericGeographicImpactPage = () => {
                       );
                     }) : (
                       <tr>
-                        <td colSpan="6" className="px-6 py-4 text-center text-gray-500">
-                          No regional data available
-                        </td>
-                      </tr>
-                    )}
-                  </tbody>
-                </table>
-              </div>
-            </div>
-            
-            {/* Country Analysis */}
-            <div className="bg-white rounded-lg shadow-sm p-6">
-              <div className="text-lg font-semibold text-gray-800 mb-1">Country Analysis</div>
-              <p className="text-sm text-gray-500 mb-1">
-                {modelConfig.displayName} applications by country, derived from first-author institution.
-              </p>
-              <p className="text-xs text-gray-400 mb-6">
-                Note: a paper with authors from multiple countries is counted once (first author's country).
-                Total paper count here may be lower than the full dataset because ~{Math.round((1 - countryData.reduce((s,c)=>s+c.papers,0)/Math.max(citationsData.length,1))*100)}% of papers lack institution metadata.
-              </p>
-              
-              <div className="overflow-x-auto">
-                <table className="min-w-full divide-y divide-gray-200">
-                  <thead className="bg-gray-50">
-                    <tr>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Country/Region
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Papers
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Citations
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Regions
-                      </th>
-                      <th className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                        Research Domains
-                      </th>
-                    </tr>
-                  </thead>
-                  <tbody className="bg-white divide-y divide-gray-200">
-                    {countryData.length > 0 ? countryData.map((country, index) => (
-                      <tr key={index} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{country.country}</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{country.papers}</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">
-                            {country.citations}
-                            <div className="text-xs text-gray-500">
-                              ({country.avgCitations} avg)
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={country.regions}>
-                            {country.regions}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={country.domains}>
-                            {country.domains}
-                          </div>
-                        </td>
-                      </tr>
-                    )) : (
-                      <tr>
-                        <td colSpan="5" className="px-6 py-4 text-center text-gray-500">
-                          No country data available
-                        </td>
+                        <td colSpan="6" className="px-6 py-4 text-center text-gray-500">No geographic data available</td>
                       </tr>
                     )}
                   </tbody>
