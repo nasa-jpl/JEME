@@ -86,6 +86,7 @@ const GenericCitationsPage = () => {
   const [filterCountry] = useState('all');
   const [yearRange, setYearRange] = useState([2011, 2025]);
   const [error, setError] = useState(null);
+  const [activeType, setActiveType] = useState(null);
   
   // Load model-specific data
   useEffect(() => {
@@ -576,7 +577,6 @@ const GenericCitationsPage = () => {
                 { name: 'Algorithm', value: algorithmPapers.length, color: '#3B82F6' },
                 ...(untyped.length > 0 ? [{ name: 'Unclassified', value: untyped.length, color: '#D1D5DB' }] : [])
               ].filter(d => d.value > 0);
-              const [activeType, setActiveType] = React.useState(null);
               const shownPapers = activeType === 'Science' ? sciencePapers : activeType === 'Algorithm' ? algorithmPapers : [];
               return (
                 <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
