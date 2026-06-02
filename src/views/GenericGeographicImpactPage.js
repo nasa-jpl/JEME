@@ -514,7 +514,12 @@ const GenericGeographicImpactPage = () => {
           <>
             {/* Summary Statistics */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-              <div className="text-lg font-semibold text-gray-800 mb-4">{modelConfig.displayName} Global Distribution</div>
+              <div className="text-lg font-semibold text-gray-800 mb-1">{modelConfig.displayName} Global Distribution</div>
+              <p className="text-xs text-gray-500 mb-4">
+                Country attribution is based on the first author's institution affiliation, retrieved from Crossref metadata.
+                Papers with multi-country author teams are counted once under the first author's country.
+                Papers where institution data is unavailable fall back to geographic keywords in the title/abstract.
+              </p>
               <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
                 <div className="bg-blue-50 rounded-lg p-4">
                   <div className="text-sm text-blue-700 mb-1">Total Regions</div>
@@ -664,9 +669,13 @@ const GenericGeographicImpactPage = () => {
             
             {/* Country Analysis */}
             <div className="bg-white rounded-lg shadow-sm p-6">
-              <div className="text-lg font-semibold text-gray-800 mb-4">Country Analysis</div>
-              <p className="text-sm text-gray-500 mb-6">
-                {modelConfig.displayName} applications by country and region
+              <div className="text-lg font-semibold text-gray-800 mb-1">Country Analysis</div>
+              <p className="text-sm text-gray-500 mb-1">
+                {modelConfig.displayName} applications by country, derived from first-author institution.
+              </p>
+              <p className="text-xs text-gray-400 mb-6">
+                Note: a paper with authors from multiple countries is counted once (first author's country).
+                Total paper count here may be lower than the full dataset because ~{Math.round((1 - countryData.reduce((s,c)=>s+c.papers,0)/Math.max(citationsData.length,1))*100)}% of papers lack institution metadata.
               </p>
               
               <div className="overflow-x-auto">
