@@ -24023,7 +24023,7 @@
     "paper_id": "1138739b708aadb2b4862bf0a0499faba6c3c599",
     "url": "https://acp.copernicus.org/articles/22/10319/2022/acp-22-10319-2022.pdf",
     "abstract": "Abstract. The aim of this paper is two-fold: to provide guidance on how to best interpret TROPOMI trace gas retrievals and to highlight how TROPOMI trace gas data can be used to understand event-based impacts on air quality from regional to city-scales around the globe. For this study, we present the observed changes in the atmospheric column amounts of five trace gases (NO2, SO2, CO, HCHO and CHOCHO) detected by the Sentinel-5P TROPOMI instrument, driven by reductions of anthropogenic emissions due to COVID-19 lockdown measures in 2020. We report clear COVID-19-related decreases in NO2 concentrations on all continents. For megacities, reductions in column amounts of tropospheric NO2 range between 14\u2009% and 63\u2009%. For China and India supported by NO2 observations, where the primary source of anthropogenic SO2 is coal-fired power generation, we were able to detect sector-specific emission changes using the SO2 data. For HCHO and CHOCHO, we consistently observe anthropogenic changes in two-week averaged column amounts over China and India during the early phases of the lockdown periods. That these variations over such a short time scale are detectable from space, is due to the high resolution and improved sensitivity of the TROPOMI instrument. For CO, we observe a small reduction over China which is in concert with the other trace gas reductions observed during lockdown, however large, interannual differences prevent firm conclusions from being drawn. The joint analysis of COVID-19 lockdown-driven reductions in satellite observed trace gas column amounts, using the latest operational and scientific retrieval techniques for five species concomitantly is unprecedented. However, the meteorologically and seasonally driven variability of the five trace gases does not allow for drawing fully quantitative conclusions on the reduction of anthropogenic emissions based on TROPOMI observations alone. We anticipate that in future, the combined use of inverse modelling techniques with the high spatial resolution data from S5P/TROPOMI for all observed trace gases presented here, will yield a significantly improved sector-specific, space-based analysis of the impact of COVID-19 lockdown measures as compared to other existing satellite observations. Such analyses will further enhance the scientific impact and societal relevance of the TROPOMI mission.\n",
-    "country": null,
+    "country": "Netherlands",
     "citing_team_paper": "Air Quality Response in China Linked to the 2019 Novel Coronavirus (COVID-19) Lockdown",
     "team_paper_id": "tropess_team_1bc49f64ec00d99e",
     "research_domain": "Air Quality & Megacity Studies",
@@ -24074,7 +24074,19 @@
     "is_peer_reviewed": true,
     "paper_type": "science",
     "paper_type_rationale": "The paper uses Sentinel-5P/TROPOMI observations to detect and understand air quality impacts of COVID-19 lockdown measures, focusing on changes in atmospheric trace gases and anthropogenic emissions.",
-    "engagement_level_rationale": "The abstract clearly states that the study \"present[s] the observed changes... detected by the Sentinel-5P TROPOMI instrument,\" indicating active data usage of a TROPESS-adjacent product."
+    "engagement_level_rationale": "The abstract clearly states that the study \"present[s] the observed changes... detected by the Sentinel-5P TROPOMI instrument,\" indicating active data usage of a TROPESS-adjacent product.",
+    "institutions": [
+      "Royal Netherlands Meteorological Institute (KNMI), Netherlands",
+      "Delft University of Technology, Netherlands",
+      "Space Research Organisation Netherlands (SRON), Netherlands",
+      "Royal Belgian Institute for Space Aeronomy (BIRA-IASB), Belgium",
+      "Deutsches Zentrum f\u00fcr Luft- und Raumfahrt (DLR), Germany"
+    ],
+    "all_countries": [
+      "Netherlands",
+      "Belgium",
+      "Germany"
+    ]
   },
   {
     "title": "Changes in China's anthropogenic emissions and air quality during the COVID-19 pandemic in 2020",
