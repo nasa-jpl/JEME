@@ -77,6 +77,8 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
   const [loadError, setLoadError] = useState(null);
   const markersRef = useRef([]);
   const linesRef = useRef([]);
+  const [showLines, setShowLines] = useState(true);
+  const [minCollab, setMinCollab] = useState(2);
 
   // Get region for a country
   const getRegionForCountry = useCallback((country) => {
@@ -368,10 +370,9 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
     }
   }, [data, getCountryCoordinates, getColorForCountry, getRegionForCountry]);
 
-  const addCollaborationLines = useCallback((map) => {
-    if (!citationsData || !window.google || !window.google.maps) return;
-
-    // Build country-pair collaboration counts from all_countries field
+  // Pre-compute all collaboration link counts (memoized, independent of threshold)
+  const allLinkCounts = React.useMemo(() => {
+    if (!citationsData) return {};
     const linkCounts = {};
     citationsData.forEach(paper => {
       const countries = paper.all_countries;
@@ -383,18 +384,23 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
         }
       }
     });
+    return linkCounts;
+  }, [citationsData]);
 
-    const maxCount = Math.max(...Object.values(linkCounts), 1);
+  const addCollaborationLines = useCallback((map, threshold) => {
+    if (!window.google || !window.google.maps) return;
 
-    Object.entries(linkCounts).forEach(([key, count]) => {
+    const filtered = Object.entries(allLinkCounts).filter(([, count]) => count >= threshold);
+    const maxCount = Math.max(...filtered.map(([, c]) => c), 1);
+
+    filtered.forEach(([key, count]) => {
       const [countryA, countryB] = key.split('||');
       const coordsA = getCountryCoordinates(countryA);
       const coordsB = getCountryCoordinates(countryB);
       if (!coordsA || !coordsB) return;
 
-      // Scale line weight 1–5 based on number of shared papers
       const weight = 1 + Math.round((count / maxCount) * 4);
-      const opacity = 0.25 + (count / maxCount) * 0.45;
+      const opacity = 0.3 + (count / maxCount) * 0.5;
 
       const line = new window.google.maps.Polyline({
         path: [coordsA, coordsB],
@@ -406,7 +412,6 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
         zIndex: 0
       });
 
-      // Info window on click
       const infoWindow = new window.google.maps.InfoWindow({
         content: `
           <div style="font-family: -apple-system, sans-serif; padding: 10px; min-width: 180px;">
@@ -429,26 +434,41 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
 
       linesRef.current.push(line);
     });
-  }, [citationsData, getCountryCoordinates]);
+  }, [allLinkCounts, getCountryCoordinates]);
+
+  const redrawLines = useCallback(() => {
+    if (!mapInstanceRef.current || !window.google || !window.google.maps) return;
+    linesRef.current.forEach(line => line.setMap(null));
+    linesRef.current = [];
+    if (showLines) {
+      addCollaborationLines(mapInstanceRef.current, minCollab);
+    }
+  }, [addCollaborationLines, showLines, minCollab]);
 
   const updateMapMarkers = useCallback(() => {
     if (!mapInstanceRef.current || !window.google || !window.google.maps) return;
 
-    // Clear existing markers and lines
     markersRef.current.forEach(marker => marker.setMap(null));
     markersRef.current = [];
     linesRef.current.forEach(line => line.setMap(null));
     linesRef.current = [];
 
-    addCollaborationLines(mapInstanceRef.current);
+    if (showLines) addCollaborationLines(mapInstanceRef.current, minCollab);
     addCountryMarkers(mapInstanceRef.current);
-  }, [addCountryMarkers, addCollaborationLines]);
+  }, [addCountryMarkers, addCollaborationLines, showLines, minCollab]);
 
   useEffect(() => {
     if (mapInstanceRef.current && !isLoading && !loadError) {
       updateMapMarkers();
     }
   }, [data, isLoading, loadError, updateMapMarkers]);
+
+  // Redraw only lines when toggle or threshold changes (no need to re-render markers)
+  useEffect(() => {
+    if (mapInstanceRef.current && !isLoading && !loadError) {
+      redrawLines();
+    }
+  }, [showLines, minCollab, redrawLines, isLoading, loadError]);
 
   const initializeMap = useCallback(() => {
     if (!mapRef.current) {
@@ -519,14 +539,14 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
       setIsLoading(false);
       setLoadError(null);
 
-      addCollaborationLines(map);
+      if (showLines) addCollaborationLines(map, minCollab);
       addCountryMarkers(map);
     } catch (error) {
       console.error('Error initializing Google Maps:', error);
       setLoadError(`Map initialization failed: ${error.message}`);
       setIsLoading(false);
     }
-  }, [addCountryMarkers, addCollaborationLines]);
+  }, [addCountryMarkers, addCollaborationLines, showLines, minCollab]);
 
   // Get active regions from data for legend
   const activeRegions = React.useMemo(() => {
@@ -615,6 +635,58 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
           overflow: 'hidden'
         }}
       />
+
+      {/* Collaboration controls */}
+      {!isLoading && !loadError && citationsData && (
+        <div style={{
+          position: 'absolute',
+          top: '12px',
+          left: '12px',
+          background: 'white',
+          borderRadius: '8px',
+          padding: '8px 12px',
+          boxShadow: '0 2px 8px rgba(0,0,0,0.15)',
+          display: 'flex',
+          alignItems: 'center',
+          gap: '10px',
+          fontSize: '12px',
+          zIndex: 100
+        }}>
+          <label style={{ display: 'flex', alignItems: 'center', gap: '6px', cursor: 'pointer', color: '#374151', fontWeight: '500' }}>
+            <input
+              type="checkbox"
+              checked={showLines}
+              onChange={e => setShowLines(e.target.checked)}
+              style={{ accentColor: '#6366f1', width: '14px', height: '14px' }}
+            />
+            Collaboration lines
+          </label>
+          {showLines && (
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', borderLeft: '1px solid #e5e7eb', paddingLeft: '10px' }}>
+              <span style={{ color: '#6b7280' }}>Min papers:</span>
+              {[1, 2, 3, 5].map(n => (
+                <button
+                  key={n}
+                  onClick={() => setMinCollab(n)}
+                  style={{
+                    padding: '2px 8px',
+                    borderRadius: '4px',
+                    border: '1px solid',
+                    fontSize: '11px',
+                    cursor: 'pointer',
+                    fontWeight: minCollab === n ? '600' : '400',
+                    borderColor: minCollab === n ? '#6366f1' : '#d1d5db',
+                    background: minCollab === n ? '#eef2ff' : 'white',
+                    color: minCollab === n ? '#4f46e5' : '#374151'
+                  }}
+                >
+                  {n}{n === 5 ? '+' : ''}
+                </button>
+              ))}
+            </div>
+          )}
+        </div>
+      )}
 
       {/* Legend */}
       {!isLoading && !loadError && (
