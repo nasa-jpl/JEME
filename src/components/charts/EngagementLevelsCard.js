@@ -106,7 +106,7 @@ const EngagementLevelsCard = ({ data }) => {
   const getEngagementDescription = (level) => {
     const descriptions = {
       "Level 1: Citation": "Cites the model as background without direct use",
-      "Citation": "Cites satellite products as background reference without direct data use",
+      "Citation": "Cites mission products as background reference without direct data use",
       "Level 2: Data Usage": "Uses model outputs or datasets only",
       "Level 3: Model Adaptation": "Uses, modifies, extends, or couples the model or methodology",
       "Data Usage": "Uses mission data or products in analysis",
