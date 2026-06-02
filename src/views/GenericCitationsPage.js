@@ -241,7 +241,26 @@ const GenericCitationsPage = () => {
       }
       
       // Extract country info (use from JSON if available)
-      const country = record.country || 'Global';
+      const country = record.country || '';
+      const allCountries = Array.isArray(record.all_countries) && record.all_countries.length > 0
+        ? record.all_countries
+        : (country ? [country] : []);
+      const regionMap = {
+        'United States': 'North America', 'Canada': 'North America', 'Mexico': 'North America',
+        'France': 'Europe', 'Germany': 'Europe', 'United Kingdom': 'Europe', 'Italy': 'Europe',
+        'Spain': 'Europe', 'Netherlands': 'Europe', 'Switzerland': 'Europe', 'Sweden': 'Europe',
+        'Norway': 'Europe', 'Denmark': 'Europe', 'Belgium': 'Europe', 'Austria': 'Europe',
+        'Finland': 'Europe', 'Poland': 'Europe', 'Portugal': 'Europe', 'Russia': 'Europe',
+        'China': 'Asia', 'Japan': 'Asia', 'South Korea': 'Asia', 'India': 'Asia',
+        'Taiwan': 'Asia', 'Singapore': 'Asia', 'Indonesia': 'Asia', 'Thailand': 'Asia',
+        'Vietnam': 'Asia', 'Malaysia': 'Asia', 'Pakistan': 'Asia', 'Bangladesh': 'Asia',
+        'Australia': 'Oceania', 'New Zealand': 'Oceania',
+        'Brazil': 'South America', 'Argentina': 'South America', 'Chile': 'South America',
+        'Peru': 'South America', 'Colombia': 'South America',
+        'South Africa': 'Africa', 'Nigeria': 'Africa', 'Kenya': 'Africa', 'Egypt': 'Africa',
+        'Ethiopia': 'Africa', 'Morocco': 'Africa',
+      };
+      const region = regionMap[country] || (country ? 'Other' : '');
       
       // Check if this is a key paper for the model
       const modelNameLower = modelConfig.name.toLowerCase();
@@ -268,6 +287,8 @@ const GenericCitationsPage = () => {
         engagement_level: engagementLevel,
         research_domain: researchDomain,
         country: country,
+        all_countries: allCountries,
+        region: region,
         isOriginalPaper: isOriginalPaper,
         pages: record.page || '',
         volume: record.volume || '',
@@ -419,12 +440,20 @@ const GenericCitationsPage = () => {
   const exportCSV = () => {
     const headers = [
       'Title', 'Authors', 'Year', 'Source', 'Publisher', 'DOI', 'Citations',
-      'Engagement Level', 'Research Domain', 'Country',
+      'Engagement Level', 'Engagement Rationale',
+      'Paper Type', 'Paper Type Rationale',
+      'Research Domain',
+      'Primary Country', 'All Countries', 'Region',
       'Volume', 'Issue', 'Pages'
     ];
     const rows = sortedCitations.map(c => [
       c.title, c.authors, c.year, c.source, c.publisher, c.doi, c.cites,
-      c.engagement_level, c.research_domain, c.country,
+      c.engagement_level, c.engagement_level_rationale,
+      c.paper_type, c.paper_type_rationale,
+      c.research_domain,
+      c.country,
+      Array.isArray(c.all_countries) ? c.all_countries.join('; ') : (c.country || ''),
+      c.region,
       c.volume, c.issue, c.pages
     ]);
     

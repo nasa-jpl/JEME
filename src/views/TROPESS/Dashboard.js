@@ -1,7 +1,6 @@
 // TROPESS Mission Dashboard
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, ShieldCheck, Satellite, FlaskConical } from 'lucide-react';
-import { PieChart, Pie, Cell, Tooltip, ResponsiveContainer } from 'recharts';
+import { ExternalLink, Database, Globe, BarChart3, ShieldCheck, Satellite } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar';
 
@@ -24,10 +23,10 @@ import JournalDistributionCard from '../../components/charts/JournalDistribution
 import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
+import PaperTypeCard from '../../components/charts/PaperTypeCard';
 
 const TROPESSDashboard = () => {
   const [tropessData, setTropessData] = useState([]);
-  const [activeType, setActiveType] = useState(null);
 
   useEffect(() => {
     const loadData = async () => {
@@ -192,102 +191,7 @@ const TROPESSDashboard = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <FutureTrendsChart data={tropessData} />
 
-          {tropessData.some(c => c.paper_type) && (() => {
-            const sciencePapers = tropessData.filter(c => c.paper_type === 'science');
-            const algorithmPapers = tropessData.filter(c => c.paper_type === 'algorithm');
-            const untyped = tropessData.filter(c => !c.paper_type);
-            const pieData = [
-              { name: 'Science', value: sciencePapers.length, color: '#10B981' },
-              { name: 'Algorithm', value: algorithmPapers.length, color: '#3B82F6' },
-              ...(untyped.length > 0 ? [{ name: 'Unclassified', value: untyped.length, color: '#D1D5DB' }] : [])
-            ].filter(d => d.value > 0);
-            const shownPapers = activeType === 'Science' ? sciencePapers : activeType === 'Algorithm' ? algorithmPapers : activeType === 'Unclassified' ? untyped : [];
-            return (
-              <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col">
-                <div className="text-lg font-semibold text-gray-800 mb-1">Paper Type Classification</div>
-                <div className="text-sm text-gray-500 mb-4">Click a segment to browse papers of that type</div>
-                <div className="flex gap-4 flex-1">
-                  <div className="flex flex-col items-center w-44 flex-shrink-0">
-                    <div className="h-44 w-full">
-                      <ResponsiveContainer width="100%" height="100%">
-                        <PieChart>
-                          <Pie data={pieData} cx="50%" cy="50%" innerRadius={45} outerRadius={70}
-                            paddingAngle={2} dataKey="value"
-                            onClick={(entry) => setActiveType(prev => prev === entry.name ? null : entry.name)}>
-                            {pieData.map((entry, i) => (
-                              <Cell key={i} fill={entry.color}
-                                stroke={activeType === entry.name ? '#1F2937' : '#fff'}
-                                strokeWidth={activeType === entry.name ? 2 : 1}
-                                style={{ cursor: 'pointer', opacity: activeType && activeType !== entry.name ? 0.5 : 1 }} />
-                            ))}
-                          </Pie>
-                          <Tooltip formatter={(v, n) => [v + ' papers', n]} />
-                        </PieChart>
-                      </ResponsiveContainer>
-                    </div>
-                    <div className="flex flex-col gap-1 w-full mt-1">
-                      {pieData.map((d, i) => (
-                        <button key={i}
-                          onClick={() => setActiveType(prev => prev === d.name ? null : d.name)}
-                          className={`flex items-center gap-2 px-2 py-1 rounded-lg text-sm text-left transition-colors ${activeType === d.name ? 'bg-gray-100 font-semibold' : 'hover:bg-gray-50'}`}>
-                          <span className="w-2.5 h-2.5 rounded-full flex-shrink-0" style={{ backgroundColor: d.color }} />
-                          <span className="text-gray-700 flex-1">{d.name}</span>
-                          <span className="text-gray-500 text-xs">{d.value}</span>
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    {activeType ? (
-                      <>
-                        <div className="flex items-center gap-2 mb-2">
-                          {activeType === 'Science'
-                            ? <Globe size={14} className="text-emerald-600" />
-                            : <FlaskConical size={14} className="text-blue-600" />}
-                          <span className="text-sm font-semibold text-gray-700">{activeType} Papers</span>
-                          <span className="text-xs text-gray-400">({shownPapers.length})</span>
-                        </div>
-                        <div className="max-h-64 overflow-y-auto divide-y divide-gray-100 border border-gray-200 rounded-lg">
-                          {shownPapers.map((p, i) => {
-                            const doi = p.doi || p.DOI;
-                            const link = doi ? `https://doi.org/${doi}` : (p.url || p.URL || null);
-                            const title = Array.isArray(p.title) ? p.title[0] : (p.title || 'Untitled');
-                            return (
-                              <div key={i} className="px-3 py-2 hover:bg-gray-50">
-                                <div className="flex items-start gap-1">
-                                  {link ? (
-                                    <a href={link} target="_blank" rel="noopener noreferrer"
-                                      className="text-xs font-medium text-blue-700 hover:underline flex-1 leading-relaxed">
-                                      {title}
-                                    </a>
-                                  ) : (
-                                    <span className="text-xs font-medium text-gray-700 flex-1 leading-relaxed">{title}</span>
-                                  )}
-                                  {link && <ExternalLink size={10} className="mt-0.5 flex-shrink-0 text-gray-400" />}
-                                </div>
-                                {p.paper_type_rationale && (
-                                  <p className="text-xs text-gray-400 mt-0.5 italic leading-snug line-clamp-2">{p.paper_type_rationale}</p>
-                                )}
-                                <div className="flex gap-3 mt-0.5 text-xs text-gray-400">
-                                  {p.year && <span>{p.year}</span>}
-                                  {(p.citation_count || p['is-referenced-by-count']) > 0 && <span>{p.citation_count || p['is-referenced-by-count']} citations</span>}
-                                </div>
-                              </div>
-                            );
-                          })}
-                        </div>
-                      </>
-                    ) : (
-                      <div className="flex flex-col items-center justify-center h-full text-gray-400 text-sm gap-2 pt-8">
-                        <FlaskConical size={28} className="text-gray-300" />
-                        <span>Click a slice to see papers</span>
-                      </div>
-                    )}
-                  </div>
-                </div>
-              </div>
-            );
-          })()}
+          <PaperTypeCard data={tropessData} />
         </div>
 
         <div className="mb-6">
