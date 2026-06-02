@@ -188,13 +188,6 @@ const TROPESSDashboard = () => {
           <EngagementLevelsCard data={tropessData} />
         </div>
 
-        {tropessData.length > 0 && tropessData[0]?.uncertainty && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <UncertaintyOverviewCard data={tropessData} />
-            <UncertaintyMatrixCard data={tropessData} />
-          </div>
-        )}
-
         {/* Future Trends + Paper Type Classification */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
           <FutureTrendsChart data={tropessData} />
@@ -306,6 +299,13 @@ const TROPESSDashboard = () => {
         <div className="grid grid-cols-1 gap-6 mb-6">
           <JournalDistributionCard data={tropessData} />
         </div>
+
+        {tropessData.length > 0 && tropessData[0]?.uncertainty && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
+            <UncertaintyOverviewCard data={tropessData} />
+            <UncertaintyMatrixCard data={tropessData} />
+          </div>
+        )}
 
         <Footer isJEOE />
       </main>
