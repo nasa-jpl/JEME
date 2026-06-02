@@ -208,7 +208,7 @@ const TROPESSDashboard = () => {
               { name: 'Algorithm', value: algorithmPapers.length, color: '#3B82F6' },
               ...(untyped.length > 0 ? [{ name: 'Unclassified', value: untyped.length, color: '#D1D5DB' }] : [])
             ].filter(d => d.value > 0);
-            const shownPapers = activeType === 'Science' ? sciencePapers : activeType === 'Algorithm' ? algorithmPapers : [];
+            const shownPapers = activeType === 'Science' ? sciencePapers : activeType === 'Algorithm' ? algorithmPapers : activeType === 'Unclassified' ? untyped : [];
             return (
               <div className="bg-white rounded-lg shadow-sm p-6 flex flex-col">
                 <div className="text-lg font-semibold text-gray-800 mb-1">Paper Type Classification</div>
