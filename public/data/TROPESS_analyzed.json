@@ -38162,7 +38162,7 @@
     "paper_id": "33b4e61ae93973bf9175717a9fb0e3cafea2ab39",
     "url": "https://doi.org/10.1016/j.scitotenv.2022.160064",
     "abstract": "Ground-level ozone (O3), fine particles (PM2.5), and nitrogen dioxide (NO2) are the most harmful urban air pollutants regarding human health effects. Here, we aimed at assessing trends in concurrent exposure of global urban population to O3, PM2.5, and NO2 between 2000 and 2019. PM2.5, NO2, and O3 mean concentrations and summertime mean of the daily maximum 8-h values (O3 MDA8) were analyzed (Mann-Kendall test) using data from a global reanalysis, covering 13,160 urban areas, and a ground-based monitoring network (Tropospheric Ozone Assessment Report), collating surface O3 observations at nearly 10,000 stations worldwide. At global scale, PM2.5 exposures declined slightly from 2000 to 2019 (on average, - 0.2\u202f%\u202fyear-1), with 65\u202f% of cities showing rising levels. Improvements were observed in the Eastern US, Europe, Southeast China, and Japan, while the Middle East, sub-Saharan Africa, and South Asia experienced increases. The annual NO2 mean concentrations increased globally at 71\u202f% of cities (on average, +0.4\u202f%\u202fyear-1), with improvements in North America and Europe, and increases in exposures in sub-Saharan Africa, Middle East, and South Asia regions, in line with socioeconomic development. Global exposure of urban population to O3 increased (on average, +0.8\u202f%\u202fyear-1 at 89\u202f% of stations), due to lower O3 titration by NO. The summertime O3 MDA8 rose at 74\u202f% of cities worldwide (on average, +0.6\u202f%\u202fyear-1), while a decline was observed in North America, Northern Europe, and Southeast China, due to the reduction in precursor emissions. The highest O3 MDA8 increases (>3\u202f%\u202fyear-1) occurred in Equatorial Africa, South Korea, and India. To reach air quality standards and mitigate outdoor air pollution effects, actions are urgently needed at all governance levels. More air quality monitors should be installed in cities, particularly in Africa, for improving risk and exposure assessments, concurrently with implementation of effective emission control policies that will consider regional socioeconomic imbalances.",
-    "country": null,
+    "country": "France",
     "citing_team_paper": "Global tropospheric ozone responses to reduced NOx emissions linked to the COVID-19 worldwide lockdowns",
     "team_paper_id": "tropess_team_4efc64caa8d3f9e4",
     "research_domain": "Air Quality & Megacity Studies",
@@ -38213,7 +38213,22 @@
     "is_peer_reviewed": true,
     "paper_type": "science",
     "paper_type_rationale": "The paper focuses on 'assessing trends in concurrent exposure of global urban population to O3, PM2.5, and NO2,' which is a direct investigation into air quality and atmospheric processes.",
-    "engagement_level_rationale": "The abstract mentions 'data from a global reanalysis' and a 'ground-based monitoring network (Tropospheric Ozone Assessment Report)' but does not specify the use of TROPESS or related satellite products."
+    "engagement_level_rationale": "The abstract mentions 'data from a global reanalysis' and a 'ground-based monitoring network (Tropospheric Ozone Assessment Report)' but does not specify the use of TROPESS or related satellite products.",
+    "institutions": [
+      "CREA, France",
+      "Nanjing University of Information Science and Technology, China",
+      "George Washington University, USA",
+      "National Agency for New Technologies (ENEA), Italy",
+      "National Research Council (CNR), Italy",
+      "Fundaci\u00f3n General, Spain"
+    ],
+    "all_countries": [
+      "France",
+      "China",
+      "United States",
+      "Italy",
+      "Spain"
+    ]
   },
   {
     "title": "Reconciliation of asynchronous satellite-based NO2 and XCO2 enhancements with mesoscale modeling over two urban landscapes",
