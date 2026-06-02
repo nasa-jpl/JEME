@@ -144,7 +144,7 @@ const GenericGeographicImpactPage = () => {
         let region = null;
         let allCountries = [];
 
-        // Check if country/region already exist in the data (LES/EDMF format)
+        // Check if country/region already exist in the data (LES/EDMF format or enriched)
         if (citation.country &&
             citation.country !== 'Global' &&
             citation.country !== 'Not Geographic' &&
@@ -156,7 +156,10 @@ const GenericGeographicImpactPage = () => {
                    citation.region !== 'Not Applicable'
             ? citation.region
             : getRegionFromCountry(primaryCountry);
-          allCountries = [primaryCountry];
+          // Use stored all_countries when available, otherwise just the primary
+          allCountries = (citation.all_countries && citation.all_countries.length > 0)
+            ? citation.all_countries
+            : [primaryCountry];
 
           entriesWithGeo.push({
             ...citation,
@@ -259,15 +262,15 @@ const GenericGeographicImpactPage = () => {
 
       console.log(`Extracted geographic data for ${entriesWithGeo.length} entries out of ${data.length} total`);
       
-      // Group by region
+      // Group by primary region; also collect all countries from allCountries for display
       const regionStats = {};
       entriesWithGeo.forEach(citation => {
-        const region = citation.region;
-        const country = citation.country;
-        
-        if (!regionStats[region]) {
-          regionStats[region] = {
-            name: region,
+        const primaryRegion = citation.region;
+        if (!primaryRegion) return;
+
+        if (!regionStats[primaryRegion]) {
+          regionStats[primaryRegion] = {
+            name: primaryRegion,
             countries: new Set(),
             papers: 0,
             citations: 0,
@@ -278,26 +281,35 @@ const GenericGeographicImpactPage = () => {
           };
         }
 
-        regionStats[region].countries.add(country);
-        regionStats[region].papers += 1;
-        regionStats[region].papersList.push(citation);
-        
-        // Handle citations data - check multiple possible field names
+        // Add ALL countries (from allCountries) that map to this region
+        const allC = (citation.allCountries && citation.allCountries.length > 0)
+          ? citation.allCountries
+          : [citation.country];
+        allC.forEach(c => {
+          if (getRegionFromCountry(c) === primaryRegion) {
+            regionStats[primaryRegion].countries.add(c);
+          }
+        });
+        // Always add primary country too
+        regionStats[primaryRegion].countries.add(citation.country);
+
+        regionStats[primaryRegion].papers += 1;
+        regionStats[primaryRegion].papersList.push(citation);
+
         const citationCount = citation['is-referenced-by-count'] ||
                              citation.citation_count ||
                              citation.cites ||
                              citation.citations ||
                              0;
-        regionStats[region].citations += citationCount;
-        
+        regionStats[primaryRegion].citations += citationCount;
+
         if (citation.research_domain) {
-          regionStats[region].domains.add(citation.research_domain);
+          regionStats[primaryRegion].domains.add(citation.research_domain);
         }
         if (citation.engagement_level) {
-          regionStats[region].engagementLevels.add(citation.engagement_level);
+          regionStats[primaryRegion].engagementLevels.add(citation.engagement_level);
         }
-        
-        // Handle year data - check multiple possible sources
+
         let year = null;
         if (citation.year) {
           year = citation.year;
@@ -308,9 +320,8 @@ const GenericGeographicImpactPage = () => {
         } else if (citation['published-print'] && citation['published-print']['date-parts'] && citation['published-print']['date-parts'][0]) {
           year = citation['published-print']['date-parts'][0][0];
         }
-        
         if (year) {
-          regionStats[region].years.push(year);
+          regionStats[primaryRegion].years.push(year);
         }
       });
       
@@ -334,49 +345,45 @@ const GenericGeographicImpactPage = () => {
       // Sort by number of papers (descending)
       regionArray.sort((a, b) => b.papers - a.papers);
       
-      // Group by country  
+      // Group by country — multi-country papers count under each of their countries
       const countryStats = {};
       entriesWithGeo.forEach(citation => {
-        const country = citation.country;
-        
-        if (!countryStats[country]) {
-          countryStats[country] = {
-            country: country,
-            papers: 0,
-            citations: 0,
-            regions: new Set(),
-            domains: new Set(),
-            years: []
-          };
-        }
-        
-        countryStats[country].papers += 1;
-        
         const citationCount = citation['is-referenced-by-count'] ||
                              citation.citation_count ||
                              citation.cites ||
                              citation.citations ||
                              0;
-        countryStats[country].citations += citationCount;
-        
-        if (citation.region) {
-          countryStats[country].regions.add(citation.region);
-        }
-        if (citation.research_domain) {
-          countryStats[country].domains.add(citation.research_domain);
-        }
-        
-        // Handle year data
         let year = null;
         if (citation.year) {
           year = citation.year;
         } else if (citation.published && citation.published['date-parts'] && citation.published['date-parts'][0]) {
           year = citation.published['date-parts'][0][0];
         }
-        
-        if (year) {
-          countryStats[country].years.push(year);
-        }
+
+        // Use all_countries if available, otherwise just the primary country
+        const countries = (citation.allCountries && citation.allCountries.length > 0)
+          ? citation.allCountries
+          : [citation.country];
+
+        countries.forEach(country => {
+          if (!country) return;
+          if (!countryStats[country]) {
+            countryStats[country] = {
+              country: country,
+              papers: 0,
+              citations: 0,
+              regions: new Set(),
+              domains: new Set(),
+              years: []
+            };
+          }
+          countryStats[country].papers += 1;
+          countryStats[country].citations += citationCount;
+          const r = getRegionFromCountry(country);
+          if (r) countryStats[country].regions.add(r);
+          if (citation.research_domain) countryStats[country].domains.add(citation.research_domain);
+          if (year) countryStats[country].years.push(year);
+        });
       });
       
       // Convert to array and add derived fields
@@ -688,7 +695,12 @@ const GenericGeographicImpactPage = () => {
                                         const doi = paper.DOI || paper.doi;
                                         const url = paper.URL || paper.url || (doi ? `https://doi.org/${doi}` : null);
                                         const year = paper.year || (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0] && paper['published-print']['date-parts'][0][0]);
-                                        const paperCountry = paper.country || region.name;
+                                        const allPaperCountries = (paper.allCountries && paper.allCountries.length > 0)
+                                          ? paper.allCountries
+                                          : (paper.country ? [paper.country] : []);
+                                        const countryDisplay = allPaperCountries.length > 3
+                                          ? allPaperCountries.slice(0, 3).join(', ') + ` +${allPaperCountries.length - 3} more`
+                                          : allPaperCountries.join(', ') || region.name;
                                         const institutions = paper.institutions;
                                         const firstInstitution = Array.isArray(institutions) ? institutions[0] : (typeof institutions === 'string' ? institutions : null);
                                         const citCount = paper['is-referenced-by-count'] || paper.citation_count || 0;
@@ -714,9 +726,12 @@ const GenericGeographicImpactPage = () => {
                                                       <span className="font-medium text-gray-600">Institution:</span> {firstInstitution}
                                                     </span>
                                                   )}
-                                                  <span className="flex items-center gap-1">
-                                                    <span className="font-medium text-gray-600">Country:</span> {paperCountry}
-                                                  </span>
+                                                  {allPaperCountries.length > 0 && (
+                                                    <span className="flex items-center gap-1">
+                                                      <span className="font-medium text-gray-600">{allPaperCountries.length > 1 ? 'Countries' : 'Country'}:</span>
+                                                      <span title={allPaperCountries.join(', ')}>{countryDisplay}</span>
+                                                    </span>
+                                                  )}
                                                   {engagementLevel && (
                                                     <span className="flex items-center gap-1">
                                                       <span className="font-medium text-gray-600">Engagement:</span> {engagementLevel}

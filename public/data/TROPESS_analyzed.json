@@ -20873,7 +20873,7 @@
     "paper_id": "8430d32a52b083c5f3f9d78c7e370442f2ece21d",
     "url": "https://acp.copernicus.org/articles/20/12761/2020/acp-20-12761-2020.pdf",
     "abstract": "Abstract. A long-term historical emission inventory of air and\nclimate pollutants in East, Southeast, and South Asia during 1950\u20132015 was developed as the Regional Emission inventory in ASia version 3 (REASv3).\nREASv3 provides details of emissions from major anthropogenic sources for\neach country and its sub-regions and also provides monthly gridded data with\n0.25\u2218\u2009\u00d7\u20090.25\u2218 resolution. The average total\nemissions in Asia during 1950\u20131955 and during 2010\u20132015 (growth rates in these 60 years estimated from the two averages) are as follows: SO2: 3.2\u2009Tg,\n42.4\u2009Tg (13.1); NOx: 1.6\u2009Tg, 47.3\u2009Tg (29.1); CO: 56.1\u2009Tg, 303\u2009Tg (5.4);\nnon-methane volatile organic compounds: 7.0\u2009Tg, 57.8\u2009Tg (8.3); NH3: 8.0\u2009Tg, 31.3\u2009Tg (3.9); CO2: 1.1\u2009Pg, 18.6\u2009Pg (16.5) (CO2 excluding\nbiofuel combustion 0.3\u2009Pg, 16.8\u2009Pg (48.6)); PM10: 5.9\u2009Tg, 30.2\u2009Tg\n(5.1); PM2.5: 4.6\u2009Tg, 21.3\u2009Tg (4.6); black carbon: 0.69\u2009Tg, 3.2\u2009Tg\n(4.7); and organic carbon: 2.5\u2009Tg, 6.6\u2009Tg (2.7). Clearly, all the air\npollutant emissions in Asia increased significantly during these 6 decades, but situations were different among countries and regions. Due to\nChina's rapid economic growth in recent years, its relative contribution to\nemissions in Asia has been the largest. However, most pollutant species\nreached their peaks by 2015, and the growth rates of other species were found to be reduced or almost zero. On the other hand, air pollutant emissions\nfrom India showed an almost continuous increasing trend. As a result, the\nrelative ratio of emissions of India to that of Asia has increased recently. The trend observed in Japan was different from the rest of Asia.\nIn Japan, emissions increased rapidly during the 1950s\u20131970s, which\nreflected the economic situation of the period; however, most emissions\ndecreased from their peak values, which were approximately 40\u00a0years ago, due\nto the introduction of control measures for air pollution. Similar features\nwere found in the Republic of Korea and Taiwan. In the case of other Asian countries, air pollutant emissions generally showed an increase along with\neconomic growth and motorization. Trends and spatial distribution of air\npollutants in Asia are becoming complicated. Data sets of REASv3, including table of emissions by countries and sub-regions for major sectors and fuel\ntypes, and monthly gridded data with 0.25\u2218\u2009\u00d7\u20090.25\u2218 resolution for major source categories are available through\nthe following URL: https://www.nies.go.jp/REAS/index.html (last access: 31\u00a0October 2020).\n",
-    "country": null,
+    "country": "Japan",
     "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
     "team_paper_id": "tropess_team_53c33eee24123f48",
     "research_domain": "Trace Gas Products",
@@ -20924,7 +20924,14 @@
     "is_peer_reviewed": true,
     "paper_type": "algorithm",
     "paper_type_rationale": "The paper focuses on the development of 'A long-term historical emission inventory... REASv3,' which is a data product generation and methodology.",
-    "engagement_level_rationale": "The abstract describes the development of an emission inventory without mentioning the use of TROPESS or related satellite products."
+    "engagement_level_rationale": "The abstract describes the development of an emission inventory without mentioning the use of TROPESS or related satellite products.",
+    "institutions": [
+      "Asia Center for Air Pollution Research, Japan",
+      "National Institute for Environmental Studies, Japan"
+    ],
+    "all_countries": [
+      "Japan"
+    ]
   },
   {
     "title": "Transport of Peroxyacyl Nitrates (PANs) Across Northern Hemisphere Ocean Basins From Satellite Observations",
@@ -56855,7 +56862,7 @@
     "paper_id": "e06e8bb951c34054ae85dfbb4d2ecf11384ce11b",
     "url": "https://doi.org/10.5194/essd-17-965-2025",
     "abstract": "Abstract. Accurate assessment of anthropogenic carbon dioxide (CO2) emissions and their redistribution among the atmosphere, ocean, and terrestrial biosphere in a changing climate is critical to better understand the global carbon cycle, support the development of climate policies, and project future climate change. Here we describe and synthesize datasets and methodologies to quantify the five major components of the global carbon budget and their uncertainties. Fossil CO2 emissions (EFOS) are based on energy statistics and cement production data, while emissions from land-use change (ELUC) are based on land-use and land-use change data and bookkeeping models. Atmospheric CO2 concentration is measured directly, and its growth rate (GATM) is computed from the annual changes in concentration. The global net uptake of CO2 by the ocean (SOCEAN, called the ocean sink) is estimated with global ocean biogeochemistry models and observation-based fCO2\u00a0products (fCO2 is the fugacity of CO2). The global net uptake of CO2 by the land (SLAND, called the land sink) is estimated with dynamic global vegetation models. Additional lines of evidence on land and ocean sinks are provided by atmospheric inversions, atmospheric oxygen measurements, and Earth system models. The sum of all sources and sinks results in the carbon budget imbalance (BIM), a measure of imperfect data and incomplete understanding of the contemporary carbon cycle. All uncertainties are reported as \u00b11\u03c3. For the year 2023, EFOS increased by 1.3\u2009% relative to 2022, with fossil emissions at 10.1\u2009\u00b1\u20090.5\u2009GtC\u2009yr\u22121 (10.3\u2009\u00b1\u20090.5\u2009GtC\u2009yr\u22121 when the cement carbonation sink is not included), and ELUC was 1.0\u2009\u00b1\u20090.7\u2009GtC\u2009yr\u22121, for a total anthropogenic CO2 emission (including the cement carbonation sink) of 11.1\u2009\u00b1\u20090.9\u2009GtC\u2009yr\u22121 (40.6\u2009\u00b1\u20093.2\u2009GtCO2\u2009yr\u22121). Also, for 2023, GATM was 5.9\u2009\u00b1\u20090.2\u2009GtC\u2009yr\u22121 (2.79\u2009\u00b1\u20090.1\u2009ppm\u2009yr\u22121; ppm denotes parts per million), SOCEAN was 2.9\u2009\u00b1\u20090.4\u2009GtC\u2009yr\u22121, and SLAND was 2.3\u2009\u00b1\u20091.0\u2009GtC\u2009yr\u22121, with a near-zero BIM (\u22120.02\u2009GtC\u2009yr\u22121). The global atmospheric CO2 concentration averaged over 2023 reached 419.31\u2009\u00b1\u20090.1\u2009ppm. Preliminary data for 2024 suggest an increase in EFOS relative to 2023 of +0.8\u2009% (\u22120.2\u2009% to 1.7\u2009%) globally and an atmospheric CO2 concentration increase by 2.87\u2009ppm, reaching 422.45\u2009ppm, 52\u2009% above the pre-industrial level (around 278\u2009ppm in 1750). Overall, the mean of and trend in the components of the global carbon budget are consistently estimated over the period 1959\u20132023, with a near-zero overall budget imbalance, although discrepancies of up to around 1\u2009GtC\u2009yr\u22121 persist for the representation of annual to semi-decadal variability in CO2 fluxes. Comparison of estimates from multiple approaches and observations shows the following: (1)\u00a0a persistent large uncertainty in the estimate of land-use change emissions, (2)\u00a0low agreement between the different methods on the magnitude of the land CO2 flux in the northern extra-tropics, and (3)\u00a0a discrepancy between the different methods on the mean ocean sink. This living-data update documents changes in methods and datasets applied to this most recent global carbon budget as well as evolving community understanding of the global carbon cycle. The data presented in this work are available at https://doi.org/10.18160/GCP-2024 (Friedlingstein et al., 2024).\n",
-    "country": null,
+    "country": "United Kingdom",
     "citing_team_paper": "Carbon emissions from the 2023 Canadian wildfires",
     "team_paper_id": "tropess_team_84ce177fd22e78a1",
     "research_domain": "Carbon Cycle & Flux Inversions",
@@ -56906,7 +56913,36 @@
     "is_peer_reviewed": true,
     "paper_type": "science",
     "paper_type_rationale": "The paper describes and synthesizes datasets and methodologies to quantify components of the global carbon budget, which is a core Earth science phenomenon.",
-    "engagement_level_rationale": "The paper is classified as 'Review Paper' as its abstract states, 'Here we describe and synthesize datasets and methodologies to quantify the five major components of the global carbon budget and their uncertainties,' indicating a comprehensive overview."
+    "engagement_level_rationale": "The paper is classified as 'Review Paper' as its abstract states, 'Here we describe and synthesize datasets and methodologies to quantify the five major components of the global carbon budget and their uncertainties,' indicating a comprehensive overview.",
+    "institutions": [
+      "University of Exeter, United Kingdom"
+    ],
+    "all_countries": [
+      "United Kingdom",
+      "United States",
+      "Germany",
+      "France",
+      "Norway",
+      "Australia",
+      "Canada",
+      "Brazil",
+      "China",
+      "Japan",
+      "Netherlands",
+      "Switzerland",
+      "Sweden",
+      "Denmark",
+      "Belgium",
+      "Austria",
+      "Finland",
+      "Italy",
+      "Spain",
+      "Portugal",
+      "Russia",
+      "South Africa",
+      "South Korea",
+      "India"
+    ]
   },
   {
     "title": "Increased Atmospheric Aridity and Reduced Precipitation Drive the 2023 Extreme Wildfire Season in Canada",

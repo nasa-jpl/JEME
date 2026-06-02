@@ -24,11 +24,29 @@ from pathlib import Path
 import requests
 
 CROSSREF_URL = "https://api.crossref.org/works/{doi}"
+OPENALEX_URL = "https://api.openalex.org/works/https://doi.org/{doi}"
 CROSSREF_EMAIL = "yunkss@gmail.com"   # polite pool
 TIMEOUT = 20
 SLEEP = 0.15          # stay well under Crossref rate limit
 MAX_RETRIES = 3
 CACHE_FILE = Path(__file__).parent / "enrich_geographic_cache.json"
+
+# ISO-2 to country name map for OpenAlex
+ISO2_COUNTRY = {
+    "US": "United States", "CN": "China", "DE": "Germany", "FR": "France",
+    "GB": "United Kingdom", "JP": "Japan", "NL": "Netherlands", "CH": "Switzerland",
+    "CA": "Canada", "AU": "Australia", "IT": "Italy", "KR": "South Korea",
+    "BE": "Belgium", "NO": "Norway", "SE": "Sweden", "DK": "Denmark",
+    "AT": "Austria", "FI": "Finland", "ES": "Spain", "BR": "Brazil",
+    "IN": "India", "NZ": "New Zealand", "RU": "Russia", "ZA": "South Africa",
+    "PT": "Portugal", "IE": "Ireland", "SG": "Singapore", "TW": "Taiwan",
+    "MX": "Mexico", "AR": "Argentina", "CL": "Chile", "PL": "Poland",
+    "CZ": "Czech Republic", "HU": "Hungary", "GR": "Greece", "IL": "Israel",
+    "TR": "Turkey", "IR": "Iran", "SA": "Saudi Arabia", "EG": "Egypt",
+    "NG": "Nigeria", "KE": "Kenya", "ET": "Ethiopia", "MA": "Morocco",
+    "PK": "Pakistan", "BD": "Bangladesh", "ID": "Indonesia", "TH": "Thailand",
+    "VN": "Vietnam", "PH": "Philippines", "MY": "Malaysia",
+}
 
 # ---------------------------------------------------------------------------
 # Country extraction
@@ -108,10 +126,22 @@ def fetch_crossref(doi, email):
     return None
 
 
+def fetch_openalex(doi):
+    """Fetch author institution country codes from OpenAlex."""
+    url = OPENALEX_URL.format(doi=doi)
+    try:
+        r = requests.get(url, params={"select": "authorships"}, timeout=TIMEOUT)
+        if r.status_code == 200:
+            return r.json().get("authorships", [])
+    except requests.RequestException:
+        pass
+    return []
+
+
 def extract_geo_from_crossref(msg):
-    """Return (primary_country, [institution_names]) from Crossref message."""
+    """Return (primary_country, all_countries, [institution_names]) from Crossref message."""
     if not msg:
-        return None, []
+        return None, [], []
 
     institutions = []
     countries = []
@@ -122,15 +152,45 @@ def extract_geo_from_crossref(msg):
             if name:
                 institutions.append(name)
                 c = extract_country(name)
-                if c:
+                if c and c not in countries:
                     countries.append(c)
 
     # Deduplicate
     institutions = list(dict.fromkeys(institutions))
-    countries = list(dict.fromkeys(countries))
 
     primary = countries[0] if countries else None
-    return primary, institutions
+    return primary, countries, institutions
+
+
+def extract_geo_from_openalex(authorships):
+    """Return (primary_country, all_countries, [institution_names]) from OpenAlex authorships."""
+    institutions = []
+    countries = []
+    first_author_country = None
+
+    for idx, a in enumerate(authorships):
+        insts = a.get("institutions", [])
+        for inst in insts:
+            name = inst.get("display_name", "")
+            cc = inst.get("country_code", "")
+            country = ISO2_COUNTRY.get(cc)
+            if name:
+                institutions.append(name)
+            if country and country not in countries:
+                countries.append(country)
+            if idx == 0 and country and not first_author_country:
+                first_author_country = country
+        # also try direct countries field
+        for cc in a.get("countries", []):
+            country = ISO2_COUNTRY.get(cc)
+            if country and country not in countries:
+                countries.append(country)
+            if idx == 0 and country and not first_author_country:
+                first_author_country = country
+
+    institutions = list(dict.fromkeys(institutions))
+    primary = first_author_country or (countries[0] if countries else None)
+    return primary, countries, institutions
 
 
 # ---------------------------------------------------------------------------
@@ -177,14 +237,31 @@ def main():
         return
 
     # Fetch
+    openalex_used = 0
     for i, paper in enumerate(todo):
         doi = paper["doi"]
         if i % 50 == 0:
             print(f"  Progress: {i}/{len(todo)}...")
         msg = fetch_crossref(doi, CROSSREF_EMAIL)
-        primary_country, institutions = extract_geo_from_crossref(msg)
-        cache[doi] = {"country": primary_country, "institutions": institutions}
+        primary_country, all_countries, institutions = extract_geo_from_crossref(msg)
+
+        # Fall back to OpenAlex when Crossref has no affiliation data
+        if not primary_country:
+            authorships = fetch_openalex(doi)
+            if authorships:
+                primary_country, all_countries, institutions = extract_geo_from_openalex(authorships)
+                if primary_country:
+                    openalex_used += 1
+
+        cache[doi] = {
+            "country": primary_country,
+            "all_countries": all_countries,
+            "institutions": institutions,
+        }
         time.sleep(SLEEP)
+
+    if openalex_used:
+        print(f"  OpenAlex fallback used for {openalex_used} papers")
 
     # Save cache
     with open(CACHE_FILE, "w") as f:
@@ -200,6 +277,8 @@ def main():
             if result.get("country"):
                 p["country"] = result["country"]
                 enriched += 1
+            if result.get("all_countries"):
+                p["all_countries"] = result["all_countries"]
             if result.get("institutions"):
                 p["institutions"] = result["institutions"]
 
