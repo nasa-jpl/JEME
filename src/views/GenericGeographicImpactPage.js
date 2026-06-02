@@ -1,6 +1,6 @@
 // Generic Geographic Impact Page component that works with any model
 import React, { useState, useEffect } from 'react';
-import { ArrowLeft, Download, Map } from 'lucide-react';
+import { ArrowLeft, Download, Map, ChevronDown, ChevronRight, ExternalLink } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
 import GoogleMapComponent from '../components/GoogleMapComponent';
@@ -15,6 +15,7 @@ const GenericGeographicImpactPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [citationsData, setCitationsData] = useState([]);
+  const [expandedRegion, setExpandedRegion] = useState(null);
   
   // Google Maps API key
   const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
@@ -272,12 +273,14 @@ const GenericGeographicImpactPage = () => {
             citations: 0,
             domains: new Set(),
             engagementLevels: new Set(),
-            years: []
+            years: [],
+            papersList: []
           };
         }
-        
+
         regionStats[region].countries.add(country);
         regionStats[region].papers += 1;
+        regionStats[region].papersList.push(citation);
         
         // Handle citations data - check multiple possible field names
         const citationCount = citation['is-referenced-by-count'] ||
@@ -320,11 +323,12 @@ const GenericGeographicImpactPage = () => {
         firstYear: rs.years.length > 0 ? Math.min(...rs.years) : null,
         lastYear: rs.years.length > 0 ? Math.max(...rs.years) : null,
         avgCitations: rs.papers > 0 ? Math.round(rs.citations / rs.papers) : 0,
-        yearRange: rs.years.length > 0 ? 
-          (Math.min(...rs.years) === Math.max(...rs.years) ? 
-            `${Math.min(...rs.years)}` : 
-            `${Math.min(...rs.years)}-${Math.max(...rs.years)}`) : 
-          'Unknown'
+        yearRange: rs.years.length > 0 ?
+          (Math.min(...rs.years) === Math.max(...rs.years) ?
+            `${Math.min(...rs.years)}` :
+            `${Math.min(...rs.years)}-${Math.max(...rs.years)}`) :
+          'Unknown',
+        papersList: rs.papersList
       }));
       
       // Sort by number of papers (descending)
@@ -625,37 +629,119 @@ const GenericGeographicImpactPage = () => {
                     </tr>
                   </thead>
                   <tbody className="bg-white divide-y divide-gray-200">
-                    {watershedData.length > 0 ? watershedData.map((region, index) => (
-                      <tr key={index} className="hover:bg-gray-50">
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm font-medium text-gray-900">{region.name}</div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={region.countries}>
-                            {region.countries}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{region.papers}</div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">
-                            {region.citations}
-                            <div className="text-xs text-gray-500">
-                              ({region.avgCitations} avg)
-                            </div>
-                          </div>
-                        </td>
-                        <td className="px-6 py-4">
-                          <div className="text-sm text-gray-500 max-w-xs truncate" title={region.domains}>
-                            {region.domains}
-                          </div>
-                        </td>
-                        <td className="px-6 py-4 whitespace-nowrap">
-                          <div className="text-sm text-gray-900">{region.yearRange}</div>
-                        </td>
-                      </tr>
-                    )) : (
+                    {watershedData.length > 0 ? watershedData.map((region, index) => {
+                      const isExpanded = expandedRegion === region.name;
+                      return (
+                        <React.Fragment key={index}>
+                          <tr
+                            className="hover:bg-gray-50 cursor-pointer select-none"
+                            onClick={() => setExpandedRegion(isExpanded ? null : region.name)}
+                          >
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="flex items-center gap-1">
+                                {isExpanded ? <ChevronDown size={14} className="text-gray-400 shrink-0" /> : <ChevronRight size={14} className="text-gray-400 shrink-0" />}
+                                <span className="text-sm font-medium text-gray-900">{region.name}</span>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="text-sm text-gray-500 max-w-xs truncate" title={region.countries}>
+                                {region.countries}
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="text-sm text-gray-900">{region.papers}</div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="text-sm text-gray-900">
+                                {region.citations}
+                                <div className="text-xs text-gray-500">
+                                  ({region.avgCitations} avg)
+                                </div>
+                              </div>
+                            </td>
+                            <td className="px-6 py-4">
+                              <div className="text-sm text-gray-500 max-w-xs truncate" title={region.domains}>
+                                {region.domains}
+                              </div>
+                            </td>
+                            <td className="px-6 py-4 whitespace-nowrap">
+                              <div className="text-sm text-gray-900">{region.yearRange}</div>
+                            </td>
+                          </tr>
+                          {isExpanded && region.papersList && region.papersList.length > 0 && (
+                            <tr>
+                              <td colSpan="6" className="px-0 py-0 bg-blue-50 border-b border-blue-100">
+                                <div className="px-6 py-4">
+                                  <div className="text-xs font-semibold text-blue-700 mb-3 uppercase tracking-wide">
+                                    Papers in {region.name} ({region.papersList.length})
+                                  </div>
+                                  <div className="space-y-2 max-h-96 overflow-y-auto">
+                                    {region.papersList
+                                      .slice()
+                                      .sort((a, b) => {
+                                        const ca = a['is-referenced-by-count'] || a.citation_count || 0;
+                                        const cb = b['is-referenced-by-count'] || b.citation_count || 0;
+                                        return cb - ca;
+                                      })
+                                      .map((paper, pi) => {
+                                        const title = Array.isArray(paper.title) ? paper.title[0] : (paper.title || 'Untitled');
+                                        const doi = paper.DOI || paper.doi;
+                                        const url = paper.URL || paper.url || (doi ? `https://doi.org/${doi}` : null);
+                                        const year = paper.year || (paper['published-print'] && paper['published-print']['date-parts'] && paper['published-print']['date-parts'][0] && paper['published-print']['date-parts'][0][0]);
+                                        const paperCountry = paper.country || region.name;
+                                        const institutions = paper.institutions;
+                                        const firstInstitution = Array.isArray(institutions) ? institutions[0] : (typeof institutions === 'string' ? institutions : null);
+                                        const citCount = paper['is-referenced-by-count'] || paper.citation_count || 0;
+                                        const engagementLevel = paper.engagement_level;
+                                        return (
+                                          <div key={pi} className="bg-white rounded-lg p-3 border border-blue-100 text-xs">
+                                            <div className="flex items-start justify-between gap-2">
+                                              <div className="flex-1 min-w-0">
+                                                {url ? (
+                                                  <a href={url} target="_blank" rel="noopener noreferrer"
+                                                    className="font-medium text-blue-700 hover:text-blue-900 hover:underline flex items-start gap-1"
+                                                    onClick={e => e.stopPropagation()}
+                                                  >
+                                                    <ExternalLink size={11} className="mt-0.5 shrink-0" />
+                                                    <span>{title}{year ? ` (${year})` : ''}</span>
+                                                  </a>
+                                                ) : (
+                                                  <span className="font-medium text-gray-800">{title}{year ? ` (${year})` : ''}</span>
+                                                )}
+                                                <div className="mt-1 flex flex-wrap gap-x-3 gap-y-0.5 text-gray-500">
+                                                  {firstInstitution && (
+                                                    <span className="flex items-center gap-1">
+                                                      <span className="font-medium text-gray-600">Institution:</span> {firstInstitution}
+                                                    </span>
+                                                  )}
+                                                  <span className="flex items-center gap-1">
+                                                    <span className="font-medium text-gray-600">Country:</span> {paperCountry}
+                                                  </span>
+                                                  {engagementLevel && (
+                                                    <span className="flex items-center gap-1">
+                                                      <span className="font-medium text-gray-600">Engagement:</span> {engagementLevel}
+                                                    </span>
+                                                  )}
+                                                </div>
+                                              </div>
+                                              {citCount > 0 && (
+                                                <div className="shrink-0 text-right text-gray-400">
+                                                  <div className="font-semibold text-gray-600">{citCount}</div>
+                                                  <div>cites</div>
+                                                </div>
+                                              )}
+                                            </div>
+                                          </div>
+                                        );
+                                      })}
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          )}
+                        </React.Fragment>
+                      );
+                    }) : (
                       <tr>
                         <td colSpan="6" className="px-6 py-4 text-center text-gray-500">
                           No regional data available
