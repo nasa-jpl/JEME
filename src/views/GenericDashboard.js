@@ -518,14 +518,6 @@ const GenericDashboard = ({ modelName, citationsData }) => {
           )}
         </div>
 
-        {/* Uncertainty Analysis */}
-        {citationsData && citationsData.length > 0 && citationsData[0]?.uncertainty && (
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
-            <UncertaintyOverviewCard data={citationsData} />
-            <UncertaintyMatrixCard data={citationsData} />
-          </div>
-        )}
-
         {/* Quick Navigation */}
         <div className="bg-white rounded-lg shadow-sm border">
           <div className="p-6 border-b">
@@ -583,6 +575,14 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             </div>
           </div>
         </div>
+
+        {/* Uncertainty Analysis */}
+        {citationsData && citationsData.length > 0 && citationsData[0]?.uncertainty && (
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
+            <UncertaintyOverviewCard data={citationsData} />
+            <UncertaintyMatrixCard data={citationsData} />
+          </div>
+        )}
       </main>
     </div>
   );
