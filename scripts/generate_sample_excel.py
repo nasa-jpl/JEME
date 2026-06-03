@@ -177,8 +177,13 @@ def main():
     with open(DATA_FILE) as f:
         data = json.load(f)
 
+    # Exclude team/seed papers (paper_id == a team_paper_id)
+    team_paper_ids = {p.get('team_paper_id') for p in data if p.get('team_paper_id')}
+    pool = [p for p in data if p.get('paper_id') not in team_paper_ids]
+    print(f"Pool: {len(pool)} papers (excluded {len(data) - len(pool)} team papers)")
+
     random.seed(args.seed)
-    sample = random.sample(data, args.n)
+    sample = random.sample(pool, args.n)
 
     rows = [flatten_paper(p) for p in sample]
     write_excel(rows, args.out)
