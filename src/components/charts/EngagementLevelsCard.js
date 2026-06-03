@@ -32,6 +32,7 @@ const EngagementLevelsCard = ({ data }) => {
           // Mission format
           if (level === "Data Usage") standardLevel = "Data Usage";
           else if (level === "Review Paper") standardLevel = "Review Paper";
+          else if (level === "Simple Citation") standardLevel = "Simple Citation";
           else if (level === "Citation") standardLevel = "Citation";
         } else {
           // Model format: Level 1–4 (match by prefix to handle any suffix text)
@@ -54,14 +55,15 @@ const EngagementLevelsCard = ({ data }) => {
 
     // Define engagement level order and colors based on format
     const levelOrder = isMissionFormat
-      ? ["Citation", "Data Usage", "Review Paper", "Unclassified"]
+      ? ["Data Usage", "Simple Citation", "Review Paper", "Citation", "Unclassified"]
       : ["Level 1: Citation", "Level 2: Data Usage", "Level 3: Model Adaptation", "Unclassified"];
 
     const levelColors = isMissionFormat
       ? {
-          "Citation": "#93C5FD",             // Light blue
           "Data Usage": "#3B82F6",          // Blue
+          "Simple Citation": "#93C5FD",     // Light blue
           "Review Paper": "#1D4ED8",        // Dark blue
+          "Citation": "#BFDBFE",            // Very light blue
           "Unclassified": "#D1D5DB"         // Gray
         }
       : {
@@ -106,6 +108,7 @@ const EngagementLevelsCard = ({ data }) => {
   const getEngagementDescription = (level) => {
     const descriptions = {
       "Level 1: Citation": "Cites the model as background without direct use",
+      "Simple Citation": "Mentions mission products in passing without direct data use",
       "Citation": "Cites mission products as background reference without direct data use",
       "Level 2: Data Usage": "Uses model outputs or datasets only",
       "Level 3: Model Adaptation": "Uses, modifies, extends, or couples the model or methodology",
