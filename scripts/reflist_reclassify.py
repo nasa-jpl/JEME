@@ -11,7 +11,7 @@ Pipeline:
 Engagement levels (3-tier TROPESS system):
   Review Paper    — survey/overview/synthesis
   Data Usage      — actively uses TROPESS/CrIS/AIRS/MUSES data products
-  Simple Citation — mentions TROPESS-related work in passing
+  Citation — mentions TROPESS-related work in passing
 
 Usage:
     python scripts/reflist_reclassify.py --dry-run
@@ -43,7 +43,7 @@ TIMEOUT      = 90
 SLEEP        = 0.12   # ~8 req/s — within OpenAlex polite-pool limit
 BATCH_SIZE   = 8
 
-TARGET_LEVELS = {"Citation", "Simple Citation"}
+TARGET_LEVELS = {"Citation"}
 
 # ---------------------------------------------------------------------------
 # OpenAlex helpers
@@ -127,7 +127,7 @@ engagement system:
   Review Paper    — survey/overview/synthesis papers covering the field broadly
   Data Usage      — papers that actively use TROPESS, CrIS, AIRS, MUSES, or closely
                     related satellite retrievals as a primary data source for analysis
-  Simple Citation — papers that merely mention TROPESS/related instruments in passing,
+  Citation — papers that merely mention TROPESS/related instruments in passing,
                     as background, or in an introduction/conclusion without actually
                     using the data
 
@@ -138,7 +138,7 @@ product or algorithm papers is a strong candidate for Data Usage.
 Respond with a JSON array. Each element must have exactly:
   paper_id, engagement_level, rationale
 
-  engagement_level: "Review Paper" | "Data Usage" | "Simple Citation"
+  engagement_level: "Review Paper" | "Data Usage" | "Citation"
   rationale: 1-2 sentences citing title/abstract/reference evidence."""
 
 
@@ -316,7 +316,7 @@ def main():
     # Step 5 — apply results to data
     # ------------------------------------------------------------------ #
     data_by_id = {p.get("paper_id"): p for p in data}
-    changes = {"Data Usage": 0, "Simple Citation": 0, "Review Paper": 0, "no change": 0}
+    changes = {"Data Usage": 0, "Citation": 0, "Review Paper": 0, "no change": 0}
 
     for pi in papers_info:
         pid = pi["paper_id"]

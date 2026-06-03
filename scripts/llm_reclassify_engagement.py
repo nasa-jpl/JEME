@@ -13,13 +13,13 @@ Per-model engagement schemes:
   Missions (GRACE, SWOT, TROPESS) — 3 categories:
     - "Review Paper"     — review/survey/perspective; not original research
     - "Data Usage"       — actually uses mission data/products in analysis
-    - "Simple Citation"  — only cites/mentions the mission as background
+    - "Citation"  — only cites/mentions the mission as background
 
   Models (CARDAMOM, CMS-Flux, ECCO, EDMF, ISSM, LES, MOMO-CHEM, RAPID) — 4 categories:
     - "Level 3: Foundational Method" — the model is the core methodology
     - "Level 2: Model Adaptation"    — modifies/extends/couples the model
     - "Level 1: Data Usage"          — uses model output/data products
-    - "Simple Citation"              — only cites as background
+    - "Citation"              — only cites as background
 
 For each entry we record:
   entry["engagement_level"] = <new label>
@@ -295,9 +295,9 @@ CLASSIFY the citing paper into ONE of:
 
 - "Data Usage" — the citing paper actually uses {short_name} data/products in its analysis, validation, assimilation, or methodology. Look for explicit signals: "we used", "based on", "data from", "obtained from", or methodology descriptions that name {short_name}/its instruments/its products. The mention must be substantive, not a passing reference.
 
-- "Simple Citation" — the citing paper only cites or mentions {short_name} as background, motivation, or in a list of related work. The paper does not actually use {short_name} data.
+- "Citation" — the citing paper only cites or mentions {short_name} as background, motivation, or in a list of related work. The paper does not actually use {short_name} data.
 
-How to handle missing abstracts: use the TITLE to make your best judgment. If the title explicitly names {short_name} or its instruments/products/algorithms (see "WHAT COUNTS AS DATA USAGE" above), that is strong evidence of Data Usage. If the title is generic, names only OTHER instruments/missions, or is clearly off-topic, default to "Simple Citation". Only use "Simple Citation" as a pure fallback when the title is also too vague to judge.
+How to handle missing abstracts: use the TITLE to make your best judgment. If the title explicitly names {short_name} or its instruments/products/algorithms (see "WHAT COUNTS AS DATA USAGE" above), that is strong evidence of Data Usage. If the title is generic, names only OTHER instruments/missions, or is clearly off-topic, default to "Citation". Only use "Citation" as a pure fallback when the title is also too vague to judge.
 
 Citing paper:
 - Title: {title}
@@ -306,7 +306,7 @@ Citing paper:
 - Abstract: {abstract}
 
 Respond with ONLY valid JSON (no markdown fences, no commentary):
-{{"engagement_level": "Review Paper|Data Usage|Simple Citation", "justification": "<short quote or paraphrase from the abstract that supports the label, max 200 chars>", "confidence": 1-5}}"""
+{{"engagement_level": "Review Paper|Data Usage|Citation", "justification": "<short quote or paraphrase from the abstract that supports the label, max 200 chars>", "confidence": 1-5}}"""
 
 MODEL_PROMPT = """You are a careful scientific-citation classifier. Your job is to decide HOW a citing paper engages with the {full_name}.
 
@@ -324,11 +324,11 @@ CLASSIFY the citing paper into ONE of:
 - "Level 1: Data Usage" — the citing paper actually USES {short_name}'s outputs, products, or runs the model to produce results, but does not modify it.
   Examples: {data_usage_examples}
 
-- "Simple Citation" — the citing paper only cites/mentions {short_name} as background, motivation, or related work. It does not actually use {short_name} data or run the model.
+- "Citation" — the citing paper only cites/mentions {short_name} as background, motivation, or related work. It does not actually use {short_name} data or run the model.
 
-Important: a passing reference (e.g. "previous studies have used {short_name} (Author et al., 2020)") is "Simple Citation", NOT "Data Usage". The paper must actually use {short_name} outputs/data to qualify as Data Usage.
+Important: a passing reference (e.g. "previous studies have used {short_name} (Author et al., 2020)") is "Citation", NOT "Data Usage". The paper must actually use {short_name} outputs/data to qualify as Data Usage.
 
-How to handle missing abstracts: use the TITLE to make your best judgment. If the title explicitly names {short_name} as central methodology, prefer Foundational Method / Model Adaptation / Data Usage over Simple Citation. If the title is generic or clearly focused on a different topic, default to "Simple Citation".
+How to handle missing abstracts: use the TITLE to make your best judgment. If the title explicitly names {short_name} as central methodology, prefer Foundational Method / Model Adaptation / Data Usage over Simple Citation. If the title is generic or clearly focused on a different topic, default to "Citation".
 
 Citing paper:
 - Title: {title}
@@ -337,15 +337,15 @@ Citing paper:
 - Abstract: {abstract}
 
 Respond with ONLY valid JSON (no markdown fences, no commentary):
-{{"engagement_level": "Level 3: Foundational Method|Level 2: Model Adaptation|Level 1: Data Usage|Simple Citation", "justification": "<short quote or paraphrase from the abstract that supports the label, max 200 chars>", "confidence": 1-5}}"""
+{{"engagement_level": "Level 3: Foundational Method|Level 2: Model Adaptation|Level 1: Data Usage|Citation", "justification": "<short quote or paraphrase from the abstract that supports the label, max 200 chars>", "confidence": 1-5}}"""
 
 VALID_LABELS = {
-    "mission": {"Review Paper", "Data Usage", "Simple Citation"},
+    "mission": {"Review Paper", "Data Usage", "Citation"},
     "model": {
         "Level 3: Foundational Method",
         "Level 2: Model Adaptation",
         "Level 1: Data Usage",
-        "Simple Citation",
+        "Citation",
     },
 }
 

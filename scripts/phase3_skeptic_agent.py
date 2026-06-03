@@ -45,13 +45,13 @@ ALL_MODELS = [
 # 4-level keyword engagement vocabulary. See classify_papers.py.
 MISSIONS = {"GRACE", "SWOT", "TROPESS"}
 
-MISSION_ENGAGEMENT_LABELS = ["Review Paper", "Data Usage", "Simple Citation"]
+MISSION_ENGAGEMENT_LABELS = ["Review Paper", "Data Usage", "Citation"]
 
 MODEL_ENGAGEMENT_LABELS = [
     "Level 4: Foundational Method",
     "Level 3: Model Adaptation",
     "Level 2: Data Usage",
-    "Level 1: Simple Citation",
+    "Level 1: Citation",
 ]
 
 CACHE_FILE = Path(__file__).parent / "phase3_cache.json"

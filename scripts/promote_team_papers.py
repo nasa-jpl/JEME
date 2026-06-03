@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Promote team papers currently labelled "Simple Citation" to "Data Usage" via a
+Promote team papers currently labelled "Citation" to "Data Usage" via a
 by-author override.
 
 Rationale: a team paper is by the model/mission group itself. With overwhelming
@@ -10,7 +10,7 @@ present new science using the team's tool as background machinery rather than
 mentioning it by name.
 
 For each team paper:
-  - if engagement_level == "Simple Citation":
+  - if engagement_level == "Citation":
         engagement_level = "Data Usage"  (mission)
         engagement_level = "Level 1: Data Usage"  (model)
         record manual_override provenance

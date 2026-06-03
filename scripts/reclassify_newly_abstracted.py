@@ -60,7 +60,7 @@ For each paper, determine ALL FOUR of the following:
    "Review Paper"    — survey/overview/synthesis/perspective paper
    "Data Usage"      — actively uses TROPESS, CrIS, AIRS, MUSES, or closely related
                        satellite retrievals as a primary data source
-   "Simple Citation" — merely references TROPESS/related instruments in passing
+   "Citation" — merely references TROPESS/related instruments in passing
 
 3. paper_type — pick ONE of:
    "algorithm" — focuses on retrieval methodology, instrument calibration, forward
