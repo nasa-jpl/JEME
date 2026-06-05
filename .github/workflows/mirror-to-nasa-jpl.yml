@@ -1,0 +1,23 @@
+name: Mirror to nasa-jpl/jeme
+
+on:
+  push:
+    branches:
+      - '**'
+    tags:
+      - '**'
+  workflow_dispatch:
+
+jobs:
+  mirror:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout full history
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Push mirror to nasa-jpl/jeme
+        run: |
+          git remote add nasa-jpl https://x-access-token:${{ secrets.NASA_JPL_MIRROR_TOKEN }}@github.com/nasa-jpl/jeme.git
+          git push nasa-jpl --mirror
