@@ -8,6 +8,9 @@ on:
       - '**'
   workflow_dispatch:
 
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 jobs:
   mirror:
     runs-on: ubuntu-latest
@@ -16,6 +19,19 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - name: Verify token has access to nasa-jpl/jeme
+        run: |
+          status=$(curl -s -o /dev/null -w "%{http_code}" \
+            -H "Authorization: Bearer ${{ secrets.NASA_JPL_MIRROR_TOKEN }}" \
+            https://api.github.com/repos/nasa-jpl/jeme)
+          echo "GitHub API status: $status"
+          if [ "$status" != "200" ]; then
+            echo "ERROR: Cannot reach nasa-jpl/jeme (HTTP $status)."
+            echo "Check that NASA_JPL_MIRROR_TOKEN has write access to nasa-jpl/jeme"
+            echo "and, if the org uses SAML SSO, that the token is SSO-authorized."
+            exit 1
+          fi
 
       - name: Push mirror to nasa-jpl/jeme
         run: |
