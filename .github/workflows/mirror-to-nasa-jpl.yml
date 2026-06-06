@@ -17,16 +17,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Verify token has access to nasa-jpl/jeme
+      - name: Verify token has push access to nasa-jpl/jeme
         run: |
-          status=$(curl -s -o /dev/null -w "%{http_code}" \
+          body=$(curl -s \
             -H "Authorization: Bearer ${{ secrets.NASA_JPL_MIRROR_TOKEN }}" \
             https://api.github.com/repos/nasa-jpl/jeme)
-          echo "GitHub API status: $status"
-          if [ "$status" != "200" ]; then
-            echo "ERROR: Cannot reach nasa-jpl/jeme (HTTP $status)."
-            echo "Check that NASA_JPL_MIRROR_TOKEN has write access to nasa-jpl/jeme"
-            echo "and, if the org uses SAML SSO, that the token is SSO-authorized."
+          login=$(echo "$body" | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('owner',{}).get('login','unknown'))" 2>/dev/null || echo "unknown")
+          push=$(echo "$body"  | python3 -c "import sys,json; d=json.load(sys.stdin); print(d.get('permissions',{}).get('push', False))" 2>/dev/null || echo "False")
+          echo "Authenticated as: $login"
+          echo "Push permission:  $push"
+          if [ "$push" != "True" ]; then
+            echo ""
+            echo "ERROR: token does not have push access to nasa-jpl/jeme."
+            echo "Fix: create a classic PAT with 'repo' scope from an account that has"
+            echo "write access to nasa-jpl/jeme, then save it as NASA_JPL_MIRROR_TOKEN."
+            echo "If nasa-jpl uses SAML SSO, also authorize the PAT for that org at"
+            echo "https://github.com/settings/tokens"
             exit 1
           fi
 
