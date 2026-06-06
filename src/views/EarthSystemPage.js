@@ -294,7 +294,7 @@ const SummaryStats = ({ sphereData, interSphereLinks, totalPapers }) => {
   return (
     <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
       {stats.map(s => (
-        <div key={s.label} className="bg-white rounded-lg shadow-sm p-4 border-t-4" style={{ borderColor: s.color }}>
+        <div key={s.label} className="bg-white rounded-lg shadow-sm p-4">
           <p className="text-2xl font-bold text-gray-900">{s.value}</p>
           <p className="text-sm text-gray-600">{s.label}</p>
         </div>
