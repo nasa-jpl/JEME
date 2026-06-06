@@ -52,8 +52,11 @@ const HowItWorks = () => {
 
   useEffect(() => {
     // Load the markdown content
-    fetch('/HOW_IT_WORKS.md')
-      .then(response => response.text())
+    fetch(process.env.PUBLIC_URL + '/HOW_IT_WORKS.md')
+      .then(response => {
+        if (!response.ok) throw new Error(`Failed to load HOW_IT_WORKS.md: ${response.status}`);
+        return response.text();
+      })
       .then(text => {
         // Extract mermaid diagrams and process them separately
         const mermaidRegex = /```mermaid\n([\s\S]*?)```/g;
