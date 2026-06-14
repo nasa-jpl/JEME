@@ -50,7 +50,7 @@ const RAPIDDashboard = () => {
       name: "RAPID",
       icon: <Zap size={20} style={{ color: '#3b82f6' }} />,
       description: "Routing Application for Parallel computation of Discharge - River network routing model for large-scale hydrodynamic simulations",
-      link: "http://34.31.165.25:3000/RAPID"
+      link: "/RAPID"
     },
     {
       name: "CMS-Flux",

@@ -26,3 +26,22 @@ scripts/*.log
 
 # citation_scraper runtime logs only (zips are intentionally tracked)
 citation_scraper/*.log
+
+# Internal presentation and document binaries
+*.pptx
+*.docx
+*.xlsx
+
+# Internal working/dev notes not for contributors
+NTR_*.md
+CHART_FIXES_SUMMARY.md
+DASHBOARD_UPDATE_SUMMARY.md
+INTEGRATION_FINAL_STATUS.md
+LES_EDMF_DASHBOARD_FORMAT_FIX.md
+LES_EDMF_INTEGRATION_COMPLETE.md
+RECENT_UPDATES.md
+JOURNAL_PAPER_DRAFT.md
+NASA_Earth_Science_Model_Dashboard_Task_Statement.md
+
+# Copilot dev config (local only)
+.github/copilot-instructions.md
