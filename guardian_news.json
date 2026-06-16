@@ -1,8 +1,40 @@
 {
-  "fetchedAt": "2026-06-13T10:00:05.618Z",
-  "fromDate": "2026-05-13",
+  "fetchedAt": "2026-06-16T10:00:05.559Z",
+  "fromDate": "2026-05-16",
   "count": 24,
   "articles": [
+    {
+      "url": "https://www.nasa.gov/social-media/nasa-socials-program/experience-the-launch-of-nasas-roman-space-telescope/",
+      "title": "Experience the Launch of NASA&#8217;s Roman Space Telescope",
+      "summary": "Are you ready for a new view of the universe? The Nancy Grace Roman Space Telescope will reveal distant worlds, dark energy, and the structure of the cosmos, and we want you to be a part of it!&#160;&#160; Digital creators and social media users are invited to register to our NASA Social for the Nancy [&#8230;]",
+      "section": "NASA",
+      "source": "NASA",
+      "date": "2026-06-15",
+      "models": [
+        "GRACE"
+      ],
+      "sectors": []
+    },
+    {
+      "url": "https://www.sciencedaily.com/releases/2026/06/260614012002.htm",
+      "title": "NASA spots giant ocean swell that could signal El Niño’s return",
+      "summary": "NASA satellites have detected a vast pulse of warm water reaching the coast of South America, signaling that El Niño is likely developing. The warm water is being carried eastward by massive ocean waves known as Kelvin waves, which also cause sea levels to rise. El Niño can reshape weather patterns worldwide, bringing floods, droughts, and temperature extremes.",
+      "section": "ScienceDaily",
+      "source": "ScienceDaily",
+      "date": "2026-06-15",
+      "models": [],
+      "sectors": []
+    },
+    {
+      "url": "https://eos.org/articles/trekking-tourism-leaves-a-microplastic-footprint-in-a-high-himalayan-lake",
+      "title": "Trekking Tourism Leaves a Microplastic Footprint in a High Himalayan Lake",
+      "summary": "Plastic pollution may ripple downstream, threatening the human and wildlife communities that depend on glacier-fed waters.",
+      "section": "Eos / AGU",
+      "source": "Eos / AGU",
+      "date": "2026-06-15",
+      "models": [],
+      "sectors": []
+    },
     {
       "url": "https://www.sciencedaily.com/releases/2026/06/260612032047.htm",
       "title": "Alaska’s glaciers have a startling response to rising temperatures",
@@ -104,16 +136,6 @@
       "section": "ScienceDaily",
       "source": "ScienceDaily",
       "date": "2026-06-05",
-      "models": [],
-      "sectors": []
-    },
-    {
-      "url": "https://science.nasa.gov/photojournal/international-sea-level-satellite-observes-el-nino-precursor/",
-      "title": "International Sea Level Satellite Observes El Niño Precursor",
-      "summary": "Description Sea level height data from the international Sentinel-6 Michael Freilich satellite collected from March to May 2026 show higher, warmer water moving from the western Pacific Ocean to just off the coast of Colombia, Ecuador, and Peru. This phenomenon is known as a warm Kelvin wave, signified in this animation of the data by [&#8230;]\nThe post International Sea Level Satellite Observes E",
-      "section": "NASA Earth Observatory",
-      "source": "NASA Earth Observatory",
-      "date": "2026-06-03",
       "models": [],
       "sectors": []
     },
@@ -232,26 +254,6 @@
       "section": "ScienceDaily",
       "source": "ScienceDaily",
       "date": "2026-05-19",
-      "models": [],
-      "sectors": []
-    },
-    {
-      "url": "https://www.sciencedaily.com/releases/2026/05/260513221759.htm",
-      "title": "Scientists discover the strange way CO2 cools part of Earth’s atmosphere",
-      "summary": "Scientists have finally cracked the mystery behind one of climate change’s strangest fingerprints: while Earth’s surface heats up, the upper atmosphere is rapidly cooling. Researchers at Columbia University discovered that carbon dioxide acts very differently high above the planet, where it actually helps radiate heat into space instead of trapping it. The team found that certain infrared waveleng",
-      "section": "ScienceDaily",
-      "source": "ScienceDaily",
-      "date": "2026-05-14",
-      "models": [],
-      "sectors": []
-    },
-    {
-      "url": "https://www.sciencedaily.com/releases/2026/05/260512202337.htm",
-      "title": "Scientists discover the Southern Ocean is “sweating” more as climate change intensifies",
-      "summary": "A remote island between Australia and Antarctica is showing signs of a dramatic climate transformation. Scientists found storms over Macquarie Island now unleash much heavier rainfall than they did decades ago, soaking ecosystems and altering fragile vegetation. The discovery hints that the Southern Ocean — one of Earth’s biggest climate regulators — may be changing faster than expected. Researche",
-      "section": "ScienceDaily",
-      "source": "ScienceDaily",
-      "date": "2026-05-13",
       "models": [],
       "sectors": []
     }
