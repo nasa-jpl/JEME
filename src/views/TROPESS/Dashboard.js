@@ -24,6 +24,7 @@ import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
 import PaperTypeCard from '../../components/charts/PaperTypeCard';
+import MonthlyReportSection from '../../components/tropess/MonthlyReportSection';
 
 const TROPESSDashboard = () => {
   const [tropessData, setTropessData] = useState([]);
@@ -210,6 +211,9 @@ const TROPESSDashboard = () => {
             <UncertaintyMatrixCard data={tropessData} />
           </div>
         )}
+
+        {/* Monthly Download Report (GES DISC usage metrics) */}
+        <MonthlyReportSection />
 
         <Footer isJEOE />
       </main>
