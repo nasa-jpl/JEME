@@ -7,10 +7,18 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  ComposedChart, LineChart, BarChart, Bar, Line, Cell,
+  ComposedChart, LineChart, BarChart, Bar, Line, Cell, ReferenceLine, LabelList,
   PieChart, Pie, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
 import { Download, Database, Globe, Layers, Building2 } from 'lucide-react';
+import CountryVolumeMap from './CountryVolumeMap';
+
+// Compact file-count formatter: 1.2M, 340K, 512.
+const formatFiles = (n) => {
+  if (n >= 1e6) return `${(n / 1e6).toFixed(2)}M`;
+  if (n >= 1e3) return `${(n / 1e3).toFixed(0)}K`;
+  return `${n}`;
+};
 
 // --- Palette (categorical, light-mode safe) --------------------------------
 const SPECIES_COLORS = {
@@ -140,7 +148,34 @@ const MonthlyReportSection = () => {
   const pieLabel = ({ name, percent }) =>
     percent > 0.04 ? `${name} ${(percent * 100).toFixed(0)}%` : '';
 
-  const tbTooltip = (value) => [`${Number(value).toFixed(2)} TB`, 'Volume'];
+  const filesTooltip = (value) => [`${Number(value).toLocaleString()} files`, 'Downloads'];
+
+  // Timeline annotations placed on the monthly x-axis (matched to data months).
+  // Stagger labels across two rows so nearby milestones don't overlap.
+  const annotations = (report.annotations || [])
+    .map((a) => ({ ...a, label_x: formatMonth(a.month) }))
+    .filter((a) => monthlyChart.some((m) => m.month === a.month))
+    .map((a, idx) => ({ ...a, row: idx % 2 }));
+
+  // Megacity data with percentage labels.
+  const megacityData = (() => {
+    const total = report.cumulative_by_megacity.reduce((s, c) => s + c.files, 0) || 1;
+    return report.cumulative_by_megacity.map((c) => ({
+      ...c,
+      pct: (c.files / total) * 100,
+    }));
+  })();
+
+  const pctLabel = (v) => `${v.toFixed(1)}%`;
+
+  // Country pie data with percentage labels (mirrors deck slide 7).
+  const countryPieData = (() => {
+    const total = report.cumulative_by_country.reduce((s, c) => s + c.files, 0) || 1;
+    return report.cumulative_by_country
+      .slice()
+      .sort((a, b) => b.files - a.files)
+      .map((c) => ({ ...c, pct: (c.files / total) * 100 }));
+  })();
 
   return (
     <section className="mb-6">
@@ -167,7 +202,7 @@ const MonthlyReportSection = () => {
             <div className="text-xs text-gray-500">Total volume</div>
           </div>
           <div>
-            <div className="text-2xl font-bold text-gray-900">{meta.generated_from_months.length}</div>
+            <div className="text-2xl font-bold text-gray-900">{report.monthly.length}</div>
             <div className="text-xs text-gray-500">Months reported</div>
           </div>
           <div>
@@ -177,15 +212,15 @@ const MonthlyReportSection = () => {
         </div>
       </div>
 
-      {/* Slide 3: monthly requests + volume */}
+      {/* Slide 3: monthly requests + volume, with release-milestone markers */}
       <Card
         title="Downloads by Month"
         subtitle="Download requests (files) and download volume per month"
         icon={<Database size={18} className="text-sky-600" />}
         className="mb-6"
       >
-        <ResponsiveContainer width="100%" height={300}>
-          <ComposedChart data={monthlyChart} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
+        <ResponsiveContainer width="100%" height={360}>
+          <ComposedChart data={monthlyChart} margin={{ top: 52, right: 20, left: 0, bottom: 0 }}>
             <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
             <XAxis
               dataKey="label"
@@ -204,11 +239,41 @@ const MonthlyReportSection = () => {
               }
             />
             <Legend wrapperStyle={{ fontSize: 12 }} />
+            {annotations.map((a) => (
+              <ReferenceLine
+                key={`${a.month}-${a.label}`}
+                yAxisId="left"
+                x={a.label_x}
+                stroke="#9ca3af"
+                strokeDasharray="4 3"
+                label={(props) => {
+                  // Stagger onto two rows (row 0 higher, row 1 lower) to avoid overlap.
+                  const { viewBox } = props;
+                  const cx = viewBox.x;
+                  const topY = viewBox.y;
+                  const y = a.row === 0 ? topY - 40 : topY - 22;
+                  return (
+                    <text x={cx} y={y} textAnchor="middle" fontSize={9} fill="#6b7280">
+                      {a.label}
+                    </text>
+                  );
+                }}
+              />
+            ))}
             <Bar yAxisId="left" dataKey="requests_k" name="Requests" fill="#3B82F6" radius={[2, 2, 0, 0]} />
             <Line yAxisId="right" type="monotone" dataKey="volume_tb" name="Volume (TB)"
               stroke="#EF4444" strokeWidth={2} dot={false} />
           </ComposedChart>
         </ResponsiveContainer>
+        {annotations.length > 0 && (
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-2 text-xs text-gray-500">
+            {annotations.map((a) => (
+              <span key={a.month}>
+                <span className="text-gray-400">▎</span> {formatMonth(a.month)}: {a.label}
+              </span>
+            ))}
+          </div>
+        )}
       </Card>
 
       {/* Slide 4: monthly volume by species */}
@@ -234,18 +299,18 @@ const MonthlyReportSection = () => {
         </ResponsiveContainer>
       </Card>
 
-      {/* Slide 5: cumulative by species + by megacity */}
+      {/* Slide 5: cumulative downloads by species + by megacity */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
         <Card
-          title="Cumulative Volume by Species"
-          subtitle={`All months · ${rangeStart} – ${rangeEnd}`}
+          title="Cumulative Downloads by Species"
+          subtitle={`Files downloaded · ${rangeStart} – ${rangeEnd}`}
           icon={<Layers size={18} className="text-sky-600" />}
         >
           <ResponsiveContainer width="100%" height={340}>
             <PieChart>
               <Pie
                 data={report.cumulative_by_species}
-                dataKey="volume_tb"
+                dataKey="files"
                 nameKey="species"
                 cx="50%"
                 cy="50%"
@@ -257,41 +322,44 @@ const MonthlyReportSection = () => {
                   <Cell key={entry.species} fill={CATEGORICAL[i % CATEGORICAL.length]} />
                 ))}
               </Pie>
-              <Tooltip formatter={tbTooltip} />
+              <Tooltip formatter={filesTooltip} />
             </PieChart>
           </ResponsiveContainer>
         </Card>
 
         <Card
-          title="Cumulative Volume by Megacity"
+          title="Cumulative Downloads by Megacity"
           subtitle="Megacity data-product collections"
           icon={<Building2 size={18} className="text-sky-600" />}
         >
           <ResponsiveContainer width="100%" height={340}>
             <BarChart
-              data={report.cumulative_by_megacity}
+              data={megacityData}
               layout="vertical"
-              margin={{ top: 10, right: 40, left: 10, bottom: 0 }}
+              margin={{ top: 10, right: 70, left: 10, bottom: 0 }}
             >
               <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={false} />
-              <XAxis type="number" tick={{ fontSize: 11 }}
-                label={{ value: 'Volume (TB)', position: 'insideBottom', offset: -2, style: { fontSize: 11, fill: '#6b7280' } }} />
+              <XAxis type="number" tick={{ fontSize: 11 }} tickFormatter={formatFiles}
+                label={{ value: 'Files downloaded', position: 'insideBottom', offset: -2, style: { fontSize: 11, fill: '#6b7280' } }} />
               <YAxis type="category" dataKey="city" tick={{ fontSize: 12 }} width={90} />
-              <Tooltip formatter={tbTooltip} />
-              <Bar dataKey="volume_tb" name="Volume (TB)" radius={[0, 3, 3, 0]}>
-                {report.cumulative_by_megacity.map((entry, i) => (
+              <Tooltip formatter={(value, name, props) =>
+                [`${Number(value).toLocaleString()} files (${props.payload.pct.toFixed(1)}%)`, 'Downloads']} />
+              <Bar dataKey="files" name="Downloads" radius={[0, 3, 3, 0]}>
+                {megacityData.map((entry, i) => (
                   <Cell key={entry.city} fill={CATEGORICAL[i % CATEGORICAL.length]} />
                 ))}
+                <LabelList dataKey="pct" position="right" formatter={pctLabel}
+                  style={{ fontSize: 11, fill: '#374151' }} />
               </Bar>
             </BarChart>
           </ResponsiveContainer>
         </Card>
       </div>
 
-      {/* Slide 6: cumulative by processing type */}
+      {/* Slide 6: cumulative downloads by processing type */}
       <Card
-        title="Cumulative Volume by Processing Type"
-        subtitle={`All months · ${rangeStart} – ${rangeEnd}`}
+        title="Cumulative Downloads by Processing Type"
+        subtitle={`Files downloaded · ${rangeStart} – ${rangeEnd}`}
         icon={<Layers size={18} className="text-sky-600" />}
         className="mb-6"
       >
@@ -300,7 +368,7 @@ const MonthlyReportSection = () => {
             <PieChart>
               <Pie
                 data={report.cumulative_by_type}
-                dataKey="volume_tb"
+                dataKey="files"
                 nameKey="type"
                 cx="50%"
                 cy="50%"
@@ -312,7 +380,7 @@ const MonthlyReportSection = () => {
                   <Cell key={entry.type} fill={TYPE_COLORS[entry.type] || '#9ca3af'} />
                 ))}
               </Pie>
-              <Tooltip formatter={tbTooltip} />
+              <Tooltip formatter={filesTooltip} />
             </PieChart>
           </ResponsiveContainer>
           <div>
@@ -321,7 +389,7 @@ const MonthlyReportSection = () => {
                 <tr className="text-left text-gray-500 border-b">
                   <th className="py-2 font-medium">Processing Type</th>
                   <th className="py-2 font-medium">Description</th>
-                  <th className="py-2 font-medium text-right">Volume</th>
+                  <th className="py-2 font-medium text-right">Downloads</th>
                 </tr>
               </thead>
               <tbody>
@@ -337,7 +405,7 @@ const MonthlyReportSection = () => {
                       </td>
                       <td className="py-2 text-gray-600">{desc}</td>
                       <td className="py-2 text-right font-medium">
-                        {row ? `${row.volume_tb.toFixed(2)} TB` : '—'}
+                        {row ? `${row.files.toLocaleString()}` : '—'}
                       </td>
                     </tr>
                   );
@@ -348,34 +416,43 @@ const MonthlyReportSection = () => {
         </div>
       </Card>
 
-      {/* Slide 7: cumulative by country */}
+      {/* Slide 7: cumulative downloads by country */}
       <Card
-        title="Cumulative Volume by Country"
+        title="Cumulative Downloads by Country"
         subtitle={`Country of the requesting user · ${rangeStart} – ${rangeEnd}`}
         icon={<Globe size={18} className="text-sky-600" />}
         className="mb-2"
       >
-        <ResponsiveContainer width="100%" height={Math.max(280, report.cumulative_by_country.length * 34)}>
-          <BarChart
-            data={report.cumulative_by_country}
-            layout="vertical"
-            margin={{ top: 10, right: 50, left: 10, bottom: 0 }}
-          >
-            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" horizontal={false} />
-            <XAxis type="number" tick={{ fontSize: 11 }}
-              label={{ value: 'Volume (TB)', position: 'insideBottom', offset: -2, style: { fontSize: 11, fill: '#6b7280' } }} />
-            <YAxis type="category" dataKey="country" tick={{ fontSize: 12 }} width={110} />
-            <Tooltip formatter={tbTooltip} />
-            <Bar dataKey="volume_tb" name="Volume (TB)" radius={[0, 3, 3, 0]}>
-              {report.cumulative_by_country.map((entry, i) => (
-                <Cell
-                  key={entry.country}
-                  fill={entry.country === 'Other' ? '#9ca3af' : CATEGORICAL[i % CATEGORICAL.length]}
-                />
-              ))}
-            </Bar>
-          </BarChart>
-        </ResponsiveContainer>
+        {/* Choropleth world map */}
+        <CountryVolumeMap countryMap={report.country_map || []} />
+
+        {/* Country pie chart (matches deck slide 7) */}
+        <div className="mt-6 pt-4 border-t border-gray-100">
+          <div className="text-sm font-medium text-gray-600 mb-2">Top countries by downloads</div>
+          <ResponsiveContainer width="100%" height={420}>
+            <PieChart>
+              <Pie
+                data={countryPieData}
+                dataKey="files"
+                nameKey="country"
+                cx="50%"
+                cy="50%"
+                outerRadius={150}
+                label={({ country, pct }) => (pct >= 1.5 ? `${country} ${pct.toFixed(1)}%` : '')}
+                labelLine={{ stroke: '#cbd5e1' }}
+              >
+                {countryPieData.map((entry, i) => (
+                  <Cell
+                    key={entry.country}
+                    fill={entry.country === 'Other' ? '#9ca3af' : CATEGORICAL[i % CATEGORICAL.length]}
+                  />
+                ))}
+              </Pie>
+              <Tooltip formatter={(value, name, props) =>
+                [`${Number(value).toLocaleString()} files (${props.payload.pct.toFixed(1)}%)`, props.payload.country]} />
+            </PieChart>
+          </ResponsiveContainer>
+        </div>
       </Card>
 
       <p className="text-xs text-gray-400 mt-2">
