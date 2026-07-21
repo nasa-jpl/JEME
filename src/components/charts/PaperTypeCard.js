@@ -54,6 +54,64 @@ const PaperTypeCard = ({ data = [] }) => {
   const getPaperTitle = (paper) =>
     Array.isArray(paper.title) ? paper.title[0] || 'Untitled' : paper.title || 'Untitled';
 
+  const escapeHtml = (str) =>
+    String(str).replace(/[&<>"']/g, (c) => ({
+      '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;',
+    }[c]));
+
+  const openInNewWindow = (item) => {
+    const papers = [...item.papers].sort((a, b) => {
+      const ca = a['is-referenced-by-count'] || a.citation_count || 0;
+      const cb = b['is-referenced-by-count'] || b.citation_count || 0;
+      return cb - ca;
+    });
+
+    const rows = papers.map((paper) => {
+      const link = getPaperLink(paper);
+      const title = escapeHtml(getPaperTitle(paper));
+      const year = paper.year || '';
+      const citations = paper['is-referenced-by-count'] || paper.citation_count || 0;
+      const rationale = paper.paper_type_rationale ? escapeHtml(paper.paper_type_rationale) : '';
+
+      return `
+        <div class="paper">
+          <div class="title">
+            ${link ? `<a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer">${title}</a>` : title}
+          </div>
+          ${rationale ? `<div class="rationale">${rationale}</div>` : ''}
+          <div class="meta">${year ? `<span>${year}</span>` : ''}${citations > 0 ? `<span>${citations} citations</span>` : ''}</div>
+        </div>`;
+    }).join('');
+
+    const html = `<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>${escapeHtml(item.name)} Papers</title>
+<style>
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; margin: 0; padding: 24px; background: #f9fafb; color: #111827; }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  .subtitle { color: #6b7280; font-size: 13px; margin-bottom: 20px; }
+  .paper { background: #fff; border: 1px solid #e5e7eb; border-radius: 8px; padding: 12px 16px; margin-bottom: 10px; }
+  .title { font-size: 14px; font-weight: 500; }
+  .title a { color: #1d4ed8; text-decoration: none; }
+  .title a:hover { text-decoration: underline; }
+  .rationale { font-size: 12px; color: #9ca3af; font-style: italic; margin-top: 4px; }
+  .meta { font-size: 12px; color: #6b7280; margin-top: 6px; display: flex; gap: 12px; }
+</style>
+</head>
+<body>
+  <h1>${escapeHtml(item.name)}</h1>
+  <div class="subtitle">${papers.length} paper${papers.length === 1 ? '' : 's'}</div>
+  ${rows}
+</body>
+</html>`;
+
+    const blob = new Blob([html], { type: 'text/html' });
+    const url = URL.createObjectURL(blob);
+    window.open(url, '_blank', 'noopener,noreferrer');
+  };
+
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
       const d = payload[0].payload;
@@ -118,9 +176,12 @@ const PaperTypeCard = ({ data = [] }) => {
       <div className="space-y-1 max-h-64 overflow-y-auto">
         {pieData.map((item, index) => (
           <div key={index}>
-            <button
+            <div
+              role="button"
+              tabIndex={0}
               onClick={() => setExpandedType(prev => prev === item.name ? null : item.name)}
-              className="w-full text-left hover:bg-gray-50 rounded-lg px-2 py-1.5 transition-colors group"
+              onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); setExpandedType(prev => prev === item.name ? null : item.name); } }}
+              className="w-full text-left hover:bg-gray-50 rounded-lg px-2 py-1.5 transition-colors group cursor-pointer"
             >
               <div className="flex items-center">
                 <div className="flex-1">
@@ -137,11 +198,19 @@ const PaperTypeCard = ({ data = [] }) => {
                 </div>
                 <div className="text-sm font-semibold text-gray-700 ml-4 w-10 text-right">{item.value}</div>
                 <div className="text-xs text-gray-500 ml-2 w-10 text-right">{item.percentage}%</div>
-                <div className="ml-2 text-gray-400">
+                <button
+                  type="button"
+                  onClick={(e) => { e.stopPropagation(); openInNewWindow(item); }}
+                  className="ml-2 p-1 text-gray-400 hover:text-blue-600 rounded"
+                  title={`Open ${item.name} papers in a new window`}
+                >
+                  <ExternalLink size={14} />
+                </button>
+                <div className="ml-1 text-gray-400">
                   {expandedType === item.name ? <ChevronUp size={14} /> : <ChevronDown size={14} />}
                 </div>
               </div>
-            </button>
+            </div>
 
             {expandedType === item.name && (
               <div className="mx-2 mb-2 border border-gray-200 rounded-lg overflow-hidden">
