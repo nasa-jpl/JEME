@@ -212,7 +212,7 @@ const TROPESSDashboard = () => {
           </div>
         )}
 
-        {/* Monthly Download Report (GES DISC usage metrics) */}
+        {/* Monthly Download Report — includes published products (slides 1-2) + downloads (3-7) */}
         <MonthlyReportSection />
 
         <Footer isJEOE />

@@ -12,6 +12,7 @@ import {
 } from 'recharts';
 import { Download, Database, Globe, Layers, Building2 } from 'lucide-react';
 import CountryVolumeMap from './CountryVolumeMap';
+import ProductCatalogSection from './ProductCatalogSection';
 
 // Compact file-count formatter: 1.2M, 340K, 512.
 const formatFiles = (n) => {
@@ -211,6 +212,9 @@ const MonthlyReportSection = () => {
           </div>
         </div>
       </div>
+
+      {/* Slides 1 & 2: published product catalog (live GES DISC / CMR) */}
+      <ProductCatalogSection />
 
       {/* Slide 3: monthly requests + volume, with release-milestone markers */}
       <Card
