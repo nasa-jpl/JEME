@@ -31,11 +31,10 @@ SEED = ROOT / 'public' / 'data' / 'tropess_team_papers.json'
 DATA = ROOT / 'public' / 'data' / 'TROPESS_analyzed.json'
 CSV_OUT = ROOT / 'public' / 'data' / 'tropess_team_reclassification.csv'
 
-GEMINI_MODEL = 'gemini-2.5-flash'
-
 sys.path.insert(0, str(SCRIPTS))
+from llm_client import call_llm, DEFAULT_MODEL_ID  # noqa: E402
 from das_enrich import fetch_html, build_enrichment, html_to_text, extract_data_availability  # noqa: E402
-from llm_reclassify_engagement import build_prompt, call_gemini, MODEL_CONTEXT, VALID_LABELS  # noqa: E402
+from llm_reclassify_engagement import build_prompt, MODEL_CONTEXT, VALID_LABELS  # noqa: E402
 
 UA = 'das_enrich/1.0 (mailto:yunkss@gmail.com)'
 TROPESS_MARKERS = re.compile(
@@ -83,10 +82,6 @@ def main():
     ap.add_argument('--dry-run', action='store_true')
     args = ap.parse_args()
 
-    api_key = __import__('os').getenv('GEMINI_API_KEY')
-    if not api_key:
-        print('ERROR: GEMINI_API_KEY not set'); sys.exit(1)
-
     seed = json.load(open(SEED))['TROPESS']
     seed_dois = {(s.get('doi') or '').lower(): s for s in seed}
 
@@ -111,7 +106,10 @@ def main():
         ent_for_llm = dict(entry)
         ent_for_llm['abstract'] = evidence
         prompt = build_prompt('TROPESS', ent_for_llm)
-        result = call_gemini(api_key, prompt, temperature=0.1)
+        try:
+            result = call_llm(prompt, temperature=0.1)
+        except RuntimeError:
+            result = None
         if not result or result.get('engagement_level') not in valid:
             print(f'  classify_failed: {doi}')
             continue
@@ -138,7 +136,7 @@ def main():
                 'confidence': conf, 'gemini_confidence_raw': conf,
                 'has_abstract': bool(abstract),
                 'fetched_full_text': fetched,
-                'model': GEMINI_MODEL, 'timestamp': ts,
+                'model': DEFAULT_MODEL_ID, 'timestamp': ts,
             }
             # Bump composite_confidence using gemini's 1-5 confidence
             if isinstance(conf, (int, float)):

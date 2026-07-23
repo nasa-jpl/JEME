@@ -6,8 +6,8 @@ For each Simple Citation entry of a given model:
   1. Fetch article HTML via DOI (Copernicus direct -> Unpaywall repo -> DOI redirect).
   2. Extract Data Availability Statement and any paragraphs containing
      model/mission-specific markers.
-  3. If markers found, append to abstract and re-classify via Gemini using the
-     same prompt as llm_reclassify_engagement.py.
+  3. If markers found, append to abstract and re-classify via the shared LLM
+     client using the same prompt as llm_reclassify_engagement.py.
   4. For entries that flip away from Simple Citation:
        - update entry.engagement_level
        - record provenance under entry.uncertainty.classification_provenance.das_enrichment
@@ -26,12 +26,15 @@ from threading import Lock
 
 import requests
 
+from llm_client import call_llm, DEFAULT_MODEL_ID
+
 ROOT = Path(__file__).parent.parent
 DATA_DIR = ROOT / 'public' / 'data'
 SCRIPTS = Path(__file__).parent
 CACHE = SCRIPTS / 'das_fetch_cache_all.json'
 
-GEMINI_MODEL = 'gemini-2.5-flash'
+# Model id recorded in provenance (matches what llm_client resolves at runtime).
+LLM_MODEL = os.environ.get('BEDROCK_MODEL_ID', DEFAULT_MODEL_ID)
 WORKERS = 6
 HTTP_TIMEOUT = 25
 USER_AGENT_BROWSER = (
@@ -446,12 +449,12 @@ def build_enrichment(html, marker_pattern):
 # ---------------------------------------------------------------------------
 
 sys.path.insert(0, str(SCRIPTS))
-from llm_reclassify_engagement import build_prompt, call_gemini, MODEL_CONTEXT, VALID_LABELS  # noqa: E402
+from llm_reclassify_engagement import build_prompt, MODEL_CONTEXT, VALID_LABELS  # noqa: E402
 
 
-def classify(api_key, model_name, entry):
+def classify(model_name, entry):
     prompt = build_prompt(model_name, entry)
-    result = call_gemini(api_key, prompt, temperature=0.1)
+    result = call_llm(prompt, temperature=0.1, json_mode=True)
     if not result:
         return None
     valid = VALID_LABELS[MODEL_CONTEXT[model_name]['kind']]
@@ -464,7 +467,7 @@ def classify(api_key, model_name, entry):
 # Per-entry processing
 # ---------------------------------------------------------------------------
 
-def process(entry, api_key, cache, model_name, marker_pattern, retry_failed=False):
+def process(entry, cache, model_name, marker_pattern, retry_failed=False):
     doi = (entry.get('doi') or '').strip()
     if not doi:
         return {'doi': '', 'status': 'no_doi'}
@@ -492,7 +495,7 @@ def process(entry, api_key, cache, model_name, marker_pattern, retry_failed=Fals
     abs_orig = (entry.get('abstract') or '').strip()
     enriched_entry['abstract'] = (abs_orig + '\n\n' + enrichment).strip()
 
-    result = classify(api_key, model_name, enriched_entry)
+    result = classify(model_name, enriched_entry)
     if not result:
         return {'doi': doi, 'status': 'classify_failed'}
 
@@ -514,7 +517,7 @@ def process(entry, api_key, cache, model_name, marker_pattern, retry_failed=Fals
 # Per-model driver
 # ---------------------------------------------------------------------------
 
-def run_model(model_name, api_key, cache, save_cache_every=200, retry_failed=False):
+def run_model(model_name, cache, save_cache_every=200, retry_failed=False):
     data_path = DATA_DIR / f'{model_name}_analyzed.json'
     if not data_path.exists():
         print(f'  WARN: {data_path} not found, skipping')
@@ -536,7 +539,7 @@ def run_model(model_name, api_key, cache, save_cache_every=200, retry_failed=Fal
     start = time.time()
 
     with ThreadPoolExecutor(max_workers=WORKERS) as exe:
-        futs = {exe.submit(process, p, api_key, cache, model_name, marker_pattern, retry_failed): p for p in sc}
+        futs = {exe.submit(process, p, cache, model_name, marker_pattern, retry_failed): p for p in sc}
         done = 0
         for fut in as_completed(futs):
             entry = futs[fut]
@@ -573,7 +576,7 @@ def run_model(model_name, api_key, cache, save_cache_every=200, retry_failed=Fal
             'justification': r['justification'][:300],
             'confidence': r['confidence'],
             'source': 'DAS / Methods text fetched from publisher HTML',
-            'model': GEMINI_MODEL,
+            'model': LLM_MODEL,
             'timestamp': ts,
         }
         applied += 1
@@ -614,10 +617,6 @@ def main():
     if not (args.model or args.models or args.all):
         parser.print_help(); sys.exit(1)
 
-    api_key = os.getenv('GEMINI_API_KEY')
-    if not api_key:
-        print('ERROR: GEMINI_API_KEY not set'); sys.exit(1)
-
     WORKERS = args.workers
 
     if args.all:
@@ -636,7 +635,7 @@ def main():
 
     summary = {}
     for m in models:
-        r = run_model(m, api_key, cache, retry_failed=args.retry_failed)
+        r = run_model(m, cache, retry_failed=args.retry_failed)
         if r:
             summary[m] = r
 

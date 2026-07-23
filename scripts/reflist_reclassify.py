@@ -6,7 +6,7 @@ Pipeline:
   1. Resolve OpenAlex IDs for the 27 TROPESS team papers (seed papers)
   2. Batch-fetch referenced_works for all Citation/Simple Citation papers
   3. For each paper, identify which team papers appear in its reference list
-  4. Run Gemini with abstract + reference evidence → final engagement_level
+  4. Run the LLM with abstract + reference evidence → final engagement_level
 
 Engagement levels (3-tier TROPESS system):
   Review Paper    — survey/overview/synthesis
@@ -20,12 +20,13 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 import time
 from pathlib import Path
 
 import requests
+
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Config
@@ -37,9 +38,6 @@ CACHE_FILE = Path(__file__).parent / "reflist_cache.json"
 OPENALEX_BASE = "https://api.openalex.org"
 USER_AGENT    = "science-model-dashboard/1.0 (mailto:yunkss@gmail.com)"
 
-GEMINI_MODEL = "gemini-2.5-flash"
-GEMINI_BASE  = "https://generativelanguage.googleapis.com/v1beta/models"
-TIMEOUT      = 90
 SLEEP        = 0.12   # ~8 req/s — within OpenAlex polite-pool limit
 BATCH_SIZE   = 8
 
@@ -118,7 +116,7 @@ def fetch_references_batch(dois):
 
 
 # ---------------------------------------------------------------------------
-# Gemini helpers
+# LLM helpers
 # ---------------------------------------------------------------------------
 
 SYSTEM_PROMPT = """You are classifying TROPESS satellite data citation papers into the 3-tier
@@ -159,26 +157,6 @@ def build_gemini_prompt(papers_info):
     )
 
 
-def call_gemini(prompt, api_key):
-    url = f"{GEMINI_BASE}/{GEMINI_MODEL}:generateContent?key={api_key}"
-    payload = {
-        "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.1, "responseMimeType": "application/json"},
-    }
-    for attempt in range(3):
-        try:
-            r = requests.post(url, json=payload, timeout=TIMEOUT)
-            r.raise_for_status()
-            raw = r.json()["candidates"][0]["content"]["parts"][0]["text"]
-            return json.loads(raw)
-        except Exception as e:
-            if attempt < 2:
-                time.sleep(2 ** attempt)
-            else:
-                raise RuntimeError(f"Gemini failed: {e}")
-
-
 # ---------------------------------------------------------------------------
 # Main
 # ---------------------------------------------------------------------------
@@ -189,10 +167,6 @@ def main():
     parser.add_argument("--sample", type=int, default=0)
     parser.add_argument("--rerun", action="store_true", help="Clear cache and reprocess all")
     args = parser.parse_args()
-
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        sys.exit("GEMINI_API_KEY not set")
 
     with open(DATA_FILE) as f:
         data = json.load(f)
@@ -278,11 +252,11 @@ def main():
         return
 
     # ------------------------------------------------------------------ #
-    # Step 4 — Gemini reclassification
+    # Step 4 — LLM reclassification
     # ------------------------------------------------------------------ #
     todo = [p for p in papers_info if p["paper_id"] not in cache]
     done = len(papers_info) - len(todo)
-    print(f"\nStep 3: Gemini reclassification — {done} cached, {len(todo)} to process")
+    print(f"\nStep 3: LLM reclassification — {done} cached, {len(todo)} to process")
 
     if todo:
         batches = [todo[i:i+BATCH_SIZE] for i in range(0, len(todo), BATCH_SIZE)]
@@ -290,7 +264,7 @@ def main():
         for bi, batch in enumerate(batches):
             print(f"  Batch {bi+1}/{len(batches)} ({len(batch)})...", end=" ", flush=True)
             try:
-                results = call_gemini(build_gemini_prompt(batch), api_key)
+                results = call_llm(build_gemini_prompt(batch), system=SYSTEM_PROMPT, temperature=0.1)
                 for r in results:
                     pid = r.get("paper_id")
                     if pid:

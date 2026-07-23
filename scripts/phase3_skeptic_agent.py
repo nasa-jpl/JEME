@@ -19,22 +19,17 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 import time
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
-TIMEOUT = 30
 SLEEP_BETWEEN_REQUESTS = 1
-MAX_RETRIES = 3
 
 ALL_MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
@@ -151,61 +146,16 @@ def should_review(entry):
     return False, ""
 
 
-def call_gemini(api_key, prompt):
-    """Make a Gemini API call at temperature 0.3 (moderately deterministic for review)."""
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent"
-    headers = {"Content-Type": "application/json"}
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.3,
-            "maxOutputTokens": 4096,
-            "topP": 0.8,
-            "topK": 10,
-            "responseMimeType": "application/json",
-        },
-    }
+def skeptic_llm(prompt):
+    """Make an LLM call at temperature 0.3 (moderately deterministic for review).
 
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = requests.post(
-                f"{url}?key={api_key}",
-                headers=headers,
-                json=data,
-                timeout=TIMEOUT,
-            )
-            if response.status_code == 429:
-                wait = (2 ** attempt) * 2
-                print(f"    Rate limited, waiting {wait}s...")
-                time.sleep(wait)
-                continue
-            response.raise_for_status()
-            result = response.json()
-
-            if "candidates" in result and len(result["candidates"]) > 0:
-                text = result["candidates"][0].get("content", {}).get("parts", [{}])[0].get("text", "")
-                text = text.strip()
-                if text.startswith("```"):
-                    text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-                if text.endswith("```"):
-                    text = text[:-3]
-                text = text.strip()
-                return json.loads(text)
-            return None
-
-        except requests.exceptions.Timeout:
-            print(f"    Timeout (attempt {attempt + 1}/{MAX_RETRIES})")
-        except requests.exceptions.RequestException as e:
-            print(f"    API error (attempt {attempt + 1}/{MAX_RETRIES}): {e}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-        except json.JSONDecodeError:
-            # Don't retry — JSONDecodeError almost always means a truncated/
-            # malformed response from the model and retrying rarely helps.
-            print(f"    Invalid JSON response (giving up on this entry)")
-            return None
-
-    return None
+    Uses the shared Bedrock client. Returns parsed JSON or None.
+    """
+    try:
+        return call_llm(prompt, temperature=0.3)
+    except RuntimeError as e:
+        print(f"    LLM call error: {e}")
+        return None
 
 
 # ---------------------------------------------------------------------------
@@ -228,7 +178,7 @@ def _snap_label(proposed, existing, allowed_set):
     return existing, False
 
 
-def review_entry(entry, api_key, reason, model_name, allowed_engagement,
+def review_entry(entry, reason, model_name, allowed_engagement,
                  allowed_domains, dry_run=False):
     """Run skeptic review on a single entry."""
     title = entry.get("title", "")
@@ -269,7 +219,7 @@ def review_entry(entry, api_key, reason, model_name, allowed_engagement,
             "review_reason": reason,
         }
 
-    result = call_gemini(api_key, prompt)
+    result = skeptic_llm(prompt)
     time.sleep(SLEEP_BETWEEN_REQUESTS)
 
     if result is None:
@@ -302,7 +252,7 @@ def review_entry(entry, api_key, reason, model_name, allowed_engagement,
     }
 
 
-def process_model(model_name, data_dir, api_key, cache, dry_run=False):
+def process_model(model_name, data_dir, cache, dry_run=False):
     """Process a single model's JSON file with skeptic review."""
     file_path = data_dir / f"{model_name}_analyzed.json"
     if not file_path.exists():
@@ -359,7 +309,7 @@ def process_model(model_name, data_dir, api_key, cache, dry_run=False):
             continue
 
         result = review_entry(
-            entry, api_key, reason, model_name,
+            entry, reason, model_name,
             allowed_engagement, allowed_domains, dry_run=dry_run,
         )
         if result is None:
@@ -422,12 +372,6 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key and not args.dry_run:
-        print("ERROR: GEMINI_API_KEY environment variable not set.")
-        print("Set it with: export GEMINI_API_KEY=your_key_here")
-        sys.exit(1)
-
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     data_dir = project_root / "public" / "data"
@@ -442,7 +386,6 @@ def main():
     cache = load_cache()
 
     print(f"Phase 3: Skeptic Agent {'(DRY RUN)' if args.dry_run else ''}")
-    print(f"Model: {GEMINI_MODEL}")
     print(f"Data directory: {data_dir}")
     print(f"Cache: {len(cache)} entries loaded")
     print()
@@ -451,7 +394,7 @@ def main():
     total_overrides = 0
     for model in models:
         print(f"[{model}]")
-        rev, ovr = process_model(model, data_dir, api_key, cache, dry_run=args.dry_run)
+        rev, ovr = process_model(model, data_dir, cache, dry_run=args.dry_run)
         total_reviewed += rev
         total_overrides += ovr
         print()

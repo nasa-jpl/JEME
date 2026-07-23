@@ -17,18 +17,13 @@ Usage:
 
 import argparse
 import json
-import os
-import sys
 import time
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 TIMEOUT = 60
 SLEEP = 0.5
-MAX_RETRIES = 3
 BATCH_SIZE = 8
 
 DATA_FILE = Path(__file__).parent.parent / "public" / "data" / "TROPESS_analyzed.json"
@@ -85,27 +80,9 @@ def build_batch_prompt(papers):
     )
 
 
-def call_gemini(prompt, api_key):
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent?key={api_key}"
-    payload = {
-        "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.1,
-            "responseMimeType": "application/json",
-        },
-    }
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = requests.post(url, json=payload, timeout=TIMEOUT)
-            resp.raise_for_status()
-            raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
-            return json.loads(raw)
-        except (requests.RequestException, KeyError, json.JSONDecodeError) as e:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-            else:
-                raise RuntimeError(f"Gemini call failed: {e}")
+def classify(prompt):
+    """Classify a batch prompt via the shared Bedrock client. Returns parsed JSON."""
+    return call_llm(prompt, system=SYSTEM_PROMPT, temperature=0.1)
 
 
 def main():
@@ -114,10 +91,6 @@ def main():
     parser.add_argument("--sample", type=int, default=0)
     parser.add_argument("--rerun", action="store_true")
     args = parser.parse_args()
-
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        sys.exit("GEMINI_API_KEY not set")
 
     with open(DATA_FILE) as f:
         data = json.load(f)
@@ -149,7 +122,7 @@ def main():
         for bi, batch in enumerate(batches):
             print(f"Batch {bi+1}/{len(batches)} ({len(batch)} papers)...", end=" ", flush=True)
             try:
-                results = call_gemini(build_batch_prompt(batch), api_key)
+                results = classify(build_batch_prompt(batch))
                 if isinstance(results, list):
                     for r in results:
                         pid = r.get("paper_id", "")

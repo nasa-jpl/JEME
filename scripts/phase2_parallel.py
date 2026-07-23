@@ -13,7 +13,6 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 import time
 from collections import Counter
@@ -21,17 +20,13 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-import requests
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 TEMPERATURES = [0.1, 0.5, 1.0]
-TIMEOUT = 30
-MAX_RETRIES = 3
 CONCURRENT_PAPERS = 5  # Process 5 papers at a time
 SAVE_EVERY = 50  # Save cache every N papers
 
@@ -115,54 +110,12 @@ def extract_text_fields(entry):
     return title, abstract, venue, citing
 
 
-def call_gemini(api_key, prompt, temperature):
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent"
-    headers = {"Content-Type": "application/json"}
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": temperature,
-            "maxOutputTokens": 2048,
-            "topP": 0.8,
-            "topK": 10,
-        },
-    }
-
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = requests.post(
-                f"{url}?key={api_key}",
-                headers=headers,
-                json=data,
-                timeout=TIMEOUT,
-            )
-            if response.status_code == 429:
-                wait = (2 ** attempt) * 5
-                time.sleep(wait)
-                continue
-            response.raise_for_status()
-            result = response.json()
-
-            if "candidates" in result and len(result["candidates"]) > 0:
-                text = result["candidates"][0].get("content", {}).get("parts", [{}])[0].get("text", "")
-                text = text.strip()
-                if text.startswith("```"):
-                    text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-                if text.endswith("```"):
-                    text = text[:-3]
-                text = text.strip()
-                return json.loads(text)
-            return None
-
-        except requests.exceptions.Timeout:
-            pass
-        except requests.exceptions.RequestException:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-        except json.JSONDecodeError:
-            pass
-
-    return None
+def sample_llm(prompt, temperature):
+    """Make a single LLM call via the shared Bedrock client. Returns parsed JSON or None."""
+    try:
+        return call_llm(prompt, temperature=temperature)
+    except RuntimeError:
+        return None
 
 
 def compute_stochastic_variance(responses):
@@ -206,8 +159,8 @@ def majority_label(responses, field):
 # Processing
 # ---------------------------------------------------------------------------
 
-def process_single_paper(entry, api_key, domain_list_str):
-    """Process one paper: call Gemini at 3 temperatures in parallel."""
+def process_single_paper(entry, domain_list_str):
+    """Process one paper: call the LLM at 3 temperatures in parallel."""
     title, abstract, venue, citing = extract_text_fields(entry)
 
     prompt = PROMPT_TEMPLATE.format(
@@ -221,7 +174,7 @@ def process_single_paper(entry, api_key, domain_list_str):
     # Call all 3 temperatures in parallel
     responses = [None, None, None]
     with ThreadPoolExecutor(max_workers=3) as executor:
-        futures = {executor.submit(call_gemini, api_key, prompt, temp): i
+        futures = {executor.submit(sample_llm, prompt, temp): i
                    for i, temp in enumerate(TEMPERATURES)}
         for future in as_completed(futures):
             idx = futures[future]
@@ -277,7 +230,7 @@ def get_domain_list(model_name):
         ]
 
 
-def process_model(model_name, data_dir, api_key, cache):
+def process_model(model_name, data_dir, cache):
     """Process a single model with parallel paper processing."""
     file_path = data_dir / f"{model_name}_analyzed.json"
     if not file_path.exists():
@@ -320,7 +273,7 @@ def process_model(model_name, data_dir, api_key, cache):
         with ThreadPoolExecutor(max_workers=CONCURRENT_PAPERS) as executor:
             futures = {}
             for idx, entry, key in batch:
-                future = executor.submit(process_single_paper, entry, api_key, domain_list_str)
+                future = executor.submit(process_single_paper, entry, domain_list_str)
                 futures[future] = (idx, entry, key)
 
             for future in as_completed(futures):
@@ -390,11 +343,6 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        print("ERROR: GEMINI_API_KEY not set")
-        sys.exit(1)
-
     global CONCURRENT_PAPERS
     CONCURRENT_PAPERS = args.workers
 
@@ -416,7 +364,7 @@ def main():
     total = 0
     for model in models:
         print(f"[{model}]")
-        count = process_model(model, data_dir, api_key, cache)
+        count = process_model(model, data_dir, cache)
         total += count
         print()
 

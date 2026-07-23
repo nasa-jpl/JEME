@@ -14,24 +14,19 @@ Usage:
 
 import argparse
 import json
-import os
 import sys
 import time
 from collections import Counter
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 TEMPERATURES = [0.1, 0.5, 1.0]
-TIMEOUT = 30
 SLEEP_BETWEEN_REQUESTS = 0.3
-MAX_RETRIES = 3
 
 ALL_MODELS = [
     "CARDAMOM", "CMS-Flux", "ECCO", "EDMF", "GRACE",
@@ -117,58 +112,13 @@ def extract_text_fields(entry):
     return title, abstract, venue, citing
 
 
-def call_gemini(api_key, prompt, temperature):
-    """Make a single Gemini API call. Returns parsed JSON or None."""
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent"
-    headers = {"Content-Type": "application/json"}
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": temperature,
-            "maxOutputTokens": 2048,
-            "topP": 0.8,
-            "topK": 10,
-        },
-    }
-
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = requests.post(
-                f"{url}?key={api_key}",
-                headers=headers,
-                json=data,
-                timeout=TIMEOUT,
-            )
-            if response.status_code == 429:
-                wait = (2 ** attempt) * 2
-                print(f"    Rate limited, waiting {wait}s...")
-                time.sleep(wait)
-                continue
-            response.raise_for_status()
-            result = response.json()
-
-            if "candidates" in result and len(result["candidates"]) > 0:
-                text = result["candidates"][0].get("content", {}).get("parts", [{}])[0].get("text", "")
-                # Strip markdown fences if present
-                text = text.strip()
-                if text.startswith("```"):
-                    text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-                if text.endswith("```"):
-                    text = text[:-3]
-                text = text.strip()
-                return json.loads(text)
-            return None
-
-        except requests.exceptions.Timeout:
-            print(f"    Timeout (attempt {attempt + 1}/{MAX_RETRIES})")
-        except requests.exceptions.RequestException as e:
-            print(f"    API error (attempt {attempt + 1}/{MAX_RETRIES}): {e}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-        except json.JSONDecodeError:
-            print(f"    Invalid JSON response (attempt {attempt + 1}/{MAX_RETRIES})")
-
-    return None
+def sample_llm(prompt, temperature):
+    """Make a single LLM call via the shared Bedrock client. Returns parsed JSON or None."""
+    try:
+        return call_llm(prompt, temperature=temperature)
+    except RuntimeError as e:
+        print(f"    LLM call error: {e}")
+        return None
 
 
 def compute_stochastic_variance(responses):
@@ -221,7 +171,7 @@ def majority_label(responses, field):
 # Processing
 # ---------------------------------------------------------------------------
 
-def process_entry(entry, api_key, dry_run=False, model_name=None):
+def process_entry(entry, dry_run=False, model_name=None):
     """Run multi-temperature sampling on a single entry. Returns Phase 2 data."""
     title, abstract, venue, citing = extract_text_fields(entry)
 
@@ -250,7 +200,7 @@ def process_entry(entry, api_key, dry_run=False, model_name=None):
 
     responses = []
     for temp in TEMPERATURES:
-        result = call_gemini(api_key, prompt, temp)
+        result = sample_llm(prompt, temp)
         responses.append(result)
         time.sleep(SLEEP_BETWEEN_REQUESTS)
 
@@ -267,7 +217,7 @@ def process_entry(entry, api_key, dry_run=False, model_name=None):
     }
 
 
-def process_model(model_name, data_dir, api_key, cache, sample=None, dry_run=False):
+def process_model(model_name, data_dir, cache, sample=None, dry_run=False):
     """Process a single model's JSON file with Phase 2 sampling."""
     file_path = data_dir / f"{model_name}_analyzed.json"
     if not file_path.exists():
@@ -298,7 +248,7 @@ def process_model(model_name, data_dir, api_key, cache, sample=None, dry_run=Fal
             skipped += 1
             continue
 
-        result = process_entry(entry, api_key, dry_run=dry_run, model_name=model_name)
+        result = process_entry(entry, dry_run=dry_run, model_name=model_name)
         if result is None:
             print(f"    [{i+1}/{len(entries_to_process)}] FAILED — no valid responses")
             continue
@@ -382,12 +332,6 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key and not args.dry_run:
-        print("ERROR: GEMINI_API_KEY environment variable not set.")
-        print("Set it with: export GEMINI_API_KEY=your_key_here")
-        sys.exit(1)
-
     script_dir = Path(__file__).parent
     project_root = script_dir.parent
     data_dir = project_root / "public" / "data"
@@ -402,7 +346,7 @@ def main():
     cache = load_cache()
 
     print(f"Phase 2: Multi-temperature sampling {'(DRY RUN)' if args.dry_run else ''}")
-    print(f"Model: {GEMINI_MODEL}, Temperatures: {TEMPERATURES}")
+    print(f"Temperatures: {TEMPERATURES}")
     print(f"Data directory: {data_dir}")
     if args.sample:
         print(f"Sample size: {args.sample} entries per model")
@@ -412,7 +356,7 @@ def main():
     total = 0
     for model in models:
         print(f"[{model}]")
-        count = process_model(model, data_dir, api_key, cache, sample=args.sample, dry_run=args.dry_run)
+        count = process_model(model, data_dir, cache, sample=args.sample, dry_run=args.dry_run)
         total += count
         print()
 

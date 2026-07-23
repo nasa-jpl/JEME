@@ -32,13 +32,15 @@ import urllib.request, urllib.error
 
 import requests
 
+from llm_client import call_llm, DEFAULT_MODEL_ID
+
 ROOT = Path(__file__).parent.parent
 DATA = ROOT / 'public' / 'data' / 'TROPESS_analyzed.json'
 CSV_OUT = ROOT / 'public' / 'data' / 'tropess_das_flips.csv'
 CACHE = Path(__file__).parent / 'das_fetch_cache.json'
 
-GEMINI_MODEL = 'gemini-2.5-flash'
-GEMINI_URL = f'https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent'
+# Model id recorded in provenance (matches what llm_client resolves at runtime).
+LLM_MODEL = os.environ.get('BEDROCK_MODEL_ID', DEFAULT_MODEL_ID)
 
 WORKERS = 6
 HTTP_TIMEOUT = 25
@@ -217,13 +219,13 @@ def build_enrichment(html):
 # ---------------------------------------------------------------------------
 
 sys.path.insert(0, str(Path(__file__).parent))
-from llm_reclassify_engagement import build_prompt, call_gemini  # noqa: E402
+from llm_reclassify_engagement import build_prompt  # noqa: E402
 
 
-def classify(api_key, entry):
-    """Re-classify entry.engagement_level via Gemini using current abstract."""
+def classify(entry):
+    """Re-classify entry.engagement_level via the shared LLM client using current abstract."""
     prompt = build_prompt('TROPESS', entry)
-    result = call_gemini(api_key, prompt, temperature=0.1)
+    result = call_llm(prompt, temperature=0.1, json_mode=True)
     if not result:
         return None
     valid = {'Review Paper', 'Data Usage', 'Simple Citation'}
@@ -255,7 +257,7 @@ def save_cache(cache):
 # Main
 # ---------------------------------------------------------------------------
 
-def process(entry, api_key, cache):
+def process(entry, cache):
     """Returns dict describing what (if anything) should change for this entry."""
     doi = (entry.get('doi') or '').strip()
     if not doi:
@@ -284,7 +286,7 @@ def process(entry, api_key, cache):
     abs_orig = (entry.get('abstract') or '').strip()
     enriched_entry['abstract'] = (abs_orig + '\n\n' + enrichment).strip()
 
-    result = classify(api_key, enriched_entry)
+    result = classify(enriched_entry)
     if not result:
         return {'doi': doi, 'status': 'classify_failed'}
 
@@ -304,10 +306,6 @@ def process(entry, api_key, cache):
 
 
 def main():
-    api_key = os.getenv('GEMINI_API_KEY')
-    if not api_key:
-        print('ERROR: GEMINI_API_KEY not set'); sys.exit(1)
-
     with open(DATA) as f:
         data = json.load(f)
     sc = [p for p in data if p.get('engagement_level') == 'Simple Citation']
@@ -326,7 +324,7 @@ def main():
     by_doi = {(p.get('doi') or '').strip().lower(): p for p in data if p.get('doi')}
 
     with ThreadPoolExecutor(max_workers=WORKERS) as exe:
-        futs = {exe.submit(process, p, api_key, cache): p for p in sc}
+        futs = {exe.submit(process, p, cache): p for p in sc}
         done = 0
         for fut in as_completed(futs):
             entry = futs[fut]
@@ -364,7 +362,7 @@ def main():
             'justification': r['justification'][:300],
             'confidence': r['confidence'],
             'source': 'DAS / Methods text fetched from publisher HTML',
-            'model': GEMINI_MODEL,
+            'model': LLM_MODEL,
             'timestamp': ts,
         }
         applied += 1

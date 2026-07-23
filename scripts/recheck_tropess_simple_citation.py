@@ -15,20 +15,17 @@ and a quoted justification. We do NOT modify TROPESS_analyzed.json automatically
 the user reviews and decides.
 """
 
-import json, os, sys, time
+import json, sys, time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
 ROOT = Path(__file__).parent.parent
 DATA = ROOT / 'public' / 'data' / 'TROPESS_analyzed.json'
 OUT  = ROOT / 'scripts' / 'tropess_sc_recheck.json'
 
-GEMINI_MODEL = 'gemini-2.5-flash'
-URL = f'https://generativelanguage.googleapis.com/v1beta/models/{GEMINI_MODEL}:generateContent'
 WORKERS = 10
-TIMEOUT = 30
 
 PROMPT = """You are auditing whether a paper labelled "Simple Citation" w.r.t. the TROPESS mission was misclassified.
 
@@ -63,41 +60,7 @@ Respond with ONLY valid JSON (no markdown):
 {{"verdict": "correct_simple_citation|should_be_data_usage|should_be_review", "justification": "<short quote/paraphrase from the abstract or title that supports the verdict, max 220 chars>", "confidence": 1-5}}"""
 
 
-def call_gemini(api_key, prompt):
-    body = {
-        'contents': [{'parts': [{'text': prompt}]}],
-        'generationConfig': {
-            'temperature': 0.1,
-            'maxOutputTokens': 512,
-            'topP': 0.8,
-            'topK': 10,
-            'responseMimeType': 'application/json',
-            'thinkingConfig': {'thinkingBudget': 0},
-        },
-    }
-    for attempt in range(3):
-        try:
-            r = requests.post(f'{URL}?key={api_key}', json=body, timeout=TIMEOUT,
-                              headers={'Content-Type': 'application/json'})
-            if r.status_code == 429:
-                time.sleep((2 ** attempt) * 5); continue
-            r.raise_for_status()
-            d = r.json()
-            if 'candidates' not in d or not d['candidates']:
-                return None
-            text = d['candidates'][0].get('content', {}).get('parts', [{}])[0].get('text', '').strip()
-            if text.startswith('```'):
-                text = text.split('\n', 1)[1] if '\n' in text else text[3:]
-            if text.endswith('```'):
-                text = text[:-3]
-            return json.loads(text.strip())
-        except Exception:
-            if attempt < 2:
-                time.sleep(2 ** attempt)
-    return None
-
-
-def review_one(api_key, p):
+def review_one(p):
     title = p.get('title', '')
     if isinstance(title, list): title = title[0] if title else ''
     venue = p.get('venue', '') or ''
@@ -106,13 +69,13 @@ def review_one(api_key, p):
     cited = p.get('citing_team_paper', '') or '(unknown)'
     prompt = PROMPT.format(title=title or '(no title)', venue=venue or '(unknown)',
                             cited=cited, abstract=abstract)
-    return call_gemini(api_key, prompt)
+    try:
+        return call_llm(prompt, temperature=0.1)
+    except RuntimeError:
+        return None
 
 
 def main():
-    api_key = os.getenv('GEMINI_API_KEY')
-    if not api_key:
-        print('ERROR: GEMINI_API_KEY not set'); sys.exit(1)
     with open(DATA) as f:
         data = json.load(f)
     sc = [p for p in data if p.get('engagement_level') == 'Simple Citation']
@@ -121,7 +84,7 @@ def main():
     results = []
     start = time.time()
     with ThreadPoolExecutor(max_workers=WORKERS) as exe:
-        futs = {exe.submit(review_one, api_key, p): p for p in sc}
+        futs = {exe.submit(review_one, p): p for p in sc}
         done = 0
         for fut in as_completed(futs):
             p = futs[fut]

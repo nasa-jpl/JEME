@@ -22,23 +22,18 @@ Usage:
 
 import argparse
 import json
-import os
-import sys
 import time
 from collections import Counter
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
 TIMEOUT = 60
 SLEEP_BETWEEN_REQUESTS = 1.0
-MAX_RETRIES = 5
 BATCH_SIZE = 8
 
 ALL_MODELS = [
@@ -154,76 +149,13 @@ def build_domain_list(data, top_n=40):
     return "\n".join(f"  - {t}" for t in top) if top else "  (no existing domains found)"
 
 
-def call_gemini(api_key, prompt):
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent"
-    headers = {"Content-Type": "application/json"}
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.1,
-            "maxOutputTokens": 8192,
-            "topP": 0.8,
-            "topK": 10,
-        },
-    }
-
-    for attempt in range(MAX_RETRIES):
-        try:
-            response = requests.post(
-                f"{url}?key={api_key}",
-                headers=headers,
-                json=data,
-                timeout=TIMEOUT,
-            )
-            if response.status_code == 429:
-                wait = (2 ** attempt) * 2
-                print(f"    Rate limited, waiting {wait}s...")
-                time.sleep(wait)
-                continue
-            if response.status_code in (500, 503):
-                wait = (2 ** attempt) * 2
-                print(f"    Server error {response.status_code}, retrying in {wait}s...")
-                time.sleep(wait)
-                continue
-            response.raise_for_status()
-            result = response.json()
-
-            if "candidates" in result and result["candidates"]:
-                text = (
-                    result["candidates"][0]
-                    .get("content", {})
-                    .get("parts", [{}])[0]
-                    .get("text", "")
-                )
-                text = text.strip()
-                if text.startswith("```"):
-                    text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-                if text.endswith("```"):
-                    text = text[:-3]
-                text = text.strip()
-                return json.loads(text)
-
-            print("    Empty response from Gemini")
-            return None
-
-        except requests.exceptions.Timeout:
-            wait = (2 ** attempt) * 2
-            print(f"    Timeout, retrying in {wait}s...")
-            time.sleep(wait)
-        except json.JSONDecodeError as e:
-            print(f"    JSON parse error: {e}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2)
-            else:
-                return None
-        except requests.exceptions.RequestException as e:
-            print(f"    Request error: {e}")
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2)
-            else:
-                return None
-
-    return None
+def classify(prompt):
+    """Make a single LLM call via the shared Bedrock client. Returns parsed JSON or None."""
+    try:
+        return call_llm(prompt, temperature=0.1)
+    except RuntimeError as e:
+        print(f"    LLM call error: {e}")
+        return None
 
 
 # ---------------------------------------------------------------------------
@@ -273,7 +205,7 @@ def build_batch_prompt(model_name, domain_list, entries_with_idx):
     )
 
 
-def process_model(model_name, api_key, cache, batch_size=BATCH_SIZE,
+def process_model(model_name, cache, batch_size=BATCH_SIZE,
                   sample=None, dry_run=False):
     data_file = DATA_DIR / f"{model_name}_analyzed.json"
     if not data_file.exists():
@@ -357,7 +289,7 @@ def process_model(model_name, api_key, cache, batch_size=BATCH_SIZE,
               f"(papers {start + 1}–{end}/{len(to_process)})", end="", flush=True)
 
         prompt = build_batch_prompt(model_name, domain_list, batch)
-        result = call_gemini(api_key, prompt)
+        result = classify(prompt)
 
         if result and isinstance(result, list):
             for item in result:
@@ -391,7 +323,7 @@ def process_model(model_name, api_key, cache, batch_size=BATCH_SIZE,
             print(f" → batch failed, trying individually...")
             for local_id, (global_idx, entry) in enumerate(batch):
                 single_prompt = build_batch_prompt(model_name, domain_list, [(global_idx, entry)])
-                single_result = call_gemini(api_key, single_prompt)
+                single_result = classify(single_prompt)
                 if single_result and isinstance(single_result, list) and single_result:
                     item = single_result[0]
                     primary = item.get("primary_domain", "Cross-Disciplinary")
@@ -466,11 +398,6 @@ def main():
     if not args.model and not args.all:
         parser.error("Specify --model NAME or --all")
 
-    api_key = os.environ.get("GEMINI_API_KEY", "")
-    if not api_key and not args.dry_run:
-        print("ERROR: GEMINI_API_KEY not set. Source .bashrc or export it.")
-        sys.exit(1)
-
     cache = load_cache()
     print(f"Cache: {len(cache)} entries loaded from {CACHE_FILE}")
 
@@ -481,7 +408,7 @@ def main():
         print(f"Processing {model_name}")
         print(f"{'=' * 60}")
         process_model(
-            model_name, api_key, cache,
+            model_name, cache,
             batch_size=args.batch_size,
             sample=args.sample,
             dry_run=args.dry_run,

@@ -21,17 +21,13 @@ import sys
 import time
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
-TIMEOUT = 60
 SLEEP_BETWEEN_BATCHES = 0.5
-MAX_RETRIES = 3
 BATCH_SIZE = 10
 
 DATA_FILE = Path(__file__).parent.parent / "public" / "data" / "TROPESS_analyzed.json"
@@ -89,30 +85,12 @@ def build_batch_prompt(papers):
     )
 
 # ---------------------------------------------------------------------------
-# Gemini call
+# LLM call
 # ---------------------------------------------------------------------------
 
-def call_gemini(prompt, api_key, temperature=0.1):
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent?key={api_key}"
-    payload = {
-        "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": temperature,
-            "responseMimeType": "application/json",
-        },
-    }
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = requests.post(url, json=payload, timeout=TIMEOUT)
-            resp.raise_for_status()
-            raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
-            return json.loads(raw)
-        except (requests.RequestException, KeyError, json.JSONDecodeError) as e:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-            else:
-                raise RuntimeError(f"Gemini call failed after {MAX_RETRIES} attempts: {e}")
+def classify(prompt, temperature=0.1):
+    """Classify a batch prompt via the shared Bedrock client. Returns parsed JSON."""
+    return call_llm(prompt, system=SYSTEM_PROMPT, temperature=temperature)
 
 # ---------------------------------------------------------------------------
 # Main
@@ -124,10 +102,6 @@ def main():
     parser.add_argument("--sample", type=int, default=0)
     parser.add_argument("--rerun", action="store_true", help="Reprocess all, overwriting cache")
     args = parser.parse_args()
-
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        sys.exit("GEMINI_API_KEY not set")
 
     with open(DATA_FILE) as f:
         data = json.load(f)
@@ -163,7 +137,7 @@ def main():
             print(f"Batch {bi+1}/{len(batches)} ({len(batch)} papers)...", end=" ", flush=True)
             prompt = build_batch_prompt(batch)
             try:
-                results = call_gemini(prompt, api_key)
+                results = classify(prompt)
                 if not isinstance(results, list):
                     print(f"WARN: unexpected response type {type(results)}, skipping")
                     continue

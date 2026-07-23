@@ -1,0 +1,5 @@
+# Python dependencies for the LLM analysis scripts (scripts/llm_client.py).
+# The client uses AWS Bedrock via boto3; auth is the AWS_BEARER_TOKEN_BEDROCK
+# bearer token in .env.bedrock (git-ignored).
+boto3>=1.35
+requests>=2.31

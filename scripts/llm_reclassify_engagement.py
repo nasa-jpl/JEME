@@ -3,7 +3,7 @@
 LLM-based engagement_level re-classifier.
 
 Reads each citation's title + abstract + venue + cited team paper, and asks
-Gemini to decide HOW the citing paper engages with the model/mission. Replaces
+the LLM to decide HOW the citing paper engages with the model/mission. Replaces
 the keyword-substring classifier (which produces false positives like
 "Data Usage" for "ppm denoTES parts per million" matching the TES instrument
 abbreviation).
@@ -28,7 +28,7 @@ For each entry we record:
       "new_label":       <new label>,
       "justification":   <quoted abstract sentence>,
       "abstract_used":   true|false,
-      "model":           "gemini-2.5-flash",
+      "model":           <Bedrock model id, e.g. us.anthropic.claude-sonnet-4-5-...>,
       "timestamp":       "2026-04-22T..."
   }
 
@@ -44,7 +44,6 @@ Usage:
 import argparse
 import datetime
 import json
-import os
 import sys
 import time
 from collections import Counter
@@ -52,16 +51,12 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 from threading import Lock
 
-import requests
+from llm_client import call_llm, DEFAULT_MODEL_ID
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
-TIMEOUT = 30
-MAX_RETRIES = 3
 CONCURRENT_PAPERS = 8
 SAVE_EVERY = 100
 
@@ -429,61 +424,16 @@ def build_prompt(model_name, entry):
     )
 
 
-def call_gemini(api_key, prompt, temperature=0.1):
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent"
-    headers = {"Content-Type": "application/json"}
-    body = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": temperature,
-            "maxOutputTokens": 512,
-            "topP": 0.8,
-            "topK": 10,
-            "responseMimeType": "application/json",
-            "thinkingConfig": {"thinkingBudget": 0},
-        },
-    }
-
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = requests.post(
-                f"{url}?key={api_key}",
-                headers=headers,
-                json=body,
-                timeout=TIMEOUT,
-            )
-            if resp.status_code == 429:
-                wait = (2 ** attempt) * 5
-                time.sleep(wait)
-                continue
-            resp.raise_for_status()
-            result = resp.json()
-            if "candidates" not in result or not result["candidates"]:
-                return None
-            text = result["candidates"][0].get("content", {}).get("parts", [{}])[0].get("text", "")
-            text = text.strip()
-            if text.startswith("```"):
-                text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-            if text.endswith("```"):
-                text = text[:-3]
-            return json.loads(text.strip())
-        except requests.exceptions.Timeout:
-            pass
-        except requests.exceptions.RequestException:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-        except json.JSONDecodeError:
-            pass
-    return None
-
-
-def classify_one(api_key, model_name, entry):
+def classify_one(model_name, entry):
     """Returns dict with engagement_level/justification/confidence, or None."""
     ctx = MODEL_CONTEXT[model_name]
     valid = VALID_LABELS[ctx["kind"]]
 
     prompt = build_prompt(model_name, entry)
-    result = call_gemini(api_key, prompt, temperature=0.1)
+    try:
+        result = call_llm(prompt, temperature=0.1)
+    except RuntimeError:
+        return None
     if not result:
         return None
 
@@ -530,7 +480,7 @@ def apply_result(entry, result, dry_run=False):
             "justification": result["justification"],
             "confidence": result["confidence"],
             "abstract_used": result["abstract_used"],
-            "model": GEMINI_MODEL,
+            "model": DEFAULT_MODEL_ID,
             "timestamp": datetime.datetime.utcnow().isoformat(timespec="seconds") + "Z",
         }
     return previous
@@ -540,7 +490,7 @@ def apply_result(entry, result, dry_run=False):
 # Per-model processing
 # ---------------------------------------------------------------------------
 
-def process_model(model_name, data_dir, api_key, cache, sample=None,
+def process_model(model_name, data_dir, cache, sample=None,
                   refresh=False, no_write=False):
     file_path = data_dir / f"{model_name}_analyzed.json"
     if not file_path.exists():
@@ -573,7 +523,7 @@ def process_model(model_name, data_dir, api_key, cache, sample=None,
 
     def _do(item):
         idx, entry, key = item
-        return idx, entry, key, classify_one(api_key, model_name, entry)
+        return idx, entry, key, classify_one(model_name, entry)
 
     save_counter = 0
     for batch_start in range(0, len(to_call), CONCURRENT_PAPERS):
@@ -650,11 +600,6 @@ def main():
         parser.print_help()
         sys.exit(1)
 
-    api_key = os.getenv("GEMINI_API_KEY")
-    if not api_key:
-        print("ERROR: GEMINI_API_KEY not set in environment")
-        sys.exit(1)
-
     global CONCURRENT_PAPERS
     CONCURRENT_PAPERS = args.workers
 
@@ -674,7 +619,7 @@ def main():
             sys.exit(1)
 
     cache = load_cache()
-    print(f"LLM re-classifier: {GEMINI_MODEL}, workers={CONCURRENT_PAPERS}, "
+    print(f"LLM re-classifier: {DEFAULT_MODEL_ID}, workers={CONCURRENT_PAPERS}, "
           f"cache={len(cache)} entries{' (DRY)' if args.no_write else ''}")
     print(f"Models: {', '.join(models)}")
     print()
@@ -682,7 +627,7 @@ def main():
     summary = {}
     for m in models:
         print(f"[{m}]")
-        result = process_model(m, data_dir, api_key, cache,
+        result = process_model(m, data_dir, cache,
                                sample=args.sample, refresh=args.refresh,
                                no_write=args.no_write)
         if result:

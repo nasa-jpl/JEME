@@ -28,6 +28,8 @@ from threading import Lock
 
 import requests
 
+from llm_client import call_llm
+
 # ---------------------------------------------------------------------------
 # Configuration
 # ---------------------------------------------------------------------------
@@ -50,10 +52,6 @@ CROSSREF_HEADERS = {
     "User-Agent": "ScienceModelDashboard/1.0 (mailto:research@jpl.nasa.gov)",
 }
 CROSSREF_TIMEOUT = 15
-
-GEMINI_MODEL = "gemini-2.5-flash"
-GEMINI_BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
-GEMINI_TIMEOUT = 30
 
 CONCURRENT_LOOKUPS = 5
 SAVE_EVERY = 100
@@ -316,7 +314,7 @@ def tier2_classify(paper, cache):
 # Tier 3: Gemini LLM fallback
 # ---------------------------------------------------------------------------
 
-GEMINI_PROMPT = """Determine if this scientific paper is published in a peer-reviewed journal or venue.
+PEER_REVIEW_PROMPT = """Determine if this scientific paper is published in a peer-reviewed journal or venue.
 
 Peer-reviewed: journal articles, peer-reviewed conference papers in established venues.
 NOT peer-reviewed: preprints, theses, dissertations, technical reports, conference abstracts, posters, book chapters, encyclopedias, working papers.
@@ -329,8 +327,8 @@ Paper information:
 Respond ONLY with valid JSON (no markdown): {{"is_peer_reviewed": true/false, "reason": "brief explanation"}}"""
 
 
-def tier3_classify(paper, api_key, cache):
-    """LLM-based classification. Returns (bool, reason)."""
+def tier3_classify(paper, cache):
+    """LLM-based classification via the shared Bedrock client. Returns (bool, reason)."""
     key = get_entry_key(paper)
     cache_key = f"llm:{key}"
 
@@ -342,61 +340,29 @@ def tier3_classify(paper, api_key, cache):
     venue = get_venue(paper)
     doi = get_doi(paper)
 
-    prompt = GEMINI_PROMPT.format(
+    prompt = PEER_REVIEW_PROMPT.format(
         title=title or "(no title)",
         venue=venue or "(unknown)",
         doi=doi or "(none)",
     )
 
-    url = f"{GEMINI_BASE_URL}/{GEMINI_MODEL}:generateContent"
-    data = {
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {"temperature": 0.1, "maxOutputTokens": 256},
-    }
-
-    for attempt in range(3):
-        try:
-            resp = requests.post(
-                f"{url}?key={api_key}",
-                headers={"Content-Type": "application/json"},
-                json=data,
-                timeout=GEMINI_TIMEOUT,
-            )
-            if resp.status_code == 429:
-                time.sleep(2 ** (attempt + 1))
-                continue
-            resp.raise_for_status()
-            result = resp.json()
-
-            if "candidates" in result and result["candidates"]:
-                text = result["candidates"][0].get("content", {}).get("parts", [{}])[0].get("text", "")
-                text = text.strip()
-                if text.startswith("```"):
-                    text = text.split("\n", 1)[1] if "\n" in text else text[3:]
-                if text.endswith("```"):
-                    text = text[:-3]
-                text = text.strip()
-                parsed = json.loads(text)
-                is_pr = parsed.get("is_peer_reviewed", True)
-                reason = parsed.get("reason", "")
-
-                with cache_lock:
-                    cache[cache_key] = {"is_peer_reviewed": is_pr, "reason": reason}
-                return is_pr, f"tier3_llm:{reason}"
-
-        except (requests.exceptions.RequestException, json.JSONDecodeError, KeyError):
-            if attempt < 2:
-                time.sleep(1)
-
-    # Fallback: assume peer-reviewed if LLM fails
-    return True, "tier3_fallback"
+    try:
+        parsed = call_llm(prompt, temperature=0.1, max_tokens=256)
+        is_pr = parsed.get("is_peer_reviewed", True)
+        reason = parsed.get("reason", "")
+        with cache_lock:
+            cache[cache_key] = {"is_peer_reviewed": is_pr, "reason": reason}
+        return is_pr, f"tier3_llm:{reason}"
+    except Exception:
+        # Fallback: assume peer-reviewed if the LLM call fails.
+        return True, "tier3_fallback"
 
 
 # ---------------------------------------------------------------------------
 # Main classification pipeline
 # ---------------------------------------------------------------------------
 
-def classify_paper(paper, cache, api_key=None, grace_map=None):
+def classify_paper(paper, cache, use_llm=True, grace_map=None):
     """Three-tier classification. Returns (is_peer_reviewed, reason)."""
     # Tier 1
     result, reason = tier1_classify(paper, grace_map=grace_map)
@@ -409,14 +375,14 @@ def classify_paper(paper, cache, api_key=None, grace_map=None):
         return result, reason
 
     # Tier 3
-    if api_key:
-        return tier3_classify(paper, api_key, cache)
+    if use_llm:
+        return tier3_classify(paper, cache)
 
-    # No API key — default peer-reviewed
-    return True, "default_no_api_key"
+    # LLM disabled — default peer-reviewed
+    return True, "default_no_llm"
 
 
-def process_model(model_name, cache, api_key=None, dry_run=False, grace_map=None):
+def process_model(model_name, cache, use_llm=True, dry_run=False, grace_map=None):
     """Process a single model's JSON file. Returns list of removed papers."""
     filepath = DATA_DIR / f"{model_name}_analyzed.json"
     if not filepath.exists():
@@ -432,7 +398,7 @@ def process_model(model_name, cache, api_key=None, dry_run=False, grace_map=None
     tier_counts = {"tier1": 0, "tier2": 0, "tier3": 0}
 
     for i, paper in enumerate(data):
-        is_pr, reason = classify_paper(paper, cache, api_key=api_key, grace_map=grace_map)
+        is_pr, reason = classify_paper(paper, cache, use_llm=use_llm, grace_map=grace_map)
         tier = reason.split("_")[0]  # tier1, tier2, tier3
         tier_counts[tier] = tier_counts.get(tier, 0) + 1
 
@@ -487,13 +453,15 @@ def main():
     parser.add_argument("--model", type=str, help="Process a specific model")
     parser.add_argument("--all", action="store_true", help="Process all models")
     parser.add_argument("--dry-run", action="store_true", help="Preview without writing")
+    parser.add_argument("--no-llm", action="store_true",
+                        help="Skip Tier 3 (LLM); rely only on deterministic + Crossref tiers")
     args = parser.parse_args()
 
     if not args.model and not args.all:
         parser.print_help()
         sys.exit(1)
 
-    api_key = os.getenv("GEMINI_API_KEY")
+    use_llm = not args.no_llm
     models = MODELS if args.all else [args.model]
 
     if args.model and args.model not in MODELS:
@@ -503,8 +471,8 @@ def main():
     mode = "DRY RUN" if args.dry_run else "REMOVING"
     print(f"\nPeer-Review Verification ({mode})")
     print("=" * 60)
-    if not api_key:
-        print("Note: GEMINI_API_KEY not set — Tier 3 (LLM) will be skipped")
+    if not use_llm:
+        print("Note: --no-llm set — Tier 3 (LLM) will be skipped")
     print()
 
     cache = load_cache()
@@ -521,7 +489,7 @@ def main():
     for model in models:
         print(f"[{model}]")
         use_grace = grace_map if model == "GRACE" else None
-        removed = process_model(model, cache, api_key=api_key, dry_run=args.dry_run, grace_map=use_grace)
+        removed = process_model(model, cache, use_llm=use_llm, dry_run=args.dry_run, grace_map=use_grace)
         all_removed.extend(removed)
         print()
 

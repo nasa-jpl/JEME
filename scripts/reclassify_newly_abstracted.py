@@ -2,7 +2,7 @@
 """
 Reclassify papers that just received new abstracts.
 
-Runs Gemini to re-determine:
+Runs the LLM to re-determine:
   - research_domain
   - engagement_level  (Review Paper / Data Usage / Simple Citation)
   - paper_type        (science / algorithm)
@@ -16,23 +16,18 @@ Usage:
 
 import argparse
 import json
-import os
 import subprocess
 import sys
 import time
 from pathlib import Path
 
-import requests
+from llm_client import call_llm
 
 # ---------------------------------------------------------------------------
 # Config
 # ---------------------------------------------------------------------------
 
-GEMINI_MODEL = "gemini-2.5-flash"
-BASE_URL = "https://generativelanguage.googleapis.com/v1beta/models"
-TIMEOUT = 90
 SLEEP = 0.5
-MAX_RETRIES = 3
 BATCH_SIZE = 8
 
 DATA_FILE = Path(__file__).parent.parent / "public" / "data" / "TROPESS_analyzed.json"
@@ -94,29 +89,6 @@ def build_prompt(papers):
     )
 
 
-def call_gemini(prompt, api_key):
-    url = f"{BASE_URL}/{GEMINI_MODEL}:generateContent?key={api_key}"
-    payload = {
-        "system_instruction": {"parts": [{"text": SYSTEM_PROMPT}]},
-        "contents": [{"parts": [{"text": prompt}]}],
-        "generationConfig": {
-            "temperature": 0.1,
-            "responseMimeType": "application/json",
-        },
-    }
-    for attempt in range(MAX_RETRIES):
-        try:
-            resp = requests.post(url, json=payload, timeout=TIMEOUT)
-            resp.raise_for_status()
-            raw = resp.json()["candidates"][0]["content"]["parts"][0]["text"]
-            return json.loads(raw)
-        except Exception as e:
-            if attempt < MAX_RETRIES - 1:
-                time.sleep(2 ** attempt)
-            else:
-                raise RuntimeError(f"Gemini failed after {MAX_RETRIES} attempts: {e}")
-
-
 def find_newly_abstracted_ids(from_commit):
     """Compare current data to a prior git commit to find paper_ids that gained abstracts."""
     result = subprocess.run(
@@ -149,10 +121,6 @@ def main():
     parser.add_argument("--dry-run", action="store_true")
     parser.add_argument("--sample", type=int, default=0)
     args = parser.parse_args()
-
-    api_key = os.environ.get("GEMINI_API_KEY")
-    if not api_key:
-        sys.exit("GEMINI_API_KEY not set")
 
     # Determine which paper_ids to reclassify
     if args.ids_file:
@@ -202,7 +170,7 @@ def main():
     for bi, batch in enumerate(batches):
         print(f"Batch {bi+1}/{len(batches)} ({len(batch)} papers)...", end=" ", flush=True)
         try:
-            results = call_gemini(build_prompt(batch), api_key)
+            results = call_llm(build_prompt(batch), system=SYSTEM_PROMPT, temperature=0.1)
             if not isinstance(results, list):
                 print(f"WARN: unexpected response type {type(results)}")
                 errors += 1
