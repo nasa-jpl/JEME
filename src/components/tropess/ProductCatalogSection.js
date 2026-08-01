@@ -175,7 +175,7 @@ const ProductCatalogSection = ({
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
           <div>
             <div className="text-2xl font-bold text-gray-900">{summary.total_products}</div>
-            <div className="text-xs text-gray-500">Data products (unique DOI)</div>
+            <div className="text-xs text-gray-500">Data products</div>
           </div>
           <div>
             <div className="text-2xl font-bold text-gray-900">{summary.by_level.length}</div>

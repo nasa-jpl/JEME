@@ -122,6 +122,36 @@ def fetch_collections(keyword, provider):
     return items
 
 
+def version_key(item):
+    """Sort key for a collection's Version ('2' > '1', '10' > '9')."""
+    v = str((item.get("umm") or {}).get("Version") or "")
+    parts = re.findall(r"\d+", v)
+    return ([int(p) for p in parts] if parts else [-1], v)
+
+
+def dedupe_collections(items):
+    """Collapse multiple versions of the same collection to the newest one.
+
+    CMR returns one entry per collection VERSION, so a product with a V1 and a
+    V2 appears twice under the same ShortName (with different DOIs). Counting
+    both inflates the product/stream/instrument tallies and makes the output
+    order unstable between runs. Mirrors the notebook's
+    drop_duplicates(["short_name"]).
+
+    Returns (kept_items_sorted_by_short_name, dropped_count).
+    """
+    best = {}
+    for it in items:
+        sn = (it.get("umm") or {}).get("ShortName")
+        if sn is None:
+            continue
+        cur = best.get(sn)
+        if cur is None or version_key(it) > version_key(cur):
+            best[sn] = it
+    kept = [best[sn] for sn in sorted(best)]
+    return kept, len(items) - len(kept)
+
+
 def classify_stream(title):
     if "Reanalysis" in title:
         return "Reanalysis"
@@ -241,6 +271,13 @@ def main():
     if not items:
         raise SystemExit("No collections returned from CMR.")
 
+    # One entry per collection (newest version), in a stable order, so reruns
+    # are a no-op when nothing changed upstream.
+    items, superseded = dedupe_collections(items)
+    if superseded:
+        print(f"Collapsed {superseded} superseded version(s) -> "
+              f"{len(items)} unique collections.")
+
     products = []
     by_level = {}
     by_instrument = {}
@@ -316,6 +353,7 @@ def main():
         products.append({
             "short_name": sn,
             "title": title,
+            "version": u.get("Version"),
             "doi": doi,
             "doi_url": f"https://doi.org/{doi}" if doi else None,
             "level": llabel,
@@ -340,7 +378,7 @@ def main():
             }
             for p in products
         ],
-        key=lambda p: (p["start"] is None, p["start"] or ""),
+        key=lambda p: (p["start"] is None, p["start"] or "", p["short_name"]),
     )
 
     summary = {
@@ -363,8 +401,11 @@ def main():
             "source_label": source_label,
             "catalog_url": catalog_url,
             "total_products": len(products),
-            "note": ("Live product catalog from CMR. Volume/file totals (when present) "
-                     "are estimates from granule counts x average file size."),
+            "superseded_versions": superseded,
+            "note": ("Live product catalog from CMR, one entry per collection "
+                     "(newest version; superseded versions collapsed). "
+                     "Volume/file totals (when present) are estimates from "
+                     "granule counts x average file size."),
         },
         "summary": summary,
         "timeline": timeline,
