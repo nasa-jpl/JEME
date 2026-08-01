@@ -1340,11 +1340,15 @@
     },
     {
       "type": "Reanalysis",
-      "files": 491070
+      "files": 419447
     },
     {
       "type": "Special",
       "files": 478184
+    },
+    {
+      "type": "TCR-2",
+      "files": 71623
     }
   ],
   "cumulative_by_product_type": [
@@ -1359,10 +1363,6 @@
     {
       "type": "Full",
       "files": 234
-    },
-    {
-      "type": "TCR-2",
-      "files": 71623
     }
   ],
   "cumulative_by_country": [
