@@ -271,6 +271,14 @@ def process_model(model_name, data_dir, cache, sample=None, dry_run=False):
         rc = result["reasoning_confidence"]
         print(f"    [{i+1}/{len(entries_to_process)}] sv={sv}, rc={rc} — {title[:50]}")
 
+        # Checkpoint periodically so partial progress survives interruption and
+        # re-runs resume from cache (important for large models / long runs).
+        if not dry_run and processed % 50 == 0:
+            with open(file_path, "w", encoding="utf-8") as f:
+                json.dump(data, f, indent=2, ensure_ascii=False)
+            save_cache(cache)
+            print(f"    ...checkpoint saved ({processed} processed)")
+
     print(f"  Done: {processed} processed, {skipped} from cache")
 
     if not dry_run:

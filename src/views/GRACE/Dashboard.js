@@ -9,6 +9,7 @@ import PaperInfo from '../../components/PaperInfo';
 import ModelInfoSection from '../../components/ModelInfoSection';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import ProductCatalogSection from '../../components/tropess/ProductCatalogSection';
 
 // Import section components
 import MetricsOverview from '../sections/MetricsOverview';
@@ -204,6 +205,13 @@ const GRACEDashboard = () => {
         <div className="grid grid-cols-1 gap-6 mb-6">
           <JournalDistributionCard data={graceData} />
         </div>
+
+        {/* Published data products (live PO.DAAC / CMR catalog) */}
+        <ProductCatalogSection
+          mission="GRACE"
+          sourceLabel="NASA PO.DAAC"
+          catalogUrl="https://podaac.jpl.nasa.gov/GRACE"
+        />
 
         <Footer isJEOE />
       </main>

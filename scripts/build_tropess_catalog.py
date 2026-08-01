@@ -31,17 +31,39 @@ import urllib.parse
 import urllib.request
 
 CMR = "https://cmr.earthdata.nasa.gov/search"
-COLLECTION_QUERY = {
-    "keyword": "TROPESS",
-    "provider": "GES_DISC",
-    "page_size": "250",
+SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+# Known missions -> CMR query + parsing style. TROPESS uses trace-gas species /
+# stream title parsing; other missions use provider-agnostic UMM fields.
+MISSIONS = {
+    "TROPESS": {
+        "keyword": "TROPESS",
+        "provider": "GES_DISC",
+        "parser": "tropess",
+        "catalog_url": "https://disc.gsfc.nasa.gov/datasets?keywords=tropess",
+        "source_label": "NASA GES DISC",
+    },
+    "GRACE": {
+        "keyword": "GRACE",
+        "provider": "POCLOUD",
+        "parser": "generic",
+        "catalog_url": "https://podaac.jpl.nasa.gov/GRACE",
+        "source_label": "NASA PO.DAAC",
+    },
+    "SWOT": {
+        "keyword": "SWOT",
+        "provider": "POCLOUD",
+        "parser": "generic",
+        "catalog_url": "https://podaac.jpl.nasa.gov/SWOT",
+        "source_label": "NASA PO.DAAC",
+    },
 }
 
-SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
-OUTPUT_JSON = os.path.abspath(
-    os.path.join(SCRIPT_DIR, "..", "public", "data", "TROPESS_catalog.json")
-)
-CATALOG_URL = "https://disc.gsfc.nasa.gov/datasets?keywords=tropess"
+
+def output_path(mission):
+    return os.path.abspath(
+        os.path.join(SCRIPT_DIR, "..", "public", "data", f"{mission}_catalog.json")
+    )
 
 # Long species name (as it appears in EntryTitle) -> short symbol.
 SPECIES_MAP = {
@@ -78,12 +100,13 @@ def cmr_hits(short_name, kind="granules"):
         return None
 
 
-def fetch_collections():
-    """Fetch all TROPESS GES DISC collections as UMM-JSON, paginating if needed."""
+def fetch_collections(keyword, provider):
+    """Fetch all matching collections as UMM-JSON, paginating if needed."""
     items = []
     search_after = None
+    query = {"keyword": keyword, "provider": provider, "page_size": "250"}
     while True:
-        qs = urllib.parse.urlencode(COLLECTION_QUERY)
+        qs = urllib.parse.urlencode(query)
         url = f"{CMR}/collections.umm_json?{qs}"
         headers = {"Accept": "application/json"}
         if search_after:
@@ -141,10 +164,44 @@ def parse_instrument_label(title):
     return "Other"
 
 
+def platform_from_umm(u):
+    """Concise platform label from UMM Platforms for generic missions.
+
+    Groups by platform short name (e.g. GRACE, GRACE-FO, MITgcm) rather than
+    the long multi-instrument combinations, which read poorly in a chart. When
+    multiple platforms are present, keeps the first two + an ellipsis.
+    """
+    platforms = []
+    for p in u.get("Platforms", []) or []:
+        pname = p.get("ShortName")
+        if pname and pname.upper() not in ("NOT APPLICABLE", "N/A"):
+            platforms.append(pname)
+    uniq = sorted(set(platforms))
+    if not uniq:
+        return "Other"
+    if len(uniq) <= 2:
+        return " / ".join(uniq)
+    return f"{uniq[0]} / {uniq[1]} / +{len(uniq) - 2}"
+
+
+def valid_start(iso):
+    """Reject placeholder start dates (e.g. 1900-01-01) that break the timeline."""
+    if not iso:
+        return None
+    year = iso[:4]
+    if year.isdigit() and int(year) < 1990:
+        return None
+    return iso
+
+
 def level_label(level_id):
+    if level_id == "1" or (level_id or "").startswith("1"):
+        return "L1 (raw/calibrated)"
     if level_id == "2":
         return "L2 (satellite)"
-    if level_id in ("3", "4"):
+    if level_id == "3":
+        return "L3 (gridded)"
+    if level_id == "4":
         return "L4 (assimilation)"
     return f"L{level_id}" if level_id else "Unknown"
 
@@ -157,13 +214,29 @@ def counter_to_list(counter, key_name):
 
 
 def main():
-    ap = argparse.ArgumentParser()
+    ap = argparse.ArgumentParser(description="Build a mission product catalog from NASA CMR.")
+    ap.add_argument("--mission", default="TROPESS",
+                    help="Mission name (TROPESS|GRACE|SWOT|...). Default TROPESS.")
+    ap.add_argument("--keyword", help="Override CMR keyword (default from mission config).")
+    ap.add_argument("--provider", help="Override CMR provider (default from mission config).")
+    ap.add_argument("--output", help="Override output JSON path.")
+    ap.add_argument("--catalog-url", help="Override the public catalog URL for the mission.")
     ap.add_argument("--with-granules", action="store_true",
                     help="Also fetch granule counts to estimate published volume (slow).")
     args = ap.parse_args()
 
-    print(f"Querying CMR for TROPESS collections ({CMR}) ...")
-    items = fetch_collections()
+    mission = args.mission.upper()
+    cfg = MISSIONS.get(mission, {})
+    keyword = args.keyword or cfg.get("keyword", mission)
+    provider = args.provider or cfg.get("provider", "GES_DISC")
+    parser_style = cfg.get("parser", "generic")
+    catalog_url = args.catalog_url or cfg.get("catalog_url", "")
+    source_label = cfg.get("source_label", provider)
+    out_path = os.path.abspath(args.output) if args.output else output_path(mission)
+
+    print(f"Querying CMR for {mission} collections "
+          f"(keyword={keyword}, provider={provider}) ...")
+    items = fetch_collections(keyword, provider)
     print(f"Fetched {len(items)} collections.")
     if not items:
         raise SystemExit("No collections returned from CMR.")
@@ -184,10 +257,18 @@ def main():
         title = u.get("EntryTitle", "")
         doi = (u.get("DOI") or {}).get("DOI")
         level = (u.get("ProcessingLevel") or {}).get("Id")
-        stream = classify_stream(title)
-        species = parse_species(title)
-        instrument = parse_instrument_label(title)
         llabel = level_label(level)
+
+        if parser_style == "tropess":
+            stream = classify_stream(title)
+            species = parse_species(title)
+            instrument = parse_instrument_label(title)
+        else:
+            # Generic missions: no trace-gas species / processing streams;
+            # group by platform (concise) from UMM metadata.
+            stream = None
+            species = None
+            instrument = platform_from_umm(u)
 
         # Temporal coverage
         start = end = None
@@ -195,7 +276,7 @@ def main():
         try:
             te = u["TemporalExtents"][0]
             rdt = te["RangeDateTimes"][0]
-            start = rdt.get("BeginningDateTime")
+            start = valid_start(rdt.get("BeginningDateTime"))
             end = rdt.get("EndingDateTime")
             ends_present = te.get("EndsAtPresentFlag", False)
         except (KeyError, IndexError, TypeError):
@@ -227,8 +308,10 @@ def main():
 
         by_level[llabel] = by_level.get(llabel, 0) + 1
         by_instrument[instrument] = by_instrument.get(instrument, 0) + 1
-        by_stream[stream] = by_stream.get(stream, 0) + 1
-        by_species[species] = by_species.get(species, 0) + 1
+        if stream is not None:
+            by_stream[stream] = by_stream.get(stream, 0) + 1
+        if species is not None:
+            by_species[species] = by_species.get(species, 0) + 1
 
         products.append({
             "short_name": sn,
@@ -275,8 +358,10 @@ def main():
 
     output = {
         "meta": {
-            "fetched_from": "NASA CMR (cmr.earthdata.nasa.gov), provider GES_DISC",
-            "catalog_url": CATALOG_URL,
+            "mission": mission,
+            "fetched_from": f"NASA CMR (cmr.earthdata.nasa.gov), provider {provider}",
+            "source_label": source_label,
+            "catalog_url": catalog_url,
             "total_products": len(products),
             "note": ("Live product catalog from CMR. Volume/file totals (when present) "
                      "are estimates from granule counts x average file size."),
@@ -286,8 +371,8 @@ def main():
         "products": products,
     }
 
-    os.makedirs(os.path.dirname(OUTPUT_JSON), exist_ok=True)
-    with open(OUTPUT_JSON, "w") as fh:
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w") as fh:
         json.dump(output, fh, indent=2)
 
     # --- Summary print -----------------------------------------------------
@@ -295,9 +380,10 @@ def main():
     print("By processing level:")
     for row in summary["by_level"]:
         print(f"  {row['level']:<20} {row['count']}")
-    print("By stream:")
-    for row in summary["by_stream"]:
-        print(f"  {row['stream']:<14} {row['count']}")
+    if summary["by_stream"]:
+        print("By stream:")
+        for row in summary["by_stream"]:
+            print(f"  {row['stream']:<14} {row['count']}")
     print("By instrument:")
     for row in summary["by_instrument"]:
         print(f"  {row['instrument']:<26} {row['count']}")
@@ -309,7 +395,7 @@ def main():
         print(f"Estimated published volume: {est_total_volume_gb/1024:.2f} TB")
     if missing:
         print(f"\nWARNING: {len(missing)} products missing DOI: {missing[:5]}")
-    print(f"\nWrote {OUTPUT_JSON}")
+    print(f"\nWrote {out_path}")
 
 
 if __name__ == "__main__":

@@ -111,16 +111,23 @@ const ScopeTimeline = ({ products }) => {
   );
 };
 
-const ProductCatalogSection = () => {
+const ProductCatalogSection = ({
+  mission = 'TROPESS',
+  dataFile,
+  catalogUrl = CATALOG_URL,
+  sourceLabel = 'NASA GES DISC',
+}) => {
   const [catalog, setCatalog] = useState(null);
   const [error, setError] = useState(null);
 
+  const file = dataFile || `${mission}_catalog.json`;
+
   useEffect(() => {
-    fetch(`${process.env.PUBLIC_URL}/data/TROPESS_catalog.json`)
+    fetch(`${process.env.PUBLIC_URL}/data/${file}`)
       .then((r) => { if (!r.ok) throw new Error(`HTTP ${r.status}`); return r.json(); })
       .then(setCatalog)
-      .catch((e) => { console.error('Failed to load TROPESS catalog:', e); setError(e.message); });
-  }, []);
+      .catch((e) => { console.error(`Failed to load ${mission} catalog:`, e); setError(e.message); });
+  }, [file, mission]);
 
   if (error) {
     return (
@@ -156,13 +163,13 @@ const ProductCatalogSection = () => {
             <div>
               <h2 className="text-2xl font-bold text-gray-900">Published Data Products</h2>
               <p className="text-gray-500 text-sm mt-1">
-                Live TROPESS product catalog from NASA GES DISC (via CMR)
+                Live {mission} product catalog from {sourceLabel} (via CMR)
               </p>
             </div>
           </div>
-          <a href={CATALOG_URL} target="_blank" rel="noopener noreferrer"
+          <a href={catalogUrl} target="_blank" rel="noopener noreferrer"
             className="inline-flex items-center gap-1 text-sm text-cyan-700 hover:text-cyan-900 whitespace-nowrap">
-            GES DISC <ExternalLink size={14} />
+            {sourceLabel.replace('NASA ', '')} <ExternalLink size={14} />
           </a>
         </div>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-5">
@@ -237,19 +244,21 @@ const ProductCatalogSection = () => {
       >
         <ScopeTimeline products={products} />
 
-        {/* Stream legend */}
-        <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600">
-          {summary.by_stream.map((s) => (
-            <span key={s.stream} className="inline-flex items-center gap-1">
-              <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: STREAM_COLORS[s.stream] || '#9ca3af' }} />
-              {s.stream}: {s.count}
-            </span>
-          ))}
-        </div>
+        {/* Stream legend (TROPESS only — generic missions have no streams) */}
+        {summary.by_stream?.length > 0 && (
+          <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600">
+            {summary.by_stream.map((s) => (
+              <span key={s.stream} className="inline-flex items-center gap-1">
+                <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: STREAM_COLORS[s.stream] || '#9ca3af' }} />
+                {s.stream}: {s.count}
+              </span>
+            ))}
+          </div>
+        )}
       </Card>
 
       <p className="text-xs text-gray-400 mt-2">
-        Source: NASA CMR (cmr.earthdata.nasa.gov), provider GES DISC. Product counts reflect the live catalog.
+        Source: NASA CMR (cmr.earthdata.nasa.gov), {sourceLabel}. Product counts reflect the live catalog.
       </p>
     </section>
   );

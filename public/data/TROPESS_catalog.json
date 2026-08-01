@@ -1,6 +1,8 @@
 {
   "meta": {
+    "mission": "TROPESS",
     "fetched_from": "NASA CMR (cmr.earthdata.nasa.gov), provider GES_DISC",
+    "source_label": "NASA GES DISC",
     "catalog_url": "https://disc.gsfc.nasa.gov/datasets?keywords=tropess",
     "total_products": 212,
     "note": "Live product catalog from CMR. Volume/file totals (when present) are estimates from granule counts x average file size."
