@@ -35,6 +35,8 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build --nojekyll --repo https://github.jpl.nasa.gov/kyun/jeme.git",
     "deploy:public": "gh-pages -d build --repo https://github.com/yunks128/jeme.git",
+    "build:nasa": "PUBLIC_URL=/JEME react-scripts build",
+    "deploy:nasa": "npm run build:nasa && gh-pages -d build --nojekyll --repo https://github.com/nasa-jpl/JEME.git",
     "build:gcp": "PUBLIC_URL=/science-model-dashboard react-scripts build",
     "auto-start": "bash scripts/auto-start.sh",
     "ensure-running": "bash scripts/auto-start.sh"

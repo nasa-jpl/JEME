@@ -41,28 +41,28 @@ const TYPE_COLORS = {
   Forward: '#3B82F6',
   Reanalysis: '#10B981',
   Special: '#F59E0B',
+  'TCR-2': '#8B5CF6',
 };
 
 const TYPE_DESCRIPTIONS = [
   { type: 'Forward', desc: 'Low-latency products' },
   { type: 'Reanalysis', desc: 'Long-term, global records' },
   { type: 'Special', desc: 'Regional records (megacities, fires)' },
+  { type: 'TCR-2', desc: 'Chemical reanalysis assimilation' },
 ];
 
-// Product tiers (Summary / Standard / Full). TCR-2 chemical-reanalysis
-// collections carry no tier, so they get a neutral color and their own row.
+// Product tiers. TCR-2 chemical-reanalysis collections carry no tier and are
+// reported under processing type instead, matching the JPL notebook.
 const PRODUCT_TYPE_COLORS = {
   Summary: '#06B6D4',
   Standard: '#3B82F6',
   Full: '#8B5CF6',
-  'TCR-2': '#9CA3AF',
 };
 
 const PRODUCT_TYPE_DESCRIPTIONS = [
   { type: 'Summary', desc: 'Quick-look products' },
   { type: 'Standard', desc: 'Scientific-analysis products' },
   { type: 'Full', desc: 'Scientific-analysis and diagnostic-analysis products' },
-  { type: 'TCR-2', desc: 'Chemical reanalysis (no Summary/Standard/Full tier)' },
 ];
 
 const TIMESERIES_SPECIES = ['CO', 'CH4', 'HDO', 'NH3', 'O3', 'PAN'];

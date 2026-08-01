@@ -93,27 +93,44 @@ COUNTRY_NAME_TO_ATLAS = {
 
 
 # Product tier encoded in the 5th character of the V1 short name
-# (TRPS<X>L2...): D -> Standard, Y -> Summary, F -> Full. Verified against the
-# "Standard/Summary/Full Product" wording in the lookup table's Long Name for
-# every product it lists. TRPSCR* are the chemical-reanalysis (TCR-2)
-# assimilation collections, which carry no Summary/Standard/Full tier.
+# (TRPS<X>L2...): D -> Standard, Y -> Summary, F -> Full. Matches the
+# `product_type` column of tropess-product-specification-2.9.2.xlsx (and the
+# "Standard/Summary/Full Product" wording in the lookup table's Long Name).
+#
+# TRPSCR* are the chemical-reanalysis collections, whose spec product_type is
+# `tcr3`. Following download_statistic_plots.ipynb, they are EXCLUDED from the
+# product-type breakdown -- they are not a Summary/Standard/Full tier -- and
+# instead appear as their own TCR-2 processing type.
 PRODUCT_TYPE_BY_CODE = {"D": "Standard", "Y": "Summary", "F": "Full"}
-PRODUCT_TYPE_ORDER = ["Summary", "Standard", "Full", "TCR-2"]
+PRODUCT_TYPE_ORDER = ["Summary", "Standard", "Full"]
 
 
 def classify_product_type(code):
-    """Derive the product tier (Summary / Standard / Full) from a product code."""
+    """Derive the product tier (Summary / Standard / Full) from a product code.
+
+    Returns "TCR" for the chemical-reanalysis collections, which the
+    product-type aggregation then drops.
+    """
     code = str(code)
     if code.startswith("TRPSCR"):
-        return "TCR-2"
+        return "TCR"
     if len(code) > 4:
         return PRODUCT_TYPE_BY_CODE.get(code[4], "Unknown")
     return "Unknown"
 
 
-def classify_stream(long_name):
-    """Derive processing stream from a product Long Name."""
+def classify_stream(long_name, code=None):
+    """Derive processing stream from a product Long Name (and code).
+
+    TCR-2 is checked first: its Long Name contains "Chemical Reanalysis", so it
+    would otherwise be swallowed by the Reanalysis branch. The notebook keeps
+    TCR-2 as a separate stream alongside Forward / Reanalysis / Special.
+    """
+    if code is not None and str(code).startswith("TRPSCR"):
+        return "TCR-2"
     ln = str(long_name)
+    if "Chemical Reanalysis" in ln:
+        return "TCR-2"
     if "Reanalysis" in ln:
         return "Reanalysis"
     if "Forward Stream" in ln:
@@ -136,7 +153,7 @@ def load_lookup():
     for _, row in lk.iterrows():
         code = str(row["V1Name"]).strip()
         species = str(row["Species"]).strip()
-        stream = classify_stream(row["LongName"])
+        stream = classify_stream(row["LongName"], code)
         city = None
         if species.startswith("MC-"):
             stream = "Special"
@@ -149,11 +166,16 @@ def decode_from_code(code):
     """Fallback classifier for product codes missing from the lookup table.
 
     Handles the naming convention directly:
+      * TRPSCR*                -> chemical reanalysis, TCR-2 stream
       * ...MG<CITY>            -> megacity, Special stream
       * TRPS?L2<SPECIES>CRS..FS -> Forward stream, species from the token
     Returns a dict like the lookup values, or None if it can't be decoded.
     """
     code = str(code)
+
+    # Chemical reanalysis: its own stream, no Summary/Standard/Full tier.
+    if code.startswith("TRPSCR"):
+        return {"species": "TCR-2", "stream": "TCR-2", "city": None}
 
     # Megacity: last five chars encode the city.
     for mg, city in MEGACITY_CODES.items():
@@ -330,7 +352,7 @@ def main():
 
     # --- Slide 6: cumulative downloads (files) by processing type ----------
     by_type = df.groupby("stream")["Files"].sum()
-    type_order = ["Forward", "Reanalysis", "Special"]
+    type_order = ["Forward", "Reanalysis", "Special", "TCR-2"]
     cumulative_by_type = [
         {"type": t, "files": int(by_type.get(t, 0))}
         for t in type_order
@@ -338,6 +360,8 @@ def main():
     ]
 
     # --- Cumulative downloads (files) by product type -----------------------
+    # Summary / Standard / Full only. TCR is excluded here (it is reported as
+    # its own processing type), matching download_statistic_plots.ipynb.
     by_product_type = df.groupby("product_type")["Files"].sum()
     cumulative_by_product_type = [
         {"type": t, "files": int(by_product_type.get(t, 0))}
