@@ -1,6 +1,10 @@
-// TROPESS Mission Dashboard
+// TROPESS Paper Publications dashboard.
+//
+// Audience: science-impact readers — citations, research domains, engagement.
+// The published product catalog and download metrics live on the companion
+// page at /TROPESS/data-products.
 import React, { useState, useEffect } from 'react';
-import { ExternalLink, Database, Globe, BarChart3, ShieldCheck, Satellite } from 'lucide-react';
+import { ExternalLink, Database, Globe, BarChart3, ShieldCheck } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import NavBar from '../../components/NavBar';
 
@@ -24,7 +28,7 @@ import MissionsSummary from '../../components/MissionsSummary';
 import UncertaintyOverviewCard from '../../components/charts/UncertaintyOverviewCard';
 import UncertaintyMatrixCard from '../../components/charts/UncertaintyMatrixCard';
 import PaperTypeCard from '../../components/charts/PaperTypeCard';
-import MonthlyReportSection from '../../components/tropess/MonthlyReportSection';
+import TropessPageTabs from '../../components/tropess/TropessPageTabs';
 
 const TROPESSDashboard = () => {
   const [tropessData, setTropessData] = useState([]);
@@ -42,73 +46,13 @@ const TROPESSDashboard = () => {
     loadData();
   }, []);
 
-  const missions = [
-    {
-      name: "GRACE",
-      icon: <Satellite size={20} style={{ color: '#D946EF' }} />,
-      description: "Gravity Recovery and Climate Experiment - Tracking changes in Earth's gravity field to monitor water storage, ice mass, and sea level",
-      link: "/GRACE"
-    },
-    {
-      name: "SWOT",
-      icon: <Satellite size={20} style={{ color: '#F59E0B' }} />,
-      description: "Surface Water and Ocean Topography - Ka-band radar interferometry for water surface elevation measurements",
-      link: "/SWOT"
-    },
-    {
-      name: "TROPESS",
-      icon: <Satellite size={20} style={{ color: '#0EA5E9' }} />,
-      description: "TROPospheric Emission Spectrometer System - Multi-instrument retrievals of CO, CH4, NH3, O3, PAN, HDO/H2O from CrIS and AIRS via the MUSES algorithm",
-      link: "/TROPESS"
-    }
-  ];
-
   return (
     <div className="bg-gray-100 min-h-screen">
       <NavBar activeItem="TROPESS" />
 
       <main className="max-w-7xl mx-auto px-4 py-6">
 
-        {/* JEOE Missions Section */}
-        <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
-          <div className="mb-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-2">JEOE Missions</h2>
-            <p className="text-gray-600">
-              NASA Earth observation missions tracked by the JPL Earth Observation Enterprise
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            {missions.map((mission, index) => (
-              <Link
-                key={index}
-                to={mission.link}
-                className={`group p-4 border rounded-lg hover:border-sky-300 hover:shadow-md transition-all duration-200 ${
-                  mission.name === 'TROPESS' ? 'border-sky-300 bg-sky-50' : 'border-gray-200'
-                }`}
-              >
-                <div className="flex items-start gap-3">
-                  <div className={`p-2 rounded-lg transition-colors ${
-                    mission.name === 'TROPESS' ? 'bg-sky-100' : 'bg-gray-50 group-hover:bg-sky-50'
-                  }`}>
-                    {mission.icon}
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className={`font-semibold transition-colors ${
-                      mission.name === 'TROPESS' ? 'text-sky-900' : 'text-gray-900 group-hover:text-sky-900'
-                    }`}>
-                      {mission.name}
-                    </h3>
-                    <p className="text-sm text-gray-600 mt-1 leading-relaxed">
-                      {mission.description}
-                    </p>
-                  </div>
-                </div>
-              </Link>
-            ))}
-          </div>
-
-        </div>
+        <TropessPageTabs active="publications" />
 
         <ModelInfoSection modelName="TROPESS" modelDisplayName="TROPESS" />
         <PaperInfo modelName="TROPESS" />
@@ -211,9 +155,6 @@ const TROPESSDashboard = () => {
             <UncertaintyMatrixCard data={tropessData} />
           </div>
         )}
-
-        {/* Monthly Download Report — includes published products (slides 1-2) + downloads (3-7) */}
-        <MonthlyReportSection />
 
         <Footer isJEOE />
       </main>

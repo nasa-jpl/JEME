@@ -30,6 +30,7 @@ import EDMFDashboard from './views/EDMF/Dashboard';
 import GRACEDashboard from './views/GRACE/Dashboard';
 import SWOTDashboard from './views/SWOT/Dashboard';
 import TROPESSDashboard from './views/TROPESS/Dashboard';
+import TROPESSDataProducts from './views/TROPESS/DataProducts';
 import JEOEDashboard from './views/JEOEDashboard';
 
 // Uncertainty Analysis page
@@ -70,6 +71,9 @@ function AppWithRouting() {
         <Route path="/GRACE" element={<GRACEDashboard />} />
         <Route path="/SWOT" element={<SWOTDashboard />} />
         <Route path="/TROPESS" element={<TROPESSDashboard />} />
+        {/* TROPESS splits into two audience-specific pages: publications (above)
+            and data products / downloads (below). */}
+        <Route path="/TROPESS/data-products" element={<TROPESSDataProducts />} />
 
         {/* Earth System Interconnections page */}
         <Route path="/earth-system" element={<EarthSystemPage />} />

@@ -7,10 +7,10 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import {
-  ComposedChart, LineChart, BarChart, Bar, Line, Cell, ReferenceLine, LabelList,
+  ComposedChart, LineChart, BarChart, Bar, Line, Area, Cell, ReferenceLine, LabelList,
   PieChart, Pie, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer,
 } from 'recharts';
-import { Download, Database, Globe, Layers, Building2 } from 'lucide-react';
+import { Download, Database, Globe, Layers, Building2, TrendingUp, Boxes } from 'lucide-react';
 import CountryVolumeMap from './CountryVolumeMap';
 import ProductCatalogSection from './ProductCatalogSection';
 
@@ -47,6 +47,22 @@ const TYPE_DESCRIPTIONS = [
   { type: 'Forward', desc: 'Low-latency products' },
   { type: 'Reanalysis', desc: 'Long-term, global records' },
   { type: 'Special', desc: 'Regional records (megacities, fires)' },
+];
+
+// Product tiers (Summary / Standard / Full). TCR-2 chemical-reanalysis
+// collections carry no tier, so they get a neutral color and their own row.
+const PRODUCT_TYPE_COLORS = {
+  Summary: '#06B6D4',
+  Standard: '#3B82F6',
+  Full: '#8B5CF6',
+  'TCR-2': '#9CA3AF',
+};
+
+const PRODUCT_TYPE_DESCRIPTIONS = [
+  { type: 'Summary', desc: 'Quick-look products' },
+  { type: 'Standard', desc: 'Scientific-analysis products' },
+  { type: 'Full', desc: 'Scientific-analysis and diagnostic-analysis products' },
+  { type: 'TCR-2', desc: 'Chemical reanalysis (no Summary/Standard/Full tier)' },
 ];
 
 const TIMESERIES_SPECIES = ['CO', 'CH4', 'HDO', 'NH3', 'O3', 'PAN'];
@@ -113,6 +129,23 @@ const MonthlyReportSection = () => {
     [report]
   );
 
+  // Running total through each month. Falls back to a client-side cumulative
+  // sum over `monthly` if the JSON predates the `cumulative` aggregation.
+  const cumulativeChart = useMemo(() => {
+    const series = report?.cumulative?.length
+      ? report.cumulative
+      : (() => {
+        let files = 0;
+        let volume = 0;
+        return (report?.monthly || []).map((m) => {
+          files += m.files;
+          volume += m.volume_tb;
+          return { month: m.month, files, volume_tb: volume };
+        });
+      })();
+    return series.map((m) => ({ ...m, label: formatMonth(m.month) }));
+  }, [report]);
+
   const speciesChart = useMemo(
     () => (report?.monthly_by_species || []).map((m) => ({
       ...m,
@@ -168,6 +201,14 @@ const MonthlyReportSection = () => {
   })();
 
   const pctLabel = (v) => `${v.toFixed(1)}%`;
+
+  // Product-tier data with percentage labels. "Full" is a very small slice, so
+  // the table below the pie is what makes its count readable.
+  const productTypeData = (() => {
+    const rows = report.cumulative_by_product_type || [];
+    const total = rows.reduce((s, t) => s + t.files, 0) || 1;
+    return rows.map((t) => ({ ...t, pct: (t.files / total) * 100 }));
+  })();
 
   // Country pie data with percentage labels (mirrors deck slide 7).
   const countryPieData = (() => {
@@ -278,6 +319,51 @@ const MonthlyReportSection = () => {
             ))}
           </div>
         )}
+      </Card>
+
+      {/* Cumulative downloads in time (running total, not per-month) */}
+      <Card
+        title="Cumulative Downloads in Time"
+        subtitle={`Running total of files downloaded and volume delivered since ${rangeStart}`}
+        icon={<TrendingUp size={18} className="text-sky-600" />}
+        className="mb-6"
+      >
+        <ResponsiveContainer width="100%" height={320}>
+          <ComposedChart data={cumulativeChart} margin={{ top: 10, right: 20, left: 0, bottom: 0 }}>
+            <defs>
+              <linearGradient id="cumFilesFill" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stopColor="#3B82F6" stopOpacity={0.35} />
+                <stop offset="100%" stopColor="#3B82F6" stopOpacity={0.04} />
+              </linearGradient>
+            </defs>
+            <CartesianGrid strokeDasharray="3 3" stroke="#e5e7eb" />
+            <XAxis
+              dataKey="label"
+              tick={{ fontSize: 11 }}
+              interval={monthTickInterval(cumulativeChart.length)}
+            />
+            <YAxis yAxisId="left" tick={{ fontSize: 11 }} tickFormatter={formatFiles}
+              label={{ value: 'Cumulative files', angle: -90, position: 'insideLeft', style: { fontSize: 11, fill: '#6b7280' } }} />
+            <YAxis yAxisId="right" orientation="right" tick={{ fontSize: 11 }}
+              label={{ value: 'Cumulative volume (TB)', angle: 90, position: 'insideRight', style: { fontSize: 11, fill: '#6b7280' } }} />
+            <Tooltip
+              formatter={(value, name) =>
+                name === 'Cumulative volume (TB)'
+                  ? [`${Number(value).toFixed(2)} TB`, name]
+                  : [`${Number(value).toLocaleString()} files`, name]
+              }
+            />
+            <Legend wrapperStyle={{ fontSize: 12 }} />
+            <Area yAxisId="left" type="monotone" dataKey="files" name="Cumulative files"
+              stroke="#3B82F6" strokeWidth={2} fill="url(#cumFilesFill)" />
+            <Line yAxisId="right" type="monotone" dataKey="volume_tb" name="Cumulative volume (TB)"
+              stroke="#EF4444" strokeWidth={2} dot={false} />
+          </ComposedChart>
+        </ResponsiveContainer>
+        <p className="text-xs text-gray-500 mt-2">
+          Each point sums every month up to and including that month, so the curve only rises;
+          a steeper slope means a faster download rate.
+        </p>
       </Card>
 
       {/* Slide 4: monthly volume by species */}
@@ -419,6 +505,71 @@ const MonthlyReportSection = () => {
           </div>
         </div>
       </Card>
+
+      {/* Cumulative downloads by product type (Summary / Standard / Full) */}
+      {productTypeData.length > 0 && (
+        <Card
+          title="Cumulative Downloads by Product Type"
+          subtitle={`Files downloaded · ${rangeStart} – ${rangeEnd}`}
+          icon={<Boxes size={18} className="text-sky-600" />}
+          className="mb-6"
+        >
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+            <ResponsiveContainer width="100%" height={280}>
+              <PieChart>
+                <Pie
+                  data={productTypeData}
+                  dataKey="files"
+                  nameKey="type"
+                  cx="50%"
+                  cy="50%"
+                  outerRadius={100}
+                  label={({ name, percent }) =>
+                    (percent > 0.02 ? `${name} ${(percent * 100).toFixed(1)}%` : '')}
+                  labelLine={false}
+                >
+                  {productTypeData.map((entry) => (
+                    <Cell key={entry.type} fill={PRODUCT_TYPE_COLORS[entry.type] || '#9ca3af'} />
+                  ))}
+                </Pie>
+                <Tooltip formatter={(value, name, props) =>
+                  [`${Number(value).toLocaleString()} files (${props.payload.pct.toFixed(2)}%)`, 'Downloads']} />
+              </PieChart>
+            </ResponsiveContainer>
+            <div>
+              <table className="w-full text-sm">
+                <thead>
+                  <tr className="text-left text-gray-500 border-b">
+                    <th className="py-2 font-medium">Product Type</th>
+                    <th className="py-2 font-medium">Description</th>
+                    <th className="py-2 font-medium text-right">Downloads</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {PRODUCT_TYPE_DESCRIPTIONS.map(({ type, desc }) => {
+                    const row = productTypeData.find((t) => t.type === type);
+                    if (!row) return null;
+                    return (
+                      <tr key={type} className="border-b last:border-0">
+                        <td className="py-2 whitespace-nowrap">
+                          <span className="inline-flex items-center gap-2">
+                            <span className="w-3 h-3 rounded-sm" style={{ backgroundColor: PRODUCT_TYPE_COLORS[type] }} />
+                            {type}
+                          </span>
+                        </td>
+                        <td className="py-2 text-gray-600">{desc}</td>
+                        <td className="py-2 text-right font-medium">
+                          {row.files.toLocaleString()}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </Card>
+      )}
 
       {/* Slide 7: cumulative downloads by country */}
       <Card

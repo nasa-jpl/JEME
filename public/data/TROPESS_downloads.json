@@ -403,6 +403,293 @@
       "volume_tb": 3.5225
     }
   ],
+  "cumulative": [
+    {
+      "month": "2021-10",
+      "files": 135,
+      "volume_tb": 0.0062
+    },
+    {
+      "month": "2021-11",
+      "files": 455,
+      "volume_tb": 0.0219
+    },
+    {
+      "month": "2021-12",
+      "files": 752,
+      "volume_tb": 0.0385
+    },
+    {
+      "month": "2022-01",
+      "files": 2207,
+      "volume_tb": 0.0939
+    },
+    {
+      "month": "2022-02",
+      "files": 3757,
+      "volume_tb": 0.1455
+    },
+    {
+      "month": "2022-03",
+      "files": 4817,
+      "volume_tb": 0.2239
+    },
+    {
+      "month": "2022-04",
+      "files": 8236,
+      "volume_tb": 0.4779
+    },
+    {
+      "month": "2022-05",
+      "files": 10143,
+      "volume_tb": 0.5298
+    },
+    {
+      "month": "2022-06",
+      "files": 11521,
+      "volume_tb": 0.5953
+    },
+    {
+      "month": "2022-07",
+      "files": 11573,
+      "volume_tb": 0.5983
+    },
+    {
+      "month": "2022-08",
+      "files": 12688,
+      "volume_tb": 0.6261
+    },
+    {
+      "month": "2022-09",
+      "files": 13348,
+      "volume_tb": 0.6312
+    },
+    {
+      "month": "2022-10",
+      "files": 13470,
+      "volume_tb": 0.6366
+    },
+    {
+      "month": "2022-11",
+      "files": 13559,
+      "volume_tb": 0.6375
+    },
+    {
+      "month": "2022-12",
+      "files": 13889,
+      "volume_tb": 0.654
+    },
+    {
+      "month": "2023-01",
+      "files": 14625,
+      "volume_tb": 0.6755
+    },
+    {
+      "month": "2023-02",
+      "files": 16366,
+      "volume_tb": 0.6832
+    },
+    {
+      "month": "2023-03",
+      "files": 20834,
+      "volume_tb": 0.7841
+    },
+    {
+      "month": "2023-04",
+      "files": 24242,
+      "volume_tb": 0.9179
+    },
+    {
+      "month": "2023-05",
+      "files": 30498,
+      "volume_tb": 0.9629
+    },
+    {
+      "month": "2023-06",
+      "files": 33305,
+      "volume_tb": 1.0564
+    },
+    {
+      "month": "2023-07",
+      "files": 35210,
+      "volume_tb": 1.117
+    },
+    {
+      "month": "2023-08",
+      "files": 49928,
+      "volume_tb": 1.2358
+    },
+    {
+      "month": "2023-09",
+      "files": 51328,
+      "volume_tb": 1.2606
+    },
+    {
+      "month": "2023-10",
+      "files": 54498,
+      "volume_tb": 1.3767
+    },
+    {
+      "month": "2023-11",
+      "files": 83402,
+      "volume_tb": 1.5965
+    },
+    {
+      "month": "2023-12",
+      "files": 110978,
+      "volume_tb": 2.3037
+    },
+    {
+      "month": "2024-01",
+      "files": 121814,
+      "volume_tb": 2.4577
+    },
+    {
+      "month": "2024-02",
+      "files": 150328,
+      "volume_tb": 3.1491
+    },
+    {
+      "month": "2024-03",
+      "files": 210053,
+      "volume_tb": 3.898
+    },
+    {
+      "month": "2024-04",
+      "files": 235058,
+      "volume_tb": 4.2086
+    },
+    {
+      "month": "2024-05",
+      "files": 272435,
+      "volume_tb": 5.4967
+    },
+    {
+      "month": "2024-06",
+      "files": 342335,
+      "volume_tb": 6.4131
+    },
+    {
+      "month": "2024-07",
+      "files": 416602,
+      "volume_tb": 7.1975
+    },
+    {
+      "month": "2024-08",
+      "files": 578117,
+      "volume_tb": 7.6459
+    },
+    {
+      "month": "2024-09",
+      "files": 643381,
+      "volume_tb": 8.6419
+    },
+    {
+      "month": "2024-10",
+      "files": 657239,
+      "volume_tb": 8.9618
+    },
+    {
+      "month": "2024-11",
+      "files": 678880,
+      "volume_tb": 10.3053
+    },
+    {
+      "month": "2024-12",
+      "files": 687042,
+      "volume_tb": 12.0358
+    },
+    {
+      "month": "2025-01",
+      "files": 715012,
+      "volume_tb": 12.7412
+    },
+    {
+      "month": "2025-02",
+      "files": 737583,
+      "volume_tb": 13.4947
+    },
+    {
+      "month": "2025-03",
+      "files": 809584,
+      "volume_tb": 13.9049
+    },
+    {
+      "month": "2025-04",
+      "files": 854965,
+      "volume_tb": 14.6093
+    },
+    {
+      "month": "2025-05",
+      "files": 911252,
+      "volume_tb": 15.3981
+    },
+    {
+      "month": "2025-06",
+      "files": 961389,
+      "volume_tb": 16.7001
+    },
+    {
+      "month": "2025-07",
+      "files": 994238,
+      "volume_tb": 18.8643
+    },
+    {
+      "month": "2025-08",
+      "files": 1043843,
+      "volume_tb": 20.0532
+    },
+    {
+      "month": "2025-09",
+      "files": 1075109,
+      "volume_tb": 21.0702
+    },
+    {
+      "month": "2025-10",
+      "files": 1109131,
+      "volume_tb": 22.6292
+    },
+    {
+      "month": "2025-11",
+      "files": 1140196,
+      "volume_tb": 24.1984
+    },
+    {
+      "month": "2025-12",
+      "files": 1167213,
+      "volume_tb": 25.2147
+    },
+    {
+      "month": "2026-01",
+      "files": 1261350,
+      "volume_tb": 25.8135
+    },
+    {
+      "month": "2026-02",
+      "files": 1284056,
+      "volume_tb": 26.567
+    },
+    {
+      "month": "2026-03",
+      "files": 1331154,
+      "volume_tb": 28.4774
+    },
+    {
+      "month": "2026-04",
+      "files": 1407584,
+      "volume_tb": 29.481
+    },
+    {
+      "month": "2026-05",
+      "files": 1444745,
+      "volume_tb": 30.2745
+    },
+    {
+      "month": "2026-06",
+      "files": 1605457,
+      "volume_tb": 33.797
+    }
+  ],
   "monthly_by_species": [
     {
       "month": "2021-10",
@@ -1058,6 +1345,24 @@
     {
       "type": "Special",
       "files": 478184
+    }
+  ],
+  "cumulative_by_product_type": [
+    {
+      "type": "Summary",
+      "files": 858811
+    },
+    {
+      "type": "Standard",
+      "files": 674789
+    },
+    {
+      "type": "Full",
+      "files": 234
+    },
+    {
+      "type": "TCR-2",
+      "files": 71623
     }
   ],
   "cumulative_by_country": [

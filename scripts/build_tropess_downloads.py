@@ -15,6 +15,11 @@ Aggregations map to slides 3-7 of TROPESS_Data_Download_Metrics.pptx. Slides
   Slide 6 -> cumulative_by_type (Forward / Reanalysis / Special, files)
   Slide 7 -> cumulative_by_country (files, small countries grouped as "Other")
 
+Two additional aggregations (not in the deck) support the dashboard's
+Data Products page:
+  cumulative           -> running total of files / volume through each month
+  cumulative_by_product_type -> Summary / Standard / Full product tiers (files)
+
 Early history (2021-2022 and the 2023 gap in the CSVs) is backfilled from the
 "Product Download Full Record" sheet of the lookup xlsx, which matches the CSVs
 exactly on overlapping months.
@@ -85,6 +90,25 @@ COUNTRY_NAME_TO_ATLAS = {
     # Not present as polygons in the 110m atlas (city-states / small islands):
     # Hong Kong, Singapore, Mauritius -> left unmapped (still shown in the bar list).
 }
+
+
+# Product tier encoded in the 5th character of the V1 short name
+# (TRPS<X>L2...): D -> Standard, Y -> Summary, F -> Full. Verified against the
+# "Standard/Summary/Full Product" wording in the lookup table's Long Name for
+# every product it lists. TRPSCR* are the chemical-reanalysis (TCR-2)
+# assimilation collections, which carry no Summary/Standard/Full tier.
+PRODUCT_TYPE_BY_CODE = {"D": "Standard", "Y": "Summary", "F": "Full"}
+PRODUCT_TYPE_ORDER = ["Summary", "Standard", "Full", "TCR-2"]
+
+
+def classify_product_type(code):
+    """Derive the product tier (Summary / Standard / Full) from a product code."""
+    code = str(code)
+    if code.startswith("TRPSCR"):
+        return "TCR-2"
+    if len(code) > 4:
+        return PRODUCT_TYPE_BY_CODE.get(code[4], "Unknown")
+    return "Unknown"
 
 
 def classify_stream(long_name):
@@ -228,6 +252,7 @@ def main():
     df["species"] = resolved.map(lambda r: r["species"])
     df["stream"] = resolved.map(lambda r: r["stream"])
     df["city"] = resolved.map(lambda r: r["city"])
+    df["product_type"] = df["Product"].astype(str).map(classify_product_type)
     df["month"] = df["Date"].dt.strftime("%Y-%m")
 
     # Continuous month index (fills the gap where the CSVs have no data, e.g.
@@ -249,6 +274,21 @@ def main():
          "volume_tb": round_tb(monthly.loc[m, "volume_tb"])}
         for m in all_months
     ]
+
+    # --- Cumulative downloads in time (running total through each month) ----
+    # Distinct from `monthly`: each point is the sum of every month up to and
+    # including that month, so the series only ever goes up.
+    cum_files = 0
+    cum_volume = 0.0
+    cumulative_out = []
+    for m in all_months:
+        cum_files += int(monthly.loc[m, "files"])
+        cum_volume += float(monthly.loc[m, "volume_tb"])
+        cumulative_out.append({
+            "month": m,
+            "files": cum_files,
+            "volume_tb": round_tb(cum_volume),
+        })
 
     # --- Slide 4: monthly volume (GB) by featured species ------------------
     spec_df = df[df["species"].isin(TIMESERIES_SPECIES)]
@@ -295,6 +335,14 @@ def main():
         {"type": t, "files": int(by_type.get(t, 0))}
         for t in type_order
         if by_type.get(t, 0) > 0
+    ]
+
+    # --- Cumulative downloads (files) by product type -----------------------
+    by_product_type = df.groupby("product_type")["Files"].sum()
+    cumulative_by_product_type = [
+        {"type": t, "files": int(by_product_type.get(t, 0))}
+        for t in PRODUCT_TYPE_ORDER
+        if by_product_type.get(t, 0) > 0
     ]
 
     # --- Slide 7: cumulative downloads (files) by country ("Other") --------
@@ -353,10 +401,12 @@ def main():
         "meta": meta,
         "annotations": annotations,
         "monthly": monthly_out,
+        "cumulative": cumulative_out,
         "monthly_by_species": monthly_by_species,
         "cumulative_by_species": cumulative_by_species,
         "cumulative_by_megacity": cumulative_by_megacity,
         "cumulative_by_type": cumulative_by_type,
+        "cumulative_by_product_type": cumulative_by_product_type,
         "cumulative_by_country": cumulative_by_country,
         "country_map": country_map,
     }
@@ -375,6 +425,9 @@ def main():
     print(f"Total download volume: {meta['total_volume_tb']:.2f} TB")
     print("Downloads by processing type (files):")
     for item in cumulative_by_type:
+        print(f"  {item['type']:<12} {item['files']:,}")
+    print("Downloads by product type (files):")
+    for item in cumulative_by_product_type:
         print(f"  {item['type']:<12} {item['files']:,}")
     print(f"Megacities: {[c['city'] for c in cumulative_by_megacity]}")
     if unmapped:
