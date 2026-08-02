@@ -1,6 +1,126 @@
 {
   "ISSM": [
     {
+      "authors": "Goldberg, D. N., Morlighem, M., Gourmelen, N.",
+      "title": "Recent Observations of Thwaites Glacier, West Antarctica Are Consistent With High Rates of Loss in Next 50 Years",
+      "journal": "Geophysical Research Letters",
+      "year": 2026,
+      "doi": "10.1029/2025GL118823",
+      "link": "https://doi.org/10.1029/2025GL118823"
+    },
+    {
+      "authors": "Hossan, A., Colliander, A., Vandecrux, B., Schlegel, N., Harper, J., Marshall, S., et al.",
+      "title": "Retrieval and validation of total seasonal liquid water amounts in the percolation zone of the Greenland ice sheet using L-band radiometry",
+      "journal": "The Cryosphere",
+      "year": 2025,
+      "doi": "10.5194/tc-19-4237-2025",
+      "link": "https://doi.org/10.5194/tc-19-4237-2025"
+    },
+    {
+      "authors": "Koo, Y., Cheng, G., Morlighem, M., Rahnemoonfar, M.",
+      "title": "Calibrating calving parameterizations using graph neural network emulators: application to Helheim Glacier, East Greenland",
+      "journal": "The Cryosphere",
+      "year": 2025,
+      "doi": "10.5194/tc-19-2583-2025",
+      "link": "https://doi.org/10.5194/tc-19-2583-2025"
+    },
+    {
+      "authors": "Cheng, G., Krishna, M., Morlighem, M.",
+      "title": "A Python library for solving ice sheet modeling problems  using physics-informed neural networks, PINNICLE v1.0",
+      "journal": "Geoscientific Model Development",
+      "year": 2025,
+      "doi": "10.5194/gmd-18-5311-2025",
+      "link": "https://doi.org/10.5194/gmd-18-5311-2025"
+    },
+    {
+      "authors": "Akins, A. B., Tanner, A. B., Colliander, A., Schlegel, N., Boudad, K., Yanovsky, I., et al.",
+      "title": "A Sparse Synthetic Aperture Radiometer Constellation Concept for Remote Sensing of Antarctic Ice Sheet Temperature",
+      "journal": "IEEE Transactions on Geoscience and Remote Sensing",
+      "year": 2025,
+      "doi": "10.1109/TGRS.2025.3534466",
+      "link": "https://doi.org/10.1109/TGRS.2025.3534466"
+    },
+    {
+      "authors": "Barnett, J., Holmes, F. A., Cuzzone, J., Åkesson, H., Morlighem, M., O'Regan, M., et al.",
+      "title": "Simulating the Holocene evolution of Ryder Glacier, North Greenland",
+      "journal": "",
+      "year": 2025,
+      "doi": "10.5194/egusphere-2025-653",
+      "link": "https://doi.org/10.5194/egusphere-2025-653"
+    },
+    {
+      "authors": "Ehrenfeucht, S., Dow, C., McArthur, K., Morlighem, M., McCormack, F. S.",
+      "title": "Antarctic Wide Subglacial Hydrology Modeling",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL111386",
+      "link": "https://doi.org/10.1029/2024GL111386"
+    },
+    {
+      "authors": "Baldacchino, F., Golledge, N. R., Morlighem, M., Horgan, H., Alevropoulos-Borrill, A. V., Malyarenko, A., et al.",
+      "title": "Modelling GNSS-observed seasonal velocity changes of the Ross Ice Shelf, Antarctica, using the Ice-sheet and Sea-level System Model (ISSM)",
+      "journal": "The Cryosphere",
+      "year": 2025,
+      "doi": "10.5194/tc-19-107-2025",
+      "link": "https://doi.org/10.5194/tc-19-107-2025"
+    },
+    {
+      "authors": "Aretz, N., Gunzburger, M., Morlighem, M., Willcox, K.",
+      "title": "Multifidelity uncertainty quantification for ice sheet simulations",
+      "journal": "Computational Geosciences",
+      "year": 2025,
+      "doi": "10.1007/s10596-024-10329-3",
+      "link": "https://doi.org/10.1007/s10596-024-10329-3"
+    },
+    {
+      "authors": "Getraer, B., Morlighem, M.",
+      "title": "Increasing the Glen–Nye Power‐Law Exponent Accelerates Ice‐Loss Projections for the Amundsen Sea Embayment, West Antarctica",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL112516",
+      "link": "https://doi.org/10.1029/2024GL112516"
+    },
+    {
+      "authors": "Cuzzone, J. K., Barth, A., Barker, K., Morlighem, M.",
+      "title": "Ice sheet model simulations reveal that polythermal ice conditions existed across the northeastern USA during the Last Glacial Maximum",
+      "journal": "The Cryosphere",
+      "year": 2025,
+      "doi": "10.5194/tc-19-1559-2025",
+      "link": "https://doi.org/10.5194/tc-19-1559-2025"
+    },
+    {
+      "authors": "Badgeley, J. A., Morlighem, M., Seroussi, H.",
+      "title": "Increased sea-level contribution from northwestern Greenland for models that reproduce observations",
+      "journal": "Proceedings of the National Academy of Sciences",
+      "year": 2025,
+      "doi": "10.1073/pnas.2411904122",
+      "link": "https://doi.org/10.1073/pnas.2411904122"
+    },
+    {
+      "authors": "Lippert, E. Y. H., Morlighem, M., Cheng, G., Berg, D. L., Hassan, J., Khan, S. A.",
+      "title": "Ice Front and Mélange Dynamics at Kangerlussuaq Glacier, Eastern Greenland, Since 1981, and Future Stability",
+      "journal": "Geophysical Research Letters",
+      "year": 2025,
+      "doi": "10.1029/2024GL113982",
+      "link": "https://doi.org/10.1029/2024GL113982"
+    },
+    {
+      "authors": "Holmes, F. A., Barnett, J., Åkesson, H., Morlighem, M., Nilsson, J., Kirchner, N., et al.",
+      "title": "Sea level rise contribution from Ryder Glacier in northern Greenland varies by an order of magnitude by 2300  depending on future emissions",
+      "journal": "The Cryosphere",
+      "year": 2025,
+      "doi": "10.5194/tc-19-2695-2025",
+      "link": "https://doi.org/10.5194/tc-19-2695-2025"
+    },
+    {
+      "authors": "Barnett, J., Holmes, F. A., Cuzzone, J., Åkesson, H., Morlighem, M., O'Regan, M., et al.",
+      "title": "Simulating the Holocene evolution of Ryder Glacier, North Greenland",
+      "journal": "The Cryosphere",
+      "year": 2025,
+      "doi": "10.5194/tc-19-3631-2025",
+      "link": "https://doi.org/10.5194/tc-19-3631-2025"
+    },
+    {
       "authors": "Greene, C. A., Gardner, A. S., Wood, M., & Cuzzone, J. K.",
       "title": "Ubiquitous acceleration in Greenland Ice Sheet calving from 1985 to 2022. Nature",
       "journal": "625(7995)",
@@ -31,6 +151,54 @@
       "year": 2024,
       "doi": "10.1029/2024EF004561",
       "link": "https://doi.org/10.1029/2024EF004561"
+    },
+    {
+      "authors": "Cheng, G., Morlighem, M., Francis, S.",
+      "title": "Forward and Inverse Modeling of Ice Sheet Flow Using Physics‐Informed Neural Networks: Application to Helheim Glacier, Greenland",
+      "journal": "Journal of Geophysical Research: Machine Learning and Computation",
+      "year": 2024,
+      "doi": "10.1029/2024JH000169",
+      "link": "https://doi.org/10.1029/2024JH000169"
+    },
+    {
+      "authors": "Cheng, G., Morlighem, M., Gudmundsson, G. H.",
+      "title": "Numerical stabilization methods for level-set-based ice front migration",
+      "journal": "Geoscientific Model Development",
+      "year": 2024,
+      "doi": "10.5194/gmd-17-6227-2024",
+      "link": "https://doi.org/10.5194/gmd-17-6227-2024"
+    },
+    {
+      "authors": "Lippert, E. Y. H., Morlighem, M., Cheng, G., Khan, S. A.",
+      "title": "Modeling a Century of Change: Kangerlussuaq Glacier's Mass Loss From 1933 to 2021",
+      "journal": "Geophysical Research Letters",
+      "year": 2024,
+      "doi": "10.1029/2023GL106286",
+      "link": "https://doi.org/10.1029/2023GL106286"
+    },
+    {
+      "authors": "Troch, M., Åkesson, H., Cuzzone, J. K., Bertrand, S.",
+      "title": "Precipitation drives western Patagonian glacier variability and may curb future ice mass loss",
+      "journal": "Scientific Reports",
+      "year": 2024,
+      "doi": "10.1038/s41598-024-77486-4",
+      "link": "https://doi.org/10.1038/s41598-024-77486-4"
+    },
+    {
+      "authors": "Sommers, A. N., Meyer, C. R., Poinar, K., Mejia, J., Morlighem, M., Rajaram, H., et al.",
+      "title": "Velocity of Greenland's Helheim Glacier Controlled Both by Terminus Effects and Subglacial Hydrology With Distinct Realms of Influence",
+      "journal": "Geophysical Research Letters",
+      "year": 2024,
+      "doi": "10.1029/2024GL109168",
+      "link": "https://doi.org/10.1029/2024GL109168"
+    },
+    {
+      "authors": "Khan, S. A., Morlighem, M., Ehrenfeucht, S., Seroussi, H., Choi, Y., Rignot, E., et al.",
+      "title": "Inland Summer Speedup at Zachariæ Isstrøm, Northeast Greenland, Driven by Subglacial Hydrology",
+      "journal": "Geophysical Research Letters",
+      "year": 2024,
+      "doi": "10.1029/2024GL110691",
+      "link": "https://doi.org/10.1029/2024GL110691"
     },
     {
       "authors": "Seroussi, H., Verjans, V., Nowicki, S., Payne, A. J., Goelzer, H., Lipscomb, W. H., et al.",
@@ -111,6 +279,22 @@
       "year": 2023,
       "doi": "10.1017/jog.2023.13",
       "link": "https://doi.org/10.1017/jog.2023.13"
+    },
+    {
+      "authors": "Wilner, J. A., Morlighem, M., Cheng, G.",
+      "title": "Evaluation of four calving laws for Antarctic ice shelves",
+      "journal": "The Cryosphere",
+      "year": 2023,
+      "doi": "10.5194/tc-17-4889-2023",
+      "link": "https://doi.org/10.5194/tc-17-4889-2023"
+    },
+    {
+      "authors": "Choi, Y., Seroussi, H., Morlighem, M., Schlegel, N., Gardner, A.",
+      "title": "Impact of time-dependent data assimilation on ice flow model initialization and projections: a case study of  Kjer Glacier, Greenland",
+      "journal": "The Cryosphere",
+      "year": 2023,
+      "doi": "10.5194/tc-17-5499-2023",
+      "link": "https://doi.org/10.5194/tc-17-5499-2023"
     },
     {
       "authors": "Ehrenfeucht, S., Morlighem, M., Rignot, E., Dow, C. F., & Mouginot, J.",
