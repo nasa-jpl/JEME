@@ -20,7 +20,9 @@ Usage:
 import argparse
 import json
 import sys
+import threading
 import time
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from llm_client import call_llm
@@ -252,7 +254,7 @@ def review_entry(entry, reason, model_name, allowed_engagement,
     }
 
 
-def process_model(model_name, data_dir, cache, dry_run=False):
+def process_model(model_name, data_dir, cache, dry_run=False, workers=12):
     """Process a single model's JSON file with skeptic review."""
     file_path = data_dir / f"{model_name}_analyzed.json"
     if not file_path.exists():
@@ -295,47 +297,51 @@ def process_model(model_name, data_dir, cache, dry_run=False):
     overrides = 0
     skipped_cache = 0
 
-    for idx, (i, entry, reason) in enumerate(flagged):
-        key = get_entry_key(entry)
-        cache_key = f"skeptic:{key}"
-
-        # Check cache
+    # Fast path: apply cached reviews inline (no LLM).
+    pending = []
+    for (i, entry, reason) in flagged:
+        cache_key = f"skeptic:{get_entry_key(entry)}"
         if cache_key in cache:
             _apply_skeptic(entry, cache[cache_key])
             if cache[cache_key].get("override_flag"):
                 overrides += 1
             skipped_cache += 1
             reviewed += 1
-            continue
+        else:
+            pending.append((entry, reason))
+    print(f"    {skipped_cache} from cache, {len(pending)} to review via {workers} workers")
 
+    lock = threading.Lock()
+    counter = {"n": 0}
+
+    def work(entry, reason):
         result = review_entry(
             entry, reason, model_name,
             allowed_engagement, allowed_domains, dry_run=dry_run,
         )
-        if result is None:
-            title = entry.get("title", "")
-            if isinstance(title, list):
-                title = title[0] if title else ""
-            print(f"    [{idx+1}/{len(flagged)}] FAILED — {title[:50]}")
-            continue
+        return entry, result
 
-        cache[cache_key] = result
-        _apply_skeptic(entry, result)
-        reviewed += 1
-        if result["override_flag"]:
-            overrides += 1
-
-        title = entry.get("title", "")
-        if isinstance(title, list):
-            title = title[0] if title else ""
-        flag = " ** OVERRIDE **" if result["override_flag"] else ""
-        print(f"    [{idx+1}/{len(flagged)}] agreement={result['skeptic_agreement']}{flag} — {title[:50]}")
-
-        # Periodic save so a Ctrl-C / kill doesn't lose all progress
-        if not dry_run and (idx + 1) % 25 == 0:
-            with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            save_cache(cache)
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = [ex.submit(work, e, r) for (e, r) in pending]
+        for fut in as_completed(futs):
+            entry, result = fut.result()
+            if result is None:
+                continue
+            cache_key = f"skeptic:{get_entry_key(entry)}"
+            with lock:
+                cache[cache_key] = result
+                _apply_skeptic(entry, result)
+                reviewed += 1
+                if result["override_flag"]:
+                    overrides += 1
+                counter["n"] += 1
+                n = counter["n"]
+            if n % 25 == 0:
+                print(f"    [{n}/{len(pending)}] reviewed")
+                if not dry_run:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        json.dump(data, f, indent=2, ensure_ascii=False)
+                    save_cache(cache)
 
     print(f"  Done: {reviewed} reviewed ({skipped_cache} from cache), {overrides} overrides flagged")
 
@@ -366,6 +372,7 @@ def main():
     parser.add_argument("--model", type=str, help="Process a specific model (e.g. RAPID)")
     parser.add_argument("--all", action="store_true", help="Process all models")
     parser.add_argument("--dry-run", action="store_true", help="Preview without API calls or file writes")
+    parser.add_argument("--workers", type=int, default=12, help="Concurrent LLM workers")
     args = parser.parse_args()
 
     if not args.model and not args.all:
@@ -394,7 +401,7 @@ def main():
     total_overrides = 0
     for model in models:
         print(f"[{model}]")
-        rev, ovr = process_model(model, data_dir, cache, dry_run=args.dry_run)
+        rev, ovr = process_model(model, data_dir, cache, dry_run=args.dry_run, workers=args.workers)
         total_reviewed += rev
         total_overrides += ovr
         print()

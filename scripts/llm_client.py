@@ -120,10 +120,23 @@ def call_llm(prompt, system=None, temperature=0.1, max_tokens=4096,
         try:
             resp = _client().invoke_model(modelId=mid, body=json.dumps(body))
             payload = json.loads(resp["body"].read())
-            text = payload["content"][0]["text"]
+            # Extended-thinking models (e.g. claude-opus-5) prepend one or more
+            # `thinking` blocks, so content[0] is not necessarily the answer.
+            # Concatenate every text-type block; fall back to content[0]["text"].
+            blocks = payload["content"]
+            text = "".join(b["text"] for b in blocks if b.get("type") == "text")
+            if not text:
+                text = blocks[0]["text"]
         except ClientError as e:
             code = e.response.get("Error", {}).get("Code", "")
+            msg = e.response.get("Error", {}).get("Message", "")
             last_err = e
+            # Newer models (e.g. claude-opus-5) deprecate `temperature`. Drop it
+            # from the body and retry immediately rather than failing the call.
+            if (code == "ValidationException" and "temperature" in msg
+                    and "temperature" in body):
+                del body["temperature"]
+                continue
             if code in _RETRYABLE_CODES and attempt < MAX_RETRIES - 1:
                 time.sleep(BASE_BACKOFF * (2 ** attempt))
                 continue

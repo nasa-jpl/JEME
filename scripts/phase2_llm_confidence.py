@@ -15,8 +15,10 @@ Usage:
 import argparse
 import json
 import sys
+import threading
 import time
 from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
 
 from llm_client import call_llm
@@ -217,8 +219,8 @@ def process_entry(entry, dry_run=False, model_name=None):
     }
 
 
-def process_model(model_name, data_dir, cache, sample=None, dry_run=False):
-    """Process a single model's JSON file with Phase 2 sampling."""
+def process_model(model_name, data_dir, cache, sample=None, dry_run=False, workers=12):
+    """Process a single model's JSON file with Phase 2 sampling (parallel)."""
     file_path = data_dir / f"{model_name}_analyzed.json"
     if not file_path.exists():
         print(f"  WARNING: {file_path} not found, skipping")
@@ -235,49 +237,51 @@ def process_model(model_name, data_dir, cache, sample=None, dry_run=False):
 
     print(f"  Processing {model_name}: {len(entries_to_process)} of {len(data)} entries")
 
-    processed = 0
+    # Fast path: apply cached results inline (no LLM).
+    pending = []
     skipped = 0
-
-    for i, entry in enumerate(entries_to_process):
+    for entry in entries_to_process:
         key = get_entry_key(entry)
-
-        # Check cache
         if key in cache:
-            cached = cache[key]
-            _apply_phase2(entry, cached)
+            _apply_phase2(entry, cache[key])
             skipped += 1
-            continue
+        else:
+            pending.append(entry)
+    print(f"    {skipped} from cache, {len(pending)} to sample via {workers} workers")
 
+    lock = threading.Lock()
+    counter = {"n": 0}
+    total = len(pending)
+
+    def work(entry):
         result = process_entry(entry, dry_run=dry_run, model_name=model_name)
-        if result is None:
-            print(f"    [{i+1}/{len(entries_to_process)}] FAILED — no valid responses")
-            continue
+        return entry, result
 
-        # Cache result (without raw responses to save space)
-        cache[key] = {
-            "stochastic_variance": result["stochastic_variance"],
-            "reasoning_confidence": result["reasoning_confidence"],
-            "majority_engagement": result["majority_engagement"],
-            "majority_domain": result["majority_domain"],
-        }
-
-        _apply_phase2(entry, result)
-        processed += 1
-
-        title = entry.get("title", "")
-        if isinstance(title, list):
-            title = title[0] if title else ""
-        sv = result["stochastic_variance"]
-        rc = result["reasoning_confidence"]
-        print(f"    [{i+1}/{len(entries_to_process)}] sv={sv}, rc={rc} — {title[:50]}")
-
-        # Checkpoint periodically so partial progress survives interruption and
-        # re-runs resume from cache (important for large models / long runs).
-        if not dry_run and processed % 50 == 0:
-            with open(file_path, "w", encoding="utf-8") as f:
-                json.dump(data, f, indent=2, ensure_ascii=False)
-            save_cache(cache)
-            print(f"    ...checkpoint saved ({processed} processed)")
+    processed = 0
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        futs = [ex.submit(work, e) for e in pending]
+        for fut in as_completed(futs):
+            entry, result = fut.result()
+            if result is None:
+                continue
+            key = get_entry_key(entry)
+            with lock:
+                cache[key] = {
+                    "stochastic_variance": result["stochastic_variance"],
+                    "reasoning_confidence": result["reasoning_confidence"],
+                    "majority_engagement": result["majority_engagement"],
+                    "majority_domain": result["majority_domain"],
+                }
+                _apply_phase2(entry, result)
+                processed += 1
+                counter["n"] += 1
+                n = counter["n"]
+            if n % 50 == 0:
+                print(f"    [{n}/{total}] sampled")
+                if not dry_run:
+                    with open(file_path, "w", encoding="utf-8") as f:
+                        json.dump(data, f, indent=2, ensure_ascii=False)
+                    save_cache(cache)
 
     print(f"  Done: {processed} processed, {skipped} from cache")
 
@@ -334,6 +338,7 @@ def main():
     parser.add_argument("--all", action="store_true", help="Process all models")
     parser.add_argument("--sample", type=int, help="Only process first N entries per model")
     parser.add_argument("--dry-run", action="store_true", help="Preview without API calls or file writes")
+    parser.add_argument("--workers", type=int, default=12, help="Concurrent LLM workers")
     args = parser.parse_args()
 
     if not args.model and not args.all:
@@ -364,7 +369,7 @@ def main():
     total = 0
     for model in models:
         print(f"[{model}]")
-        count = process_model(model, data_dir, cache, sample=args.sample, dry_run=args.dry_run)
+        count = process_model(model, data_dir, cache, sample=args.sample, dry_run=args.dry_run, workers=args.workers)
         total += count
         print()
 

@@ -349,15 +349,16 @@ def compute_entry_uncertainty(paper, model_name):
     # Miscalibration risk
     misc_risk = compute_miscalibration_risk(has_abstract, pipeline_var, composite)
 
-    # Build provenance
+    # Build provenance. Preserve the recorded classifier source (older entries
+    # were labeled by Gemini; newer ones by Bedrock/Opus) instead of clobbering it.
+    existing_prov = existing_u.get("classification_provenance", {})
     provenance = {
-        "engagement_source": "gemini",
-        "domain_source": "gemini",
+        "engagement_source": existing_prov.get("engagement_source", "gemini"),
+        "domain_source": existing_prov.get("domain_source", "gemini"),
         "engagement_agreement": engagement_agreement,
         "domain_agreement": domain_agreement
     }
     # Preserve Phase 2 provenance fields if present
-    existing_prov = existing_u.get("classification_provenance", {})
     for key in ("phase2_engagement_agreement", "phase2_domain_agreement",
                 "phase2_majority_engagement", "phase2_majority_domain"):
         if key in existing_prov:
