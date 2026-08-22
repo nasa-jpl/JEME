@@ -33,19 +33,67 @@ ENGAGEMENT_LEVELS = [
     "Level 3: Foundational Method",
 ]
 
-# Controlled singular-domain vocabulary per model (extend as needed).
+# Controlled singular-domain vocabulary per model, mirroring the labels the
+# existing (Gemini-classified) entries use, so new Opus-5 labels stay aligned.
 DOMAINS = {
     "CMS-Flux": [
-        "CO2 Flux & Carbon Budget",
-        "Atmospheric CO2 Inversions",
-        "Methane & Trace Gases",
-        "Carbon Cycle Modeling",
-        "Land-Atmosphere Exchange",
-        "Fossil Fuel & Urban Emissions",
-        "Satellite Carbon Observations",
-        "Biomass & Fire Emissions",
+        "CO2 Flux & Carbon Budget", "Atmospheric CO2 Inversions",
+        "Methane & Trace Gases", "Carbon Cycle Modeling",
+        "Land-Atmosphere Exchange", "Fossil Fuel & Urban Emissions",
+        "Satellite Carbon Observations", "Biomass & Fire Emissions",
         "Ocean Carbon Uptake",
     ],
+    "CARDAMOM": [
+        "Terrestrial Carbon Cycle", "Vegetation & Forest Dynamics",
+        "Arctic & Permafrost Carbon", "Soil & Peatland Carbon",
+        "Carbon Data Assimilation", "Climate Projections & Feedbacks",
+        "Remote Sensing of Ecosystems", "Fire & Disturbance Ecology",
+        "Land Use & Land Cover Change", "Forest Ecology", "Ecological Modeling",
+    ],
+    "LES": [
+        "Boundary Layer Turbulence", "Methane Detection & Plumes",
+        "Cloud & Stratocumulus Simulation", "Remote Sensing & AI Methods",
+        "Numerical Methods", "Wind & Urban Applications",
+        "Nonlinear Dynamics", "Fluid Dynamics", "Machine Learning",
+    ],
+    "EDMF": [
+        "Convection & Cloud Processes", "Boundary Layer Turbulence",
+        "General Atmospheric Science", "Weather Prediction & NWP",
+        "Parameterization Development", "Aerosol & Radiation",
+        "Air Quality & Pollution", "Tropical Cyclones & Storms",
+    ],
+    "RAPID": [
+        "River Routing & Discharge", "Flood Modeling & Prediction",
+        "Watershed & Catchment Hydrology", "General Hydrologic Science",
+        "Remote Sensing Applications", "Water Resource Management",
+        "Groundwater & Aquifer", "Climate & Water Cycle",
+        "Machine Learning for Hydrology",
+    ],
+    "TROPESS": [
+        "Trace Gas Products", "Air Quality & Megacity Studies",
+        "Wildfire & Biomass Burning Emissions", "Carbon Cycle & Flux Inversions",
+        "Atmospheric Chemistry & Reanalysis", "Tropospheric Composition Retrievals",
+        "Validation & Intercomparison", "Radiative Transfer & Forward Modeling",
+        "Climate Science",
+    ],
+    "MOMO-CHEM": [
+        "Air Quality & Health", "Chemical Transport Modeling",
+        "Methane & Trace Gases", "Satellite Atmospheric Observations",
+        "Climate-Chemistry Interactions", "Ozone & Stratospheric Chemistry",
+        "Aerosol Processes & Effects", "Wildfire & Biomass Burning",
+        "Atmospheric Chemistry",
+    ],
+}
+
+# One-line context per model to ground the classifier's SYSTEM prompt.
+MODEL_CONTEXT = {
+    "CMS-Flux": "the CMS-Flux carbon-flux inversion modeling group",
+    "CARDAMOM": "the CARDAMOM terrestrial-carbon data-assimilation group",
+    "LES": "the Large-Eddy Simulation (turbulence/boundary-layer) modeling group",
+    "EDMF": "the EDMF (eddy-diffusivity/mass-flux) convection parameterization group",
+    "RAPID": "the RAPID river-routing / hydrologic modeling group",
+    "TROPESS": "the TROPESS tropospheric atmospheric-composition retrieval group",
+    "MOMO-CHEM": "the MOMO-Chem global atmospheric-chemistry reanalysis group",
 }
 
 DOMAIN_TAGS = [
@@ -58,11 +106,13 @@ DOMAIN_TAGS = [
     "Greenhouse Gas Monitoring", "Atmospheric Modeling", "Soil Science",
 ]
 
-SYSTEM = (
-    "You are a scientific-literature classifier for NASA JPL's carbon-flux modeling "
-    "team (the CMS-Flux group). You classify how a *citing* paper engages with the "
-    "team's work and its scientific topic. Respond ONLY with valid JSON."
-)
+def build_system(model):
+    ctx = MODEL_CONTEXT.get(model, f"NASA JPL's {model} modeling group")
+    return (
+        f"You are a scientific-literature classifier for {ctx}. You classify how a "
+        "*citing* paper engages with the team's work and its scientific topic. "
+        "Respond ONLY with valid JSON."
+    )
 
 def build_prompt(model, entry):
     domains = DOMAINS.get(model, [])
@@ -96,8 +146,11 @@ def load_cache():
         except Exception: return {}
     return {}
 
-def entry_key(e):
-    return (e.get("doi") or e.get("paper_id") or e.get("title") or "").strip().lower()
+def entry_key(e, model=""):
+    base = (e.get("doi") or e.get("paper_id") or e.get("title") or "").strip().lower()
+    # Namespace by model: the same citing paper gets a model-specific engagement
+    # label (it can be Foundational for one team, a passing Citation for another).
+    return f"{model}::{base}" if model else base
 
 def coerce(result):
     lvl = result.get("engagement_level", "Citation")
@@ -149,18 +202,19 @@ def main():
         for e in todo[:10]: print("  -", (e.get('title') or '')[:70])
         return
 
+    system = build_system(args.model)
     lock = threading.Lock()
     done = {"n": 0}
     total = len(todo)
 
     def classify_one(e):
         """Return coerced result for entry e, using/refreshing the shared cache."""
-        k = entry_key(e)
+        k = entry_key(e, args.model)
         with lock:
             if k in cache:
                 return k, cache[k]
         try:
-            res = coerce(call_llm(build_prompt(args.model, e), system=SYSTEM, temperature=0.1))
+            res = coerce(call_llm(build_prompt(args.model, e), system=system, temperature=0.1))
         except Exception as ex:
             print("  ! LLM error, defaulting:", str(ex)[:80])
             res = coerce({})
@@ -178,7 +232,7 @@ def main():
     # Fast path: entries already cached, applied inline (no LLM).
     pending = []
     for e in todo:
-        k = entry_key(e)
+        k = entry_key(e, args.model)
         if k in cache:
             apply(e, cache[k])
             done["n"] += 1
@@ -197,10 +251,17 @@ def main():
                 n = done["n"]
             if n % 25 == 0:
                 print(f"  classified {n}/{total}")
-                CACHE_PATH.write_text(json.dumps(cache, indent=1))
+                # Snapshot the cache under the lock: worker threads are still
+                # inserting into it, so serializing the live dict races
+                # ("dictionary changed size during iteration").
+                with lock:
+                    cache_snap = dict(cache)
+                CACHE_PATH.write_text(json.dumps(cache_snap, indent=1))
                 path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
 
-    CACHE_PATH.write_text(json.dumps(cache, indent=1))
+    with lock:
+        cache_snap = dict(cache)
+    CACHE_PATH.write_text(json.dumps(cache_snap, indent=1))
     path.write_text(json.dumps(data, indent=2, ensure_ascii=False))
     print(f"Done. Classified {done['n']} entries. Wrote {path}")
 

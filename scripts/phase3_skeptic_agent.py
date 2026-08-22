@@ -339,9 +339,12 @@ def process_model(model_name, data_dir, cache, dry_run=False, workers=12):
             if n % 25 == 0:
                 print(f"    [{n}/{len(pending)}] reviewed")
                 if not dry_run:
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        json.dump(data, f, indent=2, ensure_ascii=False)
-                    save_cache(cache)
+                    # Hold the lock while serializing: workers mutate `cache`
+                    # and entry dicts in `data` concurrently.
+                    with lock:
+                        with open(file_path, "w", encoding="utf-8") as f:
+                            json.dump(data, f, indent=2, ensure_ascii=False)
+                        save_cache(cache)
 
     print(f"  Done: {reviewed} reviewed ({skipped_cache} from cache), {overrides} overrides flagged")
 

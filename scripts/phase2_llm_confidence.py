@@ -279,9 +279,13 @@ def process_model(model_name, data_dir, cache, sample=None, dry_run=False, worke
             if n % 50 == 0:
                 print(f"    [{n}/{total}] sampled")
                 if not dry_run:
-                    with open(file_path, "w", encoding="utf-8") as f:
-                        json.dump(data, f, indent=2, ensure_ascii=False)
-                    save_cache(cache)
+                    # Hold the lock while serializing: worker threads mutate
+                    # both `cache` and entry dicts inside `data` concurrently,
+                    # so an unlocked dump races ("changed size during iteration").
+                    with lock:
+                        with open(file_path, "w", encoding="utf-8") as f:
+                            json.dump(data, f, indent=2, ensure_ascii=False)
+                        save_cache(cache)
 
     print(f"  Done: {processed} processed, {skipped} from cache")
 

@@ -583,6 +583,246 @@
       "year": 2024,
       "doi": "10.1016/j.apr.2024.102210",
       "link": "https://doi.org/10.1016/j.apr.2024.102210"
+    },
+    {
+      "authors": "K. Miyazaki; K. Bowman; T. Sekiya; H. Eskes; F. Boersma; H. Worden; N. Livesey; V. Payne; K. Sudo; Y. Kanaya; M. Takigawa; K. Ogochi",
+      "title": "An updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005–2018",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.5194/essd-2020-30",
+      "link": "https://doi.org/10.5194/essd-2020-30"
+    },
+    {
+      "authors": "Zhe Jiang; J. Worden; H. Worden; M. Deeter; Dylan B. A. Jones; A. Arellano; D. Henze",
+      "title": "A 15-year record of CO emissions constrained by MOPITT CO observations",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.5194/acp-17-4565-2017",
+      "link": "https://doi.org/10.5194/acp-17-4565-2017"
+    },
+    {
+      "authors": "L. Zhang; D. Henze; G. Grell; G. Carmichael; N. Bousserez; Qiang Zhang; O. Torres; C. Ahn; Zifeng Lu; J. Cao; Y. Mao",
+      "title": "Constraining Black Carbon Aerosol over Asia using OMI Aerosol Absorption Optical Depth and the Adjoint of GEOS-Chem",
+      "journal": "",
+      "year": 2014,
+      "doi": "10.5194/acp-15-10281-2015",
+      "link": "https://doi.org/10.5194/acp-15-10281-2015"
+    },
+    {
+      "authors": "E. Pennington; G. Osterman; Vivienne H. Payne; Kazuyuki Miyazaki; K. Bowman; J. Neu",
+      "title": "Quantifying biases in TROPESS AIRS, CrIS, and joint AIRS+OMI tropospheric ozone products using ozonesondes",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2025,
+      "doi": "10.5194/acp-25-8533-2025",
+      "link": "https://doi.org/10.5194/acp-25-8533-2025"
+    },
+    {
+      "authors": "R. Buchholz; H. Worden; Mijeong Park; G. Francis; M. Deeter; D. Edwards; L. Emmons; B. Gaubert; J. Gille; S. Martínez-Alonso; Wenfu Tang; Rajesh Kumar; J. Drummond; C. Clerbaux; M. George; P. Coheur; D. Hurtmans; K. Bowman; M. Luo; V. Payne; J. Worden; M. Chin; R. Levy; J. Warner; Zigang Wei; S. Kulawik",
+      "title": "Air pollution trends measured from Terra: CO and AOD over industrial, fire-prone, and background regions",
+      "journal": "Remote Sensing of Environment",
+      "year": 2021,
+      "doi": "10.1016/j.rse.2020.112275",
+      "link": "https://doi.org/10.1016/j.rse.2020.112275"
+    },
+    {
+      "authors": "Min Huang; Min Huang; G. Carmichael; R. Pierce; D. Jo; R. Park; J. Flemming; L. Emmons; K. Bowman; D. Henze; Yanko Davila; K. Sudo; J. Jonson; M. Lund; G. Janssens‑Maenhout; F. Dentener; T. Keating; H. Oetjen; H. Oetjen; V. Payne",
+      "title": "Impact of intercontinental pollution transport on North American ozone air pollution: an HTAP phase 2 multi-model study",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2016,
+      "doi": "10.5194/acp-17-5721-2017",
+      "link": "https://doi.org/10.5194/acp-17-5721-2017"
+    },
+    {
+      "authors": "Zhe Jiang; J. Worden; Dylan B. A. Jones; Jintai Lin; W. Verstraeten; D. Henze",
+      "title": "Constraints on Asian ozone using Aura TES, OMI and Terra MOPITT",
+      "journal": "",
+      "year": 2014,
+      "doi": "10.5194/acp-15-99-2015",
+      "link": "https://doi.org/10.5194/acp-15-99-2015"
+    },
+    {
+      "authors": "K. Bowman; Dylan B. A. Jones; J. Logan; H. Worden; F. Boersma; R. Chang; S. Kulawik; G. Osterman; P. Hamer; J. Worden",
+      "title": "The zonal structure of tropical O 3 and CO as observed by the Tropospheric Emission Spectrometer in November 2004 – Part 2: Impact of surface emissions on O 3 and its precursors",
+      "journal": "",
+      "year": 2009,
+      "doi": "10.5194/acp-9-3563-2009",
+      "link": "https://doi.org/10.5194/acp-9-3563-2009"
+    },
+    {
+      "authors": "Wenfu Tang; H. Worden; M. Deeter; D. Edwards; L. Emmons; S. Martínez-Alonso; B. Gaubert; R. Buchholz; G. Diskin; R. Dickerson; X. Ren; Hao He; Y. Kondo",
+      "title": "Assessing Measurements of Pollution in the Troposphere (MOPITT) carbon monoxide retrievals over urban versus non-urban regions",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.5194/amt-13-1337-2020",
+      "link": "https://doi.org/10.5194/amt-13-1337-2020"
+    },
+    {
+      "authors": "Tai-Long He; Dylan B. A. Jones; K. Miyazaki; K. Bowman; Zhe Jiang; Rui Li",
+      "title": "Deep learning for Chinese NOx emission inversion and the integration of in situ observations: a case study on the COVID-19 pandemic",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.5194/ems2021-391",
+      "link": "https://doi.org/10.5194/ems2021-391"
+    },
+    {
+      "authors": "V. Naik; A. Voulgarakis; A. Fiore; L. Horowitz; J. Lamarque; Meiyun Lin; M. Prather; P. Young; D. Bergmann; P. Cameron-smith; I. Cionni; W. Collins; S. Dalsøren; R. Doherty; V. Eyring; G. Faluvegi; G. Folberth; B. Josse; Y. Lee; I. MacKenzie; T. Nagashima; T. Noije; D. Plummer; M. Righi; S. Rumbold; R. Skeie; D. Shindell; D. Stevenson; S. Strode; K. Sudo; S. Szopa; G. Zeng",
+      "title": "Preindustrial to present-day changes in tropospheric hydroxyl radical and methane lifetime from the Atmospheric Chemistry and Climate Model Intercomparison Project (ACCMIP)",
+      "journal": "",
+      "year": 2012,
+      "doi": "10.5194/acp-13-5277-2013",
+      "link": "https://doi.org/10.5194/acp-13-5277-2013"
+    },
+    {
+      "authors": "S. Kulawik; J. Worden; S. Wofsy; S. Biraud; R. Nassar; Dylan B. A. Jones; E. Olsen; R. Jiménez; Sunyoung Park; G. Santoni; B. Daube; J. Pittman; B. Stephens; E. Kort; G. Osterman; T. Team",
+      "title": "Comparison of improved Aura Tropospheric Emission Spectrometer CO 2 with HIPPO and SGP aircraft profile measurements",
+      "journal": "",
+      "year": 2012,
+      "doi": "10.5194/acp-13-3205-2013",
+      "link": "https://doi.org/10.5194/acp-13-3205-2013"
+    },
+    {
+      "authors": "K. Miyazaki; K. Bowman",
+      "title": "Evaluation of ACCMIP ozone simulations using a multi-constituent chemical reanalysis",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.5194/acp-2016-1043",
+      "link": "https://doi.org/10.5194/acp-2016-1043"
+    },
+    {
+      "authors": "H. Worden; M. Deeter; C. Frankenberg; M. George; F. Nichitiu; J. Worden; I. Aben; K. Bowman; C. Clerbaux; P. Coheur; J. D. Laat; J. D. Laat; R. Detweiler; J. Drummond; D. Edwards; J. Gille; D. Hurtmans; M. Luo; S. Martínez-Alonso; S. Massie; G. Pfister; J. Warner",
+      "title": "Decadal record of satellite carbon monoxide observations",
+      "journal": "",
+      "year": 2012,
+      "doi": "10.5194/acp-13-837-2013",
+      "link": "https://doi.org/10.5194/acp-13-837-2013"
+    },
+    {
+      "authors": "G. Pfister; D. Parrish; H. Worden; L. Emmons; D. Edwards; C. Wiedinmyer; G. Diskin; G. Huey; S. Oltmans; V. Thouret; A. Weinheimer; A. Wisthaler",
+      "title": "Characterizing summertime chemical boundary conditions for airmasses entering the US West Coast",
+      "journal": "",
+      "year": 2010,
+      "doi": "10.5194/acp-11-1769-2011",
+      "link": "https://doi.org/10.5194/acp-11-1769-2011"
+    },
+    {
+      "authors": "M. Shephard; C. McLinden; E. Dammers; S. Kharol; K. Cady-Pereira; Junhua Zhang; S. Bittman; E. Chow; E. White",
+      "title": "Ammonia measurements from space with the Cross-track Infrared Sounder (CrIS): characteristics and applications",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2019,
+      "doi": "10.5194/acp-2019-705",
+      "link": "https://doi.org/10.5194/acp-2019-705"
+    },
+    {
+      "authors": "K. C. Wells; D. B. Millet; J. F. Brewer; Vivienne H. Payne; K. Cady-Pereira; Rick Pernak; S. Kulawik; C. Vigouroux; Nicholas Jones; Emmanuel Mahieu; Maria V. Makarova; T. Nagahama; I. Ortega; M. Palm; Kimberly Strong; M. Schneider; D. Smale; R. Sussmann; Minqiang Zhou",
+      "title": "Global decadal measurements of methanol, ethene, ethyne, and HCN from the Cross-track Infrared Sounder",
+      "journal": "Atmospheric Measurement Techniques",
+      "year": 2025,
+      "doi": "10.5194/amt-18-695-2025",
+      "link": "https://doi.org/10.5194/amt-18-695-2025"
+    },
+    {
+      "authors": "Min Huang; James H. Crawford; J. Digangi; Gregory R. Carmichael; K. Bowman; Sujay V. Kumar; Xiwu Zhan",
+      "title": "Satellite soil moisture data assimilation impacts on modeling weather variables and ozone in the southeastern US – Part 1: An overview",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2021,
+      "doi": "10.5194/acp-21-11013-2021",
+      "link": "https://doi.org/10.5194/acp-21-11013-2021"
+    },
+    {
+      "authors": "Tai-Long He; Dylan B. A. Jones; Binxuan Huang; Yuyang Liu; K. Miyazaki; Zhe Jiang; E. White; H. Worden; J. Worden",
+      "title": "Recurrent U-net: Deep learning to predict daily summertime ozone in the United States",
+      "journal": "arXiv.org",
+      "year": 2019,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "F. Dentener; J. Drevet; J. Lamarque; I. Bey; B. Eickhout; A. Fiore; D. Hauglustaine; L. Horowitz; M. Krol; U. Kulshrestha; M. Lawrence; C. Galy-Lacaux; S. Rast; D. Shindell; D. Stevenson; T. P. C. V. Noije; C. Atherton; N. Bell; D. Bergman; T. Butler; J. Cofala; B. Collins; R. Doherty; K. Ellingsen; J. Galloway; M. Gauß; V. Montanaro; J.‐F. Müller; G. Pitari; Jose Rodriguez; M. Sanderson; F. Solmon; S. Strahan; M. Schultz; K. Sudo; S. Szopa; O. Wild",
+      "title": "Nitrogen and sulfur deposition on regional and global scales: A multimodel evaluation",
+      "journal": "",
+      "year": 2006,
+      "doi": "10.1029/2005gb002672",
+      "link": "https://doi.org/10.1029/2005gb002672"
+    },
+    {
+      "authors": "P. Young; V. Naik; A. Fiore; A. Gaudel; J. Guo; Meiyun Lin; J. Neu; D. Parrish; H. Rieder; J. Schnell; S. Tilmes; O. Wild; Lin Zhang; J. Ziemke; J. Brandt; A. Delcloo; R. Doherty; C. Geels; M. Hegglin; Lu Hu; U. Im; Rajesh Kumar; A. Luhar; L. Murray; D. Plummer; José M. Rodríguez; A. Saiz‐Lopez; M. Schultz; M. Woodhouse; G. Zeng",
+      "title": "Tropospheric Ozone Assessment Report:Assessment of global-scale model performance for global and regional ozone distributions, variability, and trends",
+      "journal": "",
+      "year": 2018,
+      "doi": "10.1525/elementa.265",
+      "link": "https://doi.org/10.1525/elementa.265"
+    },
+    {
+      "authors": "Jin Ma; Linda M. J. Kooijmans; A. Cho; S. Montzka; N. Glatthor; J. Worden; L. Kuai; E. Atlas; M. Krol",
+      "title": "Inverse modelling of carbonyl sulfide: implementation, evaluation and implications for the global budget",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2020,
+      "doi": "10.5194/acp-2020-603",
+      "link": "https://doi.org/10.5194/acp-2020-603"
+    },
+    {
+      "authors": "Z. Qu; D. Henze; N. Theys; Jun Wang; Wei Wang",
+      "title": "Hybrid Mass Balance/4D‐Var Joint Inversion of NOx and SO2 Emissions in East Asia",
+      "journal": "Journal of Geophysical Research - Atmospheres",
+      "year": 2019,
+      "doi": "10.1029/2018jd030240",
+      "link": "https://doi.org/10.1029/2018jd030240"
+    },
+    {
+      "authors": "N. Evangeliou; Y. Balkanski; S. Eckhardt; A. Cozic; M. Van Damme; P. Coheur; L. Clarisse; M. Shephard; K. Cady-Pereira; D. Hauglustaine",
+      "title": "10-year satellite-constrained fluxes of ammonia improve performance of chemistry transport models",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.5194/acp-21-4431-2021",
+      "link": "https://doi.org/10.5194/acp-21-4431-2021"
+    },
+    {
+      "authors": "Zainab Q. Hakim; S. Archer-Nicholls; G. Beig; G. Folberth; K. Sudo; N. Abraham; S. Ghude; D. Henze; A. Archibald",
+      "title": "Evaluation of tropospheric ozone and ozone precursors in simulations from the HTAPII and CCMI model intercomparisons – a focus on the Indian subcontinent",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2018,
+      "doi": "10.5194/acp-19-6437-2019",
+      "link": "https://doi.org/10.5194/acp-19-6437-2019"
+    },
+    {
+      "authors": "A. Aghedo; K. Bowman; D. Shindell; G. Faluvegi",
+      "title": "The impact of orbital sampling, monthly averaging and vertical resolution on climate chemistry model evaluation with satellite observations",
+      "journal": "",
+      "year": 2011,
+      "doi": "10.5194/acp-11-6493-2011",
+      "link": "https://doi.org/10.5194/acp-11-6493-2011"
+    },
+    {
+      "authors": "Yi Wang; Jun Wang; Meng Zhou; D. Henze; C. Ge; Wei Wang",
+      "title": "Inverse modeling of SO2 and NOx emissions over China using multisensor satellite data – Part 2: Downscaling techniques for air quality analysis and forecasts",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2020,
+      "doi": "10.5194/acp-20-6651-2020",
+      "link": "https://doi.org/10.5194/acp-20-6651-2020"
+    },
+    {
+      "authors": "C. Beale; F. Paulot; C. Randles; Rui Wang; Xuehui Guo; L. Clarisse; M. Van Damme; P. Coheur; C. Clerbaux; M. Shephard; E. Dammers; K. Cady-Pereira; M. Zondlo",
+      "title": "Large sub-regional differences of ammonia seasonal patterns over India reveal inventory discrepancies",
+      "journal": "Environmental Research Letters",
+      "year": 2022,
+      "doi": "10.1088/1748-9326/ac881f",
+      "link": "https://doi.org/10.1088/1748-9326/ac881f"
+    },
+    {
+      "authors": "Kumaresh Singh; Adrian Sandu; K. Bowman; M. Parrington; Dylan B. A. Jones; Meemong Lee",
+      "title": "Ozone data assimilation with GEOS-Chem: a comparison between 3-D-Var, 4-D-Var, and suboptimal Kalman filter approaches",
+      "journal": "",
+      "year": 2011,
+      "doi": "10.5194/acpd-11-22247-2011",
+      "link": "https://doi.org/10.5194/acpd-11-22247-2011"
+    },
+    {
+      "authors": "N. Evangeliou; Y. Balkanski; S. Eckhardt; A. Cozic; M. Van Damme; P. Coheur; L. Clarisse; M. Shephard; K. Cady-Pereira; D. Hauglustaine",
+      "title": "10–year satellite–constrained fluxes of ammonia improve \nperformance of chemistry transport models",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.5194/acp-2020-1008",
+      "link": "https://doi.org/10.5194/acp-2020-1008"
     }
   ]
 }
