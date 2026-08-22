@@ -179,6 +179,246 @@
       "doi": "10.1073/pnas.1515160113",
       "citations": 270,
       "url": "https://doi.org/10.1073/pnas.1515160113"
+    },
+    {
+      "authors": "E. Sousa-Neto; L. Smallman; J. Ometto; Mat Williams",
+      "title": "Carbon dynamics in the Brazilian Cerrado: stocks and fluxes estimated by a model data fusion framework (CARDAMOM)",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.5194/egusphere-egu2020-20772",
+      "link": "https://doi.org/10.5194/egusphere-egu2020-20772"
+    },
+    {
+      "authors": "J. Watts; M. Farina; J. Kimball; L. Schiferl; Zhihua Liu; K. Arndt; D. Zona; A. Ballantyne; E. Euskirchen; F. Parmentier; M. Helbig; O. Sonnentag; T. Tagesson; J. Rinne; H. Ikawa; M. Ueyama; Hideki Kobayashi; T. Sachs; D. Nadeau; J. Kochendorfer; M. Jackowicz-Korczynski; Anna‐Maria Virkkala; M. Aurela; R. Commane; B. Byrne; L. Birch; Matthew S. Johnson; N. Madani; B. Rogers; Jinyang Du; A. Endsley; K. Savage; B. Poulter; Zhen Zhang; L. Bruhwiler; C. Miller; S. Goetz; W. Oechel",
+      "title": "Carbon uptake in Eurasian boreal forests dominates the high‐latitude net ecosystem carbon budget",
+      "journal": "Global Change Biology",
+      "year": 2023,
+      "doi": "10.1111/gcb.16553",
+      "link": "https://doi.org/10.1111/gcb.16553"
+    },
+    {
+      "authors": "Sarah Worden; Rong Fu; A. A. Bloom; M. Bauters; H. Verbeeck; T. Fatoyinbo; W. Hubau; L. Koutika; S. K. Kengdo; Sybryn L. Maes; Vincent Medjibe; Nicholas J. Russo; Sassan Saatchi; L. B. Sagang; Thomas B. Smith; D. Sonwa; Pascal Boeckx; E. Ordway",
+      "title": "Congo Basin Carbon Cycle Responses to Global Change",
+      "journal": "Global Change Biology",
+      "year": 2026,
+      "doi": "10.1111/gcb.70688",
+      "link": "https://doi.org/10.1111/gcb.70688"
+    },
+    {
+      "authors": "N. Parazoo; K. Bowman; J. Fisher; C. Frankenberg; Dylan B. A. Jones; A. Cescatti; Ó. Pérez-Priego; G. Wohlfahrt; Leonardo Montagnani",
+      "title": "Terrestrial gross primary production inferred from satellite fluorescence and vegetation models",
+      "journal": "Global Change Biology",
+      "year": 2014,
+      "doi": "10.1111/gcb.12652",
+      "link": "https://doi.org/10.1111/gcb.12652"
+    },
+    {
+      "authors": "Honglin He; R. Ge; X. Ren; Li Zhang; Qingqing Chang; Qian Xu; Guoyi Zhou; Zongqiang Xie; Silong Wang; Huimin Wang; Qibin Zhang; An-zhi Wang; Z. Fan; Yiping Zhang; W. Shen; H. Yin; Luxiang Lin; Mat Williams; Guirui Yu",
+      "title": "Reference carbon cycle dataset for typical Chinese forests via colocated observations and data assimilation",
+      "journal": "Scientific Data",
+      "year": 2021,
+      "doi": "10.1038/s41597-021-00826-w",
+      "link": "https://doi.org/10.1038/s41597-021-00826-w"
+    },
+    {
+      "authors": "A. Norton; A. Bloom; N. Parazoo; P. Levine; Shuang Ma; R. Braghiere; T. Smallman",
+      "title": "Improved process representation of leaf phenology significantly shifts climate sensitivity of ecosystem carbon balance",
+      "journal": "Biogeosciences",
+      "year": 2023,
+      "doi": "10.5194/bg-20-2455-2023",
+      "link": "https://doi.org/10.5194/bg-20-2455-2023"
+    },
+    {
+      "authors": "Youngwook Kim; John S. Kimball; N. Parazoo; Xiaolan Xu; A. Colliander; R. Reichle; Jingfeng Xiao; Xing Li",
+      "title": "Diagnosing Spring Onset Across the North American Arctic‐Boreal Region Using Complementary Satellite Environmental Data Records",
+      "journal": "Journal of Geophysical Research: Biogeosciences",
+      "year": 2024,
+      "doi": "10.1029/2023jg007977",
+      "link": "https://doi.org/10.1029/2023jg007977"
+    },
+    {
+      "authors": "Jin Ma; Linda M. J. Kooijmans; A. Cho; S. Montzka; N. Glatthor; J. Worden; L. Kuai; E. Atlas; M. Krol",
+      "title": "Inverse modelling of carbonyl sulfide: implementation, evaluation and implications for the global budget",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2020,
+      "doi": "10.5194/acp-2020-603",
+      "link": "https://doi.org/10.5194/acp-2020-603"
+    },
+    {
+      "authors": "Rhys Whitley; J. Beringer; L. Hutley; G. Abramowitz; M. D. Kauwe; R. Duursma; Bradley J. Evans; V. Haverd; Longhui Li; Y. Ryu; Benjamin Smith; Ying‐ping Wang; Mat Williams; Qiang Yu",
+      "title": "A model inter-comparison study to examine limiting factors in modelling Australian tropical savannas",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.5194/bg-13-3245-2016",
+      "link": "https://doi.org/10.5194/bg-13-3245-2016"
+    },
+    {
+      "authors": "Erqian Cui; Kun Huang; M. A. Arain; J. Fisher; D. Huntzinger; A. Ito; Yiqi Luo; A. Jain; J. Mao; A. Michalak; S. Niu; N. Parazoo; C. Peng; S. Peng; B. Poulter; D. Ricciuto; K. Schaefer; C. Schwalm; Xiaoying Shi; H. Tian; Weile Wang; Jinsong Wang; Yaxing Wei; Enrong Yan; Liming Yan; N. Zeng; Qiu'an Zhu; J. Xia",
+      "title": "Vegetation Functional Properties Determine Uncertainty of Simulated Ecosystem Productivity: A Traceability Analysis in the East Asian Monsoon Region",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2019,
+      "doi": "10.1029/2018gb005909",
+      "link": "https://doi.org/10.1029/2018gb005909"
+    },
+    {
+      "authors": "N. Ruehr; B. Law; D. Quandt; Mat Williams",
+      "title": "Effects of heat and drought on carbon and water dynamics in a regenerating semi-arid pine forest: a combined experimental and modeling approach",
+      "journal": "",
+      "year": 2014,
+      "doi": "10.5194/bg-11-4139-2014",
+      "link": "https://doi.org/10.5194/bg-11-4139-2014"
+    },
+    {
+      "authors": "L. Rowland; A. Harper; B. Christoffersen; D. Galbraith; H. Imbuzeiro; T. Powell; C. Doughty; N. Levine; Y. Malhi; S. Saleska; P. Moorcroft; P. Meir; Mat Williams",
+      "title": "Modelling climate change responses in tropical forests: similar productivity estimates across five models, but different mechanisms and responses",
+      "journal": "",
+      "year": 2014,
+      "doi": "10.5194/gmd-8-1097-2015",
+      "link": "https://doi.org/10.5194/gmd-8-1097-2015"
+    },
+    {
+      "authors": "Junjie Liu; K. Bowman; N. Parazoo; A. Bloom; D. Wunch; Zhe Jiang; K. Gurney; D. Schimel",
+      "title": "Detecting drought impact on terrestrial biosphere carbon fluxes over contiguous US with satellite observations",
+      "journal": "Environmental Research Letters",
+      "year": 2018,
+      "doi": "10.1088/1748-9326/aad5ef",
+      "link": "https://doi.org/10.1088/1748-9326/aad5ef"
+    },
+    {
+      "authors": "L. Basso; C. Wilson; M. Chipperfield; Graciela Tejada; H. Cassol; E. Arai; Mat Williams; T. Smallman; W. Peters; S. Naus; John B. Miller; M. Gloor",
+      "title": "Atmospheric CO2 inversion reveals the Amazon as a minor carbon source caused by fire emissions, with forest uptake offsetting about half of these emissions",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2023,
+      "doi": "10.5194/acp-23-9685-2023",
+      "link": "https://doi.org/10.5194/acp-23-9685-2023"
+    },
+    {
+      "authors": "N. Madani; J. S. Kimball; N. Parazoo; Ashley P. Ballantyne; T. Tagesson; L. Jones; R. Reichle; Paul I Palmer; I. Velicogna; A. Bloom; S. Saatchi; Zhihua Liu; A. Geruo",
+      "title": "Below-surface water mediates the response of African forests to reduced rainfall",
+      "journal": "Environmental Research Letters",
+      "year": 2020,
+      "doi": "10.1088/1748-9326/ab724a",
+      "link": "https://doi.org/10.1088/1748-9326/ab724a"
+    },
+    {
+      "authors": "Z. Pierrat; T. S. Magney; A. Maguire; Logan Brissette; Russell Doughty; D. Bowling; Barry A Logan; N. Parazoo; C. Frankenberg; Jochen Stutz",
+      "title": "Seasonal timing of fluorescence and photosynthetic yields at needle and canopy scales in evergreen needleleaf forests.",
+      "journal": "Ecology",
+      "year": 2024,
+      "doi": "10.1002/ecy.4402",
+      "link": "https://doi.org/10.1002/ecy.4402"
+    },
+    {
+      "authors": "B. Gaubert; Britton B. Stephens; David F. Baker; S. Basu; M. Bertolacci; K. Bowman; R. Buchholz; A. Chatterjee; F. Chevallier; R. Commane; Noel Cressie; F. Deng; Nicole Jacobs; Matthew S. Johnson; S. Maksyutov; K. McKain; Junjie Liu; Zhiqiang Liu; Eric J. Morgan; C. O’Dell; Sajeev Philip; E. Ray; D. Schimel; Andrew E. Schuh; T. Taylor; Brad Weir; D. van Wees; S. Wofsy; A. Zammit‐Mangion; Ning Zeng",
+      "title": "Neutral Tropical African CO2 Exchange Estimated From Aircraft and Satellite Observations",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2023,
+      "doi": "10.1029/2023gb007804",
+      "link": "https://doi.org/10.1029/2023gb007804"
+    },
+    {
+      "authors": "Stephanie G. Stettz; N. Parazoo; A. Bloom; P. Blanken; D. Bowling; S. Burns; C. Bacour; F. Maignan; B. Raczka; A. Norton; I. Baker; Mat Williams; M. Shi; Yongguang Zhang; Bo Qiu",
+      "title": "Resolving temperature limitation on spring productivity in an evergreen conifer forest using a model-data fusion framework",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.5194/bg-2021-152",
+      "link": "https://doi.org/10.5194/bg-2021-152"
+    },
+    {
+      "authors": "Liyin He; B. Byrne; Yi Yin; Junjie Liu; C. Frankenberg",
+      "title": "Remote‐Sensing Derived Trends in Gross Primary Production Explain Increases in the CO2 Seasonal Cycle Amplitude",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2022,
+      "doi": "10.1029/2021gb007220",
+      "link": "https://doi.org/10.1029/2021gb007220"
+    },
+    {
+      "authors": "D. Milodowski; T. Smallman; Mat Williams",
+      "title": "Scale variance in the carbon dynamics of fragmented, mixed-use landscapes estimated using model–data fusion",
+      "journal": "Biogeosciences",
+      "year": 2023,
+      "doi": "10.5194/bg-20-3301-2023",
+      "link": "https://doi.org/10.5194/bg-20-3301-2023"
+    },
+    {
+      "authors": "E. Delaria; Glenn M. Wolfe; Kaitlyn Blanock; R. Hannun; K. Thornhill; Paul A. Newman; L. Lait; S. Kawa; J. Álvarez; Spencer Blum; E. Castañeda‐Moya; Christopher D. Holmes; D. Lagomasino; S. Malone; Dylan Murphy; Steven F. Overbauer; Chandler Pruett; Aaron Serre; G. Starr; Robert Szot; Tiffany Troxler; D. Yannick; B. Poulter",
+      "title": "Assessment of Landscape‐Scale Fluxes of Carbon Dioxide and Methane in Subtropical Coastal Wetlands of South Florida",
+      "journal": "Journal of Geophysical Research - Biogeosciences",
+      "year": 2024,
+      "doi": "10.1029/2024jg008165",
+      "link": "https://doi.org/10.1029/2024jg008165"
+    },
+    {
+      "authors": "Mingjie Shi; Yilin Fang; Nate McDowell; C. Koven; Junjie Liu; L. Kuai; S. Sitch; L. Leung",
+      "title": "Accelerated Carbon and Water Cycles in the Amazon and Congo Basins Revealed From TRENDY Models and Remote Sensing Products",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2026,
+      "doi": "10.1029/2025gb008747",
+      "link": "https://doi.org/10.1029/2025gb008747"
+    },
+    {
+      "authors": "N. Madani; J. Kimball; L. Jones; N. Parazoo; K. Guan",
+      "title": "Global Analysis of Bioclimatic Controls on Ecosystem Productivity Using Satellite Observations of Solar-Induced Chlorophyll Fluorescence",
+      "journal": "Remote Sensing",
+      "year": 2017,
+      "doi": "10.3390/rs9060530",
+      "link": "https://doi.org/10.3390/rs9060530"
+    },
+    {
+      "authors": "H. Kolus; D. Huntzinger; C. Schwalm; J. Fisher; N. McKay; Yuanyuan Fang; A. Michalak; K. Schaefer; Yaxing Wei; B. Poulter; J. Mao; N. Parazoo; Xiaoying Shi",
+      "title": "Land carbon models underestimate the severity and duration of drought’s impact on plant productivity",
+      "journal": "Scientific Reports",
+      "year": 2019,
+      "doi": "10.1038/s41598-019-39373-1",
+      "link": "https://doi.org/10.1038/s41598-019-39373-1"
+    },
+    {
+      "authors": "A. Bloom; K. Bowman; Junjie Liu; A. Konings; J. Worden; N. Parazoo; V. Meyer; J. Reager; H. Worden; Zhe Jiang; G. R. Quetin; T. Smallman; J. Exbrayat; Yi Yin; S. Saatchi; Mat Williams; D. Schimel",
+      "title": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
+      "journal": "Biogeosciences",
+      "year": 2020,
+      "doi": "10.5194/bg-17-6393-2020",
+      "link": "https://doi.org/10.5194/bg-17-6393-2020"
+    },
+    {
+      "authors": "Yi Yin; B. Byrne; Junjie Liu; P. Wennberg; K. Davis; T. Magney; P. Köhler; Liyin He; R. Jeyaram; V. Humphrey; T. Gerken; S. Feng; J. Digangi; C. Frankenberg",
+      "title": "Cropland Carbon Uptake Delayed and Reduced by 2019 Midwest Floods",
+      "journal": "AGU Advances",
+      "year": 2020,
+      "doi": "10.1029/2019av000140",
+      "link": "https://doi.org/10.1029/2019av000140"
+    },
+    {
+      "authors": "N. Madani; N. Parazoo; J. Kimball; R. Reichle; A. Chatterjee; J. Watts; S. Saatchi; Zhihua Liu; A. Endsley; T. Tagesson; B. Rogers; Liang Xu; Jonathan A. Wang; T. Magney; C. Miller",
+      "title": "The Impacts of Climate and Wildfire on Ecosystem Gross Primary Productivity in Alaska",
+      "journal": "Journal of Geophysical Research - Biogeosciences",
+      "year": 2021,
+      "doi": "10.1029/2020jg006078",
+      "link": "https://doi.org/10.1029/2020jg006078"
+    },
+    {
+      "authors": "Zhihua Liu; J. Kimball; A. Ballantyne; N. Parazoo; Wen J. Wang; A. Bastos; N. Madani; S. Natali; J. Watts; B. Rogers; P. Ciais; Kailiang Yu; Anna‐Maria Virkkala; F. Chevallier; W. Peters; P. Patra; N. Chandra",
+      "title": "Respiratory loss during late-growing season determines the net carbon dioxide sink in northern permafrost regions",
+      "journal": "Nature Communications",
+      "year": 2022,
+      "doi": "10.1038/s41467-022-33293-x",
+      "link": "https://doi.org/10.1038/s41467-022-33293-x"
+    },
+    {
+      "authors": "Z. Pierrat; J. Bortnik; Bruce Johnson; A. Barr; T. Magney; D. Bowling; N. Parazoo; C. Frankenberg; U. Seibt; J. Stutz",
+      "title": "Forests for forests: combining vegetation indices with solar-induced chlorophyll fluorescence in random forest models improves gross primary productivity prediction in the boreal forest",
+      "journal": "Environmental Research Letters",
+      "year": 2022,
+      "doi": "10.1088/1748-9326/aca5a0",
+      "link": "https://doi.org/10.1088/1748-9326/aca5a0"
+    },
+    {
+      "authors": "Y. Yi; J. Kimball; J. Watts; S. Natali; D. Zona; Junjie Liu; M. Ueyama; Hideki Kobayashi; W. Oechel; C. Miller",
+      "title": "Investigating the sensitivity of soil heterotrophic respiration to recent snow cover changes in Alaska using a satellite-based permafrost carbon model",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.5194/bg-17-5861-2020",
+      "link": "https://doi.org/10.5194/bg-17-5861-2020"
     }
   ]
 }

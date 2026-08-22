@@ -1,0 +1,404 @@
+{
+  "CMS-Flux": [
+    {
+      "authors": "Byrne, B., Liu, J., Bowman, K. W., Pascolini-Campbell, M., Chatterjee, A., Pandey, S., et al.",
+      "title": "Carbon emissions from the 2023 Canadian wildfires",
+      "journal": "Nature",
+      "year": 2024,
+      "doi": "10.1038/s41586-024-07878-z",
+      "link": "http://dx.doi.org/10.1038/s41586-024-07878-z"
+    },
+    {
+      "authors": "Byrne, B., Liu, J., Bowman, K. W., Yin, Y., Yun, J., Ferreira, G. D., et al.",
+      "title": "Regional Inversion Shows Promise in Capturing Extreme-Event-Driven CO2 Flux Anomalies but Is Limited by Atmospheric CO2 Observational Coverage",
+      "journal": "Journal of Geophysical Research: Atmospheres",
+      "year": 2024,
+      "doi": "10.1029/2023jd040006",
+      "link": "http://dx.doi.org/10.1029/2023jd040006"
+    },
+    {
+      "authors": "Liu, J., Baker, D., Basu, S., Bowman, K., Byrne, B., Chevallier, F., et al.",
+      "title": "The reduced net carbon uptake over Northern Hemisphere land causes the close-to-normal CO2 growth rate in 2021 La Niña",
+      "journal": "Science Advances",
+      "year": 2024,
+      "doi": "10.1126/sciadv.adl2201",
+      "link": "http://dx.doi.org/10.1126/sciadv.adl2201"
+    },
+    {
+      "authors": "Byrne, B., et al.",
+      "title": "National CO2 budgets (2015–2020) inferred from atmospheric CO2 observations in support of the global stocktake",
+      "journal": "Earth System Science Data",
+      "year": 2023,
+      "doi": "10.5194/essd-15-963-2023",
+      "link": "http://dx.doi.org/10.5194/essd-15-963-2023"
+    },
+    {
+      "authors": "Levine, P. A., Bloom, A. A., Bowman, K. W., Reager, J. T., Worden, J. R., Liu, J., et al.",
+      "title": "Water Stress Dominates 21st-Century Tropical Land Carbon Uptake",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2023,
+      "doi": "10.1029/2023gb007702",
+      "link": "http://dx.doi.org/10.1029/2023gb007702"
+    },
+    {
+      "authors": "Carroll, D., Menemenlis, D., Dutkiewicz, S., Lauderdale, J. M., Adkins, J. F., Bowman, K. W., et al.",
+      "title": "Attribution of Space-Time Variability in Global-Ocean Dissolved Inorganic Carbon",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2022,
+      "doi": "10.1029/2021GB007162",
+      "link": "http://dx.doi.org/10.1029/2021GB007162"
+    },
+    {
+      "authors": "Hurtt, G. C., Andrews, A., Bowman, K., Brown, M. E., Chatterjee, A., Escobar, V., et al.",
+      "title": "The NASA Carbon Monitoring System Phase 2 synthesis: scope, findings, gaps and recommended next steps",
+      "journal": "Environmental Research Letters",
+      "year": 2022,
+      "doi": "10.1088/1748-9326/ac7407",
+      "link": "http://dx.doi.org/10.1088/1748-9326/ac7407"
+    },
+    {
+      "authors": "Liu, J., Baskaran, L., Bowman, K., Schimel, D., Bloom, A. A., Parazoo, N. C., et al.",
+      "title": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+      "journal": "Earth System Science Data",
+      "year": 2021,
+      "doi": "10.5194/essd-13-299-2021",
+      "link": "http://dx.doi.org/10.5194/essd-13-299-2021"
+    },
+    {
+      "authors": "Bloom, A. A., Bowman, K. W., Liu, J., Konings, A. G., Worden, J. R., Parazoo, N. C., et al.",
+      "title": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
+      "journal": "Biogeosciences",
+      "year": 2020,
+      "doi": "10.5194/bg-17-6393-2020",
+      "link": "http://dx.doi.org/10.5194/bg-17-6393-2020"
+    },
+    {
+      "authors": "Byrne, B., Liu, J., Bloom, A. A., Bowman, K. W., Butterfield, Z., Joiner, J., et al.",
+      "title": "Contrasting Regional Carbon Cycle Responses to Seasonal Climate Anomalies Across the East‐West Divide of Temperate North America",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2020,
+      "doi": "10.1029/2020GB006598",
+      "link": "http://dx.doi.org/10.1029/2020GB006598"
+    },
+    {
+      "authors": "Carroll, D., Menemenlis, D., Adkins, J. F., Bowman, K. W., Brix, H., Dutkiewicz, S., et al.",
+      "title": "The ECCO‐Darwin data‐assimilative global ocean biogeochemistry model: Estimates of seasonal to multidecadal surface ocean pCO2 and air‐sea CO2 flux",
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "year": 2020,
+      "doi": "10.1029/2019MS001888",
+      "link": "http://dx.doi.org/10.1029/2019MS001888"
+    },
+    {
+      "authors": "Crowell, S., Baker, D., Schuh, A., Basu, S., Jacobson, A. R., Chevallier, F., et al.",
+      "title": "The 2015–2016 carbon cycle as seen from OCO-2 and the global in situ network",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2019,
+      "doi": "10.5194/acp-19-9797-2019",
+      "link": "http://dx.doi.org/10.5194/acp-19-9797-2019"
+    },
+    {
+      "authors": "Liu, J., Bowman, K. W., Schimel, D. S., Parazoo, N. C., Jiang, Z., Lee, M., et al.",
+      "title": "Contrasting carbon cycle responses of the tropical continents to the 2015-2016 El Nino",
+      "journal": "Science",
+      "year": 2017,
+      "doi": "10.1126/science.aam5690",
+      "link": "http://dx.doi.org/10.1126/science.aam5690"
+    },
+    {
+      "authors": "Bloom, A. A., Bowman, K., Lee, M., Turner, A. J., Schroeder, R., Worden, J. R., et al.",
+      "title": "A global wetland methane emissions and uncertainty dataset for atmospheric chemical transport models (WetCHARTs version 1.0)",
+      "journal": "Geoscientific Model Development",
+      "year": 2017,
+      "doi": "10.5194/gmd-10-2141-2017",
+      "link": "http://dx.doi.org/10.5194/gmd-10-2141-2017"
+    },
+    {
+      "authors": "Liu, J., Bowman, K. W., Lee, M., Henze, D. K., Bousserez, N., Brix, H., et al.",
+      "title": "Carbon monitoring system flux estimation and attribution: impact of ACOS-GOSAT XCO2 sampling on the inference of terrestrial biospheric sources and sinks",
+      "journal": "Tellus B",
+      "year": 2014,
+      "doi": "10.3402/tellusb.v66.22486",
+      "link": "http://dx.doi.org/10.3402/tellusb.v66.22486"
+    },
+    {
+      "authors": "A. Turner; D. Jacob; K. Wecht; J. Maasakkers; Elizabeth W. Lundgren; A. Andrews; S. Biraud; H. Boesch; K. Bowman; N. Deutscher; M. Dubey; D. Griffith; et al.",
+      "title": "Estimating global and North American methane emissions with high spatial resolution using GOSAT satellite data",
+      "journal": "",
+      "year": 2015,
+      "doi": "10.5194/ACP-15-7049-2015",
+      "link": "https://doi.org/10.5194/ACP-15-7049-2015"
+    },
+    {
+      "authors": "Andrew E. Schuh; A. R. Jacobson; S. Basu; Brad Weir; David Baker; K. Bowman; F. Chevallier; Sean Crowell; K. Davis; Feng Deng; S. Denning; Liang Feng; et al.",
+      "title": "Quantifying the Impact of Atmospheric Transport Uncertainty on CO2 Surface Flux Estimates",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2019,
+      "doi": "10.1029/2018GB006086",
+      "link": "https://doi.org/10.1029/2018GB006086"
+    },
+    {
+      "authors": "S. Basu; D. Baker; F. Chevallier; P. Patra; Junjie Liu; John B. Miller",
+      "title": "The impact of transport model differences on CO 2 surface flux estimates from OCO-2 retrievals of column average CO 2",
+      "journal": "",
+      "year": 2017,
+      "doi": "10.5194/ACP-18-7189-2018",
+      "link": "https://doi.org/10.5194/ACP-18-7189-2018"
+    },
+    {
+      "authors": "J. Hedelius; Junjie Liu; T. Oda; Shamil Maksyutov; C. Roehl; L. Iraci; J. Podolske; P. Hillyard; Jianming Liang; K. Gurney; D. Wunch; P. Wennberg",
+      "title": "Southern California megacity CO2, CH4, and CO flux estimates using ground- and space-based remote sensing and a Lagrangian model",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2018,
+      "doi": "10.5194/ACP-18-16271-2018",
+      "link": "https://doi.org/10.5194/ACP-18-16271-2018"
+    },
+    {
+      "authors": "Ji-Sun Kang; E. Kalnay; T. Miyoshi; Junjie Liu; I. Fung",
+      "title": "Estimation of surface carbon fluxes with an advanced data assimilation methodology",
+      "journal": "",
+      "year": 2011,
+      "doi": "10.1029/2012JD018259",
+      "link": "https://doi.org/10.1029/2012JD018259"
+    },
+    {
+      "authors": "J. Watts; M. Farina; J. Kimball; L. Schiferl; Zhihua Liu; K. Arndt; D. Zona; A. Ballantyne; E. Euskirchen; F. Parmentier; M. Helbig; O. Sonnentag; et al.",
+      "title": "Carbon uptake in Eurasian boreal forests dominates the high‐latitude net ecosystem carbon budget",
+      "journal": "Global Change Biology",
+      "year": 2023,
+      "doi": "10.1111/gcb.16553",
+      "link": "https://doi.org/10.1111/gcb.16553"
+    },
+    {
+      "authors": "L. Ott; S. Pawson; G. Collatz; W. Gregg; D. Menemenlis; H. Brix; C. Rousseaux; K. Bowman; Junjie Liu; A. Eldering; M. Gunson; S. Kawa",
+      "title": "Assessing the magnitude of CO2 flux uncertainty in atmospheric CO2 records using products from NASA's Carbon Monitoring Flux Pilot Project",
+      "journal": "",
+      "year": 2015,
+      "doi": "10.1002/2014JD022411",
+      "link": "https://doi.org/10.1002/2014JD022411"
+    },
+    {
+      "authors": "Sajeev Philip; Matthew S. Johnson; C. Potter; Vanessa Genovesse; D. Baker; K. Haynes; D. Henze; Junjie Liu; B. Poulter",
+      "title": "Prior biosphere model impact on global terrestrial CO2 fluxes estimated from OCO-2 retrievals",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2019,
+      "doi": "10.5194/ACP-19-13267-2019",
+      "link": "https://doi.org/10.5194/ACP-19-13267-2019"
+    },
+    {
+      "authors": "B. Byrne; Junjie Liu; Meemong Lee; I. Baker; K. Bowman; N. Deutscher; D. Feist; D. Griffith; L. Iraci; Matthaus Kiel; J. Kimball; C. Miller; et al.",
+      "title": "Improved Constraints on Northern Extratropical CO2 Fluxes Obtained by Combining Surface‐Based and Space‐Based Atmospheric CO2 Measurements",
+      "journal": "Journal of Geophysical Research - Atmospheres",
+      "year": 2019,
+      "doi": "10.1029/2019JD032029",
+      "link": "https://doi.org/10.1029/2019JD032029"
+    },
+    {
+      "authors": "D. Cusworth; A. A. Bloom; Shuang Ma; C. Miller; K. Bowman; Yi Yin; J. Maasakkers; Yuzhong Zhang; T. Scarpelli; Z. Qu; D. Jacob; J. Worden",
+      "title": "A Bayesian framework for deriving sector-based methane emissions from top-down fluxes",
+      "journal": "Communications Earth & Environment",
+      "year": 2021,
+      "doi": "10.1038/s43247-021-00312-6",
+      "link": "https://doi.org/10.1038/s43247-021-00312-6"
+    },
+    {
+      "authors": "J. Sheng; D. J. Jacob; Alexander J. Turner; J. Maasakkers; M. Sulprizio; A. Bloom; A. Andrews; D. Wunch",
+      "title": "High-resolution inversion of methane emissions in the Southeast US using SEAC 4 RS aircraft observations of atmospheric methane: anthropogenic and wetland sources",
+      "journal": "",
+      "year": 2017,
+      "doi": "10.5194/ACP-18-6483-2018",
+      "link": "https://doi.org/10.5194/ACP-18-6483-2018"
+    },
+    {
+      "authors": "G. Keppel‐Aleks; P. Wennberg; C. O’Dell; D. Wunch",
+      "title": "Towards constraints on fossil fuel emissions from total column carbon dioxide",
+      "journal": "",
+      "year": 2012,
+      "doi": "10.5194/ACP-13-4349-2013",
+      "link": "https://doi.org/10.5194/ACP-13-4349-2013"
+    },
+    {
+      "authors": "G. R. Quetin; A. A. Bloom; K. Bowman; A. Konings",
+      "title": "Carbon Flux Variability From a Relatively Simple Ecosystem Model With Assimilated Data Is Consistent With Terrestrial Biosphere Model Estimates",
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "year": 2020,
+      "doi": "10.1029/2019MS001889",
+      "link": "https://doi.org/10.1029/2019MS001889"
+    },
+    {
+      "authors": "Junjie Liu; K. Bowman; N. Parazoo; A. Bloom; D. Wunch; Zhe Jiang; K. Gurney; D. Schimel",
+      "title": "Detecting drought impact on terrestrial biosphere carbon fluxes over contiguous US with satellite observations",
+      "journal": "Environmental Research Letters",
+      "year": 2018,
+      "doi": "10.1088/1748-9326/aad5ef",
+      "link": "https://doi.org/10.1088/1748-9326/aad5ef"
+    },
+    {
+      "authors": "Junjie Liu; K. Bowman; D. Henze",
+      "title": "Source‐receptor relationships of column‐average CO2 and implications for the impact of observations on flux inversions",
+      "journal": "",
+      "year": 2015,
+      "doi": "10.1002/2014JD022914",
+      "link": "https://doi.org/10.1002/2014JD022914"
+    },
+    {
+      "authors": "F. Vogel; S. Ars; D. Wunch; J. Lavoie; L. Gillespie; H. Maazallahi; T. Röckmann; J. Nęcki; J. Bartyzel; P. Jagoda; D. Lowry; J. France; et al.",
+      "title": "Ground-Based Mobile Measurements to Track Urban Methane Emissions from Natural Gas in 12 Cities across Eight Countries",
+      "journal": "Environmental Science and Technology",
+      "year": 2024,
+      "doi": "10.1021/acs.est.3c03160",
+      "link": "https://doi.org/10.1021/acs.est.3c03160"
+    },
+    {
+      "authors": "K. Saad; D. Wunch; N. Deutscher; David W. T. Griffith; Frank Hase; M. Mazière; J. Notholt; D. Pollard; C. Roehl; Matthias Schneider; R. Sussmann; T. Warneke; et al.",
+      "title": "Seasonal variability of stratospheric methane: implications for constraining tropospheric methane budgets using total column observations",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.5194/ACP-16-14003-2016",
+      "link": "https://doi.org/10.5194/ACP-16-14003-2016"
+    },
+    {
+      "authors": "Junjie Liu; K. Bowman; Meemong Lee",
+      "title": "Comparison between the Local Ensemble Transform Kalman Filter (LETKF) and 4D‐Var in atmospheric CO2 flux inversion with the Goddard Earth Observing System‐Chem model and the observation impact diagnostics from the LETKF",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.1002/2016JD025100",
+      "link": "https://doi.org/10.1002/2016JD025100"
+    },
+    {
+      "authors": "A. Barkhordarian; K. Bowman; N. Cressie; J. Jewell; Junjie Liu",
+      "title": "Emergent constraints on tropical atmospheric aridity—carbon feedbacks and the future of carbon sequestration",
+      "journal": "Environmental Research Letters",
+      "year": 2021,
+      "doi": "10.1088/1748-9326/ac2ce8",
+      "link": "https://doi.org/10.1088/1748-9326/ac2ce8"
+    },
+    {
+      "authors": "Zichong Chen; Junjie Liu; D. Henze; D. Huntzinger; K. C. Wells; S. Sitch; P. Friedlingstein; E. Joetzjer; V. Bastrikov; D. Goll; V. Haverd; A. Jain; et al.",
+      "title": "Linking global terrestrial CO2 fluxes and environmental drivers: inferences from the Orbiting Carbon Observatory 2 satellite and terrestrial biospheric models",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.5194/ACP-21-6663-2021",
+      "link": "https://doi.org/10.5194/ACP-21-6663-2021"
+    },
+    {
+      "authors": "I. Stanevich; Dylan B. A. Jones; K. Strong; M. Keller; D. Henze; R. Parker; H. Boesch; D. Wunch; J. Notholt; C. Petri; T. Warneke; R. Sussmann; et al.",
+      "title": "Characterizing model errors in chemical transport modeling of methane: using GOSAT XCH4 data with weak-constraint four-dimensional variational data assimilation",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2021,
+      "doi": "10.5194/ACP-21-9545-2021",
+      "link": "https://doi.org/10.5194/ACP-21-9545-2021"
+    },
+    {
+      "authors": "W. He; Fei Jiang; Mousong Wu; W. Ju; M. Scholze; Zhi Chen; B. Byrne; Junjie Liu; Hengmao Wang; Jun Wang; Songhan Wang; Yanlian Zhou; et al.",
+      "title": "China's Terrestrial Carbon Sink Over 2010–2015 Constrained by Satellite Observations of Atmospheric CO2 and Land Surface Variables",
+      "journal": "Journal of Geophysical Research - Biogeosciences",
+      "year": 2022,
+      "doi": "10.1029/2021JG006644",
+      "link": "https://doi.org/10.1029/2021JG006644"
+    },
+    {
+      "authors": "C. DiMaria; Dylan B. A. Jones; H. Worden; A. A. Bloom; K. Bowman; T. Stavrakou; K. Miyazaki; J. Worden; A. Guenther; C. Sarkar; R. Seco; Jeong-Hoo Park; et al.",
+      "title": "Optimizing the Isoprene Emission Model MEGAN With Satellite and Ground‐Based Observational Constraints",
+      "journal": "Journal of Geophysical Research - Atmospheres",
+      "year": 2023,
+      "doi": "10.1029/2022JD037822",
+      "link": "https://doi.org/10.1029/2022JD037822"
+    },
+    {
+      "authors": "Nasrin Mostafavi Pak; Sajjan Heerah; Junhua Zhang; E. Chan; D. Worthy; F. Vogel; D. Wunch",
+      "title": "The Facility Level and Area Methane Emissions inventory for the Greater Toronto Area (FLAME-GTA)",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.1016/J.ATMOSENV.2021.118319",
+      "link": "https://doi.org/10.1016/J.ATMOSENV.2021.118319"
+    },
+    {
+      "authors": "G. R. Quetin; C. Famiglietti; N. Dadap; A. Bloom; K. Bowman; N. Diffenbaugh; Junjie Liu; A. Trugman; A. Konings",
+      "title": "Attributing Past Carbon Fluxes to CO2 and Climate Change: Respiration Response to CO2 Fertilization Shifts Regional Distribution of the Carbon Sink",
+      "journal": "Global Biogeochemical Cycles",
+      "year": 2023,
+      "doi": "10.1029/2022GB007478",
+      "link": "https://doi.org/10.1029/2022GB007478"
+    },
+    {
+      "authors": "J. B. Fisher; M. Sikka; D. Huntzinger; C. Schwalm; Junjie Liu",
+      "title": "Technical note: 3-hourly temporal downscaling of monthly global terrestrialbiosphere model net ecosystem exchange",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.5194/BG-13-4271-2016",
+      "link": "https://doi.org/10.5194/BG-13-4271-2016"
+    },
+    {
+      "authors": "M. Butler; T. Lauvaux; S. Feng; Junjie Liu; K. Bowman; K. Davis",
+      "title": "Atmospheric Simulations of Total Column CO2 Mole Fractions from Global to Mesoscale within the Carbon Monitoring System Flux Inversion Framework",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.3390/atmos11080787",
+      "link": "https://doi.org/10.3390/atmos11080787"
+    },
+    {
+      "authors": "Junjie Liu; K. Bowman",
+      "title": "A method for independent validation of surface fluxes from atmospheric inversion: Application to CO2",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.1002/2016GL067828",
+      "link": "https://doi.org/10.1002/2016GL067828"
+    },
+    {
+      "authors": "J. Stinecipher; P. Cameron-smith; L. Kuai; N. Glatthor; M. Höpfner; I. Baker; C. Beer; K. Bowman; Meemong Lee; Scot M. Miller; N. Parazoo; Jesse W. Campbell",
+      "title": "Remotely Sensed Carbonyl Sulfide Constrains Model Estimates of Amazon Primary Productivity",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2021GL096802",
+      "link": "https://doi.org/10.1029/2021GL096802"
+    },
+    {
+      "authors": "Yuyan Cui; Li Zhang; A. Jacobson; Matthew S. Johnson; Sajeev Philip; D. Baker; F. Chevallier; A. Schuh; Junjie Liu; S. Crowell; Hélène E. Peiro; F. Deng; et al.",
+      "title": "Evaluating Global Atmospheric Inversions of Terrestrial Net Ecosystem Exchange CO2 Over North America on Seasonal and Sub‐Continental Scales",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2022GL100147",
+      "link": "https://doi.org/10.1029/2022GL100147"
+    },
+    {
+      "authors": "L. Gillespie; S. Ars; Samantha Alkadri; Siyar Urya; T. Khoo; Susan Fraser; Felix Vogel; D. Wunch",
+      "title": "Estimating methane emissions from the waste sector in Southern Ontario using atmospheric measurements",
+      "journal": "Journal of the Air and Waste Management Association",
+      "year": 2024,
+      "doi": "10.1080/10962247.2024.2435340",
+      "link": "https://doi.org/10.1080/10962247.2024.2435340"
+    },
+    {
+      "authors": "D. Pendergrass; D. Jacob; H. Nesser; D. Varon; M. Sulprizio; K. Miyazaki; K. Bowman",
+      "title": "CHEEREIO 1.0: a versatile and user-friendly ensemble-based chemical data assimilation and emissions inversion platform for the GEOS-Chem chemical transport model",
+      "journal": "Geoscientific Model Development",
+      "year": 2023,
+      "doi": "10.5194/gmd-16-4793-2023",
+      "link": "https://doi.org/10.5194/gmd-16-4793-2023"
+    },
+    {
+      "authors": "J. Yun; Junjie Liu; B. Byrne; Brad Weir; Lesley E. Ott; K. McKain; Bianca C. Baier; L. V. Gatti; S. Biraud",
+      "title": "Quantification of regional net CO2 flux errors in the Orbiting Carbon Observatory-2 (OCO-2) v10 model intercomparison project (MIP) ensemble using airborne measurements",
+      "journal": "Atmospheric Chemistry and Physics",
+      "year": 2025,
+      "doi": "10.5194/acp-25-1725-2025",
+      "link": "https://doi.org/10.5194/acp-25-1725-2025"
+    },
+    {
+      "authors": "T. Eren Bilir; A. Bloom; A. Konings; Junjie Liu; N. Parazoo; G. R. Quetin; Alexander J. Norton; M. Worden; Paul A. Levine; Shuang Ma; R. K. Braghiere; Marcos Longo; et al.",
+      "title": "Satellite‐Constrained Reanalysis Reveals CO2 Versus Climate Process Compensation Across the Global Land Carbon Sink",
+      "journal": "AGU Advances",
+      "year": 2025,
+      "doi": "10.1029/2025AV001689",
+      "link": "https://doi.org/10.1029/2025AV001689"
+    },
+    {
+      "authors": "Junjie Liu; Kevin B. Bowman; Paul I. Palmer; Joanna Joiner; Paul A. Levine; A. A. Bloom; Lianggang Feng; S. Saatchi; Michael Keller; Marcos Longo; D. Schimel; P. Wennberg",
+      "title": "Enhanced Carbon Flux Response to Atmospheric Aridity and Water Storage Deficit During the 2015–2016 El Niño Compromised Carbon Balance Recovery in Tropical South America",
+      "journal": "AGU Advances",
+      "year": 2024,
+      "doi": "10.1029/2024AV001187",
+      "link": "https://doi.org/10.1029/2024AV001187"
+    }
+  ]
+}

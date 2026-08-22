@@ -47,7 +47,7 @@
     },
     {
       "authors": "David et al. (2016)",
-      "title": "A Decade of RAPID \u2013 Reflections on the Development of an Open Source Geoscience Code",
+      "title": "A Decade of RAPID – Reflections on the Development of an Open Source Geoscience Code",
       "journal": "Earth and Space Science",
       "year": 2016,
       "doi": "10.1002/2015EA000142",
@@ -82,7 +82,7 @@
       "category": "A. Foundational RAPID and core methodology"
     },
     {
-      "authors": "H\u00e4fliger et al. (2015)",
+      "authors": "Häfliger et al. (2015)",
       "title": "Evaluation of regional-scale water level simulations using various river routing schemes within a hydrometeorological modelling framework for the preparation of the SWOT mission",
       "journal": "Journal of Hydrometeorology",
       "year": 2015,
@@ -278,6 +278,246 @@
       "doi": "10.1029/2024WR038633",
       "link": "https://doi.org/10.1029/2024WR038633",
       "category": "D. Uses datasets produced by RAPID core methodology"
+    },
+    {
+      "authors": "Gopi Goteti; J. Famiglietti; K. Asante",
+      "title": "A Catchment‐Based Hydrologic and Routing Modeling System with explicit river channels",
+      "journal": "",
+      "year": 2008,
+      "doi": "10.1029/2007jd009691",
+      "link": "https://doi.org/10.1029/2007jd009691"
+    },
+    {
+      "authors": "R. Frasson; M. Turmon; M. Durand; C. David",
+      "title": "Estimating the relative impact of measurement, parameter, and flow law errors on discharge from the Surface Water and Ocean Topography mission",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2022,
+      "doi": "10.1175/jhm-d-22-0078.1",
+      "link": "https://doi.org/10.1175/jhm-d-22-0078.1"
+    },
+    {
+      "authors": "R. Frasson; G. Schumann; A. Kettner; G. Brakenridge; W. Krajewski",
+      "title": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
+      "journal": "Geophysical Research Letters",
+      "year": 2019,
+      "doi": "10.1029/2019gl084686",
+      "link": "https://doi.org/10.1029/2019gl084686"
+    },
+    {
+      "authors": "E. Altenau; T. Pavelsky; M. Durand; Xiao Yang; R. Frasson; Liam Bendezu",
+      "title": "The Surface Water and Ocean Topography (SWOT) Mission River Database (SWORD): A Global River Network for Satellite Data Products",
+      "journal": "Water Resources Research",
+      "year": 2021,
+      "doi": "10.1029/2021wr030054",
+      "link": "https://doi.org/10.1029/2021wr030054"
+    },
+    {
+      "authors": "S. Tuozzolo; G. Lind; B. Overstreet; J. Mangano; M. Fonstad; M. Hagemann; R. Frasson; K. Larnier; P. Garambois; J. Monnier; M. Durand",
+      "title": "Estimating River Discharge With Swath Altimetry: A Proof of Concept Using AirSWOT Observations",
+      "journal": "Geophysical Research Letters",
+      "year": 2019,
+      "doi": "10.1029/2018gl080771",
+      "link": "https://doi.org/10.1029/2018gl080771"
+    },
+    {
+      "authors": "A. Domeneghetti; G. Schumann; R. Frasson; R. Wei; T. Pavelsky; A. Castellarin; A. Brath; M. Durand",
+      "title": "Characterizing water surface elevation under different flow conditions for the upcoming SWOT mission",
+      "journal": "Journal of Hydrology",
+      "year": 2018,
+      "doi": "10.1016/j.jhydrol.2018.04.046",
+      "link": "https://doi.org/10.1016/j.jhydrol.2018.04.046"
+    },
+    {
+      "authors": "A. Cerbelaud; C. David; T. Pavelsky; S. Biancamaria; P. Garambois; C. Kittel; F. Papa; P. Bates; M. Tourian; M. Durand; R. Frasson; H. Oubanas; M. Simard; G. Schumann; G. Allen; A. Tarpanelli; S. Wongchuig; J. Wade; M. Tom; Philippe Malaterre; C. Gleason; J. Crétaux; K. Nielsen; O. Elmi; C. Schwatke; D. Scherer; L. Gal; A. Paris; A. Dasgupta; S. Munier; D. Feng; P. Bauer‐Gottwein; F. Hossain; D. Yamazaki; B. Kitambo; S. Mischel; M. Bonnema; K. Verma; K. Andreadis; N. Picot; J. Benveniste",
+      "title": "Satellite Requirements to Capture Water Propagation in Earth's Rivers",
+      "journal": "Reviews of Geophysics",
+      "year": 2025,
+      "doi": "10.1029/2024rg000871",
+      "link": "https://doi.org/10.1029/2024rg000871"
+    },
+    {
+      "authors": "Thiago Lappicy; Daniel Beltrão; L. Sales; T. Almeida; G. G. Pessoa; S. Souza; R. Frasson; R. Cicerelli",
+      "title": "A Large-Scale Evaluation of SWOT-Derived Water Surface Elevations: Precision Drivers and Strategies to Enhance Data Availability",
+      "journal": "Remote Sensing",
+      "year": 2026,
+      "doi": "10.3390/rs18101609",
+      "link": "https://doi.org/10.3390/rs18101609"
+    },
+    {
+      "authors": "Matthew D. Wilson; P. Bates; D. Alsdorf; B. Forsberg; M. Horritt; J. Melack; F. Frappart; J. Famiglietti",
+      "title": "Modeling large‐scale inundation of Amazonian seasonally flooded wetlands",
+      "journal": "",
+      "year": 2007,
+      "doi": "10.1029/2007gl030156",
+      "link": "https://doi.org/10.1029/2007gl030156"
+    },
+    {
+      "authors": "K. Solander; J. Reager; J. Famiglietti",
+      "title": "How well will the Surface Water and Ocean Topography (SWOT) mission observe global reservoirs?",
+      "journal": "",
+      "year": 2014,
+      "doi": "10.1002/2015wr017952",
+      "link": "https://doi.org/10.1002/2015wr017952"
+    },
+    {
+      "authors": "E. Rodríguez; M. Durand; R. Frasson",
+      "title": "Observing Rivers With Varying Spatial Scales",
+      "journal": "Water Resources Research",
+      "year": 2019,
+      "doi": "10.1029/2019wr026476",
+      "link": "https://doi.org/10.1029/2019wr026476"
+    },
+    {
+      "authors": "Yuan Yang; P. Lin; C. Fisher; M. Turmon; J. Hobbs; C. Emery; J. Reager; C. David; Hui Lu; Kun Yang; Yang Hong; E. Wood; M. Pan",
+      "title": "Enhancing SWOT discharge assimilation through spatiotemporal correlations",
+      "journal": "",
+      "year": 2019,
+      "doi": "10.1016/j.rse.2019.111450",
+      "link": "https://doi.org/10.1016/j.rse.2019.111450"
+    },
+    {
+      "authors": "T. Langhorst; T. Pavelsky; R. Frasson; R. Wei; A. Domeneghetti; E. Altenau; M. Durand; J. Minear; K. Wegmann; M. Fuller",
+      "title": "Anticipated Improvements to River Surface Elevation Profiles From the Surface Water and Ocean Topography Mission",
+      "journal": "Frontiers in Earth Science",
+      "year": 2019,
+      "doi": "10.3389/feart.2019.00102",
+      "link": "https://doi.org/10.3389/feart.2019.00102"
+    },
+    {
+      "authors": "Siqi Ke; M. Tourian; N. Sneeuw; R. Frasson; R. Paiva; M. Durand; C. Gleason; O. Elmi; P. Malaterre; C. David",
+      "title": "A Kalman Filter Approach for Estimating Daily Discharge Using Space‐Based Discharge Estimates",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024wr037667",
+      "link": "https://doi.org/10.1029/2024wr037667"
+    },
+    {
+      "authors": "M. Pascolini‐Campbell; J. Reager; J. Fisher",
+      "title": "GRACE‐based Mass Conservation as a Validation Target for Basin‐Scale Evapotranspiration in the Contiguous United States",
+      "journal": "Water Resources Research",
+      "year": 2020,
+      "doi": "10.1029/2019wr026594",
+      "link": "https://doi.org/10.1029/2019wr026594"
+    },
+    {
+      "authors": "R. Frasson",
+      "title": "Using the Surface Water and Ocean Topography Mission Data to Estimate River Bathymetry and Channel Roughness",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.1016/b978-0-12-819412-6.00005-5",
+      "link": "https://doi.org/10.1016/b978-0-12-819412-6.00005-5"
+    },
+    {
+      "authors": "M. Durand; C. Gleason; R. Frasson; T. Pavelsky",
+      "title": "The Potential of SWOT River Discharge Estimates to Constrain Hydrological Processes Globally in Ungaged Basins",
+      "journal": "IEEE International Geoscience and Remote Sensing Symposium",
+      "year": 2020,
+      "doi": "10.1109/igarss39084.2020.9323156",
+      "link": "https://doi.org/10.1109/igarss39084.2020.9323156"
+    },
+    {
+      "authors": "Tasneem Haq Meem; B. Rhoads; Jida Wang; R. Frasson",
+      "title": "Detecting Water‐Surface Superelevation in Meandering Rivers Using Surface Water and Ocean Topography (SWOT) Satellite Data",
+      "journal": "Geophysical Research Letters",
+      "year": 2026,
+      "doi": "10.1029/2025gl119167",
+      "link": "https://doi.org/10.1029/2025gl119167"
+    },
+    {
+      "authors": "Jefferson S. Wong; Fuad Yassin; J. Famiglietti",
+      "title": "A Methodological Framework to Combine Multiple Precipitation Datasets for Improving Streamflow Simulations: A test study in the Saskatchewan River basin, Canada",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.5194/egusphere-egu2020-12547",
+      "link": "https://doi.org/10.5194/egusphere-egu2020-12547"
+    },
+    {
+      "authors": "Ieee Margaret Scott Graduate Student Member; Alexa Putnam; Ieee Rashmi Shah Senior Member; Cédric H. David; J. Minear; C. Roesler; Ieee Y. Jade Morton Fellow; Y. Jade",
+      "title": "High Precision Altimetry Using Spaceborne Grazing Angle GNSS-Reflectometry Over Tonlé Sap Lake",
+      "journal": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "year": 2026,
+      "doi": "10.1109/jstars.2026.3662584",
+      "link": "https://doi.org/10.1109/jstars.2026.3662584"
+    },
+    {
+      "authors": "M. Rodell; J. Famiglietti; Jianli Chen; S. Seneviratne; P. Viterbo; S. Holl; C. Wilson",
+      "title": "Basin scale estimates of evapotranspiration using GRACE and other observations",
+      "journal": "",
+      "year": 2004,
+      "doi": "10.1029/2004gl020873",
+      "link": "https://doi.org/10.1029/2004gl020873"
+    },
+    {
+      "authors": "Y. Wada; J. Reager; B. Chao; Jida Wang; M. Lo; Chunqiao Song; YuWen Li; A. Gardner",
+      "title": "Recent Changes in Land Water Storage and its Contribution to Sea Level Variations",
+      "journal": "Surveys in geophysics",
+      "year": 2016,
+      "doi": "10.1007/s10712-016-9399-6",
+      "link": "https://doi.org/10.1007/s10712-016-9399-6"
+    },
+    {
+      "authors": "Jinghua Xiong; Li Xu; H. Chandanpurkar; J. Famiglietti; Chong Zhang; G. Ghiggi; Shenglian Guo; Yun Pan; B. Vishwakarma",
+      "title": "ET-WB: water-balance-based estimations of terrestrial evaporation over global land and major global basins",
+      "journal": "Earth System Science Data",
+      "year": 2023,
+      "doi": "10.5194/essd-15-4571-2023",
+      "link": "https://doi.org/10.5194/essd-15-4571-2023"
+    },
+    {
+      "authors": "K. Solander; J. Reager; Y. Wada; J. Famiglietti; R. Middleton",
+      "title": "GRACE satellite observations reveal the severity of recent water over-consumption in the United States",
+      "journal": "Scientific Reports",
+      "year": 2017,
+      "doi": "10.1038/s41598-017-07450-y",
+      "link": "https://doi.org/10.1038/s41598-017-07450-y"
+    },
+    {
+      "authors": "Alka Singh; A. Behrangi; J. Fisher; J. Reager",
+      "title": "On the Desiccation of the South Aral Sea Observed from Spaceborne Missions",
+      "journal": "Remote Sensing",
+      "year": 2018,
+      "doi": "10.3390/rs10050793",
+      "link": "https://doi.org/10.3390/rs10050793"
+    },
+    {
+      "authors": "A. Farahmand; J. Reager; N. Madani",
+      "title": "Drought Cascade in the Terrestrial Water Cycle: Evidence From Remote Sensing",
+      "journal": "Geophysical Research Letters",
+      "year": 2021,
+      "doi": "10.1029/2021gl093482",
+      "link": "https://doi.org/10.1029/2021gl093482"
+    },
+    {
+      "authors": "D. Sharma; S. Patnaik; B. Biswal; J. Reager",
+      "title": "Characterization of Basin-Scale Dynamic Storage–Discharge Relationship Using Daily GRACE Based Storage Anomaly Data",
+      "journal": "Géosciences",
+      "year": 2020,
+      "doi": "10.3390/geosciences10100404",
+      "link": "https://doi.org/10.3390/geosciences10100404"
+    },
+    {
+      "authors": "K. Voss; J. Famiglietti; M. Lo; C. Linage; M. Rodell; S. Swenson",
+      "title": "Groundwater depletion in the Middle East from GRACE with implications for transboundary water management in the Tigris-Euphrates-Western Iran region",
+      "journal": "Water Resources Research",
+      "year": 2013,
+      "doi": "10.1002/wrcr.20078",
+      "link": "https://doi.org/10.1002/wrcr.20078"
+    },
+    {
+      "authors": "M. Lo; J. Famiglietti; P. Yeh; T. Syed",
+      "title": "Improving parameter estimation and water table depth simulation in a land surface model using GRACE water storage and estimated base flow data",
+      "journal": "",
+      "year": 2010,
+      "doi": "10.1029/2009wr007855",
+      "link": "https://doi.org/10.1029/2009wr007855"
+    },
+    {
+      "authors": "J. Reager; J. Famiglietti",
+      "title": "Characteristic mega-basin water storage behavior using GRACE",
+      "journal": "Water Resources Research",
+      "year": 2013,
+      "doi": "10.1002/wrcr.20264",
+      "link": "https://doi.org/10.1002/wrcr.20264"
     }
   ]
 }
