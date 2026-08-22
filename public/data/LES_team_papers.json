@@ -243,30 +243,6 @@
       "venue": "Monthly Weather Review"
     },
     {
-      "authors": "M. T. Richardson; D. Thompson; M. Kurowski; M. Lebsock",
-      "title": "New sampling strategy removes imaging spectroscopy solar-smearing bias in sub-km vapour scaling statistics",
-      "journal": "",
-      "year": 2021,
-      "doi": "10.5194/amt-2021-163",
-      "link": "https://doi.org/10.5194/amt-2021-163"
-    },
-    {
-      "authors": "R. Scheepmaker; J. aan de Brugh; Haili Hu; T. Borsdorff; C. Frankenberg; C. Risi; O. Hasekamp; I. Aben; J. Landgraf",
-      "title": "HDO and H 2 O total column retrievals from TROPOMI shortwave infrared measurements",
-      "journal": "",
-      "year": 2016,
-      "doi": "10.5194/amt-9-3921-2016",
-      "link": "https://doi.org/10.5194/amt-9-3921-2016"
-    },
-    {
-      "authors": "K. Suselj; D. Posselt; M. Smalley; M. Lebsock; João Paulo Ramos Teixeira",
-      "title": "A New Methodology for Observation-Based Parameterization Development",
-      "journal": "",
-      "year": 2020,
-      "doi": "10.1175/mwr-d-20-0114.1",
-      "link": "https://doi.org/10.1175/mwr-d-20-0114.1"
-    },
-    {
       "authors": "M. Kurowski; W. Grabowski; K. Suselj; João Paulo Ramos Teixeira",
       "title": "The Strong Impact of Weak Horizontal Convergence on Continental Shallow Convection",
       "journal": "",
@@ -281,22 +257,6 @@
       "year": 2025,
       "doi": "10.3390/atmos16030310",
       "link": "https://doi.org/10.3390/atmos16030310"
-    },
-    {
-      "authors": "D. Cusworth; D. Jacob; D. Varon; Christopher E. Chan Miller; Xiong Liu; K. Chance; A. Thorpe; R. Duren; C. Miller; D. Thompson; C. Frankenberg; L. Guanter; C. Randles",
-      "title": "Potential of next-generation imaging spectrometers to detect and quantify methane point sources from space",
-      "journal": "Atmospheric Measurement Techniques",
-      "year": 2019,
-      "doi": "10.5194/amt-12-5655-2019",
-      "link": "https://doi.org/10.5194/amt-12-5655-2019"
-    },
-    {
-      "authors": "Jong‐Hoon Jeong; M. Witte; I. Glenn; M. Smalley; M. Lebsock; K. Lamer; Zeen Zhu",
-      "title": "Distinct Dynamical and Structural Properties of Marine Stratocumulus and Shallow Cumulus Clouds in the Eastern North Atlantic",
-      "journal": "Journal of Geophysical Research - Atmospheres",
-      "year": 2022,
-      "doi": "10.1029/2022jd037021",
-      "link": "https://doi.org/10.1029/2022jd037021"
     },
     {
       "authors": "M. Smalley; K. Suselj; M. Lebsock; J. Teixeira",
@@ -315,22 +275,6 @@
       "link": "https://doi.org/10.1175/mwr-d-21-0215.1"
     },
     {
-      "authors": "M. Kurowski; M. Lebsock; K. Smalley",
-      "title": "The diurnal susceptibility of subtropical clouds to aerosols",
-      "journal": "Atmospheric Chemistry and Physics",
-      "year": 2025,
-      "doi": "10.5194/acp-25-15329-2025",
-      "link": "https://doi.org/10.5194/acp-25-15329-2025"
-    },
-    {
-      "authors": "Nitika Yadlapalli Yurk; M. Lebsock; Juan M. Socuéllamos; Raquel Rodriguez Monje; Ken B. Cooper; P. Kollias",
-      "title": "Vertical wind and drop size distribution retrieval with the CloudCube G-band Doppler radar",
-      "journal": "Atmospheric Measurement Techniques",
-      "year": 2025,
-      "doi": "10.5194/amt-18-5141-2025",
-      "link": "https://doi.org/10.5194/amt-18-5141-2025"
-    },
-    {
       "authors": "M. Smalley; M. Lebsock; J. Teixeira",
       "title": "Quantifying the impact of vertical resolution on the representation of marine boundary layer physics for global-scale models",
       "journal": "Monthly Weather Review",
@@ -347,28 +291,12 @@
       "link": "https://doi.org/10.1029/2021ms002736"
     },
     {
-      "authors": "Jeffrey S. Reid; Joshua H. Cossuth; C. Gaston; Robert E. Holz; D. Richter; A. Sealy; Elizabeth J. Thompson; Qing Wang; M. Chinita; J. Dunion; D. Eleuterio; Willem J. Marais; J. Rubin; Stephanie S. Rushley; Lian Shen; Zhien Wang; R. Yamaguchi; E. Blades; A. Bucholtz; Z. Buckholtz; R. Chewitt-Lucas; J. Doyle; T. Eck; Edwin W. Eloranta; David D. Flagg; Dongwei Fu; Joseph P. Garcia; J. Hlywiak; Christopher R. Jackson; S. Król; Elena Lind; Allison Mabrey; S. Malinowski; H. Maring; Emily C. Melvin; M. A. Miller; Shubham Mittal; K. Mulreany; I. Razenkov; E. Reid; Jonathan Roetman; J. Ruiz‐Plancarte; P. Selmer; Sebastian Schmidt; Sujan Shrestha; A. Willitsford; Mikael Witte; P. Xian; S. Yuter",
-      "title": "Delaminating the Marine Atmospheric Boundary and Saharan Air Layers: Observations and modeling by MAGPIE to understand marine boundary and lower free troposphere layer inhomogeneity over the Northwest Tropical Atlantic",
-      "journal": "Bulletin of The American Meteorological Society - (BAMS)",
-      "year": 2026,
-      "doi": "10.1175/bams-d-25-0224.1",
-      "link": "https://doi.org/10.1175/bams-d-25-0224.1"
-    },
-    {
       "authors": "H. Park; Jeﬀrey Reid; P. Caffrey; M. Chinita; David H Richter",
       "title": "Lagrangian aerosol particle trajectories in a cloud-free marine atmospheric boundary layer: implications for sampling",
       "journal": "Atmospheric Measurement Techniques",
       "year": 2025,
       "doi": "10.5194/amt-18-5017-2025",
       "link": "https://doi.org/10.5194/amt-18-5017-2025"
-    },
-    {
-      "authors": "M. Richardson; J. Leinonen; H. Cronk; J. McDuffie; M. Lebsock; G. Stephens",
-      "title": "Marine liquid cloud geometric thickness retrieved from OCO-2's oxygen A-band spectrometer",
-      "journal": "Atmospheric Measurement Techniques",
-      "year": 2019,
-      "doi": "10.5194/amt-12-1717-2019",
-      "link": "https://doi.org/10.5194/amt-12-1717-2019"
     },
     {
       "authors": "M. Chinita; M. Witte; M. Kurowski; João Paulo Ramos Teixeira; K. Suselj; Georgios; Matheou; P. Bogenschutz",
@@ -395,14 +323,6 @@
       "link": "https://doi.org/10.5194/acp-19-8491-2019"
     },
     {
-      "authors": "Zhuocan Xu; P. Kollias; M. Lebsock; Alessandro Battaglia; S. Sasikumar",
-      "title": "Assessing Uncertainty and Biases in Total Liquid Water Path Retrieved from W-, Ka- and G-band Radar/Radiometer Observations from Space",
-      "journal": "Journal of Atmospheric and Oceanic Technology",
-      "year": 2026,
-      "doi": "10.1175/jtech-d-25-0044.1",
-      "link": "https://doi.org/10.1175/jtech-d-25-0044.1"
-    },
-    {
       "authors": "L. Millán; M. Lebsock; J. Teixeira",
       "title": "Variability of Bulk Water Vapor Content in the Marine Cloudy\nBoundary Layers from Microwave and Near-Infrared Imagery",
       "journal": "",
@@ -419,52 +339,12 @@
       "link": "https://doi.org/10.5194/acp-2017-59"
     },
     {
-      "authors": "Linda Forster; Mark T. Richardson; A. Davis; Mauricio Hess-Flores; Igor Yanovsky; J. Ryan; M. Lebsock; D. Posselt; F. Seidel; Chi O. Ao; Shannon T. Brown; D. Diner; E. Fishbein; L. Girolamo; M. Kurowski; Lukas Mandrake; C. E. Miller; N. Parazoo; Graeme Stephens; J. P. Teixeira; J. Hyon; M. Seablom",
-      "title": "Scientific Applications of Multi-Angle Measurements to Reconstruct Earth’s Atmosphere through Tomography",
-      "journal": "Bulletin of The American Meteorological Society - (BAMS)",
-      "year": 2026,
-      "doi": "10.1175/bams-d-24-0293.1",
-      "link": "https://doi.org/10.1175/bams-d-24-0293.1"
-    },
-    {
-      "authors": "João Paulo Ramos Teixeira; S. Cardoso; S. Cardoso; M. Bonazzola; Jason C. Cole; A. Delgenio; C. DeMott; C. Franklin; C. Hannay; C. Jakob; Y. Jiao; J. Karlsson; H. Kitagawa; M. Köhler; A. Kuwano‐Yoshida; C. Ledrian; Jun Li; A. Lock; M. Miller; P. Marquet; J. Martins; C. Mechoso; E. Meijgaard; I. Meinke; P. Miranda; D. Mironov; R. Neggers; H. Pan; D. Randall; P. Rasch; B. Rockel; W. Rossow; B. Ritter; A. P. Siebesma; P. Soares; F. Turk; P. Vaillancourt; A. Engeln; Ming Zhao",
-      "title": "Tropical and Subtropical Cloud Transitions in Weather and Climate Prediction Models: The GCSS/WGNE Pacific Cross-Section Intercomparison (GPCI)",
-      "journal": "",
-      "year": 2011,
-      "doi": "10.1175/2011jcli3672.1",
-      "link": "https://doi.org/10.1175/2011jcli3672.1"
-    },
-    {
-      "authors": "A. Thorpe; C. Frankenberg; D. Roberts",
-      "title": "Retrieval techniques for airborne imaging of methane concentrations using high spatial and moderate spectral resolution: application to AVIRIS",
-      "journal": "",
-      "year": 2014,
-      "doi": "10.5194/amt-7-491-2014",
-      "link": "https://doi.org/10.5194/amt-7-491-2014"
-    },
-    {
-      "authors": "Hyoun-Myoung Cho; Zhibo Zhang; K. Meyer; M. Lebsock; S. Platnick; A. Ackerman; L. Di Girolamo; L. C.-Labonnote; C. Cornet; J. Riedi; R. Holz",
-      "title": "Frequency and causes of failed MODIS cloud property retrievals for liquid phase clouds over global oceans",
-      "journal": "Journal of Geophysical Research - Atmospheres",
-      "year": 2015,
-      "doi": "10.1002/2015jd023161",
-      "link": "https://doi.org/10.1002/2015jd023161"
-    },
-    {
       "authors": "G. Matheou; D. Chung",
       "title": "Large-Eddy Simulation of Stratified Turbulence. Part II: Application of the Stretched-Vortex Model to the Atmospheric Boundary Layer",
       "journal": "",
       "year": 2014,
       "doi": "10.1175/jas-d-13-0306.1",
       "link": "https://doi.org/10.1175/jas-d-13-0306.1"
-    },
-    {
-      "authors": "J. Borchardt; K. Gerilowski; S. Krautwurst; H. Bovensmann; A. Thorpe; D. Thompson; C. Frankenberg; C. Miller; R. Duren; J. Burrows",
-      "title": "Detection and quantification of CH4 plumes using the WFM-DOAS retrieval on AVIRIS-NG hyperspectral data",
-      "journal": "Atmospheric Measurement Techniques",
-      "year": 2020,
-      "doi": "10.5194/amt-2020-275",
-      "link": "https://doi.org/10.5194/amt-2020-275"
     },
     {
       "authors": "M. Inoue; G. Matheou; J. Teixeira",

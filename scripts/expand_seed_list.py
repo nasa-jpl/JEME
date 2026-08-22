@@ -29,6 +29,9 @@ from urllib.parse import quote
 
 import requests
 
+sys.path.insert(0, str(Path(__file__).resolve().parent))
+import seed_guards as G
+
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "public" / "data"
 SEED_DIR = PROJECT_DIR / "seed_lists"
@@ -288,6 +291,7 @@ def main():
     print(f"  JPL-confirmed team authors: {len(jpl_team)}")
 
     profile = build_profile(seed)
+    team_names = [author_name.get(a, "") for a in jpl_team]
 
     # Gather + dedup candidates
     cands = {}
@@ -307,9 +311,17 @@ def main():
             if key in cands:
                 continue
             rel = relevance(p, profile)
-            tier = ("recommend" if rel >= RECOMMEND_THRESHOLD
-                    else "review" if rel >= REVIEW_THRESHOLD else "exclude")
-            authors = "; ".join(a.get("name", "") for a in p.get("authors", []))
+            authors_list = [a.get("name", "") for a in p.get("authors", [])]
+            authors = "; ".join(authors_list)
+            # Relevance alone let two failure modes through: community
+            # assessments (team member buried among 30+ co-authors) and
+            # adjacent research threads sharing generic domain vocabulary.
+            ok, why = G.evaluate(p, model, authors_list, team_names)
+            if not ok:
+                tier = "exclude"
+            else:
+                tier = ("recommend" if rel >= RECOMMEND_THRESHOLD
+                        else "review" if rel >= REVIEW_THRESHOLD else "exclude")
             cands[key] = {
                 "suggested_action": tier,
                 "relevance": round(rel, 3),
@@ -319,6 +331,7 @@ def main():
                 "doi": doi,
                 "citations_s2": p.get("citationCount", 0),
                 "authors": authors,
+                "guard": why,
             }
     save_cache()
 
@@ -349,7 +362,8 @@ def main():
     exp_csv = outdir / f"{model.lower().replace('-','_')}_seed_proposed_expanded.csv"
     with open(exp_csv, "w", newline="") as f:
         w = csv.DictWriter(f, fieldnames=["suggested_action", "relevance", "title",
-                                          "venue", "year", "doi", "citations_s2", "authors"])
+                                          "venue", "year", "doi", "citations_s2",
+                                          "authors", "guard"])
         w.writeheader()
         for r in rows:
             w.writerow(r)
