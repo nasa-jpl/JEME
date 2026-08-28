@@ -154,7 +154,7 @@ const SkepticReviewCard = ({ data }) => {
       {overrideEntries.length === 0 && (
         <div className="mt-4 pt-3 border-t border-gray-100 flex items-center gap-2 text-sm text-green-700">
           <CheckCircle size={16} className="text-green-500" />
-          No overrides flagged — skeptic agent agrees with existing classifications
+          No overrides flagged: skeptic agent agrees with existing classifications
         </div>
       )}
     </div>

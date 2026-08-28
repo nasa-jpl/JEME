@@ -6,7 +6,7 @@ TROPESS (TROPospheric Emission Spectrometer System) is a NASA project that deliv
 
 ## Background
 
-Tropospheric composition observations have historically come from a patchwork of instruments with different sensitivities, vertical resolutions, and retrieval algorithms — making long-term trend analysis difficult. TROPESS addresses this by applying the MUSES (MUlti-SpEctra, MUlti-SpEcies, MUlti-SEnsors) optimal-estimation retrieval algorithm uniformly across multiple sounders. This produces vertically-resolved profiles of CO, CH4, NH3, O3, PAN, and HDO/H2O with characterized averaging kernels and error covariances suitable for data assimilation and chemical reanalysis.
+Tropospheric composition observations have historically come from a patchwork of instruments with different sensitivities, vertical resolutions, and retrieval algorithms, making long-term trend analysis difficult. TROPESS addresses this by applying the MUSES (MUlti-SpEctra, MUlti-SpEcies, MUlti-SEnsors) optimal-estimation retrieval algorithm uniformly across multiple sounders. This produces vertically-resolved profiles of CO, CH4, NH3, O3, PAN, and HDO/H2O with characterized averaging kernels and error covariances suitable for data assimilation and chemical reanalysis.
 
 ## Key Features
 

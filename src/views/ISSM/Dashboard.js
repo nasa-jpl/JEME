@@ -9,6 +9,7 @@ import PaperInfo from '../../components/PaperInfo';
 import ModelInfoSection from '../../components/ModelInfoSection';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import MethodologySummary from '../../components/MethodologySummary';
 
 // Import section components
 import MetricsOverview from '../sections/MetricsOverview';
@@ -145,6 +146,9 @@ const ISSMDashboard = () => {
         <ModelInfoSection modelName="ISSM" modelDisplayName="ISSM" />
         <PaperInfo modelName="ISSM" />
         <Header modelName="ISSM" />
+
+        {/* How to read this dashboard - citations, not publications by the team */}
+        <MethodologySummary modelName="ISSM" citationsData={issmData} />
         
         {/* Data Verification Section */}
         <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
@@ -163,7 +167,7 @@ const ISSMDashboard = () => {
               </div>
               <div>
                 <div className="font-medium text-blue-900">Raw Citation Data</div>
-                <div className="text-sm text-blue-700">View all papers</div>
+                <div className="text-sm text-blue-700">All papers citing ISSM team papers</div>
               </div>
               <ExternalLink size={16} className="ml-auto text-blue-400" />
             </Link>
@@ -225,7 +229,7 @@ const ISSMDashboard = () => {
 
         {issmData.length > 0 && issmData[0]?.uncertainty && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <UncertaintyOverviewCard data={issmData} />
+            <UncertaintyOverviewCard data={issmData} modelName="ISSM" />
             <UncertaintyMatrixCard data={issmData} />
           </div>
         )}

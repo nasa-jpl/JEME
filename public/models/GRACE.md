@@ -2,7 +2,7 @@
 
 ## Overview
 
-GRACE (Gravity Recovery and Climate Experiment) and its successor GRACE-FO (Follow-On) are joint NASA/DLR satellite missions that track changes in Earth's gravity field with unprecedented precision. By measuring tiny variations in the distance between twin satellites, GRACE maps monthly changes in mass distribution across the planet — revealing how water moves through the Earth system.
+GRACE (Gravity Recovery and Climate Experiment) and its successor GRACE-FO (Follow-On) are joint NASA/DLR satellite missions that track changes in Earth's gravity field with unprecedented precision. By measuring tiny variations in the distance between twin satellites, GRACE maps monthly changes in mass distribution across the planet, revealing how water moves through the Earth system.
 
 ## Background
 

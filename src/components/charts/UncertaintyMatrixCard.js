@@ -76,7 +76,7 @@ const UncertaintyMatrixCard = ({ data }) => {
                           backgroundColor: colors.bg,
                           color: colors.text
                         }}
-                        title={`Evidence: ${matrixData.colLabels[colIdx]}, Reasoning: ${rowLabel} — ${count} entries`}
+                        title={`Evidence: ${matrixData.colLabels[colIdx]}, Reasoning: ${rowLabel}, ${count} entries`}
                       >
                         {count > 0 ? count.toLocaleString() : ''}
                       </div>
@@ -143,7 +143,7 @@ const UncertaintyMatrixCard = ({ data }) => {
                   <div>
                     <div className="font-medium text-gray-800">Reasoning Confidence</div>
                     <div className="text-xs text-gray-500 mt-0.5">
-                      How reliable the LLM classification is likely to be. Currently a heuristic:
+                      How reliable the large language model (LLM) classification is likely to be. Currently a heuristic:
                       0.7 with abstract (richer context), 0.4 without (title-only).
                     </div>
                   </div>
@@ -152,8 +152,8 @@ const UncertaintyMatrixCard = ({ data }) => {
               <div className="p-3 bg-gray-50 rounded-lg space-y-1.5">
                 <div className="font-medium text-gray-800 text-xs">Reading the cells</div>
                 <div className="text-xs text-gray-500 space-y-1">
-                  <p><span className="font-medium text-gray-700">Top-right (High/High):</span> Best-supported classifications — rich metadata and reliable reasoning.</p>
-                  <p><span className="font-medium text-gray-700">Bottom-left (Low/Low):</span> Least reliable — sparse metadata and weak reasoning signal. Candidates for manual review.</p>
+                  <p><span className="font-medium text-gray-700">Top-right (High/High):</span> Best-supported classifications, with rich metadata and reliable reasoning.</p>
+                  <p><span className="font-medium text-gray-700">Bottom-left (Low/Low):</span> Least reliable, with sparse metadata and weak reasoning signal. Candidates for manual review.</p>
                   <p><span className="font-medium text-gray-700">Color intensity:</span> Darker cells contain more papers. Most entries cluster where abstract availability determines the reasoning tier.</p>
                 </div>
               </div>

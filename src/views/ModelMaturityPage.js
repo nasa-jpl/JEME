@@ -64,7 +64,7 @@ const ModelMaturityPage = () => {
             <h1 className="text-3xl font-bold text-gray-900">Model Maturity & Capability Levels</h1>
           </div>
           <p className="text-gray-600 max-w-3xl">
-            Systematic assessment of all JEME models using JPL's MCL framework — 14 Tier 1 core dimensions
+            Systematic assessment of all JEME models using JPL's MCL framework: 14 Tier 1 core dimensions
             and 5 Tier 2 application domains, each scored 0-3 with evidence-based justification.
           </p>
         </div>

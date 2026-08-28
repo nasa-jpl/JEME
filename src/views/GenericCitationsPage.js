@@ -6,6 +6,11 @@ import { Link, useParams } from 'react-router-dom';
 import { getModelConfig } from '../config/modelConfig';
 import { getAgencyColor } from '../utils/dataUtils';
 import UncertaintyBadge from '../components/UncertaintyBadge';
+import {
+  ENGAGEMENT_LABELS,
+  getEngagementTier,
+  isMissionFormat as detectMissionFormat,
+} from '../utils/engagementLabels';
 
 // Multi-select component
 const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
@@ -350,6 +355,16 @@ const GenericCitationsPage = () => {
   };
 
   // Get unique values for filter dropdowns
+  const missionFormat = detectMissionFormat(citations);
+
+  // Distinct engagement tiers present in this dataset, in canonical order
+  const engagementTiers = (missionFormat
+    ? ['Citation', 'Data Usage', 'Review Paper', 'Unclassified']
+    : ['L1', 'L2', 'L3', 'Unclassified']
+  ).filter(tier =>
+    citations.some(c => getEngagementTier(c.engagement_level, missionFormat) === tier)
+  );
+
   const getUniqueValues = (field) => {
     const values = citations
       .map(c => c[field])
@@ -375,9 +390,9 @@ const GenericCitationsPage = () => {
       field && String(field).toLowerCase().includes(searchTerm.toLowerCase())
     );
     
-    // Filter by engagement level
-    const engagementMatch = filterEngagement === 'all' || 
-      citation.engagement_level === filterEngagement;
+    // Filter by engagement tier (raw engagement_level strings are inconsistent)
+    const engagementMatch = filterEngagement === 'all' ||
+      getEngagementTier(citation.engagement_level, missionFormat) === filterEngagement;
     
     // Filter by research domain
     const domainMatch = filterDomain.length === 0 || 
@@ -486,8 +501,8 @@ const GenericCitationsPage = () => {
       ? Math.round(citations.reduce((sum, citation) => sum + (citation.cites || 0), 0) / citations.length)
       : 0,
     byEngagement: citations.reduce((acc, c) => {
-      const level = c.engagement_level || 'Unknown';
-      acc[level] = (acc[level] || 0) + 1;
+      const label = ENGAGEMENT_LABELS[getEngagementTier(c.engagement_level, missionFormat)];
+      acc[label] = (acc[label] || 0) + 1;
       return acc;
     }, {}),
     byDomain: citations.reduce((acc, c) => {
@@ -543,15 +558,15 @@ const GenericCitationsPage = () => {
           <>
             {/* Statistics Summary */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
-              <div className="text-lg font-semibold text-gray-800 mb-4">{modelConfig.displayName} Citation Statistics</div>
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
+              <div className="text-lg font-semibold text-gray-800 mb-1">{modelConfig.displayName} Citation Statistics</div>
+              <p className="text-sm text-gray-500 mb-4">
+                All peer-reviewed papers citing {modelConfig.displayName} team papers
+              </p>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-sm text-blue-700 mb-1">Total Publications</div>
-                  <div className="text-2xl font-bold text-blue-900">{citationStats.total}</div>
-                </div>
-                <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-sm text-green-700 mb-1">Total Citations</div>
-                  <div className="text-2xl font-bold text-green-900">{citationStats.totalCitations}</div>
+                  <div className="text-sm text-blue-700 mb-1">Total Citations</div>
+                  <div className="text-2xl font-bold text-blue-900">{citationStats.total.toLocaleString()}</div>
+                  <div className="text-xs text-blue-600 mt-1">Papers citing team papers</div>
                 </div>
                 <div className="bg-amber-50 rounded-lg p-4">
                   <div className="text-sm text-amber-700 mb-1">Most Cited Paper</div>
@@ -600,9 +615,13 @@ const GenericCitationsPage = () => {
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                 <div>
-                  <div className="text-lg font-semibold text-gray-800">{modelConfig.displayName} Research Publications</div>
+                  <div className="text-lg font-semibold text-gray-800">
+                    All papers citing {modelConfig.displayName} team papers
+                  </div>
                   <p className="text-sm text-gray-500 mt-1">
-                    Peer-reviewed publications with direct model/mission usage (L2+)
+                    Raw citation data: one row per peer-reviewed paper that cites a{' '}
+                    {modelConfig.displayName} team paper, with its L1/L2/L3 classification and
+                    per-paper confidence
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -624,7 +643,7 @@ const GenericCitationsPage = () => {
                   </div>
                   <input
                     type="text"
-                    placeholder="Search publications..."
+                    placeholder="Search citations..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
@@ -639,8 +658,8 @@ const GenericCitationsPage = () => {
                     className="w-full px-3 py-2 border border-gray-300 rounded-lg bg-white"
                   >
                     <option value="all">All Engagement Levels</option>
-                    {getUniqueValues('engagement_level').map(level => (
-                      <option key={level} value={level}>{level}</option>
+                    {engagementTiers.map(tier => (
+                      <option key={tier} value={tier}>{ENGAGEMENT_LABELS[tier]}</option>
                     ))}
                   </select>
                 </div>
@@ -658,7 +677,7 @@ const GenericCitationsPage = () => {
               </div>
               
               <div className="text-sm text-gray-600 mb-4">
-                Showing {sortedCitations.length} of {citations.length} publications
+                Showing {sortedCitations.length} of {citations.length} citations
               </div>
               
               {/* Citation table */}
@@ -696,7 +715,7 @@ const GenericCitationsPage = () => {
                         onClick={() => handleSort('cites')}
                       >
                         <div className="flex items-center">
-                          <span>Citations</span>
+                          <span>Times Cited</span>
                           {sortField === 'cites' && (
                             sortDirection === 'asc' ? <SortAsc size={14} className="ml-1" /> : <SortDesc size={14} className="ml-1" />
                           )}
@@ -764,7 +783,7 @@ const GenericCitationsPage = () => {
                           <div className="text-xs text-gray-600 max-w-32 flex items-center gap-1">
                             <span title={citation.engagement_level_rationale || undefined}
                               className={citation.engagement_level_rationale ? 'cursor-help underline decoration-dotted' : ''}>
-                              {citation.engagement_level.replace('Level ', 'L')}
+                              {ENGAGEMENT_LABELS[getEngagementTier(citation.engagement_level, missionFormat)]}
                             </span>
                             {citation.uncertainty && <UncertaintyBadge uncertainty={citation.uncertainty} />}
                           </div>
@@ -882,7 +901,7 @@ const GenericCitationsPage = () => {
                     )) : (
                       <tr>
                         <td colSpan="9" className="px-6 py-4 text-center text-gray-500">
-                          No publications match your search criteria
+                          No citations match your search criteria
                         </td>
                       </tr>
                     )}

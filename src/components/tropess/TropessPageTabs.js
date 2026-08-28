@@ -1,7 +1,7 @@
 // src/components/tropess/TropessPageTabs.js
 // Switcher between the two TROPESS pages, which serve different audiences:
 //   - Data Products & Downloads (data users)  -> /TROPESS/data-products
-//   - Publications & Citations (science impact) -> /TROPESS
+//   - Citations (science impact)               -> /TROPESS
 //
 // `active` is either 'data-products' or 'publications'.
 
@@ -20,8 +20,8 @@ const TABS = [
   {
     key: 'publications',
     to: '/TROPESS',
-    label: 'Paper Publications',
-    sub: 'Citations, research domains, and science impact',
+    label: 'Citations',
+    sub: 'Papers citing TROPESS team papers, research domains, and science impact',
     icon: BookOpen,
   },
 ];

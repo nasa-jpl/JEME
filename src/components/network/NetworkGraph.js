@@ -266,7 +266,7 @@ const NetworkGraph = ({ connectionData, networkMetrics }) => {
       .attr('y', d => d.radius + 32)
       .attr('fill', '#94A3B8')
       .attr('font-size', '10px')
-      .text(d => `${d.totalPapers.toLocaleString()} papers`);
+      .text(d => `${d.totalPapers.toLocaleString()} citations`);
 
     // Hover effects
     nodeElements
@@ -553,7 +553,7 @@ const NetworkGraph = ({ connectionData, networkMetrics }) => {
                 </div>
                 <p className="text-xs text-gray-600">{tooltipData.totalConnections} connections</p>
                 <p className="text-xs text-gray-600">{tooltipData.connectedModelsCount} connected models</p>
-                <p className="text-xs text-gray-600">{(tooltipData.totalPapers || 0).toLocaleString()} papers</p>
+                <p className="text-xs text-gray-600">{(tooltipData.totalPapers || 0).toLocaleString()} citations</p>
                 {tooltipData.domain && (
                   <p className="text-xs text-gray-500 mt-0.5">{tooltipData.domain}</p>
                 )}
@@ -564,7 +564,7 @@ const NetworkGraph = ({ connectionData, networkMetrics }) => {
                 <p className="font-bold text-sm text-gray-900">
                   {tooltipData.source} ↔ {tooltipData.target}
                 </p>
-                <p className="text-xs text-gray-600">{(tooltipData.value || 0).toLocaleString()} shared papers</p>
+                <p className="text-xs text-gray-600">{(tooltipData.value || 0).toLocaleString()} shared citations</p>
                 {tooltipData.sharedDomains && tooltipData.sharedDomains.length > 0 && (
                   <p className="text-xs text-gray-500 mt-0.5">
                     Domains: {tooltipData.sharedDomains.slice(0, 3).join(', ')}
@@ -618,7 +618,7 @@ const NetworkGraph = ({ connectionData, networkMetrics }) => {
               <p className="text-2xl font-bold" style={{ color: selectedNode.color }}>
                 {(selectedNode.totalPapers || 0).toLocaleString()}
               </p>
-              <p className="text-xs text-gray-500">Total Papers</p>
+              <p className="text-xs text-gray-500">Total Citations</p>
             </div>
           </div>
 
@@ -636,7 +636,7 @@ const NetworkGraph = ({ connectionData, networkMetrics }) => {
                     <span key={conn.model} className="px-2 py-0.5 text-xs rounded-full"
                           style={{ backgroundColor: (config?.color || '#8B5CF6') + '20',
                                    color: config?.color || '#8B5CF6' }}>
-                      {conn.model}: {conn.strength} papers
+                      {conn.model}: {conn.strength} citations
                     </span>
                   );
                 })}
@@ -670,14 +670,14 @@ const NetworkGraph = ({ connectionData, networkMetrics }) => {
             </li>
             <li className="flex justify-between">
               <span>Strongest Link:</span>
-              <span className="font-semibold">{connections[0]?.strength || 0} papers</span>
+              <span className="font-semibold">{connections[0]?.strength || 0} citations</span>
             </li>
             <li className="flex justify-between">
               <span>Avg Link Strength:</span>
               <span className="font-semibold">
                 {connections.length > 0
                   ? Math.round(connections.reduce((sum, c) => sum + c.strength, 0) / connections.length)
-                  : 0} papers
+                  : 0} citations
               </span>
             </li>
           </ul>

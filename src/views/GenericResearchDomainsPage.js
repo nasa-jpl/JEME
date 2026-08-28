@@ -192,7 +192,7 @@ const GenericResearchDomainsPage = () => {
       .map(([domain, count]) => ({ domain, count }));
   }, [processedData.domainStats]);
 
-  // Yearly publication data - Now uses filtered data
+  // Yearly citation data - Now uses filtered data
   const yearData = React.useMemo(() => {
     return Object.keys(processedData.yearlyData)
       .sort()
@@ -216,7 +216,7 @@ const GenericResearchDomainsPage = () => {
   // Colors for pie chart
   const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042', '#8884D8'];
 
-  // Helper function to get domain colors — covers all model-specific taxonomies
+  // Helper function to get domain colors, covering all model-specific taxonomies
   const getDomainColor = (domain) => {
     const colors = {
       // RAPID domains
@@ -583,10 +583,10 @@ const GenericResearchDomainsPage = () => {
               </div>
             </div>
 
-            {/* Yearly Publications Trend */}
+            {/* Yearly Citations Trend */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="text-lg font-semibold text-gray-800 mb-4">
-                Publications Over Time
+                Citations Over Time
                 {selectedDomain !== 'all' && ` - ${selectedDomain}`}
               </div>
               <div className="h-64">
@@ -608,14 +608,14 @@ const GenericResearchDomainsPage = () => {
               </div>
             </div>
 
-            {/* Recent Papers Table */}
+            {/* Recent Citations Table */}
             <div className="bg-white rounded-lg shadow-sm p-6">
               <div className="text-lg font-semibold text-gray-800 mb-4">
-                Recent Publications
+                Recent Citations
                 {selectedDomain !== 'all' && ` in ${selectedDomain}`}
               </div>
               <p className="text-sm text-gray-500 mb-6">
-                Latest research papers using {modelConfig.displayName}
+                Most recent papers citing {modelConfig.displayName} team papers
               </p>
               
               <div className="overflow-x-auto">
@@ -698,7 +698,7 @@ const GenericResearchDomainsPage = () => {
                     }) : (
                       <tr>
                         <td colSpan="5" className="px-6 py-4 text-center text-gray-500">
-                          No publications found for the selected criteria
+                          No citations found for the selected criteria
                         </td>
                       </tr>
                     )}

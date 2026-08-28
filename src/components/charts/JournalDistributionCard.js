@@ -197,7 +197,7 @@ const JournalDistributionCard = ({ data = [] }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Journal Distribution</div>
           <div className="text-sm text-gray-500 mt-1">
-            Top publishing journals • {diversityMetrics.totalJournals} unique journals
+            Journals the citations appeared in • {diversityMetrics.totalJournals} unique journals
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">
@@ -233,7 +233,7 @@ const JournalDistributionCard = ({ data = [] }) => {
         {journalData.length === 0 && (
           <div className="text-center text-gray-500 py-8">
             <div className="text-sm">No journal data available</div>
-            <div className="text-xs mt-1">Check if papers have journal information</div>
+            <div className="text-xs mt-1">Check if citations have journal information</div>
           </div>
         )}
       </div>

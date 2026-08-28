@@ -393,7 +393,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
             </div>
           </div>
           
-          <div className="border-l-4 border-blue-500 pl-4 py-2">
+          <div className="py-2">
             <h3 className="text-lg font-medium text-gray-900 mb-2">{teamPaper.title}</h3>
             <p className="text-gray-700 mb-2">{teamPaper.authors}</p>
             <p className="text-gray-600 text-sm mb-2">{teamPaper.journal}</p>
@@ -583,7 +583,7 @@ const GenericDashboard = ({ modelName, citationsData }) => {
         {/* Uncertainty Analysis */}
         {citationsData && citationsData.length > 0 && citationsData[0]?.uncertainty && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mt-8">
-            <UncertaintyOverviewCard data={citationsData} />
+            <UncertaintyOverviewCard data={citationsData} modelName={modelName} />
             <UncertaintyMatrixCard data={citationsData} />
           </div>
         )}

@@ -4,6 +4,13 @@
 import React, { useMemo } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { calculateUncertaintyMetrics, getConfidenceColor } from '../../utils/uncertaintyUtils';
+import { ENGAGEMENT_LABELS, ENGAGEMENT_SHORT_LABELS } from '../../utils/engagementLabels';
+
+// calculateUncertaintyMetrics keys confidenceByEngagement by the long label,
+// so map back to the tier to get a short axis label.
+const SHORT_BY_LONG = Object.fromEntries(
+  Object.keys(ENGAGEMENT_LABELS).map(tier => [ENGAGEMENT_LABELS[tier], ENGAGEMENT_SHORT_LABELS[tier]])
+);
 
 const ConfidenceByClassificationChart = ({ data }) => {
   const metrics = useMemo(() => calculateUncertaintyMetrics(data), [data]);
@@ -13,7 +20,7 @@ const ConfidenceByClassificationChart = ({ data }) => {
   }
 
   const chartData = metrics.confidenceByEngagement.map(item => ({
-    name: item.level.replace('Level ', 'L').replace(': Foundational Method', ': Foundation'),
+    name: SHORT_BY_LONG[item.level] || item.level,
     fullName: item.level,
     avgConfidence: Math.round(item.avgConfidence * 100),
     count: item.count,
@@ -30,7 +37,7 @@ const ConfidenceByClassificationChart = ({ data }) => {
             Avg confidence: {d.avgConfidence}%
           </p>
           <p className="text-sm text-gray-600">
-            {d.count} papers
+            {d.count.toLocaleString()} citations
           </p>
         </div>
       );
@@ -43,7 +50,7 @@ const ConfidenceByClassificationChart = ({ data }) => {
       <div className="mb-4">
         <div className="text-base font-semibold text-gray-800">Confidence by Engagement Level</div>
         <div className="text-sm text-gray-500">
-          Average classification confidence for each engagement tier
+          Average classification confidence for each engagement tier. A low bar means that tier's labels need review, not that the papers are weak
         </div>
       </div>
 

@@ -150,7 +150,7 @@ const ResearchDomainsCard = ({ data = [] }) => {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-900">{d.name}</p>
-          <p className="text-sm text-gray-600">{`${d.value} papers (${d.percentage}%)`}</p>
+          <p className="text-sm text-gray-600">{`${d.value} citations (${d.percentage}%)`}</p>
         </div>
       );
     }
@@ -163,7 +163,7 @@ const ResearchDomainsCard = ({ data = [] }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Research Domains</div>
           <div className="text-sm text-gray-500 mt-1">
-            Scientific fields of papers citing this model • {totalDomains} domains identified
+            Scientific fields of the citations of this model • {totalDomains} domains identified
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">
@@ -288,8 +288,8 @@ const ResearchDomainsCard = ({ data = [] }) => {
             <div className="text-xs text-gray-500">Top Domains</div>
           </div>
           <div>
-            <div className="text-lg font-semibold text-gray-900">{citationsData.length}</div>
-            <div className="text-xs text-gray-500">Total Papers</div>
+            <div className="text-lg font-semibold text-gray-900">{citationsData.length.toLocaleString()}</div>
+            <div className="text-xs text-gray-500">Total Citations</div>
           </div>
           <div>
             <div className="text-lg font-semibold text-gray-900">{domainData.length > 0 ? domainData[0].percentage : 0}%</div>

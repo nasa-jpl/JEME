@@ -92,7 +92,7 @@ const SphereDetailPanel = ({ sphereName, data }) => {
     .slice(0, showAll ? 20 : 5);
 
   return (
-    <div className="bg-white rounded-lg shadow-sm p-6 border-l-4" style={{ borderColor: data.color }}>
+    <div className="bg-white rounded-lg shadow-sm p-6">
       <div className="flex items-center gap-3 mb-4">
         <Icon size={24} style={{ color: data.color }} />
         <div>
@@ -455,8 +455,8 @@ const EarthSystemPage = () => {
             <h1 className="text-3xl font-bold text-gray-900">Earth System Interconnections</h1>
           </div>
           <p className="text-gray-600 max-w-3xl">
-            All JEME model publications classified into Earth's five interconnected spheres — Atmosphere,
-            Hydrosphere, Cryosphere, Biosphere, and Geosphere — revealing how scientific research
+            All JEME model citations classified into Earth's five interconnected spheres (Atmosphere,
+            Hydrosphere, Cryosphere, Biosphere, and Geosphere), revealing how scientific research
             bridges across Earth system boundaries.
           </p>
         </div>

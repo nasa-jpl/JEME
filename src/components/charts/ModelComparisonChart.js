@@ -24,11 +24,10 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
     return Object.entries(allModelsData).map(([modelName, data]) => {
       const papers = Array.isArray(data) ? data : [];
       const totalPapers = papers.length;
-      // Support both citation_count (OpenCitations/Semantic Scholar) and is-referenced-by-count (CrossRef)
-      const totalCitations = papers.reduce((sum, paper) => sum + (paper.citation_count || paper['is-referenced-by-count'] || 0), 0);
-      const avgCitations = totalPapers > 0 ? Math.round(totalCitations / totalPapers) : 0;
 
-      // Calculate h-index (simplified)
+      // h-index over the citing papers' own citation counts.
+      // Supports both citation_count (OpenCitations/Semantic Scholar) and
+      // is-referenced-by-count (CrossRef).
       const citationCounts = papers
         .map(p => p.citation_count || p['is-referenced-by-count'] || 0)
         .sort((a, b) => b - a);
@@ -44,12 +43,10 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
       return {
         name: modelName,
         papers: totalPapers,
-        citations: totalCitations,
-        avgCitations,
         hIndex,
         color: modelColors[modelName] || '#6b7280'
       };
-    }).sort((a, b) => b.citations - a.citations);
+    }).sort((a, b) => b.papers - a.papers);
   }, [allModelsData]);
 
   if (comparisonData.length === 0) {
@@ -61,16 +58,20 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
       <div className="flex justify-between items-start mb-4">
         <div>
           <div className="text-base font-semibold text-gray-800">{isJEOE ? 'Missions' : 'Science Models'} Impact Comparison</div>
-          <div className="text-sm text-gray-500 mt-1">Citation analysis across {isJEOE ? 'missions' : 'Earth system models'}</div>
+          <div className="text-sm text-gray-500 mt-1">
+            Peer-reviewed papers citing each {isJEOE ? "mission's" : "model's"} team papers
+          </div>
         </div>
       </div>
 
-      {/* Publications Chart */}
+      {/* Citations Chart - counts papers citing team papers, not papers by the team */}
       <div className="max-w-3xl mx-auto">
         <div className="mb-3">
-          <div className="text-sm font-semibold text-gray-700">Total Publications</div>
+          <div className="text-sm font-semibold text-gray-700">Total Citations</div>
           <div className="text-sm font-semibold text-gray-700">by {isJEOE ? 'Mission' : 'Model'}</div>
-          <div className="text-xs text-gray-500 mt-1">(Log Scale)</div>
+          <div className="text-xs text-gray-500 mt-1">
+            Papers citing team papers &bull; (Log Scale)
+          </div>
         </div>
         <div className="h-80">
           <ResponsiveContainer width="100%" height="100%">
@@ -93,11 +94,11 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
               />
               <Tooltip
                 formatter={(value, name) => {
-                  if (name === 'papers') return [`${value} papers`, 'Publications'];
+                  if (name === 'citations') return [`${value.toLocaleString()} citations`, 'Citations'];
                   return [value, name];
                 }}
               />
-              <Bar dataKey="papers" name="Publications">
+              <Bar dataKey="papers" name="citations">
                 {comparisonData.map((entry, index) => (
                   <Cell key={`cell-${index}`} fill={entry.color} />
                 ))}
@@ -117,16 +118,8 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
             </div>
             <div className="space-y-1 text-xs">
               <div className="flex justify-between">
-                <span className="text-gray-600">Papers:</span>
-                <span className="font-semibold">{model.papers}</span>
-              </div>
-              <div className="flex justify-between">
                 <span className="text-gray-600">Citations:</span>
-                <span className="font-semibold">{model.citations.toLocaleString()}</span>
-              </div>
-              <div className="flex justify-between">
-                <span className="text-gray-600">Avg/Paper:</span>
-                <span className="font-semibold">{model.avgCitations}</span>
+                <span className="font-semibold">{model.papers.toLocaleString()}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">h-index:</span>

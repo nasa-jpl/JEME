@@ -244,7 +244,7 @@ const ProductCatalogSection = ({
       >
         <ScopeTimeline products={products} />
 
-        {/* Stream legend (TROPESS only — generic missions have no streams) */}
+        {/* Stream legend (TROPESS only; generic missions have no streams) */}
         {summary.by_stream?.length > 0 && (
           <div className="flex flex-wrap gap-x-4 gap-y-1 mt-4 pt-3 border-t border-gray-100 text-xs text-gray-600">
             {summary.by_stream.map((s) => (

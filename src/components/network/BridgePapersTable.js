@@ -86,9 +86,9 @@ const BridgePapersTable = ({ bridgePapers }) => {
         <div className="flex items-center">
           <FileText className="text-purple-600 mr-3" size={24} />
           <div>
-            <h2 className="text-xl font-bold text-gray-900">Bridge Papers</h2>
+            <h2 className="text-xl font-bold text-gray-900">Bridge Citations</h2>
             <p className="text-sm text-gray-600">
-              {bridgePapers.length} papers citing multiple models
+              {bridgePapers.length} citations that cite team papers from multiple models
             </p>
           </div>
         </div>
@@ -268,7 +268,7 @@ const BridgePapersTable = ({ bridgePapers }) => {
       {totalPages > 1 && (
         <div className="mt-6 flex items-center justify-between">
           <div className="text-sm text-gray-600">
-            Showing {startIndex + 1}-{Math.min(endIndex, bridgePapers.length)} of {bridgePapers.length} papers
+            Showing {startIndex + 1}-{Math.min(endIndex, bridgePapers.length)} of {bridgePapers.length} citations
           </div>
           <div className="flex items-center gap-2">
             <button

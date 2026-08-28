@@ -186,7 +186,7 @@ const FutureTrendsChart = ({ data }) => {
             <div className="space-y-2 text-sm text-blue-900">
               <div className="flex items-start gap-2">
                 <span className="text-blue-600 mt-0.5">•</span>
-                <span>Based on {(data || []).length} historical papers</span>
+                <span>Based on {(data || []).length.toLocaleString()} historical citations</span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-blue-600 mt-0.5">•</span>

@@ -51,11 +51,11 @@ const MissionsSummary = ({ citationsData, maxMissions = 8, showDetails = true })
           <h3 className="text-lg font-semibold text-gray-800">Missions & Instruments</h3>
         </div>
         <span className="text-sm text-gray-500">
-          {missionData.papersWithMissions} of {citationsData?.length || 0} papers
+          {missionData.papersWithMissions} of {citationsData?.length || 0} citations
         </span>
       </div>
       <p className="text-sm text-gray-500 mb-4">
-        Satellite missions and instruments whose data was actively used in papers citing this model — not just mentioned, but integrated into the research methodology or analysis.
+        Satellite missions and instruments whose data was actively used by the papers citing this model, not just mentioned but integrated into the research methodology or analysis.
       </p>
 
       {/* Top Missions */}
@@ -101,7 +101,7 @@ const MissionsSummary = ({ citationsData, maxMissions = 8, showDetails = true })
               <div className="flex items-center gap-2">
                 <div className="text-right">
                   <div className="text-sm font-semibold text-gray-900">{mission.count}</div>
-                  <div className="text-xs text-gray-500">papers</div>
+                  <div className="text-xs text-gray-500">citations</div>
                 </div>
                 {/* Usage bar */}
                 <div className="w-16 h-2 bg-gray-100 rounded-full overflow-hidden">

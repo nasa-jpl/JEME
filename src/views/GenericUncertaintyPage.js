@@ -163,13 +163,16 @@ const GenericUncertaintyPage = () => {
                 <div className="text-sm text-gray-500 mt-1">
                   Low/very low confidence ({Math.round(((metrics.lowCount + metrics.veryLowCount) / metrics.totalWithUncertainty) * 100)}%)
                 </div>
+                <div className="text-xs text-gray-400 mt-1">
+                  Review these first when validating classifications
+                </div>
               </div>
             </div>
 
             {/* Uncertainty matrix + overview */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
               <UncertaintyMatrixCard data={citationsData} />
-              <UncertaintyOverviewCard data={citationsData} />
+              <UncertaintyOverviewCard data={citationsData} modelName={modelName} />
             </div>
 
             {/* Confidence by engagement */}
@@ -202,7 +205,7 @@ const GenericUncertaintyPage = () => {
                 <div>
                   <div className="text-sm font-medium text-gray-700 mb-3">Pipeline Variance</div>
                   <div className="text-xs text-gray-500 mb-2">
-                    Keyword classifier vs LLM label agreement
+                    Keyword classifier vs large language model (LLM) label agreement
                   </div>
                   <div className="space-y-2">
                     {pipelineVarDist.map((item, idx) => (

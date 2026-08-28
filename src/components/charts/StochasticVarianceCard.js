@@ -70,7 +70,7 @@ const StochasticVarianceCard = ({ data }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Stochastic Variance</div>
           <div className="text-sm text-gray-500">
-            Multi-temperature LLM agreement across {stats.total.toLocaleString()} entries
+            Multi-temperature large language model agreement across {stats.total.toLocaleString()} entries
           </div>
         </div>
       </div>

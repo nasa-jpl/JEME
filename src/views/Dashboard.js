@@ -9,6 +9,7 @@ import NavBar from '../components/NavBar';
 // Import components
 import Footer from '../components/Footer';
 import JEMEContributionSection from '../components/JEMEContributionSection';
+import MethodologySummary from '../components/MethodologySummary';
 
 // Import chart components
 import ModelComparisonChart from '../components/charts/ModelComparisonChart';
@@ -162,6 +163,9 @@ const Dashboard = () => {
           </div>
 
         </div>
+
+        {/* How to read this dashboard - framing for the charts below */}
+        <MethodologySummary />
 
         {loading ? (
           <div className="bg-white rounded-lg p-8 shadow-sm mb-6 text-center">

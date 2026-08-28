@@ -24,7 +24,7 @@ const SummarySection = ({ title, items }) => (
 const DashboardSummaryCard = ({ data = [] }) => {
   // Stabilize the data reference to avoid useMemo dependency issues
   const citationsData = useMemo(() => data || [], [data]);
-  // Process all metrics from the JSON data (pre-filtered to peer-reviewed L2+ papers)
+  // Process all metrics from the JSON data (pre-filtered to peer-reviewed citations)
   const metrics = useMemo(() => {
     // Early return if no data
     if (!citationsData || citationsData.length === 0) {
@@ -46,7 +46,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
         totalDomains: 0
       };
     }
-    // All data is pre-filtered to peer-reviewed L2+ papers
+    // All data is pre-filtered to peer-reviewed citations
     const peerReviewedData = citationsData;
 
     // Helper function to extract year from paper
@@ -108,7 +108,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
     const peakYear = Object.entries(yearCounts)
       .sort(([,a], [,b]) => b - a)[0];
 
-    // Count 2025 publications (current year)
+    // Count 2025 citations (current year)
     const current2025Papers = yearCounts[2025] || 0;
 
     // Count engagement levels with flexible matching
@@ -240,10 +240,8 @@ const DashboardSummaryCard = ({ data = [] }) => {
   const exportSummary = () => {
     const summaryData = {
       "Model Impact Summary": {
-        "Total Publications": metrics.totalPublications,
-        "Total Citations": metrics.totalCitations,
-        "Average Citations per Paper": metrics.avgCitations.toFixed(1),
-        "Peak Publication Year": `${metrics.peakYear ? metrics.peakYear[0] : 'N/A'} (${metrics.peakYear ? metrics.peakYear[1] : 0} papers)`,
+        "Total Citations (papers citing team papers)": metrics.totalPublications,
+        "Peak Citation Year": `${metrics.peakYear ? metrics.peakYear[0] : 'N/A'} (${metrics.peakYear ? metrics.peakYear[1] : 0} citations)`,
         "Implementation Score": `${metrics.implementationScore.toFixed(1)}%`,
         "Geographic Reach": `${metrics.uniqueCountries} countries, ${metrics.uniqueRegions} regions`,
         "Research Domains": metrics.totalDomains,
@@ -261,19 +259,17 @@ const DashboardSummaryCard = ({ data = [] }) => {
 
   // Dynamic summary items based on calculated metrics
   const citationSummaryItems = [
-    { label: "Total Publications", value: metrics.totalPublications.toLocaleString() },
-    { label: "Total Citation Impact", value: `${metrics.totalCitations.toLocaleString()} citations` },
-    { label: "Average Citations/Paper", value: metrics.avgCitations.toFixed(1) },
-    { 
-      label: "Peak Publication Year", 
-      value: metrics.peakYear ? `${metrics.peakYear[0]} (${metrics.peakYear[1]} papers)` : "N/A"
+    { label: "Total Citations", value: metrics.totalPublications.toLocaleString() },
+    {
+      label: "Peak Citation Year",
+      value: metrics.peakYear ? `${metrics.peakYear[0]} (${metrics.peakYear[1]} citations)` : "N/A"
     },
-    { label: "2025 Publications", value: `${metrics.current2025Papers} papers (YTD)` }
+    { label: "2025 Citations", value: `${metrics.current2025Papers} citations (YTD)` }
   ];
   
   const researchImpactItems = [
     { label: "Implementation Score", value: `${metrics.implementationScore.toFixed(1)}%` },
-    { label: "High-Engagement Studies", value: `${metrics.highEngagementCount} papers (Levels 2-3)` },
+    { label: "High-Engagement Citations", value: `${metrics.highEngagementCount} citations (L2 + L3)` },
     {
       label: "Geographic Reach",
       value: `${metrics.uniqueCountries} countries, ${metrics.uniqueRegions} regions`
@@ -283,11 +279,11 @@ const DashboardSummaryCard = ({ data = [] }) => {
   const domainImpactItems = [
     { 
       label: "Primary Domain", 
-      value: metrics.topDomains[0] ? `${metrics.topDomains[0][0]} (${metrics.topDomains[0][1]} papers)` : "N/A"
+      value: metrics.topDomains[0] ? `${metrics.topDomains[0][0]} (${metrics.topDomains[0][1]} citations)` : "N/A"
     },
     { 
       label: "Secondary Domain", 
-      value: metrics.topDomains[1] ? `${metrics.topDomains[1][0]} (${metrics.topDomains[1][1]} papers)` : "N/A"
+      value: metrics.topDomains[1] ? `${metrics.topDomains[1][0]} (${metrics.topDomains[1][1]} citations)` : "N/A"
     },
     { label: "Cross-Disciplinary Reach", value: `${metrics.totalDomains} research domains` },
     { 
@@ -323,7 +319,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Model Impact Dashboard</div>
           <div className="text-sm text-gray-500 mt-1">
-            Citation analysis and research impact metrics • Based on {metrics.totalPublications} peer-reviewed papers (L2+)
+            Research impact metrics • Based on {metrics.totalPublications.toLocaleString()} peer-reviewed citations of this model's team papers
           </div>
         </div>
         <button 
@@ -355,7 +351,7 @@ const DashboardSummaryCard = ({ data = [] }) => {
       
       {/* Additional summary statistics */}
       <div className="mt-6 pt-6 border-t border-gray-100">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div className="grid grid-cols-3 gap-4 text-center">
           <div>
             <div className="text-2xl font-bold text-blue-600">
               {metrics.totalPublications > 0 ? ((metrics.highEngagementCount / metrics.totalPublications) * 100).toFixed(0) : 0}%
@@ -373,12 +369,6 @@ const DashboardSummaryCard = ({ data = [] }) => {
               {metrics.totalDomains}
             </div>
             <div className="text-xs text-gray-500">Research Domains</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-orange-600">
-              {metrics.avgCitations.toFixed(0)}
-            </div>
-            <div className="text-xs text-gray-500">Avg Citations</div>
           </div>
         </div>
       </div>

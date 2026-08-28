@@ -81,7 +81,7 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {}, isJEOE = false }) =
   if (perModelData.length === 0) {
     return (
       <div className="text-center py-8 text-gray-500">
-        No publication data available
+        No citation data available
       </div>
     );
   }
@@ -89,10 +89,11 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {}, isJEOE = false }) =
   return (
     <div className="bg-white rounded-lg p-6 shadow-sm mb-6">
       <h2 className="text-xl font-bold text-gray-900 mb-2">
-        Publication Trends Across {isJEOE ? 'Missions' : 'Models'}
+        Citation Trends Across {isJEOE ? 'Missions' : 'Models'}
       </h2>
       <p className="text-sm text-gray-600 mb-6">
-        Cumulative publications over time for each {isJEOE ? 'JEOE mission' : 'JEME model'}
+        Cumulative papers citing each {isJEOE ? 'JEOE mission' : 'JEME model'}'s team papers, by the
+        citing paper's publication year
       </p>
 
       <div className={`grid gap-6 ${isJEOE ? 'grid-cols-1 md:grid-cols-2' : 'grid-cols-1 md:grid-cols-2 lg:grid-cols-4'}`}>
@@ -104,7 +105,7 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {}, isJEOE = false }) =
                 <div className="w-3 h-3 rounded" style={{ backgroundColor: color }} />
                 <span className="text-sm font-semibold text-gray-800">{modelName}</span>
               </div>
-              <span className="text-xs text-gray-500">{total.toLocaleString()} papers</span>
+              <span className="text-xs text-gray-500">{total.toLocaleString()} citations</span>
             </div>
 
             {/* Chart */}
@@ -125,7 +126,7 @@ const MultiModelCitationTrendsChart = ({ allModelsData = {}, isJEOE = false }) =
                     width={40}
                   />
                   <Tooltip
-                    formatter={(value) => [`${value.toLocaleString()} papers`, 'Cumulative']}
+                    formatter={(value) => [`${value.toLocaleString()} citations`, 'Cumulative']}
                     labelFormatter={(label) => `Year: ${label}`}
                     contentStyle={{ fontSize: '12px' }}
                   />

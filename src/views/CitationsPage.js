@@ -455,14 +455,11 @@ const CitationsPage = () => {
             {/* Statistics Summary */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="text-lg font-semibold text-gray-800 mb-4">Citation Statistics</div>
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-4">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mb-4">
                 <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-sm text-blue-700 mb-1">Total Publications</div>
-                  <div className="text-2xl font-bold text-blue-900">{citationStats.total}</div>
-                </div>
-                <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-sm text-green-700 mb-1">Total Citations</div>
-                  <div className="text-2xl font-bold text-green-900">{citationStats.totalCitations}</div>
+                  <div className="text-sm text-blue-700 mb-1">Total Citations</div>
+                  <div className="text-2xl font-bold text-blue-900">{citationStats.total.toLocaleString()}</div>
+                  <div className="text-xs text-blue-600 mt-1">Papers citing RAPID team papers</div>
                 </div>
                 <div className="bg-amber-50 rounded-lg p-4">
                   <div className="text-sm text-amber-700 mb-1">Most Cited Paper</div>
@@ -515,9 +512,9 @@ const CitationsPage = () => {
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-6">
                 <div>
-                  <div className="text-lg font-semibold text-gray-800">Research Publications</div>
+                  <div className="text-lg font-semibold text-gray-800">All papers citing RAPID team papers</div>
                   <p className="text-sm text-gray-500 mt-1">
-                    Academic publications with detailed metadata from Crossref
+                    Raw citation data: one row per peer-reviewed paper that cites a RAPID team paper
                   </p>
                 </div>
                 <div className="flex gap-2">
@@ -539,7 +536,7 @@ const CitationsPage = () => {
                   </div>
                   <input
                     type="text"
-                    placeholder="Search publications..."
+                    placeholder="Search citations..."
                     value={searchTerm}
                     onChange={(e) => setSearchTerm(e.target.value)}
                     className="w-full pl-10 pr-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
@@ -573,7 +570,7 @@ const CitationsPage = () => {
               </div>
               
               <div className="text-sm text-gray-600 mb-4">
-                Showing {sortedCitations.length} of {citations.length} publications
+                Showing {sortedCitations.length} of {citations.length} citations
               </div>
               
               {/* Citation table */}
@@ -732,7 +729,7 @@ const CitationsPage = () => {
                     )) : (
                       <tr>
                         <td colSpan="8" className="px-6 py-4 text-center text-gray-500">
-                          No publications match your search criteria
+                          No citations match your search criteria
                         </td>
                       </tr>
                     )}

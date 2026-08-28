@@ -54,7 +54,7 @@ const ConnectionMatrix = ({ connectionData }) => {
           <Grid className="text-purple-600 mr-3" size={24} />
           <div>
             <h2 className="text-xl font-bold text-gray-900">Connection Matrix</h2>
-            <p className="text-sm text-gray-600">Heatmap showing shared papers between model pairs</p>
+            <p className="text-sm text-gray-600">Heatmap showing citations shared between model pairs</p>
           </div>
         </div>
       </div>
@@ -145,7 +145,7 @@ const ConnectionMatrix = ({ connectionData }) => {
           </div>
         </div>
         <div className="text-xs text-gray-500">
-          Click on a cell to see shared papers
+          Click on a cell to see shared citations
         </div>
       </div>
 
@@ -167,7 +167,7 @@ const ConnectionMatrix = ({ connectionData }) => {
                   {selectedCell.model1} ↔ {selectedCell.model2}
                 </h3>
                 <p className="text-sm text-gray-600 mt-1">
-                  {selectedCell.count} shared papers connecting these models
+                  {selectedCell.count} shared citations connecting these models
                 </p>
               </div>
               <button

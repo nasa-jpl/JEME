@@ -118,7 +118,7 @@ const PaperTypeCard = ({ data = [] }) => {
       return (
         <div className="bg-white p-3 border border-gray-200 rounded-lg shadow-lg">
           <p className="font-medium text-gray-900">{d.name}</p>
-          <p className="text-sm text-gray-600">{`${d.value} papers (${d.percentage}%)`}</p>
+          <p className="text-sm text-gray-600">{`${d.value} citations (${d.percentage}%)`}</p>
         </div>
       );
     }
@@ -133,7 +133,7 @@ const PaperTypeCard = ({ data = [] }) => {
         <div>
           <div className="text-base font-semibold text-gray-800">Paper Type Classification</div>
           <div className="text-sm text-gray-500 mt-1">
-            Science vs algorithm papers • {totalClassified} classified of {data.length}
+            Science vs algorithm citations • {totalClassified} classified of {data.length}
           </div>
         </div>
         <button className="text-gray-500 hover:text-gray-700 p-1">

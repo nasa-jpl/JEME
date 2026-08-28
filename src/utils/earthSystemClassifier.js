@@ -4,7 +4,7 @@
 //
 // Performance: Optimized for large datasets (ECCO has 27K+ entries).
 // Uses domain-first classification with model affinity fallback.
-// Avoids copying paper objects — stores only lightweight references.
+// Avoids copying paper objects; stores only lightweight references.
 
 const SPHERE_DEFINITIONS = {
   Atmosphere: {
@@ -153,7 +153,7 @@ function classifyPaperFast(paper, modelName) {
     }
   }
 
-  // 3. Model affinity fallback — pick the highest affinity sphere
+  // 3. Model affinity fallback: pick the highest affinity sphere
   let bestSphere = null;
   let bestAffinity = 0;
   for (const [sphere, def] of Object.entries(SPHERE_DEFINITIONS)) {
@@ -230,7 +230,7 @@ export function classifyAllPapers(allModelsData) {
       target.models[modelName]++;
       if (paper.research_domain) target.domains.add(paper.research_domain);
 
-      // Track top papers per sphere (lightweight — only keep top N)
+      // Track top papers per sphere (lightweight, only keep top N)
       const topList = sphereTopPapers[primary] || sphereTopPapers['Unclassified'];
       if (topList.length < TOP_N || citations > (topList[topList.length - 1]?.citation_count || 0)) {
         topList.push({

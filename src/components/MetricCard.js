@@ -4,10 +4,13 @@
 import React from 'react';
 import { TrendingUp } from 'lucide-react';
 
-const MetricCard = ({ title, value, icon, iconBg, trend, trendUp, breakdown }) => (
+const MetricCard = ({ title, subtitle, value, icon, iconBg, trend, trendUp, breakdown }) => (
   <div className="bg-white rounded-lg p-5 shadow-sm">
     <div className="flex justify-between items-start mb-4">
-      <div className="text-sm font-medium text-gray-500">{title}</div>
+      <div>
+        <div className="text-sm font-medium text-gray-500">{title}</div>
+        {subtitle && <div className="text-xs text-gray-400 mt-0.5">{subtitle}</div>}
+      </div>
       <div className={`w-9 h-9 rounded-full flex items-center justify-center text-white ${iconBg}`}>
         {icon}
       </div>

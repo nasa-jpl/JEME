@@ -3,7 +3,7 @@
 //
 // "Last updated" reflects the file mtime of the model's _analyzed.json file
 // (parsed from the HTTP Last-Modified header), so it changes only when the
-// underlying data is regenerated — not on every page load.
+// underlying data is regenerated, not on every page load.
 
 import React, { useState, useEffect } from 'react';
 

@@ -161,7 +161,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
                 ))}
               </Pie>
               <Tooltip
-                formatter={(value, name) => [`${value.toLocaleString()} papers`, name]}
+                formatter={(value, name) => [`${value.toLocaleString()} citations`, name]}
                 contentStyle={{ borderRadius: '8px', border: '1px solid #E5E7EB', fontSize: '13px' }}
               />
             </PieChart>
@@ -224,7 +224,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
 
       {/* Selected Sphere Detail */}
       {selectedSphere && selectedData && (
-        <div className="border-l-4 rounded-lg bg-gray-50 p-4 mb-4" style={{ borderColor: selectedData.color }}>
+        <div className="rounded-lg bg-gray-50 p-4 mb-4">
           <div className="flex items-center gap-2 mb-3">
             {(() => { const Icon = SPHERE_ICONS[selectedSphere]; return <Icon size={20} style={{ color: selectedData.color }} />; })()}
             <h3 className="font-bold text-gray-900">{selectedSphere}</h3>
@@ -253,7 +253,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
           {/* Top papers in this sphere */}
           {selectedPapers.length > 0 && (
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 mb-1.5">Top Cited Papers</h4>
+              <h4 className="text-xs font-semibold text-gray-600 mb-1.5">Top Cited Citing Papers</h4>
               <div className="space-y-1.5">
                 {selectedPapers.map((paper, i) => (
                   <div key={i} className="flex items-start gap-2 p-2 bg-white rounded border border-gray-100">

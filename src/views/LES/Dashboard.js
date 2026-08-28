@@ -9,6 +9,7 @@ import PaperInfo from '../../components/PaperInfo';
 import ModelInfoSection from '../../components/ModelInfoSection';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
+import MethodologySummary from '../../components/MethodologySummary';
 
 // Import section components
 import MetricsOverview from '../sections/MetricsOverview';
@@ -144,6 +145,9 @@ const LESDashboard = () => {
         <PaperInfo modelName="LES" />
         <Header modelName="LES" />
 
+        {/* How to read this dashboard - citations, not publications by the team */}
+        <MethodologySummary modelName="LES" citationsData={lesData} />
+
         {/* Data Verification Section */}
         <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
           <div className="text-lg font-semibold text-gray-800 mb-4">Verify & Explore the Data</div>
@@ -161,7 +165,7 @@ const LESDashboard = () => {
               </div>
               <div>
                 <div className="font-medium text-blue-900">Raw Citation Data</div>
-                <div className="text-sm text-blue-700">View all papers</div>
+                <div className="text-sm text-blue-700">All papers citing LES team papers</div>
               </div>
               <ExternalLink size={16} className="ml-auto text-blue-400" />
             </Link>
@@ -225,7 +229,7 @@ const LESDashboard = () => {
 
         {lesData.length > 0 && lesData[0]?.uncertainty && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <UncertaintyOverviewCard data={lesData} />
+            <UncertaintyOverviewCard data={lesData} modelName="LES" />
             <UncertaintyMatrixCard data={lesData} />
           </div>
         )}

@@ -111,7 +111,7 @@ const MaturityHeatmap = ({ mclData }) => {
           <div className="flex justify-between items-start">
             <div>
               <span className="text-sm font-bold text-blue-900">
-                {selectedCell.model} — {TIER1_DIMENSIONS.find(d => d.id === selectedCell.dim)?.label}
+                {selectedCell.model}: {TIER1_DIMENSIONS.find(d => d.id === selectedCell.dim)?.label}
               </span>
               <span className="ml-2 px-2 py-0.5 text-xs rounded-full"
                     style={{

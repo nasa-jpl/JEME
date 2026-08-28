@@ -3,6 +3,7 @@ import { ArrowLeft, Download, Filter } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 import { loadModelData } from '../utils/dataLoader';
+import { ENGAGEMENT_LABELS, getEngagementTier } from '../utils/engagementLabels';
 
 const ResearchDomainsPage = () => {
   const [citationsData, setCitationsData] = useState([]);
@@ -109,7 +110,7 @@ const ResearchDomainsPage = () => {
       .map(([domain, count]) => ({ domain, count }));
   }, [processedData.domainStats]);
 
-  // Yearly publication data - FIXED: Now uses filtered data
+  // Yearly citation data - FIXED: Now uses filtered data
   const yearData = React.useMemo(() => {
     return Object.keys(processedData.yearlyData)
       .sort()
@@ -409,7 +410,7 @@ const ResearchDomainsPage = () => {
                 {/* Interactive Timeline - FIXED: Now updates based on domain selection */}
                 <div className="pt-4 border-t border-gray-300">
                   <h5 className="text-xs font-medium text-gray-600 mb-3">
-                    Publication Timeline 
+                    Citation Timeline 
                     {selectedDomain !== 'all' && (
                       <span className="text-blue-600 font-medium ml-1">- {selectedDomain}</span>
                     )}
@@ -468,7 +469,7 @@ const ResearchDomainsPage = () => {
                   {/* Timeline summary */}
                   {yearData.length > 0 && (
                     <div className="text-xs text-gray-500 text-center">
-                      Total publications in timeline: {yearData.reduce((sum, year) => sum + year.count, 0)} papers
+                      Total citations in timeline: {yearData.reduce((sum, year) => sum + year.count, 0)}
                       {selectedDomain !== 'all' && ` in ${selectedDomain}`}
                     </div>
                   )}
@@ -534,7 +535,7 @@ const ResearchDomainsPage = () => {
                           {paper.engagement_level && (
                             <div className="mt-1">
                               <span className="text-xs bg-gray-100 text-gray-700 px-2 py-1 rounded">
-                                {paper.engagement_level.replace("Level ", "L")}
+                                {ENGAGEMENT_LABELS[getEngagementTier(paper.engagement_level)]}
                               </span>
                             </div>
                           )}

@@ -38,7 +38,7 @@ const MetricsOverview = ({ data = [] }) => {
         }
       };
     }
-    // All data is pre-filtered to peer-reviewed L2+ papers
+    // All data is pre-filtered to peer-reviewed citations
     const peerReviewedData = citationsData;
     const peerReviewedCount = peerReviewedData.length;
 
@@ -299,15 +299,16 @@ const MetricsOverview = ({ data = [] }) => {
   return (
     <div className="grid grid-cols-4 gap-4 mb-6">
       <MetricCard
-        title="Total Papers"
+        title="Total Citations"
+        subtitle="Peer-reviewed papers citing team papers"
         value={metrics.peerReviewedCount.toLocaleString()}
         icon={<Award size={16} />}
         iconBg="bg-blue-400"
         trend={`+${metrics.trends.citations.value}% from last quarter`}
         trendUp={metrics.trends.citations.isUp}
         breakdown={[
-          { label: "Citation", value: metrics.l1Count.toString() },
-          { label: metrics.isMissionFormat ? "Data Usage + Review Papers" : "L2+ (direct use)", value: metrics.isMissionFormat ? (metrics.l2Count + metrics.reviewPaperCount).toString() : (metrics.l2Count + metrics.l3Count).toString() },
+          { label: metrics.isMissionFormat ? "Citation only" : "L1: Citation only", value: metrics.l1Count.toString() },
+          { label: metrics.isMissionFormat ? "Data Usage + Review Papers" : "L2 + L3 (direct use)", value: metrics.isMissionFormat ? (metrics.l2Count + metrics.reviewPaperCount).toString() : (metrics.l2Count + metrics.l3Count).toString() },
           { label: "High-impact (>100 citations)", value: metrics.highImpactCount.toString() },
           { label: "Recent (2020+)", value: metrics.recentCount.toString() }
         ]}
@@ -332,10 +333,12 @@ const MetricsOverview = ({ data = [] }) => {
         trendUp={metrics.trends.implementation.isUp}
         breakdown={metrics.isMissionFormat ? [
           { label: "Formula", value: "(Data Usage + Review) / Total × 100" },
+          { label: "Citation only", value: metrics.l1Count.toString() },
           { label: "Data Usage", value: metrics.l2Count.toString() },
           { label: "Review Paper", value: metrics.reviewPaperCount.toString() }
         ] : [
           { label: "Formula", value: "(L2 + L3) / Total × 100" },
+          { label: "L1: Citation only", value: metrics.l1Count.toString() },
           { label: "L2: Data Usage", value: metrics.l2Count.toString() },
           { label: "L3: Model Adaptation", value: metrics.l3Count.toString() }
         ]}

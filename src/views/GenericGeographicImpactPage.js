@@ -345,7 +345,7 @@ const GenericGeographicImpactPage = () => {
       // Sort by number of papers (descending)
       regionArray.sort((a, b) => b.papers - a.papers);
       
-      // Group by country — multi-country papers count under each of their countries
+      // Group by country; multi-country papers count under each of their countries
       const countryStats = {};
       entriesWithGeo.forEach(citation => {
         const citationCount = citation['is-referenced-by-count'] ||
@@ -604,13 +604,13 @@ const GenericGeographicImpactPage = () => {
               </div>
             </div>
             
-            {/* Geographic Analysis — merged country + region table */}
+            {/* Geographic Analysis: merged country + region table */}
             <div className="bg-white rounded-lg shadow-sm p-6 mb-6">
               <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-4 mb-2">
                 <div>
                   <div className="text-lg font-semibold text-gray-800">Geographic Analysis</div>
                   <p className="text-sm text-gray-500 mt-1">
-                    {modelConfig.displayName} applications by country and region — click a row to see papers
+                    {modelConfig.displayName} applications by country and region. Click a row to see papers
                   </p>
                 </div>
                 <button
@@ -677,7 +677,7 @@ const GenericGeographicImpactPage = () => {
                               <td colSpan="6" className="px-0 py-0 bg-blue-50 border-b border-blue-100">
                                 <div className="px-6 py-4">
                                   <div className="text-xs font-semibold text-blue-700 mb-3 uppercase tracking-wide">
-                                    Papers — {entry.country} ({entry.papersList.length})
+                                    Papers: {entry.country} ({entry.papersList.length})
                                   </div>
                                   <div className="space-y-2 max-h-96 overflow-y-auto">
                                     {entry.papersList

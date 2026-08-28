@@ -311,7 +311,7 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     [];
 
   return (
-    <div className="bg-blue-50 rounded-lg p-4 mb-6 border-l-4 border-blue-500">
+    <div className="bg-blue-50 rounded-lg p-4 mb-6">
       {/* Original paper section */}
       <div className="font-semibold text-blue-900 mb-2">{originalPaper.title}</div>
       <div className="text-sm text-gray-700 mb-2">{originalPaper.authors}</div>

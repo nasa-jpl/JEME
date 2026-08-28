@@ -1,6 +1,8 @@
 // src/utils/uncertaintyUtils.js
 // Utility functions for uncertainty quantification processing
 
+import { ENGAGEMENT_LABELS, getEngagementTier, isMissionFormat } from './engagementLabels';
+
 /**
  * Safely extract uncertainty data from a citation entry.
  * Returns null defaults for entries without uncertainty data (backward-compatible).
@@ -62,6 +64,7 @@ export const calculateUncertaintyMetrics = (citationsData) => {
   let skepticAgreementSum = 0;
 
   // Per engagement level and per domain
+  const missionFormat = isMissionFormat(entriesWithUncertainty);
   const byEngagement = {};
   const byDomain = {};
 
@@ -106,8 +109,10 @@ export const calculateUncertaintyMetrics = (citationsData) => {
     else if (risk === 'medium') miscMedium++;
     else miscLow++;
 
-    // By engagement
-    const engagement = entry.engagement_level || 'Unknown';
+    // By engagement tier (raw engagement_level strings are inconsistent, so
+    // normalize first - otherwise "Citation" and "Level 1: Simple Citation"
+    // become separate bars for the same tier)
+    const engagement = ENGAGEMENT_LABELS[getEngagementTier(entry.engagement_level, missionFormat)];
     if (!byEngagement[engagement]) {
       byEngagement[engagement] = { sum: 0, count: 0 };
     }

@@ -2,16 +2,26 @@
 // Summary card: avg composite confidence, distribution histogram
 
 import React, { useState, useMemo } from 'react';
+import { Link } from 'react-router-dom';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { ShieldCheck, Info, X } from 'lucide-react';
+import { ShieldCheck, Info, X, ExternalLink } from 'lucide-react';
 import { calculateUncertaintyMetrics, bucketConfidenceScores, getConfidenceColor, getConfidenceLabel } from '../../utils/uncertaintyUtils';
 
-const UncertaintyOverviewCard = ({ data }) => {
+const UncertaintyOverviewCard = ({ data, modelName }) => {
   const [showMethodology, setShowMethodology] = useState(false);
   const metrics = useMemo(() => calculateUncertaintyMetrics(data), [data]);
   const buckets = useMemo(() => bucketConfidenceScores(data), [data]);
 
   if (!metrics) return null;
+
+  const total = (data || []).length;
+  const missionFormat = (data || []).some(p => {
+    const level = p?.engagement_level || '';
+    return level === 'Data Usage' || level === 'Review Paper';
+  });
+  const classesLabel = missionFormat
+    ? 'Citation, Data Usage, Review Paper'
+    : 'L1, L2, L3';
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -42,7 +52,9 @@ const UncertaintyOverviewCard = ({ data }) => {
             </button>
           </div>
           <div className="text-sm text-gray-500">
-            How reliable are the automated classifications
+            How reliable are the automated classifications into {classesLabel} for{' '}
+            {total > 0 ? `all ${total.toLocaleString()}` : 'the'} citation
+            {total === 1 ? '' : 's'}?
           </div>
         </div>
       </div>
@@ -96,6 +108,31 @@ const UncertaintyOverviewCard = ({ data }) => {
         </div>
       </div>
 
+      {/* What the score means, and what to do with it */}
+      <div className="mt-4 pt-3 border-t border-gray-100 text-xs text-gray-500 leading-relaxed">
+        <p>
+          Confidence combines two independent axes:{' '}
+          <span className="font-medium text-gray-700">evidence</span> (how much there was to read:
+          abstract, DOI, venue, authors) and{' '}
+          <span className="font-medium text-gray-700">reasoning</span> (how sure the classifier was
+          about the label it assigned). A low score means the classification is uncertain, not that
+          the paper is weak.
+        </p>
+        <p className="mt-1.5">
+          When validating your model's citations, start with the lowest-confidence papers. That is
+          where a correction changes the most.
+        </p>
+        {modelName && (
+          <Link
+            to={`/${modelName}/citations`}
+            className="inline-flex items-center gap-1 mt-2 text-blue-600 hover:text-blue-800 font-medium"
+          >
+            For per-paper detail, see the raw citation data view
+            <ExternalLink size={12} />
+          </Link>
+        )}
+      </div>
+
       {/* Methodology popup */}
       {showMethodology && (
         <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 p-4" onClick={() => setShowMethodology(false)}>
@@ -142,7 +179,7 @@ const UncertaintyOverviewCard = ({ data }) => {
                   <div>
                     <div className="font-medium text-gray-800">Pipeline Variance Penalty</div>
                     <div className="text-xs text-gray-500 mt-0.5">
-                      Keyword vs LLM label disagreement. Domain mismatch +0.5, engagement mismatch +0.5.
+                      Keyword vs large language model (LLM) label disagreement. Domain mismatch +0.5, engagement mismatch +0.5.
                     </div>
                   </div>
                 </div>

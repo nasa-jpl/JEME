@@ -1,6 +1,6 @@
-// TROPESS Paper Publications dashboard.
+// TROPESS Citations dashboard.
 //
-// Audience: science-impact readers — citations, research domains, engagement.
+// Audience: science-impact readers; citations, research domains, engagement.
 // The published product catalog and download metrics live on the companion
 // page at /TROPESS/data-products.
 import React, { useState, useEffect } from 'react';
@@ -62,7 +62,7 @@ const TROPESSDashboard = () => {
         <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
           <div className="text-lg font-semibold text-gray-800 mb-4">Verify & Explore the Data</div>
           <p className="text-sm text-gray-600 mb-4">
-            This dashboard provides visualizations based on actual publication data. You can explore and verify the raw data using the following detailed views:
+            This dashboard provides visualizations based on actual citation data. You can explore and verify the raw data using the following detailed views:
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
@@ -75,7 +75,7 @@ const TROPESSDashboard = () => {
               </div>
               <div>
                 <div className="font-medium text-blue-900">Raw Citation Data</div>
-                <div className="text-sm text-blue-700">View all papers</div>
+                <div className="text-sm text-blue-700">All papers citing TROPESS team papers</div>
               </div>
               <ExternalLink size={16} className="ml-auto text-blue-400" />
             </Link>
@@ -151,7 +151,7 @@ const TROPESSDashboard = () => {
 
         {tropessData.length > 0 && tropessData[0]?.uncertainty && (
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
-            <UncertaintyOverviewCard data={tropessData} />
+            <UncertaintyOverviewCard data={tropessData} modelName="TROPESS" />
             <UncertaintyMatrixCard data={tropessData} />
           </div>
         )}

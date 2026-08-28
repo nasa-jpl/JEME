@@ -1,5 +1,9 @@
 // src/components/charts/CitationTrendsChart.js
-// Chart showing papers published trends over time
+// Chart showing citations over time.
+//
+// Each bar counts CITING papers (outside papers that cite a team paper),
+// bucketed by the citing paper's publication year - not papers published
+// by the JPL team.
 
 import React, { useMemo } from 'react';
 import { ComposedChart, Bar, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
@@ -216,9 +220,9 @@ const CitationTrendsChart = ({ data }) => {
     <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
       <div className="flex justify-between items-start mb-4">
         <div>
-          <div className="text-base font-semibold text-gray-800">Papers Published Over Time</div>
+          <div className="text-base font-semibold text-gray-800">Citations Over Time</div>
           <div className="text-sm text-gray-500 mt-1">
-            Annual and cumulative peer-reviewed papers from {chartData.startYear} to {chartData.endYear} • {chartData.totalPapers} total papers
+            Annual and cumulative peer-reviewed papers <span className="font-medium">citing this model's team papers</span>, by the citing paper's publication year • {chartData.startYear}–{chartData.endYear} • {chartData.totalPapers.toLocaleString()} total citations
           </div>
         </div>
         <div className="flex gap-2">
@@ -256,7 +260,7 @@ const CitationTrendsChart = ({ data }) => {
             <Bar 
               yAxisId="left" 
               dataKey="annual" 
-              name="Annual Papers" 
+              name="Annual Citations" 
               fill={colors.primaryLight || "#60A5FA"} 
               barSize={30}
               radius={[2, 2, 0, 0]}
@@ -265,7 +269,7 @@ const CitationTrendsChart = ({ data }) => {
               yAxisId="right" 
               type="monotone" 
               dataKey="cumulative" 
-              name="Cumulative Papers" 
+              name="Cumulative Citations" 
               stroke={colors.accent || "#0D9488"} 
               strokeWidth={3}
               dot={{ fill: colors.accent || "#0D9488", strokeWidth: 2, r: 4 }}
@@ -282,13 +286,13 @@ const CitationTrendsChart = ({ data }) => {
             <div className="text-lg font-semibold text-gray-900">
               {chartData.totalPapers.toLocaleString()}
             </div>
-            <div className="text-xs text-gray-500">Total Papers</div>
+            <div className="text-xs text-gray-500">Total Citations</div>
           </div>
           <div>
             <div className="text-lg font-semibold text-gray-900">
               {Math.max(...chartData.chartData.map(d => d.annual))}
             </div>
-            <div className="text-xs text-gray-500">Peak Annual Papers</div>
+            <div className="text-xs text-gray-500">Peak Annual Citations</div>
           </div>
         </div>
       </div>
