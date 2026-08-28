@@ -181,7 +181,7 @@ const MOMOCHEMResearchDomainsPage = () => {
   // Export function
   const exportData = () => {
     const csvContent = [
-      ['Domain', 'Papers', 'Percentage', 'Engagement Level Distribution'].join(','),
+      ['Domain', 'Citations', 'Percentage', 'Engagement Level Distribution'].join(','),
       ...topDomains.map(domain => [
         `"${domain.domain}"`,
         domain.count,
@@ -270,40 +270,24 @@ const MOMOCHEMResearchDomainsPage = () => {
             </div>
             
             <div className="flex flex-wrap text-center mb-6">
-              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
+              <div className="w-full sm:w-1/2 lg:w-1/3 p-3">
                 <div className="bg-purple-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-purple-700 mb-1">{processedData.domains.length}</div>
                   <div className="text-sm text-purple-600">Research Domains</div>
                 </div>
               </div>
-              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
+              <div className="w-full sm:w-1/2 lg:w-1/3 p-3">
                 <div className="bg-violet-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-violet-700 mb-1">{citationsData.length}</div>
-                  <div className="text-sm text-violet-600">Total Papers</div>
+                  <div className="text-sm text-violet-600">Total Citations</div>
                 </div>
               </div>
-              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
-                <div className="bg-blue-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-blue-700 mb-1">
-                    {processedData.domainStats['Ocean Biogeochemistry'] || 0}
-                  </div>
-                  <div className="text-sm text-blue-600">Ocean Chemistry</div>
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
-                <div className="bg-cyan-50 rounded-lg p-4">
-                  <div className="text-3xl font-bold text-purple-700 mb-1">
-                    {processedData.domainStats['Marine Ecosystems'] || 0}
-                  </div>
-                  <div className="text-sm text-purple-600">Marine Ecosystems</div>
-                </div>
-              </div>
-              <div className="w-full sm:w-1/2 lg:w-1/5 p-3">
+              <div className="w-full sm:w-1/2 lg:w-1/3 p-3">
                 <div className="bg-teal-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-violet-700 mb-1">
                     {citationsData.filter(p => extractYear(p) >= 2020).length}
                   </div>
-                  <div className="text-sm text-violet-600">Recent Papers (2020+)</div>
+                  <div className="text-sm text-violet-600">Recent Citations (2020+)</div>
                 </div>
               </div>
             </div>
@@ -314,7 +298,7 @@ const MOMOCHEMResearchDomainsPage = () => {
                 <div className="flex items-center justify-between">
                   <h4 className="text-sm font-medium text-gray-700">Research Domain Distribution</h4>
                   <div className="text-xs text-gray-500">
-                    Interactive Chart • {selectedDomain === 'all' ? citationsData.length : (processedData.domainStats[selectedDomain] || 0)} papers
+                    Interactive Chart • {selectedDomain === 'all' ? citationsData.length : (processedData.domainStats[selectedDomain] || 0)} citations
                     {selectedDomain !== 'all' && (
                       <span className="ml-1 text-purple-600 font-medium">({selectedDomain})</span>
                     )}
@@ -359,7 +343,7 @@ const MOMOCHEMResearchDomainsPage = () => {
                                 fill={domainColors[index % domainColors.length]}
                                 opacity={selectedDomain === 'all' || selectedDomain === domain.domain ? "0.8" : "0.3"}
                                 className="hover:opacity-100 transition-opacity duration-200 cursor-pointer"
-                                title={`${domain.domain}: ${domain.count} papers (${percentage.toFixed(1)}%)`}
+                                title={`${domain.domain}: ${domain.count} citations (${percentage.toFixed(1)}%)`}
                                 onClick={() => setSelectedDomain(domain.domain)}
                               />
                             );
@@ -401,7 +385,7 @@ const MOMOCHEMResearchDomainsPage = () => {
                                 {isSelected && <span className="ml-1 text-purple-600">●</span>}
                               </div>
                               <div className="text-xs text-gray-500">
-                                {domain.count} papers ({percentage}%)
+                                {domain.count} citations ({percentage}%)
                               </div>
                             </div>
                           </div>
@@ -452,14 +436,14 @@ const MOMOCHEMResearchDomainsPage = () => {
                                   height: `${height}px`, 
                                   backgroundColor: getDomainTimelineColor() 
                                 }}
-                                title={`${year.year}: ${year.count} papers${selectedDomain !== 'all' ? ` in ${selectedDomain}` : ''}`}
+                                title={`${year.year}: ${year.count} citations${selectedDomain !== 'all' ? ` in ${selectedDomain}` : ''}`}
                               >
                               </div>
                               {/* Tooltip */}
                               <div className="absolute bottom-full left-1/2 transform -translate-x-1/2 mb-2 opacity-0 group-hover:opacity-100 transition-opacity duration-200 z-20">
                                 <div className="bg-gray-800 text-white text-xs px-2 py-1 rounded whitespace-nowrap shadow-lg">
                                   <div className="font-medium">{year.year}</div>
-                                  <div>{year.count} papers</div>
+                                  <div>{year.count} citations</div>
                                   {selectedDomain !== 'all' && (
                                     <div className="text-gray-300">{selectedDomain}</div>
                                   )}
@@ -492,12 +476,12 @@ const MOMOCHEMResearchDomainsPage = () => {
               </div>
             </div>
             
-            {/* Research Papers Table */}
+            {/* Citations Table */}
             <div className="overflow-x-auto">
               <h3 className="text-lg font-semibold text-gray-800 mb-4">
-                {selectedDomain === 'all' ? 'Recent Research Papers' : `Papers in ${selectedDomain}`}
+                {selectedDomain === 'all' ? 'Recent Citations' : `Citations in ${selectedDomain}`}
                 <span className="text-sm font-normal text-gray-500 ml-2">
-                  (Showing {processedData.papers.length} of {selectedDomain === 'all' ? citationsData.length : (processedData.domainStats[selectedDomain] || 0)} papers)
+                  (Showing {processedData.papers.length} of {selectedDomain === 'all' ? citationsData.length : (processedData.domainStats[selectedDomain] || 0)} citations)
                 </span>
               </h3>
               <table className="min-w-full divide-y divide-gray-200">
@@ -700,7 +684,7 @@ const MOMOCHEMResearchDomainsPage = () => {
           <h2 className="text-lg font-semibold text-gray-800 mb-4">Data Analysis Methodology</h2>
           <p className="text-sm text-gray-600 mb-4">
             This analysis is based on {citationsData.length} research papers that cite or use the MOMO-CHEM (Model of Oceanic Mesoscale Eddies - Chemistry) model. 
-            Papers are categorized by research domain, engagement level, and geographic focus based on their abstracts and metadata.
+            Citations are categorized by research domain, engagement level, and geographic focus based on their abstracts and metadata.
           </p>
           <p className="text-sm text-gray-600 mb-4">
             Research domains are determined through analysis of paper content, keywords, and stated research objectives. 
@@ -708,7 +692,7 @@ const MOMOCHEMResearchDomainsPage = () => {
             "is-referenced-by-count" field in the academic database records.
           </p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500 mb-4">
-            <div>📊 Data source: Academic citations and research papers</div>
+            <div>📊 Data source: Academic citations</div>
             <div>📈 Total citations: {citationsData.reduce((sum, paper) => sum + extractCitations(paper), 0).toLocaleString()}</div>
             <div>🌐 Coverage: {processedData.domains.length} research domains</div>
             <div>📅 Time range: {Math.min(...citationsData.map(p => extractYear(p)).filter(y => y))} - {Math.max(...citationsData.map(p => extractYear(p)).filter(y => y))}</div>

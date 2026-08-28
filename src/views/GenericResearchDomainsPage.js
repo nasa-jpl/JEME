@@ -476,7 +476,7 @@ const GenericResearchDomainsPage = () => {
                   <div className="text-2xl font-bold text-blue-900">{processedData.domains.length}</div>
                 </div>
                 <div className="bg-green-50 rounded-lg p-4">
-                  <div className="text-sm text-green-700 mb-1">Total Papers</div>
+                  <div className="text-sm text-green-700 mb-1">Total Citations</div>
                   <div className="text-2xl font-bold text-green-900">{citationsData.length}</div>
                 </div>
                 <div className="bg-amber-50 rounded-lg p-4">
