@@ -216,7 +216,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
           })}
           {unclassifiedCount > 0 && (
             <div className="text-xs text-gray-400 pl-3 pt-1">
-              + {unclassifiedCount.toLocaleString()} unclassified papers
+              + {unclassifiedCount.toLocaleString()} unclassified citations
             </div>
           )}
         </div>
@@ -250,10 +250,10 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
             </div>
           )}
 
-          {/* Top papers in this sphere */}
+          {/* Most cited citations in this sphere */}
           {selectedPapers.length > 0 && (
             <div>
-              <h4 className="text-xs font-semibold text-gray-600 mb-1.5">Top Cited Citing Papers</h4>
+              <h4 className="text-xs font-semibold text-gray-600 mb-1.5">Most Cited</h4>
               <div className="space-y-1.5">
                 {selectedPapers.map((paper, i) => (
                   <div key={i} className="flex items-start gap-2 p-2 bg-white rounded border border-gray-100">
@@ -262,7 +262,7 @@ const EarthSystemSection = ({ modelName, citationsData }) => {
                       <p className="text-xs font-medium text-gray-800 line-clamp-1">{paper.title}</p>
                       <div className="flex gap-3 mt-0.5 text-xs text-gray-500">
                         <span>{paper.year || 'N/A'}</span>
-                        <span>{(paper.citation_count || 0).toLocaleString()} citations</span>
+                        <span>cited {(paper.citation_count || 0).toLocaleString()} times</span>
                         {paper.doi && (
                           <a href={`https://doi.org/${paper.doi}`} target="_blank" rel="noopener noreferrer"
                              className="text-blue-500 hover:underline flex items-center gap-0.5">

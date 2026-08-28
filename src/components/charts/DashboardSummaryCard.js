@@ -348,24 +348,6 @@ const DashboardSummaryCard = ({ data = [] }) => {
           </div>
         </div>
       </div>
-      
-      {/* Additional summary statistics */}
-      <div className="mt-6 pt-6 border-t border-gray-100">
-        <div className="grid grid-cols-2 gap-4 text-center">
-          <div>
-            <div className="text-2xl font-bold text-green-600">
-              {metrics.uniqueCountries}
-            </div>
-            <div className="text-xs text-gray-500">Countries</div>
-          </div>
-          <div>
-            <div className="text-2xl font-bold text-purple-600">
-              {metrics.totalDomains}
-            </div>
-            <div className="text-xs text-gray-500">Research Domains</div>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };

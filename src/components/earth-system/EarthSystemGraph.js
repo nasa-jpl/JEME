@@ -41,7 +41,6 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
           type: 'sphere',
           color: SPHERE_DEFINITIONS[name].color,
           paperCount: getPaperCount(data),
-          citations: data.totalCitations,
           modelCount: Object.keys(data.models).length,
           domains: data.domains,
           models: data.models,
@@ -71,7 +70,6 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
           type: 'sphere',
           color: SPHERE_DEFINITIONS[name].color,
           paperCount: data.paperCount || data.papers?.length || 0,
-          citations: data.totalCitations,
           modelCount: Object.keys(data.models).length,
           radius: 28,
         });
@@ -624,10 +622,7 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
                   </span>
                 </div>
                 {tooltipData.paperCount != null && (
-                  <p className="text-xs text-gray-600">{(tooltipData.paperCount || 0).toLocaleString()} papers</p>
-                )}
-                {tooltipData.citations != null && (
-                  <p className="text-xs text-gray-600">{(tooltipData.citations || 0).toLocaleString()} citations</p>
+                  <p className="text-xs text-gray-600">{(tooltipData.paperCount || 0).toLocaleString()} citations</p>
                 )}
                 {tooltipData.modelCount != null && (
                   <p className="text-xs text-gray-600">{tooltipData.modelCount} contributing models</p>
@@ -642,7 +637,7 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
                 <p className="font-bold text-sm text-gray-900">
                   {tooltipData.source} ↔ {tooltipData.target}
                 </p>
-                <p className="text-xs text-gray-600">{(tooltipData.value || 0).toLocaleString()} shared papers</p>
+                <p className="text-xs text-gray-600">{(tooltipData.value || 0).toLocaleString()} shared citations</p>
               </>
             )}
           </div>
@@ -675,16 +670,10 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
           </div>
 
           {selectedNode.type === 'sphere' && (
-            <div className="grid grid-cols-3 gap-4">
+            <div className="grid grid-cols-2 gap-4">
               <div>
                 <p className="text-2xl font-bold" style={{ color: selectedNode.color }}>
                   {(selectedNode.paperCount || 0).toLocaleString()}
-                </p>
-                <p className="text-xs text-gray-500">Papers</p>
-              </div>
-              <div>
-                <p className="text-2xl font-bold" style={{ color: selectedNode.color }}>
-                  {(selectedNode.citations || 0).toLocaleString()}
                 </p>
                 <p className="text-xs text-gray-500">Citations</p>
               </div>
@@ -695,7 +684,7 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
                 <p className="text-xs text-gray-500">Models</p>
               </div>
               {selectedNode.models && (
-                <div className="col-span-3">
+                <div className="col-span-2">
                   <p className="text-xs font-semibold text-gray-700 mb-1">Contributing Models</p>
                   <div className="flex flex-wrap gap-1">
                     {Object.entries(selectedNode.models).sort((a, b) => b[1] - a[1]).map(([model, count]) => (
@@ -709,7 +698,7 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
                 </div>
               )}
               {selectedNode.domains && selectedNode.domains.length > 0 && (
-                <div className="col-span-3">
+                <div className="col-span-2">
                   <p className="text-xs font-semibold text-gray-700 mb-1">Research Domains</p>
                   <div className="flex flex-wrap gap-1">
                     {selectedNode.domains.slice(0, 10).map(d => (
@@ -745,8 +734,8 @@ const EarthSystemGraph = ({ sphereData, interSphereLinks, modelSphereConnections
         <div className="bg-gray-50 rounded-lg p-3">
           <h3 className="text-xs font-semibold text-gray-700 mb-2">Visual Encoding</h3>
           <ul className="text-xs text-gray-600 space-y-1">
-            <li><strong>Node size:</strong> Number of papers</li>
-            <li><strong>Edge width:</strong> Cross-sphere papers</li>
+            <li><strong>Node size:</strong> Number of citations</li>
+            <li><strong>Edge width:</strong> Cross-sphere citations</li>
             <li><strong>Particles:</strong> Research flow direction</li>
             <li><strong>Pulse:</strong> Active sphere connections</li>
           </ul>

@@ -15,6 +15,7 @@ const GenericGeographicImpactPage = () => {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [citationsData, setCitationsData] = useState([]);
+  const [geoEntries, setGeoEntries] = useState([]);
   const [expandedRegion, setExpandedRegion] = useState(null);
   
   // Google Maps API key
@@ -413,6 +414,7 @@ const GenericGeographicImpactPage = () => {
       
       setWatershedData(regionArray);
       setCountryData(countryArray);
+      setGeoEntries(entriesWithGeo);
       setError(null);
       
       console.log(`Processed geographic data: ${regionArray.length} regions, ${countryArray.length} countries`);
@@ -588,7 +590,7 @@ const GenericGeographicImpactPage = () => {
                     data={countryData}
                     regionalData={watershedData}
                     apiKey={GOOGLE_MAPS_API_KEY}
-                    citationsData={citationsData}
+                    citationsData={geoEntries}
                   />
                 ) : (
                   <div className="bg-yellow-50 border border-yellow-200 rounded-lg p-4 h-full flex items-center justify-center">

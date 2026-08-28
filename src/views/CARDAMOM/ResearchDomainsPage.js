@@ -271,19 +271,27 @@ const CARDAMOMResearchDomainsPage = () => {
             </div>
             
             <div className="flex flex-wrap text-center mb-6">
-              <div className="w-full sm:w-1/2 lg:w-1/3 p-3">
+              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-green-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-green-700 mb-1">{processedData.domains.length}</div>
                   <div className="text-sm text-green-600">Research Domains</div>
                 </div>
               </div>
-              <div className="w-full sm:w-1/2 lg:w-1/3 p-3">
+              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-emerald-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-emerald-700 mb-1">{citationsData.length}</div>
                   <div className="text-sm text-emerald-600">Total Citations</div>
                 </div>
               </div>
-              <div className="w-full sm:w-1/2 lg:w-1/3 p-3">
+              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
+                <div className="bg-blue-50 rounded-lg p-4">
+                  <div className="text-3xl font-bold text-teal-700 mb-1">
+                    {processedData.domainStats['Carbon Cycle'] || 0}
+                  </div>
+                  <div className="text-sm text-teal-600">Carbon Cycle</div>
+                </div>
+              </div>
+              <div className="w-full sm:w-1/2 lg:w-1/4 p-3">
                 <div className="bg-teal-50 rounded-lg p-4">
                   <div className="text-3xl font-bold text-emerald-700 mb-1">
                     {citationsData.filter(p => extractYear(p) >= 2020).length}

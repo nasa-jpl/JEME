@@ -317,24 +317,15 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
                       </div>
                     </div>
 
-                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 12px;">
+                    <div style="margin-bottom: 12px;">
                       <div style="
                         background: #f0f9ff;
                         padding: 10px;
                         border-radius: 8px;
                         text-align: center;
                       ">
-                        <div style="font-size: 11px; color: #64748b; margin-bottom: 2px;">Papers</div>
-                        <div style="font-size: 20px; font-weight: 700; color: #0369a1;">${item.papers}</div>
-                      </div>
-                      <div style="
-                        background: #f0fdf4;
-                        padding: 10px;
-                        border-radius: 8px;
-                        text-align: center;
-                      ">
                         <div style="font-size: 11px; color: #64748b; margin-bottom: 2px;">Citations</div>
-                        <div style="font-size: 20px; font-weight: 700; color: #15803d;">${item.citations || 0}</div>
+                        <div style="font-size: 20px; font-weight: 700; color: #0369a1;">${item.papers}</div>
                       </div>
                     </div>
 
@@ -375,7 +366,7 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
     if (!citationsData) return {};
     const linkCounts = {};
     citationsData.forEach(paper => {
-      const countries = paper.all_countries;
+      const countries = paper.allCountries || paper.all_countries;
       if (!countries || countries.length < 2) return;
       for (let i = 0; i < countries.length; i++) {
         for (let j = i + 1; j < countries.length; j++) {
@@ -419,7 +410,7 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
               ${countryA} ↔ ${countryB}
             </div>
             <div style="font-size: 13px; color: #6366f1; font-weight: 500;">
-              ${count} shared paper${count > 1 ? 's' : ''}
+              ${count} shared citation${count > 1 ? 's' : ''}
             </div>
           </div>
         `

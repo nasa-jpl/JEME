@@ -53,12 +53,8 @@ const SphereOverviewCards = ({ sphereData, onSelectSphere, selectedSphere }) => 
               <p className="text-xs text-gray-500 mb-3 line-clamp-2">{data.description}</p>
               <div className="space-y-1">
                 <div className="flex justify-between text-sm">
-                  <span className="text-gray-600">Papers</span>
-                  <span className="font-semibold">{(data.paperCount || data.papers?.length || 0).toLocaleString()}</span>
-                </div>
-                <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Citations</span>
-                  <span className="font-semibold">{(data.totalCitations || 0).toLocaleString()}</span>
+                  <span className="font-semibold">{(data.paperCount || data.papers?.length || 0).toLocaleString()}</span>
                 </div>
                 <div className="flex justify-between text-sm">
                   <span className="text-gray-600">Models</span>
@@ -72,7 +68,7 @@ const SphereOverviewCards = ({ sphereData, onSelectSphere, selectedSphere }) => 
 
       {unclassified && (unclassified.paperCount || unclassified.papers.length) > 0 && (
         <div className="text-sm text-gray-500 text-center">
-          {(unclassified.paperCount || unclassified.papers.length)} papers not classified into a sphere
+          {(unclassified.paperCount || unclassified.papers.length)} citations not classified into a sphere
         </div>
       )}
     </div>
@@ -138,9 +134,9 @@ const SphereDetailPanel = ({ sphereName, data }) => {
           </div>
         </div>
 
-        {/* Top papers */}
+        {/* Most cited citations in this sphere */}
         <div>
-          <h4 className="text-sm font-semibold text-gray-700 mb-3">Top Cited Papers</h4>
+          <h4 className="text-sm font-semibold text-gray-700 mb-3">Most Cited</h4>
           <div className="space-y-2">
             {topPapers.map((paper, i) => (
               <div key={i} className="p-2 bg-gray-50 rounded text-xs">
@@ -149,7 +145,7 @@ const SphereDetailPanel = ({ sphereName, data }) => {
                 </p>
                 <div className="flex justify-between mt-1 text-gray-500">
                   <span>{paper.year || 'N/A'}</span>
-                  <span>{(paper.citation_count || 0).toLocaleString()} citations</span>
+                  <span>cited {(paper.citation_count || 0).toLocaleString()} times</span>
                   <span className="px-1.5 py-0.5 rounded text-xs"
                         style={{ backgroundColor: `${getModelConfig(paper.modelName)?.color}20`,
                                  color: getModelConfig(paper.modelName)?.color }}>
@@ -211,7 +207,7 @@ const InterSphereMatrix = ({ sphereData, interSphereLinks }) => {
         <BarChart3 className="text-indigo-600 mr-3" size={24} />
         <div>
           <h2 className="text-xl font-bold text-gray-900">Inter-Sphere Connection Matrix</h2>
-          <p className="text-sm text-gray-600">Papers that bridge multiple Earth system spheres</p>
+          <p className="text-sm text-gray-600">Citations that bridge multiple Earth system spheres</p>
         </div>
       </div>
 
@@ -263,7 +259,7 @@ const InterSphereMatrix = ({ sphereData, interSphereLinks }) => {
         <div className="mt-4 p-3 bg-indigo-50 rounded-lg border border-indigo-200">
           <div className="flex justify-between items-center">
             <span className="text-sm font-medium text-indigo-800">
-              {selectedCell.row} ↔ {selectedCell.col}: {selectedCell.val.toLocaleString()} shared papers
+              {selectedCell.row} ↔ {selectedCell.col}: {selectedCell.val.toLocaleString()} shared citations
             </span>
             <button onClick={() => setSelectedCell(null)}
                     className="text-indigo-400 hover:text-indigo-600 text-xs">
@@ -282,17 +278,15 @@ const SummaryStats = ({ sphereData, interSphereLinks, totalPapers }) => {
   const sphereNames = Object.keys(SPHERE_DEFINITIONS);
   const classifiedPapers = sphereNames.reduce((sum, s) => sum + (sphereData[s]?.paperCount || sphereData[s]?.papers?.length || 0), 0);
   const bridgingPapers = interSphereLinks.reduce((sum, l) => sum + l.count, 0);
-  const totalCitations = sphereNames.reduce((sum, s) => sum + (sphereData[s]?.totalCitations || 0), 0);
 
   const stats = [
-    { label: 'Total Papers', value: totalPapers.toLocaleString(), color: '#3B82F6' },
+    { label: 'Total Citations', value: totalPapers.toLocaleString(), color: '#3B82F6' },
     { label: 'Classified', value: classifiedPapers.toLocaleString(), color: '#10B981' },
     { label: 'Cross-Sphere Links', value: bridgingPapers.toLocaleString(), color: '#8B5CF6' },
-    { label: 'Total Citations', value: totalCitations.toLocaleString(), color: '#F59E0B' },
   ];
 
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
       {stats.map(s => (
         <div key={s.label} className="bg-white rounded-lg shadow-sm p-4">
           <p className="text-2xl font-bold text-gray-900">{s.value}</p>
@@ -339,9 +333,9 @@ const CrossSpherePapersTable = ({ interSphereLinks, sphereData }) => {
         <div className="flex items-center">
           <Filter className="text-purple-600 mr-3" size={24} />
           <div>
-            <h2 className="text-xl font-bold text-gray-900">Cross-Sphere Papers</h2>
+            <h2 className="text-xl font-bold text-gray-900">Cross-Sphere Citations</h2>
             <p className="text-sm text-gray-600">
-              {crossPapers.length} papers bridging multiple Earth system spheres
+              {crossPapers.length} citations bridging multiple Earth system spheres
             </p>
           </div>
         </div>
@@ -464,7 +458,7 @@ const EarthSystemPage = () => {
         {loading ? (
           <div className="bg-white rounded-lg p-8 shadow-sm text-center">
             <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-500 mx-auto mb-4"></div>
-            <p className="text-gray-600">Classifying papers into Earth system spheres...</p>
+            <p className="text-gray-600">Classifying citations into Earth system spheres...</p>
           </div>
         ) : analysis ? (
           <div className="space-y-6">
@@ -503,7 +497,7 @@ const EarthSystemPage = () => {
               interSphereLinks={analysis.interSphereLinks}
             />
 
-            {/* Cross-Sphere Papers */}
+            {/* Cross-Sphere Citations */}
             <CrossSpherePapersTable
               interSphereLinks={analysis.interSphereLinks}
               sphereData={analysis.sphereData}
@@ -511,7 +505,7 @@ const EarthSystemPage = () => {
           </div>
         ) : (
           <div className="bg-white rounded-lg p-8 shadow-sm text-center">
-            <p className="text-gray-600">Failed to classify papers. Please try again.</p>
+            <p className="text-gray-600">Failed to classify citations. Please try again.</p>
           </div>
         )}
 
