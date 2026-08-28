@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/JEME/static/css/main.d9d6fd85.css",
-    "main.js": "/JEME/static/js/main.cbf5a40b.js",
+    "main.css": "/JEME/static/css/main.6e332eb3.css",
+    "main.js": "/JEME/static/js/main.0f106a8a.js",
     "index.html": "/JEME/index.html",
-    "main.d9d6fd85.css.map": "/JEME/static/css/main.d9d6fd85.css.map",
-    "main.cbf5a40b.js.map": "/JEME/static/js/main.cbf5a40b.js.map"
+    "main.6e332eb3.css.map": "/JEME/static/css/main.6e332eb3.css.map",
+    "main.0f106a8a.js.map": "/JEME/static/js/main.0f106a8a.js.map"
   },
   "entrypoints": [
-    "static/css/main.d9d6fd85.css",
-    "static/js/main.cbf5a40b.js"
+    "static/css/main.6e332eb3.css",
+    "static/js/main.0f106a8a.js"
   ]
 }
