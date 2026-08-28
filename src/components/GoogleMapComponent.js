@@ -2,6 +2,7 @@
 // Google Maps component for geographic visualization with region-colored bubbles
 
 import React, { useEffect, useRef, useState, useCallback } from 'react';
+import { COUNTRY_REGIONS, getCountryCoordinates as lookupCoordinates } from '../utils/countryGeo';
 
 // Region color mapping
 const REGION_COLORS = {
@@ -11,64 +12,11 @@ const REGION_COLORS = {
   'Africa': { fill: '#F59E0B', stroke: '#D97706', name: 'Africa' },
   'Asia': { fill: '#EF4444', stroke: '#DC2626', name: 'Asia' },
   'Oceania': { fill: '#06B6D4', stroke: '#0891B2', name: 'Oceania' },
+  'Middle East': { fill: '#EC4899', stroke: '#DB2777', name: 'Middle East' },
   'Other': { fill: '#6B7280', stroke: '#4B5563', name: 'Other' }
 };
 
-// Country to region mapping
-const COUNTRY_TO_REGION = {
-  'United States': 'North America',
-  'Canada': 'North America',
-  'Mexico': 'North America',
-  'Brazil': 'South America',
-  'Argentina': 'South America',
-  'Chile': 'South America',
-  'Peru': 'South America',
-  'Colombia': 'South America',
-  'France': 'Europe',
-  'Germany': 'Europe',
-  'United Kingdom': 'Europe',
-  'Italy': 'Europe',
-  'Spain': 'Europe',
-  'Netherlands': 'Europe',
-  'Switzerland': 'Europe',
-  'Sweden': 'Europe',
-  'Norway': 'Europe',
-  'Denmark': 'Europe',
-  'Belgium': 'Europe',
-  'Austria': 'Europe',
-  'Finland': 'Europe',
-  'Poland': 'Europe',
-  'Portugal': 'Europe',
-  'China': 'Asia',
-  'Japan': 'Asia',
-  'South Korea': 'Asia',
-  'India': 'Asia',
-  'Bangladesh': 'Asia',
-  'Bhutan': 'Asia',
-  'Nepal': 'Asia',
-  'Thailand': 'Asia',
-  'Vietnam': 'Asia',
-  'Indonesia': 'Asia',
-  'Malaysia': 'Asia',
-  'Cambodia': 'Asia',
-  'Laos': 'Asia',
-  'Myanmar': 'Asia',
-  'Pakistan': 'Asia',
-  'Ethiopia': 'Africa',
-  'Kenya': 'Africa',
-  'Tanzania': 'Africa',
-  'Uganda': 'Africa',
-  'Egypt': 'Africa',
-  'Sudan': 'Africa',
-  'Ghana': 'Africa',
-  'Nigeria': 'Africa',
-  'South Africa': 'Africa',
-  'Burkina Faso': 'Africa',
-  'Mali': 'Africa',
-  'Australia': 'Oceania',
-  'New Zealand': 'Oceania',
-  'Papua New Guinea': 'Oceania'
-};
+const COUNTRY_TO_REGION = COUNTRY_REGIONS;
 
 const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
   const mapRef = useRef(null);
@@ -178,77 +126,7 @@ const GoogleMapComponent = ({ data, regionalData, apiKey, citationsData }) => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [apiKey]);
 
-  const getCountryCoordinates = useCallback((country) => {
-    const coordinates = {
-      'United States': { lat: 39.8283, lng: -98.5795 },
-      'France': { lat: 46.2276, lng: 2.2137 },
-      'China': { lat: 35.8617, lng: 104.1954 },
-      'India': { lat: 20.5937, lng: 78.9629 },
-      'Brazil': { lat: -14.2350, lng: -51.9253 },
-      'Germany': { lat: 51.1657, lng: 10.4515 },
-      'Canada': { lat: 56.1304, lng: -106.3468 },
-      'Peru': { lat: -9.1900, lng: -75.0152 },
-      'Chile': { lat: -35.6751, lng: -71.5430 },
-      'South Korea': { lat: 35.9078, lng: 127.7669 },
-      'Ethiopia': { lat: 9.145, lng: 40.4897 },
-      'Uganda': { lat: 1.3733, lng: 32.2903 },
-      'Kenya': { lat: -0.0236, lng: 37.9062 },
-      'Tanzania': { lat: -6.369, lng: 34.8888 },
-      'Bangladesh': { lat: 23.685, lng: 90.3563 },
-      'Bhutan': { lat: 27.5142, lng: 90.4336 },
-      'Nepal': { lat: 28.3949, lng: 84.1240 },
-      'Egypt': { lat: 26.8206, lng: 30.8025 },
-      'Sudan': { lat: 12.8628, lng: 30.2176 },
-      'Cambodia': { lat: 12.5657, lng: 104.9910 },
-      'Laos': { lat: 19.8563, lng: 102.4955 },
-      'Vietnam': { lat: 14.0583, lng: 108.2772 },
-      'Thailand': { lat: 15.8700, lng: 100.9925 },
-      'Myanmar': { lat: 21.9162, lng: 95.9560 },
-      'Indonesia': { lat: -0.7893, lng: 113.9213 },
-      'Malaysia': { lat: 4.2105, lng: 101.9758 },
-      'Papua New Guinea': { lat: -6.314993, lng: 143.95555 },
-      'Ghana': { lat: 7.9465, lng: -1.0232 },
-      'Burkina Faso': { lat: 12.2383, lng: -1.5616 },
-      'Mali': { lat: 17.5707, lng: -3.9962 },
-      'United Kingdom': { lat: 55.3781, lng: -3.4360 },
-      'Japan': { lat: 36.2048, lng: 138.2529 },
-      'Australia': { lat: -25.2744, lng: 133.7751 },
-      'Italy': { lat: 41.8719, lng: 12.5674 },
-      'Spain': { lat: 40.4637, lng: -3.7492 },
-      'Mexico': { lat: 23.6345, lng: -102.5528 },
-      'Argentina': { lat: -38.4161, lng: -63.6167 },
-      'South Africa': { lat: -30.5595, lng: 22.9375 },
-      'Nigeria': { lat: 9.0820, lng: 8.6753 },
-      'Netherlands': { lat: 52.1326, lng: 5.2913 },
-      'Switzerland': { lat: 46.8182, lng: 8.2275 },
-      'Sweden': { lat: 60.1282, lng: 18.6435 },
-      'Norway': { lat: 60.4720, lng: 8.4689 },
-      'Poland': { lat: 51.9194, lng: 19.1451 },
-      'Belgium': { lat: 50.5039, lng: 4.4699 },
-      'Austria': { lat: 47.5162, lng: 14.5501 },
-      'Denmark': { lat: 56.2639, lng: 9.5018 },
-      'Finland': { lat: 61.9241, lng: 25.7482 },
-      'Portugal': { lat: 39.3999, lng: -8.2245 },
-      'New Zealand': { lat: -40.9006, lng: 174.8860 },
-      'Colombia': { lat: 4.5709, lng: -74.2973 },
-      'Pakistan': { lat: 30.3753, lng: 69.3451 },
-      'Africa': { lat: 0.0, lng: 20.0 },
-      'Europe': { lat: 54.0, lng: 15.0 },
-      'Asia': { lat: 30.0, lng: 100.0 }
-    };
-
-    if (coordinates[country]) {
-      return coordinates[country];
-    }
-
-    for (const [countryName, coords] of Object.entries(coordinates)) {
-      if (country.includes(countryName)) {
-        return coords;
-      }
-    }
-
-    return null;
-  }, []);
+  const getCountryCoordinates = useCallback((country) => lookupCoordinates(country), []);
 
   const addCountryMarkers = useCallback((map) => {
     if (!data || data.length === 0 || !window.google || !window.google.maps) return;

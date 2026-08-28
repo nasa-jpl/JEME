@@ -9,6 +9,7 @@ import { loadModelData } from '../utils/dataLoader';
 
 // Import Google Maps component
 import GoogleMapComponent from '../components/GoogleMapComponent';
+import { getRegionFromCountry } from '../utils/countryGeo';
 
 const GeographicImpactPage = () => {
   const [regionData, setRegionData] = useState([]);
@@ -75,37 +76,6 @@ const GeographicImpactPage = () => {
   };
 
   // Helper function to extract region from country
-  const getRegionFromCountry = (country) => {
-    const regionMappings = {
-      'United States': 'North America',
-      'Canada': 'North America',
-      'Mexico': 'North America',
-      'China': 'Asia',
-      'Japan': 'Asia',
-      'South Korea': 'Asia',
-      'India': 'Asia',
-      'France': 'Europe',
-      'Germany': 'Europe',
-      'United Kingdom': 'Europe',
-      'Italy': 'Europe',
-      'Spain': 'Europe',
-      'Netherlands': 'Europe',
-      'Switzerland': 'Europe',
-      'Sweden': 'Europe',
-      'Norway': 'Europe',
-      'Denmark': 'Europe',
-      'Belgium': 'Europe',
-      'Austria': 'Europe',
-      'Finland': 'Europe',
-      'Australia': 'Oceania',
-      'Brazil': 'South America',
-      'Argentina': 'South America',
-      'Chile': 'South America',
-      'Peru': 'South America'
-    };
-    
-    return regionMappings[country] || 'Other';
-  };
 
   const processGeographicData = (citationsData) => {
     try {
