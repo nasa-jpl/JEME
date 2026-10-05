@@ -73,5 +73,5 @@ fi
 
 if [ "$DEPLOY" = 1 ]; then
   # --no-history keeps old builds (and whatever they contained) off the branch
-  npx gh-pages -d build --nojekyll --no-history --repo "$REMOTE_URL"
+  npx gh-pages -d build --nojekyll --dotfiles --no-history --repo "$REMOTE_URL"
 fi
