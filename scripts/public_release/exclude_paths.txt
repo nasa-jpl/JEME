@@ -46,7 +46,7 @@ scripts/google_scholar_scraper.py
 scripts/test_fix_ecco.py
 
 # Caches, logs and run artifacts
-glob:scripts/*_cache.json
+glob:scripts/*_cache*.json
 glob:scripts/*.log
 scripts/removed_non_peer_reviewed.json
 scripts/tropess_sc_recheck.json
