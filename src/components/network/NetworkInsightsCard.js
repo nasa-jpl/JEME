@@ -1,9 +1,8 @@
 // Network Insights Card - Key statistics about model connections
 import React from 'react';
-import { TrendingUp, Users, FileText, Link2, Network, Award } from 'lucide-react';
-import { getModelConfig } from '../../config/modelConfig';
+import { TrendingUp, FileText, Link2, Network, Award } from 'lucide-react';
 
-const NetworkInsightsCard = ({ summary, networkMetrics }) => {
+const NetworkInsightsCard = ({ summary }) => {
   if (!summary) {
     return (
       <div className="bg-white rounded-lg shadow-sm p-6">
@@ -127,53 +126,6 @@ const NetworkInsightsCard = ({ summary, networkMetrics }) => {
           )}
         </div>
       </div>
-
-      {/* Model Centrality Rankings */}
-      {networkMetrics && networkMetrics.rankedModels && (
-        <div className="mt-6 pt-6 border-t border-gray-200">
-          <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center">
-            <Users className="text-indigo-500 mr-2" size={20} />
-            Model Connectivity Rankings
-          </h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
-            {networkMetrics.rankedModels.slice(0, 8).map((model, index) => {
-              const modelConfig = getModelConfig(model.name);
-              const modelColor = modelConfig?.color || '#6B7280';
-
-              return (
-                <div
-                  key={model.name}
-                  className="flex items-center justify-between p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <div className="flex items-center gap-3">
-                    <div
-                      className="w-8 h-8 rounded-full flex items-center justify-center font-bold text-sm text-white"
-                      style={{ backgroundColor: modelColor }}
-                    >
-                      {index + 1}
-                    </div>
-                    <div>
-                      <div className="font-semibold text-gray-900">{model.name}</div>
-                      <div className="text-xs text-gray-600">
-                        {model.connectedModelsCount} models • {model.totalPapers.toLocaleString()} citations
-                      </div>
-                    </div>
-                  </div>
-                  <div className="text-right">
-                    <div
-                      className="text-lg font-bold"
-                      style={{ color: modelColor }}
-                    >
-                      {model.totalConnections}
-                    </div>
-                    <div className="text-xs text-gray-500">connections</div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      )}
     </div>
   );
 };

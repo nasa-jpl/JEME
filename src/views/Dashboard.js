@@ -198,7 +198,6 @@ const Dashboard = () => {
               {/* Network Insights Card */}
               <NetworkInsightsCard
                 summary={networkAnalysis.summary}
-                networkMetrics={networkAnalysis.networkMetrics}
               />
 
               {/* Network Graph */}
