@@ -72,6 +72,13 @@ if [ "$PUSH" = 1 ]; then
 fi
 
 if [ "$DEPLOY" = 1 ]; then
-  # --no-history keeps old builds (and whatever they contained) off the branch
-  npx gh-pages -d build --nojekyll --dotfiles --no-history --repo "$REMOTE_URL"
+  # Publish the build as a single parentless commit, so the site branch holds
+  # exactly this build and no earlier ones (or whatever they contained).
+  TIP="$(git rev-parse --short HEAD)"
+  cd build
+  touch .nojekyll
+  git init --quiet --initial-branch=gh-pages
+  git add --all
+  git commit --quiet -m "Deploy $TIP"
+  git push --force "$REMOTE_URL" gh-pages:gh-pages
 fi
