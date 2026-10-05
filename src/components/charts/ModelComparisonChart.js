@@ -1,10 +1,30 @@
 // src/components/charts/ModelComparisonChart.js
 // Chart comparing all JEME models
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
+import { loadTeamPapers, countTeamPapers } from '../../utils/teamPapers';
 
 const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
+  // Team-paper counts per model, loaded separately from the citation corpus
+  const [teamPaperCounts, setTeamPaperCounts] = useState({});
+  const modelNamesKey = Object.keys(allModelsData).join('|');
+
+  useEffect(() => {
+    let cancelled = false;
+    const names = modelNamesKey ? modelNamesKey.split('|') : [];
+
+    Promise.all(
+      names.map(async (name) => [name, countTeamPapers(await loadTeamPapers(name))])
+    ).then((entries) => {
+      if (!cancelled) setTeamPaperCounts(Object.fromEntries(entries));
+    });
+
+    return () => {
+      cancelled = true;
+    };
+  }, [modelNamesKey]);
+
   // Calculate comparison data from all models
   const comparisonData = useMemo(() => {
     const modelColors = {
@@ -117,6 +137,12 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
               <div className="text-xs font-semibold text-gray-700">{model.name}</div>
             </div>
             <div className="space-y-1 text-xs">
+              <div className="flex justify-between">
+                <span className="text-gray-600">Team Papers:</span>
+                <span className="font-semibold">
+                  {teamPaperCounts[model.name] ? teamPaperCounts[model.name].toLocaleString() : '—'}
+                </span>
+              </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">Citations:</span>
                 <span className="font-semibold">{model.papers.toLocaleString()}</span>

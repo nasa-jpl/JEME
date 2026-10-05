@@ -49,6 +49,28 @@ export const loadTeamPapers = async (modelName) => {
 };
 
 /**
+ * Count the distinct team papers in a list.
+ * A few lists repeat a paper under the same DOI, so collapse those; entries
+ * without a DOI are counted individually because their titles are unreliable
+ * (many are "Untitled" or a bare region name).
+ * @param {Array} teamPapers
+ * @returns {number}
+ */
+export const countTeamPapers = (teamPapers) => {
+  if (!teamPapers?.length) return 0;
+
+  const dois = new Set();
+  let withoutDoi = 0;
+  teamPapers.forEach((paper) => {
+    const doi = norm(paper?.doi);
+    if (doi) dois.add(doi);
+    else withoutDoi += 1;
+  });
+
+  return dois.size + withoutDoi;
+};
+
+/**
  * Count how many entries in the citation corpus are themselves team papers.
  * Matches on DOI first, falling back to exact normalized title.
  * @param {Array} citations
