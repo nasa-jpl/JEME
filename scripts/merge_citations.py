@@ -16,6 +16,8 @@ from pathlib import Path
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "public" / "data"
+# Backups live outside public/ so the site build never ships them.
+BACKUP_DIR = PROJECT_DIR / "data_backups"
 
 
 def norm_title(t):
@@ -71,8 +73,9 @@ def main():
     if args.dry_run:
         return
 
-    backup = path.with_suffix(path.suffix + ".prerebuild")
+    backup = BACKUP_DIR / (path.name + ".prerebuild")
     if not backup.exists():
+        BACKUP_DIR.mkdir(exist_ok=True)
         backup.write_text(json.dumps(data, indent=2, ensure_ascii=False))
         print(f"  backup -> {backup.name}")
     data.extend(added)

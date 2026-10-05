@@ -18,6 +18,8 @@ import seed_guards as G
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "public" / "data"
+# Backups live outside public/ so the site build never ships them.
+BACKUP_DIR = PROJECT_DIR / "data_backups"
 
 MODEL_FILES = {
     "CMS-Flux": "cms_flux_team_papers.json",
@@ -84,7 +86,7 @@ def main():
 
     for m in models:
         path = DATA_DIR / MODEL_FILES[m]
-        bak = path.with_suffix(path.suffix + ".bak")
+        bak = BACKUP_DIR / (path.name + ".bak")
         if not bak.exists():
             print(f"[{m}] no .bak (not expanded) - skipping")
             continue
@@ -113,8 +115,9 @@ def main():
             continue
         for e in dropped:
             e.pop("_reason", None)
-        pruned = path.with_suffix(path.suffix + ".prepruned")
+        pruned = BACKUP_DIR / (path.name + ".prepruned")
         if not pruned.exists():
+            BACKUP_DIR.mkdir(exist_ok=True)
             pruned.write_text(path.read_text())
         if wkey is not None:
             wobj[wkey] = kept

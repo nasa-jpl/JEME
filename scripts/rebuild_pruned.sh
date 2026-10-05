@@ -11,7 +11,7 @@ for M in "$@"; do
   echo "==================================================================="
   echo "############## REBUILD (PRUNED) $M ##############"
   echo "==================================================================="
-  cp "public/data/${M}_analyzed.json.prerebuild" "public/data/${M}_analyzed.json"
+  cp "data_backups/${M}_analyzed.json.prerebuild" "public/data/${M}_analyzed.json"
   echo "restored baseline: $(python3 -c "import json;print(len(json.load(open('public/data/${M}_analyzed.json'))))") entries"
   run python3 scripts/merge_citations.py --model "$M" --scrape "citation_scraper/output/${M}_citations_pruned.json"
   run python3 scripts/verify_peer_review.py --model "$M"

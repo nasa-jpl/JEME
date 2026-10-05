@@ -22,6 +22,9 @@ __pycache__/
 *.pyo
 *.pyd
 
+# Pre-change snapshots written by the seed/rebuild scripts
+data_backups/
+
 # Script caches and logs
 scripts/*_cache.json
 scripts/*.log

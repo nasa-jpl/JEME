@@ -34,6 +34,8 @@ import seed_guards as G
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "public" / "data"
+# Backups live outside public/ so the site build never ships them.
+BACKUP_DIR = PROJECT_DIR / "data_backups"
 SEED_DIR = PROJECT_DIR / "seed_lists"
 CACHE_PATH = Path(__file__).resolve().parent / "seed_expand_cache.json"
 
@@ -378,8 +380,9 @@ def main():
     if not to_add:
         print("  nothing to merge.")
         return
-    backup = path.with_suffix(path.suffix + ".bak")
+    backup = BACKUP_DIR / (path.name + ".bak")
     if not backup.exists():
+        BACKUP_DIR.mkdir(exist_ok=True)
         backup.write_text(path.read_text())
         print(f"  backup -> {backup.name}")
     for r in to_add:
