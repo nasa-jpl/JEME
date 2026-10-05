@@ -5,109 +5,68 @@
 // team paper), not publications by the JPL team. Reading "1,203" as "the RAPID
 // team published 1,203 papers" is the single most likely misinterpretation, so
 // the framing is stated up front on every page.
-//
-// The corpus also contains a small share (2-5% across models) of the team's own
-// later papers citing their earlier ones, so when a model is named we load the
-// team-paper list and report that count rather than implying every citation is
-// external.
 
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Link } from 'react-router-dom';
 import { Info } from 'lucide-react';
-import { loadTeamPapers, countTeamPaperCitations } from '../utils/teamPapers';
 
-const MethodologySummary = ({ modelName, citationsData }) => {
-  // { inCorpus, listSize }: how many of the team's own papers show up as
-  // citations, out of how many team papers there are in total. Both numbers are
-  // needed, or "37 team papers" reads as "the team has 37 papers".
-  const [teamStats, setTeamStats] = useState(null);
-
-  const total = citationsData?.length || 0;
-
-  useEffect(() => {
-    let cancelled = false;
-    if (!modelName || total === 0) {
-      setTeamStats(null);
-      return undefined;
-    }
-    loadTeamPapers(modelName).then((teamPapers) => {
-      if (cancelled) return;
-      const inCorpus = countTeamPaperCitations(citationsData, teamPapers);
-      setTeamStats(inCorpus > 0 ? { inCorpus, listSize: teamPapers.length } : null);
-    });
-    return () => {
-      cancelled = true;
-    };
-  }, [modelName, citationsData, total]);
-
-  const totalLabel = total > 0 ? total.toLocaleString() : null;
-  const externalLabel = teamStats ? (total - teamStats.inCorpus).toLocaleString() : null;
-  const teamPct =
-    teamStats && total > 0 ? Math.max(1, Math.round((teamStats.inCorpus / total) * 100)) : null;
+const MethodologySummary = ({ modelName }) => {
+  const teamLabel = modelName ? `the ${modelName} team` : 'the JPL modeling team';
+  const modelLabel = modelName || 'a model';
 
   return (
     <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
       <div className="flex items-start gap-3">
         <Info size={20} className="text-blue-500 flex-shrink-0 mt-0.5" />
         <div className="text-sm text-gray-700 leading-relaxed">
-          <div className="text-base font-semibold text-gray-800 mb-2">
-            How to read this dashboard
-          </div>
+          <div className="text-base font-semibold text-gray-800 mb-2">What counts as a citation</div>
           <p>
-            Every number here starts from a set of{' '}
-            <span className="font-semibold text-gray-900">team papers</span>: the peer-reviewed
-            publications {modelName ? `the ${modelName} team` : 'each JPL modeling team'} wrote to
-            describe the model itself. We then collect every peer-reviewed paper that cites one of
-            those team papers, and it is those{' '}
-            <span className="font-semibold text-gray-900">citations</span> that this dashboard
-            counts and charts.{' '}
-            {totalLabel ? (
-              <>
-                So {totalLabel} means {totalLabel} papers cite a {modelName} team paper. It is{' '}
-                <span className="font-semibold text-gray-900">not</span> {totalLabel} papers written
-                by the {modelName} team.
-              </>
-            ) : (
-              <>
-                So a model's count is the number of papers that cite that model's team papers. It
-                is <span className="font-semibold text-gray-900">not</span> a count of papers
-                written by the team.
-              </>
-            )}
+            Each number is the count of{' '}
+            <span className="font-semibold text-gray-900">citations</span>: peer-reviewed papers
+            that reference {modelLabel}'s team papers. Citations are a reflection of the degree the
+            broader community has referenced, utilized, and/or built on that model.
           </p>
+          <div className="mt-3 pl-3 border-l-2 border-gray-200 text-gray-600 space-y-2">
+            <p>
+              <span className="font-medium text-gray-900">Team papers</span> are the peer-reviewed
+              publications {teamLabel} wrote to describe the model itself: its scientific
+              foundation, evolution, and upgrades over time.
+            </p>
+            <p>
+              <span className="font-medium text-gray-900">Citations</span> are peer-reviewed papers
+              by other researchers (or later team papers) that reference one or more of those team
+              papers.
+            </p>
+          </div>
+          <p className="mt-3">
+            This measures how widely {modelLabel} has been taken up by the broader research
+            community, not how many papers the team itself has published.
+          </p>
+
+          <div className="text-base font-semibold text-gray-800 mt-4 mb-2">
+            Citation depth: L1 / L2 / L3
+          </div>
+          <p>Every citing paper is classified by how deeply it engages with the model:</p>
+          <ul className="mt-2 space-y-1 list-disc list-inside">
+            <li>
+              <span className="font-medium text-gray-900">L1 (Citation only):</span> references the
+              model as background or context
+            </li>
+            <li>
+              <span className="font-medium text-gray-900">L2 (Data usage):</span> uses the model's
+              outputs or datasets
+            </li>
+            <li>
+              <span className="font-medium text-gray-900">L3 (Model adaptation):</span> runs,
+              modifies, extends, or couples the model
+            </li>
+          </ul>
           <p className="mt-2">
-            {teamStats ? (
-              <>
-                The count is not purely external. The {modelName} team paper list holds{' '}
-                <span className="font-medium text-gray-900">
-                  {teamStats.listSize.toLocaleString()} papers
-                </span>
-                , and{' '}
-                <span className="font-medium text-gray-900">
-                  {teamStats.inCorpus.toLocaleString()} of those
-                </span>{' '}
-                also appear here as citations (about {teamPct}% of the {totalLabel}), because a
-                later team paper cited an earlier one. The other {externalLabel} citations come from
-                outside the team.
-              </>
-            ) : (
-              <>
-                The count is not purely external: a small share (a few percent) are team papers
-                themselves, where a later team paper cites an earlier one. The rest come from
-                outside the team.
-              </>
-            )}
+            Classification is automated; each paper includes a confidence score so lower-confidence
+            assignments can be flagged for review.
           </p>
-          <p className="mt-2">
-            Each citation is then classified by how deeply it engages with the model:{' '}
-            <span className="font-medium text-gray-900">L1: Citation only</span> (cites the work as
-            background), <span className="font-medium text-gray-900">L2: Data Usage</span> (uses
-            model outputs or datasets), or{' '}
-            <span className="font-medium text-gray-900">L3: Model Adaptation</span> (runs, modifies,
-            extends, or couples the model). Classification is automated, and every paper
-            carries a confidence score so low-confidence calls can be reviewed first.
-          </p>
-          <p className="mt-2 text-gray-600">
+
+          <p className="mt-3 text-gray-600">
             See{' '}
             <Link to="/how-it-works" className="text-blue-600 hover:text-blue-800 font-medium">
               How It Works
