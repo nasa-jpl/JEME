@@ -328,16 +328,16 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
       {/* Toggle button */}
       <button 
         onClick={() => setExpanded(!expanded)} 
-        className="mt-3 flex items-center text-xs text-blue-700 hover:text-blue-900"
+        className="mt-3 flex items-center text-base font-bold text-blue-700 hover:text-blue-900"
       >
         {expanded ? (
           <>
-            <ChevronUp size={14} className="mr-1" />
+            <ChevronUp size={18} className="mr-1" />
             <span>Hide Team Papers</span>
           </>
         ) : (
           <>
-            <ChevronDown size={14} className="mr-1" />
+            <ChevronDown size={18} className="mr-1" />
             <span>View All Team Papers</span>
           </>
         )}
@@ -347,26 +347,29 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
       {expanded && (
         <div className="mt-4 border-t border-blue-200 pt-3">
           <div className="text-sm font-medium text-blue-800 mb-2">Team Papers:</div>
-          <div className="max-h-96 overflow-y-auto pr-2">
+          <ol className="max-h-96 overflow-y-auto pr-2">
             {relatedPapers.map((paper, index) => (
-              <div key={index} className="mb-4 pb-3 border-b border-blue-100 last:border-b-0">
-                <div className="text-sm font-medium text-gray-800 mb-1">{paper.title}</div>
-                <div className="text-xs text-gray-600 mb-1">{paper.authors}</div>
-                <div className="text-xs text-gray-500">{paper.journal} ({paper.year})</div>
-                <div className="flex items-center mt-1">
-                  <a 
-                    href={paper.link} 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-xs text-blue-600 hover:text-blue-800 flex items-center"
-                  >
-                    <span>DOI: {paper.doi}</span>
-                    <ExternalLink size={10} className="ml-1" />
-                  </a>
+              <li key={index} className="flex mb-4 pb-3 border-b border-blue-100 last:border-b-0">
+                <span className="flex-shrink-0 w-12 pr-2 text-right text-sm font-semibold text-blue-800">{index + 1}.</span>
+                <div className="min-w-0">
+                  <div className="text-sm font-medium text-gray-800 mb-1">{paper.title}</div>
+                  <div className="text-xs text-gray-600 mb-1">{paper.authors}</div>
+                  <div className="text-xs text-gray-500">{paper.journal} ({paper.year})</div>
+                  <div className="flex items-center mt-1">
+                    <a 
+                      href={paper.link} 
+                      target="_blank" 
+                      rel="noopener noreferrer"
+                      className="text-xs text-blue-600 hover:text-blue-800 flex items-center"
+                    >
+                      <span>DOI: {paper.doi}</span>
+                      <ExternalLink size={10} className="ml-1" />
+                    </a>
+                  </div>
                 </div>
-              </div>
+              </li>
             ))}
-          </div>
+          </ol>
         </div>
       )}
     </div>
