@@ -328,16 +328,16 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
       {/* Toggle button */}
       <button 
         onClick={() => setExpanded(!expanded)} 
-        className="mt-3 flex items-center text-base font-bold text-blue-700 hover:text-blue-900"
+        className="mt-3 flex items-center font-semibold text-blue-700 hover:text-blue-900"
       >
         {expanded ? (
           <>
-            <ChevronUp size={18} className="mr-1" />
+            <ChevronUp size={16} className="mr-1" />
             <span>Hide Team Papers</span>
           </>
         ) : (
           <>
-            <ChevronDown size={18} className="mr-1" />
+            <ChevronDown size={16} className="mr-1" />
             <span>View All Team Papers</span>
           </>
         )}
