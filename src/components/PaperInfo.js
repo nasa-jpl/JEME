@@ -3,6 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
+import { dedupeTeamPapers } from '../utils/teamPapers';
 
 const PaperInfo = ({ modelName = 'RAPID' }) => {
   const [expanded, setExpanded] = useState(false);
@@ -295,8 +296,9 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
 
   const originalPaper = modelPapers[modelName] || modelPapers['RAPID'];
 
-  // Get the appropriate related papers for the current model
-  const relatedPapers =
+  // Get the appropriate related papers for the current model, without repeats,
+  // so the numbered list matches the team paper count on the main dashboard
+  const relatedPapers = dedupeTeamPapers(
     (modelName === 'RAPID' && rapidTeamPapers.length > 0) ? rapidTeamPapers :
     (modelName === 'CMS-Flux' && cmsFluxTeamPapers.length > 0) ? cmsFluxTeamPapers :
     (modelName === 'ECCO' && eccoTeamPapers.length > 0) ? eccoTeamPapers :
@@ -308,7 +310,8 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
     (modelName === 'GRACE' && graceTeamPapers.length > 0) ? graceTeamPapers :
     (modelName === 'SWOT' && swotTeamPapers.length > 0) ? swotTeamPapers :
     (modelName === 'TROPESS' && tropessTeamPapers.length > 0) ? tropessTeamPapers :
-    [];
+    []
+  );
 
   return (
     <div className="bg-blue-50 rounded-lg p-4 mb-6">

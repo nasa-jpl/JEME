@@ -49,26 +49,36 @@ export const loadTeamPapers = async (modelName) => {
 };
 
 /**
+ * Drop repeated entries from a team-paper list, keeping first occurrences.
+ * Two entries are the same paper when they share a DOI and a title (compared
+ * on letters and digits only, since copies differ in hyphen characters). The
+ * title check matters: a few lists carry a wrong DOI that collides with a
+ * different paper, and those must stay separate. Entries without a DOI are
+ * always kept because their titles alone are unreliable ("Untitled", a bare
+ * region name).
+ * @param {Array} teamPapers
+ * @returns {Array}
+ */
+export const dedupeTeamPapers = (teamPapers) => {
+  if (!teamPapers?.length) return [];
+
+  const seen = new Set();
+  return teamPapers.filter((paper) => {
+    const doi = norm(paper?.doi);
+    if (!doi) return true;
+    const key = `${doi}|${norm(paper?.title).replace(/[^a-z0-9]/g, '')}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+};
+
+/**
  * Count the distinct team papers in a list.
- * A few lists repeat a paper under the same DOI, so collapse those; entries
- * without a DOI are counted individually because their titles are unreliable
- * (many are "Untitled" or a bare region name).
  * @param {Array} teamPapers
  * @returns {number}
  */
-export const countTeamPapers = (teamPapers) => {
-  if (!teamPapers?.length) return 0;
-
-  const dois = new Set();
-  let withoutDoi = 0;
-  teamPapers.forEach((paper) => {
-    const doi = norm(paper?.doi);
-    if (doi) dois.add(doi);
-    else withoutDoi += 1;
-  });
-
-  return dois.size + withoutDoi;
-};
+export const countTeamPapers = (teamPapers) => dedupeTeamPapers(teamPapers).length;
 
 /**
  * Count how many entries in the citation corpus are themselves team papers.
