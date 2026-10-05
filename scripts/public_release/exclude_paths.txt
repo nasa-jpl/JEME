@@ -1,0 +1,70 @@
+# Paths kept out of the public nasa-jpl/JEME repository (all of history).
+# Read by scripts/publish_public.sh via `git filter-repo --invert-paths`.
+# Plain lines match a file or a whole directory; glob:/regex: lines are patterns.
+
+# Internal working directories
+journal_paper/
+figures/
+model_capability_levels/
+model maturity capability level/
+pse/
+pubclassifier
+
+# Private submodule link
+.gitmodules
+LLM_paper_analytics
+
+# Office and binary documents, screenshots, OS metadata
+glob:*.pptx
+glob:*.docx
+glob:*.xlsx
+glob:*.DS_Store
+glob:Screenshot*.png
+
+# Internal notes
+CLAUDE.md
+CHART_FIXES_SUMMARY.md
+DASHBOARD_UPDATE_SUMMARY.md
+INTEGRATION_FINAL_STATUS.md
+JOURNAL_PAPER_DRAFT.md
+LES_EDMF_DASHBOARD_FORMAT_FIX.md
+LES_EDMF_INTEGRATION_COMPLETE.md
+NASA_Earth_Science_Model_Dashboard_Task_Statement.md
+RECENT_UPDATES.md
+glob:NTR_*.md
+
+# One-off scripts (root-level originals and their copies under scripts/)
+extract_cardamom_jpl_papers.py
+fix_ecco_papers.py
+fix_html_entities.py
+google_scholar_scraper.py
+test_fix_ecco.py
+scripts/extract_cardamom_jpl_papers.py
+scripts/fix_ecco_papers.py
+scripts/fix_html_entities.py
+scripts/google_scholar_scraper.py
+scripts/test_fix_ecco.py
+
+# Caches, logs and run artifacts
+glob:scripts/*_cache.json
+glob:scripts/*.log
+scripts/removed_non_peer_reviewed.json
+scripts/tropess_sc_recheck.json
+glob:citation_scraper/*.log
+glob:citation_scraper/*.zip
+glob:*__pycache__/*
+glob:*.pyc
+
+# Stray data and temp files
+public/data/rapid_265citations.json
+public/data/tropess_holdout_test.csv
+src/views/CitationsPage copy.js
+
+# PSE page and the people data behind it
+src/views/PSE/
+src/data/pse_companies.json
+public/jpl_alumni.json
+public/guardian_news.json
+public/favicon-pse.svg
+scripts/find_jpl_alumni.js
+scripts/fetch_guardian_news.js
