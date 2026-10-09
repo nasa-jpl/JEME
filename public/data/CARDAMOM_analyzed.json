@@ -74564,5 +74564,192 @@
     "institutions": [
       "Lomonosov Moscow State University"
     ]
+  },
+  {
+    "title": "Decoding the Spatiotemporal Complexities of the Permafrost Carbon Feedback With Multimodal Ensemble Learning",
+    "authors": [
+      "B. Gay",
+      "N. Pastick",
+      "J. Watts",
+      "A. Armstrong",
+      "K. Miner",
+      "C. E. Miller"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024jh000402",
+    "venue": "Journal of Geophysical Research",
+    "citation_count": 2,
+    "paper_id": "e9909b4211a51186ef453232bf07e4adead72b47",
+    "url": "https://www.semanticscholar.org/paper/e9909b4211a51186ef453232bf07e4adead72b47",
+    "abstract": "Complex nonlinear relationships exist between the permafrost thermal state, active layer thickness, and terrestrial carbon cycle dynamics. In Arctic and boreal Alaska, significant uncertainties characterize the spatiotemporal rate and magnitude of permafrost degradation and the permafrost carbon feedback, with increasing recognition of the importance of thawing mechanisms. The challenges of monitoring sub\u2010surface phenomena with remote sensing technology further complicate the issue. There is an urgent need to understand how and to what extent thawing permafrost destabilizes the carbon balance in Alaska and to characterize the feedback involved. In this research, we use our artificial intelligence\u2010driven model GeoCryoAI to quantify permafrost carbon dynamics in Alaska. The GeoCryoAI model uses a hybridized process\u2010constrained ensemble learning framework to simultaneously ingest, scale, and analyze in situ measurements, remote sensing observations, and process\u2010based modeling outputs with disparate spatiotemporal sampling and data densities. We evaluated prior na\u00efve (a) persistence and (b) teacher forcing approaches relative to (c) time\u2010delayed GeoCryoAI simulations, yielding the following error metrics (RMSE) for active layer thickness (ALT), methane (CH4), and carbon dioxide (CO2), respectively: 1.997, 1.327, 1.007\u00a0cm [1963\u20132022]; 0.884, 0.715, 0.694 nmol CH4km\u22122\u00a0month\u22121 [1994\u20132022]; 1.906, 0.697, 0.213\u00a0\u00b5mol\u00a0CO2km\u22122\u00a0month\u22121 [1994\u20132022]. Our approach overcomes traditional model inefficiencies and resolves spatiotemporal disparities. GeoCryoAI captures abrupt and persistent changes while introducing a novel methodology for assimilating contemporaneous information at various scales. We describe GeoCryoAI, the methodology, our results, and plans for future applications.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Large loss of CO2 in winter observed across the northern permafrost region",
+    "team_paper_id": "07d1d5375846d95bff05bafce7d84c378c207e03",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Arctic & Permafrost Carbon",
+    "research_domains": [
+      "Carbon Cycle",
+      "Machine Learning",
+      "Climate Change",
+      "Remote Sensing",
+      "Biogeochemistry",
+      "Greenhouse Gas Emissions"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "CO2 Flux & Carbon Budget"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States"
+    ],
+    "institutions": [
+      "Jet Propulsion Laboratory",
+      "United States Geological Survey",
+      "Earth Resources Observation and Science Center",
+      "Woodwell Climate Research Center",
+      "Montana State University",
+      "Goddard Space Flight Center"
+    ]
+  },
+  {
+    "title": "A Machine Learning Approach to Produce a Continuous Solar\u2010Induced Chlorophyll Fluorescence Over the Arctic Ocean",
+    "authors": [
+      "N. Madani",
+      "N. Parazoo",
+      "M. Manizza",
+      "A. Chatterjee",
+      "D. Carroll",
+      "D. Menemenlis",
+      "V. Le Fouest",
+      "Atsushi Matsuoka",
+      "Kelly M. Luis",
+      "Camila Serra\u2010Pompei",
+      "C. E. Miller"
+    ],
+    "year": 2024,
+    "doi": "10.1029/2024jh000215",
+    "venue": "Journal of Geophysical Research",
+    "citation_count": 3,
+    "paper_id": "5e4513561cd58bf1cc8b0de537ce50d2c116d37c",
+    "url": "https://www.semanticscholar.org/paper/5e4513561cd58bf1cc8b0de537ce50d2c116d37c",
+    "abstract": "Phytoplankton primary production is a crucial component of Arctic Ocean (AO) biogeochemistry, playing a pivotal role in carbon cycling by supporting higher trophic levels and removing atmospheric carbon dioxide. The advent of satellite observations measuring chlorophyll a concentration (Chl_a) has provided unprecedented insights into the distribution of AO phytoplankton, enhancing our ability to assess oceanic net primary production (NPP). However, the optical properties of AO waters differ significantly from those of the lower\u2010latitude waters, complicating remotely sensed Chl_a retrievals. To mitigate these deficiencies, solar\u2010induced chlorophyll fluorescence (SIF) has emerged as a valuable tool for gaining physiological insights into the direct photosynthetic processes of the AO. However, the temporal coverage of satellite SIF data makes long\u2010term analysis of Chl_a photosynthetic activity challenging. In this study, we leverage satellite\u2010based SIF measurements from 2018 to 2021 to assess their correlation with a set of predictive factors influencing phytoplankton photosynthesis. Generally, observed SIF over the AO showed a higher correlation with normalized fluorescence line height (NFLH) compared to Chl_a. We extended the temporal coverage of the original SIF data to encompass the period from 2004 to 2020. The extended record revealed noticeable differences between SIF, and satellite\u2010based Chl_a, and NFLH observations. Our novel data set offers a pathway forward to monitor the physiological interactions of phytoplankton with climate changes, promising to significantly improve our understanding of Arctic waters productivity. The application of this data is expected to provide new insights into how phytoplankton respond to environmental shifts, contributing to a more nuanced understanding of their role in high\u2010latitude marine ecosystems.",
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Large loss of CO2 in winter observed across the northern permafrost region",
+    "team_paper_id": "07d1d5375846d95bff05bafce7d84c378c207e03",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Marine Primary Productivity",
+    "research_domains": [
+      "Oceanography",
+      "Remote Sensing",
+      "Machine Learning",
+      "Ecosystem Science",
+      "Carbon Cycle",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI (Sentinel-5P)",
+        "agency": "ESA/Copernicus",
+        "type": "Satellite spectrometer",
+        "product": "Solar-induced chlorophyll fluorescence (SIF)",
+        "data_level": "L2",
+        "usage_context": "Primary SIF observations (2018-2021) over the Arctic Ocean used as target variable for machine learning reconstruction"
+      },
+      {
+        "name": "MODIS-Aqua",
+        "agency": "NASA",
+        "type": "Satellite radiometer",
+        "product": "Chlorophyll-a concentration and normalized fluorescence line height (NFLH)",
+        "data_level": "L3",
+        "usage_context": "Predictor variables for SIF reconstruction and comparison of long-term phytoplankton records (2004-2020)"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.975,
+      "composite_confidence": 0.651,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.9,
+        "team_paper_relevance_tier": "Tangential"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Ocean Carbon Uptake"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "France"
+    ],
+    "institutions": [
+      "Jet Propulsion Laboratory",
+      "Scripps Institution of Oceanography",
+      "University of California San Diego",
+      "Moss Landing Marine Laboratories",
+      "LIttoral ENvironnement et Soci\u00e9t\u00e9s",
+      "La Rochelle Universit\u00e9",
+      "University of New Hampshire",
+      "Massachusetts Institute of Technology"
+    ]
   }
 ]

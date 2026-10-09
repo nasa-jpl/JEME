@@ -74259,5 +74259,546 @@
       "Consorzio Pisa Ricerche",
       "National Research Council"
     ]
+  },
+  {
+    "title": "Monitoring Flood Inundation Dynamics From Space",
+    "authors": [
+      "C. Campo",
+      "P. Tamagnone",
+      "S. Choy",
+      "T. D. Tran",
+      "J. Schumann",
+      "Y. Kuleshov",
+      "A. Campo"
+    ],
+    "year": 2026,
+    "doi": "10.1029/2025RG000885",
+    "venue": "Reviews of Geophysics",
+    "citation_count": 3,
+    "paper_id": "c2211cf563338dd315d32b5451e8f35fb814e155",
+    "url": "https://www.semanticscholar.org/paper/c2211cf563338dd315d32b5451e8f35fb814e155",
+    "abstract": "With the increasing intensity and frequency of flood events worldwide, the need for accurate and timely inundation mapping has never been more critical. Large\u2010scale flood extent estimations are vital for coordinating effective disaster response, facilitating recovery, and building future resilience. Traditional ground\u2010based and aerial monitoring methods are often impractical during major floods, limited by cost, safety, and their inability to capture the full scope of an event. Satellite\u2010based remote sensing provides the necessary large\u2010scale perspective with a unique vantage point to monitor extreme inundation events. This review assesses the potential of public satellite sensors to capture flood events using a novel analysis of the Dartmouth Flood Observatory (DFO) global flood database. Our analysis quantifies the major performance gaps between these sensors, demonstrating that no single instrument is sufficient for complete and continuous flood monitoring. Passive microwave radiometers are capable of capturing >95% of flood events, albeit at a coarse spatial resolution that may be unsuitable for detailed mapping or local risk assessment. In contrast, popular multispectral sensors such as Landsat and Sentinel\u20102 capture no more than 30% of flood events. The number of sensors capable of capturing flood events doubled between 2015 and 2020, signaling immense potential for multi\u2010sensor integration. We examine how combining observations from multiple sensors can improve temporal coverage of flood events, however noting that temporal sampling along does not guarantee successful flood detection and how the rapid, dynamic nature of floods compounds the challenges inherent to satellite\u2010based monitoring.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A first look at river discharge estimation from SWOT satellite observations",
+    "team_paper_id": "b2fbac588a1440d8025cbcea761c1208b224ace7",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Remote Sensing Applications",
+    "research_domains": [
+      "Remote Sensing",
+      "Hydrology & Water Resources",
+      "Environmental Monitoring",
+      "Flood Modeling & Prediction",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Landsat",
+        "agency": "NASA/USGS",
+        "type": "Multispectral optical imager",
+        "product": "Surface reflectance imagery",
+        "data_level": "Not specified",
+        "usage_context": "Assessed for temporal/spatial capability to capture flood events in DFO global flood database analysis"
+      },
+      {
+        "name": "Sentinel-2 (MSI)",
+        "agency": "ESA",
+        "type": "Multispectral optical imager",
+        "product": "Multispectral imagery",
+        "data_level": "Not specified",
+        "usage_context": "Evaluated sensor revisit and flood-event capture rates for inundation mapping"
+      },
+      {
+        "name": "Sentinel-1 (SAR)",
+        "agency": "ESA",
+        "type": "Synthetic Aperture Radar",
+        "product": "SAR imagery",
+        "data_level": "Not specified",
+        "usage_context": "Included in multi-sensor assessment of flood inundation detection capability"
+      },
+      {
+        "name": "Passive microwave radiometers (e.g., AMSR2/SMAP-class)",
+        "agency": "Multiple",
+        "type": "Passive microwave radiometer",
+        "product": "Brightness temperature / inundation fraction",
+        "data_level": "Not specified",
+        "usage_context": "Analyzed as coarse-resolution sensors capturing >95% of flood events"
+      },
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Multispectral optical imager",
+        "product": "Surface reflectance / flood maps",
+        "data_level": "Not specified",
+        "usage_context": "Assessed temporal coverage for global flood event observation"
+      },
+      {
+        "name": "SWOT",
+        "agency": "NASA/CNES",
+        "type": "Ka-band radar interferometer",
+        "product": "Water surface elevation and extent",
+        "data_level": "Not specified",
+        "usage_context": "Considered in assessment of satellite sampling capability for observing floods"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.9,
+      "composite_confidence": 0.695,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Tangential"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing Applications"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Australia",
+    "all_countries": [
+      "Australia",
+      "Spain",
+      "Vietnam",
+      "United Kingdom"
+    ],
+    "institutions": [
+      "Australian Mathematical Sciences Institute",
+      "RMIT Europe",
+      "RMIT Vietnam",
+      "University of Bristol",
+      "Bureau of Meteorology"
+    ]
+  },
+  {
+    "title": "A First Look at River Discharge Estimation From SWOT Satellite Observations",
+    "authors": [
+      "K. Andreadis",
+      "S. Coss",
+      "Michael Durand",
+      "C. Gleason",
+      "Travis Simmons",
+      "Nikki Tebaldi",
+      "Dave Bjerklie",
+      "C. Brinkerhoff",
+      "Rob Dudley",
+      "Igor Gejadze",
+      "K. Larnier",
+      "P. Malaterre",
+      "H. Oubanas",
+      "G. Allen",
+      "P. Bates",
+      "C. David",
+      "A. Domeneghetti",
+      "O. Elmi",
+      "L. F. Marc",
+      "Renato Prata de Moraes Frasson",
+      "E. Friedmann",
+      "P. Garambois",
+      "Jaclyn Gehring",
+      "Augusto Getirana",
+      "M. Hughes",
+      "Jonghyun Lee",
+      "P. Matte",
+      "J. Minear",
+      "J\u00b4er\u02c6ome Monnier",
+      "Aggrey Muhebwa",
+      "M. Tourian",
+      "T. Pavelsky",
+      "Ryan M. Riggs",
+      "Ernesto Rodr\u00edguez",
+      "Md Safat Sikder",
+      "L. C. Smith",
+      "Cassie Stuurman",
+      "Jay Taneja",
+      "A. Tarpanelli",
+      "Jida Wang",
+      "Brent A. Williams",
+      "Bidhyananda Yadav"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024GL114185",
+    "venue": "Geophysical Research Letters",
+    "citation_count": 40,
+    "paper_id": "1e7307e9faf17b7aee49be8933f26c7350c6754f",
+    "url": "https://www.semanticscholar.org/paper/1e7307e9faf17b7aee49be8933f26c7350c6754f",
+    "abstract": "The Surface Water and Ocean Topography (SWOT) satellite has the potential to transform global hydrologic science by offering simultaneous and synoptic estimates of river discharge and other hydraulic variables. Discharge is estimated from SWOT observations of water surface elevation, width, and slope. A first assessment using just the highest quality SWOT measurements, over the first 15 months (March 2023\u2013July 2024) of the mission evaluated at 65 gauged reaches shows results consistent with pre\u2010launch expectations. SWOT estimates track discharge dynamics without relying on any gauge information: median correlation is 0.73, with a correlation interquartile range of 0.51\u20130.89. SWOT estimates capture discharge magnitude correctly in some cases but are biased (median bias is 50%) in others. There are already a total of 11,274 ungauged global locations with highest quality SWOT measurements where SWOT discharge is expected to accurately track discharge variations: this value will increase as SWOT data record length grows, algorithms are refined and SWOT measurements are reprocessed. This first look indicates that SWOT discharge is performing as expected for SWOT data that achieve performance requirements, providing observed information on discharge variations in ungauged basins globally.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A framework for estimating global river discharge from the Surface Water and Ocean Topography satellite mission",
+    "team_paper_id": "9242d06a62dff372883a7b6b2b85610f6ac176e3",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "River Routing & Discharge",
+    "research_domains": [
+      "Hydrology & Water Resources",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Inverse Modeling",
+      "Oceanography"
+    ],
+    "missions_instruments": [
+      {
+        "name": "SWOT (Surface Water and Ocean Topography)",
+        "agency": "NASA/CNES",
+        "type": "Satellite radar interferometer (KaRIn)",
+        "product": "River Single-Pass / River Reach vector products (water surface elevation, width, slope)",
+        "data_level": "L2",
+        "usage_context": "Used to estimate river discharge at 65 gauged reaches and to identify high-quality global reaches over March 2023-July 2024"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.663,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Tangential"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "River Routing & Discharge"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "France",
+      "United Kingdom",
+      "Italy",
+      "Germany",
+      "Canada"
+    ],
+    "institutions": [
+      "University of Massachusetts Amherst",
+      "The Ohio State University",
+      "Columbus Center",
+      "California Institute of Technology",
+      "Jet Propulsion Laboratory",
+      "United States Geological Survey",
+      "New England Water Science Center",
+      "Yale University",
+      "Centre de Coop\u00e9ration Internationale en Recherche Agronomique pour le D\u00e9veloppement",
+      "Institut Agro Montpellier"
+    ]
+  },
+  {
+    "title": "Assessment of SWOT for Monitoring Ice\u2010Marginal Lake Water Levels in Greenland",
+    "authors": [
+      "Xiaoyi Shen",
+      "Yubin Fan",
+      "S. Livingstone",
+      "C. Ke"
+    ],
+    "year": 2026,
+    "doi": "10.1029/2025GL120513",
+    "venue": "Geophysical Research Letters",
+    "citation_count": 1,
+    "paper_id": "cf19f5d688a2038a5fc66074102135778d0e7018",
+    "url": "https://www.semanticscholar.org/paper/cf19f5d688a2038a5fc66074102135778d0e7018",
+    "abstract": "The Surface Water and Ocean Topography (SWOT) satellite mission provides a powerful data set for monitoring global surface water resources. However, its performance for monitoring ice\u2010marginal lakes in Greenland remains unknown. Due to the scarcity of in situ measurements, this study evaluated the reliability of ice\u2010marginal lake elevations derived from the SWOT Water Mask Raster Product by comparing to ICESat\u20102 LiDAR altimeter data. Results show that across 204 near\u2010contemporaneous water level points for 110 lakes, the average deviation between SWOT and ICESat\u20102 was 0.03 m, with a root mean square deviation of 1.43 m, showing a good agreement. The higher temporal resolution of SWOT (<21 days over Greenland) enabled better monitoring of glacial lake outburst floods (GLOFs), with a 100% increase in the number of GLOFs detected compared to ICESat\u20102 between 2023 and 2024. These advantages make SWOT an excellent data source for monitoring ice\u2010marginal lakes around the Greenland Ice Sheet.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A first look at river discharge estimation from SWOT satellite observations",
+    "team_paper_id": "b2fbac588a1440d8025cbcea761c1208b224ace7",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Remote Sensing Applications",
+    "research_domains": [
+      "Remote Sensing",
+      "Hydrology & Water Resources",
+      "Environmental Monitoring",
+      "Climate Change",
+      "Cryosphere Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "SWOT (Surface Water and Ocean Topography)",
+        "agency": "NASA/CNES",
+        "type": "Satellite radar interferometer (KaRIn)",
+        "product": "Water Mask Raster Product (Pixel Cloud raster)",
+        "data_level": "L2",
+        "usage_context": "Derived ice-marginal lake water surface elevations in Greenland; used to detect glacial lake outburst floods"
+      },
+      {
+        "name": "ICESat-2",
+        "agency": "NASA",
+        "type": "Satellite laser altimeter (ATLAS)",
+        "product": "ATL03/ATL13 water surface heights",
+        "data_level": "L2/L3",
+        "usage_context": "Reference lake water level measurements for validating SWOT-derived elevations"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.975,
+      "composite_confidence": 0.721,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.9,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing Applications"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "United Kingdom"
+    ],
+    "institutions": [
+      "Hohai University",
+      "Chizhou University",
+      "University of Sheffield",
+      "Nanjing University"
+    ]
+  },
+  {
+    "title": "Braided Rivers From SWOT: Water Surface Dynamics Over the Multi\u2010Channel Brahmaputra River",
+    "authors": [
+      "Sarah E. Franze",
+      "Simon K\u00f6hn",
+      "Connor Chewning",
+      "Karina Nielsen"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2025GL116488",
+    "venue": "Geophysical Research Letters",
+    "citation_count": 2,
+    "paper_id": "a4546245560ee799152bbe01b71875c73f18831a",
+    "url": "https://www.semanticscholar.org/paper/a4546245560ee799152bbe01b71875c73f18831a",
+    "abstract": "The Surface Water and Ocean Topography (SWOT) satellite can simultaneously observe river elevation, width, and slope with high spatio\u2010temporal coverage and resolution (Fu et al., 2024, https://doi.org/10.1029/2023gl107652). The River Single\u2010Pass (RiverSP) product from SWOT provides geolocated river surface water dynamics with global coverage, but it utilizes simplified river centerlines that do not properly represent braided rivers. We present a method for integrating high\u2010resolution pixel cloud SWOT data with Sentinel\u20102 multispectral imagery for multi\u2010channel river analysis, with a case study over the Brahmaputra River. We generate dynamic river centerlines from multispectral river masks and apply SWOT observations to the generated centerlines. We find that refined centerline knowledge allows for improved estimates of river surface water dynamics in braided channels when compared to RiverSP. For the Brahmaputra, we find that water surface elevation can vary by 0.5 m and slope can vary by 2 cm/km between parallel channels of the braided river.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A framework for estimating global river discharge from the Surface Water and Ocean Topography satellite mission",
+    "team_paper_id": "9242d06a62dff372883a7b6b2b85610f6ac176e3",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Remote Sensing Applications",
+    "research_domains": [
+      "Remote Sensing",
+      "Hydrology & Water Resources",
+      "Environmental Monitoring",
+      "River Routing & Discharge",
+      "Numerical Methods"
+    ],
+    "missions_instruments": [
+      {
+        "name": "SWOT (Surface Water and Ocean Topography)",
+        "agency": "NASA/CNES",
+        "type": "Ka-band radar interferometer (KaRIn) satellite",
+        "product": "River Single-Pass (RiverSP) vector product and Pixel Cloud (PIXC)",
+        "data_level": "L2",
+        "usage_context": "Water surface elevation, width, and slope observations over the braided Brahmaputra River; pixel cloud data mapped onto newly generated dynamic centerlines and compared against SWORD-based RiverSP estimates"
+      },
+      {
+        "name": "Sentinel-2",
+        "agency": "ESA",
+        "type": "Multispectral imager (MSI)",
+        "product": "Multispectral surface reflectance imagery for river water masks",
+        "data_level": "L2A",
+        "usage_context": "Generating high-resolution river masks and dynamic multi-channel centerlines for the braided river analysis"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.975,
+      "composite_confidence": 0.721,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.9,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 3: Model Adaptation",
+        "phase2_majority_domain": "Remote Sensing Applications"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "Denmark"
+    ],
+    "institutions": [
+      "China University of Geosciences",
+      "DHI",
+      "DTU Space"
+    ]
+  },
+  {
+    "title": "Estimating Baseline Flow Resistance Parameters for Remote Sensing River Discharge (\n RSQ\n ) From River Morphology Characteristics",
+    "authors": [
+      "Dave Bjerklie",
+      "Merritt E. Harlan",
+      "E. Shavers",
+      "C. Brinkerhoff",
+      "L. Stanislawski",
+      "J. Minear",
+      "Rob Dudley"
+    ],
+    "year": 2026,
+    "doi": "10.1111/1752-1688.70142",
+    "venue": "JAWRA Journal of the American Water Resources Association",
+    "citation_count": 0,
+    "paper_id": "70a004970e59840cb3c7f50a16e768cd0a60feab",
+    "url": "https://www.semanticscholar.org/paper/70a004970e59840cb3c7f50a16e768cd0a60feab",
+    "abstract": "\n \n This study demonstrates that flow resistance in rivers, quantified via calibration of a modified Manning's equation, can inform its estimation from channel hydrometric information available from regional or global datasets for a limited set (\n N\n \u2009=\u200914) of rigorously calibrated river reaches in Alaska and with less certainty in a large set (\n N\n \u2009=\u2009754) of river reaches across the United States developed from U.S. Geological Survey (USGS) Acoustic Doppler Current Profiler (ADCP) discharge measurements. The channel morphometry datasets tested include the National Aeronautics and Space Administration (NASA) Surface Water and Ocean Topography (SWOT) River Database (SWORD) and U.S. Geological Survey (USGS) Scale Specific Sinuosity (S3) river channel morphometry metrics. Multiple regression prediction models of the baseline (near bankfull) Manning's\n n\n flow resistance coefficient were developed from the SWORD and S3 reach data. Significant predictive variables included but were not limited to water\u2010surface slope, water\u2010surface variation (width and elevation), the number of active channels, maximum width, sinuosity and along channel meander length. The study points to the possibility of global a priori estimation of flow resistance in rivers for application in remote sensing of river discharge from river morphology, water\u2010surface width, slope and height measurements made by SWOT and other satellites.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A framework for estimating global river discharge from the Surface Water and Ocean Topography satellite mission",
+    "team_paper_id": "9242d06a62dff372883a7b6b2b85610f6ac176e3",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "River Routing & Discharge",
+    "research_domains": [
+      "Remote Sensing",
+      "Hydrology & Water Resources",
+      "Environmental Monitoring",
+      "Numerical Methods",
+      "Inverse Modeling"
+    ],
+    "missions_instruments": [
+      {
+        "name": "SWOT (Surface Water and Ocean Topography)",
+        "agency": "NASA/CNES",
+        "type": "Satellite radar interferometer (KaRIn)",
+        "product": "SWOT River Database (SWORD) river reach morphometry",
+        "data_level": "Not specified",
+        "usage_context": "SWORD reach-scale channel morphometry (width, slope, sinuosity, number of channels) used as predictor variables in regression models for a priori Manning's n estimation for remote sensing river discharge"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.667,
+      "evidence_confidence": 0.975,
+      "composite_confidence": 0.675,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.9,
+        "team_paper_relevance_tier": "Tangential"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Remote Sensing Applications"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States"
+    ],
+    "institutions": [
+      "United States Geological Survey",
+      "Yale University",
+      "Cooperative Institute for Research in Environmental Sciences",
+      "University of North Carolina at Pembroke"
+    ]
   }
 ]

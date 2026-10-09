@@ -166287,5 +166287,434 @@
       "Chalmers University of Technology",
       "Technical University of Denmark"
     ]
+  },
+  {
+    "title": "Technical note: Quality assessment of ozone reanalysis products and gap-filling over subarctic Europe for vegetation risk mapping",
+    "authors": [
+      "S. Falk",
+      "A. V. Vollsnes",
+      "A. Eriksen",
+      "F. Stordal",
+      "T. Berntsen"
+    ],
+    "year": 2021,
+    "doi": "10.5194/ACP-21-15647-2021",
+    "venue": "",
+    "citation_count": 4,
+    "paper_id": "b862de2d7bf804cb25758f5beddc87b483302f13",
+    "url": "https://www.semanticscholar.org/paper/b862de2d7bf804cb25758f5beddc87b483302f13",
+    "abstract": "Abstract. We assess the quality of regional and global ozone reanalysis data for vegetation modeling and ozone ( O3 ) risk mapping over subarctic Europe where monitoring is sparse. Reanalysis data can be subject to systematic errors originating from, for example, quality of assimilated data, distribution and strength of precursor sources, incomprehensive atmospheric chemistry or land\u2013atmosphere exchange, and spatiotemporal resolution. Here, we evaluate two selected global products and one regional ozone reanalysis product. Our analysis suggests that global reanalysis products do not reproduce observed ground-level ozone well in the subarctic region. Only the Copernicus Atmosphere Monitoring Service Regional Air Quality (CAMSRAQ) reanalysis ensemble sufficiently captures the observed seasonal cycle. We also compute the root mean square error (RMSE) by season. The RMSE variation between (2.6\u20136.6)\u2009 ppb suggests inherent challenges even for the best reanalysis product (CAMSRAQ). O3 concentrations in the subarctic region are systematically underestimated by (2\u20136)\u2009 ppb compared to the ground-level background ozone concentrations derived from observations. Spatial patterns indicate a systematical underestimation of ozone abundance by the global reanalysis products on the west coast of northern Fennoscandia.\nFurthermore, we explore the suitability of CAMSRAQ for gap-filling at one site in northern Norway with a long-term record but not belonging to the observational network. We devise a reconstruction method based on Reynolds decomposition and adhere to recommendations by the United Nations Economic Commission for Europe (UNECE) Long-Range Transboundary Air Pollution (LRTAP) convention. The thus reconstructed data for 2\u00a0weeks in July 2018 are compared with CAMSRAQ evaluated at the nearest-neighbor grid point. Our reconstruction method's performance (76\u2009 % accuracy) is comparable with CAMSRAQ (80\u2009 % accuracy), but diurnal extremes are underestimated by both.",
+    "indexed": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "An intercomparison of tropospheric ozone reanalysis products from CAMS, CAMS interim, TCR-1, and TCR-2",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Atmospheric Chemistry",
+      "Data Assimilation",
+      "Environmental Monitoring",
+      "Ecosystem Science",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.75,
+      "composite_confidence": 0.642,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": false,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Validation & Intercomparison"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Norway",
+    "all_countries": [
+      "Norway"
+    ],
+    "institutions": [
+      "University of Oslo"
+    ]
+  },
+  {
+    "title": "Analysis of the NO2 tropospheric product from S5P TROPOMI for monitoring pollution at city scale",
+    "authors": [
+      "P. Prunet",
+      "O. Lezeaux",
+      "C. Camy\u2010Peyret",
+      "H. Thevenon"
+    ],
+    "year": 2020,
+    "doi": "10.1016/j.cacint.2020.100051",
+    "venue": "",
+    "citation_count": 44,
+    "paper_id": "f37f5b31fff7dd9185053e224ef2003ce077a507",
+    "url": "https://www.semanticscholar.org/paper/f37f5b31fff7dd9185053e224ef2003ce077a507",
+    "abstract": "Abstract Nitrogen dioxide (NO2) is a good indicator for air quality (AQ) in urban and industrialized areas. The instrument TROPOMI on the ESA S5P satellite provides high quality daily measures of the NO2 tropospheric column from space. The lockdowns that countries and cities have implemented to mitigate the spread of Covid-19 represent an unprecedented reduction of human activities that significantly impacted AQ and NO2 emissions in urban areas. Several communications have associated lockdowns resulting from Covid-19 with a decrease in NO2 air pollution as observed from space by TROPOMI. This relationship between NO2 measurements from space and lockdowns must be further discussed and consolidated: how accurately can we quantify NO2 pollution reduction at city scale during lockdown periods with TROPOMI data only? This work presents a processing of TROPOMI NO2 level 2 data into an original time series \u2013 the city-scale NO2 plume mass \u2013- that has been designed to quantify the NO2 pollution level over cities. This is used to verify the impact of lockdowns on NO2 and to examine how urban NO2 pollution reduction associated with lockdown periods may be quantified, on the basis of yearly variations of the TROPOMI city-scale NO2 plume mass and related uncertainty, exploited over representative periods of time. We evaluated this measure and checked the corresponding added value and limitation for quantifying the impact of lockdowns on NO2 variations and separate from other effects, comparing with independent CAMS data and in situ measurements. Building on these results, our second objective was to estimate the reduction on the NO2 tropospheric level over four European cities during their respective lockdowns. The methodology developed may be applied to any major cities and industrial areas. This work should be considered as an initial demonstration for a space-based monitoring system of air quality at the city scale. It may also serve as a testbed for assessing national and international regulations to reduce pollutant levels.",
+    "indexed": {
+      "date-parts": [
+        [
+          2020,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005\u20132018",
+    "team_paper_id": "e40a04aa82dc527ef57187fd18faee3251a34ba6",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Satellite Atmospheric Observations",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite instrument (UV-VIS-NIR-SWIR spectrometer)",
+        "product": "Tropospheric NO2 column",
+        "data_level": "Level 2",
+        "usage_context": "Core dataset processed into city-scale NO2 plume mass time series to quantify urban NO2 pollution reduction during Covid-19 lockdowns"
+      },
+      {
+        "name": "Sentinel-5P",
+        "agency": "ESA",
+        "type": "Satellite platform",
+        "product": "S5P NO2 tropospheric product",
+        "data_level": "Level 2",
+        "usage_context": "Platform hosting TROPOMI providing daily NO2 observations over European cities"
+      },
+      {
+        "name": "CAMS (Copernicus Atmosphere Monitoring Service)",
+        "agency": "ECMWF/Copernicus",
+        "type": "Model reanalysis/forecast",
+        "product": "NO2 regional analysis",
+        "data_level": "Model output",
+        "usage_context": "Independent comparison dataset for validating the city-scale NO2 plume mass metric"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.7,
+      "composite_confidence": 0.625,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": false,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Megacity Studies"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France"
+    ],
+    "institutions": [
+      "Institut Pierre-Simon Laplace"
+    ]
+  },
+  {
+    "title": "Satellite soil moisture data assimilation impacts on modeling weather variables and ozone in the southeastern US \u2013 Part\u00a01: An overview",
+    "authors": [
+      "Min Huang",
+      "James H. Crawford",
+      "J. Digangi",
+      "Gregory R. Carmichael",
+      "K. Bowman",
+      "Sujay V. Kumar",
+      "Xiwu Zhan"
+    ],
+    "year": 2021,
+    "doi": "10.5194/ACP-21-11013-2021",
+    "venue": "Atmospheric Chemistry and Physics",
+    "citation_count": 9,
+    "paper_id": "c329ae845dd4fb052d1943780eaf4d6ee2485c66",
+    "url": "https://www.semanticscholar.org/paper/c329ae845dd4fb052d1943780eaf4d6ee2485c66",
+    "abstract": "Abstract. This study evaluates the impact of satellite soil moisture (SM)\ndata assimilation (DA) on regional weather and ozone (O3) modeling over\nthe southeastern US during the summer. Satellite SM data are assimilated\ninto the Noah land surface model using an ensemble Kalman filter approach\nwithin National Aeronautics and Space Administration's Land Information\nSystem framework, which is semicoupled with the Weather Research and\nForecasting model with online Chemistry (WRF-Chem; standard version\n3.9.1.1). The DA impacts on the model performance of SM, weather states, and\nenergy fluxes show strong spatiotemporal variability. Dense vegetation and\nwater use from human activities unaccounted for in the modeling system are\namong the factors impacting the effectiveness of the DA. The daytime surface\nO3 responses to the DA can largely be explained by the\ntemperature-driven changes in biogenic emissions of volatile organic\ncompounds and soil nitric oxide, chemical reaction rates, and dry\ndeposition velocities. On a near-biweekly timescale, the DA modified the\nmean daytime and daily maximum 8\u2009h average surface O3 by up to 2\u20133\u2009ppbv, with the maximum impacts occurring in areas where daytime surface air temperature most strongly (i.e., by \u223c2\u2009K) responded to the DA. The DA impacted WRF-Chem upper tropospheric O3 (e.g., for its daytime-mean, by up to 1\u20131.5\u2009ppbv) partially via altering the transport of O3 and its precursors from other places as well as in situ chemical\nproduction of O3 from lightning and other emissions. Case studies\nduring airborne field campaigns suggest that the DA improved the model\ntreatment of convective transport and/or lightning production. In the cases\nthat the DA improved the modeled SM, weather fields, and some O3-related\nprocesses, its influences on the model's O3 performance at various\naltitudes are not always as desirable. This is in part due to the\nuncertainty in the model's key chemical inputs, such as anthropogenic\nemissions, and the model representation of stratosphere\u2013troposphere\nexchanges. This can also be attributable to shortcomings in model\nparameterizations (e.g., chemical mechanism, natural emission, photolysis\nand deposition schemes), including those related to representing water\navailability impacts. This study also shows that the WRF-Chem upper\ntropospheric O3 response to the DA has comparable magnitudes with its response to the estimated US anthropogenic emission changes within 2\u00a0years. As reductions in anthropogenic emissions in North America would\nbenefit the mitigation of O3 pollution in its downwind regions, this\nanalysis highlights the important role of SM in quantifying air pollutants'\nsource\u2013receptor relationships between the US and its downwind areas. It also\nemphasizes that using up-to-date anthropogenic emissions is necessary for\naccurately assessing the DA impacts on the model performance of O3 and other pollutants over a broad region. This work will be followed by a\nNoah-Multiparameterization (with dynamic vegetation)-based study over the\nsoutheastern US, in which selected processes including photosynthesis and\nO3 dry deposition will be the foci.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "An intercomparison of tropospheric ozone reanalysis products from CAMS, CAMS interim, TCR-1, and TCR-2",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Chemical Transport Modeling",
+    "research_domains": [
+      "Data Assimilation",
+      "Atmospheric Chemistry",
+      "Atmospheric Modeling",
+      "Air Quality",
+      "Soil Science",
+      "Remote Sensing"
+    ],
+    "missions_instruments": [
+      {
+        "name": "SMAP (Soil Moisture Active Passive)",
+        "agency": "NASA",
+        "type": "L-band radiometer",
+        "product": "Level-2/Level-3 soil moisture retrievals",
+        "data_level": "L2/L3",
+        "usage_context": "Satellite soil moisture assimilated into Noah land surface model via EnKF in NASA LIS, semi-coupled with WRF-Chem"
+      },
+      {
+        "name": "SMOS (Soil Moisture and Ocean Salinity)",
+        "agency": "ESA",
+        "type": "L-band interferometric radiometer (MIRAS)",
+        "product": "Soil moisture retrievals",
+        "data_level": "L2/L3",
+        "usage_context": "Satellite soil moisture data source considered/assimilated for land surface initialization"
+      },
+      {
+        "name": "ASMR2 / AMSR-E-derived LPRM soil moisture",
+        "agency": "JAXA/NASA",
+        "type": "Passive microwave radiometer",
+        "product": "LPRM soil moisture",
+        "data_level": "L3",
+        "usage_context": "Soil moisture observations used in assimilation experiments"
+      },
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Imaging spectroradiometer",
+        "product": "Vegetation/land surface parameters (e.g., LAI, green vegetation fraction)",
+        "data_level": "L3",
+        "usage_context": "Land surface characterization inputs and evaluation of vegetation influence on DA effectiveness"
+      },
+      {
+        "name": "OMI",
+        "agency": "NASA",
+        "type": "UV-Vis spectrometer",
+        "product": "Trace gas columns (NO2/O3)",
+        "data_level": "L2/L3",
+        "usage_context": "Comparison/evaluation of modeled ozone and precursor fields"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.697,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Atmospheric Chemistry & Reanalysis"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States"
+    ],
+    "institutions": [
+      "George Mason University",
+      "Langley Research Center",
+      "University of Iowa",
+      "Jet Propulsion Laboratory",
+      "Goddard Space Flight Center",
+      "NOAA National Environmental Satellite Data and Information Service"
+    ]
+  },
+  {
+    "title": "Continental-scale Atmospheric Impacts of the 2020 Western U.S. Wildfires",
+    "authors": [
+      "I. Albor\u00e9s",
+      "R. Buchholz",
+      "I. Ortega",
+      "L. Emmons",
+      "J. Hannigan",
+      "F. Lacey",
+      "G. Pfister",
+      "W. Tang",
+      "H. Worden"
+    ],
+    "year": 2022,
+    "doi": "10.1016/j.atmosenv.2022.119436",
+    "venue": "Atmospheric Environment",
+    "citation_count": 17,
+    "paper_id": "810ec3a938f856184f30b4db66edf9f199903a58",
+    "url": "https://www.semanticscholar.org/paper/810ec3a938f856184f30b4db66edf9f199903a58",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Correcting model biases of CO in East Asia: impact on oxidant distributions during KORUS-AQ",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Wildfire & Biomass Burning",
+    "research_domains": [
+      "Atmospheric Chemistry",
+      "Fire & Smoke Modeling",
+      "Air Quality",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [
+      {
+        "name": "MOPITT",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "Carbon monoxide profiles/total column",
+        "data_level": "L2/L3",
+        "usage_context": "Tracking wildfire-emitted CO plumes and continental-scale transport during the 2020 western U.S. fires"
+      },
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "Aerosol optical depth; active fire detections",
+        "data_level": "L2/L3",
+        "usage_context": "Quantifying smoke aerosol loading and fire activity across the continent"
+      },
+      {
+        "name": "Terra",
+        "agency": "NASA",
+        "type": "Satellite platform",
+        "product": "MOPITT/MODIS observations",
+        "data_level": "Not specified",
+        "usage_context": "Host platform for CO and AOD observations analyzed for wildfire impacts"
+      },
+      {
+        "name": "CALIPSO",
+        "agency": "NASA/CNES",
+        "type": "Satellite lidar",
+        "product": "Aerosol backscatter/vertical profiles",
+        "data_level": "L2",
+        "usage_context": "Assessing vertical distribution and injection height of smoke plumes"
+      },
+      {
+        "name": "TROPOMI",
+        "agency": "ESA/Copernicus",
+        "type": "Satellite instrument",
+        "product": "CO and NO2 columns",
+        "data_level": "L2",
+        "usage_context": "Mapping trace gas enhancements from wildfire smoke"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.4,
+      "composite_confidence": 0.487,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.0,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Wildfire & Biomass Burning Emissions"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.6,
+        "skeptic_engagement": "Level 2: Data Usage",
+        "skeptic_domain": "Wildfire & Biomass Burning",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": false,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States"
+    ],
+    "institutions": [
+      "Williams College",
+      "University Corporation for Atmospheric Research",
+      "NSF National Center for Atmospheric Research",
+      "Research Applications (United States)"
+    ]
   }
 ]

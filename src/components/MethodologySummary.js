@@ -2,8 +2,8 @@
 // Short "what am I looking at" paragraph shown above the charts.
 //
 // Exists because the counts on this dashboard are CITATIONS (papers that cite a
-// team paper), not publications by the JPL team. Reading "975" as "the RAPID
-// team published 975 papers" is the single most likely misinterpretation, so
+// team paper), not publications by the JPL team. Reading "980" as "the RAPID
+// team published 980 papers" is the single most likely misinterpretation, so
 // the framing is stated up front on every page.
 
 import React from 'react';

@@ -72323,5 +72323,1242 @@
       "Cooperative Institute for Research in Environmental Sciences",
       "Karlsruhe Institute of Technology"
     ]
+  },
+  {
+    "title": "Evaluation of the Directional Derivative Approach for Timely and Accurate Satellite\u2010Based Emission Estimation Using Chemical Transport Model Simulation of Nitrogen Oxides",
+    "authors": [
+      "Z. Ayazpour",
+      "Kang Sun",
+      "Ruixin Zhang",
+      "Huizhong Shen"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024JD042817",
+    "venue": "Journal of Geophysical Research - Atmospheres",
+    "citation_count": 6,
+    "paper_id": "9df0c3e77574edec88b060df27df2c9a2abf1f8f",
+    "url": "https://www.semanticscholar.org/paper/9df0c3e77574edec88b060df27df2c9a2abf1f8f",
+    "abstract": "The directional derivative approach (DDA) has the potential to rapidly and accurately quantify emission distributions based on the directional derivative of satellite\u2010observed column amounts with respect to the horizontal wind. From the first principles, this paper derives the DDA emission estimators with a range of complexity by vertically integrating the 3D continuity equation and simplifying the results under several assumptions and approximations. The connection and difference between the DDA and a widely used divergence method for emission estimation are highlighted. A key difference is that the DDA integrates from the surface to an intermediate altitude instead of to the top of the observed column. This leads to the inherent background removal of the DDA, in contrast to the explicit background removal necessitated by the divergence method theory. Linear fittings are used to account for the effects of topography, chemical reactions, and retrieval biases. Realistic estimators of NOx ${\\mathrm{N}\\mathrm{O}}_{x}$ emissions using satellite\u2010observed NO2 ${\\text{NO}}_{2}$ column amounts are proposed, leveraging external climatology of the NOx ${\\mathrm{N}\\mathrm{O}}_{x}$ : NO2 ${\\mathrm{N}\\mathrm{O}}_{2}$ ratio and its directional derivative. These estimators are evaluated within a WRF\u2010CMAQ simulation of NOx ${\\mathrm{N}\\mathrm{O}}_{x}$ by comparisons with the model NOx ${\\mathrm{N}\\mathrm{O}}_{x}$ emissions. The DDA estimators consistently outperform the divergence method estimator, and the DDA estimator that considers both topography and chemistry features the lowest root mean square error. Lessons learned from this study using synthetic model data can be readily applied to the usage of actual satellite observations for emission estimation.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+    "team_paper_id": "tropess_team_53c33eee24123f48",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Trace Gas Products",
+    "research_domains": [
+      "Atmospheric Chemistry",
+      "Remote Sensing",
+      "Inverse Modeling",
+      "Chemical Transport",
+      "Air Quality",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.667,
+      "evidence_confidence": 0.9,
+      "composite_confidence": 0.648,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Trace Gas Products"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "China"
+    ],
+    "institutions": [
+      "Center for Astrophysics Harvard & Smithsonian",
+      "University at Buffalo, State University of New York",
+      "Southern University of Science and Technology"
+    ]
+  },
+  {
+    "title": "Sector\u2010Based Top\u2010Down Estimates of NO x , SO2, and CO Emissions in East Asia",
+    "authors": [
+      "Z. Qu",
+      "D. Henze",
+      "H. Worden",
+      "Zhe Jiang",
+      "B. Gaubert",
+      "N. Theys",
+      "Wei Wang"
+    ],
+    "year": 2022,
+    "doi": "10.1029/2021GL096009",
+    "venue": "Geophysical Research Letters",
+    "citation_count": 43,
+    "paper_id": "4647b044bf021da63cd971cfddf822e2cf93b146",
+    "url": "https://www.semanticscholar.org/paper/4647b044bf021da63cd971cfddf822e2cf93b146",
+    "abstract": "Top\u2010down estimates using satellite data provide important information on the sources of air pollutants. We develop a sector\u2010based 4D\u2010Var framework based on the GEOS\u2010Chem adjoint model to address the impacts of co\u2010emissions and chemical interactions on top\u2010down emission estimates. We apply OMI NO2, OMI SO2, and MOPITT CO observations to estimate NOx, SO2, and CO emissions in East Asia during 2005\u20132012. Posterior evaluations with surface measurements show reduced normalized mean bias (NMB) by 7% (NO2)\u201315% (SO2) and normalized mean square error (NMSE) by 8% (SO2)\u20139% (NO2) compared to a species\u2010based inversion. This new inversion captures the peak years of Chinese SO2 (2007) and NOx (2011) emissions and attributes their drivers to industry and energy activities. The CO peak in 2007 in China is driven by residential and industry emissions. In India, the inversion attributes NOx and SO2 trends mostly to energy and CO trend to residential emissions.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+    "team_paper_id": "tropess_team_53c33eee24123f48",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle & Flux Inversions",
+    "research_domains": [
+      "Inverse Modeling",
+      "Atmospheric Chemistry",
+      "Air Quality",
+      "Remote Sensing",
+      "Data Assimilation",
+      "Chemical Transport"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OMI (Ozone Monitoring Instrument)",
+        "agency": "NASA/KNMI",
+        "type": "Satellite instrument",
+        "product": "NO2 tropospheric column, SO2 column",
+        "data_level": "L2/L3",
+        "usage_context": "Assimilated in sector-based 4D-Var GEOS-Chem adjoint inversion to estimate NOx and SO2 emissions in East Asia (2005-2012)"
+      },
+      {
+        "name": "MOPITT",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "CO profiles/total column",
+        "data_level": "L2",
+        "usage_context": "Assimilated to constrain sector-based CO emissions in East Asia"
+      },
+      {
+        "name": "Aura",
+        "agency": "NASA",
+        "type": "Satellite platform",
+        "product": "Not specified",
+        "data_level": "Not specified",
+        "usage_context": "Host platform for OMI observations used in the inversion"
+      },
+      {
+        "name": "Terra",
+        "agency": "NASA",
+        "type": "Satellite platform",
+        "product": "Not specified",
+        "data_level": "Not specified",
+        "usage_context": "Host platform for MOPITT CO observations used in the inversion"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.667,
+      "evidence_confidence": 0.825,
+      "composite_confidence": 0.589,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.3,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Megacity Studies"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "China",
+      "Belgium"
+    ],
+    "institutions": [
+      "Harvard University",
+      "University of Colorado Boulder",
+      "Harvard University Press",
+      "NSF National Center for Atmospheric Research",
+      "University of Science and Technology of China",
+      "Royal Belgian Institute for Space Aeronomy",
+      "China National Environmental Monitoring Center"
+    ]
+  },
+  {
+    "title": "Technical note: Quality assessment of ozone reanalysis products and gap-filling over subarctic Europe for vegetation risk mapping",
+    "authors": [
+      "S. Falk",
+      "A. V. Vollsnes",
+      "A. Eriksen",
+      "F. Stordal",
+      "T. Berntsen"
+    ],
+    "year": 2021,
+    "doi": "10.5194/ACP-21-15647-2021",
+    "venue": "",
+    "citation_count": 4,
+    "paper_id": "b862de2d7bf804cb25758f5beddc87b483302f13",
+    "url": "https://www.semanticscholar.org/paper/b862de2d7bf804cb25758f5beddc87b483302f13",
+    "abstract": "Abstract. We assess the quality of regional and global ozone reanalysis data for vegetation modeling and ozone ( O3 ) risk mapping over subarctic Europe where monitoring is sparse. Reanalysis data can be subject to systematic errors originating from, for example, quality of assimilated data, distribution and strength of precursor sources, incomprehensive atmospheric chemistry or land\u2013atmosphere exchange, and spatiotemporal resolution. Here, we evaluate two selected global products and one regional ozone reanalysis product. Our analysis suggests that global reanalysis products do not reproduce observed ground-level ozone well in the subarctic region. Only the Copernicus Atmosphere Monitoring Service Regional Air Quality (CAMSRAQ) reanalysis ensemble sufficiently captures the observed seasonal cycle. We also compute the root mean square error (RMSE) by season. The RMSE variation between (2.6\u20136.6)\u2009 ppb suggests inherent challenges even for the best reanalysis product (CAMSRAQ). O3 concentrations in the subarctic region are systematically underestimated by (2\u20136)\u2009 ppb compared to the ground-level background ozone concentrations derived from observations. Spatial patterns indicate a systematical underestimation of ozone abundance by the global reanalysis products on the west coast of northern Fennoscandia.\nFurthermore, we explore the suitability of CAMSRAQ for gap-filling at one site in northern Norway with a long-term record but not belonging to the observational network. We devise a reconstruction method based on Reynolds decomposition and adhere to recommendations by the United Nations Economic Commission for Europe (UNECE) Long-Range Transboundary Air Pollution (LRTAP) convention. The thus reconstructed data for 2\u00a0weeks in July 2018 are compared with CAMSRAQ evaluated at the nearest-neighbor grid point. Our reconstruction method's performance (76\u2009 % accuracy) is comparable with CAMSRAQ (80\u2009 % accuracy), but diurnal extremes are underestimated by both.",
+    "indexed": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+    "team_paper_id": "tropess_team_53c33eee24123f48",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Validation & Intercomparison",
+    "research_domains": [
+      "Atmospheric Chemistry",
+      "Data Assimilation",
+      "Air Quality",
+      "Environmental Monitoring",
+      "Ecosystem Science",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TCR-2 (Tropospheric Chemistry Reanalysis, version 2)",
+        "agency": "NASA JPL",
+        "type": "Multi-satellite chemical reanalysis (assimilates OMI, MLS, TES, MOPITT observations)",
+        "product": "Surface/tropospheric ozone reanalysis fields",
+        "data_level": "Level 4 (reanalysis)",
+        "usage_context": "Evaluated as one of the global ozone reanalysis products against ground-level ozone observations over subarctic Europe for vegetation risk mapping"
+      },
+      {
+        "name": "CAMS Regional Air Quality reanalysis (CAMSRAQ)",
+        "agency": "ECMWF/Copernicus",
+        "type": "Regional air quality model ensemble reanalysis",
+        "product": "Surface ozone concentrations",
+        "data_level": "Level 4 (reanalysis)",
+        "usage_context": "Assessed for seasonal cycle reproduction and used for gap-filling of a long-term ground-level ozone record in northern Norway"
+      },
+      {
+        "name": "CAMS global reanalysis (EAC4)",
+        "agency": "ECMWF/Copernicus",
+        "type": "Global atmospheric composition reanalysis",
+        "product": "Surface ozone concentrations",
+        "data_level": "Level 4 (reanalysis)",
+        "usage_context": "Compared with observations to quantify biases in subarctic ground-level ozone"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.75,
+      "composite_confidence": 0.642,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": false,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Validation & Intercomparison"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Norway",
+    "all_countries": [
+      "Norway"
+    ],
+    "institutions": [
+      "University of Oslo"
+    ]
+  },
+  {
+    "title": "Recent Decreasing Trends in Surface PM2.5 over East Asia in the Winter-Spring Season: Different Responses to Emissions and Meteorology between Upwind and Downwind Regions",
+    "authors": [
+      "Y. Ryu",
+      "S. Min",
+      "A. Hodzic"
+    ],
+    "year": 2021,
+    "doi": "10.4209/aaqr.200654",
+    "venue": "Aerosol and Air Quality Research",
+    "citation_count": 22,
+    "paper_id": "bc75e2142438257782ee34777c1e6e88f138f295",
+    "url": "https://www.semanticscholar.org/paper/bc75e2142438257782ee34777c1e6e88f138f295",
+    "abstract": "This study developed and evaluated a WRF-Chem modeling system that reflects the effect of recent emission regulations on the PM2.5 above East Asia by utilizing an updated anthropogenic emission inventory for 2013\u20132018. This system accurately reproduced the monthly means, daily variations, and vertical profiles of PM2.5 during winter and spring over the Seoul Metropolitan Area (SMA) in South Korea and the North China Plain (NCP) and Yangtze River Delta (YRD) in China. Furthermore, it demonstrated that the decline in PM2.5 over the latter nation is attributable to control measures in China that have been in effect since 2013. The most polluted of the three target regions, the NCP, which is also upwind (in contrast to the downwind YRD and SMA), exhibited the largest decrease due to emission reduction. For example, the simulated mean PM2.5 concentration for February dropped by 39% over the NCP but by merely 17% over the YRD between 2013 and 2018. Additionally, the SMA displayed only minor changes in the concentration during winter and a weak decreasing trend during spring. In addition to emission reduction, meteorology significantly modulated the level of PM2.5; it produced larger interannual variations in the downwind regions than the upwind one, accounting for changes in concentration as high as 35% and 45% in the SMA during winter and spring, respectively, versus 11% and 12% in the NCP. Finally, the downwind regions also showed more complex behaviors for the secondary aerosols, which did not always follow the decreasing trends of their precursors.",
+    "indexed": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+    "team_paper_id": "tropess_team_53c33eee24123f48",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Megacity Studies",
+    "research_domains": [
+      "Air Quality",
+      "Atmospheric Chemistry",
+      "Atmospheric Modeling",
+      "Chemical Transport",
+      "Environmental Monitoring",
+      "Greenhouse Gas Emissions"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.667,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.64,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Megacity Studies"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "South Korea",
+    "all_countries": [
+      "South Korea",
+      "United States"
+    ],
+    "institutions": [
+      "Pohang University of Science and Technology",
+      "NSF National Center for Atmospheric Research"
+    ]
+  },
+  {
+    "title": "Analysis of the NO2 tropospheric product from S5P TROPOMI for monitoring pollution at city scale",
+    "authors": [
+      "P. Prunet",
+      "O. Lezeaux",
+      "C. Camy\u2010Peyret",
+      "H. Thevenon"
+    ],
+    "year": 2020,
+    "doi": "10.1016/j.cacint.2020.100051",
+    "venue": "",
+    "citation_count": 44,
+    "paper_id": "f37f5b31fff7dd9185053e224ef2003ce077a507",
+    "url": "https://www.semanticscholar.org/paper/f37f5b31fff7dd9185053e224ef2003ce077a507",
+    "abstract": "Abstract Nitrogen dioxide (NO2) is a good indicator for air quality (AQ) in urban and industrialized areas. The instrument TROPOMI on the ESA S5P satellite provides high quality daily measures of the NO2 tropospheric column from space. The lockdowns that countries and cities have implemented to mitigate the spread of Covid-19 represent an unprecedented reduction of human activities that significantly impacted AQ and NO2 emissions in urban areas. Several communications have associated lockdowns resulting from Covid-19 with a decrease in NO2 air pollution as observed from space by TROPOMI. This relationship between NO2 measurements from space and lockdowns must be further discussed and consolidated: how accurately can we quantify NO2 pollution reduction at city scale during lockdown periods with TROPOMI data only? This work presents a processing of TROPOMI NO2 level 2 data into an original time series \u2013 the city-scale NO2 plume mass \u2013- that has been designed to quantify the NO2 pollution level over cities. This is used to verify the impact of lockdowns on NO2 and to examine how urban NO2 pollution reduction associated with lockdown periods may be quantified, on the basis of yearly variations of the TROPOMI city-scale NO2 plume mass and related uncertainty, exploited over representative periods of time. We evaluated this measure and checked the corresponding added value and limitation for quantifying the impact of lockdowns on NO2 variations and separate from other effects, comparing with independent CAMS data and in situ measurements. Building on these results, our second objective was to estimate the reduction on the NO2 tropospheric level over four European cities during their respective lockdowns. The methodology developed may be applied to any major cities and industrial areas. This work should be considered as an initial demonstration for a space-based monitoring system of air quality at the city scale. It may also serve as a testbed for assessing national and international regulations to reduce pollutant levels.",
+    "indexed": {
+      "date-parts": [
+        [
+          2020,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+    "team_paper_id": "tropess_team_53c33eee24123f48",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Megacity Studies",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite instrument (UV-VIS-NIR-SWIR spectrometer)",
+        "product": "Tropospheric NO2 column",
+        "data_level": "L2",
+        "usage_context": "Primary data source: processed into city-scale NO2 plume mass time series to quantify urban NO2 pollution and COVID-19 lockdown reductions"
+      },
+      {
+        "name": "CAMS (Copernicus Atmosphere Monitoring Service)",
+        "agency": "ECMWF/Copernicus",
+        "type": "Model reanalysis/forecast system",
+        "product": "NO2 concentration analyses",
+        "data_level": "Model output",
+        "usage_context": "Independent comparison dataset for evaluating satellite-derived city-scale NO2 metrics"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.7,
+      "composite_confidence": 0.625,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": false,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Megacity Studies"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France"
+    ],
+    "institutions": [
+      "Institut Pierre-Simon Laplace"
+    ]
+  },
+  {
+    "title": "NOx Emissions Reduction and Rebound in China Due to the COVID\u201019 Crisis",
+    "authors": [
+      "Jieying Ding",
+      "R. van der A",
+      "H. Eskes",
+      "B. Mijling",
+      "T. Stavrakou",
+      "J. van Geffen",
+      "P. Veefkind"
+    ],
+    "year": 2020,
+    "doi": "10.1029/2020GL089912",
+    "venue": "Geophysical Research Letters",
+    "citation_count": 114,
+    "paper_id": "01e77fdd73a49616a07fceca9a5f835823825582",
+    "url": "https://www.semanticscholar.org/paper/01e77fdd73a49616a07fceca9a5f835823825582",
+    "abstract": "During the COVID\u201019 lockdown (24 January\u201320 March) in China low air pollution levels were reported in the media as a consequence of reduced economic and social activities. Quantification of the pollution reduction is not straightforward due to effects of transport, meteorology, and chemistry. We have analyzed the NOx emission reductions calculated with an inverse algorithm applied to daily NO2 observations from TROPOMI onboard the Copernicus Sentinel\u20105P satellite. This method allows the quantification of emission reductions per city and the analysis of emissions of maritime transport and of the energy sector separately. The reductions we found are 20\u201350% for cities, about 40% for power plants, and 15\u201340% for maritime transport depending on the region. The reduction in both emissions and concentrations shows a similar timeline consisting of a sharp reduction (34\u201350%) around the Spring festival and a slow recovery from mid\u2010February to mid\u2010March.",
+    "indexed": {
+      "date-parts": [
+        [
+          2020,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Updated tropospheric chemistry reanalysis and emission estimates, TCR-2, for 2005-2018",
+    "team_paper_id": "tropess_team_53c33eee24123f48",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Megacity Studies",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Inverse Modeling",
+      "Environmental Monitoring",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA/Copernicus (Sentinel-5P)",
+        "type": "Satellite spectrometer (UV-VIS-NIR-SWIR)",
+        "product": "Tropospheric NO2 column density",
+        "data_level": "L2",
+        "usage_context": "Daily NO2 observations used in an inverse algorithm to derive NOx emission reductions for cities, power plants, and maritime transport in China during the COVID-19 lockdown"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.85,
+      "composite_confidence": 0.677,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Megacity Studies"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Netherlands",
+    "all_countries": [
+      "Netherlands",
+      "China",
+      "Belgium"
+    ],
+    "institutions": [
+      "Royal Netherlands Meteorological Institute",
+      "Nanjing University of Information Science and Technology",
+      "Royal Belgian Institute for Space Aeronomy",
+      "Delft University of Technology"
+    ]
+  },
+  {
+    "title": "Chasing Snowstorms: The Investigation of Microphysics and Precipitation for Atlantic Coast-Threatening Snowstorms (IMPACTS) Campaign",
+    "authors": [
+      "L. McMurdie",
+      "G. Heymsfield",
+      "J. Yorks",
+      "S. Braun",
+      "G. Skofronick-Jackson",
+      "R. Rauber",
+      "S. Yuter",
+      "B. Colle",
+      "G. McFarquhar",
+      "M. Poellot",
+      "D. Novak",
+      "T. Lang",
+      "Rachael A. Kroodsma",
+      "M. McLinden",
+      "M. Oue",
+      "P. Kollias",
+      "M. Kumjian",
+      "S. Greybush",
+      "A. Heymsfield",
+      "Joseph A. Finlon",
+      "V. McDonald",
+      "S. Nicholls"
+    ],
+    "year": 2022,
+    "doi": "10.1175/bams-d-20-0246.1",
+    "venue": "Bulletin of The American Meteorological Society - (BAMS)",
+    "citation_count": 57,
+    "paper_id": "b765fc433a6c2859e2e6fcfce7834666a95f5aa0",
+    "url": "https://www.semanticscholar.org/paper/b765fc433a6c2859e2e6fcfce7834666a95f5aa0",
+    "abstract": "\nThe Investigation of Microphysics and Precipitation for Atlantic Coast-Threatening Snowstorms (IMPACTS) is a NASA-sponsored field campaign to study wintertime snowstorms focusing on East Coast cyclones. This large cooperative effort takes place during the winters of 2020 \u2013 2023 to study precipitation variability in winter cyclones to improve remote sensing and numerical forecasts of snowfall. Snowfall within these storms is frequently organized in banded structures on multiple scales. The causes for the occurrence and evolution of a wide spectrum of snowbands remain poorly understood. The goals of IMPACTS are to characterize the spatial and temporal scales and structures of snowbands, understand their dynamical, thermodynamical and microphysical processes, and apply this understanding to improve remote sensing and modeling of snowfall. The first deployment took place in January \u2013 February 2020 with two aircraft that flew coordinated flight patterns and sampled a range of storms from the Midwest to the East Coast. The satellite-simulating ER-2 aircraft flew above the clouds and carried a suite of remote sensing instruments including cloud and precipitation radars, lidar, and passive microwave radiometers. The insitu P-3 aircraft flew within the clouds and sampled environmental and microphysical quantities. Ground-based radar measurements from the National Weather Service network and a suite of radars located on Long Island, NY, along with supplemental soundings and the New York State mesonet ground network provided environmental context for the airborne observations. Future deployments will occur during the 2022 and 2023 winters. The coordination between remote sensing and in situ platforms makes this a unique publicly available dataset applicable to a wide variety of interests.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Comparison of optimal estimation HDO/H2O retrievals from AIRS with ORACLES measurements",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Cloud Microphysics & Precipitation",
+    "research_domains": [
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Atmospheric Modeling",
+      "Cloud Microphysics",
+      "Field Campaigns"
+    ],
+    "missions_instruments": [
+      {
+        "name": "NASA ER-2 airborne remote sensing payload (CRS, HIWRAP, EXRAD radars; CPL lidar; AMPR, CoSMIR radiometers)",
+        "agency": "NASA",
+        "type": "Airborne remote sensing platform",
+        "product": "Radar reflectivity, lidar backscatter, passive microwave brightness temperatures",
+        "data_level": "Level 1/Level 2",
+        "usage_context": "Satellite-simulating overflights of winter cyclones to characterize snowband structure and precipitation microphysics"
+      },
+      {
+        "name": "NASA P-3 in situ cloud microphysics and environmental instrument suite",
+        "agency": "NASA",
+        "type": "Airborne in situ",
+        "product": "Particle size distributions, ice water content, thermodynamic state parameters",
+        "data_level": "Level 1/Level 2",
+        "usage_context": "In-cloud sampling of microphysical and thermodynamic quantities coordinated with ER-2 remote sensing"
+      },
+      {
+        "name": "NEXRAD WSR-88D ground radar network",
+        "agency": "NOAA/NWS",
+        "type": "Ground-based radar",
+        "product": "Reflectivity and dual-polarization radar fields",
+        "data_level": "Level 2",
+        "usage_context": "Environmental and mesoscale context for airborne observations of snowbands"
+      },
+      {
+        "name": "New York State Mesonet and supplemental radiosondes",
+        "agency": "SUNY Albany / NASA",
+        "type": "Ground-based network / in situ sounding",
+        "product": "Surface meteorology and vertical thermodynamic profiles",
+        "data_level": "Level 2",
+        "usage_context": "Characterizing storm environment during aircraft sampling"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.95,
+      "composite_confidence": 0.713,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.8,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "General Science"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States"
+    ],
+    "institutions": [
+      "University of Washington",
+      "Science Systems and Applications (United States)",
+      "Goddard Space Flight Center",
+      "NSF National Center for Atmospheric Research",
+      "NASA Earth Science",
+      "University of Illinois Urbana-Champaign",
+      "North Carolina State University",
+      "State University of New York",
+      "Stony Brook University",
+      "Cooperative Institute for Mesoscale Meteorological Studies"
+    ]
+  },
+  {
+    "title": "Observations from the NOAA P-3 aircraft during ATOMIC",
+    "authors": [
+      "R. Pincus",
+      "C. Fairall",
+      "A. Bailey",
+      "Haonan Chen",
+      "P. Chuang",
+      "G. de Boer",
+      "G. Feingold",
+      "D. Henze",
+      "Quinn T. Kalen",
+      "J. Kazil",
+      "Mason D. Leandro",
+      "Ashley Lundry",
+      "K. Moran",
+      "Dana A. Naeher",
+      "D. Noone",
+      "Akshar J. Patel",
+      "S. Pezoa",
+      "I. Popstefanija",
+      "E. Thompson",
+      "James G. Warnecke",
+      "P. Zuidema"
+    ],
+    "year": 2021,
+    "doi": "10.5194/ESSD-13-3281-2021",
+    "venue": "Earth System Science Data",
+    "citation_count": 28,
+    "paper_id": "3bb4a34db7346211ad544dc879dcc60f213f8d2a",
+    "url": "https://www.semanticscholar.org/paper/3bb4a34db7346211ad544dc879dcc60f213f8d2a",
+    "abstract": "Abstract. This paper describes observations obtained during the Atlantic Tradewind Ocean-Atmosphere Mesoscale Interaction Campaign (ATOMIC) by the US National Oceanic and Atmospheric Administration's (NOAA) Lockheed WP-3D Orion research aircraft based on the island of Barbados during the period Jan 17\u2013Feb 11 2020. The aircraft obtained 95 hours of observations over eleven flights, many of which were coordinated with the NOAA research ship R/V Ronald H. Brown and autonomous platforms deployed from the ship. Each flight contained a mixture of sampling strategies including: high-altitude circles with frequent dropsonde deployment to characterize the large-scale environment; slow descents and ascents to measure the distribution of water vapor and its isotopic composition; stacked legs aimed at sampling the microphysical and thermodynamic state of the boundary layer; and offset straight flight legs for observing clouds and the ocean surface with remote sensing instruments and the thermal structure of the ocean with in situ sensors dropped from the plane. The characteristics of the it in situ observations, expendable devices, and remote sensing instrumentation are described, as is the processing used in deriving estimates of physical quantities. Data archived at the National Center for Environmental Information include flight-level data such as aircraft navigation and basic thermodynamic information (https://doi.org/10.25921/7jf5-wv54); high-accuracy measurements of water vapor concentration from an isotope analyzer (https://doi.org/10.25921/c5yx-7w29); profiles of sea water temperature made with Airborne eXpendable BathyThermographs (AXBTs, https://doi.org/10.25921/pe39-sx75); profiles of radar reflectivity, Doppler velocity, and spectrum width from a nadir-looking W-band (94\u2009GHz) radar (https://doi.org/10.25921/n1hc-dc30); estimates of cloud presence, the cloud top location, and the cloud-top radar reflectivity and temperature, along with estimates of 10-m wind speed obtained from remote sensing instruments operating in the microwave and thermal infrared spectral regions (https://doi.org/10.25921/x9q5-9745); and ocean surface wave characteristics from a Wide Swath Radar Altimeter (https://doi.org/10.25921/qm06-qx04). Data are provided as netCDF files following Climate and Forecast conventions.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Comparison of optimal estimation HDO/H2O retrievals from AIRS with ORACLES measurements",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Field Campaign Observations",
+    "research_domains": [
+      "Atmospheric Science",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Oceanography",
+      "Hydrology & Water Resources",
+      "Climate Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "NOAA WP-3D Orion airborne W-band (94 GHz) cloud radar",
+        "agency": "NOAA",
+        "type": "Airborne radar",
+        "product": "Radar reflectivity, Doppler velocity, spectrum width profiles",
+        "data_level": "Level 1/2",
+        "usage_context": "Nadir-looking profiling of cloud and precipitation structure during ATOMIC flights"
+      },
+      {
+        "name": "Picarro-type water vapor isotope analyzer (airborne)",
+        "agency": "NOAA",
+        "type": "In situ spectrometer",
+        "product": "Water vapor concentration and isotopic composition (HDO/H2O)",
+        "data_level": "Level 2",
+        "usage_context": "Measuring vertical distribution of water vapor isotopic composition during slow ascents/descents"
+      },
+      {
+        "name": "Dropsondes (AVAPS)",
+        "agency": "NOAA",
+        "type": "In situ sonde",
+        "product": "Temperature, humidity, wind profiles",
+        "data_level": "Level 2",
+        "usage_context": "Characterizing large-scale environment from high-altitude circles"
+      },
+      {
+        "name": "Airborne eXpendable BathyThermographs (AXBT)",
+        "agency": "NOAA",
+        "type": "In situ ocean probe",
+        "product": "Sea water temperature profiles",
+        "data_level": "Level 2",
+        "usage_context": "Measuring upper-ocean thermal structure"
+      },
+      {
+        "name": "Wide Swath Radar Altimeter (WSRA)",
+        "agency": "NOAA",
+        "type": "Airborne radar altimeter",
+        "product": "Ocean surface wave characteristics",
+        "data_level": "Level 2",
+        "usage_context": "Observing directional wave spectra and sea state"
+      },
+      {
+        "name": "Microwave and infrared radiometers (airborne remote sensing suite)",
+        "agency": "NOAA",
+        "type": "Airborne radiometer",
+        "product": "Cloud top location/temperature, 10-m wind speed",
+        "data_level": "Level 2",
+        "usage_context": "Retrieving cloud properties and surface wind speed along flight legs"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.66,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "General Science"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "New Zealand"
+    ],
+    "institutions": [
+      "Cooperative Institute for Research in Environmental Sciences",
+      "University of Colorado Boulder",
+      "NOAA Physical Sciences Laboratory",
+      "NSF National Center for Atmospheric Research",
+      "Cooperative Institute for Research in the Atmosphere",
+      "Colorado State University",
+      "University of California, Santa Cruz",
+      "NOAA Chemical Sciences Laboratory",
+      "Oregon State University",
+      "University of Auckland"
+    ]
+  },
+  {
+    "title": "Infrared Satellite Detection Limits for Monitoring Atmospheric Ammonia",
+    "authors": [
+      "M. Shephard",
+      "S. Kharol",
+      "Enrico Dammers",
+      "C. Sioris",
+      "Andrew Bell",
+      "R. Jansen",
+      "J. Caron",
+      "R. Snel",
+      "E. Palombo",
+      "K. Cady-Pereira",
+      "C. McLinden",
+      "E. Lutsch",
+      "R. Knuteson"
+    ],
+    "year": 2025,
+    "doi": "10.1109/JSTARS.2025.3557240",
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "citation_count": 6,
+    "paper_id": "8221087fba77ca541a32aca8d1a276454400ac02",
+    "url": "https://www.semanticscholar.org/paper/8221087fba77ca541a32aca8d1a276454400ac02",
+    "abstract": "This study investigates single pixel nadir viewing detection limit of atmospheric ammonia for a range of area flux mapping satellite infrared sensor spectral resolutions (0.05\u20132.0 cm\u22121) and measurement noise levels. The detection level of ammonia is computed directly from simulated satellite ammonia spectral signatures, which has the advantage of being independent of retrieval methodologies. Information on the frequency of a given detection limit, and the cumulative probability of detection, are provided as a function of instrument spectral resolution and noise. For example, a Cross-track Infrared Sounder-like instrument with a modest spectral resolution of 0.625 cm\u22121 and excellent signal-to-noise ratio of \u223c1600 would be able to detect ammonia on average \u223c70% of the time; these same instrument specifications will have a detection limit of 0.2 ppbv (surface) or 1.6\u00d71015 molec cm\u22122 (total column) that can be achieved at a detection rate of 10% as it requires favorable infrared remote sensing conditions (large thermal contrast). Under more typical atmospheric states a detection limit of 0.5 ppbv (3.5 \u00d7 1015 molec cm\u22122) is achieved at a 50% detection rate. This detection limit information is valuable for applications that incorporate remote sensing data in conditions when the atmospheric ammonia amounts are below the detection limit of the satellite sensor (e.g., nongrowing season in crop fertilizer source regions). As the simulations use real-world atmospheric state observations as inputs the results can be used to provide general guidance on the detection limits of past, current, and potential new environmental flux mapping instruments used for ammonia monitoring covering large geographical regions.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Satellite measurements of peroxyacetyl nitrate from the Cross-Track Infrared Sounder: comparison with ATom aircraft measurements",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Radiative Transfer & Forward Modeling",
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Air Quality",
+      "Environmental Monitoring",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "CrIS (Cross-track Infrared Sounder)",
+        "agency": "NOAA/NASA",
+        "type": "Infrared spectrometer",
+        "product": "Instrument spectral resolution/noise specifications used as simulation configuration for NH3 detection limits",
+        "data_level": "Not specified",
+        "usage_context": "Simulated CrIS-like instrument (0.625 cm-1, SNR ~1600) used as reference case for ammonia detection-limit calculations"
+      },
+      {
+        "name": "IASI",
+        "agency": "EUMETSAT/CNES",
+        "type": "Infrared Fourier transform spectrometer",
+        "product": "Instrument spectral resolution/noise characteristics for detection-limit simulations",
+        "data_level": "Not specified",
+        "usage_context": "Included among past/current infrared sounder configurations evaluated for ammonia detectability"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.9,
+      "composite_confidence": 0.625,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 3: Model Adaptation",
+        "phase2_majority_domain": "Tropospheric Composition Retrievals"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Canada",
+    "all_countries": [
+      "Canada",
+      "Netherlands",
+      "United States"
+    ],
+    "institutions": [
+      "Environment and Climate Change Canada",
+      "Netherlands Organisation for Applied Scientific Research",
+      "Atmospheric and Environmental Research",
+      "University of Wisconsin\u2013Madison"
+    ]
+  },
+  {
+    "title": "Performance assessment of the IASI-O3 KOPRA product for observing midlatitude tropospheric ozone evolution for 15 years: validation with ozone sondes and consistency of the three IASI instruments",
+    "authors": [
+      "Ga\u00eblle Dufour",
+      "M. Eremenko",
+      "Juan Cuesta",
+      "G. Ancellet",
+      "Michael Gill",
+      "Eliane Maillard Barras",
+      "R. van Malderen"
+    ],
+    "year": 2025,
+    "doi": "10.5194/amt-18-5049-2025",
+    "venue": "Atmospheric Measurement Techniques",
+    "citation_count": 4,
+    "paper_id": "643eff6e29ddaa21ee8dd39bac66f0604aeadbda",
+    "url": "https://www.semanticscholar.org/paper/643eff6e29ddaa21ee8dd39bac66f0604aeadbda",
+    "abstract": "Abstract. The Infrared Atmospheric Sounding Interferometer (IASI) has been monitoring the atmosphere for operational meteorology and atmospheric composition studies since 2007 with a succession of three instruments aboard the Metop-A (2006\u20132021), Metop-B (2012\u2013Present), and Metop-C (2018\u2013Present) missions. One of the key species monitored is ozone (O3). This study assesses the quality of the regional IASI-O3 KOPRA (Karlsruhe Optimized and Precise Radiative transfer Algorithm) product, version 3.0, and the consistency of the three IASI instruments, IASI-A, IASI-B, and IASI-C, for time series and trend analyses. The IASI-O3 KOPRA products of the three instruments show a very good agreement and consistency, better than 1\u2009%, for the tropospheric ozone column (TrOC) and several partial columns (surface\u2013450\u2009hPa, surface\u2013300\u2009hPa) across the three study domains: Europe, North America, and East Asia. For the quality assessment and trend analyses, we combine the ozone products derived from IASI-A (2008\u20132018) and IASI-B (2019\u20132022). The comparison with homogenized ozone sondes for six northern midlatitude stations reveals a small negative bias of about 3\u2009%\u20136\u2009% in the IASI-O3 KOPRA products in the troposphere for both profiles and columns. A rather good correlation between 0.7 and 0.9 is observed, and an error of about 15\u2009%\u201317\u2009% (compared to sondes smoothed with averaging kernels, AKs) is estimated. The ozone variability is also well reproduced for all the partial columns with a slight underestimation of about 10\u2009% for the TrOC. Based on the comparison with the ozone sondes, we identified a temporal drift (of about \u22120.06\u2009\u00b1\u20090.02\u2009DU\u2009yr\u22121 on average) for three different ozone columns (TrOC, surface\u2013450\u2009hPa, surface\u2013300\u2009hPa). This drift can be more pronounced in summer. However, a significant variability of the estimated drifts depending on the sample of ozone sonde sites is remarked, that does not allow its use for correcting the IASI ozone product time series data over broad domains. While the upper tropospheric ozone trends are mainly positive or undefined, the lower tropospheric ozone trends are mainly systematically negative. The regions most affected by negative trends are the Mediterranean, Western North America, Eastern North America, and East Asia. Compensations between lower and upper tropospheric trends prevent the identification of any specific long-term behavior for TrOCs over the three domains. The negative tropospheric ozone column anomalies observed during the period 2020\u20132022 (the post-COVID-19 period) only slightly impact the trends already ongoing for the period 2008\u20132019.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Assessment of 16-year tropospheric ozone trends from the IASI Climate Data Record",
+    "team_paper_id": "tropess_team_fac56eb130255f01",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Validation & Intercomparison",
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Air Quality",
+      "Environmental Monitoring",
+      "Atmospheric Science",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "IASI (Metop-A)",
+        "agency": "EUMETSAT/CNES",
+        "type": "Thermal infrared Fourier transform spectrometer",
+        "product": "IASI-O3 KOPRA v3.0 ozone profiles/partial columns",
+        "data_level": "L2",
+        "usage_context": "Primary dataset validated against ozone sondes and used for 15-year midlatitude tropospheric ozone trend analysis"
+      },
+      {
+        "name": "IASI (Metop-B)",
+        "agency": "EUMETSAT/CNES",
+        "type": "Thermal infrared Fourier transform spectrometer",
+        "product": "IASI-O3 KOPRA v3.0 ozone profiles/partial columns",
+        "data_level": "L2",
+        "usage_context": "Combined with IASI-A for time series; instrument consistency assessment"
+      },
+      {
+        "name": "IASI (Metop-C)",
+        "agency": "EUMETSAT/CNES",
+        "type": "Thermal infrared Fourier transform spectrometer",
+        "product": "IASI-O3 KOPRA v3.0 ozone profiles/partial columns",
+        "data_level": "L2",
+        "usage_context": "Inter-instrument consistency evaluation for tropospheric ozone columns"
+      },
+      {
+        "name": "Ozone sondes (homogenized network)",
+        "agency": "WOUDC/NDACC",
+        "type": "In situ balloon-borne sounding",
+        "product": "Homogenized ozone profiles",
+        "data_level": "In situ",
+        "usage_context": "Reference data for bias, drift, and variability validation at six northern midlatitude stations"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.85,
+      "composite_confidence": 0.677,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Tangential"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Validation & Intercomparison"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "Ireland",
+      "Switzerland",
+      "Belgium"
+    ],
+    "institutions": [
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 Paris-Est Cr\u00e9teil",
+      "Universit\u00e9 Paris Cit\u00e9",
+      "Paris-Est Sup",
+      "Sorbonne Paris Cit\u00e9",
+      "Laboratoire Interuniversitaire des Syst\u00e8mes Atmosph\u00e9riques",
+      "Laboratoire Techniques, Territoires et Soci\u00e9t\u00e9s",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Sorbonne Universit\u00e9",
+      "Atmosphere Systems and Services"
+    ]
+  },
+  {
+    "title": "The NASA Atmospheric Tomography (ATom) Mission: Imaging the Chemistry of the Global Atmosphere",
+    "authors": [
+      "C. Thompson",
+      "S. Wofsy",
+      "M. Prather",
+      "P. Newman",
+      "T. Hanisco",
+      "T. Ryerson",
+      "D. Fahey",
+      "E. Apel",
+      "C. Brock",
+      "W. Brune",
+      "K. Froyd",
+      "J. Katich",
+      "J. Nicely",
+      "J. Peischl",
+      "E. Ray",
+      "P. Veres",
+      "Siyuan Wang",
+      "H. Allen",
+      "E. Asher",
+      "H. Bian",
+      "D. Blake",
+      "I. Bourgeois",
+      "J. Budney",
+      "T. Bui",
+      "A. Butler",
+      "P. Campuzano\u2010Jost",
+      "Cecilia S. Chang",
+      "M. Chin",
+      "R. Commane",
+      "G. Correa",
+      "J. Crounse",
+      "B. Daube",
+      "J. Dibb",
+      "J. Digangi",
+      "G. Diskin",
+      "M. Dollner",
+      "J. Elkins",
+      "A. Fiore",
+      "C. Flynn",
+      "Hao Guo",
+      "S. Hall",
+      "R. Hannun",
+      "A. Hills",
+      "E. Hintsa",
+      "A. Hodzic",
+      "R. Hornbrook",
+      "L. Huey",
+      "J. Jimenez",
+      "R. Keeling",
+      "Michelle J. Kim",
+      "A. Kupc",
+      "F. Lacey",
+      "L. Lait",
+      "J. Lamarque",
+      "Junhua Liu",
+      "K. McKain",
+      "S. Meinardi",
+      "David O. Miller",
+      "S. Montzka",
+      "F. Moore",
+      "E. Morgan",
+      "D. Murphy",
+      "L. Murray",
+      "B. Nault",
+      "J. Neuman",
+      "L. Nguyen",
+      "Yenny Gonzalez",
+      "A. Rollins",
+      "K. Rosenlof",
+      "M. Sargent",
+      "G. Schill",
+      "J. Schwarz",
+      "J. S. Clair",
+      "S. Steenrod",
+      "B. Stephens",
+      "S. Strahan",
+      "S. Strode",
+      "C. Sweeney",
+      "A. Thames",
+      "K. Ullmann",
+      "N. Wagner",
+      "R. Weber",
+      "B. Weinzierl",
+      "P. Wennberg",
+      "C. Williamson",
+      "G. Wolfe",
+      "Linghan Zeng"
+    ],
+    "year": 2021,
+    "doi": "10.1175/BAMS-D-20-0315.1",
+    "venue": "Bulletin of The American Meteorological Society - (BAMS)",
+    "citation_count": 64,
+    "paper_id": "78114f6ece6c4f0fb130b2e96d686b778bc40ab9",
+    "url": "https://www.semanticscholar.org/paper/78114f6ece6c4f0fb130b2e96d686b778bc40ab9",
+    "abstract": "\nThis article provides an overview of the NASA Atmospheric Tomography (ATom) mission and a summary of selected scientific findings to date. ATom was an airborne measurements and modeling campaign aimed at characterizing the composition and chemistry of the troposphere over the most remote regions of the Pacific, Southern, Atlantic, and Arctic Oceans, and examining the impact of anthropogenic and natural emissions on a global scale. These remote regions dominate global chemical reactivity and are exceptionally important for global air quality and climate. ATom data provide the in situ measurements needed to understand the range of chemical species and their reactions, and to test satellite remote sensing observations and global models over large regions of the remote atmosphere. Lack of data in these regions, particularly over the oceans, has limited our understanding of how atmospheric composition is changing in response to shifting anthropogenic emissions and physical climate change. ATom was designed as a global-scale tomographic sampling mission with extensive geographic and seasonal coverage, tropospheric vertical profiling, and detailed speciation of reactive compounds and pollution tracers. ATom flew the NASA DC-8 research aircraft over four seasons to collect a comprehensive suite of measurements of gases, aerosols, and radical species from the remote troposphere and lower stratosphere on four global circuits from 2016 to 2018. Flights maintained near-continuous vertical profiling of 0.15\u201313-km altitudes on long meridional transects of the Pacific and Atlantic Ocean basins. Analysis and modeling of ATom data have led to the significant early findings highlighted here.",
+    "indexed": {
+      "date-parts": [
+        [
+          2021,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Evaluation of single-footprint AIRS CH4 profile retrieval uncertainties using aircraft profile measurements",
+    "team_paper_id": null,
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Atmospheric Chemistry & Reanalysis",
+    "research_domains": [
+      "Atmospheric Chemistry",
+      "Atmospheric Science",
+      "Air Quality",
+      "Atmospheric Modeling",
+      "Chemical Transport",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "NASA DC-8 airborne laboratory (ATom)",
+        "agency": "NASA",
+        "type": "Airborne in situ platform",
+        "product": "In situ gas, aerosol, and radical measurements",
+        "data_level": "Level 2",
+        "usage_context": "Primary observational dataset from four global circuits (2016-2018) used to characterize remote tropospheric composition and evaluate satellite retrievals and global chemistry models"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.697,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "General Science"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "Austria"
+    ],
+    "institutions": [
+      "University of Colorado Boulder",
+      "NOAA Chemical Sciences Laboratory",
+      "Harvard University Press",
+      "University of California, Irvine",
+      "Goddard Space Flight Center",
+      "NSF National Center for Atmospheric Research",
+      "Pennsylvania State University",
+      "University of Maryland, College Park",
+      "California Institute of Technology",
+      "University of Maryland, Baltimore County"
+    ]
   }
 ]
