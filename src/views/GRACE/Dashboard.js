@@ -179,7 +179,7 @@ const GRACEDashboard = () => {
           </div>
         </div>
 
-        <MetricsOverview data={graceData} />
+        <MetricsOverview data={graceData} modelName="GRACE" />
         <CitationTrendsChart data={graceData} />
 
         <div className="grid grid-cols-2 gap-6 mb-6">

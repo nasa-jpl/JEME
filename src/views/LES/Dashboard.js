@@ -216,7 +216,7 @@ const LESDashboard = () => {
 
 
 
-        <MetricsOverview data={lesData} />
+        <MetricsOverview data={lesData} modelName="LES" />
 
         <EarthSystemSection modelName="LES" citationsData={lesData} />
 

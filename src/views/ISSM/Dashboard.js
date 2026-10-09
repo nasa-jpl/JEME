@@ -216,7 +216,7 @@ const ISSMDashboard = () => {
           </div>
         </div>
         
-        <MetricsOverview data={issmData} />
+        <MetricsOverview data={issmData} modelName="ISSM" />
 
         <EarthSystemSection modelName="ISSM" citationsData={issmData} />
 

@@ -217,7 +217,7 @@ const CARDAMOMDashboard = () => {
         
 
         
-        <MetricsOverview data={cardamomData} />
+        <MetricsOverview data={cardamomData} modelName="CARDAMOM" />
 
         <EarthSystemSection modelName="CARDAMOM" citationsData={cardamomData} />
 

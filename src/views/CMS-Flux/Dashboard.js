@@ -216,7 +216,7 @@ const CMSFluxDashboard = () => {
           </div>
         </div>
         
-        <MetricsOverview data={cmsFluxData} />
+        <MetricsOverview data={cmsFluxData} modelName="CMS-Flux" />
 
         <EarthSystemSection modelName="CMS-Flux" citationsData={cmsFluxData} />
 

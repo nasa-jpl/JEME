@@ -216,7 +216,7 @@ const ECCODashboard = () => {
           </div>
         </div>
         
-        <MetricsOverview data={eccoData} />
+        <MetricsOverview data={eccoData} modelName="ECCO" />
 
         <EarthSystemSection modelName="ECCO" citationsData={eccoData} />
 

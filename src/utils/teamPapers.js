@@ -104,3 +104,27 @@ export const countTeamPaperCitations = (citations, teamPapers) => {
     return count + (isTeamPaper ? 1 : 0);
   }, 0);
 };
+
+// One shared request for the h-index file, reused by every caller on the page.
+let hIndexRequest = null;
+
+/**
+ * Load the h-index of each model's team papers: h team papers each cited at
+ * least h times. Built by scripts/compute_team_paper_hindex.py from Crossref
+ * citation counts of the team papers themselves, so it never exceeds the
+ * team-paper count.
+ * @returns {Promise<Object>} map of model name to
+ *   { h_index, team_papers, resolved, total_citations } (empty on any failure)
+ */
+export const loadTeamPaperHIndex = () => {
+  if (!hIndexRequest) {
+    hIndexRequest = fetch(`${process.env.PUBLIC_URL}/data/team_paper_hindex.json`)
+      .then((response) => (response.ok ? response.json() : {}))
+      .then((json) => json.models || {})
+      .catch((error) => {
+        console.error('Failed to load team paper h-index:', error);
+        return {};
+      });
+  }
+  return hIndexRequest;
+};

@@ -216,7 +216,7 @@ const MOMOCHEMDashboard = () => {
           </div>
         </div>
         
-        <MetricsOverview data={momoChemData} />
+        <MetricsOverview data={momoChemData} modelName="MOMO-CHEM" />
 
         <EarthSystemSection modelName="MOMO-CHEM" citationsData={momoChemData} />
 

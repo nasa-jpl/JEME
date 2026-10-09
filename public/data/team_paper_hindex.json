@@ -1,0 +1,72 @@
+{
+  "models": {
+    "CARDAMOM": {
+      "h_index": 12,
+      "team_papers": 20,
+      "resolved": 20,
+      "total_citations": 1028
+    },
+    "CMS-Flux": {
+      "h_index": 20,
+      "team_papers": 30,
+      "resolved": 30,
+      "total_citations": 2123
+    },
+    "ECCO": {
+      "h_index": 109,
+      "team_papers": 2035,
+      "resolved": 1247,
+      "total_citations": 57583
+    },
+    "EDMF": {
+      "h_index": 17,
+      "team_papers": 25,
+      "resolved": 24,
+      "total_citations": 1681
+    },
+    "GRACE": {
+      "h_index": 78,
+      "team_papers": 353,
+      "resolved": 278,
+      "total_citations": 34479
+    },
+    "ISSM": {
+      "h_index": 58,
+      "team_papers": 192,
+      "resolved": 192,
+      "total_citations": 13063
+    },
+    "LES": {
+      "h_index": 10,
+      "team_papers": 21,
+      "resolved": 21,
+      "total_citations": 360
+    },
+    "MOMO-CHEM": {
+      "h_index": 30,
+      "team_papers": 70,
+      "resolved": 69,
+      "total_citations": 3022
+    },
+    "RAPID": {
+      "h_index": 20,
+      "team_papers": 32,
+      "resolved": 32,
+      "total_citations": 1589
+    },
+    "SWOT": {
+      "h_index": 38,
+      "team_papers": 98,
+      "resolved": 98,
+      "total_citations": 5271
+    },
+    "TROPESS": {
+      "h_index": 17,
+      "team_papers": 32,
+      "resolved": 32,
+      "total_citations": 1261
+    }
+  },
+  "source": "Crossref is-referenced-by-count",
+  "generated": "2026-10-09"
+}

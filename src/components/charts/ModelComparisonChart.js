@@ -3,11 +3,13 @@
 
 import React, { useEffect, useMemo, useState } from 'react';
 import { BarChart, Bar, Cell, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
-import { loadTeamPapers, countTeamPapers } from '../../utils/teamPapers';
+import { loadTeamPapers, countTeamPapers, loadTeamPaperHIndex } from '../../utils/teamPapers';
 
 const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
   // Team-paper counts per model, loaded separately from the citation corpus
   const [teamPaperCounts, setTeamPaperCounts] = useState({});
+  // h-index of each model's team papers (not of the papers citing them)
+  const [teamPaperHIndex, setTeamPaperHIndex] = useState({});
   const modelNamesKey = Object.keys(allModelsData).join('|');
 
   useEffect(() => {
@@ -24,6 +26,16 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
       cancelled = true;
     };
   }, [modelNamesKey]);
+
+  useEffect(() => {
+    let cancelled = false;
+    loadTeamPaperHIndex().then((models) => {
+      if (!cancelled) setTeamPaperHIndex(models);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, []);
 
   // Calculate comparison data from all models
   const comparisonData = useMemo(() => {
@@ -45,25 +57,9 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
       const papers = Array.isArray(data) ? data : [];
       const totalPapers = papers.length;
 
-      // h-index over the citing papers' own citation counts.
-      // Supports both citation_count (OpenCitations/Semantic Scholar) and
-      // is-referenced-by-count (CrossRef).
-      const citationCounts = papers
-        .map(p => p.citation_count || p['is-referenced-by-count'] || 0)
-        .sort((a, b) => b - a);
-      let hIndex = 0;
-      for (let i = 0; i < citationCounts.length; i++) {
-        if (citationCounts[i] >= i + 1) {
-          hIndex = i + 1;
-        } else {
-          break;
-        }
-      }
-
       return {
         name: modelName,
         papers: totalPapers,
-        hIndex,
         color: modelColors[modelName] || '#6b7280'
       };
     }).sort((a, b) => b.papers - a.papers);
@@ -149,7 +145,7 @@ const ModelComparisonChart = ({ allModelsData = {}, isJEOE = false }) => {
               </div>
               <div className="flex justify-between">
                 <span className="text-gray-600">h-index:</span>
-                <span className="font-semibold">{model.hIndex}</span>
+                <span className="font-semibold">{teamPaperHIndex[model.name]?.h_index ?? '—'}</span>
               </div>
             </div>
           </div>

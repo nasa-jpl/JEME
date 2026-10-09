@@ -124,7 +124,7 @@ const TROPESSDashboard = () => {
           </div>
         </div>
 
-        <MetricsOverview data={tropessData} />
+        <MetricsOverview data={tropessData} modelName="TROPESS" />
         <CitationTrendsChart data={tropessData} />
 
         <div className="grid grid-cols-2 gap-6 mb-6">

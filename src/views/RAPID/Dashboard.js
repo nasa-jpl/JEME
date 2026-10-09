@@ -216,7 +216,7 @@ const RAPIDDashboard = () => {
           </div>
         </div>
         
-        <MetricsOverview data={rapidData} />
+        <MetricsOverview data={rapidData} modelName="RAPID" />
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-6">
           <EngagementLevelsCard data={rapidData} />

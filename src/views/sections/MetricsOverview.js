@@ -1,13 +1,27 @@
 // src/views/sections/MetricsOverview.js
 // Overview of key metrics section with real data from JSON
 
-import React, { useMemo } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { Award, TrendingUp, GitBranch, Globe } from 'lucide-react';
 import MetricCard from '../../components/MetricCard';
+import { loadTeamPaperHIndex } from '../../utils/teamPapers';
 
-const MetricsOverview = ({ data = [] }) => {
+const MetricsOverview = ({ data = [], modelName }) => {
   // Use the data prop
   const citationsData = data;
+
+  // h-index of the model's team papers, precomputed from their own citation
+  // counts. It is not derived from `data`, which holds the citing papers.
+  const [teamHIndex, setTeamHIndex] = useState(null);
+  useEffect(() => {
+    let cancelled = false;
+    loadTeamPaperHIndex().then((models) => {
+      if (!cancelled) setTeamHIndex(models[modelName] || null);
+    });
+    return () => {
+      cancelled = true;
+    };
+  }, [modelName]);
   
   // Calculate metrics from the JSON data (peer-reviewed papers only)
   const metrics = useMemo(() => {
@@ -18,7 +32,6 @@ const MetricsOverview = ({ data = [] }) => {
         peerReviewedCount: 0,
         highImpactCount: 0,
         recentCount: 0,
-        hIndex: 0,
         avgCitations: 0,
         implementationRate: 0,
         isMissionFormat: false,
@@ -29,13 +42,7 @@ const MetricsOverview = ({ data = [] }) => {
         countriesCount: 0,
         regionsCount: 0,
         globalStudies: 0,
-        regionalStudies: 0,
-        trends: {
-          citations: { value: 0, isUp: false },
-          hIndex: { value: 0, isUp: false },
-          implementation: { value: 0, isUp: false },
-          geographic: { value: 0, isUp: false }
-        }
+        regionalStudies: 0
       };
     }
     // All data is pre-filtered to peer-reviewed citations
@@ -90,22 +97,7 @@ const MetricsOverview = ({ data = [] }) => {
       return year && year >= 2020;
     }).length;
 
-    // 2. H-INDEX CALCULATION (peer-reviewed only)
-    // Sort papers by citation count in descending order
-    const sortedCitations = peerReviewedData
-      .map(paper => extractCitations(paper))
-      .sort((a, b) => b - a);
-    
-    // Calculate h-index: largest number h such that h papers have at least h citations each
-    let hIndex = 0;
-    for (let i = 0; i < sortedCitations.length; i++) {
-      if (sortedCitations[i] >= i + 1) {
-        hIndex = i + 1;
-      } else {
-        break;
-      }
-    }
-    
+    // 2. CITATION TOTALS (the h-index card is loaded separately, see teamHIndex)
     // Average citations per paper
     const avgCitations = peerReviewedData.length > 0 ? totalCitations / peerReviewedData.length : 0;
 
@@ -247,35 +239,11 @@ const MetricsOverview = ({ data = [] }) => {
       }
     });
 
-    // Calculate trends (mock data for demonstration - in real app you'd compare with previous periods)
-    const calculateTrend = (current, previous) => {
-      if (!previous || previous <= 0) return { value: '0.0', isUp: true };
-      const change = ((current - previous) / previous) * 100;
-      return {
-        value: Math.abs(change).toFixed(1),
-        isUp: change >= 0
-      };
-    };
-
-    // Mock previous period data for trend calculation
-    const previousMetrics = {
-      totalCitations: Math.round(peerReviewedCount * 0.89),
-      hIndex: hIndex - 2,
-      implementationRate: implementationRate - 4.7,
-      geographicReach: Math.max(1, Math.round(uniqueCountries.size * 0.85))
-    };
-
-    const citationsTrend = calculateTrend(peerReviewedCount, previousMetrics.totalCitations);
-    const hIndexTrend = calculateTrend(hIndex, previousMetrics.hIndex);
-    const implementationTrend = calculateTrend(implementationRate, previousMetrics.implementationRate);
-    const geographicTrend = calculateTrend(uniqueCountries.size, previousMetrics.geographicReach);
-
     return {
       totalCitations,
       peerReviewedCount,
       highImpactCount,
       recentCount,
-      hIndex,
       avgCitations,
       implementationRate,
       isMissionFormat,
@@ -286,13 +254,7 @@ const MetricsOverview = ({ data = [] }) => {
       countriesCount: uniqueCountries.size,
       regionsCount: uniqueRegions.size,
       globalStudies: regionCounts['Global'] || 0,
-      regionalStudies: Object.values(regionCounts).reduce((sum, val) => sum + val, 0),
-      trends: {
-        citations: citationsTrend,
-        hIndex: hIndexTrend,
-        implementation: implementationTrend,
-        geographic: geographicTrend
-      }
+      regionalStudies: Object.values(regionCounts).reduce((sum, val) => sum + val, 0)
     };
   }, [citationsData]);
 
@@ -304,8 +266,6 @@ const MetricsOverview = ({ data = [] }) => {
         value={metrics.peerReviewedCount.toLocaleString()}
         icon={<Award size={16} />}
         iconBg="bg-blue-400"
-        trend={`+${metrics.trends.citations.value}% from last quarter`}
-        trendUp={metrics.trends.citations.isUp}
         breakdown={[
           { label: metrics.isMissionFormat ? "Citation only" : "L1: Citation only", value: metrics.l1Count.toString() },
           { label: metrics.isMissionFormat ? "Data Usage + Review Papers" : "L2 + L3 (direct use)", value: metrics.isMissionFormat ? (metrics.l2Count + metrics.reviewPaperCount).toString() : (metrics.l2Count + metrics.l3Count).toString() },
@@ -315,22 +275,20 @@ const MetricsOverview = ({ data = [] }) => {
       />
       <MetricCard
         title="H-Index"
-        value={metrics.hIndex.toString()}
+        subtitle="Team papers: h papers cited at least h times"
+        value={teamHIndex ? teamHIndex.h_index.toString() : '—'}
         icon={<TrendingUp size={16} />}
         iconBg="bg-green-600"
-        trend={`+${metrics.trends.hIndex.value} from last year`}
-        trendUp={metrics.trends.hIndex.isUp}
-        breakdown={[
-          { label: "Avg citations", value: metrics.avgCitations.toFixed(1) }
-        ]}
+        breakdown={teamHIndex ? [
+          { label: "Team papers", value: teamHIndex.team_papers.toLocaleString() },
+          { label: "Citations of team papers", value: teamHIndex.total_citations.toLocaleString() }
+        ] : []}
       />
       <MetricCard
         title={metrics.isMissionFormat ? "Deep Engagement Rate" : "Implementation Rate"}
         value={`${metrics.implementationRate.toFixed(1)}%`}
         icon={<GitBranch size={16} />}
         iconBg="bg-purple-600"
-        trend={`+${metrics.trends.implementation.value}% from last quarter`}
-        trendUp={metrics.trends.implementation.isUp}
         breakdown={metrics.isMissionFormat ? [
           { label: "Formula", value: "(Data Usage + Review) / Total × 100" },
           { label: "Citation only", value: metrics.l1Count.toString() },
@@ -348,8 +306,6 @@ const MetricsOverview = ({ data = [] }) => {
         value={metrics.countriesCount.toString()}
         icon={<Globe size={16} />}
         iconBg="bg-teal-600"
-        trend={`+${metrics.trends.geographic.value} from last quarter`}
-        trendUp={metrics.trends.geographic.isUp}
         breakdown={[
           { label: "Countries", value: metrics.countriesCount.toString() },
           { label: "Regions", value: metrics.regionsCount.toString() }

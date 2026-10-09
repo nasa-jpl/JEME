@@ -216,7 +216,7 @@ const EDMFDashboard = () => {
 
 
 
-        <MetricsOverview data={edmfData} />
+        <MetricsOverview data={edmfData} modelName="EDMF" />
 
         <EarthSystemSection modelName="EDMF" citationsData={edmfData} />
 

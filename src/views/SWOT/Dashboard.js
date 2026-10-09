@@ -179,7 +179,7 @@ const SWOTDashboard = () => {
           </div>
         </div>
 
-        <MetricsOverview data={swotData} />
+        <MetricsOverview data={swotData} modelName="SWOT" />
         <CitationTrendsChart data={swotData} />
 
         <div className="grid grid-cols-2 gap-6 mb-6">
