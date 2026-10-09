@@ -14,9 +14,9 @@ Every count on the dashboard is a **citation**, not a publication by the JPL tea
 - **L2: Data Usage** uses model outputs or datasets.
 - **L3: Model Adaptation** uses, modifies, extends, or couples the model or its methodology.
 
-So a model showing 1,203 means 1,203 papers cite that model's team papers, not 1,203 papers written by the team.
+So a model showing 975 means 975 papers cite that model's team papers, not 975 papers written by the team.
 
-The count is not purely external. Because the corpus is "everything that cites a team paper," it also picks up the team's **own later papers citing their earlier ones**: across the eight models this runs 2-5% of the total. For example, RAPID's team paper list holds 42 papers, 37 of which also appear among its 1,203 citations; ECCO's holds 2,038 papers, 697 of which appear among its 16,320 citations. Each model dashboard reports its exact figure. Team papers that cite no other team paper never enter the corpus at all. The team paper list itself is shown separately, above the charts.
+The count is not purely external. Because the corpus is "everything that cites a team paper," it also picks up the team's **own later papers citing their earlier ones**: across the eight models this runs 2-5% of the total. For example, RAPID's team paper list holds 32 papers, 31 of which also appear among its 975 citations; ECCO's holds 2,038 papers, 697 of which appear among its 16,320 citations. Each model dashboard reports its exact figure. Team papers that cite no other team paper never enter the corpus at all. The team paper list itself is shown separately, above the charts.
 
 ## System Architecture Overview
 
