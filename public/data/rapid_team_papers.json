@@ -280,92 +280,12 @@
       "category": "D. Uses datasets produced by RAPID core methodology"
     },
     {
-      "authors": "Gopi Goteti; J. Famiglietti; K. Asante",
-      "title": "A Catchment‐Based Hydrologic and Routing Modeling System with explicit river channels",
-      "journal": "",
-      "year": 2008,
-      "doi": "10.1029/2007jd009691",
-      "link": "https://doi.org/10.1029/2007jd009691"
-    },
-    {
-      "authors": "R. Frasson; G. Schumann; A. Kettner; G. Brakenridge; W. Krajewski",
-      "title": "Will the Surface Water and Ocean Topography (SWOT) Satellite Mission Observe Floods?",
-      "journal": "Geophysical Research Letters",
-      "year": 2019,
-      "doi": "10.1029/2019gl084686",
-      "link": "https://doi.org/10.1029/2019gl084686"
-    },
-    {
-      "authors": "E. Altenau; T. Pavelsky; M. Durand; Xiao Yang; R. Frasson; Liam Bendezu",
-      "title": "The Surface Water and Ocean Topography (SWOT) Mission River Database (SWORD): A Global River Network for Satellite Data Products",
-      "journal": "Water Resources Research",
-      "year": 2021,
-      "doi": "10.1029/2021wr030054",
-      "link": "https://doi.org/10.1029/2021wr030054"
-    },
-    {
-      "authors": "A. Domeneghetti; G. Schumann; R. Frasson; R. Wei; T. Pavelsky; A. Castellarin; A. Brath; M. Durand",
-      "title": "Characterizing water surface elevation under different flow conditions for the upcoming SWOT mission",
-      "journal": "Journal of Hydrology",
-      "year": 2018,
-      "doi": "10.1016/j.jhydrol.2018.04.046",
-      "link": "https://doi.org/10.1016/j.jhydrol.2018.04.046"
-    },
-    {
-      "authors": "A. Cerbelaud; C. David; T. Pavelsky; S. Biancamaria; P. Garambois; C. Kittel; F. Papa; P. Bates; M. Tourian; M. Durand; R. Frasson; H. Oubanas; M. Simard; G. Schumann; G. Allen; A. Tarpanelli; S. Wongchuig; J. Wade; M. Tom; Philippe Malaterre; C. Gleason; J. Crétaux; K. Nielsen; O. Elmi; C. Schwatke; D. Scherer; L. Gal; A. Paris; A. Dasgupta; S. Munier; D. Feng; P. Bauer‐Gottwein; F. Hossain; D. Yamazaki; B. Kitambo; S. Mischel; M. Bonnema; K. Verma; K. Andreadis; N. Picot; J. Benveniste",
+      "authors": "Cerbelaud et al. (2025)",
       "title": "Satellite Requirements to Capture Water Propagation in Earth's Rivers",
       "journal": "Reviews of Geophysics",
       "year": 2025,
-      "doi": "10.1029/2024rg000871",
-      "link": "https://doi.org/10.1029/2024rg000871"
-    },
-    {
-      "authors": "K. Solander; J. Reager; J. Famiglietti",
-      "title": "How well will the Surface Water and Ocean Topography (SWOT) mission observe global reservoirs?",
-      "journal": "",
-      "year": 2014,
-      "doi": "10.1002/2015wr017952",
-      "link": "https://doi.org/10.1002/2015wr017952"
-    },
-    {
-      "authors": "E. Rodríguez; M. Durand; R. Frasson",
-      "title": "Observing Rivers With Varying Spatial Scales",
-      "journal": "Water Resources Research",
-      "year": 2019,
-      "doi": "10.1029/2019wr026476",
-      "link": "https://doi.org/10.1029/2019wr026476"
-    },
-    {
-      "authors": "Yuan Yang; P. Lin; C. Fisher; M. Turmon; J. Hobbs; C. Emery; J. Reager; C. David; Hui Lu; Kun Yang; Yang Hong; E. Wood; M. Pan",
-      "title": "Enhancing SWOT discharge assimilation through spatiotemporal correlations",
-      "journal": "",
-      "year": 2019,
-      "doi": "10.1016/j.rse.2019.111450",
-      "link": "https://doi.org/10.1016/j.rse.2019.111450"
-    },
-    {
-      "authors": "M. Durand; C. Gleason; R. Frasson; T. Pavelsky",
-      "title": "The Potential of SWOT River Discharge Estimates to Constrain Hydrological Processes Globally in Ungaged Basins",
-      "journal": "IEEE International Geoscience and Remote Sensing Symposium",
-      "year": 2020,
-      "doi": "10.1109/igarss39084.2020.9323156",
-      "link": "https://doi.org/10.1109/igarss39084.2020.9323156"
-    },
-    {
-      "authors": "Tasneem Haq Meem; B. Rhoads; Jida Wang; R. Frasson",
-      "title": "Detecting Water‐Surface Superelevation in Meandering Rivers Using Surface Water and Ocean Topography (SWOT) Satellite Data",
-      "journal": "Geophysical Research Letters",
-      "year": 2026,
-      "doi": "10.1029/2025gl119167",
-      "link": "https://doi.org/10.1029/2025gl119167"
-    },
-    {
-      "authors": "Jefferson S. Wong; Fuad Yassin; J. Famiglietti",
-      "title": "A Methodological Framework to Combine Multiple Precipitation Datasets for Improving Streamflow Simulations: A test study in the Saskatchewan River basin, Canada",
-      "journal": "",
-      "year": 2020,
-      "doi": "10.5194/egusphere-egu2020-12547",
-      "link": "https://doi.org/10.5194/egusphere-egu2020-12547"
+      "doi": "10.1029/2024RG000871",
+      "link": "https://doi.org/10.1029/2024RG000871"
     }
   ]
 }
