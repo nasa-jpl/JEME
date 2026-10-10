@@ -245,7 +245,7 @@ const CARDAMOMDashboard = () => {
         
         <div className="grid grid-cols-2 gap-6 mb-6">
           <JournalDistributionCard data={cardamomData} />
-          <GitHubMetricsCard owner="GCEL" repo="CARDAMOM" />
+          <GitHubMetricsCard owner="CARDAMOM-framework" repo="CARDAMOM" />
         </div>
         
         <Footer />
