@@ -102,7 +102,8 @@ const ISSMResearchDomainsPage = () => {
   const engagementStats = React.useMemo(() => {
     const stats = {};
     citationsData.forEach(paper => {
-      const level = paper.engagement_level || "Unknown";
+      // Count by displayed label; the raw engagement_level strings are inconsistent
+      const level = ENGAGEMENT_LABELS[getEngagementTier(paper.engagement_level)];
       if (!stats[level]) stats[level] = 0;
       stats[level]++;
     });

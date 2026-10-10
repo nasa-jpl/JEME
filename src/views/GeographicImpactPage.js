@@ -10,6 +10,7 @@ import { loadModelData } from '../utils/dataLoader';
 // Import Google Maps component
 import GoogleMapComponent from '../components/GoogleMapComponent';
 import { getRegionFromCountry } from '../utils/countryGeo';
+import { getEngagementDisplayLabel } from '../utils/engagementLabels';
 
 const GeographicImpactPage = () => {
   const [regionData, setRegionData] = useState([]);
@@ -153,7 +154,7 @@ const GeographicImpactPage = () => {
           regionStats[region].domains.add(citation.research_domain);
         }
         if (citation.engagement_level) {
-          regionStats[region].engagementLevels.add(citation.engagement_level);
+          regionStats[region].engagementLevels.add(getEngagementDisplayLabel(citation.engagement_level));
         }
         
         // Handle year data

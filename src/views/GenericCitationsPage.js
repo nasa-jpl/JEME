@@ -463,7 +463,8 @@ const GenericCitationsPage = () => {
     ];
     const rows = sortedCitations.map(c => [
       c.title, c.authors, c.year, c.source, c.publisher, c.doi, c.cites,
-      c.engagement_level, c.engagement_level_rationale,
+      // Same label the table shows; the raw engagement_level strings are inconsistent
+      ENGAGEMENT_LABELS[getEngagementTier(c.engagement_level, missionFormat)], c.engagement_level_rationale,
       c.paper_type, c.paper_type_rationale,
       c.research_domain,
       c.country,

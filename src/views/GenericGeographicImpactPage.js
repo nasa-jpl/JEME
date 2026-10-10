@@ -6,6 +6,7 @@ import { getModelConfig } from '../config/modelConfig';
 import GoogleMapComponent from '../components/GoogleMapComponent';
 import MissionsSummary from '../components/MissionsSummary';
 import { getRegionFromCountry } from '../utils/countryGeo';
+import { getEngagementDisplayLabel, isMissionFormat } from '../utils/engagementLabels';
 
 const GenericGeographicImpactPage = () => {
   const { modelName } = useParams();
@@ -233,6 +234,7 @@ const GenericGeographicImpactPage = () => {
       
       // Group by primary region; also collect all countries from allCountries for display
       const regionStats = {};
+      const missionFormat = isMissionFormat(data);
       entriesWithGeo.forEach(citation => {
         const primaryRegion = citation.region;
         if (!primaryRegion) return;
@@ -276,7 +278,9 @@ const GenericGeographicImpactPage = () => {
           regionStats[primaryRegion].domains.add(citation.research_domain);
         }
         if (citation.engagement_level) {
-          regionStats[primaryRegion].engagementLevels.add(citation.engagement_level);
+          regionStats[primaryRegion].engagementLevels.add(
+            getEngagementDisplayLabel(citation.engagement_level, missionFormat)
+          );
         }
 
         let year = null;
@@ -405,7 +409,7 @@ const GenericGeographicImpactPage = () => {
         papers: 5,
         citations: 42,
         domains: modelConfig.domain || 'Unknown',
-        engagementLevels: 'Level 1: Data Usage',
+        engagementLevels: 'L1: Citation only',
         firstYear: 2015,
         lastYear: 2023,
         avgCitations: 8,

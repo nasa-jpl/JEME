@@ -4,6 +4,7 @@ import { ArrowLeft, Download, Search, Filter, SortAsc, SortDesc } from 'lucide-r
 import { Link } from 'react-router-dom';
 
 import { loadModelData } from '../utils/dataLoader';
+import { getEngagementDisplayLabel } from '../utils/engagementLabels';
 
 // Multi-select component
 const MultiSelect = ({ options, selectedValues, onChange, placeholder }) => {
@@ -376,7 +377,7 @@ const CitationsPage = () => {
     ];
     const rows = sortedCitations.map(c => [
       c.title, c.authors, c.year, c.source, c.publisher, c.doi, c.cites, 
-      c.engagement_level, c.research_domain, c.country,
+      getEngagementDisplayLabel(c.engagement_level), c.research_domain, c.country,
       c.volume, c.issue, c.pages, c.referenceCount
     ]);
     
