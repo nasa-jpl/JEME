@@ -18,7 +18,7 @@ export const MODELS = {
     dataPath: '../data/CARDAMOM_analyzed.json',
     color: '#10B981', // Green
     domain: 'Ecology/Carbon Cycle',
-    github: 'https://github.com/GCEL/CARDAMOM',
+    github: 'https://github.com/CARDAMOM-framework/CARDAMOM',
     website: 'https://cardamom-framework.github.io/CARDAMOM',
     fullDescription: 'CARDAMOM is a Bayesian framework that retrieves ensembles of parameters for models of the terrestrial carbon cycle that are consistent with observational constraints and their associated uncertainties.'
   },

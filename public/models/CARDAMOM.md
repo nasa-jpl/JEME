@@ -48,7 +48,7 @@ CARDAMOM was developed to address the challenge of constraining terrestrial carb
 
 ## Resources
 
-- **GitHub Repository**: https://github.com/GCEL/CARDAMOM
+- **GitHub Repository**: https://github.com/CARDAMOM-framework/CARDAMOM
 - **Official Website**: https://cardamom-framework.github.io/CARDAMOM
 - **Documentation**: https://cardamom-framework.github.io/CARDAMOM/docs
 - **Publications**: https://cardamom-framework.github.io/CARDAMOM/publications
