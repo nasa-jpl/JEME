@@ -19,6 +19,7 @@ const GenericGeographicImpactPage = () => {
   const [citationsData, setCitationsData] = useState([]);
   const [geoEntries, setGeoEntries] = useState([]);
   const [expandedRegion, setExpandedRegion] = useState(null);
+  const usesMissionLabels = isMissionFormat(citationsData);
   
   // Google Maps API key
   const GOOGLE_MAPS_API_KEY = process.env.REACT_APP_GOOGLE_MAPS_API_KEY;
@@ -674,7 +675,8 @@ const GenericGeographicImpactPage = () => {
                                         const institutions = paper.institutions;
                                         const firstInstitution = Array.isArray(institutions) ? institutions[0] : (typeof institutions === 'string' ? institutions : null);
                                         const citCount = paper['is-referenced-by-count'] || paper.citation_count || 0;
-                                        const engagementLevel = paper.engagement_level;
+                                        const engagementLevel = paper.engagement_level
+                                          && getEngagementDisplayLabel(paper.engagement_level, usesMissionLabels);
                                         return (
                                           <div key={pi} className="bg-white rounded-lg p-3 border border-blue-100 text-xs">
                                             <div className="flex items-start justify-between gap-2">

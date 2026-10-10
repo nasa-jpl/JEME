@@ -4,6 +4,7 @@ import { ArrowLeft, Download, Filter, BarChart3 } from 'lucide-react';
 import { Link, useParams } from 'react-router-dom';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, PieChart, Pie, Cell, LineChart, Line } from 'recharts';
 import { getModelConfig } from '../config/modelConfig';
+import { getEngagementDisplayLabel, isMissionFormat } from '../utils/engagementLabels';
 
 const GenericResearchDomainsPage = () => {
   const { modelName } = useParams();
@@ -176,8 +177,10 @@ const GenericResearchDomainsPage = () => {
   // Calculate engagement level stats
   const engagementStats = React.useMemo(() => {
     const stats = {};
+    const missionFormat = isMissionFormat(citationsData);
     citationsData.forEach(paper => {
-      const level = paper.engagement_level || "Unknown";
+      // Count by displayed label; the raw engagement_level strings are inconsistent
+      const level = getEngagementDisplayLabel(paper.engagement_level, missionFormat);
       if (!stats[level]) stats[level] = 0;
       stats[level]++;
     });
@@ -206,7 +209,7 @@ const GenericResearchDomainsPage = () => {
   const engagementData = React.useMemo(() => {
     return Object.entries(engagementStats)
       .map(([level, count]) => ({
-        name: level.replace('Level ', 'L'),
+        name: level,
         value: count,
         fullName: level
       }))
