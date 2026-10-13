@@ -1,10 +1,10 @@
 {
   "models": {
     "CARDAMOM": {
-      "h_index": 12,
-      "team_papers": 20,
-      "resolved": 20,
-      "total_citations": 1028
+      "h_index": 19,
+      "team_papers": 34,
+      "resolved": 34,
+      "total_citations": 1517
     },
     "CMS-Flux": {
       "h_index": 20,
@@ -31,10 +31,10 @@
       "total_citations": 34479
     },
     "ISSM": {
-      "h_index": 58,
-      "team_papers": 192,
-      "resolved": 192,
-      "total_citations": 13063
+      "h_index": 59,
+      "team_papers": 207,
+      "resolved": 207,
+      "total_citations": 13296
     },
     "LES": {
       "h_index": 10,
@@ -68,5 +68,5 @@
     }
   },
   "source": "Crossref is-referenced-by-count",
-  "generated": "2026-10-09"
+  "generated": "2026-10-12"
 }
