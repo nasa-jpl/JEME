@@ -83,6 +83,13 @@ DOMAINS = {
         "Aerosol Processes & Effects", "Wildfire & Biomass Burning",
         "Atmospheric Chemistry",
     ],
+    "ISSM": [
+        "Ice Sheet Dynamics & Flow", "Sea Level Contribution",
+        "Glacier Retreat & Mass Balance", "Subglacial & Basal Processes",
+        "Ice Sheet Modeling & Methods", "Remote Sensing of Ice",
+        "Polar Ocean & Ice-Ocean Interaction", "Ice Shelf & Calving",
+        "Snow & Firn Processes", "General Science",
+    ],
 }
 
 # One-line context per model to ground the classifier's SYSTEM prompt.
@@ -94,6 +101,7 @@ MODEL_CONTEXT = {
     "RAPID": "the RAPID river-routing / hydrologic modeling group",
     "TROPESS": "the TROPESS tropospheric atmospheric-composition retrieval group",
     "MOMO-CHEM": "the MOMO-Chem global atmospheric-chemistry reanalysis group",
+    "ISSM": "the ISSM (Ice-sheet and Sea-level System Model) ice-sheet modeling group",
 }
 
 DOMAIN_TAGS = [

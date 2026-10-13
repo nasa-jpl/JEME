@@ -1,6 +1,407 @@
 [
   {
-    "title": "Ubiquitous acceleration in Greenland Ice Sheet calving from 1985 to 2022. Nature",
+    "title": "Recent Observations of Thwaites Glacier, West Antarctica Are Consistent With High Rates of Loss in Next 50 Years",
+    "authors": [
+      "Goldberg",
+      "D. N.",
+      "Morlighem",
+      "M.",
+      "Gourmelen",
+      "N."
+    ],
+    "year": 2026,
+    "doi": "10.1029/2025GL118823",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Enabling ice sheet models to capture centennial-scale solid Earth feedback with relative ease and sufficient accuracy",
+    "authors": [
+      "Adhikari",
+      "S.",
+      "Caron",
+      "L.",
+      "Ivins",
+      "E. R.",
+      "Han",
+      "H. K.",
+      "Houriez",
+      "L.",
+      "& Larour",
+      "E."
+    ],
+    "year": 2026,
+    "doi": "10.5194/tc-20-5041-2026",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Love number computation within the Ice-sheet and Sea-level System Model (ISSM v4.24)",
+    "authors": [
+      "Caron",
+      "L.",
+      "Ivins",
+      "E.",
+      "Larour",
+      "E.",
+      "Adhikari",
+      "S.",
+      "& Métivier",
+      "L."
+    ],
+    "year": 2026,
+    "doi": "10.5194/gmd-19-4031-2026",
+    "venue": "Geoscientific Model Development"
+  },
+  {
+    "title": "Uncertain ground: impact of bed topography on Antarctic Ice Sheet projections",
+    "authors": [
+      "Caillet",
+      "J.",
+      "Seroussi",
+      "H.",
+      "& Nowicki",
+      "S."
+    ],
+    "year": 2026,
+    "doi": "10.1098/rsta.2024.0543",
+    "venue": "Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
+  },
+  {
+    "title": "Discrepancy in Satellite Altimetry Products Hinders Robust Retrieval of GIA Signals From Bedrock GNSS Data in Greenland",
+    "authors": [
+      "Han",
+      "H. K.",
+      "Adhikari",
+      "S.",
+      "Caron",
+      "L.",
+      "Gao",
+      "H.",
+      "Ajourlou",
+      "P.",
+      "Khan",
+      "S.",
+      "& Csatho",
+      "B. M."
+    ],
+    "year": 2026,
+    "doi": "10.1029/2026GL121985",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Retrieval and validation of total seasonal liquid water amounts in the percolation zone of the Greenland ice sheet using L-band radiometry",
+    "authors": [
+      "Hossan",
+      "A.",
+      "Colliander",
+      "A.",
+      "Vandecrux",
+      "B.",
+      "Schlegel",
+      "N.",
+      "Harper",
+      "J.",
+      "Marshall",
+      "S.",
+      "et al."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-4237-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Calibrating calving parameterizations using graph neural network emulators: application to Helheim Glacier, East Greenland",
+    "authors": [
+      "Koo",
+      "Y.",
+      "Cheng",
+      "G.",
+      "Morlighem",
+      "M.",
+      "Rahnemoonfar",
+      "M."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-2583-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "A Python library for solving ice sheet modeling problems using physics-informed neural networks, PINNICLE v1.0",
+    "authors": [
+      "Cheng",
+      "G.",
+      "Krishna",
+      "M.",
+      "Morlighem",
+      "M."
+    ],
+    "year": 2025,
+    "doi": "10.5194/gmd-18-5311-2025",
+    "venue": "Geoscientific Model Development"
+  },
+  {
+    "title": "A Sparse Synthetic Aperture Radiometer Constellation Concept for Remote Sensing of Antarctic Ice Sheet Temperature",
+    "authors": [
+      "Akins",
+      "A. B.",
+      "Tanner",
+      "A. B.",
+      "Colliander",
+      "A.",
+      "Schlegel",
+      "N.",
+      "Boudad",
+      "K.",
+      "Yanovsky",
+      "I.",
+      "et al."
+    ],
+    "year": 2025,
+    "doi": "10.1109/TGRS.2025.3534466",
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing"
+  },
+  {
+    "title": "Antarctic Wide Subglacial Hydrology Modeling",
+    "authors": [
+      "Ehrenfeucht",
+      "S.",
+      "Dow",
+      "C.",
+      "McArthur",
+      "K.",
+      "Morlighem",
+      "M.",
+      "McCormack",
+      "F. S."
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024GL111386",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Modelling GNSS-observed seasonal velocity changes of the Ross Ice Shelf, Antarctica, using the Ice-sheet and Sea-level System Model (ISSM)",
+    "authors": [
+      "Baldacchino",
+      "F.",
+      "Golledge",
+      "N. R.",
+      "Morlighem",
+      "M.",
+      "Horgan",
+      "H.",
+      "Alevropoulos-Borrill",
+      "A. V.",
+      "Malyarenko",
+      "A.",
+      "et al."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-107-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Multifidelity uncertainty quantification for ice sheet simulations",
+    "authors": [
+      "Aretz",
+      "N.",
+      "Gunzburger",
+      "M.",
+      "Morlighem",
+      "M.",
+      "Willcox",
+      "K."
+    ],
+    "year": 2025,
+    "doi": "10.1007/s10596-024-10329-3",
+    "venue": "Computational Geosciences"
+  },
+  {
+    "title": "Increasing the Glen–Nye Power‐Law Exponent Accelerates Ice‐Loss Projections for the Amundsen Sea Embayment, West Antarctica",
+    "authors": [
+      "Getraer",
+      "B.",
+      "Morlighem",
+      "M."
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024GL112516",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Ice sheet model simulations reveal that polythermal ice conditions existed across the northeastern USA during the Last Glacial Maximum",
+    "authors": [
+      "Cuzzone",
+      "J. K.",
+      "Barth",
+      "A.",
+      "Barker",
+      "K.",
+      "Morlighem",
+      "M."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-1559-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Increased sea-level contribution from northwestern Greenland for models that reproduce observations",
+    "authors": [
+      "Badgeley",
+      "J. A.",
+      "Morlighem",
+      "M.",
+      "Seroussi",
+      "H."
+    ],
+    "year": 2025,
+    "doi": "10.1073/pnas.2411904122",
+    "venue": "Proceedings of the National Academy of Sciences"
+  },
+  {
+    "title": "Ice Front and Mélange Dynamics at Kangerlussuaq Glacier, Eastern Greenland, Since 1981, and Future Stability",
+    "authors": [
+      "Lippert",
+      "E. Y. H.",
+      "Morlighem",
+      "M.",
+      "Cheng",
+      "G.",
+      "Berg",
+      "D. L.",
+      "Hassan",
+      "J.",
+      "Khan",
+      "S. A."
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024GL113982",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Sea level rise contribution from Ryder Glacier in northern Greenland varies by an order of magnitude by 2300 depending on future emissions",
+    "authors": [
+      "Holmes",
+      "F. A.",
+      "Barnett",
+      "J.",
+      "Åkesson",
+      "H.",
+      "Morlighem",
+      "M.",
+      "Nilsson",
+      "J.",
+      "Kirchner",
+      "N.",
+      "et al."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-2695-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Simulating the Holocene evolution of Ryder Glacier, North Greenland",
+    "authors": [
+      "Barnett",
+      "J.",
+      "Holmes",
+      "F. A.",
+      "Cuzzone",
+      "J.",
+      "Åkesson",
+      "H.",
+      "Morlighem",
+      "M.",
+      "O'Regan",
+      "M.",
+      "et al."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-3631-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Reinforced ridges in Thwaites Glacier yield insights into resolution requirements for coupled ice sheet and solid Earth models",
+    "authors": [
+      "Houriez",
+      "L.",
+      "Larour",
+      "E.",
+      "Caron",
+      "L.",
+      "Schlegel",
+      "N.-J.",
+      "Adhikari",
+      "S.",
+      "Ivins",
+      "E.",
+      "Pelle",
+      "T.",
+      "Seroussi",
+      "H.",
+      "Darve",
+      "E.",
+      "& Fischer",
+      "M."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-4355-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Disentangling the oceanic drivers behind the post-2000 retreat of Sermeq Kujalleq, Greenland (Jakobshavn Isbræ)",
+    "authors": [
+      "Rashed",
+      "Z.",
+      "Robel",
+      "A. A.",
+      "& Seroussi",
+      "H."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-1775-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "The Greenland Ice Sheet Large Ensemble (GrISLENS): simulating the future of Greenland under climate variability",
+    "authors": [
+      "Verjans",
+      "V.",
+      "Robel",
+      "A. A.",
+      "Ultee",
+      "L.",
+      "Seroussi",
+      "H.",
+      "Thompson",
+      "A. F.",
+      "Ackermann",
+      "L.",
+      "Choi",
+      "Y.",
+      "& Krebs-Kanzow",
+      "U."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-3749-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Estimation of the state and parameters in ice sheet model using an ensemble Kalman filter and Observing System Simulation Experiments",
+    "authors": [
+      "Choi",
+      "Y.",
+      "Petty",
+      "A.",
+      "Felikson",
+      "D.",
+      "& Poterjoy",
+      "J."
+    ],
+    "year": 2025,
+    "doi": "10.5194/tc-19-5423-2025",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Ubiquitous acceleration in Greenland Ice Sheet calving from 1985 to 2022",
     "authors": [
       "Greene",
       "C. A.",
@@ -13,10 +414,10 @@
     ],
     "year": 2024,
     "doi": "10.1038/s41586-023-06863-2",
-    "venue": "625(7995)"
+    "venue": "Nature"
   },
   {
-    "title": "Modeling the timing of Patagonian Ice Sheet retreat in the Chilean Lake District from 22–10ka. The Cryosphere",
+    "title": "Modeling the timing of Patagonian Ice Sheet retreat in the Chilean Lake District from 22–10 ka",
     "authors": [
       "Cuzzone",
       "J.",
@@ -27,28 +428,340 @@
     ],
     "year": 2024,
     "doi": "10.5194/tc-18-1381-2024",
-    "venue": "18(3)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Untitled",
+    "title": "New perspectives on ice forcing in continental arc magma plumbing systems",
     "authors": [
-      "Unknown"
+      "Singer",
+      "B. S.",
+      "Moreno-Yaeger",
+      "P.",
+      "Townsend",
+      "M.",
+      "Huber",
+      "C.",
+      "Cuzzone",
+      "J.",
+      "Edwards",
+      "B. R.",
+      "Romero",
+      "M.",
+      "Orellana-Salazar",
+      "Y.",
+      "Marcott",
+      "S. A.",
+      "Breunig",
+      "R. E.",
+      "Ferrier",
+      "K. L.",
+      "Scholz",
+      "K.",
+      "Coonin",
+      "A. N.",
+      "Alloway",
+      "B. V.",
+      "Tremblay",
+      "M. M.",
+      "Stevens",
+      "S.",
+      "Fustos-Toribio",
+      "I.",
+      "Moreno",
+      "P. I.",
+      "Vera",
+      "F.",
+      "& Amigo",
+      "Á."
     ],
     "year": 2024,
     "doi": "10.1016/j.jvolgeores.2024.108187",
-    "venue": "Unknown"
+    "venue": "Journal of Volcanology and Geothermal Research"
   },
   {
-    "title": "Untitled",
+    "title": "Evolution of the Antarctic Ice Sheet Over the Next Three Centuries From an ISMIP6 Model Ensemble",
     "authors": [
-      "Unknown"
+      "Seroussi",
+      "H.",
+      "Pelle",
+      "T.",
+      "Lipscomb",
+      "W. H.",
+      "Abe‐Ouchi",
+      "A.",
+      "Albrecht",
+      "T.",
+      "Alvarez‐Solas",
+      "J.",
+      "Asay‐Davis",
+      "X.",
+      "Barre",
+      "J.",
+      "Berends",
+      "C. J.",
+      "Bernales",
+      "J.",
+      "Blasco",
+      "J.",
+      "Caillet",
+      "J.",
+      "Chandler",
+      "D. M.",
+      "Coulon",
+      "V.",
+      "Cullather",
+      "R.",
+      "Dumas",
+      "C.",
+      "Galton‐Fenzi",
+      "B. K.",
+      "Garbe",
+      "J.",
+      "Gillet‐Chaulet",
+      "F.",
+      "Gladstone",
+      "R.",
+      "Goelzer",
+      "H.",
+      "Golledge",
+      "N.",
+      "Greve",
+      "R.",
+      "Gudmundsson",
+      "G. H.",
+      "Han",
+      "H. K.",
+      "Hillebrand",
+      "T. R.",
+      "Hoffman",
+      "M. J.",
+      "Huybrechts",
+      "P.",
+      "Jourdain",
+      "N. C.",
+      "Klose",
+      "A. K.",
+      "Langebroek",
+      "P. M.",
+      "Leguy",
+      "G. R.",
+      "Lowry",
+      "D. P.",
+      "Mathiot",
+      "P.",
+      "Montoya",
+      "M.",
+      "Morlighem",
+      "M.",
+      "Nowicki",
+      "S.",
+      "Pattyn",
+      "F.",
+      "Payne",
+      "A. J.",
+      "Quiquet",
+      "A.",
+      "Reese",
+      "R.",
+      "Robinson",
+      "A.",
+      "Saraste",
+      "L.",
+      "Simon",
+      "E. G.",
+      "Sun",
+      "S.",
+      "Twarog",
+      "J. P.",
+      "Trusel",
+      "L. D.",
+      "Urruty",
+      "B.",
+      "Van Breedam",
+      "J.",
+      "van de Wal",
+      "R. S. W.",
+      "Wang",
+      "Y.",
+      "Zhao",
+      "C.",
+      "& Zwinger",
+      "T."
     ],
     "year": 2024,
     "doi": "10.1029/2024EF004561",
-    "venue": "Unknown"
+    "venue": "Earth's Future"
   },
   {
-    "title": "Insights into the vulnerability of Antarctic glaciers from the ISMIP6 ice sheet model ensemble and associated uncertainty. The Cryosphere",
+    "title": "Forward and Inverse Modeling of Ice Sheet Flow Using Physics‐Informed Neural Networks: Application to Helheim Glacier, Greenland",
+    "authors": [
+      "Cheng",
+      "G.",
+      "Morlighem",
+      "M.",
+      "Francis",
+      "S."
+    ],
+    "year": 2024,
+    "doi": "10.1029/2024JH000169",
+    "venue": "Journal of Geophysical Research: Machine Learning and Computation"
+  },
+  {
+    "title": "Numerical stabilization methods for level-set-based ice front migration",
+    "authors": [
+      "Cheng",
+      "G.",
+      "Morlighem",
+      "M.",
+      "Gudmundsson",
+      "G. H."
+    ],
+    "year": 2024,
+    "doi": "10.5194/gmd-17-6227-2024",
+    "venue": "Geoscientific Model Development"
+  },
+  {
+    "title": "Modeling a Century of Change: Kangerlussuaq Glacier's Mass Loss From 1933 to 2021",
+    "authors": [
+      "Lippert",
+      "E. Y. H.",
+      "Morlighem",
+      "M.",
+      "Cheng",
+      "G.",
+      "Khan",
+      "S. A."
+    ],
+    "year": 2024,
+    "doi": "10.1029/2023GL106286",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Precipitation drives western Patagonian glacier variability and may curb future ice mass loss",
+    "authors": [
+      "Troch",
+      "M.",
+      "Åkesson",
+      "H.",
+      "Cuzzone",
+      "J. K.",
+      "Bertrand",
+      "S."
+    ],
+    "year": 2024,
+    "doi": "10.1038/s41598-024-77486-4",
+    "venue": "Scientific Reports"
+  },
+  {
+    "title": "Velocity of Greenland's Helheim Glacier Controlled Both by Terminus Effects and Subglacial Hydrology With Distinct Realms of Influence",
+    "authors": [
+      "Sommers",
+      "A. N.",
+      "Meyer",
+      "C. R.",
+      "Poinar",
+      "K.",
+      "Mejia",
+      "J.",
+      "Morlighem",
+      "M.",
+      "Rajaram",
+      "H.",
+      "et al."
+    ],
+    "year": 2024,
+    "doi": "10.1029/2024GL109168",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Inland Summer Speedup at Zachariæ Isstrøm, Northeast Greenland, Driven by Subglacial Hydrology",
+    "authors": [
+      "Khan",
+      "S. A.",
+      "Morlighem",
+      "M.",
+      "Ehrenfeucht",
+      "S.",
+      "Seroussi",
+      "H.",
+      "Choi",
+      "Y.",
+      "Rignot",
+      "E.",
+      "et al."
+    ],
+    "year": 2024,
+    "doi": "10.1029/2024GL110691",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "The West Antarctic Ice Sheet may not be vulnerable to marine ice cliff instability during the 21st century",
+    "authors": [
+      "Morlighem",
+      "M.",
+      "Goldberg",
+      "D.",
+      "Barnes",
+      "J. M.",
+      "Bassis",
+      "J. N.",
+      "Benn",
+      "D. I.",
+      "Crawford",
+      "A. J.",
+      "Gudmundsson",
+      "G. H.",
+      "& Seroussi",
+      "H."
+    ],
+    "year": 2024,
+    "doi": "10.1126/sciadv.ado7794",
+    "venue": "Science Advances"
+  },
+  {
+    "title": "Holocene warmth explains the Little Ice Age advance of Sermeq Kujalleq",
+    "authors": [
+      "Kajanto",
+      "K.",
+      "Andresen",
+      "C.",
+      "Seroussi",
+      "H.",
+      "Rieckh",
+      "T.",
+      "Briner",
+      "J. P.",
+      "de Fleurian",
+      "B.",
+      "Born",
+      "A.",
+      "& Nisancioglu",
+      "K."
+    ],
+    "year": 2024,
+    "doi": "10.1016/j.quascirev.2024.108840",
+    "venue": "Quaternary Science Reviews"
+  },
+  {
+    "title": "The increasingly dominant role of climate change on length of day variations",
+    "authors": [
+      "Kiani Shahvandi",
+      "M.",
+      "Adhikari",
+      "S.",
+      "Dumberry",
+      "M.",
+      "Mishra",
+      "S.",
+      "& Soja",
+      "B."
+    ],
+    "year": 2024,
+    "doi": "10.1073/pnas.2406930121",
+    "venue": "Proceedings of the National Academy of Sciences"
+  },
+  {
+    "title": "Insights into the vulnerability of Antarctic glaciers from the ISMIP6 ice sheet model ensemble and associated uncertainty",
     "authors": [
       "Seroussi",
       "H.",
@@ -66,37 +779,64 @@
     ],
     "year": 2023,
     "doi": "10.5194/tc-17-5197-2023",
-    "venue": "17(12)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Untitled",
+    "title": "Bias Correction and Statistical Modeling of Variable Oceanic Forcing of Greenland Outlet Glaciers",
     "authors": [
-      "Unknown"
+      "Verjans",
+      "V.",
+      "Robel",
+      "A.",
+      "Thompson",
+      "A. F.",
+      "& Seroussi",
+      "H."
     ],
     "year": 2023,
     "doi": "10.1029/2023MS003610",
-    "venue": "Unknown"
+    "venue": "Journal of Advances in Modeling Earth Systems"
   },
   {
-    "title": "Untitled",
+    "title": "Carbon Dioxide Ice Glaciers at the South Pole of Mars",
     "authors": [
-      "Unknown"
+      "Smith",
+      "I. B.",
+      "Schlegel",
+      "N. ‐.",
+      "Larour",
+      "E.",
+      "Isola",
+      "I.",
+      "Buhler",
+      "P. B.",
+      "Putzig",
+      "N. E.",
+      "& Greve",
+      "R."
     ],
     "year": 2023,
     "doi": "10.1029/2022JE007193",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Planets"
   },
   {
-    "title": "Untitled",
+    "title": "Uncovering Basal Friction in Northwest Greenland Using an Ice Flow Model and Observations of the Past Decade",
     "authors": [
-      "Unknown"
+      "Choi",
+      "Y.",
+      "Seroussi",
+      "H.",
+      "Gardner",
+      "A.",
+      "& Schlegel",
+      "N."
     ],
     "year": 2023,
     "doi": "10.1029/2022JF006710",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Widespread slowdown in thinning rates of West Antarctic ice shelves. The Cryosphere",
+    "title": "Widespread slowdown in thinning rates of West Antarctic ice shelves",
     "authors": [
       "Paolo",
       "F. S.",
@@ -115,10 +855,10 @@
     ],
     "year": 2023,
     "doi": "10.5194/tc-17-3409-2023",
-    "venue": "17(8)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Glacier Energy and Mass Balance (GEMB): a model of firn processes for cryosphere research. Geoscientific Model Development",
+    "title": "Glacier Energy and Mass Balance (GEMB): a model of firn processes for cryosphere research",
     "authors": [
       "Gardner",
       "A. S.",
@@ -129,10 +869,10 @@
     ],
     "year": 2023,
     "doi": "10.5194/gmd-16-2277-2023",
-    "venue": "16(8)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Subglacial hydrology modeling predicts high winter water pressure and spatially variable transmissivity at Helheim Glacier",
+    "title": "Subglacial hydrology modeling predicts high winter water pressure and spatially variable transmissivity at Helheim Glacier, Greenland",
     "authors": [
       "Sommers",
       "A.",
@@ -151,19 +891,26 @@
     ],
     "year": 2023,
     "doi": "10.1017/jog.2023.39",
-    "venue": "Greenland. Journal of Glaciology"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Untitled",
+    "title": "Limited Impact of Thwaites Ice Shelf on Future Ice Loss From Antarctica",
     "authors": [
-      "Unknown"
+      "Gudmundsson",
+      "G. H.",
+      "Barnes",
+      "J. M.",
+      "Goldberg",
+      "D. N.",
+      "& Morlighem",
+      "M."
     ],
     "year": 2023,
     "doi": "10.1029/2023GL102880",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "In the Quest of a Parametric Relation Between Ice Sheet Model Inferred Weertman’s SlidingnLaw Parameter and Airborne RadarnDerived Basal Reflectivity Underneath Thwaites Glacier",
+    "title": "In the Quest of a Parametric Relation Between Ice Sheet Model Inferred Weertman's Sliding‐Law Parameter and Airborne Radar‐Derived Basal Reflectivity Underneath Thwaites Glacier, Antarctica",
     "authors": [
       "Das",
       "I.",
@@ -180,10 +927,10 @@
     ],
     "year": 2023,
     "doi": "10.1029/2022GL098910",
-    "venue": "Antarctica. Geophysical Research Letters"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Model insights into bed control on retreat of Thwaites Glacier",
+    "title": "Model insights into bed control on retreat of Thwaites Glacier, West Antarctica",
     "authors": [
       "Schwans",
       "E.",
@@ -198,10 +945,56 @@
     ],
     "year": 2023,
     "doi": "10.1017/jog.2023.13",
-    "venue": "West Antarctica. Journal of Glaciology"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Seasonal Acceleration of Petermann Glacier",
+    "title": "Evaluation of four calving laws for Antarctic ice shelves",
+    "authors": [
+      "Wilner",
+      "J. A.",
+      "Morlighem",
+      "M.",
+      "Cheng",
+      "G."
+    ],
+    "year": 2023,
+    "doi": "10.5194/tc-17-4889-2023",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Impact of time-dependent data assimilation on ice flow model initialization and projections: a case study of Kjer Glacier, Greenland",
+    "authors": [
+      "Choi",
+      "Y.",
+      "Seroussi",
+      "H.",
+      "Morlighem",
+      "M.",
+      "Schlegel",
+      "N.",
+      "Gardner",
+      "A."
+    ],
+    "year": 2023,
+    "doi": "10.5194/tc-17-5499-2023",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Anthropocene isostatic adjustment on an anelastic mantle",
+    "authors": [
+      "Ivins",
+      "E. R.",
+      "Caron",
+      "L.",
+      "& Adhikari",
+      "S."
+    ],
+    "year": 2023,
+    "doi": "10.1007/s00190-023-01781-7",
+    "venue": "Journal of Geodesy"
+  },
+  {
+    "title": "Seasonal Acceleration of Petermann Glacier, Greenland, From Changes in Subglacial Hydrology",
     "authors": [
       "Ehrenfeucht",
       "S.",
@@ -216,19 +1009,30 @@
     ],
     "year": 2022,
     "doi": "10.1029/2022GL098009",
-    "venue": "Greenland"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "The internal structure of a debris-covered glacier on Mars revealed by gully incision",
     "authors": [
-      "Unknown"
+      "Butcher",
+      "F. E. G.",
+      "Arnold",
+      "N. S.",
+      "Conway",
+      "S. J.",
+      "Berman",
+      "D. C.",
+      "Davis",
+      "J. M.",
+      "& Balme",
+      "M. R."
     ],
     "year": 2022,
     "doi": "10.1016/j.icarus.2023.115717",
-    "venue": "Unknown"
+    "venue": "Icarus"
   },
   {
-    "title": "Surface topographic impact of subglacial water beneath the south polar ice cap of Mars. Nature Astronomy",
+    "title": "Surface topographic impact of subglacial water beneath the south polar ice cap of Mars",
     "authors": [
       "Arnold",
       "N. S.",
@@ -243,10 +1047,10 @@
     ],
     "year": 2022,
     "doi": "10.1038/s41550-022-01782-0",
-    "venue": "6(11)"
+    "venue": "Nature Astronomy"
   },
   {
-    "title": "A scalability study of the Ice-sheet and Sea-level System Model (ISSM",
+    "title": "A scalability study of the Ice-sheet and Sea-level System Model (ISSM, version 4.18)",
     "authors": [
       "Fischler",
       "Y.",
@@ -263,28 +1067,44 @@
     ],
     "year": 2022,
     "doi": "10.5194/gmd-15-3753-2022",
-    "venue": "version 4.18). Geoscientific Model Development"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Untitled",
+    "title": "Petermann ice shelf may not recover after a future breakup",
     "authors": [
-      "Unknown"
+      "Åkesson",
+      "H.",
+      "Morlighem",
+      "M.",
+      "Nilsson",
+      "J.",
+      "Stranne",
+      "C.",
+      "& Jakobsson",
+      "M."
     ],
     "year": 2022,
     "doi": "10.1038/s41467-022-29529-5",
-    "venue": "Unknown"
+    "venue": "Nature Communications"
   },
   {
-    "title": "Untitled",
+    "title": "Helheim Glacier's Terminus Position Controls Its Seasonal and Inter‐Annual Ice Flow Variability",
     "authors": [
-      "Unknown"
+      "Cheng",
+      "G.",
+      "Morlighem",
+      "M.",
+      "Mouginot",
+      "J.",
+      "& Cheng",
+      "D."
     ],
     "year": 2022,
     "doi": "10.1029/2021GL097085",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Simulating the Holocene deglaciation across a marine-terminating portion of southwestern Greenland in response to marine and atmospheric forcings. The Cryosphere",
+    "title": "Simulating the Holocene deglaciation across a marine-terminating portion of southwestern Greenland in response to marine and atmospheric forcings",
     "authors": [
       "Cuzzone",
       "J. K.",
@@ -299,10 +1119,10 @@
     ],
     "year": 2022,
     "doi": "10.5194/tc-16-2355-2022",
-    "venue": "16(6)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Inferring time-dependent calving dynamics at Helheim Glacier. Journal of Glaciology",
+    "title": "Inferring time-dependent calving dynamics at Helheim Glacier",
     "authors": [
       "Downs",
       "J.",
@@ -313,19 +1133,28 @@
     ],
     "year": 2022,
     "doi": "10.1017/jog.2022.68",
-    "venue": "69(274)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Untitled",
+    "title": "Sensitivity of the Ross Ice Shelf to environmental and glaciological controls",
     "authors": [
-      "Unknown"
+      "Baldacchino",
+      "F.",
+      "Morlighem",
+      "M.",
+      "Golledge",
+      "N. R.",
+      "Horgan",
+      "H.",
+      "& Malyarenko",
+      "A."
     ],
     "year": 2022,
-    "doi": "10.5194/tc-2022-50",
-    "venue": "Unknown"
+    "doi": "10.5194/tc-16-3723-2022",
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Extensive inland thinning and speed-up of Northeast Greenland Ice Stream. Nature",
+    "title": "Extensive inland thinning and speed-up of Northeast Greenland Ice Stream",
     "authors": [
       "Khan",
       "S. A.",
@@ -343,10 +1172,10 @@
     ],
     "year": 2022,
     "doi": "10.1038/s41586-022-05301-z",
-    "venue": "611(7937)"
+    "venue": "Nature"
   },
   {
-    "title": "Modeling the Deformation Regime of Thwaites Glacier",
+    "title": "Modeling the Deformation Regime of Thwaites Glacier, West Antarctica, Using a Simple Flow Relation for Ice Anisotropy (ESTAR)",
     "authors": [
       "McCormack",
       "F. S.",
@@ -363,10 +1192,10 @@
     ],
     "year": 2022,
     "doi": "10.1029/2021JF006332",
-    "venue": "West Antarctica"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Derivation of bedrock topography measurement requirements for the reduction of uncertainty in ice-sheet model projections of Thwaites Glacier. The Cryosphere",
+    "title": "Derivation of bedrock topography measurement requirements for the reduction of uncertainty in ice-sheet model projections of Thwaites Glacier",
     "authors": [
       "Castleman",
       "B. A.",
@@ -381,10 +1210,10 @@
     ],
     "year": 2022,
     "doi": "10.5194/tc-16-761-2022",
-    "venue": "16(3)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "A new vertically integrated MOno-Layer Higher-Order (MOLHO) ice flow model. The Cryosphere",
+    "title": "A new vertically integrated MOno-Layer Higher-Order (MOLHO) ice flow model",
     "authors": [
       "Dias dos Santos",
       "T.",
@@ -395,10 +1224,10 @@
     ],
     "year": 2022,
     "doi": "10.5194/tc-16-179-2022",
-    "venue": "16(1)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Geometric controls of tidewater glacier dynamics. The Cryosphere",
+    "title": "Geometric controls of tidewater glacier dynamics",
     "authors": [
       "Frank",
       "T.",
@@ -413,19 +1242,28 @@
     ],
     "year": 2022,
     "doi": "10.5194/tc-16-581-2022",
-    "venue": "16(2)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Untitled",
+    "title": "Seasonal Tidewater Glacier Terminus Oscillations Bias Multi‐Decadal Projections of Ice Mass Change",
     "authors": [
-      "Unknown"
+      "Felikson",
+      "D.",
+      "Nowicki",
+      "S.",
+      "Nias",
+      "I.",
+      "Morlighem",
+      "M.",
+      "& Seroussi",
+      "H."
     ],
     "year": 2022,
     "doi": "10.1029/2021JF006249",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Layered seawater intrusion and melt under grounded ice. The Cryosphere",
+    "title": "Layered seawater intrusion and melt under grounded ice",
     "authors": [
       "Robel",
       "A. A.",
@@ -436,10 +1274,10 @@
     ],
     "year": 2022,
     "doi": "10.5194/tc-16-451-2022",
-    "venue": "16(2)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Implementation of a Gaussian Markov random field sampler for forward uncertainty quantification in the Ice-sheet and Sea-level System Model v4.19. Geoscientific Model Development",
+    "title": "Implementation of a Gaussian Markov random field sampler for forward uncertainty quantification in the Ice-sheet and Sea-level System Model v4.19",
     "authors": [
       "Bulthuis",
       "K.",
@@ -448,10 +1286,10 @@
     ],
     "year": 2022,
     "doi": "10.5194/gmd-15-1195-2022",
-    "venue": "15(3)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Impact of runoff temporal distribution on ice dynamics. The Cryosphere",
+    "title": "Impact of runoff temporal distribution on ice dynamics",
     "authors": [
       "de Fleurian",
       "B.",
@@ -462,10 +1300,10 @@
     ],
     "year": 2022,
     "doi": "10.5194/tc-16-2265-2022",
-    "venue": "16(6)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Antarctic calving loss rivals ice-shelf thinning. Nature",
+    "title": "Antarctic calving loss rivals ice-shelf thinning",
     "authors": [
       "Greene",
       "C. A.",
@@ -478,64 +1316,286 @@
     ],
     "year": 2022,
     "doi": "10.1038/s41586-022-05037-w",
-    "venue": "609(7929)"
+    "venue": "Nature"
   },
   {
-    "title": "Untitled",
+    "title": "Ice mass loss sensitivity to the Antarctic ice sheet basal thermal state",
     "authors": [
-      "Unknown"
+      "Dawson",
+      "E. J.",
+      "Schroeder",
+      "D. M.",
+      "Chu",
+      "W.",
+      "Mantelli",
+      "E.",
+      "& Seroussi",
+      "H."
     ],
     "year": 2022,
     "doi": "10.1038/s41467-022-32632-2",
-    "venue": "Unknown"
+    "venue": "Nature Communications"
   },
   {
-    "title": "Untitled",
+    "title": "The Stochastic Ice-Sheet and Sea-Level System Model v1.0 (StISSM v1.0)",
     "authors": [
-      "Unknown"
+      "Verjans",
+      "V.",
+      "Robel",
+      "A. A.",
+      "Seroussi",
+      "H.",
+      "Ultee",
+      "L.",
+      "& Thompson",
+      "A. F."
+    ],
+    "year": 2022,
+    "doi": "10.5194/gmd-15-8269-2022",
+    "venue": "Geoscientific Model Development"
+  },
+  {
+    "title": "Notes on a compressible extended Burgers model of rheology",
+    "authors": [
+      "Ivins",
+      "E. R.",
+      "Caron",
+      "L.",
+      "Adhikari",
+      "S.",
+      "& Larour",
+      "E."
+    ],
+    "year": 2022,
+    "doi": "10.1093/gji/ggab452",
+    "venue": "Geophysical Journal International"
+  },
+  {
+    "title": "Decadal to Centennial Timescale Mantle Viscosity Inferred From Modern Crustal Uplift Rates in Greenland",
+    "authors": [
+      "Adhikari",
+      "S.",
+      "Milne",
+      "G. A.",
+      "Caron",
+      "L.",
+      "Khan",
+      "S. A.",
+      "Kjeldsen",
+      "K. K.",
+      "Nilsson",
+      "J.",
+      "Larour",
+      "E.",
+      "& Ivins",
+      "E. R."
     ],
     "year": 2021,
     "doi": "10.1029/2021GL094040",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Constraining 20th‐Century Sea‐Level Rise in the South Atlantic Ocean",
     "authors": [
-      "Unknown"
+      "Frederikse",
+      "T.",
+      "Adhikari",
+      "S.",
+      "Daley",
+      "T. J.",
+      "Dangendorf",
+      "S.",
+      "Gehrels",
+      "R.",
+      "Landerer",
+      "F.",
+      "Marcos",
+      "M.",
+      "Newton",
+      "T. L.",
+      "Rush",
+      "G.",
+      "Slangen",
+      "A. B. A.",
+      "& Wöppelmann",
+      "G."
     ],
     "year": 2021,
     "doi": "10.1029/2020JC016970",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Oceans"
   },
   {
-    "title": "Untitled",
+    "title": "Future Sea Level Change Under Coupled Model Intercomparison Project Phase 5 and Phase 6 Scenarios From the Greenland and Antarctic Ice Sheets",
     "authors": [
-      "Unknown"
+      "Payne",
+      "A. J.",
+      "Nowicki",
+      "S.",
+      "Abe‐Ouchi",
+      "A.",
+      "Agosta",
+      "C.",
+      "Alexander",
+      "P.",
+      "Albrecht",
+      "T.",
+      "Asay‐Davis",
+      "X.",
+      "Aschwanden",
+      "A.",
+      "Barthel",
+      "A.",
+      "Bracegirdle",
+      "T. J.",
+      "Calov",
+      "R.",
+      "Chambers",
+      "C.",
+      "Choi",
+      "Y.",
+      "Cullather",
+      "R.",
+      "Cuzzone",
+      "J.",
+      "Dumas",
+      "C.",
+      "Edwards",
+      "T. L.",
+      "Felikson",
+      "D.",
+      "Fettweis",
+      "X.",
+      "Galton‐Fenzi",
+      "B. K.",
+      "Goelzer",
+      "H.",
+      "Gladstone",
+      "R.",
+      "Golledge",
+      "N. R.",
+      "Gregory",
+      "J. M.",
+      "Greve",
+      "R.",
+      "Hattermann",
+      "T.",
+      "Hoffman",
+      "M. J.",
+      "Humbert",
+      "A.",
+      "Huybrechts",
+      "P.",
+      "Jourdain",
+      "N. C.",
+      "Kleiner",
+      "T.",
+      "Munneke",
+      "P. K.",
+      "Larour",
+      "E.",
+      "Le clec'h",
+      "S.",
+      "Lee",
+      "V.",
+      "Leguy",
+      "G.",
+      "Lipscomb",
+      "W. H.",
+      "Little",
+      "C. M.",
+      "Lowry",
+      "D. P.",
+      "Morlighem",
+      "M.",
+      "Nias",
+      "I.",
+      "Pattyn",
+      "F.",
+      "Pelle",
+      "T.",
+      "Price",
+      "S. F.",
+      "Quiquet",
+      "A.",
+      "Reese",
+      "R.",
+      "Rückamp",
+      "M.",
+      "Schlegel",
+      "N.",
+      "Seroussi",
+      "H.",
+      "Shepherd",
+      "A.",
+      "Simon",
+      "E.",
+      "Slater",
+      "D.",
+      "Smith",
+      "R. S.",
+      "Straneo",
+      "F.",
+      "Sun",
+      "S.",
+      "Tarasov",
+      "L.",
+      "Trusel",
+      "L. D.",
+      "Van Breedam",
+      "J.",
+      "van de Wal",
+      "R.",
+      "van den Broeke",
+      "M.",
+      "Winkelmann",
+      "R.",
+      "Zhao",
+      "C.",
+      "Zhang",
+      "T.",
+      "& Zwinger",
+      "T."
     ],
     "year": 2021,
     "doi": "10.1029/2020GL091741",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Steep Glacier Bed Knickpoints Mitigate Inland Thinning in Greenland",
     "authors": [
-      "Unknown"
+      "Felikson",
+      "D.",
+      "A. Catania",
+      "G.",
+      "Bartholomaus",
+      "T. C.",
+      "Morlighem",
+      "M.",
+      "& Noël",
+      "B. P. Y."
     ],
     "year": 2021,
     "doi": "10.1029/2020GL090112",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Ice dynamics will remain a primary driver of Greenland ice sheet mass loss over the next century",
     "authors": [
-      "Unknown"
+      "Choi",
+      "Y.",
+      "Morlighem",
+      "M.",
+      "Rignot",
+      "E.",
+      "& Wood",
+      "M."
     ],
     "year": 2021,
     "doi": "10.1038/s43247-021-00092-z",
-    "venue": "Unknown"
+    "venue": "Communications Earth & Environment"
   },
   {
-    "title": "The transferability of adjoint inversion products between different ice flow models. The Cryosphere",
+    "title": "The transferability of adjoint inversion products between different ice flow models",
     "authors": [
       "Barnes",
       "J. M.",
@@ -552,28 +1612,46 @@
     ],
     "year": 2021,
     "doi": "10.5194/tc-15-1975-2021",
-    "venue": "15(4)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Untitled",
+    "title": "The Impact of Variable Ocean Temperatures on Totten Glacier Stability and Discharge",
     "authors": [
-      "Unknown"
+      "McCormack",
+      "F. S.",
+      "Roberts",
+      "J. L.",
+      "Gwyther",
+      "D. E.",
+      "Morlighem",
+      "M.",
+      "Pelle",
+      "T.",
+      "& Galton‐Fenzi",
+      "B. K."
     ],
     "year": 2021,
     "doi": "10.1029/2020GL091790",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Future Projections of Petermann Glacier Under Ocean Warming Depend Strongly on Friction Law",
     "authors": [
-      "Unknown"
+      "Åkesson",
+      "H.",
+      "Morlighem",
+      "M.",
+      "O’Regan",
+      "M.",
+      "& Jakobsson",
+      "M."
     ],
     "year": 2021,
     "doi": "10.1029/2020JF005921",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Widespread Grounding Line Retreat of Totten Glacier",
+    "title": "Widespread Grounding Line Retreat of Totten Glacier, East Antarctica, Over the 21st Century",
     "authors": [
       "Pelle",
       "T.",
@@ -586,10 +1664,10 @@
     ],
     "year": 2021,
     "doi": "10.1029/2021GL093213",
-    "venue": "East Antarctica"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Drivers of Change of Thwaites Glacier",
+    "title": "Drivers of Change of Thwaites Glacier, West Antarctica, Between 1995 and 2015",
     "authors": [
       "dos Santos",
       "T. D.",
@@ -604,19 +1682,28 @@
     ],
     "year": 2021,
     "doi": "10.1029/2021GL093102",
-    "venue": "West Antarctica"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Mapping the Sensitivity of the Amundsen Sea Embayment to Changes in External Forcings Using Automatic Differentiation",
     "authors": [
-      "Unknown"
+      "Morlighem",
+      "M.",
+      "Goldberg",
+      "D.",
+      "Dias dos Santos",
+      "T.",
+      "Lee",
+      "J.",
+      "& Sagebaum",
+      "M."
     ],
     "year": 2021,
     "doi": "10.1029/2021GL095440",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Crustal Strain Patterns Associated With Normal",
+    "title": "Crustal Strain Patterns Associated With Normal, Drought, and Heavy Precipitation Years in California",
     "authors": [
       "Kim",
       "J.",
@@ -627,53 +1714,70 @@
     ],
     "year": 2021,
     "doi": "10.1029/2020JB019560",
-    "venue": "Drought"
+    "venue": "Journal of Geophysical Research: Solid Earth"
   },
   {
-    "title": "Untitled",
+    "title": "Evaluation of the Local Sea‐Level Budget at Tide Gauges Since 1958",
     "authors": [
-      "Unknown"
+      "Wang",
+      "J.",
+      "Church",
+      "J. A.",
+      "Zhang",
+      "X.",
+      "Gregory",
+      "J. M.",
+      "Zanna",
+      "L.",
+      "& Chen",
+      "X."
     ],
     "year": 2021,
     "doi": "10.1029/2021GL094502",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Multisystem Synthesis of Radar Sounding Observations of the Amundsen Sea Sector From the 2004–2005 Field Season",
     "authors": [
-      "Unknown"
+      "Chu",
+      "W.",
+      "Hilger",
+      "A. M.",
+      "Culberg",
+      "R.",
+      "Schroeder",
+      "D. M.",
+      "Jordan",
+      "T. M.",
+      "Seroussi",
+      "H.",
+      "Young",
+      "D. A.",
+      "Blankenship",
+      "D. D.",
+      "& Vaughan",
+      "D. G."
     ],
     "year": 2021,
     "doi": "10.1029/2021JF006296",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Untitled",
+    "title": "Impact of Subglacial Freshwater Discharge on Pine Island Ice Shelf",
     "authors": [
-      "Unknown"
-    ],
-    "year": 2021,
-    "doi": "10.1029/2021GL093923",
-    "venue": "Unknown"
-  },
-  {
-    "title": "Widespread Grounding Line Retreat of Totten Glacier",
-    "authors": [
-      "Pelle",
-      "T.",
-      "Morlighem",
-      "M.",
       "Nakayama",
       "Y.",
+      "Cai",
+      "C.",
       "& Seroussi",
       "H."
     ],
     "year": 2021,
-    "doi": "10.1029/2021GL093213",
-    "venue": "East Antarctica"
+    "doi": "10.1029/2021GL093923",
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Physical processes controlling the rifting of Larsen C Ice Shelf",
+    "title": "Physical processes controlling the rifting of Larsen C Ice Shelf, Antarctica, prior to the calving of iceberg A68",
     "authors": [
       "Larour",
       "E.",
@@ -686,10 +1790,10 @@
     ],
     "year": 2021,
     "doi": "10.1073/pnas.2105080118",
-    "venue": "Antarctica"
+    "venue": "Proceedings of the National Academy of Sciences"
   },
   {
-    "title": "Assessment of numerical schemes for transient",
+    "title": "Assessment of numerical schemes for transient, finite-element ice flow models using ISSM v4.18",
     "authors": [
       "dos Santos",
       "T. D.",
@@ -700,10 +1804,10 @@
     ],
     "year": 2021,
     "doi": "10.5194/gmd-14-2545-2021",
-    "venue": "finite-element ice flow models using ISSM v4.18. Geoscientific Model Development"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Projected land ice contributions to twenty-first-century sea level rise. Nature",
+    "title": "Projected land ice contributions to twenty-first-century sea level rise",
     "authors": [
       "Edwards",
       "T. L.",
@@ -721,10 +1825,10 @@
     ],
     "year": 2021,
     "doi": "10.1038/s41586-021-03302-y",
-    "venue": "593(7857)"
+    "venue": "Nature"
   },
   {
-    "title": "ISSM-SLPS: geodetically compliant Sea-Level Projection System for the Ice-sheet and Sea-level System Model v4.17. Geoscientific Model Development",
+    "title": "ISSM-SLPS: geodetically compliant Sea-Level Projection System for the Ice-sheet and Sea-level System Model v4.17",
     "authors": [
       "Larour",
       "E.",
@@ -742,10 +1846,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/gmd-13-4925-2020",
-    "venue": "13(10)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Sensitivity of Greenland ice sheet projections to spatial resolution in higher-order simulations: the Alfred Wegener Institute (AWI) contribution to ISMIP6 Greenland using the Ice-sheet and Sea-level System Model (ISSM). The Cryosphere",
+    "title": "Sensitivity of Greenland ice sheet projections to spatial resolution in higher-order simulations: the Alfred Wegener Institute (AWI) contribution to ISMIP6 Greenland using the Ice-sheet and Sea-level System Model (ISSM)",
     "authors": [
       "Rückamp",
       "M.",
@@ -756,10 +1860,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/tc-14-3309-2020",
-    "venue": "14(10)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Rate of mass loss from the Greenland Ice Sheet will exceed Holocene values this century. Nature",
+    "title": "Rate of mass loss from the Greenland Ice Sheet will exceed Holocene values this century",
     "authors": [
       "Briner",
       "J. P.",
@@ -777,10 +1881,10 @@
     ],
     "year": 2020,
     "doi": "10.1038/s41586-020-2742-6",
-    "venue": "586(7827)"
+    "venue": "Nature"
   },
   {
-    "title": "Extended enthalpy formulations in the Ice-sheet and Sea-level System Model (ISSM) version 4.17: discontinuous conductivity and anisotropic streamline upwind Petrov–Galerkin (SUPG) method. Geoscientific Model Development",
+    "title": "Extended enthalpy formulations in the Ice-sheet and Sea-level System Model (ISSM) version 4.17: discontinuous conductivity and anisotropic streamline upwind Petrov–Galerkin (SUPG) method",
     "authors": [
       "Rückamp",
       "M.",
@@ -795,10 +1899,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/gmd-13-4491-2020",
-    "venue": "13(9)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Aurora Basin",
+    "title": "Aurora Basin, the Weak Underbelly of East Antarctica",
     "authors": [
       "Pelle",
       "T.",
@@ -809,10 +1913,10 @@
     ],
     "year": 2020,
     "doi": "10.1029/2019GL086821",
-    "venue": "the Weak Underbelly of East Antarctica. Geophysical Research Letters"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Antarctic ice sheet response to sudden and sustained ice-shelf collapse (ABUMIP). Journal of Glaciology",
+    "title": "Antarctic ice sheet response to sudden and sustained ice-shelf collapse (ABUMIP)",
     "authors": [
       "Sun",
       "S.",
@@ -830,10 +1934,10 @@
     ],
     "year": 2020,
     "doi": "10.1017/jog.2020.67",
-    "venue": "66(260)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "ISMIP6 Antarctica: a multi-model ensemble of the Antarctic ice sheet evolution over the 21st century. The Cryosphere",
+    "title": "ISMIP6 Antarctica: a multi-model ensemble of the Antarctic ice sheet evolution over the 21st century",
     "authors": [
       "Seroussi",
       "H.",
@@ -851,10 +1955,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/tc-14-3033-2020",
-    "venue": "14(9)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "The future sea-level contribution of the Greenland ice sheet: a multi-model ensemble study of ISMIP6. The Cryosphere",
+    "title": "The future sea-level contribution of the Greenland ice sheet: a multi-model ensemble study of ISMIP6",
     "authors": [
       "Goelzer",
       "H.",
@@ -872,10 +1976,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/tc-14-3071-2020",
-    "venue": "14(9)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Results of the third Marine Ice Sheet Model Intercomparison Project (MISMIP+). The Cryosphere",
+    "title": "Results of the third Marine Ice Sheet Model Intercomparison Project (MISMIP+)",
     "authors": [
       "Cornford",
       "S. L.",
@@ -893,10 +1997,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/tc-14-2283-2020",
-    "venue": "14(7)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "A kinematic formalism for tracking ice–ocean mass exchange on the Earth’s surface and estimating sea-level change. The Cryosphere",
+    "title": "A kinematic formalism for tracking ice–ocean mass exchange on the Earth's surface and estimating sea-level change",
     "authors": [
       "Adhikari",
       "S.",
@@ -911,10 +2015,10 @@
     ],
     "year": 2020,
     "doi": "10.5194/tc-14-2819-2020",
-    "venue": "14(9)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Exceptionally high heat flux needed to sustain the Northeast Greenland Ice Stream. The Cryosphere",
+    "title": "Exceptionally high heat flux needed to sustain the Northeast Greenland Ice Stream",
     "authors": [
       "Smith-Johnsen",
       "S.",
@@ -929,35 +2033,26 @@
     ],
     "year": 2020,
     "doi": "10.5194/tc-14-841-2020",
-    "venue": "14(3)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Fractional governing equations of transient groundwater flow in unconfined aquifers with multi-fractional dimensions in fractional time. Earth System Dynamics",
+    "title": "Sensitivity of the Northeast Greenland Ice Stream to Geothermal Heat",
     "authors": [
-      "Kavvas",
-      "M. L.",
-      "Tu",
-      "T.",
-      "Ercan",
-      "A.",
-      "& Polsinelli",
-      "J."
-    ],
-    "year": 2020,
-    "doi": "10.5194/esd-11-1-2020",
-    "venue": "11(1)"
-  },
-  {
-    "title": "Untitled",
-    "authors": [
-      "Unknown"
+      "Smith‐Johnsen",
+      "S.",
+      "Schlegel",
+      "N. ‐.",
+      "de Fleurian",
+      "B.",
+      "& Nisancioglu",
+      "K. H."
     ],
     "year": 2020,
     "doi": "10.1029/2019JF005252",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "The causes of sea-level rise since 1900. Nature",
+    "title": "The causes of sea-level rise since 1900",
     "authors": [
       "Frederikse",
       "T.",
@@ -975,19 +2070,28 @@
     ],
     "year": 2020,
     "doi": "10.1038/s41586-020-2591-3",
-    "venue": "584(7821)"
+    "venue": "Nature"
   },
   {
-    "title": "Untitled",
+    "title": "Investigating the Acceleration of Regional Sea Level Rise During the Satellite Altimeter Era",
     "authors": [
-      "Unknown"
+      "Hamlington",
+      "B. D.",
+      "Frederikse",
+      "T.",
+      "Nerem",
+      "R. S.",
+      "Fasullo",
+      "J. T.",
+      "& Adhikari",
+      "S."
     ],
     "year": 2020,
     "doi": "10.1029/2019GL086528",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Increased Subglacial Sediment Discharge in a Warming Climate: Consideration of Ice Dynamics",
+    "title": "Increased Subglacial Sediment Discharge in a Warming Climate: Consideration of Ice Dynamics, Glacial Erosion, and Fluvial Sediment Transport",
     "authors": [
       "Delaney",
       "I.",
@@ -996,19 +2100,154 @@
     ],
     "year": 2020,
     "doi": "10.1029/2019GL085672",
-    "venue": "Glacial Erosion"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Understanding of Contemporary Regional Sea‐Level Change and the Implications for the Future",
     "authors": [
-      "Unknown"
+      "Hamlington",
+      "B. D.",
+      "Gardner",
+      "A. S.",
+      "Ivins",
+      "E.",
+      "Lenaerts",
+      "J. T. M.",
+      "Reager",
+      "J. T.",
+      "Trossman",
+      "D. S.",
+      "Zaron",
+      "E. D.",
+      "Adhikari",
+      "S.",
+      "Arendt",
+      "A.",
+      "Aschwanden",
+      "A.",
+      "Beckley",
+      "B. D.",
+      "Bekaert",
+      "D. P. S.",
+      "Blewitt",
+      "G.",
+      "Caron",
+      "L.",
+      "Chambers",
+      "D. P.",
+      "Chandanpurkar",
+      "H. A.",
+      "Christianson",
+      "K.",
+      "Csatho",
+      "B.",
+      "Cullather",
+      "R. I.",
+      "DeConto",
+      "R. M.",
+      "Fasullo",
+      "J. T.",
+      "Frederikse",
+      "T.",
+      "Freymueller",
+      "J. T.",
+      "Gilford",
+      "D. M.",
+      "Girotto",
+      "M.",
+      "Hammond",
+      "W. C.",
+      "Hock",
+      "R.",
+      "Holschuh",
+      "N.",
+      "Kopp",
+      "R. E.",
+      "Landerer",
+      "F.",
+      "Larour",
+      "E.",
+      "Menemenlis",
+      "D.",
+      "Merrifield",
+      "M.",
+      "Mitrovica",
+      "J. X.",
+      "Nerem",
+      "R. S.",
+      "Nias",
+      "I. J.",
+      "Nieves",
+      "V.",
+      "Nowicki",
+      "S.",
+      "Pangaluru",
+      "K.",
+      "Piecuch",
+      "C. G.",
+      "Ray",
+      "R. D.",
+      "Rounce",
+      "D. R.",
+      "Schlegel",
+      "N.",
+      "Seroussi",
+      "H.",
+      "Shirzaei",
+      "M.",
+      "Sweet",
+      "W. V.",
+      "Velicogna",
+      "I.",
+      "Vinogradova",
+      "N.",
+      "Wahl",
+      "T.",
+      "Wiese",
+      "D. N.",
+      "& Willis",
+      "M. J."
     ],
     "year": 2020,
     "doi": "10.1029/2019RG000672",
-    "venue": "Unknown"
+    "venue": "Reviews of Geophysics"
   },
   {
-    "title": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet. Nature Geoscience",
+    "title": "Present day Jakobshavn Isbræ (West Greenland) close to the Holocene minimum extent",
+    "authors": [
+      "Kajanto",
+      "K.",
+      "Seroussi",
+      "H.",
+      "de Fleurian",
+      "B.",
+      "& Nisancioglu",
+      "K. H."
+    ],
+    "year": 2020,
+    "doi": "10.1016/j.quascirev.2020.106492",
+    "venue": "Quaternary Science Reviews"
+  },
+  {
+    "title": "A linear viscoelasticity for decadal to centennial time scale mantle deformation",
+    "authors": [
+      "Ivins",
+      "E. R.",
+      "Caron",
+      "L.",
+      "Adhikari",
+      "S.",
+      "Larour",
+      "E.",
+      "& Scheinert",
+      "M."
+    ],
+    "year": 2020,
+    "doi": "10.1088/1361-6633/aba346",
+    "venue": "Reports on Progress in Physics"
+  },
+  {
+    "title": "Deep glacial troughs and stabilizing ridges unveiled beneath the margins of the Antarctic ice sheet",
     "authors": [
       "Morlighem",
       "M.",
@@ -1026,10 +2265,10 @@
     ],
     "year": 2019,
     "doi": "10.1038/s41561-019-0510-8",
-    "venue": "13(2)"
+    "venue": "Nature Geoscience"
   },
   {
-    "title": "Impact of Iceberg Calving on the Retreat of Thwaites Glacier",
+    "title": "Impact of Iceberg Calving on the Retreat of Thwaites Glacier, West Antarctica Over the Next Century With Different Calving Laws and Ocean Thermal Forcing",
     "authors": [
       "Yu",
       "H.",
@@ -1044,10 +2283,10 @@
     ],
     "year": 2019,
     "doi": "10.1029/2019GL084066",
-    "venue": "West Antarctica Over the Next Century With Different Calving Laws and Ocean Thermal Forcing. Geophysical Research Letters"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Marine ice sheet instability amplifies and skews uncertainty in projections of future sea-level rise. Proceedings of the National Academy of Sciences",
+    "title": "Marine ice sheet instability amplifies and skews uncertainty in projections of future sea-level rise",
     "authors": [
       "Robel",
       "A. A.",
@@ -1058,10 +2297,10 @@
     ],
     "year": 2019,
     "doi": "10.1073/pnas.1904822116",
-    "venue": "116(30)"
+    "venue": "Proceedings of the National Academy of Sciences"
   },
   {
-    "title": "initMIP-Antarctica: an ice sheet model initialization experiment of ISMIP6. The Cryosphere",
+    "title": "initMIP-Antarctica: an ice sheet model initialization experiment of ISMIP6",
     "authors": [
       "Seroussi",
       "H.",
@@ -1079,10 +2318,10 @@
     ],
     "year": 2019,
     "doi": "10.5194/tc-13-1441-2019",
-    "venue": "13(5)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Sea-level fingerprints emergent from GRACE mission data. Earth System Science Data",
+    "title": "Sea-level fingerprints emergent from GRACE mission data",
     "authors": [
       "Adhikari",
       "S.",
@@ -1097,10 +2336,10 @@
     ],
     "year": 2019,
     "doi": "10.5194/essd-11-629-2019",
-    "venue": "11(2)"
+    "venue": "Earth System Science Data"
   },
   {
-    "title": "Coastline extraction from repeat high resolution satellite imagery. Remote Sensing of Environment",
+    "title": "Coastline extraction from repeat high resolution satellite imagery",
     "authors": [
       "Dai",
       "C.",
@@ -1113,19 +2352,32 @@
     ],
     "year": 2019,
     "doi": "10.1016/j.rse.2019.04.010",
-    "venue": "229"
+    "venue": "Remote Sensing of Environment"
   },
   {
-    "title": "Untitled",
+    "title": "Slowdown in Antarctic mass loss from solid Earth and sea-level feedbacks",
     "authors": [
-      "Unknown"
+      "Larour",
+      "E.",
+      "Seroussi",
+      "H.",
+      "Adhikari",
+      "S.",
+      "Ivins",
+      "E.",
+      "Caron",
+      "L.",
+      "Morlighem",
+      "M.",
+      "& Schlegel",
+      "N."
     ],
     "year": 2019,
     "doi": "10.1126/science.aav7908",
-    "venue": "Unknown"
+    "venue": "Science"
   },
   {
-    "title": "The impact of model resolution on the simulated Holocene retreat of the southwestern Greenland ice sheet using the Ice Sheet System Model (ISSM). The Cryosphere",
+    "title": "The impact of model resolution on the simulated Holocene retreat of the southwestern Greenland ice sheet using the Ice Sheet System Model (ISSM)",
     "authors": [
       "Cuzzone",
       "J. K.",
@@ -1144,10 +2396,10 @@
     ],
     "year": 2019,
     "doi": "10.5194/tc-13-879-2019",
-    "venue": "13(3)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Modeling the response of northwest Greenland to enhanced ocean thermal forcing and subglacial discharge. The Cryosphere",
+    "title": "Modeling the response of northwest Greenland to enhanced ocean thermal forcing and subglacial discharge",
     "authors": [
       "Morlighem",
       "M.",
@@ -1162,10 +2414,10 @@
     ],
     "year": 2019,
     "doi": "10.5194/tc-13-723-2019",
-    "venue": "13(2)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Calving Induced Speedup of Petermann Glacier. Journal of Geophysical Research: Earth Surface",
+    "title": "Calving Induced Speedup of Petermann Glacier",
     "authors": [
       "Rückamp",
       "M.",
@@ -1180,10 +2432,10 @@
     ],
     "year": 2019,
     "doi": "10.1029/2018JF004775",
-    "venue": "124(1)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Implementation and performance of adaptive mesh refinement in the Ice Sheet System Model (ISSM v4.14). Geoscientific Model Development",
+    "title": "Implementation and performance of adaptive mesh refinement in the Ice Sheet System Model (ISSM v4.14)",
     "authors": [
       "dos Santos",
       "T. D.",
@@ -1198,10 +2450,10 @@
     ],
     "year": 2019,
     "doi": "10.5194/gmd-12-215-2019",
-    "venue": "12(1)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Comparative simulations of the evolution of the Greenland ice sheet under simplified Paris Agreement scenarios with the models SICOPOLIS and ISSM. Polar Science",
+    "title": "Comparative simulations of the evolution of the Greenland ice sheet under simplified Paris Agreement scenarios with the models SICOPOLIS and ISSM",
     "authors": [
       "Rückamp",
       "M.",
@@ -1212,10 +2464,10 @@
     ],
     "year": 2019,
     "doi": "10.1016/j.polar.2018.12.003",
-    "venue": "21"
+    "venue": "Polar Science"
   },
   {
-    "title": "Quantification of Surface Forcing Requirements for a Greenland Ice Sheet Model Using Uncertainty Analyses. Geophysical Research Letters",
+    "title": "Quantification of Surface Forcing Requirements for a Greenland Ice Sheet Model Using Uncertainty Analyses",
     "authors": [
       "Schlegel",
       "N.",
@@ -1224,19 +2476,28 @@
     ],
     "year": 2019,
     "doi": "10.1029/2019GL083532",
-    "venue": "46(16)"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Control of Ocean Temperature on Jakobshavn Isbræ's Present and Future Mass Loss",
     "authors": [
-      "Unknown"
+      "Bondzio",
+      "J. H.",
+      "Morlighem",
+      "M.",
+      "Seroussi",
+      "H.",
+      "Wood",
+      "M. H.",
+      "& Mouginot",
+      "J."
     ],
     "year": 2018,
     "doi": "10.1029/2018GL079827",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "A confined–unconfined aquifer model for subglacial hydrology and its application to the Northeast Greenland Ice Stream. The Cryosphere",
+    "title": "A confined–unconfined aquifer model for subglacial hydrology and its application to the Northeast Greenland Ice Stream",
     "authors": [
       "Beyer",
       "S.",
@@ -1251,19 +2512,24 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-3931-2018",
-    "venue": "12(12)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Untitled",
+    "title": "Retrieval of Englacial Firn Aquifer Thickness From Ice‐Penetrating Radar Sounding in Southeastern Greenland",
     "authors": [
-      "Unknown"
+      "Chu",
+      "W.",
+      "Schroeder",
+      "D. M.",
+      "& Siegfried",
+      "M. R."
     ],
     "year": 2018,
     "doi": "10.1029/2018GL079751",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "The effect of overshooting 1.5°C global warming on the mass loss of the Greenland ice sheet. Earth System Dynamics",
+    "title": "The effect of overshooting 1.5 °C global warming on the mass loss of the Greenland ice sheet",
     "authors": [
       "Rückamp",
       "M.",
@@ -1278,10 +2544,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/esd-9-1169-2018",
-    "venue": "9(4)"
+    "venue": "Earth System Dynamics"
   },
   {
-    "title": "Retreat of Thwaites Glacier",
+    "title": "Retreat of Thwaites Glacier, West Antarctica, over the next 100 years using various ice flow models, ice shelf melt scenarios and basal friction laws",
     "authors": [
       "Yu",
       "H.",
@@ -1294,10 +2560,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-3861-2018",
-    "venue": "West Antarctica"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Comparison of four calving laws to model Greenland outlet glaciers. The Cryosphere",
+    "title": "Comparison of four calving laws to model Greenland outlet glaciers",
     "authors": [
       "Choi",
       "Y.",
@@ -1310,10 +2576,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-3735-2018",
-    "venue": "12(12)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Exploration of Antarctic Ice Sheet 100-year contribution to sea level rise and associated model uncertainties using the ISSM framework. The Cryosphere",
+    "title": "Exploration of Antarctic Ice Sheet 100-year contribution to sea level rise and associated model uncertainties using the ISSM framework",
     "authors": [
       "Schlegel",
       "N.-J.",
@@ -1331,10 +2597,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-3511-2018",
-    "venue": "12(11)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "SHMIP The subglacial hydrology model intercomparison Project. Journal of Glaciology",
+    "title": "SHMIP The subglacial hydrology model intercomparison Project",
     "authors": [
       "DE FLEURIAN",
       "B.",
@@ -1352,19 +2618,30 @@
     ],
     "year": 2018,
     "doi": "10.1017/jog.2018.78",
-    "venue": "64(248)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Untitled",
+    "title": "Toward Improved Understanding of Changes in Greenland Outlet Glacier Shear Margin Dynamics in a Warming Climate",
     "authors": [
-      "Unknown"
+      "Lampkin",
+      "D. J.",
+      "Parizek",
+      "B.",
+      "Larour",
+      "E. Y.",
+      "Seroussi",
+      "H.",
+      "Joseph",
+      "C.",
+      "& Cavanagh",
+      "J. P."
     ],
     "year": 2018,
     "doi": "10.3389/feart.2018.00156",
-    "venue": "Unknown"
+    "venue": "Frontiers in Earth Science"
   },
   {
-    "title": "Representation of basal melting at the grounding line in ice flow models. The Cryosphere",
+    "title": "Representation of basal melting at the grounding line in ice flow models",
     "authors": [
       "Seroussi",
       "H.",
@@ -1373,10 +2650,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-3085-2018",
-    "venue": "12(10)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "What drives 20th century polar motion? Earth and Planetary Science Letters",
+    "title": "What drives 20th century polar motion?",
     "authors": [
       "Adhikari",
       "S.",
@@ -1394,19 +2671,34 @@
     ],
     "year": 2018,
     "doi": "10.1016/j.epsl.2018.08.059",
-    "venue": "502"
+    "venue": "Earth and Planetary Science Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Tracking the weight of Hurricane Harvey’s stormwater using GPS data",
     "authors": [
-      "Unknown"
+      "Milliner",
+      "C.",
+      "Materna",
+      "K.",
+      "Bürgmann",
+      "R.",
+      "Fu",
+      "Y.",
+      "Moore",
+      "A. W.",
+      "Bekaert",
+      "D.",
+      "Adhikari",
+      "S.",
+      "& Argus",
+      "D. F."
     ],
     "year": 2018,
     "doi": "10.1126/sciadv.aau2477",
-    "venue": "Unknown"
+    "venue": "Science Advances"
   },
   {
-    "title": "Atmosphere-driven ice sheet mass loss paced by topography: Insights from modelling the south-western Scandinavian Ice Sheet. Quaternary Science Reviews",
+    "title": "Atmosphere-driven ice sheet mass loss paced by topography: Insights from modelling the south-western Scandinavian Ice Sheet",
     "authors": [
       "Åkesson",
       "H.",
@@ -1421,10 +2713,10 @@
     ],
     "year": 2018,
     "doi": "10.1016/j.quascirev.2018.07.004",
-    "venue": "195"
+    "venue": "Quaternary Science Reviews"
   },
   {
-    "title": "Complex Basal Thermal Transition Near the Onset of Petermann Glacier",
+    "title": "Complex Basal Thermal Transition Near the Onset of Petermann Glacier, Greenland",
     "authors": [
       "Chu",
       "W.",
@@ -1439,10 +2731,10 @@
     ],
     "year": 2018,
     "doi": "10.1029/2017JF004561",
-    "venue": "Greenland. Journal of Geophysical Research: Earth Surface"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Implementation of higher-order vertical finite elements in ISSM v4.13 for improved ice sheet flow modeling over paleoclimate timescales. Geoscientific Model Development",
+    "title": "Implementation of higher-order vertical finite elements in ISSM v4.13 for improved ice sheet flow modeling over paleoclimate timescales",
     "authors": [
       "Cuzzone",
       "J. K.",
@@ -1457,10 +2749,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/gmd-11-1683-2018",
-    "venue": "11(5)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Simulating ice thickness and velocity evolution of Upernavik Isstrøm 1849–2012 by forcing prescribed terminus positions in ISSM. The Cryosphere",
+    "title": "Simulating ice thickness and velocity evolution of Upernavik Isstrøm 1849–2012 by forcing prescribed terminus positions in ISSM",
     "authors": [
       "Haubner",
       "K.",
@@ -1478,10 +2770,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-1511-2018",
-    "venue": "12(4)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Design and results of the ice sheet model initialisation experiments initMIP-Greenland: an ISMIP6 intercomparison. The Cryosphere",
+    "title": "Design and results of the ice sheet model initialisation experiments initMIP-Greenland: an ISMIP6 intercomparison",
     "authors": [
       "Goelzer",
       "H.",
@@ -1499,10 +2791,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-1433-2018",
-    "venue": "12(4)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "ObservationnDriven Estimation of the Spatial Variability of 20th Century Sea Level Rise. Journal of Geophysical Research: Oceans",
+    "title": "Observation‐Driven Estimation of the Spatial Variability of 20th Century Sea Level Rise",
     "authors": [
       "Hamlington",
       "B. D.",
@@ -1520,10 +2812,10 @@
     ],
     "year": 2018,
     "doi": "10.1002/2017JC013486",
-    "venue": "123(3)"
+    "venue": "Journal of Geophysical Research: Oceans"
   },
   {
-    "title": "Implementing an empirical scalar constitutive relation for ice with flow-induced polycrystalline anisotropy in large-scale ice sheet models. The Cryosphere",
+    "title": "Implementing an empirical scalar constitutive relation for ice with flow-induced polycrystalline anisotropy in large-scale ice sheet models",
     "authors": [
       "Graham",
       "F. S.",
@@ -1536,10 +2828,10 @@
     ],
     "year": 2018,
     "doi": "10.5194/tc-12-1047-2018",
-    "venue": "12(3)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "GIA Model Statistics for GRACE Hydrology",
+    "title": "GIA Model Statistics for GRACE Hydrology, Cryosphere, and Ocean Science",
     "authors": [
       "Caron",
       "L.",
@@ -1556,10 +2848,10 @@
     ],
     "year": 2018,
     "doi": "10.1002/2017GL076644",
-    "venue": "Cryosphere"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "A JavaScript API for the Ice Sheet System Model (ISSM) 4.11: towards an online interactive model for the cryosphere community. Geoscientific Model Development",
+    "title": "A JavaScript API for the Ice Sheet System Model (ISSM) 4.11: towards an online interactive model for the cryosphere community",
     "authors": [
       "Larour",
       "E.",
@@ -1577,19 +2869,24 @@
     ],
     "year": 2017,
     "doi": "10.5194/gmd-10-4393-2017",
-    "venue": "10(12)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Untitled",
+    "title": "Should coastal planners have concern over where land ice is melting?",
     "authors": [
-      "Unknown"
+      "Larour",
+      "E.",
+      "Ivins",
+      "E. R.",
+      "& Adhikari",
+      "S."
     ],
     "year": 2017,
     "doi": "10.1126/sciadv.1700537",
-    "venue": "Unknown"
+    "venue": "Science Advances"
   },
   {
-    "title": "Modeling the Response of Nioghalvfjerdsfjorden and Zachariae Isstrøm Glaciers",
+    "title": "Modeling the Response of Nioghalvfjerdsfjorden and Zachariae Isstrøm Glaciers, Greenland, to Ocean Forcing Over the Next Century",
     "authors": [
       "Choi",
       "Y.",
@@ -1604,10 +2901,10 @@
     ],
     "year": 2017,
     "doi": "10.1002/2017GL075174",
-    "venue": "Greenland"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "A usability case study of algorithmic differentiation tools on the ISSM ice sheet model. Optimization Methods and Software",
+    "title": "A usability case study of algorithmic differentiation tools on the ISSM ice sheet model",
     "authors": [
       "Hück",
       "A.",
@@ -1626,19 +2923,82 @@
     ],
     "year": 2017,
     "doi": "10.1080/10556788.2017.1396602",
-    "venue": "33(4–6)"
+    "venue": "Optimization Methods and Software"
   },
   {
-    "title": "Untitled",
+    "title": "BedMachine v3: Complete Bed Topography and Ocean Bathymetry Mapping of Greenland From Multibeam Echo Sounding Combined With Mass Conservation",
     "authors": [
-      "Unknown"
+      "Morlighem",
+      "M.",
+      "Williams",
+      "C. N.",
+      "Rignot",
+      "E.",
+      "An",
+      "L.",
+      "Arndt",
+      "J. E.",
+      "Bamber",
+      "J. L.",
+      "Catania",
+      "G.",
+      "Chauché",
+      "N.",
+      "Dowdeswell",
+      "J. A.",
+      "Dorschel",
+      "B.",
+      "Fenty",
+      "I.",
+      "Hogan",
+      "K.",
+      "Howat",
+      "I.",
+      "Hubbard",
+      "A.",
+      "Jakobsson",
+      "M.",
+      "Jordan",
+      "T. M.",
+      "Kjeldsen",
+      "K. K.",
+      "Millan",
+      "R.",
+      "Mayer",
+      "L.",
+      "Mouginot",
+      "J.",
+      "Noël",
+      "B. P. Y.",
+      "O'Cofaigh",
+      "C.",
+      "Palmer",
+      "S.",
+      "Rysgaard",
+      "S.",
+      "Seroussi",
+      "H.",
+      "Siegert",
+      "M. J.",
+      "Slabon",
+      "P.",
+      "Straneo",
+      "F.",
+      "van den Broeke",
+      "M. R.",
+      "Weinrebe",
+      "W.",
+      "Wood",
+      "M.",
+      "& Zinglersen",
+      "K. B."
     ],
     "year": 2017,
     "doi": "10.1002/2017GL074954",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Influence of a West Antarctic mantle plume on ice sheet basal conditions. Journal of Geophysical Research: Solid Earth",
+    "title": "Influence of a West Antarctic mantle plume on ice sheet basal conditions",
     "authors": [
       "Seroussi",
       "H.",
@@ -1651,10 +3011,10 @@
     ],
     "year": 2017,
     "doi": "10.1002/2017JB014423",
-    "venue": "122(9)"
+    "venue": "Journal of Geophysical Research: Solid Earth"
   },
   {
-    "title": "The mechanisms behind Jakobshavn Isbræ’s acceleration and mass loss: A 3nD thermomechanical model study. Geophysical Research Letters",
+    "title": "The mechanisms behind Jakobshavn Isbræ's acceleration and mass loss: A 3‐D thermomechanical model study",
     "authors": [
       "Bondzio",
       "J. H.",
@@ -1672,10 +3032,10 @@
     ],
     "year": 2017,
     "doi": "10.1002/2017GL073309",
-    "venue": "44(12)"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Continued retreat of Thwaites Glacier",
+    "title": "Continued retreat of Thwaites Glacier, West Antarctica, controlled by bed topography and ocean circulation",
     "authors": [
       "Seroussi",
       "H.",
@@ -1694,10 +3054,10 @@
     ],
     "year": 2017,
     "doi": "10.1002/2017GL072910",
-    "venue": "West Antarctica"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Iceberg calving of Thwaites Glacier",
+    "title": "Iceberg calving of Thwaites Glacier, West Antarctica: full-Stokes modeling combined with linear elastic fracture mechanics",
     "authors": [
       "Yu",
       "H.",
@@ -1710,10 +3070,10 @@
     ],
     "year": 2017,
     "doi": "10.5194/tc-11-1283-2017",
-    "venue": "West Antarctica: full-Stokes modeling combined with linear elastic fracture mechanics. The Cryosphere"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "How accurate are estimates of glacier ice thickness? Results from ITMIX",
+    "title": "How accurate are estimates of glacier ice thickness? Results from ITMIX, the Ice Thickness Models Intercomparison eXperiment",
     "authors": [
       "Farinotti",
       "D.",
@@ -1731,10 +3091,10 @@
     ],
     "year": 2017,
     "doi": "10.5194/tc-11-949-2017",
-    "venue": "the Ice Thickness Models Intercomparison eXperiment. The Cryosphere"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Simulating the evolution of Hardangerjøkulen ice cap in southern Norway since the mid-Holocene and its sensitivity to climate change. The Cryosphere",
+    "title": "Simulating the evolution of Hardangerjøkulen ice cap in southern Norway since the mid-Holocene and its sensitivity to climate change",
     "authors": [
       "Åkesson",
       "H.",
@@ -1747,10 +3107,10 @@
     ],
     "year": 2017,
     "doi": "10.5194/tc-11-281-2017",
-    "venue": "11(1)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Optimal numerical solvers for transient simulations of ice flow using the Ice Sheet System Model (ISSM versions 4.2.5 and 4.11). Geoscientific Model Development",
+    "title": "Optimal numerical solvers for transient simulations of ice flow using the Ice Sheet System Model (ISSM versions 4.2.5 and 4.11)",
     "authors": [
       "Habbal",
       "F.",
@@ -1767,19 +3127,40 @@
     ],
     "year": 2017,
     "doi": "10.5194/gmd-10-155-2017",
-    "venue": "10(1)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Untitled",
+    "title": "Mass transport waves amplified by intense Greenland melt and detected in solid Earth deformation",
     "authors": [
-      "Unknown"
+      "Adhikari",
+      "S.",
+      "Ivins",
+      "E. R.",
+      "& Larour",
+      "E."
+    ],
+    "year": 2017,
+    "doi": "10.1002/2017GL073478",
+    "venue": "Geophysical Research Letters"
+  },
+  {
+    "title": "Are long tide gauge records in the wrong place to measure global mean sea level rise?",
+    "authors": [
+      "Thompson",
+      "P. R.",
+      "Hamlington",
+      "B. D.",
+      "Landerer",
+      "F. W.",
+      "& Adhikari",
+      "S."
     ],
     "year": 2016,
     "doi": "10.1002/2016GL070552",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "An approach to computing discrete adjoints for MPI-parallelized models applied to Ice Sheet System Model 4.11. Geoscientific Model Development",
+    "title": "An approach to computing discrete adjoints for MPI-parallelized models applied to Ice Sheet System Model 4.11",
     "authors": [
       "Larour",
       "E.",
@@ -1794,19 +3175,30 @@
     ],
     "year": 2016,
     "doi": "10.5194/gmd-9-3907-2016",
-    "venue": "9(11)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Untitled",
+    "title": "Extensive winter subglacial water storage beneath the Greenland Ice Sheet",
     "authors": [
-      "Unknown"
+      "Chu",
+      "W.",
+      "Schroeder",
+      "D. M.",
+      "Seroussi",
+      "H.",
+      "Creyts",
+      "T. T.",
+      "Palmer",
+      "S. J.",
+      "& Bell",
+      "R. E."
     ],
     "year": 2016,
     "doi": "10.1002/2016GL071538",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "A modeling study of the effect of runoff variability on the effective pressure beneath Russell Glacier",
+    "title": "A modeling study of the effect of runoff variability on the effective pressure beneath Russell Glacier, West Greenland",
     "authors": [
       "de Fleurian",
       "B.",
@@ -1824,19 +3216,10 @@
     ],
     "year": 2016,
     "doi": "10.1002/2016JF003842",
-    "venue": "West Greenland. Journal of Geophysical Research: Earth Surface"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Untitled",
-    "authors": [
-      "Unknown"
-    ],
-    "year": 2016,
-    "doi": "10.1002/2016GL070552",
-    "venue": "Unknown"
-  },
-  {
-    "title": "Adaptively constraining radar attenuation and temperature across the Thwaites Glacier catchment using bed echoes. Journal of Glaciology",
+    "title": "Adaptively constraining radar attenuation and temperature across the Thwaites Glacier catchment using bed echoes",
     "authors": [
       "SCHROEDER",
       "D. M.",
@@ -1849,10 +3232,10 @@
     ],
     "year": 2016,
     "doi": "10.1017/jog.2016.100",
-    "venue": "62(236)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Application of GRACE to the assessment of model-based estimates of monthly Greenland Ice Sheet mass balance (2003–2012). The Cryosphere",
+    "title": "Application of GRACE to the assessment of model-based estimates of monthly Greenland Ice Sheet mass balance (2003–2012)",
     "authors": [
       "Schlegel",
       "N.-J.",
@@ -1871,10 +3254,10 @@
     ],
     "year": 2016,
     "doi": "10.5194/tc-10-1965-2016",
-    "venue": "10(5)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "On ISSM and leveraging the Cloud towards faster quantification of the uncertainty in ice-sheet mass balance projections. Computers & Geosciences",
+    "title": "On ISSM and leveraging the Cloud towards faster quantification of the uncertainty in ice-sheet mass balance projections",
     "authors": [
       "Larour",
       "E.",
@@ -1883,10 +3266,10 @@
     ],
     "year": 2016,
     "doi": "10.1016/j.cageo.2016.08.007",
-    "venue": "96"
+    "venue": "Computers & Geosciences"
   },
   {
-    "title": "A synthesis of the basal thermal state of the Greenland Ice Sheet. Journal of Geophysical Research: Earth Surface",
+    "title": "A synthesis of the basal thermal state of the Greenland Ice Sheet",
     "authors": [
       "MacGregor",
       "J. A.",
@@ -1904,10 +3287,10 @@
     ],
     "year": 2016,
     "doi": "10.1002/2015JF003803",
-    "venue": "121(7)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Greenland Ice Sheet seasonal and spatial mass variability from model simulations and GRACE (2003–2012). The Cryosphere",
+    "title": "Greenland Ice Sheet seasonal and spatial mass variability from model simulations and GRACE (2003–2012)",
     "authors": [
       "Alexander",
       "P. M.",
@@ -1924,10 +3307,10 @@
     ],
     "year": 2016,
     "doi": "10.5194/tc-10-1259-2016",
-    "venue": "10(3)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Modeling of oceanninduced ice melt rates of five west Greenland glaciers over the past two decades. Geophysical Research Letters",
+    "title": "Modeling of ocean‐induced ice melt rates of five west Greenland glaciers over the past two decades",
     "authors": [
       "Rignot",
       "E.",
@@ -1945,19 +3328,22 @@
     ],
     "year": 2016,
     "doi": "10.1002/2016GL068784",
-    "venue": "43(12)"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Climate-driven polar motion: 2003–2015",
     "authors": [
-      "Unknown"
+      "Adhikari",
+      "S.",
+      "& Ivins",
+      "E. R."
     ],
     "year": 2016,
     "doi": "10.1126/sciadv.1501693",
-    "venue": "Unknown"
+    "venue": "Science Advances"
   },
   {
-    "title": "Modeling of Store Gletscher’s calving dynamics",
+    "title": "Modeling of Store Gletscher's calving dynamics, West Greenland, in response to ocean thermal forcing",
     "authors": [
       "Morlighem",
       "M.",
@@ -1976,10 +3362,10 @@
     ],
     "year": 2016,
     "doi": "10.1002/2016GL067695",
-    "venue": "West Greenland"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change. Geoscientific Model Development",
+    "title": "ISSM-SESAW v1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change",
     "authors": [
       "Adhikari",
       "S.",
@@ -1990,10 +3376,10 @@
     ],
     "year": 2016,
     "doi": "10.5194/gmd-9-1087-2016",
-    "venue": "9(3)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Plastic bed beneath Hofsjökull Ice Cap",
+    "title": "Plastic bed beneath Hofsjökull Ice Cap, central Iceland, and the sensitivity of ice flow to surface meltwater flux",
     "authors": [
       "MINCHEW",
       "B.",
@@ -2011,10 +3397,10 @@
     ],
     "year": 2016,
     "doi": "10.1017/jog.2016.26",
-    "venue": "central Iceland"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Modelling calving front dynamics using a level-set method: application to Jakobshavn Isbræ",
+    "title": "Modelling calving front dynamics using a level-set method: application to Jakobshavn Isbræ, West Greenland",
     "authors": [
       "Bondzio",
       "J. H.",
@@ -2033,10 +3419,10 @@
     ],
     "year": 2016,
     "doi": "10.5194/tc-10-497-2016",
-    "venue": "West Greenland. The Cryosphere"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "A constitutive framework for predicting weakening and reduced buttressing of ice shelves based on observations of the progressive deterioration of the remnant Larsen B Ice Shelf. Geophysical Research Letters",
+    "title": "A constitutive framework for predicting weakening and reduced buttressing of ice shelves based on observations of the progressive deterioration of the remnant Larsen B Ice Shelf",
     "authors": [
       "Borstad",
       "C.",
@@ -2053,10 +3439,10 @@
     ],
     "year": 2016,
     "doi": "10.1002/2015GL067365",
-    "venue": "43(5)"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "A Multidisciplinary Perspective on Climate Model Evaluation For Antarctica. Bulletin of the American Meteorological Society",
+    "title": "A Multidisciplinary Perspective on Climate Model Evaluation For Antarctica",
     "authors": [
       "Bracegirdle",
       "T. J.",
@@ -2074,10 +3460,10 @@
     ],
     "year": 2016,
     "doi": "10.1175/BAMS-D-15-00108.1",
-    "venue": "97(2)"
+    "venue": "Bulletin of the American Meteorological Society"
   },
   {
-    "title": "A new sub-grid surface mass balance and flux model for continental-scale ice sheet modelling: testing and last glacial cycle. Geoscientific Model Development",
+    "title": "A new sub-grid surface mass balance and flux model for continental-scale ice sheet modelling: testing and last glacial cycle",
     "authors": [
       "Le Morzadec",
       "K.",
@@ -2090,10 +3476,10 @@
     ],
     "year": 2015,
     "doi": "10.5194/gmd-8-3199-2015",
-    "venue": "8(10)"
+    "venue": "Geoscientific Model Development"
   },
   {
-    "title": "Radar attenuation and temperature within the Greenland Ice Sheet. Journal of Geophysical Research: Earth Surface",
+    "title": "Radar attenuation and temperature within the Greenland Ice Sheet",
     "authors": [
       "MacGregor",
       "J. A.",
@@ -2111,10 +3497,10 @@
     ],
     "year": 2015,
     "doi": "10.1002/2014JF003418",
-    "venue": "120(6)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "The evolving instability of the remnant Larsen B Ice Shelf and its tributary glaciers. Earth and Planetary Science Letters",
+    "title": "The evolving instability of the remnant Larsen B Ice Shelf and its tributary glaciers",
     "authors": [
       "Khazendar",
       "A.",
@@ -2129,10 +3515,10 @@
     ],
     "year": 2015,
     "doi": "10.1016/j.epsl.2015.03.014",
-    "venue": "419"
+    "venue": "Earth and Planetary Science Letters"
   },
   {
-    "title": "Enthalpy benchmark experiments for numerical ice sheet models. The Cryosphere",
+    "title": "Enthalpy benchmark experiments for numerical ice sheet models",
     "authors": [
       "Kleiner",
       "T.",
@@ -2145,10 +3531,10 @@
     ],
     "year": 2015,
     "doi": "10.5194/tc-9-217-2015",
-    "venue": "9(1)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Ice discharge uncertainties in Northeast Greenland from boundary conditions and climate forcing of an ice flow model. Journal of Geophysical Research: Earth Surface",
+    "title": "Ice discharge uncertainties in Northeast Greenland from boundary conditions and climate forcing of an ice flow model",
     "authors": [
       "Schlegel",
       "N. nJ.",
@@ -2163,10 +3549,10 @@
     ],
     "year": 2015,
     "doi": "10.1002/2014JF003359",
-    "venue": "120(1)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Inferred basal friction and surface mass balance of the Northeast Greenland Ice Stream using data assimilation of ICESat (Ice Cloud and land Elevation Satellite) surface altimetry and ISSM (Ice Sheet System Model). The Cryosphere",
+    "title": "Inferred basal friction and surface mass balance of the Northeast Greenland Ice Stream using data assimilation of ICESat (Ice Cloud and land Elevation Satellite) surface altimetry and ISSM (Ice Sheet System Model)",
     "authors": [
       "Larour",
       "E.",
@@ -2184,10 +3570,10 @@
     ],
     "year": 2014,
     "doi": "10.5194/tc-8-2335-2014",
-    "venue": "8(6)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Modeling the Evolution of Polar Ice Sheets. Eos",
+    "title": "Modeling the Evolution of Polar Ice Sheets",
     "authors": [
       "Larour",
       "E.",
@@ -2198,10 +3584,10 @@
     ],
     "year": 2014,
     "doi": "10.1002/2014EO450005",
-    "venue": "Transactions American Geophysical Union"
+    "venue": "Eos, Transactions American Geophysical Union"
   },
   {
-    "title": "Hydrostatic grounding line parameterization in ice sheet models. The Cryosphere",
+    "title": "Hydrostatic grounding line parameterization in ice sheet models",
     "authors": [
       "Seroussi",
       "H.",
@@ -2216,10 +3602,10 @@
     ],
     "year": 2014,
     "doi": "10.5194/tc-8-2075-2014",
-    "venue": "8(6)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "Representation of sharp rifts and faults mechanics in modeling ice shelf flow dynamics: Application to Brunt/StancombnWills Ice Shelf",
+    "title": "Representation of sharp rifts and faults mechanics in modeling ice shelf flow dynamics: Application to Brunt/Stancomb‐Wills Ice Shelf, Antarctica",
     "authors": [
       "Larour",
       "E.",
@@ -2236,30 +3622,10 @@
     ],
     "year": 2014,
     "doi": "10.1002/2014JF003157",
-    "venue": "Antarctica. Journal of Geophysical Research: Earth Surface"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Seabed topography beneath Larsen C Ice Shelf from seismic soundings. The Cryosphere",
-    "authors": [
-      "Brisbourne",
-      "A. M.",
-      "Smith",
-      "A. M.",
-      "King",
-      "E. C.",
-      "Nicholls",
-      "K. W.",
-      "Holland",
-      "P. R.",
-      "& Makinson",
-      "K."
-    ],
-    "year": 2014,
-    "doi": "10.5194/tc-8-1-2014",
-    "venue": "8(1)"
-  },
-  {
-    "title": "Improved representation of East Antarctic surface mass balance in a regional atmospheric climate model. Journal of Glaciology",
+    "title": "Improved representation of East Antarctic surface mass balance in a regional atmospheric climate model",
     "authors": [
       "Van Wessem",
       "J. M.",
@@ -2277,10 +3643,10 @@
     ],
     "year": 2014,
     "doi": "10.3189/2014JoG14J051",
-    "venue": "60(222)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Deeply incised submarine glacial valleys beneath the Greenland ice sheet. Nature Geoscience",
+    "title": "Deeply incised submarine glacial valleys beneath the Greenland ice sheet",
     "authors": [
       "Morlighem",
       "M.",
@@ -2295,10 +3661,10 @@
     ],
     "year": 2014,
     "doi": "10.1038/ngeo2167",
-    "venue": "7(6)"
+    "venue": "Nature Geoscience"
   },
   {
-    "title": "Future Antarctic bed topography and its implications for ice sheet dynamics. Solid Earth",
+    "title": "Future Antarctic bed topography and its implications for ice sheet dynamics",
     "authors": [
       "Adhikari",
       "S.",
@@ -2315,10 +3681,10 @@
     ],
     "year": 2014,
     "doi": "10.5194/se-5-569-2014",
-    "venue": "5(1)"
+    "venue": "Solid Earth"
   },
   {
-    "title": "Widespread",
+    "title": "Widespread, rapid grounding line retreat of Pine Island, Thwaites, Smith, and Kohler glaciers, West Antarctica, from 1992 to 2011",
     "authors": [
       "Rignot",
       "E.",
@@ -2333,10 +3699,10 @@
     ],
     "year": 2014,
     "doi": "10.1002/2014GL060140",
-    "venue": "rapid grounding line retreat of Pine Island"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "High-resolution ice-thickness mapping in South Greenland. Annals of Glaciology",
+    "title": "High-resolution ice-thickness mapping in South Greenland",
     "authors": [
       "Morlighem",
       "M.",
@@ -2351,10 +3717,32 @@
     ],
     "year": 2014,
     "doi": "10.3189/2014AoG67A088",
-    "venue": "55(67)"
+    "venue": "Annals of Glaciology"
   },
   {
-    "title": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf. The Cryosphere",
+    "title": "Sensitivity of the dynamics of Pine Island Glacier, West Antarctica, to climate forcing for the next 50 years",
+    "authors": [
+      "Seroussi",
+      "H.",
+      "Morlighem",
+      "M.",
+      "Rignot",
+      "E.",
+      "Mouginot",
+      "J.",
+      "Larour",
+      "E.",
+      "Schodlok",
+      "M.",
+      "& Khazendar",
+      "A."
+    ],
+    "year": 2014,
+    "doi": "10.5194/tc-8-1699-2014",
+    "venue": "The Cryosphere"
+  },
+  {
+    "title": "Creep deformation and buttressing capacity of damaged ice shelves: theory and application to Larsen C ice shelf",
     "authors": [
       "Borstad",
       "C. P.",
@@ -2367,10 +3755,10 @@
     ],
     "year": 2013,
     "doi": "10.5194/tc-7-1931-2013",
-    "venue": "7(6)"
+    "venue": "The Cryosphere"
   },
   {
-    "title": "High-resolution bed topography mapping of Russell Glacier",
+    "title": "High-resolution bed topography mapping of Russell Glacier, Greenland, inferred from Operation IceBridge data",
     "authors": [
       "Morlighem",
       "M.",
@@ -2389,10 +3777,10 @@
     ],
     "year": 2013,
     "doi": "10.3189/2013JoG12J235",
-    "venue": "Greenland"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Dependence of century-scale projections of the Greenland ice sheet on its thermal regime. Journal of Glaciology",
+    "title": "Dependence of century-scale projections of the Greenland ice sheet on its thermal regime",
     "authors": [
       "Seroussi",
       "H.",
@@ -2409,10 +3797,10 @@
     ],
     "year": 2013,
     "doi": "10.3189/2013JoG13J054",
-    "venue": "59(218)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Inversion of basal friction in Antarctica using exact and incomplete adjoints of a higher-order model. Journal of Geophysical Research: Earth Surface",
+    "title": "Inversion of basal friction in Antarctica using exact and incomplete adjoints of a higher‐order model",
     "authors": [
       "Morlighem",
       "M.",
@@ -2425,10 +3813,10 @@
     ],
     "year": 2013,
     "doi": "10.1002/jgrf.20125",
-    "venue": "118(3)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Insights into spatial sensitivities of ice mass response to environmental change from the SeaRISE ice sheet modeling project II: Greenland. Journal of Geophysical Research: Earth Surface",
+    "title": "Insights into spatial sensitivities of ice mass response to environmental change from the SeaRISE ice sheet modeling project II: Greenland",
     "authors": [
       "Nowicki",
       "S.",
@@ -2446,10 +3834,10 @@
     ],
     "year": 2013,
     "doi": "10.1002/jgrf.20076",
-    "venue": "118(2)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Insights into spatial sensitivities of ice mass response to environmental change from the SeaRISE ice sheet modeling project I: Antarctica. Journal of Geophysical Research: Earth Surface",
+    "title": "Insights into spatial sensitivities of ice mass response to environmental change from the SeaRISE ice sheet modeling project I: Antarctica",
     "authors": [
       "Nowicki",
       "S.",
@@ -2467,10 +3855,10 @@
     ],
     "year": 2013,
     "doi": "10.1002/jgrf.20081",
-    "venue": "118(2)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Decadalnscale sensitivity of Northeast Greenland ice flow to errors insurface mass balance using ISSM. Journal of Geophysical Research: Earth Surface",
+    "title": "Decadal‐scale sensitivity of Northeast Greenland ice flow to errors in surface mass balance using ISSM",
     "authors": [
       "Schlegel",
       "N.-J.",
@@ -2485,10 +3873,10 @@
     ],
     "year": 2013,
     "doi": "10.1002/jgrf.20062",
-    "venue": "118(2)"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Ice-sheet model sensitivities to environmental forcing and their use in projecting future sea level (the SeaRISE project). Journal of Glaciology",
+    "title": "Ice-sheet model sensitivities to environmental forcing and their use in projecting future sea level (the SeaRISE project)",
     "authors": [
       "Bindschadler",
       "R. A.",
@@ -2506,10 +3894,10 @@
     ],
     "year": 2013,
     "doi": "10.3189/2013JoG12J125",
-    "venue": "59(214)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Grounding-line migration in plan-view marine ice-sheet models: results of the ice2sea MISMIP3d intercomparison. Journal of Glaciology",
+    "title": "Grounding-line migration in plan-view marine ice-sheet models: results of the ice2sea MISMIP3d intercomparison",
     "authors": [
       "Pattyn",
       "F.",
@@ -2527,10 +3915,10 @@
     ],
     "year": 2013,
     "doi": "10.3189/2013JoG12J129",
-    "venue": "59(215)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Ice flow sensitivity to geothermal heat flux of Pine Island Glacier",
+    "title": "Ice flow sensitivity to geothermal heat flux of Pine Island Glacier, Antarctica",
     "authors": [
       "Larour",
       "E.",
@@ -2545,28 +3933,52 @@
     ],
     "year": 2012,
     "doi": "10.1029/2012JF002371",
-    "venue": "Antarctica. Journal of Geophysical Research: Earth Surface"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Untitled",
+    "title": "A damage mechanics assessment of the Larsen B ice shelf prior to collapse: Toward a physically‐based calving law",
     "authors": [
-      "Unknown"
+      "Borstad",
+      "C. P.",
+      "Khazendar",
+      "A.",
+      "Larour",
+      "E.",
+      "Morlighem",
+      "M.",
+      "Rignot",
+      "E.",
+      "Schodlok",
+      "M. P.",
+      "& Seroussi",
+      "H."
     ],
     "year": 2012,
     "doi": "10.1029/2012GL053317",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Untitled",
+    "title": "Sensitivity Analysis of Pine Island Glacier ice flow using ISSM and DAKOTA",
     "authors": [
-      "Unknown"
+      "Larour",
+      "E.",
+      "Schiermeier",
+      "J.",
+      "Rignot",
+      "E.",
+      "Seroussi",
+      "H.",
+      "Morlighem",
+      "M.",
+      "& Paden",
+      "J."
     ],
     "year": 2012,
     "doi": "10.1029/2011JF002146",
-    "venue": "Unknown"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Coupling ice flow models of varying orders of complexity with the Tiling method. Journal of Glaciology",
+    "title": "Coupling ice flow models of varying orders of complexity with the Tiling method",
     "authors": [
       "Seroussi",
       "H.",
@@ -2583,10 +3995,10 @@
     ],
     "year": 2012,
     "doi": "10.3189/2012JoG11J195",
-    "venue": "58(210)"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Continental scale",
+    "title": "Continental scale, high order, high spatial resolution, ice sheet modeling using the Ice Sheet System Model (ISSM)",
     "authors": [
       "Larour",
       "E.",
@@ -2599,10 +4011,10 @@
     ],
     "year": 2012,
     "doi": "10.1029/2011JF002140",
-    "venue": "high order"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "A mass conservation approach for mapping glacier ice thickness. Geophysical Research Letters",
+    "title": "A mass conservation approach for mapping glacier ice thickness",
     "authors": [
       "Morlighem",
       "M.",
@@ -2619,10 +4031,10 @@
     ],
     "year": 2011,
     "doi": "10.1029/2011GL048659",
-    "venue": "38(19)"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Ice flux divergence anomalies on 79north Glacier",
+    "title": "Ice flux divergence anomalies on 79north Glacier, Greenland",
     "authors": [
       "Seroussi",
       "H.",
@@ -2641,10 +4053,10 @@
     ],
     "year": 2011,
     "doi": "10.1029/2011GL047338",
-    "venue": "Greenland. Geophysical Research Letters"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Acceleration and spatial rheology of Larsen C Ice Shelf",
+    "title": "Acceleration and spatial rheology of Larsen C Ice Shelf, Antarctic Peninsula",
     "authors": [
       "Khazendar",
       "A.",
@@ -2655,10 +4067,10 @@
     ],
     "year": 2011,
     "doi": "10.1029/2011GL046775",
-    "venue": "Antarctic Peninsula. Geophysical Research Letters"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Spatial patterns of basal drag inferred using control methods from a full-Stokes and simpler models for Pine Island Glacier",
+    "title": "Spatial patterns of basal drag inferred using control methods from a full‐Stokes and simpler models for Pine Island Glacier, West Antarctica",
     "authors": [
       "Morlighem",
       "M.",
@@ -2675,10 +4087,10 @@
     ],
     "year": 2010,
     "doi": "10.1029/2010GL043853",
-    "venue": "West Antarctica. Geophysical Research Letters"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Roles of marine ice",
+    "title": "Roles of marine ice, rheology, and fracture in the flow and stability of the Brunt/Stancomb‐Wills Ice Shelf",
     "authors": [
       "Khazendar",
       "A.",
@@ -2689,29 +4101,34 @@
     ],
     "year": 2009,
     "doi": "10.1029/2008JF001124",
-    "venue": "rheology"
+    "venue": "Journal of Geophysical Research: Earth Surface"
   },
   {
-    "title": "Untitled",
+    "title": "Larsen B Ice Shelf rheology preceding its disintegration inferred by a control method",
     "authors": [
-      "Unknown"
+      "Khazendar",
+      "A.",
+      "Rignot",
+      "E.",
+      "& Larour",
+      "E."
     ],
     "year": 2007,
     "doi": "10.1029/2007GL030980",
-    "venue": "Unknown"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Rheology of the Ronne Ice Shelf",
+    "title": "Rheology of the Ronne Ice Shelf, Antarctica, inferred from satellite radar interferometry data using an inverse control method",
     "authors": [
       "Larour",
       "E."
     ],
     "year": 2005,
     "doi": "10.1029/2004GL021693",
-    "venue": "Antarctica"
+    "venue": "Geophysical Research Letters"
   },
   {
-    "title": "Processes involved in the propagation of rifts near Hemmen Ice Rise",
+    "title": "Processes involved in the propagation of rifts near Hemmen Ice Rise, Ronne Ice Shelf, Antarctica",
     "authors": [
       "Larour",
       "E.",
@@ -2722,16 +4139,16 @@
     ],
     "year": 2004,
     "doi": "10.3189/172756504781829837",
-    "venue": "Ronne Ice Shelf"
+    "venue": "Journal of Glaciology"
   },
   {
-    "title": "Modelling of rift propagation on Ronne Ice Shelf",
+    "title": "Modelling of rift propagation on Ronne Ice Shelf, Antarctica, and sensitivity to climate change",
     "authors": [
       "Larour",
       "E."
     ],
     "year": 2004,
     "doi": "10.1029/2004GL020077",
-    "venue": "Antarctica"
+    "venue": "Geophysical Research Letters"
   }
 ]
