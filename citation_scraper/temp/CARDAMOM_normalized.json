@@ -1,5 +1,35 @@
 [
   {
+    "title": "Satellite‐Constrained Reanalysis Reveals CO2 Versus Climate Process Compensation Across the Global Land Carbon Sink",
+    "authors": [
+      "T. Eren Bilir",
+      "A. Anthony Bloom",
+      "Alexandra G. Konings",
+      "Junjie Liu",
+      "Nicholas C. Parazoo",
+      "Gregory R. Quetin",
+      "Alexander J. Norton",
+      "Matthew A. Worden",
+      "Paul A. Levine",
+      "Shuang Ma",
+      "Renato K. Braghiere",
+      "Marcos Longo",
+      "Kevin Bowman",
+      "Sassan Saatchi",
+      "David S. Schimel",
+      "Charles E. Miller",
+      "Michael O’Sullivan",
+      "Yanghui Kang",
+      "Sudhanshu Pandey",
+      "Alex J. Patton",
+      "Yan Yang",
+      "Yanlan Liu"
+    ],
+    "year": "2025",
+    "doi": "10.1029/2025av001689",
+    "venue": "AGU Advances"
+  },
+  {
     "title": "Inferred drought‐induced plant allocation shifts and their impact on drought legacy at a tropical forest site",
     "authors": [
       "Matthew A. Worden",
@@ -246,6 +276,33 @@
     "venue": "Global Ecology and Biogeography"
   },
   {
+    "title": "Improved process representation of leaf phenology significantly shifts climate sensitivity of ecosystem carbon balance",
+    "authors": [
+      "Alexander J. Norton",
+      "A. Anthony Bloom",
+      "Nicholas C. Parazoo",
+      "Paul A. Levine",
+      "Shuang Ma",
+      "Renato K. Braghiere",
+      "T. Luke Smallman"
+    ],
+    "year": "2023",
+    "doi": "10.5194/bg-20-2455-2023",
+    "venue": "Biogeosciences"
+  },
+  {
+    "title": "A decrease in the age of respired carbon from the terrestrial biosphere and increase in the asymmetry of its distribution",
+    "authors": [
+      "Carlos A. Sierra",
+      "Gregory R. Quetin",
+      "Holger Metzler",
+      "Markus Müller"
+    ],
+    "year": "2023",
+    "doi": "10.1098/rsta.2022.0200",
+    "venue": "Philosophical Transactions of the Royal Society A: Mathematical, Physical and Engineering Sciences"
+  },
+  {
     "title": "Remotely Sensed Carbonyl Sulfide Constrains Model Estimates of Amazon Primary Productivity",
     "authors": [
       "James R. Stinecipher",
@@ -287,6 +344,64 @@
     "year": "2022",
     "doi": "10.1029/2021gb007216",
     "venue": "Global Biogeochemical Cycles"
+  },
+  {
+    "title": "Information content of soil hydrology in a west Amazon watershed as informed by GRACE",
+    "authors": [
+      "Elias C. Massoud",
+      "A. Anthony Bloom",
+      "Marcos Longo",
+      "John T. Reager",
+      "Paul A. Levine",
+      "John R. Worden"
+    ],
+    "year": "2022",
+    "doi": "10.5194/hess-26-1407-2022",
+    "venue": "Hydrology and Earth System Sciences"
+  },
+  {
+    "title": "Resolving temperature limitation on spring productivity in an evergreen conifer forest using a model–data fusion framework",
+    "authors": [
+      "Stephanie G. Stettz",
+      "Nicholas C. Parazoo",
+      "A. Anthony Bloom",
+      "Peter D. Blanken",
+      "David R. Bowling",
+      "Sean P. Burns",
+      "Cédric Bacour",
+      "Fabienne Maignan",
+      "Brett Raczka",
+      "Alexander J. Norton",
+      "Ian Baker",
+      "Mathew Williams",
+      "Mingjie Shi",
+      "Yongguang Zhang",
+      "Bo Qiu"
+    ],
+    "year": "2022",
+    "doi": "10.5194/bg-19-541-2022",
+    "venue": "Biogeosciences"
+  },
+  {
+    "title": "CARDAMOM-FluxVal version 1.0: a FLUXNET-based validation system for CARDAMOM carbon and water flux estimates",
+    "authors": [
+      "Yan Yang",
+      "A. Anthony Bloom",
+      "Shuang Ma",
+      "Paul Levine",
+      "Alexander Norton",
+      "Nicholas C. Parazoo",
+      "John T. Reager",
+      "John Worden",
+      "Gregory R. Quetin",
+      "T. Luke Smallman",
+      "Mathew Williams",
+      "Liang Xu",
+      "Sassan Saatchi"
+    ],
+    "year": "2022",
+    "doi": "10.5194/gmd-15-1789-2022",
+    "venue": "Geoscientific Model Development"
   },
   {
     "title": "Satellite Observations of the Tropical Terrestrial Carbon Balance and Interactions With the Water Cycle During the 21st Century",
@@ -341,6 +456,53 @@
     "venue": "Global Biogeochemical Cycles"
   },
   {
+    "title": "Optimal model complexity for terrestrial carbon cycle prediction",
+    "authors": [
+      "Caroline A. Famiglietti",
+      "T. Luke Smallman",
+      "Paul A. Levine",
+      "Sophie Flack-Prain",
+      "Gregory R. Quetin",
+      "Victoria Meyer",
+      "Nicholas C. Parazoo",
+      "Stephanie G. Stettz",
+      "Yan Yang",
+      "Damien Bonal",
+      "A. Anthony Bloom",
+      "Mathew Williams",
+      "Alexandra G. Konings"
+    ],
+    "year": "2021",
+    "doi": "10.5194/bg-18-2727-2021",
+    "venue": "Biogeosciences"
+  },
+  {
+    "title": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "authors": [
+      "Junjie Liu",
+      "Latha Baskaran",
+      "Kevin Bowman",
+      "David Schimel",
+      "A. Anthony Bloom",
+      "Nicholas C. Parazoo",
+      "Tomohiro Oda",
+      "Dustin Carroll",
+      "Dimitris Menemenlis",
+      "Joanna Joiner",
+      "Roisin Commane",
+      "Bruce Daube",
+      "Lucianna V. Gatti",
+      "Kathryn McKain",
+      "John Miller",
+      "Britton B. Stephens",
+      "Colm Sweeney",
+      "Steven Wofsy"
+    ],
+    "year": "2021",
+    "doi": "10.5194/essd-13-299-2021",
+    "venue": "Earth System Science Data"
+  },
+  {
     "title": "Carbon Flux Variability From a Relatively Simple Ecosystem Model With Assimilated Data Is Consistent With Terrestrial Biosphere Model Estimates",
     "authors": [
       "Gregory R. Quetin",
@@ -351,6 +513,51 @@
     "year": "2020",
     "doi": "10.1029/2019ms001889",
     "venue": "Journal of Advances in Modeling Earth Systems"
+  },
+  {
+    "title": "Lagged effects regulate the inter-annual variability of the tropical carbon balance",
+    "authors": [
+      "A. Anthony Bloom",
+      "Kevin W. Bowman",
+      "Junjie Liu",
+      "Alexandra G. Konings",
+      "John R. Worden",
+      "Nicholas C. Parazoo",
+      "Victoria Meyer",
+      "John T. Reager",
+      "Helen M. Worden",
+      "Zhe Jiang",
+      "Gregory R. Quetin",
+      "T. Luke Smallman",
+      "Jean-François Exbrayat",
+      "Yi Yin",
+      "Sassan S. Saatchi",
+      "Mathew Williams",
+      "David S. Schimel"
+    ],
+    "year": "2020",
+    "doi": "10.5194/bg-17-6393-2020",
+    "venue": "Biogeosciences"
+  },
+  {
+    "title": "Fire decline in dry tropical ecosystems enhances decadal land carbon sink",
+    "authors": [
+      "Yi Yin",
+      "A. Anthony Bloom",
+      "John Worden",
+      "Sassan Saatchi",
+      "Yan Yang",
+      "Mathew Williams",
+      "Junjie Liu",
+      "Zhe Jiang",
+      "Helen Worden",
+      "Kevin Bowman",
+      "Christian Frankenberg",
+      "David Schimel"
+    ],
+    "year": "2020",
+    "doi": "10.1038/s41467-020-15852-2",
+    "venue": "Nature Communications"
   },
   {
     "title": "Large loss of CO2 in winter observed across the northern permafrost region",
@@ -373,6 +580,20 @@
     "venue": "Nature Climate Change"
   },
   {
+    "title": "Global satellite-driven estimates of heterotrophic respiration",
+    "authors": [
+      "Alexandra G. Konings",
+      "A. Anthony Bloom",
+      "Junjie Liu",
+      "Nicholas C. Parazoo",
+      "David S. Schimel",
+      "Kevin W. Bowman"
+    ],
+    "year": "2019",
+    "doi": "10.5194/bg-16-2269-2019",
+    "venue": "Biogeosciences"
+  },
+  {
     "title": "Inverse Determination of the Influence of Fire on Vegetation Carbon Turnover in the Pantropics",
     "authors": [
       "Jean‐François Exbrayat",
@@ -384,6 +605,45 @@
     "year": "2018",
     "doi": "10.1029/2018gb005925",
     "venue": "Global Biogeochemical Cycles"
+  },
+  {
+    "title": "Reliability ensemble averaging of 21st century projections of terrestrial net primary productivity reduces global and regional uncertainties",
+    "authors": [
+      "Jean-François Exbrayat",
+      "A. Anthony Bloom",
+      "Pete Falloon",
+      "Akihiko Ito",
+      "T. Luke Smallman",
+      "Mathew Williams"
+    ],
+    "year": "2018",
+    "doi": "10.5194/esd-9-153-2018",
+    "venue": "Earth System Dynamics"
+  },
+  {
+    "title": "GOLUM-CNP v1.0: a data-driven modeling of carbon, nitrogen and phosphorus cycles in major terrestrial biomes",
+    "authors": [
+      "Yilong Wang",
+      "Philippe Ciais",
+      "Daniel Goll",
+      "Yuanyuan Huang",
+      "Yiqi Luo",
+      "Ying-Ping Wang",
+      "A. Anthony Bloom",
+      "Grégoire Broquet",
+      "Jens Hartmann",
+      "Shushi Peng",
+      "Josep Penuelas",
+      "Shilong Piao",
+      "Jordi Sardans",
+      "Benjamin D. Stocker",
+      "Rong Wang",
+      "Sönke Zaehle",
+      "Sophie Zechmeister-Boltenstern"
+    ],
+    "year": "2018",
+    "doi": "10.5194/gmd-11-3903-2018",
+    "venue": "Geoscientific Model Development"
   },
   {
     "title": "Assimilation of repeated woody biomass observations constrains decadal ecosystem carbon cycle uncertainty in aggrading forests",
@@ -410,5 +670,15 @@
     "year": "2016",
     "doi": "10.1073/pnas.1515160113",
     "venue": "Proceedings of the National Academy of Sciences"
+  },
+  {
+    "title": "Constraining ecosystem carbon dynamics in a data-limited world: integrating ecological \"common sense\" in a model–data fusion framework",
+    "authors": [
+      "A. A. Bloom",
+      "M. Williams"
+    ],
+    "year": "2015",
+    "doi": "10.5194/bg-12-1299-2015",
+    "venue": "Biogeosciences"
   }
 ]
