@@ -26,6 +26,28 @@ const norm = (value) => {
   return String(s || '').trim().toLowerCase().replace(/\.$/, '');
 };
 
+const SUBSCRIPT_DIGITS = '₀₁₂₃₄₅₆₇₈₉';
+const SUPERSCRIPT_DIGITS = '⁰¹²³⁴⁵⁶⁷⁸⁹';
+
+/**
+ * Render a Crossref title or journal name as plain text.
+ * Crossref keeps the publisher's markup ("CO<sub>2</sub>", "Science &amp;
+ * Technology"), which React would otherwise print literally. Numeric
+ * sub/superscripts become their Unicode forms (CO₂); other tags are dropped
+ * and entities decoded.
+ * @param {string} value
+ * @returns {string}
+ */
+export const plainText = (value) => {
+  if (!value || typeof value !== 'string') return value;
+  const withScripts = value
+    .replace(/<sub>\s*(\d+)\s*<\/sub>/gi, (_, d) => [...d].map((c) => SUBSCRIPT_DIGITS[c]).join(''))
+    .replace(/<sup>\s*(\d+)\s*<\/sup>/gi, (_, d) => [...d].map((c) => SUPERSCRIPT_DIGITS[c]).join(''));
+  if (!/[<&]/.test(withScripts)) return withScripts;
+  const doc = new DOMParser().parseFromString(withScripts, 'text/html');
+  return (doc.body.textContent || '').replace(/\s+/g, ' ').trim();
+};
+
 /**
  * Load a model's team papers.
  * The files wrap the list under either the model name or a `papers` key, so

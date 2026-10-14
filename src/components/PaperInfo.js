@@ -3,7 +3,7 @@
 
 import React, { useState, useEffect } from 'react';
 import { ChevronDown, ChevronUp, ExternalLink } from 'lucide-react';
-import { dedupeTeamPapers } from '../utils/teamPapers';
+import { dedupeTeamPapers, plainText } from '../utils/teamPapers';
 
 const PaperInfo = ({ modelName = 'RAPID' }) => {
   const [expanded, setExpanded] = useState(false);
@@ -316,9 +316,9 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
   return (
     <div className="bg-blue-50 rounded-lg p-4 mb-6">
       {/* Original paper section */}
-      <div className="font-semibold text-blue-900 mb-2">{originalPaper.title}</div>
+      <div className="font-semibold text-blue-900 mb-2">{plainText(originalPaper.title)}</div>
       <div className="text-sm text-gray-700 mb-2">{originalPaper.authors}</div>
-      <div className="text-xs text-gray-600">{originalPaper.journal}</div>
+      <div className="text-xs text-gray-600">{plainText(originalPaper.journal)}</div>
       <div className="flex justify-between items-center mt-2">
         <div className="text-xs text-blue-600">
           DOI: <a href={originalPaper.link} className="hover:underline" target="_blank" rel="noopener noreferrer">
@@ -355,9 +355,9 @@ const PaperInfo = ({ modelName = 'RAPID' }) => {
               <li key={index} className="flex mb-4 pb-3 border-b border-blue-100 last:border-b-0">
                 <span className="flex-shrink-0 w-12 pr-2 text-right text-sm font-semibold text-blue-800">{index + 1}.</span>
                 <div className="min-w-0">
-                  <div className="text-sm font-medium text-gray-800 mb-1">{paper.title}</div>
-                  <div className="text-xs text-gray-600 mb-1">{paper.authors}</div>
-                  <div className="text-xs text-gray-500">{paper.journal} ({paper.year})</div>
+                  <div className="text-sm font-medium text-gray-800 mb-1">{plainText(paper.title)}</div>
+                  <div className="text-xs text-gray-600 mb-1">{plainText(paper.authors)}</div>
+                  <div className="text-xs text-gray-500">{plainText(paper.journal)} ({paper.year})</div>
                   <div className="flex items-center mt-1">
                     <a 
                       href={paper.link} 
