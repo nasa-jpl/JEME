@@ -166678,7 +166678,7 @@
         "has_venue": true,
         "has_full_authors": true,
         "keyword_match_score": 0.0,
-        "team_paper_relevance_tier": "Data-Methods"
+        "team_paper_relevance_tier": "Tangential"
       },
       "classification_provenance": {
         "engagement_source": "bedrock:opus-5",
@@ -166715,6 +166715,941 @@
       "University Corporation for Atmospheric Research",
       "NSF National Center for Atmospheric Research",
       "Research Applications (United States)"
+    ]
+  },
+  {
+    "title": "Industrial Dominance of Urban NO2 and Associated Health Risks: A Multi-Source Analysis in the Southern Region of Rio de Janeiro State",
+    "authors": [
+      "S. Carvalho",
+      "D. M. de Souza",
+      "R. D. de Almeida",
+      "A. Cacheffo",
+      "Gregori de Arruda Moreira",
+      "Juana And\u00fajar-Maqueda",
+      "Pablo Ortiz-Amezcua",
+      "F\u00e1bio J. da S. Lopes",
+      "L. Alados-Arboledas",
+      "J. Guerrero-Rascado"
+    ],
+    "year": 2026,
+    "doi": "10.3390/rs18152581",
+    "venue": "Remote Sensing",
+    "citation_count": 0,
+    "paper_id": "85075b1c8ab60faceec826edb820e03517244b8c",
+    "url": "https://www.semanticscholar.org/paper/85075b1c8ab60faceec826edb820e03517244b8c",
+    "abstract": "Driven by regional demand for stringent emission controls and the associated public health impacts, this study investigates tropospheric NO2 concentrations in Volta Redonda, a major metallurgical hub in Rio de Janeiro State. Initially, TROPOMI data were used to establish spatiotemporal patterns from 2019 to 2024, revealing that Volta Redonda maintains higher NO2 levels than similarly sized urban centers. A detailed analysis of the \u2018weekend effect\u2019 showed a minimal 3% reduction in NO2 concentrations during the weekend in Volta Redonda, compared with a 23% drop in Rio de Janeiro city, suggesting that industrial sources of this pollutant predominate over vehicular traffic. This finding is further supported by an analysis of Climate TRACE emissions data, which shows that industrial NOx emissions exceed transportation emissions in this industrial-urban cluster. Local ground station measurements, combined with satellite observations, indicate that the nearby industrial zone is likely the primary source of NO2. Finally, the study quantifies the human cost through a Relative Risk Index (RRI) analysis. Results indicate that a 1 \u00b5g/m3 increase in minimum NO2 concentrations leads to a 34% rise in pediatric hospitalizations and a 25% increase among older people, offering critical evidence for regional emission regulations and public health strategies.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite instrument",
+        "product": "Tropospheric NO2",
+        "data_level": "Not specified",
+        "usage_context": "Used to establish spatiotemporal patterns of NO2 concentrations in Volta Redonda from 2019 to 2024 and combined with ground station measurements to identify industrial sources"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.85,
+      "composite_confidence": 0.677,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Health"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Brazil",
+    "all_countries": [
+      "Brazil",
+      "Spain"
+    ],
+    "institutions": [
+      "Universidade Federal Fluminense",
+      "Universidade Federal do Rio de Janeiro",
+      "Universidade Federal de Uberl\u00e2ndia",
+      "Federal Institute of S\u00e3o Paulo",
+      "Universidad de Granada",
+      "Instituto Andaluz de Ciencias de la Tierra",
+      "Universidad Carlos III de Madrid",
+      "Universidade Federal de S\u00e3o Paulo"
+    ]
+  },
+  {
+    "title": "Improved global daily nitrogen dioxide concentrations from 2005 to 2023 derived using a deep learning approach",
+    "authors": [
+      "Jiangshan Mu",
+      "Chenliang Tao",
+      "Yu-Qiang Zhang",
+      "Zhou Liu",
+      "Ying-Nan Zhang",
+      "Na Zhao",
+      "Bingkun Luo",
+      "Qionghui Zhou",
+      "Q. Zhang",
+      "Hongliang Zhang",
+      "LI Xue"
+    ],
+    "year": 2026,
+    "doi": "10.5194/essd-18-2999-2026",
+    "venue": "Earth System Science Data",
+    "citation_count": 2,
+    "paper_id": "2eb252c4cf911ac33ea42e8cb663da0e8282eb43",
+    "url": "https://www.semanticscholar.org/paper/2eb252c4cf911ac33ea42e8cb663da0e8282eb43",
+    "abstract": "Abstract. Nitrogen dioxide (NO2) is a critical air pollutant with significant environmental and human health impacts, yet global and long-term NO2 datasets with daily continuity and fine spatial resolution remain limited. In this study, we construct a continuous global daily NO2 concentration (https://doi.org/10.5281/zenodo.13842191, Mu and Tao, 2025) spanning from 2005 to 2023 at a 0.1\u00b0 resolution using the advanced Air Transformer deep learning framework that integrates satellite observations, ground-based measurements, meteorological reanalysis, land-use information, and auxiliary geophysical variables. The resulting dataset shows robust performance across diverse regions and pollution regimes, with improved spatial consistency and reduced biases relative to existing global products. Based on this dataset, we characterize the spatiotemporal evolution of global NO2 concentrations over the past two decades. Global annual mean NO2 increased from 2005 to 2015, followed by a moderate decline during 2016\u20132019, a pronounced decrease in 2020 associated with COVID-19-related reductions in economic activity and transportation, and a partial rebound thereafter, reaching 3.38\u2009ppbv in 2023. The Northern Hemisphere and tropical regions largely followed the global trend, whereas the Southern Hemisphere exhibited distinct behaviour, with relatively stable or declining NO2 levels prior to 2015, a sharp decrease in 2020, and a stronger post-pandemic rebound during 2021\u20132023. As one of the global, multi-decadal NO2 datasets with daily resolution, this dataset provides a valuable resource for air quality assessment, exposure analysis, and atmospheric model evaluation.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Machine Learning",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring",
+      "Satellite Atmospheric Observations"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite",
+        "product": "Tropospheric NO2",
+        "data_level": "Not specified",
+        "usage_context": "Satellite observations integrated into deep learning framework for NO2 concentration estimation"
+      },
+      {
+        "name": "OMI",
+        "agency": "NASA",
+        "type": "Satellite",
+        "product": "Tropospheric NO2",
+        "data_level": "Not specified",
+        "usage_context": "Satellite observations integrated into deep learning framework for NO2 concentration estimation"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.67,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Satellite Atmospheric Observations"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "United States"
+    ],
+    "institutions": [
+      "Shandong University",
+      "Duke University",
+      "Fudan University",
+      "University of California, Irvine"
+    ]
+  },
+  {
+    "title": "Relation Between Air Quality and Wind Speed in the Eastern Anatolia Region of T\u00fcrkiye",
+    "authors": [
+      "Mehmet Ali \u00c7elik",
+      "Adile Bilik",
+      "M. Akiner"
+    ],
+    "year": 2026,
+    "doi": "10.1007/s00024-026-03994-1",
+    "venue": "Pure and Applied Geophysics",
+    "citation_count": 2,
+    "paper_id": "3584e72f5b1c648e9c37ebeab5488d663c0d6e0c",
+    "url": "https://www.semanticscholar.org/paper/3584e72f5b1c648e9c37ebeab5488d663c0d6e0c",
+    "abstract": "This study investigates the relationship between wind speed and atmospheric constituents (nitrogen dioxide (NO2), ozone (O3), carbon dioxide (CO2), and aerosol index (AI)) in the Eastern Anatolia Region of T\u00fcrkiye. The analysis focuses on how topographically constrained basins and low wind speeds influence the accumulation of atmospheric constituents. Pixel-based seasonal analyses were conducted using TROPOMI satellite data (2019\u20132024) and TerraClimate wind speed data. The methodological framework integrates Pearson correlation, time-lag analysis, and K-means clustering to quantify both instantaneous and delayed relationships between wind speed and atmospheric variables. Results indicate that NO2 and CO2 concentrations increased by 40\u201360% based on normalized concentration differences between wind speed classes (<\u20094 m/s vs.\u2009>\u20094 m/s), particularly in semi-closed basins such as Elaz\u0131\u011f, I\u011fd\u0131r, and Malatya. Time-lag analysis reveals that aerosol transport exhibits approximately 1-month delays, reflecting the influence of boundary-layer stability and weak convective processes. In contrast, regions with higher elevations and open topography (e.g., Erzurum and Kars) show significant decreases in atmospheric constituent concentrations under higher wind conditions. O3 variability is primarily controlled by transport-driven photochemical processes involving NOx and volatile organic compounds (VOCs). The findings highlight that atmospheric accumulation patterns are governed not only by wind speed but also by topography and atmospheric dynamics. This study provides a regional-scale framework for understanding delayed responses to pollutants. It emphasizes the importance of integrating meteorological thresholds into air quality management and early warning systems under changing climate conditions.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite instrument",
+        "product": "NO2, O3, CO2, Aerosol Index",
+        "data_level": "Not specified",
+        "usage_context": "Pixel-based seasonal analyses of atmospheric constituents (NO2, O3, CO2, AI) over Eastern Anatolia Region, 2019-2024"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Health"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Turkey",
+    "all_countries": [
+      "Turkey",
+      "Azerbaijan"
+    ],
+    "institutions": [
+      "I\u011fd\u0131r \u00dcniversitesi",
+      "Nakhchivan State University",
+      "Akdeniz University"
+    ]
+  },
+  {
+    "title": "Harmonizing satellite and ground NO2 observations in China: A multi-sensor framework for scenario-specific calibration",
+    "authors": [
+      "Jian-Bin Gu",
+      "Xiao-Xia Liang",
+      "Shipeng Song",
+      "Yichen Li",
+      "Liang-Fu Chen",
+      "J. Tao",
+      "Yanfang Tian"
+    ],
+    "year": 2025,
+    "doi": "10.1016/j.isprsjprs.2025.09.028",
+    "venue": "Isprs Journal of Photogrammetry and Remote Sensing",
+    "citation_count": 2,
+    "paper_id": "ed023f3e13c540cf6cad3a16add9a0df73059a32",
+    "url": "https://www.semanticscholar.org/paper/ed023f3e13c540cf6cad3a16add9a0df73059a32",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Satellite Atmospheric Observations",
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Air Quality",
+      "Data Assimilation",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite sensor",
+        "product": "Tropospheric NO2",
+        "data_level": "Level 2",
+        "usage_context": "Multi-sensor framework for harmonizing satellite NO2 observations with ground measurements in China"
+      },
+      {
+        "name": "OMI",
+        "agency": "NASA",
+        "type": "Satellite sensor",
+        "product": "Tropospheric NO2",
+        "data_level": "Level 2",
+        "usage_context": "Multi-sensor framework for harmonizing satellite NO2 observations with ground measurements in China"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.5,
+      "composite_confidence": 0.532,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Satellite Atmospheric Observations"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.4,
+        "skeptic_engagement": "Level 2: Data Usage",
+        "skeptic_domain": "Data Assimilation",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": true,
+        "review_reason": "high_miscalibration_risk"
+      }
+    }
+  },
+  {
+    "title": "A novel near real-time approach to forecast high resolution NO2 concentrations in southeastern China by incorporating multi-source satellite data.",
+    "authors": [
+      "Zeyue Li",
+      "Yang Liu",
+      "Jianzhao Bi",
+      "Xue-Fei Hu"
+    ],
+    "year": 2025,
+    "doi": "10.1016/j.jhazmat.2025.138447",
+    "venue": "Journal of Hazardous Materials",
+    "citation_count": 2,
+    "paper_id": "c62b5ed6877f3fba1c6855dd337ece4d51accc9e",
+    "url": "https://www.semanticscholar.org/paper/c62b5ed6877f3fba1c6855dd337ece4d51accc9e",
+    "abstract": "Nitrogen dioxide, designated as NO2, is a critical yet harmful trace gas in Earth's atmospheric composition. NO2 poses significant threats to human health, ecosystems, and agricultural productivity. Accurate NO2 forecasts at high spatial resolution enable authorities to safeguard public health through targeted mitigation efforts. Conventional NO2 forecasting approaches, such as time series analysis and chemical transport models (CTMs), often suffer from significant uncertainty or lack fine spatial details. This study presents a novel NO2 forecast model that combines Random Forest techniques with multi-source satellite data and NASA's Goddard Earth Observing System \"Composing Forecasting\" (GEOS-CF) product to provide spatially continuous, five-day forecasts of NO2 concentrations at 1\u202fkm resolution across southeastern China. The superior capabilities of our forecast framework were confirmed through multiple validation methods, consistently surpassing the performance of the original GEOS-CF model. Notably, the new framework achieved substantial error reductions and resolution enhancements in GEOS-CF forecasts, outperforming the initial product across all validation metrics. The developed model facilitates the generation of NO2 forecasts characterized by near-real-time delivery, great precision, and high spatial resolution.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Machine Learning",
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Environmental Monitoring",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite instrument",
+        "product": "NO2 tropospheric column",
+        "data_level": "Not specified",
+        "usage_context": "Multi-source satellite data incorporated into Random Forest forecast model for NO2 concentrations"
+      },
+      {
+        "name": "OMI",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "NO2 tropospheric column",
+        "data_level": "Not specified",
+        "usage_context": "Multi-source satellite data incorporated into Random Forest forecast model for NO2 concentrations"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.975,
+      "composite_confidence": 0.721,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.9,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Health"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "United States"
+    ],
+    "institutions": [
+      "Sun Yat-sen University",
+      "Emory University",
+      "University of Washington"
+    ]
+  },
+  {
+    "title": "Consecutive Northward Super Typhoons Induced Extreme Ozone Pollution Events in Eastern China",
+    "authors": [
+      "Jia-He Wang",
+      "Peng Wang",
+      "Chunfeng Tian",
+      "Meng Gao",
+      "Tiantao Cheng",
+      "Wei Mei"
+    ],
+    "year": 2024,
+    "doi": "10.1038/s41612-024-00786-z",
+    "venue": "npj Climate and Atmospheric Science",
+    "citation_count": 18,
+    "paper_id": "383b3f3493f39ca535c7ad906d4caa2a1f5c59e7",
+    "url": "https://www.semanticscholar.org/paper/383b3f3493f39ca535c7ad906d4caa2a1f5c59e7",
+    "abstract": "Typhoons are one of the most important weather systems that can cause severe ozone (O3) pollution in eastern China. While the effects of individual typhoons on O3 concentrations have been extensively studied, the effects of consecutive northward typhoons and the underlying mechanisms remain unclear, partly due to the complex processes involved. Here, Typhoons Maysak and Haishen, two consecutive northward typhoons in 2020, are selected to investigate their impact on the O3 pollution in eastern China. The results show that consecutive northward typhoons not only produced and maintained meteorological conditions conducive to O3 generation (e.g., elevated temperatures and intensified solar radiation), but also facilitated local accumulation and cross-regional transport of O3. These factors jointly led to a 30% increase in O3 concentration in eastern China with a prolonged period of O3 pollution. Our work underscores the significance of complex meteorological conditions in O3 pollution occurrences during extreme weather events, advancing our understanding of how consecutive northward typhoons affect air quality.",
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Atmospheric Chemistry",
+      "Atmospheric Science",
+      "Chemical Transport",
+      "Atmospheric Modeling",
+      "Environmental Monitoring"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.663,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Air Quality & Health"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "Hong Kong"
+    ],
+    "institutions": [
+      "Fudan University",
+      "Hong Kong Baptist University",
+      "State Key Laboratory of Environmental and Biological Analysis"
+    ]
+  },
+  {
+    "title": "Long-term spatiotemporal variations in surface NO2 for Beijing reconstructed from surface data and satellite retrievals.",
+    "authors": [
+      "Zixiang Zhao",
+      "Yi-Cheng Lu",
+      "Yu Zhan",
+      "Yuan Cheng",
+      "Fu-Mo Yang",
+      "J. Brook",
+      "K. He"
+    ],
+    "year": 2023,
+    "doi": "10.1016/j.scitotenv.2023.166693",
+    "venue": "Science of the Total Environment",
+    "citation_count": 23,
+    "paper_id": "19dbb5f6ec0d82bd39aa859f2dbac6e91cce5cf0",
+    "url": "https://www.semanticscholar.org/paper/19dbb5f6ec0d82bd39aa859f2dbac6e91cce5cf0",
+    "abstract": "Remote sensing data from the Ozone Monitoring Instrument (OMI) and the TROPOspheric Monitoring Instrument (TROPOMI) play important roles in estimating surface nitrogen dioxide (NO2), but few studies have compared their differences for application in surface NO2 reconstruction. This study aims to explore the effectiveness of incorporating the tropospheric NO2 vertical column density (VCD) from OMI and TROPOMI (hereafter referred to as OMI and TROPOMI, respectively, for conciseness) for deriving surface NO2 and to apply the resulting data to revisit the spatiotemporal variations in surface NO2 for Beijing over the 2005-2020 period during which there were significant reductions in nitrogen oxide emissions. In the OMI versus TROPOMI performance comparison, the cross-validation R2 values were 0.73 and 0.72, respectively, at 1\u202fkm resolution and 0.69 for both at 100\u202fm resolution. The comparisons between satellite data sources indicate that even though TROPOMI has a finer resolution it does not improve upon OMI for deriving surface NO2 at 1\u202fkm resolution, especially for analyzing long-term trends. In light of the comparison results, we used a hybrid approach based on machine learning to derive the spatiotemporal distribution of surface NO2 during 2005-2020 based on OMI. We had novel, independent passive sampling data collected weekly from July to September of 2008 for hindcasting validation and found a spatiotemporal R2 of 0.46 (RMSE\u202f=\u202f7.0\u202fppb). Regarding the long-term trend of surface NO2, the level in 2008 was obviously lower than that in 2007 and 2009, as expected, which was attributed to pollution restrictions during the Olympic Games. The NO2 level started to steadily decline from 2015 and fell below 2008's level after 2017. Based on OMI, a long-term and fine-resolution surface NO2 dataset was developed for Beijing to support future environmental management questions and epidemiological research.",
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Machine Learning",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OMI (Ozone Monitoring Instrument)",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "Tropospheric NO2 vertical column density",
+        "data_level": "L3",
+        "usage_context": "Primary satellite predictor for machine-learning reconstruction of long-term (2005-2020) surface NO2 over Beijing"
+      },
+      {
+        "name": "TROPOMI (Sentinel-5P)",
+        "agency": "ESA",
+        "type": "Satellite instrument",
+        "product": "Tropospheric NO2 vertical column density",
+        "data_level": "L2/L3",
+        "usage_context": "Compared against OMI as satellite predictor for deriving surface NO2 at 1 km and 100 m resolution"
+      },
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "Land/aerosol ancillary data",
+        "data_level": "Not specified",
+        "usage_context": "Auxiliary predictors for surface NO2 estimation model"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Satellite Atmospheric Observations"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "Canada"
+    ],
+    "institutions": [
+      "Sichuan University",
+      "Harbin Institute of Technology",
+      "State Key Laboratory of Urban Water Resources and Water Environment",
+      "University of Toronto",
+      "State Key Joint Laboratory of Environment Simulation and Pollution Control",
+      "Tsinghua University"
+    ]
+  },
+  {
+    "title": "Estimating Daily NO2 Ground Level Concentrations Using Sentinel-5P and Ground Sensor Meteorological Measurements",
+    "authors": [
+      "Jesus Rodrigo Cedeno Jimenez",
+      "Angelly de Jes\u00fas Pugliese Viloria",
+      "M. Brovelli"
+    ],
+    "year": 2023,
+    "doi": "10.3390/ijgi12030107",
+    "venue": "ISPRS Int. J. Geo Inf.",
+    "citation_count": 14,
+    "paper_id": "5ed73b71778eba77aec54f6cf83b984055c7f136",
+    "url": "https://www.semanticscholar.org/paper/5ed73b71778eba77aec54f6cf83b984055c7f136",
+    "abstract": "Environmental and health deterioration due to the increasing presence of air pollutants is a pressing topic for governments and organizations. Institutions such as the European Environment Agency have determined that more than 350,000 premature deaths can be attributed to atmospheric pollutants. The measurement of trace gas atmospheric concentrations is key for environmental agencies to fight against the decreased deterioration of air quality. NO2, which is one of the most harmful pollutants, has the potential to cause diseases such as Chronic Obstructive Pulmonary Disease (COPD). Unfortunately, not all countries have local atmospheric pollutant monitoring networks to perform ground measurements (especially Low- and Middle-Income Countries). Although some alternatives, such as satellite technologies, provide a good approximation for tropospheric NO2, these do not measure concentrations at the ground level. In this work, we aim to provide an alternative to ground sensor measurements. We used a combination of ground meteorological measurements with satellite Sentinel-5P observations to estimate ground NO2. For this task, we used state-of-the-art Machine Learning models, linear regression models, and feature selection algorithms. From the results obtained, we found that a Multi-layer Perceptron Regressor and Kriging in combination with a Random Forest feature selection algorithm achieved the lowest RMSE (2.89 \u00b5g/m3). This result, in comparison with the real data standard deviation and the models using only satellite data, represented an RMSE decrease of 55%. Future work will focus on replacing the use of meteorological ground sensors with only satellite-based data.",
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Machine Learning",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Sentinel-5P TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite spectrometer",
+        "product": "Tropospheric NO2 column density",
+        "data_level": "L2/L3",
+        "usage_context": "Primary satellite predictor combined with ground meteorological measurements to estimate daily ground-level NO2 concentrations via machine learning models"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Satellite Atmospheric Observations"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Italy",
+    "all_countries": [
+      "Italy"
+    ],
+    "institutions": [
+      "Politecnico di Milano"
+    ]
+  },
+  {
+    "title": "Satellite-based estimates of daily NO2 exposure in urban agglomerations of China and application to spatio-temporal characteristics of hotspots",
+    "authors": [
+      "Jia-Dan Dong",
+      "Xiao-Bin Cai",
+      "Liqiao Tian",
+      "Fang Chen",
+      "Qiang-Qiang Xu",
+      "Ting-Hui Li",
+      "Xiao-Ling Chen"
+    ],
+    "year": 2022,
+    "doi": "10.1016/j.atmosenv.2022.119453",
+    "venue": "Atmospheric Environment",
+    "citation_count": 16,
+    "paper_id": "a555eceae54546d6fd3663985c024c7043349ce1",
+    "url": "https://www.semanticscholar.org/paper/a555eceae54546d6fd3663985c024c7043349ce1",
+    "abstract": "The analysis of the daily spatial patterns of near-surface Nitrogen dioxide (NO2) concentrations can assist decision makers mitigate this common air pollutant in urban areas. However, comparative analysis of NO2 estimates in different urban agglomerations of China is limited. In this study, a new linear mixed effect model (LME) with multi-source spatiotemporal data is proposed to estimate daily NO2 concentrations at high accuracy based on the land-use regression (LUR) model and Ozone Monitoring Instrument (OMI) and TROPOspheric Monitoring Instrument (TROPOMI) products. In addition, three models for NO2 concentration estimation were evaluated and compared in four Chinese urban agglomerations from 2018 to 2020, including the COVID-19 closed management period. Each model included a unique combination of methods and satellite NO2 products: Model\u2160: LUR model with OMI products;Model \u2161: LUR model with TropOMI products;Model \u2161: LME model with TropOMI products. The results show that the LME model outperformed the LUR model in all four urban agglomerations as the average RMSE decreased by 16.09% due to the consideration of atmospheric dispersion random effects, and using TropOMI instead of OMI products can improve the accuracy. Based on our NO2 estimations, pollution hotspots were identified, and pollution anomalies during the COVID-19 period were explored for two periods;the lockdown and revenge pollution periods. The largest NO2 pollution difference between the hotspot and non-hotspot areas occurred in the second period, especially in the heavy industrial urban agglomerations.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Air Quality & Health",
+    "research_domains": [
+      "Air Quality",
+      "Remote Sensing",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry",
+      "Machine Learning"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OMI (Ozone Monitoring Instrument)",
+        "agency": "NASA/KNMI",
+        "type": "Satellite instrument (UV-Vis spectrometer)",
+        "product": "Tropospheric NO2 column",
+        "data_level": "L3",
+        "usage_context": "Predictor in land-use regression model for estimating daily near-surface NO2 concentrations over Chinese urban agglomerations; compared against TROPOMI-based estimates"
+      },
+      {
+        "name": "TROPOMI (Sentinel-5P)",
+        "agency": "ESA/Copernicus",
+        "type": "Satellite instrument (UV-Vis-NIR-SWIR spectrometer)",
+        "product": "Tropospheric NO2 column",
+        "data_level": "L2/L3",
+        "usage_context": "Primary satellite NO2 input to LUR and linear mixed effect models for daily surface NO2 estimation and hotspot/COVID-19 anomaly analysis"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.663,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Satellite Atmospheric Observations"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Wuhan University",
+      "State Key Laboratory of Information Engineering in Surveying Mapping and Remote Sensing",
+      "Innovation Academy for Precision Measurement Science and Technology, CAS",
+      "Chinese Academy of Sciences",
+      "Northwest Institute of Eco-Environment and Resources"
+    ]
+  },
+  {
+    "title": "Estimation of Fossil Fuel Carbon Emissions in Mainland China by Incorporating Multiple Spatiotemporal Data and Machine Learning Algorithms",
+    "authors": [
+      "Liang Zheng",
+      "Shenshen Li",
+      "Xue-Fei Hu",
+      "Kun Cai",
+      "Yang Liu"
+    ],
+    "year": 2026,
+    "doi": "10.1109/TGRS.2025.3648355",
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "citation_count": 2,
+    "paper_id": "a03b2bd4b2891a57b82b52c07470c81e0f887c39",
+    "url": "https://www.semanticscholar.org/paper/a03b2bd4b2891a57b82b52c07470c81e0f887c39",
+    "abstract": "Accurate and timely fossil fuel carbon emission data are crucial for achieving China\u2019s \u201ccarbon peak\u201d and net-zero \u201ccarbon neutrality\u201d (net-zero emissions) goals, as well as global climate targets. Traditional carbon emission inventories encounter challenges such as delayed updates and high costs, which underscores the importance of employing top\u2013down observation methods, like satellite remote sensing, for efficient policy formulation. This study integrates satellite column concentration products, meteorological data, geographic information, and the Multiresolution Emission Inventory for China (MEIC) emission inventory to estimate carbon emissions in China using four machine learning models: extreme gradient boosting (XGBoost), convolutional neural network (CNN), long short-term memory (LSTM), and light gradient boosting machine (LightGBM). The results demonstrate that LightGBM surpasses the other models in terms of spatial\u2013temporal distribution and correlation with the MEIC inventory. Analysis of remote sensing input parameters indicates that combining column-averaged dry-air mole fraction of carbon dioxide (XCO2) and nitrogen dioxide vertical column density (NO2 VCD) yields the most accurate results. For 2019, the model estimates exhibit a strong correlation with MEIC data ( $R ^{2} =0.97$ ), featuring an average grid-scale absolute difference of \u22120.95 kiloton (kt), a root-mean-squared error (RMSE) of 740.93 kt, a normalized RMSE (nRMSE) of 0.34, and an mean absolute error (MAE) of 368.46 kt. Notably, 62.55% of the relative differences fall within the range of [\u221230%, 30%]. Uncertainty analysis for 2020 reveals a final uncertainty of 26.90%, emphasizing the combined influence of model and MEIC inventory uncertainties on carbon emission estimates.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "A comparison of the impact of TROPOMI and OMI tropospheric NO2 on global chemical data assimilation",
+    "team_paper_id": "4a8f3d4c1e1e46283da686a486aaa66ced480e2e",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Satellite Atmospheric Observations",
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Remote Sensing",
+      "Machine Learning",
+      "Carbon Cycle",
+      "Environmental Monitoring",
+      "Greenhouse Gas Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OCO-2",
+        "agency": "NASA",
+        "type": "Satellite spectrometer",
+        "product": "XCO2 (column-averaged dry-air mole fraction of CO2)",
+        "data_level": "L2/L3",
+        "usage_context": "Input predictor for machine learning estimation of fossil fuel carbon emissions over mainland China"
+      },
+      {
+        "name": "TROPOMI (Sentinel-5P)",
+        "agency": "ESA/KNMI",
+        "type": "Satellite spectrometer",
+        "product": "Tropospheric NO2 vertical column density",
+        "data_level": "L2/L3",
+        "usage_context": "Co-emitted tracer predictor combined with XCO2 to improve carbon emission estimates"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.697,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Data-Methods"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Satellite Atmospheric Observations"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "United States"
+    ],
+    "institutions": [
+      "Henan University",
+      "Chinese Academy of Sciences",
+      "Aerospace Information Research Institute",
+      "Sun Yat-sen University",
+      "Emory University"
     ]
   }
 ]

@@ -121827,5 +121827,2088 @@
       "Universidade Federal de Mato Grosso",
       "Universidade Estadual de Feira de Santana"
     ]
+  },
+  {
+    "title": "GONGGA-Lagrange: A novel atmospheric carbon inversion system integrating NLS-4DVar assimilation method and the Lagrangian particle dispersion model",
+    "authors": [
+      "Xingchao Yang",
+      "Xiang-Jun Tian",
+      "Zhe Jin",
+      "Min Zhao",
+      "Hong-Qin Zhang"
+    ],
+    "year": 2026,
+    "doi": "10.1016/j.jclepro.2026.149198",
+    "venue": "Journal of Cleaner Production",
+    "citation_count": 0,
+    "paper_id": "0073469007e663f96fc33ceeaccadd61b361f3d2",
+    "url": "https://www.semanticscholar.org/paper/0073469007e663f96fc33ceeaccadd61b361f3d2",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Atmospheric CO2 Inversions",
+    "research_domains": [
+      "Atmospheric Science",
+      "Inverse Modeling",
+      "Data Assimilation",
+      "Carbon Cycle",
+      "Numerical Methods",
+      "Greenhouse Gas Monitoring"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.45,
+      "composite_confidence": 0.468,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.2,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.6,
+        "skeptic_engagement": "Level 2: Data Usage",
+        "skeptic_domain": "Carbon Data Assimilation",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": false,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Chinese Academy of Sciences",
+      "Institute of Tibetan Plateau Research",
+      "University of Chinese Academy of Sciences",
+      "Peking University",
+      "Institute of Atmospheric Physics"
+    ]
+  },
+  {
+    "title": "Low Latency Global Carbon Budget Reveals Late 2024 Carbon Losses and Contrasting Early 2025 Land Sink Recovery Signals",
+    "authors": [
+      "Pi-Yu Ke",
+      "P. Ciais",
+      "Yi-Tong Yao",
+      "S. Sitch",
+      "Wei Li",
+      "Xiao-Meng Du",
+      "Xiao-Fan Gui",
+      "B. Poulter",
+      "T. Colligan",
+      "A. M. van der Woude",
+      "J. Hooghiem",
+      "W. Peters",
+      "Zhu Liu",
+      "Zhu Deng",
+      "Zhe Jin",
+      "Xiang-Jun Tian",
+      "Yi-Long Wang",
+      "Jun-Jie Liu",
+      "Sudhanshu Pandey",
+      "C. O'Dell",
+      "Jiang Bian",
+      "John Miller",
+      "Xin Lan",
+      "Jefferson Gon\u00e7alves de Souza",
+      "M. O'Sullivan",
+      "P. Friedlingstein",
+      "Julien All\u00e9on",
+      "Yi Xi",
+      "Daniel S. Goll",
+      "Lei Zhu",
+      "G. R. van der Werf",
+      "S. Piao",
+      "F. Chevallier"
+    ],
+    "year": 2026,
+    "doi": "10.1002/advs.77369",
+    "venue": "Advancement of science",
+    "citation_count": 0,
+    "paper_id": "e866590e29cbbe6198544c8124bca68410f401ef",
+    "url": "https://www.semanticscholar.org/paper/e866590e29cbbe6198544c8124bca68410f401ef",
+    "abstract": "ABSTRACT The 2023/24 El Ni\u00f1o strongly reduced land carbon uptake, but the persistence of this anomaly after surface cooling remains uncertain. Here we quantify the July 2024\u2013June 2025 global CO2 budget using low\u2010latency fossil emission estimates, three DGVMs, machine learning ocean flux emulators and OCO\u20102\u2010constrained atmospheric inversions. The atmospheric CO2 growth rate was 2.62 \u00b1 0.08 ppm yr\u22121, 6.5% above the 2013\u20132022 July\u2010to\u2010June mean. DGVMs estimate that the net land sink was 1.32 \u00b1 0.19 GtC yr\u22121 weaker than the 2015\u20132022 July\u2010to\u2010June mean, whereas combining bottom\u2010up and top\u2010down constraints gives a smaller deficit of 0.49 GtC yr\u22121. The annual anomaly is dominated by late\u20102024 land carbon losses. Early\u20102025 recovery, however, is method\u2010dependent: DGVMs retain a weak annual land\u2010sink deficit, while all inversions indicate fluxes close to the reference mean and a stronger\u2010than\u2010normal northern sink in late spring 2025. Ocean uptake shows no global weakening. A statistical decomposition links global land flux variability mainly to temperature, with terrestrial water storage contributing more strongly at regional scales. These results identify Northern Hemisphere land\u2010sink recovery as a central uncertainty in low\u2010latency carbon\u2010budget assessments.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Atmospheric Science",
+      "Inverse Modeling",
+      "Climate Change",
+      "Remote Sensing",
+      "Biogeochemistry"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OCO-2",
+        "agency": "NASA",
+        "type": "Satellite",
+        "product": "CO2 column concentrations for atmospheric inversions",
+        "data_level": "Level 2/3 (constrained inversions)",
+        "usage_context": "Used to constrain atmospheric inversions for estimating land and ocean carbon fluxes during July 2024-June 2025"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.634,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "United States",
+      "United Kingdom",
+      "China",
+      "Netherlands",
+      "Hong Kong"
+    ],
+    "institutions": [
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "Columbia University",
+      "University of Exeter",
+      "Tsinghua University",
+      "Microsoft (United States)",
+      "Wageningen University & Research"
+    ]
+  },
+  {
+    "title": "Assimilation of Atmospheric CO2 Concentration in the ORCHIDEE Land Surface Model: Exploring the Added Value of Explicit Forest Regrowth Representation",
+    "authors": [
+      "Simon Beylat",
+      "P. Peylin",
+      "N. Raoult",
+      "M. O'Sullivan",
+      "A. Berchet",
+      "F. Chevallier",
+      "P. Rayner"
+    ],
+    "year": 2026,
+    "doi": "10.1029/2026MS005874",
+    "venue": "Journal of Advances in Modeling Earth Systems",
+    "citation_count": 0,
+    "paper_id": "bd0dfc6993c96d61559494cda17a3fdeb4f3c10f",
+    "url": "https://www.semanticscholar.org/paper/bd0dfc6993c96d61559494cda17a3fdeb4f3c10f",
+    "abstract": "The land absorbs a large proportion of human\u2010induced carbon emissions, yet the spatial distribution of this carbon sink remains uncertain. Land surface models (LSMs) and atmospheric inversions often diverge on the spatial distribution of carbon sink, with models generally underestimating the northern land sink (above 30\u00b0N). In this study, we use atmospheric CO2 ${\\text{CO}}_{2}$ measurements to constrain parameters of the ORganizing Carbon and Hydrology In Dynamic EcosystEms LSM and evaluate whether this improves simulation of terrestrial carbon fluxes. We perform two calibration experiments: one in which the base model is calibrated alone, and another in which it is calibrated after being supplemented with data\u2010driven estimates of forest post\u2010disturbance regrowth and fire impacts. In both cases, calibration improves agreement between simulated and observed atmospheric CO2 ${\\text{CO}}_{2}$ over the 2010\u20132022 period and reduces the global carbon budget imbalance. It also reconciles with the partitioning of the carbon sink between northern and tropical regions estimated by atmospheric inversions. Including post\u2010disturbance regrowth not only leads to distinct parameter values but also improves the spatial distribution of land carbon uptake, particularly over Europe where regrowth fluxes are largest, bringing regional patterns closer to those from atmospheric inversions. It also highlights that forest demography must be considered when assimilating atmospheric CO2 ${\\text{CO}}_{2}$ to obtain more realistic estimates of the spatial distribution of the terrestrial carbon sink.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle Modeling",
+    "research_domains": [
+      "Carbon Cycle",
+      "Data Assimilation",
+      "Atmospheric Science",
+      "Ecosystem Science",
+      "Inverse Modeling",
+      "Biogeochemistry"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "Australia",
+      "United Kingdom"
+    ],
+    "institutions": [
+      "Centre National de la Recherche Scientifique",
+      "The University of Melbourne",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "CEA Paris-Saclay - Etablissement de Saclay",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "European Centre for Medium-Range Weather Forecasts",
+      "University of Exeter"
+    ]
+  },
+  {
+    "title": "China\u2019s net-zero budget",
+    "authors": [
+      "Zhu Liu",
+      "Pi-Yu Ke",
+      "Zhu Deng",
+      "P. Ciais",
+      "R. Andrew",
+      "Ana Bastos",
+      "Yan Bai",
+      "J. Canadell",
+      "Dabo Guan",
+      "Xinyu Dou",
+      "S. Davis",
+      "Fangfang Dai",
+      "P. Friedlingstein",
+      "Xiao-Ting Huang",
+      "Yifan Hu",
+      "Robert B. Jackson",
+      "G. Janssens-Maenhout",
+      "Matthew W. Jones",
+      "Daniel M. Kammen",
+      "Yun Li",
+      "Tao Li",
+      "Shunlin Liang",
+      "Laibao Liu",
+      "B. Poulter",
+      "Glen P. Peters",
+      "S. Sitch",
+      "Lixin Wang",
+      "Wei Wei",
+      "Feng-Ming Xi",
+      "Xiao-Fan Gui",
+      "Jiang Bian",
+      "Yuan Wang",
+      "Jinjun Xue",
+      "Jin-Yue Yan",
+      "Xu Yue",
+      "Ning Zhang",
+      "Xian Zhang",
+      "Xiao-Ling Zhang",
+      "Yong-Long Lu",
+      "H. Schellnhuber",
+      "Xiao-Ye Zhang",
+      "M. Dai",
+      "Pengfeng Gong",
+      "Ke-Bin He",
+      "Guang-Qian Wang"
+    ],
+    "year": 2026,
+    "doi": "10.1038/s43017-026-00791-1",
+    "venue": "Nature Reviews Earth & Environment",
+    "citation_count": 0,
+    "paper_id": "15cbb17bf9ac918bfb5b5f397d82a1aba6e833ae",
+    "url": "https://www.semanticscholar.org/paper/15cbb17bf9ac918bfb5b5f397d82a1aba6e833ae",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Greenhouse Gas Emissions",
+      "Climate Change",
+      "Biogeochemistry",
+      "Environmental Monitoring",
+      "Inverse Modeling"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.4,
+      "composite_confidence": 0.45,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.6,
+        "skeptic_engagement": "Level 1: Citation",
+        "skeptic_domain": "Regional Greenhouse Gas Budgets",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": false,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "France",
+      "United Kingdom",
+      "Hong Kong",
+      "Norway",
+      "Germany",
+      "Australia",
+      "United States",
+      "Italy",
+      "Japan",
+      "South Korea",
+      "Austria"
+    ],
+    "institutions": [
+      "Tsinghua University",
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "University of Exeter",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "University of Hong Kong",
+      "CICERO Center for International Climate Research",
+      "Leipzig University"
+    ]
+  },
+  {
+    "title": "Towards the assimilation of atmospheric CO2 concentration data in a land surface model using adjoint-free variational methods",
+    "authors": [
+      "Simon Beylat",
+      "N. Raoult",
+      "C. Bacour",
+      "Natalie Douglas",
+      "T. Quaife",
+      "V. Bastrikov",
+      "P. Rayner",
+      "P. Peylin"
+    ],
+    "year": 2025,
+    "doi": "10.5194/gmd-18-7501-2025",
+    "venue": "Geoscientific Model Development",
+    "citation_count": 5,
+    "paper_id": "a143ba34884c6c052d86a4230e2e464dfd783b8b",
+    "url": "https://www.semanticscholar.org/paper/a143ba34884c6c052d86a4230e2e464dfd783b8b",
+    "abstract": "Abstract. A comprehensive understanding and accurate modelling of the terrestrial carbon cycle are of paramount importance to improve projections of the global carbon cycle and more accurately gauge its impact on global climate systems. Land surface models, which have become an important component of weather and climate applications, simulate key aspects of the terrestrial carbon cycle, such as photosynthesis and respiration. These models rely on parameterisations that require careful calibration. In this study we explore the assimilation of atmospheric CO2 concentration data for parameter calibration of the ORganizing Carbon and Hydrology In Dynamic EcosystEms (ORCHIDEE) land surface model using an EnVarDA method, an adjoint-free ensemble-variational data assimilation method. By circumventing the challenges associated with developing and maintaining tangent linear and adjoint models, the EnVarDA method offers a very promising alternative. Using synthetic observations generated through a twin experiment, we demonstrate the ability of EnVarDA to assimilate atmospheric CO2 concentrations for model parameter calibration. We then compare the results to a VarDA method that uses finite differences to estimate tangent linear and adjoint models, which reveals that EnVarDA is superior in terms of computational efficiency, fit to the observations, and parameter recovery.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Data Assimilation",
+    "research_domains": [
+      "Data Assimilation",
+      "Carbon Cycle",
+      "Atmospheric Science",
+      "Numerical Methods",
+      "Carbon Cycle Modeling",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Australia",
+    "all_countries": [
+      "Australia",
+      "France",
+      "United Kingdom"
+    ],
+    "institutions": [
+      "The University of Melbourne",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "European Centre for Medium-Range Weather Forecasts",
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "National Centre for Earth Observation",
+      "University of Reading"
+    ]
+  },
+  {
+    "title": "3D-ABC: A Foundation Model for Global Terrestrial 3D above and below Ground Carbon Stock Mapping",
+    "authors": [
+      "Guido Grosse",
+      "Josh Hashemi",
+      "L. van Delden",
+      "Tillmann L\u00fcbker",
+      "I. Nitze",
+      "J. Strauss",
+      "S. Kruse",
+      "U. Herzschuh",
+      "Pedram Ghamisi",
+      "P. Steinbach",
+      "Gunjan Joshi",
+      "Weikang Yu",
+      "Aldino Rizaldy",
+      "R. Gloaguen",
+      "Gabriele Cavallaro",
+      "E. Zandi",
+      "Rocco Sedona",
+      "Samy Hashim",
+      "Sayan Mandal",
+      "Martin Herold",
+      "Qian Song",
+      "S. Besnard",
+      "M. Urbazaev",
+      "Mike Sips",
+      "Andreas Huth",
+      "I. Hajnsek",
+      "M. Pardini"
+    ],
+    "year": 2025,
+    "doi": "10.1109/IGARSS55030.2025.11242519",
+    "venue": "IEEE International Geoscience and Remote Sensing Symposium",
+    "citation_count": 1,
+    "paper_id": "45df2dd560cec4251d0c8ead4ca44ec207cdf35e",
+    "url": "https://www.semanticscholar.org/paper/45df2dd560cec4251d0c8ead4ca44ec207cdf35e",
+    "abstract": "Recent advances in Foundation Models (FMs) are transforming AI, enabling remarkable generalization and zero-shot learning capabilities. The Helmholtz Foundation Model Initiative is developing the 3D Above and Below Ground Carbon Stocks foundation model (3D-ABC FM), a tool targeting the accurate mapping and quantification of terrestrial above- and below-ground carbon stocks in soils and vegetation at high spatial resolution. Understanding the global carbon budget with its carbon sources and sinks is crucial for guiding emission pathways and climate policies. The 3D-ABC FM aims to provide a seamless understanding of vegetation and soil carbon distribution by integrating multimodal datasets and addressing complex challenges such as multi-dimensionality and multi-resolution in FMs. 3D-ABC FM offers a transformative approach monitoring terrestrial carbon and advancing climate science.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Biomass & Fire Emissions",
+    "research_domains": [
+      "Carbon Cycle",
+      "Remote Sensing",
+      "Machine Learning",
+      "Ecosystem Science",
+      "Biogeochemistry",
+      "Soil Science"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.95,
+      "composite_confidence": 0.656,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.8,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing of Ecosystems"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Germany",
+    "all_countries": [
+      "Germany"
+    ],
+    "institutions": [
+      "Alfred-Wegener-Institut Helmholtz-Zentrum f\u00fcr Polar- und Meeresforschung",
+      "Helmholtz-Zentrum Dresden-Rossendorf",
+      "Forschungszentrum J\u00fclich",
+      "J\u00fclich Supercomputing Centre",
+      "GFZ Helmholtz Centre for Geosciences",
+      "Helmholtz Centre for Environmental Research",
+      "Deutsches Zentrum f\u00fcr Luft- und Raumfahrt e. V. (DLR)"
+    ]
+  },
+  {
+    "title": "Implications for the Missing South Asian Carbon Sink: Hydrologic Coupling of Water and Carbon Balances in a Tropical Catchment",
+    "authors": [
+      "S. Senarathne",
+      "R. Geldern",
+      "R. Chandrajith",
+      "Gabriele Chiogna",
+      "J. Barth"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2025JG008839",
+    "venue": "",
+    "citation_count": 0,
+    "paper_id": "7e5c71d25c1191177b9de5d6bbfcabc720376478",
+    "url": "https://www.semanticscholar.org/paper/7e5c71d25c1191177b9de5d6bbfcabc720376478",
+    "abstract": "This study applied stable water isotopes (\u03b418OH2O and \u03b42HH2O) and remote sensing techniques to predict basin\u2010wide CO2 uptake in the tropical Deduru Oya River Basin (DOB) in Sri Lanka. It used the fact that water and carbon cycles are linked by transpiration. Between November 2022 and October 2023, the DOB lost 2,563 million m3 of water by evapotranspiration (ET). This number corresponds to 65.8% of the 3,895 million m3 of incoming precipitation. Based on the \u03b418OH2O in a revised Craig\u2013Gordon model and normalized difference vegetation index (NDVI), our data showed that ET could be separated into its subcomponents evaporation (E), transpiration (T), and interception (I) with 10.4%, 53.9%, and 1.5% of the annual precipitation, respectively. After translation to carbon uptake via the water use efficiency (WUE), the DOB showed a net primary productivity (NPP) of 1,130 g C m\u22122 that corresponded to 2,808 \u00d7 109 g C for the entire basin. After subsequent subtraction of basin\u2010wide soil respiration (1,737 \u00d7 109 g C) and surface water degassing (101 \u00d7 109 g C) back to the atmosphere, our study yielded a net ecosystem production (NEP) of 979 \u00b1 313 \u00d7 109 g C for the entire basin. These result indicate that the DOB is a carbon sink. Our study is the first to present this technique together with error propagation and with CO2 evasions from surface waters.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Hydrology & Water Resources",
+      "Biogeochemistry",
+      "Ecosystem Science",
+      "Remote Sensing",
+      "Environmental Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "NDVI (Normalized Difference Vegetation Index)",
+        "agency": "Not specified",
+        "type": "Remote sensing vegetation index",
+        "product": "NDVI",
+        "data_level": "Not specified",
+        "usage_context": "Used to separate evapotranspiration into subcomponents (evaporation, transpiration, interception) and to estimate carbon uptake in the Deduru Oya River Basin"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.85,
+      "composite_confidence": 0.677,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": false,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Germany",
+    "all_countries": [
+      "Germany",
+      "Sri Lanka"
+    ],
+    "institutions": [
+      "Friedrich-Alexander-Universit\u00e4t Erlangen-N\u00fcrnberg",
+      "University of Peradeniya"
+    ]
+  },
+  {
+    "title": "Quantifying Observational Constraints in Top\u2010Down Estimation of Terrestrial Biosphere Carbon Fluxes by CO2 Concentration and Eddy Covariance Flux Measurement Based on EnSRF and CMAQ",
+    "authors": [
+      "Zhen Peng",
+      "Xingxia Kou",
+      "Shao-Ying Wang",
+      "Yu Zhang",
+      "Meigen Zhang",
+      "F. Hu",
+      "Shiguang Miao",
+      "Jun-Xia Dou"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024JD041540",
+    "venue": "Journal of Geophysical Research - Atmospheres",
+    "citation_count": 1,
+    "paper_id": "6d8481043ed4cdedf0e44391a42eb1d4e9ad787c",
+    "url": "https://www.semanticscholar.org/paper/6d8481043ed4cdedf0e44391a42eb1d4e9ad787c",
+    "abstract": "Top\u2010down methods commonly use atmospheric CO2 concentration observations to constrain carbon source and sinks. Despite the increase in spaceborne and ground\u2010based concentration measurements, atmospheric inversions are usually limited by uncertainties in chemical transport models (CTMs) when relating fluxes to observed CO2 mole fractions. CO2 eddy covariance (EC) flux measurements have been widely used to directly measure CO2 fluxes over various ecosystems, but they have rarely been used as constraints in top\u2010down estimations. In this study, we focused on the development of a novel fluxes assimilation scheme through direct flux observations within an Ensemble Square Root Filter assimilation framework. The assimilation scheme avoided some of complexities of concentration observation assimilations. The methodology was primarily applied to typical regions in west China, taking advantage of eight long\u2010term ecosystem EC sites. Moreover, four sets of assimilation experiments were designed to quantify the impacts of observational constraints by flux and concentration measurements. Generally, results indicate that the monthly and hourly statistics of the a posteriori fluxes constrained by flux observations agreed well with flux measurements, demonstrating reasonable performance in seasonal and diurnal variations. Specifically, assimilation results demonstrated the advantage of a posteriori estimates inferred from flux measurements during growing season, as compared to results inferred from concentrations, while some limitation still exists in monthly budget estimates. Nevertheless, it is important to note that current results are only a mathematical optimum. CO2 biospheric fluxes can be estimated more reliably and robustly at the regional scale given considerably more flux observations for efficient constraint.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Atmospheric CO2 Inversions",
+    "research_domains": [
+      "Atmospheric CO2 Inversions",
+      "Data Assimilation",
+      "Carbon Cycle",
+      "Inverse Modeling",
+      "Atmospheric Modeling",
+      "Ecosystem Science"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.9,
+      "composite_confidence": 0.592,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Chemical Transport Modeling"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Nanjing University",
+      "China Meteorological Administration",
+      "Hainan Meteorology Administration",
+      "Chinese Academy of Sciences",
+      "Northwest Institute of Eco-Environment and Resources",
+      "Chengdu University of Information Technology",
+      "Institute of Atmospheric Physics",
+      "University of Chinese Academy of Sciences"
+    ]
+  },
+  {
+    "title": "Fine\u2010Scale Evaluation of Carbon Exchange Capacity in Terrestrial Ecosystems of China: Leveraging Flux Data From Meteorological Stations for Enhanced Database Representation",
+    "authors": [
+      "Yu Zhang",
+      "Xiaofei Ma",
+      "Ge-Ping Luo",
+      "Mingjuan Xie",
+      "Ruixiang Gao",
+      "Shiyuan Wang",
+      "R. Hamdi",
+      "P. Termonia",
+      "P. de Maeyer"
+    ],
+    "year": 2025,
+    "doi": "10.1029/2024GL113422",
+    "venue": "Geophysical Research Letters",
+    "citation_count": 2,
+    "paper_id": "b69ae8dfb5b3771343a74727792312472607a4b3",
+    "url": "https://www.semanticscholar.org/paper/b69ae8dfb5b3771343a74727792312472607a4b3",
+    "abstract": "Over the past two decades, China has experienced frequent extreme events and substantial land cover changes. Site\u2010scale assessments of net ecosystem exchange (NEE) are constrained by the fixed land cover types at eddy covariance towers and short observation periods at existing sites. Using the Eurasian Meteorological Stations Net Ecosystem Exchange product (EAM\u2010NEE), this study evaluated China's carbon exchange dynamics from 2003 to 2018. Results show that southwestern forests exhibit the highest annual carbon sink capacity, while the establishment of national forest parks has contributed positively to enhancing the carbon sink capacity of northern forests. Substantial uncertainties in NEE evaluation were observed, largely due to variations in scales and thresholds. Our findings highlight the importance of site\u2010scale assessments in evaluating the carbon sink capacity and informing targeted strategies for China's dual\u2010carbon goals. Despite limitations in regional representation, the EAM\u2010NEE product provides valuable insights for localized assessments.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Ecosystem Science",
+      "Land-Atmosphere Exchange",
+      "Environmental Monitoring",
+      "Biogeochemistry",
+      "Climate Change"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.825,
+      "composite_confidence": 0.669,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.3,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "Belgium"
+    ],
+    "institutions": [
+      "Chinese Academy of Sciences",
+      "Ghent University",
+      "Xinjiang Institute of Ecology and Geography",
+      "University of Chinese Academy of Sciences",
+      "Royal Meteorological Institute of Belgium"
+    ]
+  },
+  {
+    "title": "A comparison of CO2 emissions from the national greenhouse gases inventory report with CO2 emissions from the global inverse models and the regional WRF-Chem in the Korean Peninsula",
+    "authors": [
+      "Yunjae Cho",
+      "Hyun Mee Kim",
+      "Minwoo Seo"
+    ],
+    "year": 2025,
+    "doi": "10.1007/s11027-024-10195-5",
+    "venue": "Mitigation and Adaptation Strategies for Global Change",
+    "citation_count": 2,
+    "paper_id": "744f9aeee89c79f69e0a03291721d50e142a71e8",
+    "url": "https://www.semanticscholar.org/paper/744f9aeee89c79f69e0a03291721d50e142a71e8",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Atmospheric CO2 Inversions",
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Inverse Modeling",
+      "Atmospheric Modeling",
+      "Carbon Cycle",
+      "Chemical Transport",
+      "Greenhouse Gas Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OCO-2",
+        "agency": "NASA",
+        "type": "Satellite",
+        "product": "Not specified",
+        "data_level": "Not specified",
+        "usage_context": "Satellite CO2 retrievals underlying global inverse model flux estimates compared with national inventory and WRF-Chem results"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.45,
+      "composite_confidence": 0.468,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.2,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.6,
+        "skeptic_engagement": "Level 2: Data Usage",
+        "skeptic_domain": "Greenhouse Gas Inventory Verification",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": false,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "South Korea",
+    "all_countries": [
+      "South Korea"
+    ],
+    "institutions": [
+      "Yonsei University"
+    ]
+  },
+  {
+    "title": "On-Orbit Wavelength Calibration Error Analysis of the Spaceborne Hyperspectral Greenhouse Gas Monitoring Instrument Using the Solar Fraunhofer Lines",
+    "authors": [
+      "Yulong Guo",
+      "Cai-Lan Gong",
+      "Yong Hu",
+      "Fu-Qiang Zheng",
+      "Yunmeng Liu"
+    ],
+    "year": 2024,
+    "doi": "10.3390/rs16183367",
+    "venue": "Remote Sensing",
+    "citation_count": 5,
+    "paper_id": "4f34689688ace9a70226d8c7ab5b47e9460815e5",
+    "url": "https://www.semanticscholar.org/paper/4f34689688ace9a70226d8c7ab5b47e9460815e5",
+    "abstract": "Accurate on-orbit wavelength calibration of the spaceborne hyperspectral payload is the key to the quantitative analysis and application of observational data. Due to the high spectral resolution of general spaceborne hyperspectral greenhouse gas (GHG) detection instruments, the common Fraunhofer lines in the solar atmosphere can be used as a reference for on-orbit wavelength calibration. Based on the performances of a GHG detection instrument under development, this study simulated the instrument\u2019s solar-viewing measurement spectra and analyzed the main sources of errors in the on-orbit wavelength calibration method of the instrument using the solar Fraunhofer lines, including the Doppler shift correction error, the instrumental measurement error, and the peak-seek algorithm error. The calibration accuracy was independently calculated for 65 Fraunhofer lines within the spectral range of the instrument. The results show that the wavelength calibration accuracy is mainly affected by the asymmetry of the Fraunhofer lines and the random error associated with instrument measurement, and it can cause calibration errors of more than 1/10 of the spectral resolution at maximum. A total of 49 Fraunhofer lines that meet the requirements for calibration accuracy were screened based on the design parameters of the instrument. Due to the uncertainty of simulation, the results in this study have inherent limitations, but provide valuable insights for quantitatively analyzing the errors of the on-orbit wavelength calibration method using the Fraunhofer lines, evaluating the influence of instrumental parameters on the calibration accuracy, and enhancing the accuracy of on-orbit wavelength calibration for similar GHG detection payloads.",
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Satellite Carbon Observations",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Numerical Methods"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Spaceborne Hyperspectral Greenhouse Gas Monitoring Instrument (under development)",
+        "agency": "Not specified",
+        "type": "Hyperspectral grating spectrometer (GHG sounder)",
+        "product": "Simulated solar-viewing measurement spectra",
+        "data_level": "Level 1 (simulated radiance/spectra)",
+        "usage_context": "Instrument design parameters used to simulate solar-viewing spectra and quantify on-orbit wavelength calibration errors from Fraunhofer lines"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing of Ecosystems"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Chinese Academy of Sciences",
+      "Shanghai Institute of Technical Physics",
+      "University of Chinese Academy of Sciences"
+    ]
+  },
+  {
+    "title": "Potential of 14C-based vs. \u0394CO-based \u0394ffCO2 observations to estimate urban fossil fuel CO2 (ffCO2) emissions",
+    "authors": [
+      "Fabian Maier",
+      "C. R\u00f6denbeck",
+      "Ingeborg Levin",
+      "C. Gerbig",
+      "M. Gachkivskyi",
+      "S. Hammer"
+    ],
+    "year": 2024,
+    "doi": "10.5194/acp-24-8183-2024",
+    "venue": "Atmospheric Chemistry and Physics",
+    "citation_count": 7,
+    "paper_id": "c89dbf78c5b5bd852f70c3d4b9f68520d8cc9137",
+    "url": "https://www.semanticscholar.org/paper/c89dbf78c5b5bd852f70c3d4b9f68520d8cc9137",
+    "abstract": "Abstract. Atmospheric transport inversions are a powerful tool for independently estimating surface CO2 fluxes from atmospheric CO2 concentration measurements. However, additional tracers are needed to separate the fossil fuel CO2 (ffCO2) emissions from non-fossil CO2 fluxes. In this study, we focus on radiocarbon (14C), the most direct tracer of ffCO2, and the continuously measured surrogate tracer carbon monoxide (CO), which is co-emitted with ffCO2 during incomplete combustion. In the companion paper by Maier et al.\u00a0(2024), we determined discrete 14C-based and continuous \u0394CO-based estimates of the ffCO2 excess concentration (\u0394ffCO2) compared with a clean-air reference for the urban Heidelberg observation site in southwestern Germany. The \u0394CO-based \u0394ffCO2 concentration was calculated by dividing the continuously measured \u0394CO excess concentration by an average 14C-based\u0394CO/\u0394ffCO2 ratio. Here, we use the CarboScope inversion framework adapted for the urban domain around Heidelberg to assess the potential of both types of \u0394ffCO2 observations to investigate ffCO2 emissions and their seasonal cycle. We find that, although they are more precise, 14C-based \u0394ffCO2 observations from almost 100 afternoon flask samples collected in the 2\u00a0years of 2019 and 2020 are not well suited for estimating robust ffCO2 emissions in the main footprint of this urban area, which has a very heterogeneous distribution of sources including several point sources. The benefit of the continuous \u0394CO-based \u0394ffCO2 estimates is that they can be averaged to reduce the impact of individual hours with an inadequate model performance. We show that the weekly averaged \u0394CO-based \u0394ffCO2 observations allow for a robust reconstruction of the seasonal cycle of the area source ffCO2 emissions from temporally flat a\u00a0priori emissions. In particular, the distinct COVID-19 signal \u2013 with a steep drop in emissions in spring 2020 \u2013 is clearly present in these data-driven a\u00a0posteriori results. Moreover, our top-down results show a shift in the seasonality of the area source ffCO2 emissions around Heidelberg in 2019 compared with the bottom-up estimates from the Netherlands Organization for Applied Scientific Research (TNO). This highlights the huge potential of \u0394CO-based \u0394ffCO2 to validate bottom-up ffCO2 emissions at urban stations if the \u0394CO/\u0394ffCO2 ratios can be determined without biases.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Fossil Fuel & Urban Emissions",
+    "research_domains": [
+      "Greenhouse Gas Monitoring",
+      "Inverse Modeling",
+      "Atmospheric Science",
+      "Carbon Cycle",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Modeling"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.85,
+      "composite_confidence": 0.608,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.4,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Germany",
+    "all_countries": [
+      "Germany"
+    ],
+    "institutions": [
+      "Heidelberg University",
+      "Max Planck Institute for Biogeochemistry"
+    ]
+  },
+  {
+    "title": "Global Carbon Budget 2023",
+    "authors": [
+      "P. Friedlingstein",
+      "Michael O'Sullivan",
+      "Matthew W. Jones",
+      "R. Andrew",
+      "D. Bakker",
+      "J. Hauck",
+      "P. Landsch\u00fctzer",
+      "C. Le Qu\u00e9r\u00e9",
+      "I. Luijkx",
+      "G. Peters",
+      "W. Peters",
+      "J. Pongratz",
+      "C. Schwingshackl",
+      "S. Sitch",
+      "J. Canadell",
+      "P. Ciais",
+      "R. Jackson",
+      "S. Alin",
+      "P. Anthoni",
+      "L. Barbero",
+      "N. Bates",
+      "Meike Becker",
+      "N. Bellouin",
+      "B. Decharme",
+      "L. Bopp",
+      "Ida Bagus Mandhara Brasika",
+      "P. Cadule",
+      "M. Chamberlain",
+      "N. Chandra",
+      "T. Chau",
+      "F. Chevallier",
+      "L. Chini",
+      "Margot Cronin",
+      "Xinyu Dou",
+      "K. Enyo",
+      "W. Evans",
+      "Stefanie Falk",
+      "R. Feely",
+      "Lianggang Feng",
+      "D. Ford",
+      "T. Gasser",
+      "Josefine Ghattas",
+      "T. Gkritzalis",
+      "Giacomo Grassi",
+      "L. Gregor",
+      "N. Gruber",
+      "\u00d6. G\u00fcrses",
+      "Ian Harris",
+      "Matthew Hefner",
+      "J. Heinke",
+      "Richard A. Houghton",
+      "G. Hurtt",
+      "Y. Iida",
+      "T. Ilyina",
+      "A. Jacobson",
+      "A. Jain",
+      "Tereza Jarn\u00edkov\u00e1",
+      "A. Jersild",
+      "Fei Jiang",
+      "Zhe Jin",
+      "F. Joos",
+      "Estsushi Kato",
+      "R. Keeling",
+      "Daniel Kennedy",
+      "Kees Klein Goldewijk",
+      "J. Knauer",
+      "J. I. Korsbakken",
+      "A. K\u00f6rtzinger",
+      "Xin Lan",
+      "Nathalie Lef\u00e8vre",
+      "Hong-Mei Li",
+      "Jun-Jie Liu",
+      "Zhi-Qiang Liu",
+      "Lei Ma",
+      "G. Marland",
+      "N. Mayot",
+      "P. McGuire",
+      "G. McKinley",
+      "Gesa Meyer",
+      "Eric J. Morgan",
+      "D. Munro",
+      "S. Nakaoka",
+      "Y. Niwa",
+      "Kevin M. O'Brien",
+      "A. Olsen",
+      "A. Omar",
+      "T. Ono",
+      "Melf Paulsen",
+      "D. Pierrot",
+      "Katie Pocock",
+      "B. Poulter",
+      "Carter M Powis",
+      "G. Rehder",
+      "L. Resplandy",
+      "E. Robertson",
+      "C. R\u00f6denbeck",
+      "T. Rosan",
+      "J. Schwinger",
+      "R. S\u00e9f\u00e9rian",
+      "T. Smallman",
+      "Stephen M. Smith",
+      "R. Sospedra\u2010Alfonso",
+      "Qing Sun",
+      "A. Sutton",
+      "Colm Sweeney",
+      "Shintaro Takao",
+      "P. Tans",
+      "Han-Qin Tian",
+      "B. Tilbrook",
+      "H. Tsujino",
+      "F. Tubiello",
+      "G. R. van der Werf",
+      "E. van Ooijen",
+      "R. Wanninkhof",
+      "Michio Watanabe",
+      "C. Wimart-Rousseau",
+      "Dongxu Yang",
+      "Xiaojuan Yang",
+      "Wen-Ping Yuan",
+      "Xu Yue",
+      "S. Zaehle",
+      "Jiye Zeng",
+      "Bo Zheng"
+    ],
+    "year": 2023,
+    "doi": "10.5194/essd-15-5301-2023",
+    "venue": "Earth System Science Data",
+    "citation_count": 1378,
+    "paper_id": "50bb345352eeacaff5e5245b09cb9dfc40a87e66",
+    "url": "https://www.semanticscholar.org/paper/50bb345352eeacaff5e5245b09cb9dfc40a87e66",
+    "abstract": "Abstract. Accurate assessment of anthropogenic carbon dioxide (CO2) emissions and their redistribution among the atmosphere, ocean, and terrestrial biosphere in a changing climate is critical to better understand the global carbon cycle, support the development of climate policies, and project future climate change. Here we describe and synthesize data sets and methodology to quantify the five major components of the global carbon budget and their uncertainties. Fossil CO2 emissions (EFOS) are based on energy statistics and cement production data, while emissions from land-use change (ELUC), mainly deforestation, are based on land-use and land-use change data and bookkeeping models. Atmospheric CO2 concentration is measured directly, and its growth rate (GATM) is computed from the annual changes in concentration. The ocean CO2 sink (SOCEAN) is estimated with global ocean biogeochemistry models and observation-based fCO2\u00a0products. The terrestrial CO2 sink (SLAND) is estimated with dynamic global vegetation models. Additional lines of evidence on land and ocean sinks are provided by atmospheric inversions, atmospheric oxygen measurements, and Earth system models. The resulting carbon budget imbalance (BIM), the difference between the estimated total emissions and the estimated changes in the atmosphere, ocean, and terrestrial biosphere, is a measure of imperfect data and incomplete understanding of the contemporary carbon cycle. All uncertainties are reported as \u00b11\u03c3. For the year\u00a02022, EFOS increased by 0.9\u2009% relative to 2021, with fossil emissions at 9.9\u00b10.5\u2009Gt\u2009C\u2009yr\u22121 (10.2\u00b10.5\u2009Gt\u2009C\u2009yr\u22121 when the cement carbonation sink is not included), and ELUC was 1.2\u00b10.7\u2009Gt\u2009C\u2009yr\u22121, for a total anthropogenic CO2 emission (including the cement carbonation sink) of 11.1\u00b10.8\u2009Gt\u2009C\u2009yr\u22121 (40.7\u00b13.2\u2009Gt\u2009CO2\u2009yr\u22121). Also, for 2022, GATM was 4.6\u00b10.2\u2009Gt\u2009C\u2009yr\u22121 (2.18\u00b10.1\u2009ppm\u2009yr\u22121; ppm denotes parts per million), SOCEAN was 2.8\u00b10.4\u2009Gt\u2009C\u2009yr\u22121, and SLAND was 3.8\u00b10.8\u2009Gt\u2009C\u2009yr\u22121, with a BIM of \u22120.1\u2009Gt\u2009C\u2009yr\u22121 (i.e.\u00a0total estimated sources marginally too low or sinks marginally too high). The global atmospheric CO2 concentration averaged over 2022 reached 417.1\u00b10.1\u2009ppm. Preliminary data for 2023 suggest an increase in EFOS relative to 2022 of +1.1\u2009% (0.0\u2009% to 2.1\u2009%) globally and atmospheric CO2 concentration reaching 419.3\u2009ppm, 51\u2009% above the pre-industrial level (around 278\u2009ppm in 1750). Overall, the mean of and trend in the components of the global carbon budget are consistently estimated over the period 1959\u20132022, with a near-zero overall budget imbalance, although discrepancies of up to around 1\u2009Gt\u2009C\u2009yr\u22121 persist for the representation of annual to semi-decadal variability in CO2 fluxes. Comparison of estimates from multiple approaches and observations shows the following: (1)\u00a0a persistent large uncertainty in the estimate of land-use changes emissions, (2)\u00a0a low agreement between the different methods on the magnitude of the land CO2 flux in the northern extra-tropics, and (3)\u00a0a discrepancy between the different methods on the strength of the ocean sink over the last decade. This living-data update documents changes in methods and data sets applied to this most recent global carbon budget as well as evolving community understanding of the global carbon cycle. The data presented in this work are available at https://doi.org/10.18160/GCP-2023 (Friedlingstein et al., 2023).\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Inverse Modeling",
+      "Climate Change",
+      "Oceanography"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OCO-2 (Orbiting Carbon Observatory-2)",
+        "agency": "NASA",
+        "type": "Satellite spectrometer",
+        "product": "XCO2 column-averaged CO2 retrievals",
+        "data_level": "Level 2",
+        "usage_context": "Constrains the satellite-based atmospheric CO2 inversions (including CMS-Flux NBE) used as an additional line of evidence for regional land and ocean CO2 sink partitioning in the global carbon budget"
+      },
+      {
+        "name": "GOSAT",
+        "agency": "JAXA/NIES/MOE",
+        "type": "Satellite spectrometer (TANSO-FTS)",
+        "product": "XCO2 retrievals",
+        "data_level": "Level 2",
+        "usage_context": "Used by contributing satellite-based atmospheric inversion systems providing flux estimates compared against bottom-up budget components"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France"
+    ],
+    "institutions": [
+      "Laboratoire de M\u00e9t\u00e9orologie Dynamique",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "\u00c9cole Polytechnique",
+      "Sorbonne Universit\u00e9",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "CEA Paris-Saclay",
+      "Laboratoire de Mesure du Carbone 14"
+    ]
+  },
+  {
+    "title": "Ongoing CO2 monitoring verify CO2 emissions and sinks in China during 2018-2021.",
+    "authors": [
+      "Jun-Ting Zhong",
+      "Xiao-Ye Zhang",
+      "Li-Feng Guo",
+      "De-Ying Wang",
+      "C. Miao",
+      "Xi-Liang Zhang"
+    ],
+    "year": 2023,
+    "doi": "10.1016/j.scib.2023.08.039",
+    "venue": "Science Bulletin",
+    "citation_count": 41,
+    "paper_id": "8793ec125d5afa05c35beb789af0db58de4e4340",
+    "url": "https://www.semanticscholar.org/paper/8793ec125d5afa05c35beb789af0db58de4e4340",
+    "abstract": "Accurate estimating CO2 emissions and sinks is crucial in achieving 2060 carbon neutrality in China. However, CO2 emissions from bottom-up inventories are uncertain at regional scales and lack independent verification from atmospheric perspectives. Here we integrated 39 high-precision CO2 stations in China to top-down invert emission-sink variations at 45\u00a0km\u00a0\u00d7\u00a045\u00a0km and achieved a full range of inventories verification. The results show that China's CO2 emissions are 15% higher than those of five bottom-up inventories, to an annual total of 3.40 Pg C a-1 for 2018-2021. After deducting human and livestock respiration, the annual CO2 emissions were 3.13 Pg C a-1 (11.48 Pg CO2 a-1). The annual increase in emissions slowed from 3.7% in 2019 to 1.1% in 2020 and resumed growth to 4.0% in 2021, consistent with observed CO2 growth rates in China. China's land CO2 sink, deducting farmland sinks and lateral fluxes, was 0.57 Pg C a-1 (2.09 Pg CO2 a-1) for 2018-2021 (higher than most global inverse models), accounting for \u223c16.9% of anthropogenic CO2 emissions. The land sink in China decreased by -19.3% in 2019 due to a weak El Ni\u00f1o event and increased by 3.2% in 2020 and 13.7% in 2021. It is worth noting that inverse CO2 emissions and sinks in western China still face large uncertainty due to limited CO2 monitoring. Overall, our top-down estimates demonstrate spatiotemporal variations in CO2 emissions and sinks from atmospheric perspectives and highlight challenges for different provinces in achieving 2060 carbon neutrality with verified estimates.",
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Atmospheric CO2 Inversions",
+    "research_domains": [
+      "Carbon Cycle",
+      "Inverse Modeling",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Greenhouse Gas Emissions",
+      "Data Assimilation"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.9,
+      "composite_confidence": 0.625,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "China Meteorological Administration",
+      "Henan University",
+      "Chinese Academy of Meteorological Sciences",
+      "Tsinghua University"
+    ]
+  },
+  {
+    "title": "Global Carbon Budget 2022",
+    "authors": [
+      "P. Friedlingstein",
+      "Michael O'Sullivan",
+      "Matthew W. Jones",
+      "R. Andrew",
+      "L. Gregor",
+      "J. Hauck",
+      "C. Le Qu\u00e9r\u00e9",
+      "I. Luijkx",
+      "A. Olsen",
+      "G. P. Peters",
+      "W. Peters",
+      "J. Pongratz",
+      "C. Schwingshackl",
+      "S. Sitch",
+      "J. Canadell",
+      "P. Ciais",
+      "R. Jackson",
+      "S. Alin",
+      "R. Alkama",
+      "A. Arneth",
+      "Vivek K. Arora",
+      "N. Bates",
+      "M. Becker",
+      "N. Bellouin",
+      "Henry C. Bittig",
+      "L. Bopp",
+      "F. Chevallier",
+      "L. Chini",
+      "Margot Cronin",
+      "W. Evans",
+      "Stefanie Falk",
+      "R. Feely",
+      "Thomas Gasser",
+      "M. Gehlen",
+      "T. Gkritzalis",
+      "L. Gloege",
+      "Giacomo Grassi",
+      "N. Gruber",
+      "\u00d6. G\u00fcrses",
+      "Ian Harris",
+      "Matthew Hefner",
+      "Richard A. Houghton",
+      "G. Hurtt",
+      "Y. Iida",
+      "T. Ilyina",
+      "A. Jain",
+      "A. Jersild",
+      "Koji Kadono",
+      "Estsushi Kato",
+      "Daniel Kennedy",
+      "Kees Klein Goldewijk",
+      "J. Knauer",
+      "J. I. Korsbakken",
+      "P. Landsch\u00fctzer",
+      "Nathalie Lef\u00e8vre",
+      "K. Lindsay",
+      "Jun-Jie Liu",
+      "Zhu Liu",
+      "G. Marland",
+      "N. Mayot",
+      "Matthew J. McGrath",
+      "N. Metzl",
+      "N. Monacci",
+      "David R. Munro",
+      "S. Nakaoka",
+      "Y. Niwa",
+      "Kevin M. O'Brien",
+      "T. Ono",
+      "P. Palmer",
+      "N. Pan",
+      "D. Pierrot",
+      "Katie Pocock",
+      "B. Poulter",
+      "L. Resplandy",
+      "E. Robertson",
+      "C. R\u00f6denbeck",
+      "C. Rodriguez",
+      "T. Rosan",
+      "J. Schwinger",
+      "R. S\u00e9f\u00e9rian",
+      "J. Shutler",
+      "I. Skjelvan",
+      "T. Steinhoff",
+      "Qing Sun",
+      "A. Sutton",
+      "Colm Sweeney",
+      "Shintaro Takao",
+      "T. Tanhua",
+      "P. Tans",
+      "Xiang-Jun Tian",
+      "H. Tian",
+      "B. Tilbrook",
+      "H. Tsujino",
+      "F. Tubiello",
+      "G. R. van der Werf",
+      "Anthony P. Walker",
+      "R. Wanninkhof",
+      "C. Whitehead",
+      "Anna Willstrand Wranne",
+      "R. Wright",
+      "Wen-Ping Yuan",
+      "Chao Yue",
+      "Xu Yue",
+      "S. Zaehle",
+      "Jiye Zeng",
+      "Bo Zheng"
+    ],
+    "year": 2022,
+    "doi": "10.5194/essd-14-4811-2022",
+    "venue": "Earth System Science Data",
+    "citation_count": 497,
+    "paper_id": "84bbff551d2e0869601f871e0464ca80e39cd043",
+    "url": "https://www.semanticscholar.org/paper/84bbff551d2e0869601f871e0464ca80e39cd043",
+    "abstract": "Abstract. Accurate assessment of anthropogenic carbon dioxide (CO2) emissions and\ntheir redistribution among the atmosphere, ocean, and terrestrial biosphere\nin a changing climate is critical to better understand the global carbon\ncycle, support the development of climate policies, and project future\nclimate change. Here we describe and synthesize data sets and methodologies to\nquantify the five major components of the global carbon budget and their\nuncertainties. Fossil CO2 emissions (EFOS) are based on energy\nstatistics and cement production data, while emissions from land-use change\n(ELUC), mainly deforestation, are based on land use and land-use change\ndata and bookkeeping models. Atmospheric CO2 concentration is measured\ndirectly, and its growth rate (GATM) is computed from the annual\nchanges in concentration. The ocean CO2 sink (SOCEAN) is estimated\nwith global ocean biogeochemistry models and observation-based\ndata products. The terrestrial CO2 sink (SLAND) is estimated with\ndynamic global vegetation models. The resulting carbon budget imbalance\n(BIM), the difference between the estimated total emissions and the\nestimated changes in the atmosphere, ocean, and terrestrial biosphere, is a\nmeasure of imperfect data and understanding of the contemporary carbon\ncycle. All uncertainties are reported as \u00b11\u03c3. For the year 2021, EFOS increased by 5.1\u2009% relative to 2020, with\nfossil emissions at 10.1\u2009\u00b1\u20090.5\u2009GtC\u2009yr\u22121 (9.9\u2009\u00b1\u20090.5\u2009GtC\u2009yr\u22121 when the cement carbonation sink is included), and ELUC was 1.1\u2009\u00b1\u20090.7\u2009GtC\u2009yr\u22121, for a total anthropogenic CO2 emission\n(including the cement carbonation sink) of 10.9\u2009\u00b1\u20090.8\u2009GtC\u2009yr\u22121\n(40.0\u2009\u00b1\u20092.9\u2009GtCO2). Also, for 2021, GATM was 5.2\u2009\u00b1\u20090.2\u2009GtC\u2009yr\u22121 (2.5\u2009\u00b1\u20090.1\u2009ppm\u2009yr\u22121), SOCEAN was 2.9 \u2009\u00b1\u20090.4\u2009GtC\u2009yr\u22121, and SLAND was 3.5\u2009\u00b1\u20090.9\u2009GtC\u2009yr\u22121, with a\nBIM of \u22120.6\u2009GtC\u2009yr\u22121 (i.e. the total estimated sources were too low or\nsinks were too high). The global atmospheric CO2 concentration averaged over\n2021 reached 414.71\u2009\u00b1\u20090.1\u2009ppm. Preliminary data for 2022 suggest an\nincrease in EFOS relative to 2021 of +1.0\u2009% (0.1\u2009% to 1.9\u2009%)\nglobally and atmospheric CO2 concentration reaching 417.2\u2009ppm, more\nthan 50\u2009% above pre-industrial levels (around 278\u2009ppm). Overall, the mean\nand trend in the components of the global carbon budget are consistently\nestimated over the period 1959\u20132021, but discrepancies of up to 1\u2009GtC\u2009yr\u22121 persist for the representation of annual to semi-decadal\nvariability in CO2 fluxes. Comparison of estimates from multiple\napproaches and observations shows (1) a persistent large uncertainty in the\nestimate of land-use change emissions, (2) a low agreement between the\ndifferent methods on the magnitude of the land CO2 flux in the northern\nextratropics, and (3) a discrepancy between the different methods on the\nstrength of the ocean sink over the last decade. This living data update\ndocuments changes in the methods and data sets used in this new global\ncarbon budget and the progress in understanding of the global carbon cycle\ncompared with previous publications of this data set. The data presented in\nthis work are available at https://doi.org/10.18160/GCP-2022 (Friedlingstein et al., 2022b).\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Greenhouse Gas Emissions",
+      "Inverse Modeling",
+      "Climate Change",
+      "Biogeochemistry",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OCO-2",
+        "agency": "NASA",
+        "type": "Satellite spectrometer",
+        "product": "XCO2 retrievals (used via satellite-based atmospheric inversions, e.g., CMS-Flux)",
+        "data_level": "L2/L4",
+        "usage_context": "Satellite-constrained atmospheric CO2 inversions contributing to the ensemble of land and ocean flux estimates used for comparison and evaluation of the global carbon budget components"
+      },
+      {
+        "name": "GOSAT",
+        "agency": "JAXA/NIES/MOE",
+        "type": "Satellite spectrometer",
+        "product": "XCO2 retrievals (used via satellite-based atmospheric inversions)",
+        "data_level": "L2/L4",
+        "usage_context": "Provides satellite column CO2 constraints in inversion systems whose flux estimates are included in the carbon budget inversion ensemble"
+      },
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Satellite imaging spectroradiometer",
+        "product": "Burned area / active fire data underpinning GFED fire emission estimates",
+        "data_level": "L3/L4",
+        "usage_context": "Fire emission and burned area information used in land-use change emission and land sink estimates"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.66,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "United Kingdom",
+      "Norway",
+      "Switzerland",
+      "Germany",
+      "Netherlands",
+      "Australia",
+      "United States",
+      "Italy",
+      "Canada",
+      "Ireland",
+      "Austria",
+      "Belgium",
+      "Japan",
+      "China",
+      "Sweden"
+    ],
+    "institutions": [
+      "Centre National de la Recherche Scientifique",
+      "\u00c9cole Polytechnique",
+      "University of Exeter",
+      "Universit\u00e9 Paris Sciences et Lettres",
+      "Sorbonne Universit\u00e9",
+      "Laboratoire de M\u00e9t\u00e9orologie Dynamique",
+      "Institut Pierre-Simon Laplace",
+      "University of East Anglia",
+      "Norwich Research Park",
+      "Tyndall Centre"
+    ]
+  },
+  {
+    "title": "Quantifying and Reducing Uncertainty in Global Carbon Cycle Predictions: Lessons and Perspectives From 15\u00a0Years of Data Assimilation Studies With the ORCHIDEE Terrestrial Biosphere Model",
+    "authors": [
+      "N. Macbean",
+      "C. Bacour",
+      "N. Raoult",
+      "V. Bastrikov",
+      "E. N. Koffi",
+      "S. Kuppel",
+      "F. Maignan",
+      "C. Ottl\u00e9",
+      "M. Peaucelle",
+      "D. Santaren",
+      "P. Peylin"
+    ],
+    "year": 2022,
+    "doi": "10.1029/2021GB007177",
+    "venue": "Global Biogeochemical Cycles",
+    "citation_count": 32,
+    "paper_id": "3296385911a18214c8103549c07b88bfcf8e1ac8",
+    "url": "https://www.semanticscholar.org/paper/3296385911a18214c8103549c07b88bfcf8e1ac8",
+    "abstract": "Predicting terrestrial carbon, C, budgets and carbon\u2010climate feedbacks strongly relies on our ability to accurately model interactions between vegetation, C and water cycles, and the atmosphere. However, C fluxes simulated by global, process\u2010based terrestrial biosphere models (TBMs) remain subject to large uncertainties, partly due to unknown or poorly calibrated parameters. This is because TBMs have not routinely been confronted against C cycle related datasets within a statistical data assimilation (DA) system. In this review, we present 15 years' development of a C cycle DA system for optimizing C cycle parameters of the ORCHIDEE TBM. We analyze the impact of assimilating multiple different C cycle related datasets on regional to global\u2010scale gross and net CO2 fluxes. We find that assimilating atmospheric CO2 data is crucial for improving (increasing) ORCHIDEE predictions of the terrestrial land C sink. The improvement is predominantly due to the global\u2010scale constraint these data provide for optimizing initial soil C stocks, which are likely in error due to inaccurate assumptions about steady state spin\u2010up and incomplete knowledge of land use change histories. When comparing the data\u2010constrained ORCHIDEE land C sink estimates to the CAMS atmospheric inversion, we show that while the two approaches agree on the global C sink magnitude, they continue to differ in how the global C sink is partitioned between the northern hemisphere and tropics. We also discuss technical challenges faced in our C cycle DA studies, in particular the difficulty in characterizing the error covariance matrix due to unknown observation biases and/or model\u2010data inconsistencies. We offer our perspectives on how to tackle these challenges that we hope can serve as a roadmap for other TBM groups wishing to develop C cycle DA systems.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle Modeling",
+    "research_domains": [
+      "Carbon Cycle",
+      "Data Assimilation",
+      "Carbon Cycle Modeling",
+      "Inverse Modeling",
+      "Ecosystem Science",
+      "Biogeochemistry"
+    ],
+    "missions_instruments": [
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Satellite instrument",
+        "product": "NDVI / FAPAR vegetation indices",
+        "data_level": "L3",
+        "usage_context": "Assimilated into ORCHIDEE to constrain phenology and vegetation parameters in carbon cycle data assimilation experiments"
+      },
+      {
+        "name": "GOME-2",
+        "agency": "EUMETSAT/ESA",
+        "type": "Satellite instrument",
+        "product": "Solar-Induced Fluorescence (SIF)",
+        "data_level": "L2/L3",
+        "usage_context": "Used as a photosynthesis-related observational constraint in ORCHIDEE parameter optimization"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "France",
+      "Belgium",
+      "Italy"
+    ],
+    "institutions": [
+      "Indiana University Bloomington",
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "Noveltis (France)",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "CEA Paris-Saclay",
+      "Partners In Care",
+      "European Commission"
+    ]
+  },
+  {
+    "title": "Toward a long-term atmospheric CO2 inversion for elucidating natural carbon fluxes: technical notes of NISMON-CO2 v2021.1",
+    "authors": [
+      "Y. Niwa",
+      "K. Ishijima",
+      "A. Ito",
+      "Y. Iida"
+    ],
+    "year": 2022,
+    "doi": "10.1186/s40645-022-00502-6",
+    "venue": "Progress in Earth and Planetary Science",
+    "citation_count": 26,
+    "paper_id": "310ec4d96d1e88cb3628ee1bb6e621269154a87c",
+    "url": "https://www.semanticscholar.org/paper/310ec4d96d1e88cb3628ee1bb6e621269154a87c",
+    "abstract": "Accurate estimates of the carbon dioxide (CO 2 ) fluxes at the earth\u2019s surface are imperative for comprehending the carbon cycle mechanisms and providing reliable global warming predictions. Furthermore, they can also provide valuable science-based information that will be helpful in reducing human-induced CO 2 emissions. Inverse analysis is a prominent method of quantitatively estimating spatiotemporal variations in CO 2 fluxes; however, it involves a certain level of uncertainty and requires technical refinement, specifically to improve the horizontal resolution so that local fluxes can be compared with other estimates made at the regional or national level. In this study, a novel set of inversion schemes was incorporated into a state-of-the-art inverse analysis system named NISMON-CO 2 . The introduced schemes include a grid conversion, observational weighting, and anisotropic prior error covariance, the details of which are described. Moreover, pseudo-observation experiments were performed to examine the effect of the new schemes and to assess the reliability of NISMON-CO 2 for long-term analysis with practical inhomogeneous observations. The experiment results evidently demonstrate the advantages of the grid conversion scheme for high-resolution flux estimates (1\u00b0\u2009\u00d7\u20091\u00b0), with notable improvements being achieved through the observational weighting and anisotropic prior error covariance. Furthermore, the estimated seasonal and interannual variations in regional CO 2 fluxes were confirmed to be reliable, although some potential bias in terms of global land\u2013ocean partitioning was observed. Thus, these results are useful for interpreting the flux variations that result from real-observation inverse analysis by NISMON-CO 2 ver. 2021.1.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Atmospheric CO2 Inversions",
+    "research_domains": [
+      "Carbon Cycle",
+      "Inverse Modeling",
+      "Atmospheric Science",
+      "Data Assimilation",
+      "Greenhouse Gas Monitoring",
+      "Numerical Methods"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.95,
+      "composite_confidence": 0.713,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.8,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Japan",
+    "all_countries": [
+      "Japan"
+    ],
+    "institutions": [
+      "National Institute for Environmental Studies",
+      "Meteorological Research Institute",
+      "Japan Agency for Marine-Earth Science and Technology",
+      "Nagoya University",
+      "Japan Meteorological Agency"
+    ]
+  },
+  {
+    "title": "Global Terrestrial Ecosystem Carbon Flux Inferred from TanSat XCO2 Retrievals",
+    "authors": [
+      "Heng-Mao Wang",
+      "Fei Jiang",
+      "Yi Liu",
+      "Dongxu Yang",
+      "Mou-Song Wu",
+      "W. He",
+      "Jun Wang",
+      "Jing Wang",
+      "W. Ju",
+      "Jing M. Chen"
+    ],
+    "year": 2022,
+    "doi": "10.34133/2022/9816536",
+    "venue": "Journal of remote sensing",
+    "citation_count": 20,
+    "paper_id": "57b61bfb2fe33b8e08f1020608eda7dfc6e35c5b",
+    "url": "https://www.semanticscholar.org/paper/57b61bfb2fe33b8e08f1020608eda7dfc6e35c5b",
+    "abstract": "TanSat is China\u2019s first greenhouse gases observing satellite. In recent years, substantial progresses have been achieved on retrieving column-averaged CO2 dry air mole fraction (XCO2). However, relatively few attempts have been made to estimate terrestrial net ecosystem exchange (NEE) using TanSat XCO2 retrievals. In this study, based on the GEOS-Chem 4D-Var data assimilation system, we infer the global NEE from April 2017 to March 2018 using TanSat XCO2. The inversion estimates global NEE at \u22123.46\u2009PgC\u2009yr-1, evidently higher than prior estimate and giving rise to an improved estimate of global atmospheric CO2 growth rate. Regionally, our inversion greatly increases the carbon uptakes in northern mid-to-high latitudes and significantly enhances the carbon releases in tropical and southern lands, especially in Africa and India peninsula. The increase of posterior sinks in northern lands is mainly attributed to the decreased carbon release during the nongrowing season, and the decrease of carbon uptakes in tropical and southern lands basically occurs throughout the year. Evaluations against independent CO2 observations and comparison with previous estimates indicate that although the land sinks in the northern middle latitudes and southern temperate regions are improved to a certain extent, they are obviously overestimated in northern high latitudes and underestimated in tropical lands (mainly northern Africa), respectively. These results suggest that TanSat XCO2 retrievals may have systematic negative biases in northern high latitudes and large positive biases over northern Africa, and further efforts are required to remove bias in these regions for better estimates of global and regional NEE.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Atmospheric CO2 Inversions",
+    "research_domains": [
+      "Carbon Cycle",
+      "Inverse Modeling",
+      "Data Assimilation",
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TanSat",
+        "agency": "CAS/CMA/MOST (China)",
+        "type": "Satellite greenhouse gas spectrometer (ACGS)",
+        "product": "Column-averaged CO2 dry air mole fraction (XCO2) retrievals",
+        "data_level": "L2",
+        "usage_context": "Primary observational constraint assimilated in GEOS-Chem 4D-Var inversion to infer global terrestrial net ecosystem exchange (April 2017-March 2018); retrieval biases diagnosed regionally"
+      },
+      {
+        "name": "TCCON",
+        "agency": "International ground-based network",
+        "type": "Ground-based FTS spectrometer network",
+        "product": "XCO2 column measurements",
+        "data_level": "L2",
+        "usage_context": "Independent evaluation of posterior CO2 fields and inversion performance"
+      },
+      {
+        "name": "OCO-2",
+        "agency": "NASA",
+        "type": "Satellite grating spectrometer",
+        "product": "XCO2 retrievals / derived flux estimates",
+        "data_level": "L2",
+        "usage_context": "Comparison of inferred fluxes and XCO2 with satellite-based estimates, including CMS-Flux NBE 2020 inversion results"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "Canada"
+    ],
+    "institutions": [
+      "Nanjing University",
+      "Jiangsu Center for Collaborative Innovation in Geographical Information Resource Development and Application",
+      "Chinese Academy of Sciences",
+      "Institute of Atmospheric Physics",
+      "University of Toronto"
+    ]
+  },
+  {
+    "title": "Definitions and methods to estimate regional land carbon fluxes for the second phase of the REgional Carbon Cycle Assessment and Processes Project (RECCAP-2)",
+    "authors": [
+      "P. Ciais",
+      "A. Bastos",
+      "F. Chevallier",
+      "R. Lauerwald",
+      "B. Poulter",
+      "P. Canadell",
+      "G. Hugelius",
+      "R. Jackson",
+      "A. Jain",
+      "M. Jones",
+      "Masayuki Kondo",
+      "I. Luijkx",
+      "P. Patra",
+      "W. Peters",
+      "J. Pongratz",
+      "A. M. Roxanna Petrescu",
+      "S. Piao",
+      "Chunjing Qiu",
+      "C. von Randow",
+      "P. Regnier",
+      "M. Saunois",
+      "R. Scholes",
+      "\u0410. \u0412. \u0428\u0432\u0438\u0434\u0435\u043d\u043a\u043e",
+      "H. Tian",
+      "Hui Yang",
+      "Xuhui Wang",
+      "B. Zheng"
+    ],
+    "year": 2020,
+    "doi": "10.5194/GMD-2020-259",
+    "venue": "Geoscientific Model Development",
+    "citation_count": 114,
+    "paper_id": "1983513d82b15bc6e3f305548a0d484fa50fabd2",
+    "url": "https://www.semanticscholar.org/paper/1983513d82b15bc6e3f305548a0d484fa50fabd2",
+    "abstract": "Abstract. Regional land carbon budgets provide insights on the spatial distribution of the land uptake of atmospheric carbon dioxide, and can be used to evaluate carbon cycle models and to define baselines for land-based additional mitigation efforts. The scientific community has been involved in providing observation-based estimates of regional carbon budgets either by downscaling atmospheric CO2 observations into surface fluxes with atmospheric inversions, by using inventories of carbon stock changes in terrestrial ecosystems, by upscaling local field observations such as flux towers with gridded climate and remote sensing fields or by integrating data-driven or process-oriented terrestrial carbon cycle models. The first coordinated attempt to collect regional carbon budgets for nine regions covering the entire globe in the RECCAP-1 project has delivered estimates for the decade 2000\u20132009, but these budgets were not comparable between regions, due to different definitions and component fluxes reported or omitted. The recent recognition of lateral fluxes of carbon by human activities and rivers, that connect CO2 uptake in one area with its release in another also requires better definition and protocols to reach harmonized regional budgets that can be summed up to the globe and compared with the atmospheric CO2 growth rate and inversion results. In this study, for the international initiative RECCAP-2 coordinated by the Global Carbon Project, which aims as an update of regional carbon budgets over the last two decades based on observations, for 10 regions covering the globe, with a better harmonization that the precursor project, we provide recommendations for using atmospheric inversions results to match bottom-up carbon accounting and models, and we define the different component fluxes of the net land atmosphere carbon exchange that should be reported by each research group in charge of each region. Special attention is given to lateral fluxes, inland water fluxes and land use fluxes.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2020,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Carbon Monitoring System Flux Net Biosphere Exchange 2020 (CMS-Flux NBE 2020)",
+    "team_paper_id": "55620e4836a7bbbfeb69b78095a563da315654e0",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "CO2 Flux & Carbon Budget",
+    "research_domains": [
+      "Carbon Cycle",
+      "Inverse Modeling",
+      "Biogeochemistry",
+      "Atmospheric Science",
+      "Greenhouse Gas Monitoring",
+      "Climate Change"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.95,
+      "composite_confidence": 0.713,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.8,
+        "team_paper_relevance_tier": "Core"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Terrestrial Carbon Cycle"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "Germany",
+      "Belgium",
+      "Australia",
+      "United States",
+      "Sweden",
+      "United Kingdom",
+      "Japan",
+      "Netherlands",
+      "China",
+      "South Africa",
+      "Austria",
+      "Russia"
+    ],
+    "institutions": [
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "CEA Paris-Saclay",
+      "Max Planck Institute for Biogeochemistry",
+      "Universit\u00e9 Libre de Bruxelles",
+      "CSIRO Oceans and Atmosphere",
+      "Goddard Space Flight Center",
+      "Stockholm University"
+    ]
   }
 ]

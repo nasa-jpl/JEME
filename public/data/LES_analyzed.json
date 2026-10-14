@@ -21882,5 +21882,1812 @@
     "institutions": [
       "Nanjing University of Science and Technology"
     ]
+  },
+  {
+    "title": "Strong monsoon influence on South Asian methane emissions in 2020 revealed by a Bayesian inversion constrained by satellite observations",
+    "authors": [
+      "Rakesh Subramanian",
+      "Rona L. Thompson",
+      "M. Vojta",
+      "O. Schneising",
+      "A. Stohl"
+    ],
+    "year": 2026,
+    "doi": "10.5194/acp-26-9757-2026",
+    "venue": "Atmospheric Chemistry and Physics",
+    "citation_count": 1,
+    "paper_id": "ed36c76737e910474d3570426dcd7afcfea0c32e",
+    "url": "https://www.semanticscholar.org/paper/ed36c76737e910474d3570426dcd7afcfea0c32e",
+    "abstract": "Abstract. South Asia is a major contributor to global methane (CH4) emissions, yet its emissions remain poorly constrained, limiting targeted mitigation. Current bottom-up inventories do not consistently capture the magnitude and seasonality of CH4 emissions in this region, particularly during the monsoon. Here we quantify South Asian CH4 emissions for 2020 using column observations from a satellite instrument (TROPOMI), a Lagrangian transport model (FLEXPART), and a Bayesian inversion system (FLEXINVERT+). We estimate a posteriori emission of 73.0\u2009\u00b1\u20090.7\u2009Tg\u2009yr\u22121 for South Asia, including 35.6\u2009\u00b1\u20090.5\u2009Tg\u2009yr\u22121 for India and 13.2\u2009\u00b1\u20090.4\u2009Tg\u2009yr\u22121 for Bangladesh. Agriculture and wetlands contribute substantially to the regional budget, with the flux increments coincident with rice-growing areas and inundated lowlands. The inversion indicates pronounced monsoon-modulated seasonality in South Asia: posterior fluxes are higher than the prior by about 19.3\u2009Tg CH4 (an increase of \u223c\u200970\u2009%) during June\u2013September and lower during January\u2013May by \u223c\u200946\u2009%. Localized enhancements seen over the lower Indus Basin align with runoff patterns, while the seasonal peaks here are absent in inventories. By resolving monsoon seasonality with satellite constraints, our results point towards key uncertainties in the South Asian CH4 budget and underscore the need for process-based, seasonally responsive inventories to inform mitigation strategies and reconcile bottom-up and top-down estimates.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Greenhouse Gas Emissions",
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Inverse Modeling",
+      "Atmospheric Science",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA/Netherlands Space Office",
+        "type": "Satellite spectrometer",
+        "product": "Column methane (CH4) observations",
+        "data_level": "Not specified",
+        "usage_context": "Primary satellite constraint for Bayesian inversion to quantify South Asian methane emissions in 2020"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.9,
+      "composite_confidence": 0.672,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.6,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Carbon Data Assimilation"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Austria",
+    "all_countries": [
+      "Austria",
+      "Norway",
+      "Germany"
+    ],
+    "institutions": [
+      "University of Vienna",
+      "Kjeller Innovasjon (Norway)",
+      "NILU",
+      "University of Bremen"
+    ]
+  },
+  {
+    "title": "Improved Quantification of Methane Point-Source Emissions from Hyperspectral Imagery Using a Spectrally Corrected Levenberg\u2013Marquardt Matched Filter",
+    "authors": [
+      "Zhuo He",
+      "Yan Ma",
+      "Zheng-Qiang Li",
+      "Ying Zhang",
+      "Cheng Fan",
+      "Lili Qie",
+      "Zihan Zhang",
+      "Zheng Shi",
+      "Tong Lu",
+      "Yuan-Yuan Gao",
+      "Xingyu Yao",
+      "Xiaofan Li",
+      "Chenwei Lan",
+      "Qian Yao"
+    ],
+    "year": 2026,
+    "doi": "10.3390/rs18081195",
+    "venue": "Remote Sensing",
+    "citation_count": 0,
+    "paper_id": "ef596c9bcb234138d9157924d0979f8b849630a3",
+    "url": "https://www.semanticscholar.org/paper/ef596c9bcb234138d9157924d0979f8b849630a3",
+    "abstract": "Spaceborne hyperspectral imaging spectrometers enable refined retrieval and quantification of methane point-source emissions. However, the conventional matched filter (MF) systematically underestimates methane enhancements under high-concentration conditions and remains sensitive to spectral inconsistencies across varying observation scenarios. To address these limitations, we improve MF-based retrieval from two aspects: the observation model and the unit absorption spectrum (UAS) representation. First, a Levenberg\u2013Marquardt matched filter (LMMF) is developed by extending the MF framework to a nonlinear retrieval formulation while retaining its data-driven and background-statistics-based characteristics. Specifically, the exponential absorption term is preserved, and methane enhancement is iteratively solved in the nonlinear domain, enabling a more physically consistent retrieval without requiring precise external prior knowledge. Building upon this framework, a spectrally corrected LMMF (SC-LMMF) is further proposed by introducing a lookup-table-based dynamic UAS correction to account for variations in observation geometry, surface elevation, and atmospheric state. Comprehensive validation using idealized and noise-perturbed simulations, end-to-end simulations, and controlled-release experiments demonstrates that the LMMF mitigates high-concentration underestimation relative to the MF. The SC-LMMF further reduces cross-scene systematic biases, shifting retrievals toward a near 1:1 relationship. In controlled-release experiments, the SC-LMMF increased the coefficient of determination (R2) by approximately 50% while reducing the root mean square error (RMSE) and mean absolute error (MAE) by approximately 70% relative to the MF. Overall, the proposed framework enhances the robustness and quantitative consistency of methane point-source retrievals across multisource hyperspectral satellite observations.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 2: Model Adaptation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Inverse Modeling",
+      "Environmental Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "PRISMA",
+        "agency": "ASI",
+        "type": "Spaceborne hyperspectral imaging spectrometer",
+        "product": "SWIR radiance imagery",
+        "data_level": "L1",
+        "usage_context": "Matched filter / LMMF methane plume retrieval and controlled-release validation"
+      },
+      {
+        "name": "EMIT",
+        "agency": "NASA",
+        "type": "Spaceborne imaging spectrometer (ISS)",
+        "product": "SWIR radiance imagery",
+        "data_level": "L1B",
+        "usage_context": "Methane point-source retrieval and cross-scene bias evaluation"
+      },
+      {
+        "name": "EnMAP",
+        "agency": "DLR",
+        "type": "Spaceborne hyperspectral imaging spectrometer",
+        "product": "SWIR radiance imagery",
+        "data_level": "L1",
+        "usage_context": "Multisource hyperspectral methane retrieval consistency testing"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.68,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Chinese Academy of Sciences",
+      "Aerospace Information Research Institute",
+      "University of Chinese Academy of Sciences"
+    ]
+  },
+  {
+    "title": "A U.S. scientific community review of carbon cycle science gaps and opportunities to better support earth system science and carbon management",
+    "authors": [
+      "N. Parazoo",
+      "D. Carroll",
+      "J. B. Abshire",
+      "Y. Bar-On",
+      "R. Birdsey",
+      "A. A. Bloom",
+      "K. W. Bowman",
+      "R. Braghiere",
+      "L. Bruhwiler",
+      "B. Byrne",
+      "A. Chatterjee",
+      "D. Crisp",
+      "L. Duncanson",
+      "A. Feldman",
+      "A. M. Fox",
+      "C. Frankenberg",
+      "B. Gay",
+      "F. Hopkins",
+      "F. Hoffman",
+      "J. Holmquist",
+      "L. Hutyra",
+      "M. Keller",
+      "C. Koven",
+      "J. Laughner",
+      "J. Liu",
+      "N. Lovenduski",
+      "N. Macbean",
+      "G. McKinley",
+      "G. McNicol",
+      "D. Menemenlis",
+      "A. M. Michalak",
+      "C. E. Miller",
+      "H. Nesser",
+      "T. Oda",
+      "E. Ordway",
+      "L. E. Ott",
+      "K. Paustian",
+      "Z. Pierrat",
+      "B. Poulter",
+      "S. Reed",
+      "D. Schimel",
+      "S. Serbin",
+      "S. Saatchi",
+      "H. Suto",
+      "L. Windham-Myers",
+      "D. Wunch"
+    ],
+    "year": 2026,
+    "doi": "10.1016/j.earscirev.2026.105493",
+    "venue": "Earth-Science Reviews",
+    "citation_count": 0,
+    "paper_id": "c167c4637bcd04aec07e7a6744ca7c621909c3a7",
+    "url": "https://www.semanticscholar.org/paper/c167c4637bcd04aec07e7a6744ca7c621909c3a7",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Carbon Cycle Science Review",
+    "research_domains": [
+      "Carbon Cycle",
+      "Greenhouse Gas Monitoring",
+      "Remote Sensing",
+      "Biogeochemistry",
+      "Climate Change",
+      "Ecosystem Science"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.45,
+      "composite_confidence": 0.537,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.2,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "CO2 Flux & Carbon Budget"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.8,
+        "skeptic_engagement": "Level 1: Citation",
+        "skeptic_domain": "CO2 Flux & Carbon Budget",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": false,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "Israel",
+      "Puerto Rico",
+      "Canada",
+      "Japan"
+    ],
+    "institutions": [
+      "Jet Propulsion Laboratory",
+      "San Jose State University",
+      "Moss Landing Marine Laboratories",
+      "Goddard Space Flight Center",
+      "California Institute of Technology",
+      "Weizmann Institute of Science",
+      "Woodwell Climate Research Center",
+      "NOAA Earth System Research Laboratory",
+      "Cube Technology (United States)",
+      "Spectra Research (United States)"
+    ]
+  },
+  {
+    "title": "Comparing the performance of different hyperspectral satellite imaging spectroscopy in mapping methane point-source emissions",
+    "authors": [
+      "Fei Li",
+      "Keer Lin",
+      "Yingqi Yan",
+      "Shengxi Bai",
+      "Qidan Huang",
+      "Chen-Xi Feng",
+      "Shi-Wei Sun",
+      "Shao-Hua Zhao",
+      "Wei Zhou",
+      "Chunyan Zhou",
+      "Jun Lin",
+      "Xinwei Zhang",
+      "Yong-Guang Zhang"
+    ],
+    "year": 2026,
+    "doi": "10.1016/j.rse.2025.115224",
+    "venue": "Remote Sensing of Environment",
+    "citation_count": 8,
+    "paper_id": "e79cb14d3ca1a63a27f406a067d4ab71087ca07a",
+    "url": "https://www.semanticscholar.org/paper/e79cb14d3ca1a63a27f406a067d4ab71087ca07a",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Air Quality"
+    ],
+    "missions_instruments": [
+      {
+        "name": "EnMAP",
+        "agency": "DLR",
+        "type": "Spaceborne imaging spectrometer",
+        "product": "Hyperspectral radiance / methane column enhancement",
+        "data_level": "L1B",
+        "usage_context": "Used to detect and quantify methane point-source emissions and compare instrument performance"
+      },
+      {
+        "name": "PRISMA",
+        "agency": "ASI",
+        "type": "Spaceborne imaging spectrometer",
+        "product": "Hyperspectral radiance / methane column enhancement",
+        "data_level": "L1",
+        "usage_context": "Used to map methane point sources and evaluate detection capability"
+      },
+      {
+        "name": "EMIT",
+        "agency": "NASA",
+        "type": "Spaceborne imaging spectrometer (ISS)",
+        "product": "Hyperspectral radiance / methane plume retrievals",
+        "data_level": "L1B",
+        "usage_context": "Used for methane plume detection and quantification comparison"
+      },
+      {
+        "name": "GF-5 AHSI / Gaofen-5",
+        "agency": "CNSA",
+        "type": "Spaceborne imaging spectrometer",
+        "product": "Hyperspectral radiance / methane retrievals",
+        "data_level": "L1",
+        "usage_context": "Included in cross-instrument comparison of methane point-source mapping"
+      },
+      {
+        "name": "Sentinel-2 MSI",
+        "agency": "ESA",
+        "type": "Multispectral imager",
+        "product": "Surface reflectance / methane enhancement (SWIR bands)",
+        "data_level": "L1C",
+        "usage_context": "Used as reference multispectral detection for methane plume mapping comparison"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.6,
+      "evidence_confidence": 0.45,
+      "composite_confidence": 0.434,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.2,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 3: Model Adaptation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.4,
+        "skeptic_engagement": "Level 3: Model Adaptation",
+        "skeptic_domain": "Methane Detection & Plumes",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": true,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "United States"
+    ],
+    "institutions": [
+      "Jiangsu Center for Collaborative Innovation in Geographical Information Resource Development and Application",
+      "Nanjing University",
+      "University of Southern California",
+      "China Centre for Resources Satellite Data and Application",
+      "Cornell University",
+      "New York State College of Agriculture & Life Sciences",
+      "Chinese Academy of Meteorological Sciences",
+      "Ministry of Ecology and Environment",
+      "Satellite Application Center for Ecology and Environment",
+      "China Academy of Space Technology"
+    ]
+  },
+  {
+    "title": "Assessing the Potential of the MTG-FCI Geostationary Mission for the Detection of Methane Plumes",
+    "authors": [
+      "Shan-Yu Zhou",
+      "Javier Gorro\u00f1o",
+      "Javier Roger",
+      "I. Irakulis-Loitxate",
+      "Rasmus Lindstrot",
+      "Zhi-Peng Pei",
+      "Lu-Lu Si",
+      "L. Guanter"
+    ],
+    "year": 2026,
+    "doi": "10.1021/acs.est.5c07974",
+    "venue": "Environmental Science and Technology",
+    "citation_count": 1,
+    "paper_id": "d0c59114fa4e6a782bc7dc0cf79b05d980e14a58",
+    "url": "https://www.semanticscholar.org/paper/d0c59114fa4e6a782bc7dc0cf79b05d980e14a58",
+    "abstract": "The Flexible Combined Imager aboard the Meteosat Third Generation satellite (MTG-FCI) provides geostationary observations over Europe and Africa, the Middle East, parts of South America, and the surrounding waters. The FCI samples the visible, near-infrared, and shortwave infrared spectral windows with a spatial resolution at nadir between 500 and 1000 m, and a 10 min temporal sampling interval. This configuration offers a potential for methane retrievals using multiband multipass retrieval (MBMP) methods, as shown with other multispectral missions. The potential of the MTG-FCI system for the detection and monitoring of single methane plumes is evaluated in this article through different approaches. End-to-end simulations using high-resolution WRF-LES methane plumes over Algeria showed that MTG-FCI can detect emissions as low as 30 t/h, where initial plume signals become visible, with a clearer detection above 50 t/h. Additionally, mass-balance modeling estimated a minimum detection limit of 20\u201330 t/h across the central MTG-FCI disk (GSD \u2264 1 km) under optimal conditions. We illustrate the use of the MTG-FCI for the monitoring and quantification of methane plumes using a real transient emission detection from a compressor station in Algeria (34.676\u00b0 N, 6.191\u00b0 E) on September 29, 2023, capturing its full evolution from 10:48 to 15:58 UTC. This event corresponded to an emission rate of 389 \u00b1 81 t/h and a total methane release of \u223c320 tons, with results broadly consistent with independent satellite estimates. These findings highlight MTG-FCI\u2019s ability to track large transient methane plumes in near real-time, complementing polar-orbiting sensors.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Modeling",
+      "Environmental Monitoring",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "MTG-FCI (Flexible Combined Imager, Meteosat Third Generation)",
+        "agency": "EUMETSAT/ESA",
+        "type": "Geostationary multispectral imager",
+        "product": "VIS/NIR/SWIR radiances used for multiband multipass (MBMP) methane retrievals",
+        "data_level": "Level 1 (radiances)",
+        "usage_context": "Core dataset: end-to-end simulated and real observations used to assess detection limits and quantify a transient methane plume in Algeria"
+      },
+      {
+        "name": "WRF-LES (model, not satellite)",
+        "agency": "Not specified",
+        "type": "Large-eddy simulation model output",
+        "product": "High-resolution simulated methane plumes",
+        "data_level": "Model output",
+        "usage_context": "Simulated plume fields input to end-to-end instrument simulations to evaluate MTG-FCI detection thresholds"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.686,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 3: Model Adaptation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    }
+  },
+  {
+    "title": "Satellite Insights into methane Super-Emitters: Regional emissions and yearly growth on Turkmenistan's west coast",
+    "authors": [
+      "Zhong-Hua He",
+      "Fang-Ying Gong",
+      "Miao Liang",
+      "Ling Gao",
+      "Chunyang Zhou",
+      "Tai-Long He",
+      "Zhao-Cheng Zeng"
+    ],
+    "year": 2025,
+    "doi": "10.1016/j.jag.2025.104975",
+    "venue": "International Journal of Applied Earth Observation and Geoinformation",
+    "citation_count": 4,
+    "paper_id": "0d5fe2c6b1e8e7a86a14e2331e778aea9afe035c",
+    "url": "https://www.semanticscholar.org/paper/0d5fe2c6b1e8e7a86a14e2331e778aea9afe035c",
+    "abstract": null,
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Sentinel-5P/TROPOMI",
+        "agency": "ESA/Copernicus",
+        "type": "Satellite",
+        "product": "Methane (CH4) column concentrations",
+        "data_level": "Level 2",
+        "usage_context": "Primary instrument for detecting and quantifying methane plumes and super-emitters in Turkmenistan's west coast region"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.667,
+      "evidence_confidence": 0.425,
+      "composite_confidence": 0.449,
+      "evidence_flags": {
+        "has_abstract": false,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.1,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "high"
+      },
+      "skeptic_review": {
+        "reviewed": true,
+        "skeptic_agreement": 0.8,
+        "skeptic_engagement": "Level 1: Citation",
+        "skeptic_domain": "Methane Detection & Plumes",
+        "skeptic_engagement_in_vocab": true,
+        "skeptic_domain_in_vocab": true,
+        "override_flag": false,
+        "review_reason": "high_miscalibration_risk"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China",
+      "United States"
+    ],
+    "institutions": [
+      "Zhejiang Meteorological Bureau",
+      "Renmin University of China",
+      "China Meteorological Administration",
+      "Ministry of Ecology and Environment",
+      "Satellite Application Center for Ecology and Environment",
+      "Harvard University",
+      "Peking University"
+    ]
+  },
+  {
+    "title": "Surface reflectance biases in XCH4 retrievals from the 2.3\u2009\u00b5m band are enhanced in the presence of aerosols",
+    "authors": [
+      "P. Somkuti",
+      "G. McGarragh",
+      "Christopher W. O'Dell",
+      "Antonio Di Noia",
+      "L. Vogel",
+      "Sean Crowell",
+      "L. Ott",
+      "Hartmut B\u00f6sch"
+    ],
+    "year": 2025,
+    "doi": "10.5194/amt-18-4647-2025",
+    "venue": "Atmospheric Measurement Techniques",
+    "citation_count": 2,
+    "paper_id": "525d9717159b2e8b57a600dc806eaec48be8763a",
+    "url": "https://www.semanticscholar.org/paper/525d9717159b2e8b57a600dc806eaec48be8763a",
+    "abstract": "Abstract. In this work, we present the results of an observing system simulation experiment (OSSE) in which we investigate the emergence of a surface-reflectance-dependent bias in retrieved column-averaged dry-air mole fractions of methane (XCH4). Our focus is on single-band retrievals in the shortwave infrared (SWIR) at 2.3\u2009\u00b5m. This particular bias manifests as artificial gradients in XCH4 fields that relate to surface features on the ground and can, for example, cause erroneous estimates of methane source emission rates. We find that even for near-ideal conditions (that being a perfectly calibrated instrument, perfect knowledge of meteorology and trace gas vertical distributions, and an absence of clouds and aerosols) a surface-reflectance-related bias appears in the retrieved XCH4. While the magnitude of the bias is much lower than is observed in, for example, real data from the TROPOspheric Monitoring Instrument (TROPOMI), the overall qualitative shape is strikingly similar. When we study a more realistic scenario by considering synthetic measurements that are affected by aerosols, the surface bias increases in magnitude roughly by a factor of 10. We hold all other properties of the synthetic measurements fixed and thus can make the following statements about these surface biases from the 2.3\u2009\u00b5m absorption band. First, the bias already appears in the near-perfect scenario, meaning that its origin is likely fundamental to XCH4 retrievals from this particular absorption band and using an optimal-estimation-type retrieval approach. Second, the magnitude of the bias increases significantly when aerosols are encountered. As aerosols give rise to a magnification of the bias, we have implemented a retrieval configuration in which the retrieval algorithm knows the true aerosol abundance profiles along with their optical properties. With this configuration, the surface bias returns mostly to the level first seen when synthetic measurements were not affected by aerosols. The results we present in this work should be considered for new missions where XCH4 is a target quantity and the design relies on the 2.3\u2009\u00b5m absorption band. Since the surface bias will likely emerge, it is crucial that a validation approach is planned which sufficiently samples the needed range of surface reflectance in areas of near-uniform methane concentrations in order to capture the bias and thus correct for\u00a0it.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Chemistry",
+      "Inverse Modeling",
+      "Environmental Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite",
+        "product": "XCH4",
+        "data_level": "Not specified",
+        "usage_context": "Referenced as example of real data showing surface-reflectance-related bias in XCH4 retrievals"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.686,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "United Kingdom",
+      "Germany",
+      "Spain"
+    ],
+    "institutions": [
+      "Goddard Space Flight Center",
+      "Earth System Science Interdisciplinary Center",
+      "Cooperative Institute for Research in the Atmosphere",
+      "Colorado State University",
+      "University of Leicester",
+      "University of Bremen",
+      "National Centre for Earth Observation",
+      "University of the Basque Country",
+      "National Aeronautics and Space Administration"
+    ]
+  },
+  {
+    "title": "Infrared Spectroscopy with Variable Decomposition Level Dual-Tree Complex Wavelet Transform for Quantification of Air Pollutants.",
+    "authors": [
+      "Yu-Sheng Qin",
+      "Xin Han",
+      "Xangxian Li",
+      "Jian-Fei Yang",
+      "Jing-Jing Tong",
+      "Min-Guang Gao",
+      "Yujun Zhang"
+    ],
+    "year": 2025,
+    "doi": "10.1021/acs.analchem.5c03806",
+    "venue": "Analytical Chemistry",
+    "citation_count": 0,
+    "paper_id": "2842f4eb813e092396c02be38addee86b1e6bd50",
+    "url": "https://www.semanticscholar.org/paper/2842f4eb813e092396c02be38addee86b1e6bd50",
+    "abstract": "Open-Path Fourier Transform Infrared Spectroscopy (OP-FTIR) is a key active remote sensing technology for detecting and identifying atmospheric pollutants. However, accurately characterizing gaseous pollutants under open-path conditions presents significant challenges, primarily due to the real-time estimation of background spectra. To address this issue, a variable decomposition level dual-tree complex wavelet transform method is proposed for adaptive background spectrum estimation. The algorithm dynamically adjusts the decomposition level based on spectral band characteristics and incorporates nonlinear compression with L1 regularization for enhanced stability under variable environmental conditions. The method was evaluated through both controlled gas cell experiments and field measurements. Compared with high-order Legendre polynomial fitting, it achieved lower average root-mean-square errors for C2H4 and C3H6 by 7.04 and 19.37%, respectively, indicating improved retrieval accuracy. In addition, it reduced the relative uncertainties for key background gases such as CO2 and CO across three distinct field sites, demonstrating enhanced robustness under variable environmental conditions. This approach provides a generalizable strategy for background estimation in complex open-path environments, supporting more accurate and scalable OP-FTIR-based gas monitoring.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Remote Sensing & AI Methods",
+    "research_domains": [
+      "Remote Sensing",
+      "Atmospheric Chemistry",
+      "Air Quality",
+      "Environmental Monitoring",
+      "Numerical Methods",
+      "Greenhouse Gas Monitoring"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.825,
+      "composite_confidence": 0.669,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.3,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing & AI Methods"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Chinese Academy of Sciences",
+      "Hefei Institutes of Physical Science",
+      "Anhui Institute of Optics and Fine Mechanics",
+      "Wanjiang University of Technology"
+    ]
+  },
+  {
+    "title": "Quantification of CO2 hotspot emissions from OCO-3 SAM CO2 satellite images using deep learning methods",
+    "authors": [
+      "Joffrey Dumont le Brazidec",
+      "P. Vanderbecken",
+      "A. Farchi",
+      "G. Broquet",
+      "G. Kuhlmann",
+      "M. Bocquet"
+    ],
+    "year": 2025,
+    "doi": "10.5194/gmd-18-3607-2025",
+    "venue": "Geoscientific Model Development",
+    "citation_count": 4,
+    "paper_id": "23d9c920ebea36224c52b8ef9a871db1bd5afa48",
+    "url": "https://www.semanticscholar.org/paper/23d9c920ebea36224c52b8ef9a871db1bd5afa48",
+    "abstract": "Abstract. This paper presents the development and application of a deep-learning-based method for inverting CO2 atmospheric plumes from power plants using satellite imagery of the CO2 total column mixing ratios (XCO2). We present an end-to-end convolutional neural network (CNN) approach, processing the satellite XCO2 images to derive estimates of the power plant emissions, that is resilient to missing data in the images due to clouds or to the partial view of the plume owing to the limited extent of the satellite swath. The CNN is trained and validated exclusively on CO2 simulations from eight power plants in Germany in 2015. The evaluation on this synthetic dataset shows an excellent CNN performance with relative errors close to 20\u2009%, which is only significantly affected by substantial cloud cover. The method is then applied to 39 images of the XCO2 plumes from nine power plants, acquired by the Orbiting Carbon Observatory-3 Snapshot Area Maps (OCO3\u00a0SAMs), and the predictions are compared to average annual reported emissions. The results are very promising, showing a relative difference in the predictions to reported emissions only slightly higher than the relative error diagnosed from the experiments with synthetic images. Furthermore, analysis of the area of the images in which the CNN-based inversion extracts the information for the quantification of the emissions, based on integrated-gradient techniques, demonstrates that the CNN effectively identifies the location of the plumes in the OCO-3 SAM images. This study demonstrates the feasibility of applying neural networks that have been trained on synthetic datasets for the inversion of atmospheric plumes in real satellite imagery from XCO2 and provides the tools for future applications.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Remote Sensing & AI Methods",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Machine Learning",
+      "Inverse Modeling",
+      "Atmospheric Modeling",
+      "Greenhouse Gas Emissions"
+    ],
+    "missions_instruments": [
+      {
+        "name": "OCO-3 (Orbiting Carbon Observatory-3)",
+        "agency": "NASA",
+        "type": "Spaceborne imaging spectrometer",
+        "product": "Snapshot Area Maps (SAM) XCO2 retrievals",
+        "data_level": "L2",
+        "usage_context": "39 XCO2 SAM images of plumes from nine power plants were processed by the trained CNN to estimate emissions, compared against reported annual emissions"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.975,
+      "composite_confidence": 0.721,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.9,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing & AI Methods"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "Switzerland"
+    ],
+    "institutions": [
+      "\u00c9cole nationale des ponts et chauss\u00e9es",
+      "Centre d'Enseignement et de Recherche en Environnement Atmosph\u00e9rique",
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "Swiss Federal Laboratories for Materials Science and Technology"
+    ]
+  },
+  {
+    "title": "Satellite-Based Seasonal Fingerprinting of Methane Emissions from Canadian Dairy Farms Using Sentinel-5P",
+    "authors": [
+      "Padmanabhan Jagannathan Prajesh",
+      "K. Ragunath",
+      "Miriam Gordon",
+      "Suresh Neethirajan"
+    ],
+    "year": 2025,
+    "doi": "10.3390/cli13070135",
+    "venue": "Climate",
+    "citation_count": 5,
+    "paper_id": "ef687b5fcea05e9b8a6e0a740e0c678df38e9850",
+    "url": "https://www.semanticscholar.org/paper/ef687b5fcea05e9b8a6e0a740e0c678df38e9850",
+    "abstract": "Methane (CH4) emissions from dairy farming represent a substantial yet under-quantified share of agricultural greenhouse gas emissions. This study provides an in-depth, satellite-based fingerprinting analysis of methane emissions from Canada\u2019s dairy sector, using Sentinel-5P/TROPOMI data. We utilized a robust quasi-experimental design, pairing 14 dairy-intensive zones with eight non-dairy reference regions, to analyze methane emissions from 2019 to 2024. A dynamic, region-specific baseline approach was implemented to remove temporal non-stationarity and isolate dairy-specific methane signals. Dairy regions exhibited consistently higher methane concentrations than reference areas, with an average methane anomaly of 17.4 ppb. However, this concentration gap between dairy and non-dairy regions notably narrowed by 57.23% (from 24.42 ppb in 2019 to 10.44 ppb in 2024), driven primarily by accelerated methane increases in non-dairy landscapes and a pronounced one-year contraction during 2022\u20132023 (\u221239.29%). Nationally, atmospheric methane levels rose by 3.83%, revealing significant spatial heterogeneity across provinces. Notably, an inverse relationship between the initial methane concentrations in 2019 and subsequent growth rates emerged, indicating spatial convergence. The seasonal analysis uncovered consistent spring minima and fall\u2013winter maxima across regions, reflecting the combined effects of seasonal livestock management practices, atmospheric transport dynamics, and biogeochemical processes. The diminishing dairy methane anomaly suggests complex interplay of intensifying background methane emissions from climate-driven wetland fluxes, increasing fossil fuel extraction activities, and diffuse agricultural emissions. These findings underscore the emerging challenges in attributing sector-specific methane emissions accurately from satellite observations, highlighting both the capabilities and limitations of current satellite monitoring approaches.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Greenhouse Gas Monitoring",
+      "Remote Sensing",
+      "Atmospheric Science",
+      "Greenhouse Gas Emissions",
+      "Environmental Monitoring",
+      "Climate Change"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Sentinel-5P / TROPOMI",
+        "agency": "ESA",
+        "type": "Satellite spectrometer (nadir-viewing imaging spectrometer)",
+        "product": "Methane (CH4) column-averaged dry air mole fraction (XCH4)",
+        "data_level": "L2 (gridded/aggregated for analysis)",
+        "usage_context": "Primary data source for analyzing methane concentration anomalies over Canadian dairy-intensive vs. non-dairy reference regions, 2019-2024, including seasonal and trend fingerprinting"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane & Trace Gases"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Canada",
+    "all_countries": [
+      "Canada",
+      "India"
+    ],
+    "institutions": [
+      "Dalhousie University",
+      "Tamil Nadu Agricultural University"
+    ]
+  },
+  {
+    "title": "Instrument Performance Analysis for Methane Point Source Retrieval and Estimation Using Remote Sensing Technique",
+    "authors": [
+      "Yuhan Jiang",
+      "Lu Zhang",
+      "Xing-Ying Zhang",
+      "Xi-Feng Cao",
+      "Hai-Yang Dou",
+      "Ling-Feng Zhang",
+      "Huan-Huan Yan",
+      "Ya-Peng Wang",
+      "Yi-Dan Si",
+      "Binglong Chen"
+    ],
+    "year": 2025,
+    "doi": "10.3390/rs17040634",
+    "venue": "Remote Sensing",
+    "citation_count": 3,
+    "paper_id": "1dfb988bf08419daf1f03394892f5b0884432c70",
+    "url": "https://www.semanticscholar.org/paper/1dfb988bf08419daf1f03394892f5b0884432c70",
+    "abstract": "The effective monitoring of methane (CH4) point sources is important for climate change research. Satellite-based observations have demonstrated significant potential for emission estimation. In this study, the methane plumes with different emission rates are modelled and pseudo-observations with diverse spatial resolution, spectral resolution, and signal-to-noise ratios (SNR) are simulated by the radiative transfer model. The iterative maximum a posteriori\u2013differential optical absorption spectroscopy (IMAP-DOAS) algorithm is applied to retrieve the column-averaged methane dry air mole fraction (XCH4), a three-dimensional matrix of estimated plume emission rates is then constructed. The results indicate that an optimal plume estimation requires high spatial and spectral resolution alongside an adequate SNR. While a spatial resolution degradation within 120 m has little impact on quantification, a high spatial resolution is important for detecting low-emission plumes. Additionally, a fine spectral resolution (<5 nm) is more beneficial than a higher SNR for precise plume retrieval. Scientific SNR settings can also help to accurately quantify methane plumes, but there is no need to pursue an overly extreme SNR. Finally, miniaturized spectroscopic systems, such as dispersive spectrometers or Fabry\u2013P\u00e9rot interferometers, meet current detection needs, offering a faster and resource-efficient deployment pathway. The results can provide a reference for the development of current detection instruments for methane plumes.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 2: Model Adaptation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Inverse Modeling"
+    ],
+    "missions_instruments": [],
+    "uncertainty": {
+      "reasoning_confidence": 0.733,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.673,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 4: Foundational Method",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.167,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "China Meteorological Administration",
+      "Chinese Academy of Meteorological Sciences",
+      "Fudan University"
+    ]
+  },
+  {
+    "title": "A survey of methane point source emissions from coal mines in Shanxi province of China using AHSI on board Gaofen-5B",
+    "authors": [
+      "Zhong-Hua He",
+      "Ling Gao",
+      "Miao Liang",
+      "Zhao-Cheng Zeng"
+    ],
+    "year": 2024,
+    "doi": "10.5194/amt-17-2937-2024",
+    "venue": "Atmospheric Measurement Techniques",
+    "citation_count": 25,
+    "paper_id": "20a5a5220789939c5719e940a3aa67d272868c93",
+    "url": "https://www.semanticscholar.org/paper/20a5a5220789939c5719e940a3aa67d272868c93",
+    "abstract": "Abstract. Satellite-based detection of methane (CH4) point sources is crucial in identifying and mitigating anthropogenic emissions of CH4, a potent greenhouse gas. Previous studies have indicated the presence of CH4 point source emissions from coal mines in Shanxi, China, which is an important source region with large CH4 emissions, but a comprehensive survey has remained elusive. This study aims to conduct a survey of CH4 point sources over Shanxi's coal mines based on observations of the Advanced Hyperspectral Imager (AHSI) on board the Gaofen-5B satellite (GF-5B/AHSI) between 2021 and 2023. The spectral shift in centre wavelength and change in full width at half-maximum (FWHM) from the nominal design values are estimated for all spectral channels, which are used as inputs for retrieving the enhancement of the column-averaged dry-air mole fraction of CH4 (\u0394XCH4) using a matched-filter-based algorithm. Our results show that the spectral calibration on GF-5B/AHSI reduced estimation biases of the emission flux rate by up to 5.0\u2009%. We applied the flood-fill algorithm to automatically extract emission plumes from \u0394XCH4 maps. We adopted the integrated mass enhancement (IME) model to estimate the emission flux rate values from each CH4 point source. Consequently, we detected CH4 point sources in 32 coal mines with 93 plume events in Shanxi province. The estimated emission flux rate ranges from 761.78\u2009\u00b1\u2009185.00 to 12\u2009729.12\u2009\u00b1\u20094658.13\u2009kg\u2009h\u22121. Our results show that wind speed is the dominant source of uncertainty contributing about 84.84\u2009% to the total uncertainty in emission flux rate estimation. Interestingly, we found a number of false positive detections due to solar panels that are widely spread in Shanxi. This study also evaluates the accuracy of wind fields in ECMWF ERA5 reanalysis by comparing them with a ground-based meteorological station. We found a large discrepancy, especially in wind direction, suggesting that incorporating local meteorological measurements into the study CH4 point source are important to achieve high accuracy. The study demonstrates that GF-5B/AHSI possesses capabilities for monitoring large CH4 point sources over complex surface characteristics in Shanxi.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Air Quality"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Gaofen-5B / AHSI (Advanced Hyperspectral Imager)",
+        "agency": "CNSA (China National Space Administration)",
+        "type": "Spaceborne hyperspectral imaging spectrometer",
+        "product": "Radiance spectra used to retrieve XCH4 enhancements (\u0394XCH4) via matched filter",
+        "data_level": "L1 radiance (used to derive L2-type \u0394XCH4 plume maps)",
+        "usage_context": "Primary dataset: spectral calibration, methane plume detection and emission flux rate quantification for coal mines in Shanxi, 2021-2023"
+      },
+      {
+        "name": "ECMWF ERA5 reanalysis",
+        "agency": "ECMWF",
+        "type": "Atmospheric reanalysis",
+        "product": "10 m wind speed and direction fields",
+        "data_level": "Reanalysis gridded product",
+        "usage_context": "Wind input for IME-based flux rate estimation and uncertainty analysis; evaluated against ground-based meteorological station data"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Zhejiang Meteorological Bureau",
+      "China Meteorological Administration",
+      "Peking University"
+    ]
+  },
+  {
+    "title": "Deep learning applied to CO2 power plant emissions quantification using simulated satellite images",
+    "authors": [
+      "Joffrey Dumont le Brazidec",
+      "P. Vanderbecken",
+      "A. Farchi",
+      "G. Broquet",
+      "G. Kuhlmann",
+      "M. Bocquet"
+    ],
+    "year": 2024,
+    "doi": "10.5194/gmd-17-1995-2024",
+    "venue": "Geoscientific Model Development",
+    "citation_count": 26,
+    "paper_id": "a824d1d94817d7da5d5d822820d8e3f707d71f96",
+    "url": "https://www.semanticscholar.org/paper/a824d1d94817d7da5d5d822820d8e3f707d71f96",
+    "abstract": "Abstract. The quantification of emissions of greenhouse gases and air pollutants through the inversion of plumes in satellite images remains a complex problem that current methods can only assess with significant uncertainties. The anticipated launch of the CO2M (Copernicus Anthropogenic Carbon Dioxide Monitoring) satellite constellation in 2026 is expected to provide high-resolution images of CO2 (carbon dioxide) column-averaged mole fractions (XCO2), opening up new possibilities. However, the inversion of future CO2 plumes from CO2M will encounter various obstacles. A challenge is the low CO2 plume signal-to-noise ratio due to the variability in the background and instrumental errors in satellite measurements. Moreover, uncertainties in the transport and dispersion processes further complicate the inversion task. To address these challenges, deep learning techniques, such as neural networks, offer promising solutions for retrieving emissions from plumes in XCO2 images. Deep learning models can be trained to identify emissions from plume dynamics simulated using a transport model. It then becomes possible to extract relevant information from new plumes and predict their emissions. In this paper, we develop a strategy employing convolutional neural networks (CNNs) to estimate the emission fluxes from a plume in a pseudo-XCO2 image. Our dataset used to train and test such methods includes pseudo-images based on simulations of hourly XCO2, NO2 (nitrogen dioxide), and wind fields near various power plants in eastern Germany, tracing plumes from anthropogenic and biogenic sources. CNN models are trained to predict emissions from three power plants that exhibit diverse characteristics. The power plants used to assess the deep learning model's performance are not used to train the model. We find that the CNN model outperforms state-of-the-art plume inversion approaches, achieving highly accurate results with an absolute error about half of that of the cross-sectional flux method and an absolute relative error of \u223c\u200920\u2009% when only the XCO2 and wind fields are used as inputs. Furthermore, we show that our estimations are only slightly affected by the absence of NO2 fields or a detection mechanism as additional information. Finally, interpretability techniques applied to our models confirm that the CNN automatically learns to identify the XCO2 plume and to assess emissions from the plume concentrations. These promising results suggest a high potential of CNNs in estimating local CO2 emissions from satellite images.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2024,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Remote Sensing & AI Methods",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Machine Learning",
+      "Inverse Modeling",
+      "Atmospheric Modeling",
+      "Greenhouse Gas Emissions"
+    ],
+    "missions_instruments": [
+      {
+        "name": "CO2M (Copernicus Anthropogenic Carbon Dioxide Monitoring)",
+        "agency": "ESA/Copernicus",
+        "type": "Satellite imaging spectrometer (planned)",
+        "product": "XCO2 and NO2 column fields (simulated pseudo-observations)",
+        "data_level": "Synthetic/Level 2-like",
+        "usage_context": "Simulated CO2M-like pseudo-images of XCO2 and NO2 over German power plants used to train and evaluate CNN emission-quantification models"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Remote Sensing & AI Methods"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "France",
+    "all_countries": [
+      "France",
+      "Switzerland"
+    ],
+    "institutions": [
+      "\u00c9cole nationale des ponts et chauss\u00e9es",
+      "Centre d'Enseignement et de Recherche en Environnement Atmosph\u00e9rique",
+      "Centre National de la Recherche Scientifique",
+      "Universit\u00e9 de Versailles Saint-Quentin-en-Yvelines",
+      "Commissariat \u00e0 l'\u00c9nergie Atomique et aux \u00c9nergies Alternatives",
+      "Universit\u00e9 Paris-Saclay",
+      "Laboratoire des Sciences du Climat et de l'Environnement",
+      "Swiss Federal Laboratories for Materials Science and Technology"
+    ]
+  },
+  {
+    "title": "A blended TROPOMI+GOSAT satellite data product for atmospheric methane using machine learning to correct retrieval biases",
+    "authors": [
+      "Nicholas Balasus",
+      "D. Jacob",
+      "A. Lorente",
+      "J. Maasakkers",
+      "R. Parker",
+      "H. Boesch",
+      "Zichong Chen",
+      "Makoto M. Kelp",
+      "H. Nesser",
+      "D. Varon"
+    ],
+    "year": 2023,
+    "doi": "10.5194/amt-16-3787-2023",
+    "venue": "Atmospheric Measurement Techniques",
+    "citation_count": 85,
+    "paper_id": "c506d3e5524c15396d1d281ccee5ef5524438606",
+    "url": "https://www.semanticscholar.org/paper/c506d3e5524c15396d1d281ccee5ef5524438606",
+    "abstract": "Abstract. Satellite observations of dry-column methane mixing\nratios (XCH4) from shortwave infrared (SWIR) solar backscatter\nradiation provide a powerful resource to quantify methane emissions in\nservice of climate action. The TROPOspheric Monitoring Instrument (TROPOMI), launched in October 2017,\nprovides global daily coverage at a 5.5\u2009\u00d7\u20097\u2009km2 (nadir) pixel\nresolution, but its methane retrievals can suffer from biases associated with\nSWIR surface albedo, scattering from aerosols and cirrus clouds, and\nacross-track variability (striping). The Greenhouse gases Observing SATellite (GOSAT) instrument, launched in 2009,\nhas better spectral characteristics and its methane retrieval is much less\nsubject to biases, but its data density is 250\u00a0times sparser than TROPOMI.\nHere, we present a blended TROPOMI+GOSAT methane product obtained by\ntraining a machine learning (ML) model to predict the difference between\nTROPOMI and GOSAT co-located measurements, using only predictor variables\nincluded in the TROPOMI retrieval, and then applying the correction to the\ncomplete TROPOMI record from April 2018 to present. We find that the largest corrections are associated with coarse aerosol particles, high SWIR surface\nalbedo, and across-track pixel index. Our blended product corrects a\nsystematic difference between TROPOMI and GOSAT over water, and it features\ncorrections exceeding 10\u2009ppb over arid land, persistently cloudy regions,\nand high northern latitudes. It reduces the TROPOMI spatially variable bias\nover land (referenced to GOSAT data) from 14.3 to 10.4\u2009ppb at a\n0.25\u2218\u2009\u00d7\u20090.3125\u2218 resolution. Validation\nwith Total Carbon Column Observing Network (TCCON) ground-based column measurements shows reductions in variable\nbias compared with the original TROPOMI data from 4.7 to 4.4\u2009ppb and in\nsingle-retrieval precision from 14.5 to 11.9\u2009ppb. TCCON data are all in\nlocations with a SWIR surface albedo below 0.4 (where TROPOMI biases tend to be\nrelatively low), but they confirm the dependence of TROPOMI biases on SWIR\nsurface albedo and coarse aerosol particles, as well as the reduction of\nthese biases in the blended product. Fine-scale inspection of the Arabian\nPeninsula shows that a number of hotspots in the original TROPOMI data are\nremoved as artifacts in the blended product. The blended product also\ncorrects striping and aerosol/cloud biases in single-orbit TROPOMI data,\nenabling better detection and quantification of ultra-emitters. Residual\ncoastal biases can be removed by applying additional filters. The ML method\npresented here can be applied more generally to validate and correct data\nfrom any new satellite instrument by reference to a more established\ninstrument.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Chemistry",
+      "Machine Learning",
+      "Greenhouse Gas Emissions",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA/Netherlands (Sentinel-5P)",
+        "type": "Satellite spectrometer (SWIR solar backscatter)",
+        "product": "XCH4 retrievals (SRON operational/scientific product)",
+        "data_level": "Level 2",
+        "usage_context": "Primary dataset corrected via machine learning to produce blended TROPOMI+GOSAT methane product; bias analysis and plume/ultra-emitter detection"
+      },
+      {
+        "name": "GOSAT (TANSO-FTS)",
+        "agency": "JAXA/NIES/MOE",
+        "type": "Satellite Fourier transform spectrometer",
+        "product": "XCH4 proxy retrievals",
+        "data_level": "Level 2",
+        "usage_context": "Reference dataset for co-located training of ML bias correction model"
+      },
+      {
+        "name": "TCCON",
+        "agency": "International ground-based network",
+        "type": "Ground-based FTS network",
+        "product": "Column-averaged XCH4",
+        "data_level": "Level 2",
+        "usage_context": "Independent validation of blended product bias and precision"
+      },
+      {
+        "name": "MODIS",
+        "agency": "NASA",
+        "type": "Satellite imaging spectroradiometer",
+        "product": "Surface albedo / aerosol-cloud ancillary data",
+        "data_level": "Not specified",
+        "usage_context": "Ancillary data for evaluating albedo and aerosol/cloud-related retrieval biases"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 0.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane & Trace Gases"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "United States",
+    "all_countries": [
+      "United States",
+      "Netherlands",
+      "United Kingdom",
+      "Germany"
+    ],
+    "institutions": [
+      "Harvard University",
+      "Space Research Organisation Netherlands",
+      "University of Leicester",
+      "National Centre for Earth Observation",
+      "University of Bremen"
+    ]
+  },
+  {
+    "title": "Accounting for surface reflectance spectral features in TROPOMI methane retrievals",
+    "authors": [
+      "A. Lorente",
+      "T. Borsdorff",
+      "M. Martinez-Velarte",
+      "J. Landgraf"
+    ],
+    "year": 2023,
+    "doi": "10.5194/amt-16-1597-2023",
+    "venue": "Atmospheric Measurement Techniques",
+    "citation_count": 56,
+    "paper_id": "a332a3908308ab42cdd7f57b80b5bbc5f229ab38",
+    "url": "https://www.semanticscholar.org/paper/a332a3908308ab42cdd7f57b80b5bbc5f229ab38",
+    "abstract": "Abstract. Satellite remote sensing of methane (CH4) using the TROPOspheric Monitoring Instrument (TROPOMI) aboard the Copernicus Sentinel-5 Precursor (S5-P) satellite is key to monitor and quantify emissions globally. Overall, the S5-P methane data are of satisfying quality, demonstrated by the product validation with ground-based measurements from the Total Carbon Column Observing Network (TCCON). However, analysis of TROPOMI dry-air column mixing ratio (XCH4) data has pointed to a few false methane anomalies up to 20\u201340\u2009ppb that can potentially be misinterpreted as enhancements due to strong emission sources. These artefacts are caused by spectral features of the underlying surfaces of specific materials (e.g. carbonate rocks), which are not well represented in the forward model of the retrieval algorithm. In this study we show that the observed anomalies are due to the surface model which describes the spectral dependence of the Lambertian albedo by a second-order polynomial in wavelength. By analysing the ECOSTRESS library that contains laboratory spectra for different types of surfaces, we find that a quadratic function might not be the most optimal representation of the surface reflectance spectral dependencies in the short-wave infrared (SWIR) range. Already the use of a third-order polynomial improves the methane data such that the anomalies disappear at several locations (e.g. Siberia, Australia and Algeria) without affecting the data quality elsewhere, and the quality of the fit significantly improves. We also found that the known bias in retrieved methane for low-albedo scenes slightly improves, but still, a posterior correction needs to be applied, leaving open the question about the root cause of the albedo bias. After applying the adjusted surface model globally, we perform the routine validation with TCCON and Greenhouse gases Observing SATellite (GOSAT) data. GOSAT comparison does not significantly improve, while TCCON validation results show a small improvement in some stations of 2\u20134\u2009ppb, up to a factor of 10 smaller than the artificial XCH4 enhancements. This reflects that TCCON stations are not close to any of the corrected artefacts, hinting at a limitation of the current validation approach of the S5-P XCH4 data product.\n",
+    "indexed": {
+      "date-parts": [
+        [
+          2023,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Greenhouse Gas Emissions",
+      "Environmental Monitoring",
+      "Atmospheric Chemistry"
+    ],
+    "missions_instruments": [
+      {
+        "name": "TROPOMI",
+        "agency": "ESA/Copernicus (Sentinel-5 Precursor)",
+        "type": "Satellite spectrometer (SWIR/UV-VIS-NIR imaging spectrometer)",
+        "product": "XCH4 dry-air column mixing ratio (methane retrieval); Level-1B radiance spectra",
+        "data_level": "L1B/L2",
+        "usage_context": "Primary dataset; retrieval algorithm surface albedo model modified (3rd-order polynomial) and reprocessed globally to remove false methane anomalies"
+      },
+      {
+        "name": "TCCON (Total Carbon Column Observing Network)",
+        "agency": "Multi-institutional ground-based network",
+        "type": "Ground-based FTS spectrometer network",
+        "product": "XCH4 column-averaged dry-air mole fractions",
+        "data_level": "L2",
+        "usage_context": "Validation reference for the adjusted TROPOMI XCH4 product"
+      },
+      {
+        "name": "GOSAT (TANSO-FTS)",
+        "agency": "JAXA/NIES/MOE",
+        "type": "Satellite Fourier transform spectrometer",
+        "product": "XCH4 retrievals",
+        "data_level": "L2",
+        "usage_context": "Satellite cross-comparison/validation of adjusted TROPOMI methane retrievals"
+      },
+      {
+        "name": "ECOSTRESS Spectral Library",
+        "agency": "NASA/JPL",
+        "type": "Laboratory/field spectral reflectance library",
+        "product": "Surface reflectance spectra of minerals, rocks, vegetation, soils",
+        "data_level": "Not specified",
+        "usage_context": "Analyzed to characterize SWIR surface reflectance spectral dependence and justify higher-order albedo polynomial"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Netherlands",
+    "all_countries": [
+      "Netherlands"
+    ],
+    "institutions": [
+      "Space Research Organisation Netherlands"
+    ]
+  },
+  {
+    "title": "Use of Satellite Images and the Split Window\nAlgorithm to Detect Fugitive Methane\nin Tlalnepantla De Baz Landfill",
+    "authors": [
+      "G. Hern\u00e1ndez-Cruz",
+      "A. Wellens",
+      "M. V\u00e1squez-Ortiz",
+      "R. Villanueva-Estrada",
+      "M. Rojas-Valencia"
+    ],
+    "year": 2022,
+    "doi": "10.15244/pjoes/151587",
+    "venue": "Polish Journal of Environmental Studies",
+    "citation_count": 6,
+    "paper_id": "2020a88160ffa1cbfd32d9f7a022ea5f96b5b865",
+    "url": "https://www.semanticscholar.org/paper/2020a88160ffa1cbfd32d9f7a022ea5f96b5b865",
+    "abstract": "Worldwide, the increase in land surface temperature has been attributed to the concentration of greenhouse gases. However, there is no record of timely information that shows which types of land cover relate to major increases in surface temperature. The main aim of this paper is to identify the specific sites in a landfill where biogas is released into the atmosphere. A second objective is to try to find a spatial correlation between the concentration of methane emitted to the atmosphere with the observed surface temperature gradients. The recoverable and fugitive methane fluxes were validated with in situ information, using a LICOR gas accumulation chamber. The surface heat estimate was obtained from the Split Window algorithm, using the TIRS sensor of the Landsat 8. With data obtained in previous studies, both in situ and remote, it was possible to spatially correlate the methane flux released into the atmosphere with the temperature distribution plume within the landfill. The importance of our research is related to the continuous need for surface temperature monitoring on the planet. The use of technological tools such as the one presented here reduces the cost and execution time of environmental studies.",
+    "indexed": {
+      "date-parts": [
+        [
+          2022,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Emissions",
+      "Environmental Monitoring",
+      "Greenhouse Gas Monitoring",
+      "Climate Change",
+      "Atmospheric Science"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Landsat 8",
+        "agency": "NASA/USGS",
+        "type": "Satellite",
+        "product": "TIRS/OLI thermal and multispectral imagery; land surface temperature via Split Window algorithm",
+        "data_level": "Not specified",
+        "usage_context": "Used to estimate land surface temperature over the Tlalnepantla de Baz landfill and correlate thermal gradients with fugitive methane fluxes"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.875,
+      "composite_confidence": 0.686,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.5,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "Mexico",
+    "all_countries": [
+      "Mexico"
+    ],
+    "institutions": [
+      "Universidad Nacional Aut\u00f3noma de M\u00e9xico",
+      "Secretariat of Agriculture, Livestock, Rural Development, Fisheries and Food",
+      "Instituto Nacional de Pesca y Acuacultura",
+      "Instituto de Geof\u00edsica",
+      "Instituto de Ingenier\u00eda"
+    ]
+  },
+  {
+    "title": "MTU-Former: A Multitask Unified Transformer Framework for Global Methane Monitoring With Million-Scale Multispectral Imagery",
+    "authors": [
+      "Wangyang Cao",
+      "Xiaoying Lu",
+      "Tianyi Liu",
+      "Li-Jie Zhang",
+      "Guang-Yun Zhang",
+      "Pengfei Li",
+      "Guang-Hui Zhang"
+    ],
+    "year": 2026,
+    "doi": "10.1109/TGRS.2026.3722885",
+    "venue": "IEEE Transactions on Geoscience and Remote Sensing",
+    "citation_count": 0,
+    "paper_id": "8432b737ea3472702a8b7d53a177bdebdbe2eb29",
+    "url": "https://www.semanticscholar.org/paper/8432b737ea3472702a8b7d53a177bdebdbe2eb29",
+    "abstract": "Accurate monitoring of methane emissions is critical for addressing global climate change. While Sentinel-2 short-wave infrared (SWIR) imagery offers high spatiotemporal resolution for monitoring the dynamics of methane emissions, its complex background noise challenges automated data analysis. To address this, we propose a multitask unified transformer (MTU-Former) framework designed to simultaneously detect, segment, and quantify methane plumes by leveraging multitask synergy to enhance quantification performance. Central to our approach is the novel development of a mask-guided cross-task feature fusion (MG-CTFF) module. By fusing the plume probability map and the retrieved methane column enhancement map through a contribution map and dual physics-aware attention biases, the module guides regression attention toward core plume regions while suppressing background interference. To further resolve task discrepancies, the framework integrates a fast adaptive multitask optimization (FAMO) strategy to balance gradient updates. To support this data-driven approach, we present a large-scale dataset comprising 3 million images, constructed by combining Sentinel-2 data from 12 global regions with weather research and forecasting (WRF)-large eddy simulation (LES)-simulated plumes. Comprehensive experimental results show that MTU-Former achieves a coefficient of determination ( $R^{2}$ ) of 0.9771, a root-mean-square error (RMSE) of 1532.93 kg h\u22121, and a mean absolute percentage error (MAPE) of 9.55%. In pixel-level recognition, our model achieves a detection accuracy of 99.18%, a Dice coefficient of 0.9151, and an intersection over union (IoU) of 0.8673. Compared with three deep learning models, including MethaNet, Swin-UNet, and Efficient-UNet, the proposed framework reduces the RMSE by 1633.35, 562.75, and 370.47 kg h\u22121, respectively. Correspondingly, it lowers the MAPE by 10.48%, 4.45%, and 3.09%, while improving $R^{2}$ by margins of 0.0749, 0.0199, and 0.0124. In comparison with the background-corrected integrated mass enhancement (IME) method, MTU-Former reduces the RMSE from 4323.78 to 2019.79 kg h\u22121 and MAPE from 16.76% to 9.16%, while increasing $R^{2}$ from 0.6411 to 0.9217. Overall, MTU-Former serves as a robust, versatile technical approach for significantly advancing multitask monitoring of global-scale methane emissions.",
+    "indexed": {
+      "date-parts": [
+        [
+          2026,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Level 1: Data Usage",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Machine Learning",
+      "Atmospheric Modeling",
+      "Greenhouse Gas Emissions",
+      "Environmental Monitoring"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Sentinel-2 (MSI)",
+        "agency": "ESA",
+        "type": "Multispectral imaging spectrometer (satellite)",
+        "product": "SWIR (B11/B12) top-of-atmosphere reflectance imagery",
+        "data_level": "L1C",
+        "usage_context": "Provides real-world multispectral background scenes from 12 global regions; combined with WRF-LES simulated methane plumes to build a 3-million-image dataset for training/evaluating the MTU-Former detection, segmentation, and quantification framework"
+      },
+      {
+        "name": "WRF-LES simulated methane plumes",
+        "agency": "Not specified",
+        "type": "Large-eddy simulation model output (synthetic plume data)",
+        "product": "Simulated methane plume concentration fields",
+        "data_level": "Model output",
+        "usage_context": "Synthetic plumes with known emission rates inserted into Sentinel-2 scenes to generate labeled training and validation data for plume segmentation and emission-rate regression"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 1.0,
+      "composite_confidence": 0.73,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 1.0,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 2: Data Usage",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Hebei Agricultural University",
+      "Nanjing Tech University",
+      "Chinese Academy of Sciences",
+      "Shanghai Institute of Technical Physics"
+    ]
+  },
+  {
+    "title": "Improving Methane Point Sources Detection Over Heterogeneous Land Surface for Satellite Hyperspectral Imagery",
+    "authors": [
+      "Er-Chang Sun",
+      "Xian-Hua Wang",
+      "Shi-Chao Wu",
+      "Han-Han Ye",
+      "Hai-Liang Shi",
+      "Yuan An",
+      "Chao Li",
+      "Yun Jiang"
+    ],
+    "year": 2025,
+    "doi": "10.1109/JSTARS.2024.3482278",
+    "venue": "IEEE Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+    "citation_count": 3,
+    "paper_id": "e5059975461f7bbfff4f3e8367a9b6ee17ca2285",
+    "url": "https://www.semanticscholar.org/paper/e5059975461f7bbfff4f3e8367a9b6ee17ca2285",
+    "abstract": "Hyperspectral imaging for satellites is currently an important tool for global monitoring of methane point sources, and it can be used to retrieve methane concentration to enable source location and \u201ctop-down\u201d emission estimation. The matched filter (MF) is the main method used to retrieve methane enhancement from hyperspectral imaging. However, many false positive retrievals occur over heterogeneous land surfaces because of the confusion between methane absorption and surface reflectance spectra. This hinders the accurate quantification of methane point source emissions from hyperspectral imaging. To overcome this hindrance, we present an improved matched filter that includes background filtering to mitigate the reflectance spectra mismatch between the target and background. By analyzing the land cover shortwave-infrared spectral library, we found that wideband spectral slopes can be used to distinguish between surface types. Based on this, we designed the background sample filtering process and verified its performance using simulation and the advanced hyperspectral imager data. The results show that the improved matched filter can effectively reduce false retrievals over heterogeneous land surfaces and obtain a more realistic methane plume. For example, near an emission source with a $\\Delta$XCH$_{4}$ of 1000 ppb, the simulated retrieval bias can be less than 1.3% using a 1% filter threshold. Our method can enhance the ability of satellites to quantify methane concentrations on complex land surfaces.",
+    "indexed": {
+      "date-parts": [
+        [
+          2025,
+          1,
+          1
+        ]
+      ]
+    },
+    "citing_team_paper": "Remote sensing of methane plumes: instrument tradeoff analysis for detecting and quantifying local sources at global scale",
+    "team_paper_id": "37f10caef15ac346ef6dec1903b1ab6eb6d2e0ef",
+    "is_peer_reviewed": true,
+    "engagement_level": "Citation",
+    "research_domain": "Methane Detection & Plumes",
+    "research_domains": [
+      "Remote Sensing",
+      "Greenhouse Gas Monitoring",
+      "Atmospheric Science",
+      "Environmental Monitoring",
+      "Greenhouse Gas Emissions"
+    ],
+    "missions_instruments": [
+      {
+        "name": "Advanced Hyperspectral Imager (AHSI)",
+        "agency": "CNSA",
+        "type": "Spaceborne hyperspectral imager",
+        "product": "SWIR radiance/reflectance spectra",
+        "data_level": "L1",
+        "usage_context": "Used to test and validate the improved matched filter retrieval of methane plume enhancements over heterogeneous land surfaces"
+      },
+      {
+        "name": "GF-5 / ZY1-02D (AHSI-carrying satellites)",
+        "agency": "CNSA",
+        "type": "Satellite platform",
+        "product": "Not specified",
+        "data_level": "Not specified",
+        "usage_context": "Platform providing AHSI hyperspectral imagery analyzed for methane point source detection"
+      }
+    ],
+    "uncertainty": {
+      "reasoning_confidence": 0.8,
+      "evidence_confidence": 0.925,
+      "composite_confidence": 0.704,
+      "evidence_flags": {
+        "has_abstract": true,
+        "has_doi": true,
+        "has_venue": true,
+        "has_full_authors": true,
+        "keyword_match_score": 0.7,
+        "team_paper_relevance_tier": "Domain Science"
+      },
+      "classification_provenance": {
+        "engagement_source": "bedrock:opus-5",
+        "domain_source": "bedrock:opus-5",
+        "engagement_agreement": 0.0,
+        "domain_agreement": 0.0,
+        "phase2_engagement_agreement": 0.0,
+        "phase2_domain_agreement": 1.0,
+        "phase2_majority_engagement": "Level 1: Simple Citation",
+        "phase2_majority_domain": "Methane Detection & Plumes"
+      },
+      "error_estimates": {
+        "stochastic_variance": 0.0,
+        "pipeline_variance": 1.0,
+        "miscalibration_risk": "low"
+      }
+    },
+    "country": "China",
+    "all_countries": [
+      "China"
+    ],
+    "institutions": [
+      "Chinese Academy of Sciences",
+      "Hefei Institutes of Physical Science",
+      "Anhui Institute of Optics and Fine Mechanics",
+      "Chaohu University"
+    ]
   }
 ]
