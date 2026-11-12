@@ -52,7 +52,7 @@ export const MODELS = {
     color: '#06B6D4', // Cyan
     domain: 'Glaciology',
     github: 'https://github.com/ISSMteam/ISSM',
-    website: 'https://issm.jpl.nasa.gov/',
+    website: 'https://science.nasa.gov/earth-science/earth-modeling-nexus/issm/',
     fullDescription: 'The Ice-sheet and Sea-level System Model (ISSM) tackles the challenge of modeling the evolution of the polar ice caps in Greenland and Antarctica, and the resulting solid-Earth and sea-level response.'
   },
   'MOMO-CHEM': {

@@ -55,7 +55,7 @@ ISSM was developed at NASA's Jet Propulsion Laboratory and the University of Cal
 ## Resources
 
 - **GitHub Repository**: https://github.com/ISSMteam/ISSM
-- **Official Website**: https://issm.jpl.nasa.gov/
-- **Documentation**: https://issm.jpl.nasa.gov/documentation/
-- **Tutorials**: https://issm.jpl.nasa.gov/tutorials/
-- **Forum**: https://issm.ess.uci.edu/forum/
+- **Official Website**: https://science.nasa.gov/earth-science/earth-modeling-nexus/issm/
+- **Documentation**: https://issmteam.github.io/ISSM-Documentation
+- **Tutorials**: https://issmteam.github.io/ISSM-Documentation/tutorials/
+- **Forum**: https://github.com/ISSMteam/ISSM/discussions
