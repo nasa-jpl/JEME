@@ -7,10 +7,10 @@
       "total_citations": 1517
     },
     "CMS-Flux": {
-      "h_index": 20,
-      "team_papers": 30,
-      "resolved": 30,
-      "total_citations": 2123
+      "h_index": 26,
+      "team_papers": 61,
+      "resolved": 60,
+      "total_citations": 7759
     },
     "ECCO": {
       "h_index": 109,
@@ -68,5 +68,5 @@
     }
   },
   "source": "Crossref is-referenced-by-count",
-  "generated": "2026-10-12"
+  "generated": "2026-11-12"
 }
