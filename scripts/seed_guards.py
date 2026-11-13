@@ -19,6 +19,13 @@ Guard A rejects papers where the team author is neither a lead (first 3) nor the
 senior (last) author, unless the author list is small enough that position
 carries no signal. Guard B requires a model-specific core term and rejects
 known adjacent-thread terms.
+
+These guards screen *automated* candidates only. The team paper definition is
+in CLAUDE.md ("Team Paper Definition"): a team author in any position plus a
+substantive role for the model (system, application, or contribution paper).
+Guard A is deliberately stricter and rejects most contribution papers (32 of
+the 60 Crossref-listed papers on the CMS-Flux team's own list), so never use
+it to prune a team-supplied list.
 """
 import re
 
