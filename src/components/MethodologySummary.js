@@ -12,7 +12,7 @@ import { Info } from 'lucide-react';
 
 const MethodologySummary = ({ modelName }) => {
   const teamLabel = modelName ? `the ${modelName} team` : 'the JPL modeling team';
-  const modelLabel = modelName || 'a model';
+  const modelLabel = modelName || 'the model';
 
   return (
     <div className="bg-white rounded-lg p-5 shadow-sm mb-6">
@@ -27,11 +27,33 @@ const MethodologySummary = ({ modelName }) => {
             broader community has referenced, utilized, and/or built on that model.
           </p>
           <div className="mt-3 pl-3 border-l-2 border-gray-200 text-gray-600 space-y-2">
-            <p>
-              <span className="font-medium text-gray-900">Team papers</span> are the peer-reviewed
-              publications {teamLabel} wrote to describe the model itself: its scientific
-              foundation, evolution, and upgrades over time.
-            </p>
+            <div>
+              <p>
+                <span className="font-medium text-gray-900">Team papers</span> are peer-reviewed
+                papers that meet both criteria: at least one member of {teamLabel} is an author,
+                and {modelLabel}, its simulations, or its output products play a substantive role
+                in the study as a:
+              </p>
+              <ul className="mt-1 space-y-1 list-disc list-inside">
+                <li>
+                  <span className="font-medium text-gray-900">System paper:</span> develops,
+                  describes, validates, or evaluates the model
+                </li>
+                <li>
+                  <span className="font-medium text-gray-900">Application paper:</span> its
+                  scientific results depend directly on the model's outputs
+                </li>
+                <li>
+                  <span className="font-medium text-gray-900">Contribution paper:</span> the model
+                  is included in a model intercomparison, assessment, or synthesis effort
+                </li>
+              </ul>
+              <p className="mt-1">
+                Excluded are team members' papers that focus primarily on other models or
+                products, program-level overviews that only mention the model, and methods
+                developed before the model existed.
+              </p>
+            </div>
             <p>
               <span className="font-medium text-gray-900">Citations</span> are peer-reviewed papers
               by other researchers (or later team papers) that reference one or more of those team
