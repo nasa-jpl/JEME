@@ -1,0 +1,2852 @@
+{
+  "GRACE": [
+    {
+      "authors": "Ding, Kuiyuan, Zhao, Xiaowei, Cheng, Jianmei, Yu, Ying, Luo, Yiming, Couchot, Joaquin, Zheng, Kun, Lin, Yihang, Wang, Yanxin",
+      "title": "GRACE/ML-based analysis of the spatiotemporal variations of groundwater storage in Africa",
+      "journal": "Journal of Hydrology",
+      "year": 2025,
+      "doi": "",
+      "link": "10.1016/j.jhydrol.2024.132336"
+    },
+    {
+      "authors": "Bender, P. L., Conklin, J. W., Wiese, D. N.",
+      "title": "Short-Period Mass Variations and the Next Generation Gravity Mission",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2025,
+      "doi": "10.1029/2024jb030290",
+      "link": "https://doi.org/10.1029/2024jb030290"
+    },
+    {
+      "authors": "Zhong, Y. L., Tian, B. M., Kim, H., Yuan, X., Liu, X. Y., Zhu, E. D., Wu, Y. L., Wang, L. C., Wang, L. Z.",
+      "title": "Over 60% precipitation transformed into terrestrial water storage in global river basins from 2002 to 2021",
+      "journal": "Communications Earth & Environment",
+      "year": 2025,
+      "doi": "10.1038/s43247-024-01967-7",
+      "link": "https://doi.org/10.1038/s43247-024-01967-7"
+    },
+    {
+      "authors": "Stevens, Michael D., Ramirez, Saul G., Martin, Eva-Marie H., Jones, Norman L., Williams, Gustavious P., Adams, Kyra H., Ames, Daniel P., Pulla, Sarva T.",
+      "title": "Groundwater storage loss in the central valley analysis using a novel method based on in situ data compared to GRACE-derived data",
+      "journal": "Environmental Modelling and Software",
+      "year": 2025,
+      "doi": "10.1016/j.envsoft.2025.106368",
+      "link": "https://doi.org/10.1016/j.envsoft.2025.106368"
+    },
+    {
+      "authors": "Prusevich, A. A., Lammers, R. B., Grogan, D. S., Zuidema, S., Meko, D. M., Rounce, D. R., Hock, R., Velicogna, I.",
+      "title": "Decomposing land surface total water storage in the Indus, Ganges, and Brahmaputra basins",
+      "journal": "Ganges",
+      "year": 2025,
+      "doi": "10.3389/feart.2025.1551218",
+      "link": "https://doi.org/10.3389/feart.2025.1551218"
+    },
+    {
+      "authors": "Rolla, Julie, Khuller, Aditya, An, Karen, Emberson, Robert, Fielding, Eric, Schultz, Lori, Miner, Kimberley",
+      "title": "Satellite\u2010Aided Disaster Response",
+      "journal": "AGU Advances",
+      "year": 2025,
+      "doi": "10.1029/2024AV001395",
+      "link": "https://doi.org/10.1029/2024AV001395"
+    },
+    {
+      "authors": "Dahya, Neil T., Landerer, Felix W., Gross, Michael, Khan, Omair, Wiese, David N., McCullough, Christopher M., Sharrow, Robert, Tooper, Haley, Liepack, Otfrid, Ware, Brent, Brandt, Nico, Thamm, Hauke",
+      "title": "Over 25 years of International Cooperation of Gravity Missions: Past, Present, Future",
+      "journal": "",
+      "year": 2025,
+      "doi": "10.1109/AERO63441.2025.11068723",
+      "link": "https://doi.org/10.1109/AERO63441.2025.11068723"
+    },
+    {
+      "authors": "Lee, H., Jung, M., Carvalhais, N., Reichstein, M., Forkel, M., Bloom, A. A., Pacheco\u2010Labrador, J., Koirala, S.",
+      "title": "Spatial Attribution of Temporal Variability in Global Land\u2010Atmosphere CO2 Exchange Using a Model\u2010Data Integration Framework",
+      "journal": "Journal of Advances in Modeling Earth Systems",
+      "year": 2025,
+      "doi": "10.1029/2024MS004479",
+      "link": "https://doi.org/10.1029/2024MS004479"
+    },
+    {
+      "authors": "Blank, Daniel, Eicker, Annette, Reager, John T., Guntner, Andreas",
+      "title": "Revisiting Sub-Surface Drought Cascades With Daily Satellite Observations of Soil Moisture and Terrestrial Water Storage",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024WR039321",
+      "link": "https://doi.org/10.1029/2024WR039321"
+    },
+    {
+      "authors": "Stray, B., Bosch-Lluis, X., Thompson, R., Okino, C., Yu, N., Lay, N., Muirhead, B., Hyon, J., Leopardi, H., Brereton, P., Mylapore, A., Loomis, B., Luthcke, S., Ghuman, P., Bettadpur, S., Lachmann, M. D., Stolz, T., Kuehl, C., Weise, D., Ahlers, H., Schubert, C., Bawamia, A., Chiow, S. W.",
+      "title": "Quantum gravity gradiometry for future mass change science",
+      "journal": "EPJ QUANTUM TECHNOLOGY",
+      "year": 2025,
+      "doi": "10.1140/epjqt/s40507-025-00338-1",
+      "link": "https://doi.org/10.1140/epjqt/s40507-025-00338-1"
+    },
+    {
+      "authors": "Sambridge, C. S., McKenzie, K., Francis, S. P., S\u00e1nchez, J. V., Woodruff, C.",
+      "title": "Characterizing the phase-tracking limits of the GRACE follow-on flight laser",
+      "journal": "Physical Review Applied",
+      "year": 2025,
+      "doi": "10.1103/q62l-3684",
+      "link": "https://doi.org/10.1103/q62l-3684"
+    },
+    {
+      "authors": "Buzzanga, B., Hamlington, B., Fasullo, J., Landerer, F., Peidou, A.",
+      "title": "Interdecadal variability of terrestrial water storage since 2003",
+      "journal": "Communications Earth & Environment",
+      "year": 2025,
+      "doi": "10.1038/s43247-025-02203-6",
+      "link": "https://doi.org/10.1038/s43247-025-02203-6"
+    },
+    {
+      "authors": "Yi, Shuang, Li, Hao-si, Han, Shin-Chan, Sneeuw, Nico, Yuan, Chunyu, Song, Chunqiao, Yeo, In-Young, McCullough, Christopher M.",
+      "title": "Quantification of the Flood Discharge Following the 2023 Kakhovka Dam Breach Using Satellite Remote Sensing",
+      "journal": "Water Resources Research",
+      "year": 2025,
+      "doi": "10.1029/2024WR038314",
+      "link": "https://doi.org/10.1029/2024WR038314"
+    },
+    {
+      "authors": "Chandanpurkar, Hrishikesh A., Famiglietti, James S., Gopalan, Kaushik, Wiese, David N., Wada, Yoshihide, Kakinuma, Kaoru, Reager, John T., Zhang, Fan",
+      "title": "Unprecedented continental drying, shrinking freshwater availability, and increasing land contributions to sea level rise",
+      "journal": "shrinking freshwater availability",
+      "year": 2025,
+      "doi": "10.1126/sciadv.adx0298",
+      "link": "https://doi.org/10.1126/sciadv.adx0298"
+    },
+    {
+      "authors": "Rodell, M., Barnoud, A., Robertson, F. R., Allan, R. P., Bellas-Manley, A., Bosilovich, M. G., Chambers, D., Landerer, F., Loomis, B., Nerem, R. S., O'Neill, M. M., Wiese, D., Seneviratne, S. I.",
+      "title": "An Abrupt Decline in Global Terrestrial Water Storage and Its Relationship with Sea Level Change",
+      "journal": "",
+      "year": 2024,
+      "doi": "10.1007/s10712-024-09860-w",
+      "link": "https://doi.org/10.1007/s10712-024-09860-w"
+    },
+    {
+      "authors": "Hamlington, B. D., Bellas-Manley, A., Willis, J. K., Fournier, S., Vinogradova, N., Nerem, R. S., Piecuch, C. G., Thompson, P. R., Kopp, R.",
+      "title": "The rate of global sea level rise doubled during the past three decades",
+      "journal": "Communications Earth & Environment",
+      "year": 2024,
+      "doi": "10.1038/s43247-024-01761-5",
+      "link": "https://doi.org/10.1038/s43247-024-01761-5"
+    },
+    {
+      "authors": "Zhao, X. W., Yu, Y., Cheng, J. M., Ding, K. Y., Luo, Y. M., Zheng, K., Xian, Y., Lin, Y. H.",
+      "title": "A Novel Framework for Heterogeneity Decomposition and Mechanism Inference in Spatiotemporal Evolution of Groundwater Storage: Case Study in the North China Plain",
+      "journal": "Water Resources Research",
+      "year": 2024,
+      "doi": "10.1029/2023wr036102",
+      "link": "https://doi.org/10.1029/2023wr036102"
+    },
+    {
+      "authors": "Pascolini-Campbell, M., Reager, J. T.",
+      "title": "An Investigation of the Spatial and Temporal Characteristics of Extreme Dry and Wet Events across NLDAS-2 Models",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2024,
+      "doi": "10.1175/jhm-d-23-0038.1",
+      "link": "https://doi.org/10.1175/jhm-d-23-0038.1"
+    },
+    {
+      "authors": "Albuhaisi, Y. A. Y., van der Velde, Y., Pandey, S., Houweling, S.",
+      "title": "Integrating Satellite Observations and Hydrological Models to Unravel Large TROPOMI Methane Emissions in South Sudan Wetlands",
+      "journal": "Remote Sensing",
+      "year": 2024,
+      "doi": "10.3390/rs16244744",
+      "link": "https://doi.org/10.3390/rs16244744"
+    },
+    {
+      "authors": "Waliser, Duane",
+      "title": "Toward a US Framework for Continuity of Satellite Observations of Earth's Climate and for Supporting Societal Resilience",
+      "journal": "Earth's Future",
+      "year": 2024,
+      "doi": "10.1029/2023EF003757",
+      "link": "https://doi.org/10.1029/2023EF003757"
+    },
+    {
+      "authors": "Duan, A., Zhong, Y. L., Xu, G. D., Yang, K. J., Tian, B. M., Wu, Y. L., Bai, H. B., Hu, E.",
+      "title": "Quantifying the 2022 extreme drought in the Yangtze River Basin using GRACE-FO",
+      "journal": "Journal of Hydrology",
+      "year": 2024,
+      "doi": "10.1016/j.jhydrol.2024.130680",
+      "link": "https://doi.org/10.1016/j.jhydrol.2024.130680"
+    },
+    {
+      "authors": "Peidou, A., Argus, D. F., Landerer, F. W., Wiese, D. N., Ellmer, M.",
+      "title": "GPS displacement dataset for the study of elastic surface mass variations",
+      "journal": "Earth System Science Data",
+      "year": 2024,
+      "doi": "10.5194/essd-16-1317-2024",
+      "link": "https://doi.org/10.5194/essd-16-1317-2024"
+    },
+    {
+      "authors": "Bakhamis, A. N., Bilal, H., Heggy, E., Al-Kuwari, M. S., Al-Ansari, T.",
+      "title": "On the drivers, forecasts, and uncertainties of relative sea level rise in the Eastern Arabian Peninsula: A review",
+      "journal": "forecasts",
+      "year": 2024,
+      "doi": "10.1016/j.rsma.2024.103503",
+      "link": "https://doi.org/10.1016/j.rsma.2024.103503"
+    },
+    {
+      "authors": "Ren, J. T., Xu, M., Kang, S. C., Han, H. D., Li, X. D., Hou, Z. K.",
+      "title": "Comprehensive understanding of hydrological drought based on GRACE data at multiple spatiotemporal scales in Northwest China",
+      "journal": "Natural Hazards",
+      "year": 2024,
+      "doi": "10.1007/s11069-024-06911-8",
+      "link": "https://doi.org/10.1007/s11069-024-06911-8"
+    },
+    {
+      "authors": "Harvey, N., Bertiger, W., McCullough, C. M., Miller, M., Save, H., Yuan, D. N.",
+      "title": "Recovering Differential Forces From the GRACE-D Accelerometer",
+      "journal": "Earth and Space Science",
+      "year": 2024,
+      "doi": "10.1029/2023ea003200",
+      "link": "https://doi.org/10.1029/2023ea003200"
+    },
+    {
+      "authors": "Liu, Bin, Shan, Chenghao, Rao, Weilong, Xing, Xueming, Tan, Jianbo, Luo, Yabo",
+      "title": "A GNSS Terrestrial Water Storage Inversion Method Based on GRACE Spatial Constraints",
+      "journal": "Ieee Journal of Selected Topics in Applied Earth Observations and Remote Sensing",
+      "year": 2024,
+      "doi": "10.1109/JSTARS.2024.3454312",
+      "link": "https://doi.org/10.1109/JSTARS.2024.3454312"
+    },
+    {
+      "authors": "Ramah, Mohamed, Heggy, Essam, Nasr, Ahmed, Toni, Mostafa, Gomaa, Mohamed M., Hanert, Emmanuel, Kotb, Adel",
+      "title": "Nubian aquifer linkage to the High Aswan Dam Reservoir: Initial assessments of processes and challenges",
+      "journal": "Journal of Hydrology",
+      "year": 2024,
+      "doi": "10.1016/j.jhydrol.2024.131999",
+      "link": "https://doi.org/10.1016/j.jhydrol.2024.131999"
+    },
+    {
+      "authors": "Han, S. J., Yuan, T., Mao, W., Zhong, S. J.",
+      "title": "The persisting conundrum of mantle viscosity inferred from mantle convection and glacial isostatic adjustment processes",
+      "journal": "",
+      "year": 2024,
+      "doi": "10.1016/j.epsl.2024.119069",
+      "link": "https://doi.org/10.1016/j.epsl.2024.119069"
+    },
+    {
+      "authors": "Nerem, R. Steven, Hamlington, Benjamin D.",
+      "title": "Satellite Measurements of Sea Level Change: Past, Present, and Future",
+      "journal": "",
+      "year": 2024,
+      "doi": "10.1109/AERO58975.2024.10521318",
+      "link": "https://doi.org/10.1109/AERO58975.2024.10521318"
+    },
+    {
+      "authors": "Kuang, Da, Desai, Shailen D., Haines, Bruce J., Wu, Xiaoping",
+      "title": "Point positioning the geocenter through LEO GPS tracking and its application in geophysics",
+      "journal": "GPS Solutions",
+      "year": 2024,
+      "doi": "10.1007/s10291-024-01680-0",
+      "link": "https://doi.org/10.1007/s10291-024-01680-0"
+    },
+    {
+      "authors": "Laignel, Benoit, Vignudelli, Stefano, Almar, Rafael, Becker, M\u00e9lanie, Bentamy, Abderrahim, Benveniste, J\u00e9r\u00f4me, Birol, Florence, Frappart, Fr\u00e9d\u00e9ric, Idier, Deborah, Salameh, Edward, Passaro, Marcello, Menende, Melisa, Simard, Marc, Turki, Emma Imen, Verpoorter, Charles",
+      "title": "Observation of the Coastal Areas, Estuaries and Deltas from Space",
+      "journal": "Estuaries and Deltas from Space",
+      "year": 2023,
+      "doi": "10.1007/s10712-022-09757-6",
+      "link": "https://doi.org/10.1007/s10712-022-09757-6"
+    },
+    {
+      "authors": "Morrow, Rosemary, Fu, Lee-Lueng, Rio, Marie-H\u00e9l\u00e9ne, Ray, Richard, Prandi, Pierre, Le Traon, Pierre-Yves, Benveniste, J\u00e9r\u00f4me",
+      "title": "Ocean Circulation from Space",
+      "journal": "Surveys in Geophysics",
+      "year": 2023,
+      "doi": "10.1007/s10712-023-09778-9",
+      "link": "https://doi.org/10.1007/s10712-023-09778-9"
+    },
+    {
+      "authors": "Benisty, D., Brax, P., Davis, A. C.",
+      "title": "Multiscale constraints on scalar-field couplings to matter: The geodetic and frame-dragging effects",
+      "journal": "Physical Review D",
+      "year": 2023,
+      "doi": "10.1103/PhysRevD.108.063031",
+      "link": "https://doi.org/10.1103/PhysRevD.108.063031"
+    },
+    {
+      "authors": "Otosaka, I. N., Shepherd, A., Ivins, E. R., Schlegel, N. J., Amory, C., van den Broeke, M. R., Horwath, M., Joughin, I., King, M. D., Krinner, G., Nowicki, S., Payne, A. J., Rignot, E., Scambos, T., Simon, K. M., Smith, B. E., Sorensen, L. S., Velicogna, I., Whitehouse, P. L., Geruo, A., Agosta, C., Ahlstrom, A. P., Blazquez, A., Colgan, W., Engdahl, M. E., Fettweis, X., Forsberg, R., Gallee, H., Gardner, A., Gilbert, L., Gourmelen, N., Groh, A., Gunter, B. C., Harig, C., Helm, V., Khan, S. A., Kittel, C., Konrad, H., Langen, P. L., Lecavalier, B. S., Liang, C. C., Loomis, B. D., McMillan, M., Melini, D., Mernild, S. H., Mottram, R., Mouginot, J., Nilsson, J., Noel, B., Pattle, M. E., Peltier, W. R., Pie, N., Roca, M., Sasgen, I., Save, H. V., Seo, K. W., Scheuchl, B., Schrama, E. J. O., Schroder, L., Simonsen, S. B., Slater, T., Spada, G., Sutterley, T. C., Vishwakarma, B. D., van Wessem, J. M., Wiese, D., van der Wal, W., Wouters, B.",
+      "title": "Mass balance of the Greenland and Antarctic ice sheets from 1992 to 2020",
+      "journal": "Earth System Science Data",
+      "year": 2023,
+      "doi": "10.5194/essd-15-1597-2023",
+      "link": "https://doi.org/10.5194/essd-15-1597-2023"
+    },
+    {
+      "authors": "Xiao, C. Y., Zhong, Y. L., Wu, Y. L., Bai, H. B., Li, W. Q., Wu, D. C., Wang, C. Q., Tian, B. M.",
+      "title": "Applying Reconstructed Daily Water Storage and Modified Wetness Index to Flood Monitoring: A Case Study in the Yangtze River Basin",
+      "journal": "Remote Sensing",
+      "year": 2023,
+      "doi": "10.3390/rs15123192",
+      "link": "https://doi.org/10.3390/rs15123192"
+    },
+    {
+      "authors": "Zilberman, Nathalie V., Thierry, Virginie, King, Brian, Alford, Matthew, Andr\u00e9, Xavier, Balem, Kevin, Briggs, Nathan, Chen, Zhaohui, Cabanes, C\u00e9cile, Coppola, Laurent, Dall\u2019Olmo, Giorgio, Desbruy\u00e8res, Damien, Fernandez, Denise, Foppert, Annie, Gardner, Wilford, Gasparin, Florent, Hally, Bryan, Hosoda, Shigeki, Johnson, Gregory C., Kobayashi, Taiyo, Le Boyer, Arnaud, Llovel, William, Oke, Peter, Purkey, Sarah, Remy, Elisabeth, Roemmich, Dean, Scanderbeg, Megan, Sutton, Philip, Walicka, Kamila, Wallace, Luke, van Wijk, Esmee M.",
+      "title": "Observing the full ocean volume using Deep Argo floats",
+      "journal": "Frontiers in Marine Science. https://doi.org/10.3389/fmars.2023.1287867.",
+      "year": 2023,
+      "doi": "10.3389/fmars.2023.1287867",
+      "link": "https://doi.org/10.3389/fmars.2023.1287867"
+    },
+    {
+      "authors": "Zhong, Y. L., Tian, B. M., Vishwakarma, B. D., Feng, W., Wu, Y. L., Bai, H. B., Zhong, M.",
+      "title": "Reinterpreting Global GRACE Trends Based on Century-Long GRACE-REC Data",
+      "journal": "Water Resources Research",
+      "year": 2023,
+      "doi": "10.1029/2023WR035817",
+      "link": "https://doi.org/10.1029/2023WR035817"
+    },
+    {
+      "authors": "Rodell, Matthew, Reager, John T.",
+      "title": "Water cycle science enabled by the GRACE and GRACE-FO satellite missions",
+      "journal": "Nature Water",
+      "year": 2023,
+      "doi": "10.1038/s44221-022-00005-0",
+      "link": "https://doi.org/10.1038/s44221-022-00005-0"
+    },
+    {
+      "authors": "Wang, C. X., Yan, J. W., Liang, W., Sun, S. B., Gou, F., Li, X. F., Luo, Y. Y., Wang, F. J.",
+      "title": "Assessing the impacts of natural conditions and human activities on terrestrial water storage in Loess Plateau, China",
+      "journal": "China",
+      "year": 2023,
+      "doi": "10.1007/s11629-022-7821-8",
+      "link": "https://doi.org/10.1007/s11629-022-7821-8"
+    },
+    {
+      "authors": "Lambert, A., Huang, J. L., Courtier, N., Pavlic, G.",
+      "title": "Constraints on Secular Geocenter Velocity From Absolute Gravity Observations in Central North America: Implications for Global Melting Rates",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2023,
+      "doi": "10.1029/2022jb024991",
+      "link": "https://doi.org/10.1029/2022jb024991"
+    },
+    {
+      "authors": "Cha, Hyeonsoo, Moon, Jae-Hong, Kim, Taekyun, Song, Y. Tony",
+      "title": "A process-based assessment of the sea-level rise in the northwestern Pacific marginal seas",
+      "journal": "Communications Earth & Environment",
+      "year": 2023,
+      "doi": "10.1038/s43247-023-00965-5",
+      "link": "https://doi.org/10.1038/s43247-023-00965-5"
+    },
+    {
+      "authors": "Zhong, Yulong, Tian, Baoming, Bramha Dutt, Vishwakarma, Feng, Wei, Wu, Yunlong, Bai, Hongbing, Zhong, Min",
+      "title": "Reinterpreting Global GRACE Trends Based on Century\u2010Long GRACE\u2010REC Data",
+      "journal": "Water Resources Research",
+      "year": 2023,
+      "doi": "10.1029/2023WR035817",
+      "link": "https://doi.org/10.1029/2023WR035817"
+    },
+    {
+      "authors": "Piecuch, C. G., Fukumori, I., Ponte, R. M., Schindelegger, M., Wang, O., Zhao, M. N.",
+      "title": "Low-Frequency Dynamic Ocean Response to Barometric-Pressure Loading",
+      "journal": "Journal of Physical Oceanography",
+      "year": 2022,
+      "doi": "10.1175/jpo-d-22-0090.1",
+      "link": "https://doi.org/10.1175/jpo-d-22-0090.1"
+    },
+    {
+      "authors": "Chandanpurkar, H. A., Hamlington, B. D., Reager, J. T.",
+      "title": "Global Terrestrial Water Storage Reconstruction Using Cyclostationary Empirical Orthogonal Functions (1979-2020)",
+      "journal": "Remote Sensing",
+      "year": 2022,
+      "doi": "10.3390/rs14225677",
+      "link": "https://doi.org/10.3390/rs14225677"
+    },
+    {
+      "authors": "Argus, D. F., Martens, H. R., Borsa, A. A., Knappe, E., Wiese, D. N., Alam, S., Anderson, M., Khatiwada, A., Lau, N., Peidou, A., Swarr, M., White, A. M., Bos, M. S., Ellmer, M., Landerer, F. W., Gardiner, W. P.",
+      "title": "Subsurface Water Flux in California's Central Valley and Its Source Watershed From Space Geodesy",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2022gl099583",
+      "link": "https://doi.org/10.1029/2022gl099583"
+    },
+    {
+      "authors": "Ghobadi-Far, K., Han, S. C., McCullough, C. M., Wiese, D. N., Ray, R. D., Sauber, J., Shihora, L., Dobslaw, H.",
+      "title": "Along-Orbit Analysis of GRACE Follow-On Inter-Satellite Laser Ranging Measurements for Sub-Monthly Surface Mass Variations",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2022,
+      "doi": "10.1029/2021jb022983",
+      "link": "https://doi.org/10.1029/2021jb022983"
+    },
+    {
+      "authors": "Harvey, N., McCullough, C. M., Save, H.",
+      "title": "Modeling GRACE-FO Accelerometer Data for the Version 04 Release",
+      "journal": "Advances in Space Research",
+      "year": 2022,
+      "doi": "10.1016/j.asr.2021.10.056",
+      "link": "https://doi.org/10.1016/j.asr.2021.10.056"
+    },
+    {
+      "authors": "Peidoul, A., Landerer, F., Wiese, D., Ellmer, M., Fahnestock, E., McCullough, C., Spero, R., Yuan, D. N.",
+      "title": "Spatiotemporal Characterization of Geophysical Signal Detection Capabilities of GRACE-FO",
+      "journal": "Geophysical Research Letters",
+      "year": 2022,
+      "doi": "10.1029/2021gl095157",
+      "link": "https://doi.org/10.1029/2021gl095157"
+    },
+    {
+      "authors": "Liu, F., Xiao, X. M., Qin, Y. W., Yan, H. M., Huang, J. K., Wu, X. C., Zhang, Y., Zou, Z. H., Doughty, R. B.",
+      "title": "Large Spatial Variation and Stagnation of Cropland Gross Primary Production Increases the Challenges of Sustainable Grain Production and Food Security in China",
+      "journal": "Science of the Total Environment",
+      "year": 2022,
+      "doi": "10.1016/j.scitotenv.2021.151408",
+      "link": "https://doi.org/10.1016/j.scitotenv.2021.151408"
+    },
+    {
+      "authors": "Massoud, E. C., Bloom, A. A., Longo, M., Reager, J. T., Levine, P. A., Worden, J. R.",
+      "title": "Information Content of Soil Hydrology in a West Amazon Watershed as Informed by GRACE\\r",
+      "journal": "Hydrology and Earth System Sciences",
+      "year": 2022,
+      "doi": "10.5194/hess-26-1407-2022",
+      "link": "https://doi.org/10.5194/hess-26-1407-2022"
+    },
+    {
+      "authors": "Delman, A., Landerer, F.",
+      "title": "Downscaling Satellite-Based Estimates of Ocean Bottom Pressure for Tracking Deep Ocean Mass Transport",
+      "journal": "Remote Sensing",
+      "year": 2022,
+      "doi": "10.3390/rs14071764",
+      "link": "https://doi.org/10.3390/rs14071764"
+    },
+    {
+      "authors": "Gyawali, B., Ahmed, M., Murgulet, D., Wiese, D. N.",
+      "title": "Filling Temporal Gaps Within and Between GRACE and GRACE-FO Terrestrial Water Storage Records: An Innovative Approach",
+      "journal": "Remote Sensing",
+      "year": 2022,
+      "doi": "10.3390/rs14071565",
+      "link": "https://doi.org/10.3390/rs14071565"
+    },
+    {
+      "authors": "Larochelle, S., Chanard, K., Fleitout, L., Fortin, J., Gualandi, A., Longuevergne, L., Rebischung, P., Violette, S., Avouac, J. P.",
+      "title": "Understanding the Geodetic Signature of Large Aquifer Systems: Example of the Ozark Plateaus in Central United States",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2022,
+      "doi": "10.1029/2021jb023097",
+      "link": "https://doi.org/10.1029/2021jb023097"
+    },
+    {
+      "authors": "Vasco, D. W., Kim, K. H., Farr, T. G., Reager, J. T., Bekaert, D., Sangha, S. S., Rutqvist, J., Beaudoing, H. K.",
+      "title": "Using Sentinel-1 and GRACE Satellite Data to Monitor the Hydrological Variations Within the Tulare Basin, California",
+      "journal": "California",
+      "year": 2022,
+      "doi": "10.1038/s41598-022-07650-1",
+      "link": "https://doi.org/10.1038/s41598-022-07650-1"
+    },
+    {
+      "authors": "Pan, Y. J., Ding, H., Li, J. T., Shum, C. K., Mallick, R., Jiao, J. S., Li, M. K., Zhang, Y.",
+      "title": "Transient Hydrology-Induced Elastic Deformation and Land Subsidence in Australia Constrained by Contemporary Geodetic Measurements",
+      "journal": "Earth and Planetary Science Letters",
+      "year": 2022,
+      "doi": "10.1016/j.epsl.2022.117556",
+      "link": "https://doi.org/10.1016/j.epsl.2022.117556"
+    },
+    {
+      "authors": "Wiese, D. N., Bienstock, B., Blackwood, C., Chrone, J., Loomis, B. D., Sauber, J., Rodell, M., Baize, R., Bearden, D., Case, K., Horner, S., Luthcke, S., Reager, J. T., Srinivasan, M., Tsaoussi, L., Webb, F., Whitehurst, A., Zlotnicki, V.",
+      "title": "The Mass Change Designated Observable Study: Overview and Results",
+      "journal": "Earth and Space Science",
+      "year": 2022,
+      "doi": "10.1029/2022ea002311",
+      "link": "https://doi.org/10.1029/2022ea002311"
+    },
+    {
+      "authors": "Deccia, C. M. A., Wiese, D. N., Nerem, R. S.",
+      "title": "Using a Multiobjective Genetic Algorithm to Design Satellite Constellations for Recovering Earth System Mass Change",
+      "journal": "Remote Sensing",
+      "year": 2022,
+      "doi": "10.3390/rs14143340",
+      "link": "https://doi.org/10.3390/rs14143340"
+    },
+    {
+      "authors": "Conrad, A. V., Axelrad, P., Haines, B., Zuffada, C., O'Brien, A.",
+      "title": "Improved GPS-Based Single-Frequency Orbit Determination for the CYGNSS Spacecraft Using GipsyX",
+      "journal": "Navigation-Journal of the Institute of Navigation",
+      "year": 2022,
+      "doi": "10.33012/navi.565",
+      "link": "https://doi.org/10.33012/navi.565"
+    },
+    {
+      "authors": "Alvarez, A. D., Knudtson, A., Patel, U., Gleason, J., Hollis, H., Sanjuan, J., Doughty, N., McDaniel, G., Lee, J., Leitch, J., Bennett, S., Bevilacqua, R., Mueller, G., Spero, R., Ware, B., Wass, P., Wiese, D., Ziemer, J., Conklin, J. W.",
+      "title": "A simplified gravitational reference sensor for satellite geodesy",
+      "journal": "Journal of Geodesy",
+      "year": 2022,
+      "doi": "10.1007/s00190-022-01659-0",
+      "link": "https://doi.org/10.1007/s00190-022-01659-0"
+    },
+    {
+      "authors": "Adams, K. H., Reager, J. T., Rosen, P., Wiese, D. N., Farr, T. G., Rao, S., Haines, B. J., Argus, D. F., Liu, Z., Smith, R., Famiglietti, J. S., Rodell, M.",
+      "title": "Remote Sensing of Groundwater: Current Capabilities and Future Directions",
+      "journal": "Water Resources Research",
+      "year": 2022,
+      "doi": "10.1029/2022wr032219",
+      "link": "https://doi.org/10.1029/2022wr032219"
+    },
+    {
+      "authors": "Liu, Pang-Wei, Famiglietti, James S., Purdy, Adam J., Adams, Kyra H., McEvoy, Avery L., Reager, John T., Bindlish, Rajat, Wiese, David N., David, C\u00e9dric H., Rodell, Matthew",
+      "title": "Groundwater depletion in California's Central Valley accelerates during megadrought",
+      "journal": "Nature Communications",
+      "year": 2022,
+      "doi": "10.1038/s41467-022-35582-x",
+      "link": "https://doi.org/10.1038/s41467-022-35582-x"
+    },
+    {
+      "authors": "Han, S. C., Yeo, I. Y., Khaki, M., McCullough, C. M., Lee, E. J., Sauber, J.",
+      "title": "Novel Along-Track Processing of GRACE Follow-On Laser Ranging Measurements Found Abrupt Water Storage Increase and Land Subsidence During the 2021 March Australian Flooding",
+      "journal": "Earth and Space Science",
+      "year": 2021,
+      "doi": "10.1029/2021ea001941",
+      "link": "https://doi.org/10.1029/2021ea001941"
+    },
+    {
+      "authors": "Pan, Y. J., Hammond, W. C., Ding, H., Mallick, R., Jiang, W. P., Xu, X. Y., Shum, C. K., Shen, W. B.",
+      "title": "GPS Imaging of Vertical Bedrock Displacements: Quantification of Two-Dimensional Vertical Crustal Deformation in China",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2021,
+      "doi": "10.1029/2020jb020951",
+      "link": "https://doi.org/10.1029/2020jb020951"
+    },
+    {
+      "authors": "Huang, Peng, Song, Jinxi, Cheng, Dandong, Sun, Haotian, Kong, Feihe, Jing, Kexing, Wu, Qiong",
+      "title": "Understanding the Intra-Annual Variability of Streamflow by Incorporating Terrestrial Water Storage From GRACE Into the Budyko Framework in the Qinba Mountains",
+      "journal": "Journal of Hydrology",
+      "year": 2021,
+      "doi": "10.1016/j.jhydrol.2021.126988",
+      "link": "https://doi.org/10.1016/j.jhydrol.2021.126988"
+    },
+    {
+      "authors": "Pie, N., Bettadpur, S. V., Tamisiea, M., Krichman, B., Save, H., Poole, S., Nagel, P., Kang, Z., Jacob, G., Ellmer, M., Fahnestock, E., Landerer, F. W., McCullough, C., Yuan, D. N., Wiese, D. N.",
+      "title": "Time Variable Earth Gravity Field Models From the First Spaceborne Laser Ranging Interferometer",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2021,
+      "doi": "10.1029/2021jb022392",
+      "link": "https://doi.org/10.1029/2021jb022392"
+    },
+    {
+      "authors": "Kim, Kyra H., Liu, Zhen, Rodell, Matthew, Beaudoing, Hiroko, Massoud, Elias, Kitchens, James, Dudek, Marissa, Saylor, Patrick, Corcoran, Forrest, Reager, John T.",
+      "title": "An Evaluation of Remotely Sensed and In Situ Data Sufficiency for SGMA-Scale Groundwater Studies in the Central Valley, California",
+      "journal": "California",
+      "year": 2021,
+      "doi": "10.1111/1752-1688.12898",
+      "link": "https://doi.org/10.1111/1752-1688.12898"
+    },
+    {
+      "authors": "Spero, Robert",
+      "title": "Point-mass sensitivity of gravimetric satellites",
+      "journal": "Advances in Space Research",
+      "year": 2021,
+      "doi": "10.1016/j.asr.2020.12.019",
+      "link": "https://doi.org/10.1016/j.asr.2020.12.019"
+    },
+    {
+      "authors": "Argus, D. F., Peltier, W. R., Blewitt, G., Kreemer, C.",
+      "title": "The Viscosity of the Top Third of the Lower Mantle Estimated Using GPS, GRACE, and Relative Sea Level Measurements of Glacial Isostatic Adjustment",
+      "journal": "GRACE",
+      "year": 2021,
+      "doi": "10.1029/2020jb021537",
+      "link": "https://doi.org/10.1029/2020jb021537"
+    },
+    {
+      "authors": "Jiang, Y., Wu, X. P., van den Broeke, M. R., Munneke, P. K., Simonsen, S. B., van der Wal, W., Vermeersen, B. L.",
+      "title": "Assessing Global Present-Day Surface Mass Transport and Glacial Isostatic Adjustment From Inversion of Geodetic Observations",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2021,
+      "doi": "10.1029/2020jb020713",
+      "link": "https://doi.org/10.1029/2020jb020713"
+    },
+    {
+      "authors": "Massoud, Elias C., Liu, Zhen, Shaban, Amin, Hage, Mhamad El",
+      "title": "Groundwater Depletion Signals in the Beqaa Plain, Lebanon: Evidence from GRACE and Sentinel-1 Data",
+      "journal": "Lebanon: Evidence from GRACE and Sentinel-1 Data",
+      "year": 2021,
+      "doi": "10.3390/rs13050915",
+      "link": "https://doi.org/10.3390/rs13050915"
+    },
+    {
+      "authors": "Singh, A., Reager, J. T., Behrangi, A.",
+      "title": "Estimation of hydrological drought recovery based on precipitation and Gravity Recovery and Climate Experiment (GRACE) water storage deficit",
+      "journal": "Hydrology and Earth System Sciences",
+      "year": 2021,
+      "doi": "10.5194/hess-25-511-2021",
+      "link": "https://doi.org/10.5194/hess-25-511-2021"
+    },
+    {
+      "authors": "McStraw, Travis Clinton, Pulla, Sarva T., Jones, Norman L., Williams, Gustavious P., David, Cedric H., Nelson, James E., Ames, Daniel P.",
+      "title": "An Open-Source Web Application for Regional Analysis of GRACE Groundwater Data and Engaging Stakeholders in Groundwater Management",
+      "journal": "",
+      "year": 2021,
+      "doi": "10.1111/1752-1688.12968",
+      "link": "https://doi.org/10.1111/1752-1688.12968"
+    },
+    {
+      "authors": "Chandanpurkar, Hrishikesh A., Reager, John T., Famiglietti, James S., Nerem, R. Steven, Chambers, Don P., Lo, Min-Hui, Hamlington, Benjamin D., Syed, Tajdarul H.",
+      "title": "The Seasonality of Global Land and Ocean Mass and the Changing Water Cycle",
+      "journal": "Geophysical Research Letters",
+      "year": 2021,
+      "doi": "10.1029/2020GL091248",
+      "link": "https://doi.org/10.1029/2020GL091248"
+    },
+    {
+      "authors": "Piecuch, Christopher G., Fukumori, Ichiro, Ponte, Rui M.",
+      "title": "Intraseasonal Sea Level Variability in the Persian Gulf",
+      "journal": "Journal of Physical Oceanography",
+      "year": 2021,
+      "doi": "10.1175/JPO-D-20-0296.1",
+      "link": "https://doi.org/10.1175/JPO-D-20-0296.1"
+    },
+    {
+      "authors": "Singha, M., Dong, J. W., Ge, Q. S., Metternicht, G., Sarmah, S., Zhang, G. L., Doughty, R., Lele, S., Biradar, C., Zhou, S., Xiao, X. M.",
+      "title": "Satellite Evidence on the Trade-Offs of the Food-Water-Air Quality Nexus Over the Breadbasket of India\\r\\r",
+      "journal": "Global Environmental Change-Human and Policy Dimensions",
+      "year": 2021,
+      "doi": "10.1016/j.gloenvcha.2021.102394",
+      "link": "https://doi.org/10.1016/j.gloenvcha.2021.102394"
+    },
+    {
+      "authors": "Han, S. C., Ghobadi-Far, K., Yeo, I. Y., McCullough, C. M., Lee, E., Sauber, J.",
+      "title": "GRACE Follow-on Revealed Bangladesh Was Flooded Early in the 2020 Monsoon Season Due to Premature Soil Saturation",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2021,
+      "doi": "10.1073/pnas.2109086118",
+      "link": "https://doi.org/10.1073/pnas.2109086118"
+    },
+    {
+      "authors": "Ray, R. D., Loomis, B. D., Zlotnicki, V.",
+      "title": "The mean seasonal cycle in relative sea level from satellite altimetry and gravimetry",
+      "journal": "Journal of Geodesy",
+      "year": 2021,
+      "doi": "10.1007/s00190-021-01529-1",
+      "link": "https://doi.org/10.1007/s00190-021-01529-1"
+    },
+    {
+      "authors": "Cheon, S. H., Hamlington, B. D., Reager, J. T., Chandanpurkar, H. A.",
+      "title": "Identifying ENSO-related interannual and decadal variability on terrestrial water storage",
+      "journal": "Scientific Reports",
+      "year": 2021,
+      "doi": "10.1038/s41598-021-92729-4",
+      "link": "https://doi.org/10.1038/s41598-021-92729-4"
+    },
+    {
+      "authors": "Yong, Bin, Wang, Chi Yuen, Chen, Jiansheng, Chen, Jiaqi, Barry, D. A., Wang, Tao, Li, Ling",
+      "title": "Missing water from the Qiangtang Basin on the Tibetan Plateau",
+      "journal": "Geology",
+      "year": 2021,
+      "doi": "10.1130/G48561.1",
+      "link": "https://doi.org/10.1130/G48561.1"
+    },
+    {
+      "authors": "Rees, Emily Rose, Wade, Andrew R., Sutton, Andrew J., Spero, Robert E., Shaddock, Daniel A., McKenzie, Kirk",
+      "title": "Absolute frequency readout derived from ULE cavity for next generation geodesy missions",
+      "journal": "Optics Express",
+      "year": 2021,
+      "doi": "10.1364/OE.434483",
+      "link": "https://doi.org/10.1364/OE.434483"
+    },
+    {
+      "authors": "Pascolini-Campbell, M., Reager, J. T., Chandanpurkar, H. A., Rodell, M.",
+      "title": "A 10 per cent increase in global land evapotranspiration from 2003 to 2019",
+      "journal": "Nature",
+      "year": 2021,
+      "doi": "10.1038/s41586-021-03503-5",
+      "link": "https://doi.org/10.1038/s41586-021-03503-5"
+    },
+    {
+      "authors": "Goswami, Sujata, Francis, Samuel P., Bandikova, Tamara, E.Spero, Robert",
+      "title": "Analysis of GRACE Follow-On Laser Ranging Interferometer Derived Inter-Satellite Pointing Angles",
+      "journal": "IEEE Sensors Journal. https://doi.org/10.1109/JSEN.2021.3090790.",
+      "year": 2021,
+      "doi": "10.1109/JSEN.2021.3090790",
+      "link": "https://doi.org/10.1109/JSEN.2021.3090790"
+    },
+    {
+      "authors": "Zhou, Meilin, Wang, Xiaolei, Sun, Lin, Luo, Yi",
+      "title": "Spatial Variations in Terrestrial Water Storage with Variable Forces Across the Yellow River Basin",
+      "journal": "Remote Sensing",
+      "year": 2021,
+      "doi": "10.3390/rs13173416",
+      "link": "https://doi.org/10.3390/rs13173416"
+    },
+    {
+      "authors": "Pascolini-Campbell, Madeleine, Fisher, Joshua B., Reager, John T.",
+      "title": "GRACE-FO and ECOSTRESS Synergies Constrain Fine-Scale Impacts on the Water Balance",
+      "journal": "Geophysical Research Letters",
+      "year": 2021,
+      "doi": "10.1029/2021GL093984",
+      "link": "https://doi.org/10.1029/2021GL093984"
+    },
+    {
+      "authors": "Worden, J., Saatchi, S., Keller, M., Bloom, A. A., Liu, J., Parazoo, N., Fisher, J. B., Bowman, K., Reager, J. T., Fahy, K., Schimel, D., Fu, R., Worden, S., Yin, Y., Gentine, P., Konings, A. G., Quetin, G. R., Williams, M., Worden, H., Shi, M. J., Barkhordarian, A.",
+      "title": "Satellite Observations of the Tropical Terrestrial Carbon Balance and Interactions With the Water Cycle During the 21st Century",
+      "journal": "Reviews of Geophysics",
+      "year": 2021,
+      "doi": "10.1029/2020rg000711",
+      "link": "https://doi.org/10.1029/2020rg000711"
+    },
+    {
+      "authors": "Velicogna, Isabella, Mohajerani, Yara, Geruo, A., Landerer, Felix, Mouginot, Jeremie, Noel, Brice, Rignot, Eric, Sutterley, Tyler, van den Broeke, Michiel, van Wessem, Melchior, Wiese, David",
+      "title": "Continuity of Ice Sheet Mass Loss in Greenland and Antarctica From the GRACE and GRACE Follow-On Missions",
+      "journal": "Geophysical Research Letters",
+      "year": 2020,
+      "doi": "10.1029/2020GL087291",
+      "link": "https://doi.org/10.1029/2020GL087291"
+    },
+    {
+      "authors": "Sutterley, T. C., Velicogna, I., Hsu, C. W.",
+      "title": "Self-Consistent Ice Mass Balance and Regional Sea Level From Time-Variable Gravity",
+      "journal": "Earth and Space Science",
+      "year": 2020,
+      "doi": "10.1029/2019ea000860",
+      "link": "https://doi.org/10.1029/2019ea000860"
+    },
+    {
+      "authors": "Massoud, E., Turmon, M., Reager, J., Hobbs, J., Liu, Z., David, C. H.",
+      "title": "Cascading Dynamics of the Hydrologic Cycle in California Explored through Observations and Model Simulations",
+      "journal": "Geosciences",
+      "year": 2020,
+      "doi": "10.3390/geosciences10020071",
+      "link": "https://doi.org/10.3390/geosciences10020071"
+    },
+    {
+      "authors": "Geruo, A., Velicogna, I., Zhao, M., Colliander, A., Kimball, J. S.",
+      "title": "Satellite detection of varying seasonal water supply restrictions on grassland productivity in the Missouri basin, USA",
+      "journal": "",
+      "year": 2020,
+      "doi": "10.1016/j.rse.2019.111623",
+      "link": "https://doi.org/10.1016/j.rse.2019.111623"
+    },
+    {
+      "authors": "Sharma, D., Patnaik, S., Biswal, B., Reager, J. T.",
+      "title": "Characterization of Basin-Scale Dynamic Storage-Discharge Relationship Using Daily GRACE Based Storage Anomaly Data",
+      "journal": "Geosciences",
+      "year": 2020,
+      "doi": "10.3390/geosciences10100404",
+      "link": "https://doi.org/10.3390/geosciences10100404"
+    },
+    {
+      "authors": "Bertiger, Willy, Bar-Sever, Yoaz, Dorsey, Angie, Haines, Bruce, Harvey, Nate, Hemberger, Dan, Heflin, Michael, Lu, Wenwen, Miller, Mark, Moore, Angelyn W., Murphy, Dave, Ries, Paul, Romans, Larry, Sibois, Aurore, Sibthorpe, Ant, Szilagyi, Bela, Vallisneri, Michele, Willis, Pascal",
+      "title": "GipsyX/RTGx, a new tool set for space geodetic operations and research",
+      "journal": "a new tool set for space geodetic operations and research. https://doi.org/10.1016/j.asr.2020.04.015.",
+      "year": 2020,
+      "doi": "10.1016/j.asr.2020.04.015",
+      "link": "https://doi.org/10.1016/j.asr.2020.04.015"
+    },
+    {
+      "authors": "Chanard, K., Metois, M., Rebischung, P., Avouac, J. P.",
+      "title": "A warning against over-interpretation of seasonal signals measured by the Global Navigation Satellite System",
+      "journal": "Nature Communications",
+      "year": 2020,
+      "doi": "10.1038/s41467-020-15100-7",
+      "link": "https://doi.org/10.1038/s41467-020-15100-7"
+    },
+    {
+      "authors": "Wu, X. P., Haines, B. J., Heflin, M. B., Landerer, F. W.",
+      "title": "Improved Global Nonlinear Surface Mass Variation Estimates From Geodetic Displacements and Reconciliation With GRACE Data",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2020,
+      "doi": "10.1029/2019jb018355",
+      "link": "https://doi.org/10.1029/2019jb018355"
+    },
+    {
+      "authors": "Rateb, Ashraf, Scanlon, Bridget R., Pool, Donald R., Sun, Alexander, Zhang, Zizhan, Chen, Jianli, Clark, Brian, Faunt, Claudia C., Haugh, Connor J., Hill, Mary, Hobza, Christopher, McGuire, Virginia L., Reitz, Meredith, Muller Schmied, Hannes, Sutanudjaja, Edwin H., Swenson, Sean, Wiese, David, Xia, Youlong, Zell, Wesley",
+      "title": "Comparison of Groundwater Storage Changes From GRACE Satellites With Monitoring and Modeling of Major U.S. Aquifers",
+      "journal": "Water Resources Research",
+      "year": 2020,
+      "doi": "10.1029/2020WR027556",
+      "link": "https://doi.org/10.1029/2020WR027556"
+    },
+    {
+      "authors": "Krishnamurthy, P. K., Fisher, J. B., Schimel, D. S., Kareiva, P. M.",
+      "title": "Applying Tipping Point Theory to Remote Sensing Science to Improve Early Warning Drought Signals for Food Security",
+      "journal": "Earths Future",
+      "year": 2020,
+      "doi": "10.1029/2019ef001456",
+      "link": "https://doi.org/10.1029/2019ef001456"
+    },
+    {
+      "authors": "Hauk, M., Wiese, D. N.",
+      "title": "New Methods for Linking Science Objectives to Remote Sensing Observations: A Concept Study Using Single - and Dual-Pair Satellite Gravimetry Architectures",
+      "journal": "Earth and Space Science",
+      "year": 2020,
+      "doi": "10.1029/2019ea000922",
+      "link": "https://doi.org/10.1029/2019ea000922"
+    },
+    {
+      "authors": "Farahmand, A., Stavros, E. N., Reager, J. T., Behrangi, A.",
+      "title": "Introducing Spatially Distributed Fire Danger from Earth Observations (FDEO) Using Satellite-Based Data in the Contiguous United States",
+      "journal": "Remote Sensing",
+      "year": 2020,
+      "doi": "10.3390/rs12081252",
+      "link": "https://doi.org/10.3390/rs12081252"
+    },
+    {
+      "authors": "Forootan, Ehsan, Schumacher, Maike, Mehrnegar, Nooshin, Bezdk, Ales, Talpe, Matthieu J., Farzaneh, Saeed, Zhang, Chaoyang, Zhang, Yu, Shum, C. K.",
+      "title": "An iterative ICA-based reconstruction method to produce consistent time-variable total water storage fields using GRACE and Swarm satellite data",
+      "journal": "Remote Sensing",
+      "year": 2020,
+      "doi": "10.3390/rs12101639",
+      "link": "https://doi.org/10.3390/rs12101639"
+    },
+    {
+      "authors": "Ciraci, E., Velicogna, I., Swenson, S.",
+      "title": "Continuity of the Mass Loss of the World's Glaciers and Ice Caps From the GRACE and GRACE Follow-On Missions",
+      "journal": "Geophysical Research Letters",
+      "year": 2020,
+      "doi": "10.1029/2019GL086926",
+      "link": "https://doi.org/10.1029/2019GL086926"
+    },
+    {
+      "authors": "Farahmand, A., Stavros, E. N., Reager, J. T., Behrangi, A., Randerson, J. T., Quayle, B.",
+      "title": "Satellite hydrology observations as operational indicators of forecasted fire danger across the contiguous United States",
+      "journal": "Natural Hazards and Earth System Sciences",
+      "year": 2020,
+      "doi": "10.5194/nhess-20-1097-2020",
+      "link": "https://doi.org/10.5194/nhess-20-1097-2020"
+    },
+    {
+      "authors": "Landerer, Felix W., Flechtner, Frank M., Save, Himanshu, Webb, Frank H., Bandikova, Tamara, Bertiger, William I., Bettadpur, Srinivas V., Byun, Sung Hun, Dahle, Christoph, Dobslaw, Henryk, Fahnestock, Eugene, Harvey, Nate, Kang, Zhigui, Kruizinga, Gerhard L. H., Loomis, Bryant D., McCullough, Christopher, Murbock, Michael, Nagel, Peter, Paik, Meegyeong, Pie, Nadege, Poole, Steve, Strekalov, Dmitry, Tamisiea, Mark E., Wang, Furun, Watkins, Michael M., Wen, Hui-Ying, Wiese, David N., Yuan, Dah-Ning",
+      "title": "Extending the Global Mass Change Data Record: GRACE Follow-On Instrument and Science Data Performance",
+      "journal": "Geophysical Research Letters",
+      "year": 2020,
+      "doi": "10.1029/2020GL088306",
+      "link": "https://doi.org/10.1029/2020GL088306"
+    },
+    {
+      "authors": "Pascolini-Campbell, Madeleine A., Reager, John T., Fisher, Joshua B.",
+      "title": "GRACE-based Mass Conservation as a Validation Target for Basin-Scale Evapotranspiration in the Contiguous United States",
+      "journal": "Water Resources Research",
+      "year": 2020,
+      "doi": "10.1029/2019WR026594",
+      "link": "https://doi.org/10.1029/2019WR026594"
+    },
+    {
+      "authors": "Hamlington, B. D., Piecuch, C. G., Reager, J. T., Chandanpurkar, H., Frederikse, T., Nerem, R. S., Fasullo, J. T., Cheon, S. H.",
+      "title": "Origin of interannual variability in global mean sea level",
+      "journal": "Proceedings of the National Academy of Sciences of the United States of America",
+      "year": 2020,
+      "doi": "10.1073/pnas.1922190117",
+      "link": "https://doi.org/10.1073/pnas.1922190117"
+    },
+    {
+      "authors": "Balha, A., Vishwakarma, B. D., Pandey, S., Singh, C. K.",
+      "title": "Predicting impact of urbanization on water resources in megacity Delhi",
+      "journal": "Remote Sensing Applications-Society and Environment",
+      "year": 2020,
+      "doi": "10.1016/j.rsase.2020.100361",
+      "link": "https://doi.org/10.1016/j.rsase.2020.100361"
+    },
+    {
+      "authors": "Fournier, S., Lee, T., Wang, X. C., Armitage, T. W. K., Wang, O., Fukumori, I., Kwok, R.",
+      "title": "Sea Surface Salinity as a Proxy for Arctic Ocean Freshwater Changes",
+      "journal": "Journal of Geophysical Research-Oceans",
+      "year": 2020,
+      "doi": "10.1029/2020jc016110",
+      "link": "https://doi.org/10.1029/2020jc016110"
+    },
+    {
+      "authors": "Emery, C. M., David, C. H., Andreadis, K. M., Turmon, M. J., Reager, J. T., Hobbs, J. M., Pan, M., Famiglietti, J. S., Beighley, E., Rodell, M.",
+      "title": "Underlying Fundamentals of Kalman Filtering for River Network Modeling",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2020,
+      "doi": "10.1175/jhm-d-19-0084.1",
+      "link": "https://doi.org/10.1175/jhm-d-19-0084.1"
+    },
+    {
+      "authors": "Ghobadi-Far, Khosro, Han, Shin-Chan, McCullough, Christopher M., Wiese, David N., Yuan, Dah-Ning, Landerer, Felix W., Sauber, Jeanne, Watkins, Michael M.",
+      "title": "GRACE Follow-On Laser Ranging Interferometer Measurements Uniquely Distinguish Short-Wavelength Gravitational Perturbations",
+      "journal": "Geophysical Research Letters",
+      "year": 2020,
+      "doi": "10.1029/2020GL089445",
+      "link": "https://doi.org/10.1029/2020GL089445"
+    },
+    {
+      "authors": "Behrangi, A., Gardner, A. S., Wiese, D. N.",
+      "title": "Comparative analysis of snowfall accumulation over Antarctica in light of Ice discharge and gravity observations from space",
+      "journal": "Environmental Research Letters",
+      "year": 2020,
+      "doi": "10.1088/1748-9326/ab9926",
+      "link": "https://doi.org/10.1088/1748-9326/ab9926"
+    },
+    {
+      "authors": "Argus, D. F., Ratliff, B., DeMets, C., Borsa, A. A., Wiese, D. N., Blewitt, G., Crowley, J. W., Martens, H. R., Kreemer, C., Landerer, F. W.",
+      "title": "Rise of Great Lakes Surface Water, Sinking of the Upper Midwest of the United States, and Viscous Collapse of the Forebulge of the Former Laurentide Ice Sheet",
+      "journal": "Sinking of the Upper Midwest of the United States",
+      "year": 2020,
+      "doi": "10.1029/2020jb019739",
+      "link": "https://doi.org/10.1029/2020jb019739"
+    },
+    {
+      "authors": "Larour, E., Caron, L., Morlighem, M., Adhikari, S., Frederikse, T., Schlegel, N. J., Ivins, E., Hamlington, B., Kopp, R., Nowicki, S.",
+      "title": "ISSM-SLPS: geodetically compliant Sea-Level Projection System for the Ice-sheet and Sea-level System Model v4.17",
+      "journal": "Geoscientific Model Development",
+      "year": 2020,
+      "doi": "10.5194/gmd-13-4925-2020",
+      "link": "https://doi.org/10.5194/gmd-13-4925-2020"
+    },
+    {
+      "authors": "Sasgen, I., Wouters, B., Gardner, A. S., King, M. D., Tedesco, M., Landerer, F. W., Dahle, C., Save, H., Fettweis, X.",
+      "title": "Return to rapid ice loss in Greenland and record loss in 2019 detected by the GRACE-FO satellites",
+      "journal": "Communications Earth & Environment",
+      "year": 2020,
+      "doi": "10.1038/s43247-020-0010-1",
+      "link": "https://doi.org/10.1038/s43247-020-0010-1"
+    },
+    {
+      "authors": "Frederikse, T., Landerer, F., Caron, L., Adhikari, S., Parkes, D., Humphrey, V. W., Dangendorf, S., Hogarth, P., Zanna, L., Cheng, L. J., Wu, Y. H.",
+      "title": "The causes of sea-level rise since 1900",
+      "journal": "Nature",
+      "year": 2020,
+      "doi": "10.1038/s41586-020-2591-3",
+      "link": "https://doi.org/10.1038/s41586-020-2591-3"
+    },
+    {
+      "authors": "Prevost, P., Chanard, K., Fleitout, L., Calais, E., Walwer, D., van Dam, T., Ghil, M.",
+      "title": "Data-adaptive spatio-temporal filtering of GRACE data",
+      "journal": "Geophysical Journal International",
+      "year": 2019,
+      "doi": "10.1093/gji/ggz409",
+      "link": "https://doi.org/10.1093/gji/ggz409"
+    },
+    {
+      "authors": "Uebbing, B., Kusche, J., Rietbroek, R., Landerer, F. W.",
+      "title": "Processing Choices Affect Ocean Mass Estimates From GRACE",
+      "journal": "Journal of Geophysical Research-Oceans",
+      "year": 2019,
+      "doi": "10.1029/2018jc014341",
+      "link": "https://doi.org/10.1029/2018jc014341"
+    },
+    {
+      "authors": "Tapley, B. D., Watkins, M. M., Flechtner, F., Reigber, C., Bettadpur, S., Rodell, M., Sasgen, I., Famiglietti, J. S., Landerer, F. W., Chambers, D. P., Reager, J. T., Gardner, A. S., Save, H., Ivins, E. R., Swenson, S. C., Boening, C., Dahle, C., Wiese, D. N., Dobslaw, H., Tamisiea, M. E., Velicogna, I.",
+      "title": "Contributions of GRACE to understanding climate change",
+      "journal": "Nature Climate Change",
+      "year": 2019,
+      "doi": "10.1038/s41558-019-0456-2",
+      "link": "https://doi.org/10.1038/s41558-019-0456-2"
+    },
+    {
+      "authors": "Liu, Renli, She, Dunxian, Li, Min, Wang, Tao",
+      "title": "Using Satellite Observations to Assess Applicability of GLDAS and WGHM Hydrological ModelGLDASWGHM",
+      "journal": "Wuhan Daxue Xuebao (Xinxi Kexue Ban)/Geomatics and Information Science of Wuhan University",
+      "year": 2019,
+      "doi": "10.13203/j.whugis20190108",
+      "link": "https://doi.org/10.13203/j.whugis20190108"
+    },
+    {
+      "authors": "Wouters, B., Gardner, A. S., Moholdt, G.",
+      "title": "Global Glacier Mass Loss During the GRACE Satellite Mission (2002-2016)",
+      "journal": "Frontiers in Earth Science",
+      "year": 2019,
+      "doi": "10.3389/feart.2019.00096",
+      "link": "https://doi.org/10.3389/feart.2019.00096"
+    },
+    {
+      "authors": "Meyssignac, B., Boyer, T., Zhao, Z. X., Hakuba, M. Z., Landerer, F. W., Stammer, D., Kohl, A., Kato, S., L'Ecuyer, T., Ablain, M., Abraham, J. P., Blazquez, A., Cazenave, A., Church, J. A., Cowley, R., Cheng, L. J., Domingues, C. M., Giglio, D., Gouretski, V., Ishii, M., Johnson, G. C., Killick, R. E., Legler, D., Llovel, W., Lyman, J., Palmer, M. D., Piotrowicz, S., Purkey, S. G., Roemmich, D., Roca, R., Savita, A., von Schuckmann, K., Speich, S., Stephens, G., Wang, G. J., Wijffels, S. E., Zilberman, N.",
+      "title": "Measuring Global Ocean Heat Content to Estimate the Earth Energy Imbalance",
+      "journal": "Frontiers in Marine Science",
+      "year": 2019,
+      "doi": "10.3389/fmars.2019.00432",
+      "link": "https://doi.org/10.3389/fmars.2019.00432"
+    },
+    {
+      "authors": "Mohajerani, Yara, Velicogna, Isabella, Rignot, Eric",
+      "title": "Evaluation of Regional Climate Models Using Regionally Optimized GRACE Mascons in the Amery and Getz Ice Shelves Basins, Antarctica",
+      "journal": "Antarctica",
+      "year": 2019,
+      "doi": "10.1029/2019GL084665",
+      "link": "https://doi.org/10.1029/2019GL084665"
+    },
+    {
+      "authors": "Purdy, A. J., David, C. H., Sikder, M. S., Reager, J. T., Chandanpurkar, H. A., Jones, N. L., Matin, M. A.",
+      "title": "An Open-Source Tool to Facilitate the Processing of GRACE Observations and GLDAS Outputs: An Evaluation in Bangladesh",
+      "journal": "Frontiers in Environmental Science",
+      "year": 2019,
+      "doi": "10.3389/fenvs.2019.00155",
+      "link": "https://doi.org/10.3389/fenvs.2019.00155"
+    },
+    {
+      "authors": "Low, Sebastian, Cossavella, Fabiana, Herman, Jaap, Muller, Kay, Save, Himanshu, Davis, Ab",
+      "title": "Attitude and orbit control of the grace satellites at extremely low power",
+      "journal": "",
+      "year": 2019,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Liu, Z., Liu, P. W., Massoud, E., Farr, T. G., Lundgren, P., Famiglietti, J. S.",
+      "title": "Monitoring Groundwater Change in California's Central Valley Using Sentinel-1 and GRACE Observations",
+      "journal": "Geosciences",
+      "year": 2019,
+      "doi": "10.3390/geosciences9100436",
+      "link": "https://doi.org/10.3390/geosciences9100436"
+    },
+    {
+      "authors": "Stampoulis, Dimitrios, Reager, John T., David, Cedric H., Andreadis, Konstantinos M., Famiglietti, James S., Farr, Tom G., Trangsrud, Amy R., Basilio, Ralph R., Sabo, John L., Osterman, Gregory B., Lundgren, Paul R., Liu, Zhen",
+      "title": "Model-data fusion of hydrologic simulations and GRACE terrestrial water storage observations to estimate changes in water table depth",
+      "journal": "Advances in Water Resources",
+      "year": 2019,
+      "doi": "10.1016/j.advwatres.2019.04.004",
+      "link": "https://doi.org/10.1016/j.advwatres.2019.04.004"
+    },
+    {
+      "authors": "Hamlington, B. D., Cheon, S. H., Piecuch, C. G., Karnauskas, K. B., Thompson, P. R., Kim, K. Y., Reager, J. T., Landerer, F. W., Frederikse, T.",
+      "title": "The Dominant Global Modes of Recent Internal Sea Level Variability",
+      "journal": "Journal of Geophysical Research-Oceans",
+      "year": 2019,
+      "doi": "10.1029/2018jc014635",
+      "link": "https://doi.org/10.1029/2018jc014635"
+    },
+    {
+      "authors": "Cazenave, A., Hamlington, B., Horwath, M., Barletta, V. R., Benveniste, J., Chambers, D., Doll, P., Hogg, A. E., Legeais, J. F., Merrifield, M., Meyssignac, B., Mitchum, G., Nerem, S., Pail, R., Palanisamy, H., Paul, F., von Schuckmann, K., Thompson, P.",
+      "title": "Observational Requirements for Long-Term Monitoring of the Global Mean Sea Level and Its Components Over the Altimetry Era",
+      "journal": "Frontiers in Marine Science",
+      "year": 2019,
+      "doi": "10.3389/fmars.2019.00582",
+      "link": "https://doi.org/10.3389/fmars.2019.00582"
+    },
+    {
+      "authors": "Du, J., Kimball, J. S., Velicogna, I., Zhao, M., Jones, L. A., Watts, J. D., Kim, Y.",
+      "title": "Multicomponent Satellite Assessment of Drought Severity in the Contiguous United States From 2002 to 2017 Using AMSR-E and AMSR2",
+      "journal": "Water Resources Research",
+      "year": 2019,
+      "doi": "10.1029/2018wr024633",
+      "link": "https://doi.org/10.1029/2018wr024633"
+    },
+    {
+      "authors": "Basha, G., Kishore, P., Ratnam, M. V., Babu, S. R., Velicogna, I., Jiang, J. H., Ao, C. O.",
+      "title": "Global climatology of planetary boundary layer top obtained from multi-satellite GPS RO observations",
+      "journal": "Climate Dynamics",
+      "year": 2019,
+      "doi": "10.1007/s00382-018-4269-1",
+      "link": "https://doi.org/10.1007/s00382-018-4269-1"
+    },
+    {
+      "authors": "Adhikari, S., Ivins, E. R., Frederikse, T., Landerer, F. W., Caron, L.",
+      "title": "Sea-level fingerprints emergent from GRACE mission data",
+      "journal": "Earth System Science Data",
+      "year": 2019,
+      "doi": "10.5194/essd-11-629-2019",
+      "link": "https://doi.org/10.5194/essd-11-629-2019"
+    },
+    {
+      "authors": "Sinha, Debanjan, Syed, Tajdarul H., Reager, John T.",
+      "title": "Utilizing combined deviations of precipitation and GRACE-based terrestrial water storage as a metric for drought characterization: A case study over major Indian river basins",
+      "journal": "Journal of Hydrology",
+      "year": 2019,
+      "doi": "10.1016/j.jhydrol.2019.02.053",
+      "link": "https://doi.org/10.1016/j.jhydrol.2019.02.053"
+    },
+    {
+      "authors": "MacEdo, Heloisa Ehalt, Beighley, Ralph Edward, David, Cedric H., Reager, John T.",
+      "title": "Using GRACE in a streamflow recession to determine drainable water storage in the Mississippi River basin",
+      "journal": "Hydrology and Earth System Sciences",
+      "year": 2019,
+      "doi": "10.5194/hess-23-3269-2019",
+      "link": "https://doi.org/10.5194/hess-23-3269-2019"
+    },
+    {
+      "authors": "Shi, M., Worden, John, Noone, D., Liu, J., Bowman, Kevin W., Bloom, A. Anthony, Wong, S., Fu, R., Fisher, Joshua, Anonymous,",
+      "title": "Quantifying drought induced water cycle changes in the isotope-enabled community atmosphere model",
+      "journal": "American Geophysical Union Fall Meeting",
+      "year": 2019,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Darbeheshti, N., Woske, F., Weigelt, M., McCullough, C., Wu, H.",
+      "title": "GRACETOOLSGRACE Gravity Field Recovery Tools",
+      "journal": "Geosciences",
+      "year": 2018,
+      "doi": "10.3390/geosciences8090350",
+      "link": "https://doi.org/10.3390/geosciences8090350"
+    },
+    {
+      "authors": "Singh, Alka, Behrangi, Ali, Fisher, Joshua B., Reager, John T.",
+      "title": "On the desiccation of the South Aral Sea observed from spaceborne missions",
+      "journal": "Remote Sensing",
+      "year": 2018,
+      "doi": "10.3390/rs10050793",
+      "link": "https://doi.org/10.3390/rs10050793"
+    },
+    {
+      "authors": "Tourian, M. J., Reager, J. T., Sneeuw, N.",
+      "title": "The Total Drainable Water Storage of the Amazon River Basin: A First Estimate Using GRACE",
+      "journal": "Water Resources Research. http://dx.doi.org/10.1029/2017WR021674.",
+      "year": 2018,
+      "doi": "10.1029/2017WR021674",
+      "link": "https://doi.org/10.1029/2017WR021674"
+    },
+    {
+      "authors": "Rodell, M., Famiglietti, J. S., Wiese, D. N., Reager, J. T., Beaudoing, H. K., Landerer, F. W., Lo, M. H.",
+      "title": "Emerging trends in global freshwater availability",
+      "journal": "Nature",
+      "year": 2018,
+      "doi": "10.1038/s41586-018-0123-1",
+      "link": "https://doi.org/10.1038/s41586-018-0123-1"
+    },
+    {
+      "authors": "Peltier, W. R., Argus, D. F., Drummond, R.",
+      "title": "Comment on \"An Assessment of the ICE-6G_C (VM5a) Glacial Isostatic Adjustment Model\" by Purcell et al",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2018,
+      "doi": "10.1002/2016jb013844",
+      "link": "https://doi.org/10.1002/2016jb013844"
+    },
+    {
+      "authors": "Chanard, K., Fleitout, L., Calais, E., Barbot, S., Avouac, J. P.",
+      "title": "Constraints on Transient Viscoelastic Rheology of the Asthenosphere From Seasonal Deformation",
+      "journal": "Geophysical Research Letters",
+      "year": 2018,
+      "doi": "10.1002/2017gl076451",
+      "link": "https://doi.org/10.1002/2017gl076451"
+    },
+    {
+      "authors": "Chanard, K., Fleitout, L., Calais, E., Rebischung, P., Avouac, J. P.",
+      "title": "Toward a Global Horizontal and Vertical Elastic Load Deformation Model Derived from GRACE and GNSS Station Position Time Series",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2018,
+      "doi": "10.1002/2017jb015245",
+      "link": "https://doi.org/10.1002/2017jb015245"
+    },
+    {
+      "authors": "L. Caron, E. R. Ivins, E. Larour, S. Adhikari, J. Nilsson, G. Blewitt",
+      "title": "GIA Model Statistics for GRACE Hydrology, Cryosphere, and Ocean Science",
+      "journal": "Cryosphere",
+      "year": 2018,
+      "doi": "10.1002/2017GL076644",
+      "link": "https://doi.org/10.1002/2017GL076644"
+    },
+    {
+      "authors": "Mohajerani, Y., Velicogna, I., Rignot, E.",
+      "title": "Mass Loss of Totten and Moscow University Glaciers, East Antarctica, Using Regionally Optimized GRACE Mascons",
+      "journal": "East Antarctica",
+      "year": 2018,
+      "doi": "10.1029/2018gl078173",
+      "link": "https://doi.org/10.1029/2018gl078173"
+    },
+    {
+      "authors": "Massoud, E. C., Purdy, A. J., Miro, M. E., Famiglietti, J. S.",
+      "title": "Projecting groundwater storage changes in California's Central Valley",
+      "journal": "Scientific Reports",
+      "year": 2018,
+      "doi": "10.1038/s41598-018-31210-1",
+      "link": "https://doi.org/10.1038/s41598-018-31210-1"
+    },
+    {
+      "authors": "Behrangi, A., Gardner, A., Reager, J. T., Fisher, J. B., Yang, D. Q., Huffman, G. J., Adler, R. F.",
+      "title": "Using GRACE to Estitmate Snowfall Accumulation and Assess Gauge Undercatch Corrections in High Latitudes",
+      "journal": "Journal of Climate",
+      "year": 2018,
+      "doi": "10.1175/jcli-d-18-0163.1",
+      "link": "https://doi.org/10.1175/jcli-d-18-0163.1"
+    },
+    {
+      "authors": "Piecuch, Christopher G., Landerer, Felix W., Ponte, Rui M.",
+      "title": "Tide gauge records reveal improved processing of gravity recovery and climate experiment time-variable mass solutions over the coastal ocean",
+      "journal": "Geophysical Journal International",
+      "year": 2018,
+      "doi": "10.1093/GJI/GGY207",
+      "link": "https://doi.org/10.1093/GJI/GGY207"
+    },
+    {
+      "authors": "Behrangi, Ali, Gardner, Alex S., Reager, John T., Fisher, Joshua B.",
+      "title": "Using GRACE to constrain precipitation amount over cold mountainous basins",
+      "journal": "Geophysical Research Letters",
+      "year": 2017,
+      "doi": "10.1002/2016GL071832",
+      "link": "https://doi.org/10.1002/2016GL071832"
+    },
+    {
+      "authors": "Zhao, Meng, Geruo, A., Velicogna, Isabella, Kimball, John S.",
+      "title": "Satellite observations of regional drought severity in the continental United States using GRACE-based terrestrial water storage changes",
+      "journal": "Journal of Climate",
+      "year": 2017,
+      "doi": "10.1175/JCLI-D-16-0458.1",
+      "link": "https://doi.org/10.1175/JCLI-D-16-0458.1"
+    },
+    {
+      "authors": "Harvey, Nate, Dunn, Charles E., Kruizinga, Gerhard L., Young, Lawrence E.",
+      "title": "Triggering conditions for GRACE ranging measurement signal-to-noiseratio dips",
+      "journal": "Journal of Spacecraft and Rockets",
+      "year": 2017,
+      "doi": "10.2514/1.A33578",
+      "link": "https://doi.org/10.2514/1.A33578"
+    },
+    {
+      "authors": "Geruo, A., Velicogna, Isabella, Kimball, John S., Du, Jinyang, Kim, Youngwook, Colliander, Andreas, Njoku, Eni",
+      "title": "Satellite-observed changes in vegetation sensitivities to surface soil moisture and total water storage variations since the 2011 Texas drought",
+      "journal": "Environmental Research Letters",
+      "year": 2017,
+      "doi": "10.1088/1748-9326/aa6965",
+      "link": "https://doi.org/10.1088/1748-9326/aa6965"
+    },
+    {
+      "authors": "Bachman, B., De Vine, G., Dickson, J., Dubovitsky, S., Liu, J., Klipstein, W., McKenzie, K., Spero, R., Sutton, A., Ware, B., Woodruff, C.",
+      "title": "Flight phasemeter on the Laser Ranging Interferometer on the GRACE Follow-On mission",
+      "journal": "11th International LISA Symposium",
+      "year": 2017,
+      "doi": "10.1088/1742-6596/840/1/012011",
+      "link": "https://doi.org/10.1088/1742-6596/840/1/012011"
+    },
+    {
+      "authors": "Thomas, Brian F., Famiglietti, James S., Landerer, Felix W., Wiese, David N., Molotch, Noah P., Argus, Donald F.",
+      "title": "GRACE Groundwater Drought Index: Evaluation of California Central Valley groundwater drought",
+      "journal": "Remote Sens. Environ.",
+      "year": 2017,
+      "doi": "10.1016/j.rse.2017.06.026",
+      "link": "https://doi.org/10.1016/j.rse.2017.06.026"
+    },
+    {
+      "authors": "Storto, A., Masina, S., Balmaseda, M., Guinehut, S., Xue, Y., Szekely, T., Fukumori, I., Forget, G., Chang, Y. S., Good, S. A., Kohl, A., Vernieres, G., Ferry, N., Peterson, K. A., Behringer, D., Ishii, M., Masuda, S., Fujii, Y., Toyoda, T., Yin, Y. H., Valdivieso, M., Barnier, B., Boyer, T., Lee, T., Gourrion, J., Wang, O., Heimback, P., Rosati, A., Kovach, R., Hernandez, F., Martin, M. J., Kamachi, M., Kuragano, T., Mogensen, K., Alves, O., Haines, K., Wang, X. C.",
+      "title": "Steric sea level variability (1993-2010) in an ensemble of ocean reanalyses and objective analyses",
+      "journal": "Climate Dynamics",
+      "year": 2017,
+      "doi": "10.1007/s00382-015-2554-9",
+      "link": "https://doi.org/10.1007/s00382-015-2554-9"
+    },
+    {
+      "authors": "Zhao, M., Geruo, A., Velicogna, I., Kimball, J. S.",
+      "title": "A Global Gridded Dataset of GRACE Drought Severity Index for 2002-14: Comparison with PDSI and SPEI and a Case Study of the Australia Millennium Drought",
+      "journal": "Journal of Hydrometeorology",
+      "year": 2017,
+      "doi": "10.1175/jhm-d-16-0182.1",
+      "link": "https://doi.org/10.1175/jhm-d-16-0182.1"
+    },
+    {
+      "authors": "Solander, K. C., Reager, J. T., Wada, Y., Famiglietti, J. S., Middleton, R. S.",
+      "title": "GRACE satellite observations reveal the severity of recent water over-consumption in the United States",
+      "journal": "Sci.Rep.",
+      "year": 2017,
+      "doi": "10.1038/s41598-017-07450-y",
+      "link": "https://doi.org/10.1038/s41598-017-07450-y"
+    },
+    {
+      "authors": "Wu, X. P., Kusche, J., Landerer, F. W.",
+      "title": "A new unified approach to determine geocentre motion using space geodetic and GRACE gravity data",
+      "journal": "Geophysical Journal International",
+      "year": 2017,
+      "doi": "10.1093/gji/ggx086",
+      "link": "https://doi.org/10.1093/gji/ggx086"
+    },
+    {
+      "authors": "Hsu, Chia-Wei, Velicogna, Isabella",
+      "title": "Detection of sea level fingerprints derived from GRACE gravity data",
+      "journal": "",
+      "year": 2017,
+      "doi": "10.1002/2017GL074070",
+      "link": "https://doi.org/10.1002/2017GL074070"
+    },
+    {
+      "authors": "Chandanpurkar, H. A., Reager, J. T., Famiglietti, J. S., Syed, T. H.",
+      "title": "Satellite- and Reanalysis-Based Mass Balance Estimates of Global Continental Discharge (1993-2015)",
+      "journal": "Journal of Climate",
+      "year": 2017,
+      "doi": "10.1175/jcli-d-16-0708.1",
+      "link": "https://doi.org/10.1175/jcli-d-16-0708.1"
+    },
+    {
+      "authors": "Abbondanza, C., Chin, T. M., Gross, R. S., Heflin, M. B., Parker, J. W., Soja, B. S., van Dam, T., Wu, X. P.",
+      "title": "JTRF2014, the JPL Kalman filter and smoother realization of the International Terrestrial Reference System",
+      "journal": "the JPL Kalman filter and smoother realization of the International Terrestrial Reference System",
+      "year": 2017,
+      "doi": "10.1002/2017jb014360",
+      "link": "https://doi.org/10.1002/2017jb014360"
+    },
+    {
+      "authors": "Bhanja, S. N., Mukherjee, A., Saha, D., Velicogna, I., Famiglietti, J. S.",
+      "title": "Validation of GRACE based groundwater storage anomaly using in-situ groundwater level measurements in India",
+      "journal": "Journal of Hydrology",
+      "year": 2016,
+      "doi": "10.1016/j.jhydrol.2016.10.042",
+      "link": "https://doi.org/10.1016/j.jhydrol.2016.10.042"
+    },
+    {
+      "authors": "Schultz, Kasey W., Sachs, Michael K., Heien, Eric M., Rundle, John B., Turcotte, Don L., Donnellan, Andrea",
+      "title": "Simulating Gravity Changes in Topologically Realistic Driven Earthquake Fault Systems: First Results",
+      "journal": "Pure and Applied Geophysics",
+      "year": 2016,
+      "doi": "10.1007/s00024-014-0926-4",
+      "link": "https://doi.org/10.1007/s00024-014-0926-4"
+    },
+    {
+      "authors": "Chen, J. L., Famiglietti, J. S., Scanlon, B. R., Rodell, M.",
+      "title": "Groundwater Storage Changes: Present Status from GRACE Observations (vol 37, pg 397, 2016)",
+      "journal": "pg 397",
+      "year": 2016,
+      "doi": "10.1007/s10712-016-9370-6",
+      "link": "https://doi.org/10.1007/s10712-016-9370-6"
+    },
+    {
+      "authors": "Castle, Stephanie L., Reager, John T., Thomas, Brian F., Purdy, Adam J., Lo, Min-Hui, Famiglietti, James S., Tang, Qiuhong",
+      "title": "Remote detection of water management impacts on evapotranspiration in the Colorado River Basin",
+      "journal": "Geophysical Research Letters",
+      "year": 2016,
+      "doi": "10.1002/2016GL068675",
+      "link": "https://doi.org/10.1002/2016GL068675"
+    },
+    {
+      "authors": "Fang, Kuai, Shen, Chaopeng, Fisher, Joshua B., Niu, Jie",
+      "title": "Improving Budyko curve-based estimates of long-term water partitioning using hydrologic signatures from GRACE",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.1002/2016WR018748",
+      "link": "https://doi.org/10.1002/2016WR018748"
+    },
+    {
+      "authors": "Harvey, Nate",
+      "title": "GRACE star camera noise",
+      "journal": "Advances in Space Research",
+      "year": 2016,
+      "doi": "10.1016/j.asr.2016.04.025",
+      "link": "https://doi.org/10.1016/j.asr.2016.04.025"
+    },
+    {
+      "authors": "Reager, J. T., Gardner, A. S., Famiglietti, J. S., Wiese, D. N., Eicker, A., Lo, M. H.",
+      "title": "A decade of sea level rise slowed by climate-driven hydrology",
+      "journal": "Science",
+      "year": 2016,
+      "doi": "10.1126/science.aad8386",
+      "link": "https://doi.org/10.1126/science.aad8386"
+    },
+    {
+      "authors": "Wiese, D. N., Killett, B., Watkins, M. M., Yuan, D. N.",
+      "title": "Antarctic tides from GRACE satellite accelerations",
+      "journal": "Journal of Geophysical Research: Oceans",
+      "year": 2016,
+      "doi": "10.1002/2015JC011488",
+      "link": "https://doi.org/10.1002/2015JC011488"
+    },
+    {
+      "authors": "Adhikari, S., Ivins, E. R., Larour, E.",
+      "title": "ISSM-SESAWv1.0: mesh-based computation of gravitationally consistent sea-level and geodetic signatures caused by cryosphere and climate driven mass change",
+      "journal": "Geoscientific Model Development",
+      "year": 2016,
+      "doi": "10.5194/gmd-9-1087-2016",
+      "link": "https://doi.org/10.5194/gmd-9-1087-2016"
+    },
+    {
+      "authors": "Alexander, P. M., Tedesco, M., Schlegel, N. J., Luthcke, S. B., Fettweis, X., Larour, E.",
+      "title": "Greenland Ice Sheet seasonal and spatial mass variability from model simulations and GRACE (2003-2012)",
+      "journal": "Cryosphere",
+      "year": 2016,
+      "doi": "10.5194/tc-10-1259-2016",
+      "link": "https://doi.org/10.5194/tc-10-1259-2016"
+    },
+    {
+      "authors": "Behrangi, A., Christensen, M., Richardson, M., Lebsock, M., Stephens, G., Huffman, G. J., Bolvin, D., Adler, R. F., Gardner, A., Lambrigtsen, B., Fetzer, E.",
+      "title": "Status of high-latitude precipitation estimates from observations and reanalyses",
+      "journal": "Journal of Geophysical Research-Atmospheres",
+      "year": 2016,
+      "doi": "10.1002/2015jd024546",
+      "link": "https://doi.org/10.1002/2015jd024546"
+    },
+    {
+      "authors": "Fu, Lee-Lueng",
+      "title": "On the Decadal Trend of Global Mean Sea Level and Its Implication on Ocean Heat Content Change",
+      "journal": "Frontiers in Marine Science",
+      "year": 2016,
+      "doi": "10.3389/fmars.2016.00037",
+      "link": "https://doi.org/10.3389/fmars.2016.00037"
+    },
+    {
+      "authors": "Mazloff, Matthew R., Boening, Carmen",
+      "title": "Rapid variability of Antarctic Bottom Water transport into the Pacific Ocean inferred from GRACE",
+      "journal": "Geophysical Research Letters",
+      "year": 2016,
+      "doi": "10.1002/2016GL068474",
+      "link": "https://doi.org/10.1002/2016GL068474"
+    },
+    {
+      "authors": "Adhikari, S., Ivins, E. R.",
+      "title": "Climate-driven polar motion: 2003-2015",
+      "journal": "Sci. Adv.",
+      "year": 2016,
+      "doi": "10.1126/sciadv.1501693",
+      "link": "https://doi.org/10.1126/sciadv.1501693"
+    },
+    {
+      "authors": "Moreaux, G., Lemoine, F. G., Argus, D. F., Santamaria-Gomez, A., Willis, P., Soudarin, L., Gravelle, M., Ferrage, P.",
+      "title": "Horizontal and vertical velocities derived from the IDS contribution to ITRF2014, and comparisons with geophysical models",
+      "journal": "and comparisons with geophysical models",
+      "year": 2016,
+      "doi": "10.1093/gji/ggw265",
+      "link": "https://doi.org/10.1093/gji/ggw265"
+    },
+    {
+      "authors": "Schlegel, N. J., Wiese, D. N., Larour, E. Y., Watkins, M. M., Box, J. E., Fettweis, X., van den Broeke, M. R.",
+      "title": "Application of GRACE to the assessment of model-based estimates of monthly Greenland Ice Sheet mass balance (2003-2012)",
+      "journal": "Cryosphere",
+      "year": 2016,
+      "doi": "10.5194/tc-10-1965-2016",
+      "link": "https://doi.org/10.5194/tc-10-1965-2016"
+    },
+    {
+      "authors": "Wada, Y., Lo, M. H., Yeh, P. J. F., Reager, J. T., Famiglietti, J. S., Wu, R. J., Tseng, Y. H.",
+      "title": "Fate of water pumped from underground and contributions to sea-level rise",
+      "journal": "Nature Climate Change",
+      "year": 2016,
+      "doi": "10.1038/nclimate3001",
+      "link": "https://doi.org/10.1038/nclimate3001"
+    },
+    {
+      "authors": "Wiese, David N., Landerer, Felix W., Watkins, Michael M.",
+      "title": "Quantifying and reducing leakage errors in the JPL RL05M GRACE mascon solution",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.1002/2016WR019344",
+      "link": "https://doi.org/10.1002/2016WR019344"
+    },
+    {
+      "authors": "Nanteza, J., de Linage, C. R., Thomas, B. F., Famiglietti, J. S.",
+      "title": "Monitoring groundwater storage changes in complex basement aquifers: An evaluation of the GRACE satellites over East Africa",
+      "journal": "",
+      "year": 2016,
+      "doi": "10.1002/2016WR018846",
+      "link": "https://doi.org/10.1002/2016WR018846"
+    },
+    {
+      "authors": "Scanlon, Bridget R., Zhang, Zizhan, Save, Himanshu, Wiese, David N., Landerer, Felix W., Long, Di, Longuevergne, Laurent, Chen, Jianli",
+      "title": "Global evaluation of new GRACE mascon products for hydrologic applications",
+      "journal": "Water Resources Research",
+      "year": 2016,
+      "doi": "10.1002/2016WR019494",
+      "link": "https://doi.org/10.1002/2016WR019494"
+    },
+    {
+      "authors": "Landerer, F. W., Wiese, D. N., Bentel, K., Boening, C., Watkins, M. M.",
+      "title": "North Atlantic meridional overturning circulation variations from GRACE ocean bottom pressure anomalies",
+      "journal": "Geophysical Research Letters",
+      "year": 2015,
+      "doi": "10.1002/2015gl065730",
+      "link": "https://doi.org/10.1002/2015gl065730"
+    },
+    {
+      "authors": "Pail, R., Bingham, R., Braitenberg, C., Dobslaw, H., Eicker, A., Guntner, A., Horwath, M., Ivins, E., Longuevergne, L., Panet, I., Wouters, B., Iugg Expert Panel",
+      "title": "Science and User Needs for Observing Global Mass Transport to Understand Global Change and to Benefit Society",
+      "journal": "Surveys in Geophysics",
+      "year": 2015,
+      "doi": "10.1007/s10712-015-9348-9",
+      "link": "https://doi.org/10.1007/s10712-015-9348-9"
+    },
+    {
+      "authors": "Francis, S. P., Shaddock, D. A., Sutton, A. J., de Vine, G., Ware, B., Spero, R. E., Klipstein, W. M., McKenzie, K.",
+      "title": "Tone-assisted time delay interferometry on GRACE Follow-On",
+      "journal": "Physical Review D",
+      "year": 2015,
+      "doi": "10.1103/PhysRevD.92.012005",
+      "link": "https://doi.org/10.1103/PhysRevD.92.012005"
+    },
+    {
+      "authors": "Anderson, R. G., Lo, M. H., Swenson, S., Famiglietti, J. S., Tang, Q., Skaggs, T. H., Lin, Y. H., Wu, R. J.",
+      "title": "Using satellite-based estimates of evapotranspiration and groundwater changes to determine anthropogenic water fluxes in land surface models",
+      "journal": "Geoscientific Model Development",
+      "year": 2015,
+      "doi": "10.5194/gmd-8-3021-2015",
+      "link": "https://doi.org/10.5194/gmd-8-3021-2015"
+    },
+    {
+      "authors": "Richey, Alexandra S., Thomas, Brian F., Lo, Min-Hui, Famiglietti, James S., Swenson, Sean, Rodell, Matthew",
+      "title": "Uncertainty in global groundwater storage estimates in a Total Groundwater Stress framework",
+      "journal": "Water Resources Research",
+      "year": 2015,
+      "doi": "10.1002/2015WR017351",
+      "link": "https://doi.org/10.1002/2015WR017351"
+    },
+    {
+      "authors": "Seo, K. W., Waliser, D. E., Lee, C. K., Tian, B. J., Scambos, T., Kim, B. M., van Angelen, J. H., van den Broeke, M. R.",
+      "title": "Accelerated mass loss from Greenland ice sheet: Links to atmospheric circulation in the North Atlantic",
+      "journal": "Global and Planetary Change",
+      "year": 2015,
+      "doi": "10.1016/j.gloplacha.2015.02.006",
+      "link": "https://doi.org/10.1016/j.gloplacha.2015.02.006"
+    },
+    {
+      "authors": "Maeda, Eduardo Eiji, Kim, Hyungjun, Aragao, Luiz E. O. C., Famiglietti, James S., Oki, Taikan",
+      "title": "Disruption of hydroecological equilibrium in southwest Amazon mediated by drought",
+      "journal": "Geophysical Research Letters",
+      "year": 2015,
+      "doi": "10.1002/2015GL065252",
+      "link": "https://doi.org/10.1002/2015GL065252"
+    },
+    {
+      "authors": "Parazoo, Nicholas C., Barnes, Elizabeth, Worden, John, Harper, Anna B., Bowman, Kevin W., Frankenberg, Christian, Wolf, Sebastian, Litvak, Marcy, Keenan, Trevor F.",
+      "title": "Influence of ENSO and the NAO on Terrestrial Carbon Uptake in the Texas-northern Mexico Region",
+      "journal": "Glob. Biogeochem. Cycle",
+      "year": 2015,
+      "doi": "10.1002/2015GB005125",
+      "link": "https://doi.org/10.1002/2015GB005125"
+    },
+    {
+      "authors": "Wu, Xiaoping, Heflin, Michael B.",
+      "title": "A global assessment of accelerations in surface mass transport",
+      "journal": "Geophysical Research Letters",
+      "year": 2015,
+      "doi": "10.1002/2015GL064941",
+      "link": "https://doi.org/10.1002/2015GL064941"
+    },
+    {
+      "authors": "McCullough, Christopher, Bettadpur, Srinivas, McDonald, Karl, Xin, M.",
+      "title": "Accuracy of numerical algorithms for satellite orbit propagation and Gravity field determination",
+      "journal": "Journal of Spacecraft and Rockets",
+      "year": 2015,
+      "doi": "10.2514/1.A33008",
+      "link": "https://doi.org/10.2514/1.A33008"
+    },
+    {
+      "authors": "Nastula, J., Gross, R.",
+      "title": "Chandler wobble parameters from SLR and GRACE",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2015,
+      "doi": "10.1002/2014jb011825",
+      "link": "https://doi.org/10.1002/2014jb011825"
+    },
+    {
+      "authors": "Reager, J. T.",
+      "title": "The weight of a river basin: using gravity to predict floods",
+      "journal": "International Water Power and Dam Construction",
+      "year": 2015,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Couhert, A., Cerri, L., Legeais, J. F., Ablain, M., Zelensky, N. P., Haines, B. J., Lemoine, F. G., Bertiger, W. I., Desai, S. D., Otten, M.",
+      "title": "Towards the 1 mm/y stability of the radial orbit error at regional scales",
+      "journal": "Advances in Space Research",
+      "year": 2015,
+      "doi": "10.1016/j.asr.2014.06.041",
+      "link": "https://doi.org/10.1016/j.asr.2014.06.041"
+    },
+    {
+      "authors": "Piecuch, Christopher G., Fukumori, Ichiro, Ponte, Rui M., Wang, Ou",
+      "title": "Vertical Structure of Ocean Pressure Variations with Application to Satellite-Gravimetric Observations",
+      "journal": "Journal of Atmospheric and Oceanic Technology",
+      "year": 2015,
+      "doi": "10.1175/JTECH-D-14-00156.1",
+      "link": "https://doi.org/10.1175/JTECH-D-14-00156.1"
+    },
+    {
+      "authors": "Singh, R. S., Reager, J. T., Miller, N. L., Famiglietti, J. S.",
+      "title": "Toward hyper-resolution land-surface modeling: The effects of fine-scale topography and soil texture on CLM4.0 simulations over the Southwestern U.S",
+      "journal": "Water Resources Research",
+      "year": 2015,
+      "doi": "10.1002/2014WR015686",
+      "link": "https://doi.org/10.1002/2014WR015686"
+    },
+    {
+      "authors": "Haines, B. J., Bar-Sever, Y. E., Bertiger, W. I., Desai, S. D., Harvey, N., Sibois, A. E., Weiss, J. P.",
+      "title": "Realizing a terrestrial reference frame using the Global Positioning System",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2015,
+      "doi": "10.1002/2015jb012225",
+      "link": "https://doi.org/10.1002/2015jb012225"
+    },
+    {
+      "authors": "Seo, Ki-Weon, Wilson, Clark R., Scambos, Ted, Kim, Baek-Min, Waliser, Duane E., Tian, Baijun, Kim, Byeong-Hoon, Eom, Jooyoung",
+      "title": "Surface Mass Balance Contributions to Acceleration of Antarctic Ice Mass Loss during 2003\u20132013",
+      "journal": "J. Geophys. Res. Solid Earth",
+      "year": 2015,
+      "doi": "10.1002/2014JB011755",
+      "link": "https://doi.org/10.1002/2014JB011755"
+    },
+    {
+      "authors": "Sproles, E. A., Leibowitz, S. G., Reager, J. T., Wigington Jr, P. J., Famiglietti, J. S., Patil, S. D.",
+      "title": "GRACE storage-runoff hystereses reveal the dynamics of regional watersheds",
+      "journal": "Hydrology and Earth System Sciences",
+      "year": 2015,
+      "doi": "10.5194/hess-19-3253-2015",
+      "link": "https://doi.org/10.5194/hess-19-3253-2015"
+    },
+    {
+      "authors": "Billah, Mirza M., Goodall, Jonathan L., Narayan, Ujjwal, Reager, J. T., Lakshmi, Venkat, Famiglietti, James S.",
+      "title": "A methodology for evaluating evapotranspiration estimates at the watershed-scale using GRACE",
+      "journal": "Journal of Hydrology",
+      "year": 2015,
+      "doi": "10.1016/j.jhydrol.2015.01.066",
+      "link": "https://doi.org/10.1016/j.jhydrol.2015.01.066"
+    },
+    {
+      "authors": "Sutterley, Tyler C., Velicogna, Isabella, Rignot, Eric, Mouginot, Jeremie, Flament, Thomas, Van Den Broeke, Michiel R., Van Wessem, Jan M., Reijmer, Carleen H.",
+      "title": "Mass loss of the Amundsen Sea Embayment of West Antarctica from four independent techniques",
+      "journal": "Geophysical Research Letters",
+      "year": 2015,
+      "doi": "10.1002/2014GL061940",
+      "link": "https://doi.org/10.1002/2014GL061940"
+    },
+    {
+      "authors": "Chen, Jianli, Famigliett, James S., Scanlon, Bridget R., Rodell, Matthew",
+      "title": "Groundwater Storage Changes: Present Status from GRACE Observations",
+      "journal": "Surveys in Geophysics",
+      "year": 2015,
+      "doi": "10.1007/s10712-015-9332-4",
+      "link": "https://doi.org/10.1007/s10712-015-9332-4"
+    },
+    {
+      "authors": "Peltier, W. R., Argus, D. F., Drummond, R.",
+      "title": "Space geodesy constrains ice age terminal deglaciation: The global ICE-6G_C (VM5a) model",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2015,
+      "doi": "10.1002/2014jb011176",
+      "link": "https://doi.org/10.1002/2014jb011176"
+    },
+    {
+      "authors": "Watkins, Michael M., Wiese, David N., Yuan, Dah-Ning, Boening, Carmen, Landerer, Felix W.",
+      "title": "Improved Methods for Observing Earth's Time Variable Mass Distribution with GRACE using Spherical Cap Mascons",
+      "journal": "J. Geophys. Res. Solid Earth",
+      "year": 2015,
+      "doi": "10.1002/2014JB011547",
+      "link": "https://doi.org/10.1002/2014JB011547"
+    },
+    {
+      "authors": "Wu, Wen-Ying, Lan, Chia-Wei, Lo, Min-Hui, Reager, John T., Famiglietti, James S.",
+      "title": "Increases in the Annual Range of Soil Water Storage at Northern Mid- and High-Latitudes under Global Warming",
+      "journal": "Geophysical Research Letters",
+      "year": 2015,
+      "doi": "10.1002/2015GL064110",
+      "link": "https://doi.org/10.1002/2015GL064110"
+    },
+    {
+      "authors": "Aghakouchak, A., Farahmand, A., Melton, F. S., Teixeira, J., Anderson, M. C., Wardlow, B. D., Hain, C. R.",
+      "title": "Remote sensing of drought: Progress, challenges and opportunities",
+      "journal": "challenges and opportunities",
+      "year": 2015,
+      "doi": "10.1002/2014RG000456",
+      "link": "https://doi.org/10.1002/2014RG000456"
+    },
+    {
+      "authors": "Richey, Alexandra S., Thomas, Brian F., Lo, Min-Hui, Reager, John T., Famiglietti, James S., Voss, Katalyn, Swenson, Sean, Rodell, Matthew",
+      "title": "Quantifying renewable groundwater stress with GRACE",
+      "journal": "Water Resources Research",
+      "year": 2015,
+      "doi": "10.1002/2015WR017349",
+      "link": "https://doi.org/10.1002/2015WR017349"
+    },
+    {
+      "authors": "Fu, Yuning, Argus, Donald F., Landerer, Felix W.",
+      "title": "GPS As an independent measurement to estimate terrestrial water storage variations in Washington and Oregon",
+      "journal": "J. Geophys. Res. Solid Earth",
+      "year": 2015,
+      "doi": "10.1002/2014JB011415",
+      "link": "https://doi.org/10.1002/2014JB011415"
+    },
+    {
+      "authors": "Reager, John, Thomas, Alys, Sproles, Eric, Rodell, Matthew, Beaudoing, Hiroko, Li, Bailing, Famiglietti, James",
+      "title": "Assimilation of GRACE Terrestrial Water Storage Observations into a Land Surface Model for the Assessment of Regional Flood Potential",
+      "journal": "Remote Sensing",
+      "year": 2015,
+      "doi": "10.3390/rs71114663",
+      "link": "https://doi.org/10.3390/rs71114663"
+    },
+    {
+      "authors": "Kuang, Da, Desai, Shailen, Haines, Bruce, Sibthorpe, Anthony",
+      "title": "Orbital accelerometry by LEO GNSS tracking: Theory and practice",
+      "journal": "paper presented at 27th International Technical Meeting of the Satellite Division of the Institute of Navigation",
+      "year": 2014,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Thomas, Alys C., Reager, John T., Famiglietti, James S., Rodell, Matthew",
+      "title": "A GRACE-based water storage deficit approach for hydrological drought characterization",
+      "journal": "Geophysical Research Letters",
+      "year": 2014,
+      "doi": "10.1002/2014GL059323",
+      "link": "https://doi.org/10.1002/2014GL059323"
+    },
+    {
+      "authors": "Francis, Samuel P., Lam, Timothy T. Y., McKenzie, Kirk, Sutton, Andrew J., Ward, Robert L., McClelland, David E., Shaddock, Daniel A.",
+      "title": "Weak-light phase tracking with a low cycle slip rate",
+      "journal": "Opt.Lett.",
+      "year": 2014,
+      "doi": "10.1364/OL.39.005251",
+      "link": "https://doi.org/10.1364/OL.39.005251"
+    },
+    {
+      "authors": "Ward, R. L., Fleddermann, R., Francis, S., Mow-Lowry, C., Wuchenich, D., Elliot, M., Gilles, F., Herding, M., Nicklaus, K., Brown, J., Burke, J., Dligatch, S., Farrant, D., Green, K., Seckold, J., Blundell, M., Brister, R., Smith, C., Danzmann, K., Heinzel, G., Schuetze, D., Sheard, B. S., Klipstein, W., McClelland, D. E., Shaddock, D. A.",
+      "title": "The design and construction of a prototype lateral-transfer retro-reflector for inter-satellite laser ranging",
+      "journal": "Classical and Quantum Gravity",
+      "year": 2014,
+      "doi": "10.1088/0264-9381/31/9/095015",
+      "link": "https://doi.org/10.1088/0264-9381/31/9/095015"
+    },
+    {
+      "authors": "Castle, Stephanie L., Thomas, Brian F., Reager, John T., Rodell, Matthew, Swenson, Sean C., Famiglietti, James S.",
+      "title": "Groundwater depletion during drought threatens future water security of the Colorado River Basin",
+      "journal": "Geophysical Research Letters",
+      "year": 2014,
+      "doi": "10.1002/2014GL061055",
+      "link": "https://doi.org/10.1002/2014GL061055"
+    },
+    {
+      "authors": "Reager, J. T., Thomas, B. F., Famiglietti, J. S.",
+      "title": "River basin flood potential inferred using GRACE gravity observations at several months lead time",
+      "journal": "Nature Geoscience",
+      "year": 2014,
+      "doi": "10.1038/ngeo2203",
+      "link": "https://doi.org/10.1038/ngeo2203"
+    },
+    {
+      "authors": "Argus, D. F., Peltier, W. R., Drummond, R., Moore, A. W.",
+      "title": "The Antarctica component of postglacial rebound model ICE-6G_C (VM5a) based on GPS positioning, exposure age dating of ice thicknesses, and relative sea level histories",
+      "journal": "exposure age dating of ice thicknesses",
+      "year": 2014,
+      "doi": "10.1093/gji/ggu140",
+      "link": "https://doi.org/10.1093/gji/ggu140"
+    },
+    {
+      "authors": "Chanard, K., Avouac, J. P., Ramillien, G., Genrich, J.",
+      "title": "Modeling deformation induced by seasonal variations of continental water in the Himalaya region: Sensitivity to Earth elastic structure",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2014,
+      "doi": "10.1002/2013jb010451",
+      "link": "https://doi.org/10.1002/2013jb010451"
+    },
+    {
+      "authors": "Famiglietti, J. S.",
+      "title": "The global groundwater crisis",
+      "journal": "Nature Climate Change",
+      "year": 2014,
+      "doi": "0.1038/nclimate2425",
+      "link": "https://doi.org/0.1038/nclimate2425"
+    },
+    {
+      "authors": "Sutterley, Tyler C., Velicogna, Isabella, Csatho, Beata, Van, Den Broeke, Rezvan-Behbahani, Soroush, Babonis, Greg",
+      "title": "Evaluating Greenland glacial isostatic adjustment corrections using GRACE, altimetry and surface mass balance data",
+      "journal": "altimetry and surface mass balance data",
+      "year": 2014,
+      "doi": "10.1088/1748-9326/9/1/014004",
+      "link": "https://doi.org/10.1088/1748-9326/9/1/014004"
+    },
+    {
+      "authors": "Bouman, J., Fuchs, M., Ivins, E., van der Wal, W., Schrama, E., Visser, P., Horwath, M.",
+      "title": "Antarctic outlet glacier mass change resolved at basin scale from satellite gravity gradiometry",
+      "journal": "Geophysical Research Letters",
+      "year": 2014,
+      "doi": "10.1002/2014GL060637",
+      "link": "https://doi.org/10.1002/2014GL060637"
+    },
+    {
+      "authors": "Turyshev, S. G., Sazhin, M. V., Toth, V. T.",
+      "title": "General relativistic laser interferometric observables of the GRACE-Follow-On mission",
+      "journal": "Physical Review D",
+      "year": 2014,
+      "doi": "10.1103/PhysRevD.89.105029",
+      "link": "https://doi.org/10.1103/PhysRevD.89.105029"
+    },
+    {
+      "authors": "Velicogna, I., Sutterley, T. C., van den Broeke, M. R.",
+      "title": "Regional acceleration in ice mass loss from Greenland and Antarctica using GRACE time-variable gravity data",
+      "journal": "Geophysical Research Letters",
+      "year": 2014,
+      "doi": "10.1002/2014gl061052",
+      "link": "https://doi.org/10.1002/2014gl061052"
+    },
+    {
+      "authors": "Fleddermann, R., Ward, R. L., Elliot, M., Wuchenich, D. M., Gilles, F., Herding, M., Nicklaus, K., Brown, J., Burke, J., Dligatch, S., Farrant, D. I., Green, K. L., Seckold, J. A., Blundell, M., Brister, R., Smith, C., Sheard, B. S., Heinzel, G., Danzmann, K., Klipstein, B., McClelland, D. E., Shaddock, D. A.",
+      "title": "Testing the GRACE follow-on triple mirror assembly",
+      "journal": "Classical and Quantum Gravity",
+      "year": 2014,
+      "doi": "10.1088/0264-9381/31/19/195004",
+      "link": "https://doi.org/10.1088/0264-9381/31/19/195004"
+    },
+    {
+      "authors": "Wuchenich, Danielle M. R., Mahrdt, Christoph, Sheard, Benjamin S., Francis, Samuel P., Spero, Robert E., Miller, John, Mow-Lowry, Conor, Ward, Robert L., Klipstein, William M., Heinzel, Gerhard, Danzmann, Karsten, McClelland, David E., Shaddock, Daniel A.",
+      "title": "Laser link acquisition demonstration for the GRACE Follow-On mission",
+      "journal": "Optics Express",
+      "year": 2014,
+      "doi": "10.1364/OE.22.011351",
+      "link": "https://doi.org/10.1364/OE.22.011351"
+    },
+    {
+      "authors": "Yang, Yu-Ming, Meng, X., Komjathy, A., Verkholyadova, O., Langley, R. B., Tsurutani, B. T., Mannucci, A. J.",
+      "title": "Tohoku-Oki earthquake caused major ionospheric disturbances at 450km altitude over Alaska",
+      "journal": "Radio Sci.",
+      "year": 2014,
+      "doi": "10.1002/2014RS005580",
+      "link": "https://doi.org/10.1002/2014RS005580"
+    },
+    {
+      "authors": "Yang, Y. M., Komjathy, A., Meng, X., Langley, R. B., Butala, M. D., Shume, E. B., Mannucci, A. J.",
+      "title": "Space-Based remote sensing of Natural-Hazard-Induced Ionosphere-Thermosphere Perturbations",
+      "journal": "paper presented at 27th International Technical Meeting of the Satellite Division of the Institute of Navigation",
+      "year": 2014,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Zhou, Liming, Tian, Yuhong, Myneni, Ranga B., Ciais, Philippe, Saatchi, Sassan, Liu, Yi Y., Piao, Shilong, Chen, Haishan, Vermote, Eric F., Song, Conghe, Hwang, Taehee",
+      "title": "Widespread decline of Congo rainforest greenness in the past decade",
+      "journal": "Nature",
+      "year": 2014,
+      "doi": "10.1038/nature13265",
+      "link": "https://doi.org/10.1038/nature13265"
+    },
+    {
+      "authors": "Reager, J. T., Famiglietti, James S.",
+      "title": "Characteristic mega-basin water storage behavior using GRACE",
+      "journal": "Water Resources Research",
+      "year": 2013,
+      "doi": "10.1002/wrcr.20264",
+      "link": "https://doi.org/10.1002/wrcr.20264"
+    },
+    {
+      "authors": "Arendt, Anthony, Luthcke, Scott, Gardner, Alex, O'Neel, Shad, Hill, David, Moholdt, Geir, Abdalati, Waleed",
+      "title": "Analysis of a GRACE global mascon Solution for Gulf of Alaska Glaciers",
+      "journal": "Journal of Glaciology",
+      "year": 2013,
+      "doi": "10.3189/2013JoG12J197",
+      "link": "https://doi.org/10.3189/2013JoG12J197"
+    },
+    {
+      "authors": "Sasgen, I., Konrad, H., Ivins, E. R., Van, den Broeke, Bamber, J. L., Martinec, Z., Klemann, V.",
+      "title": "Antarctic ice-mass balance 2003 to 2012: regional reanalysis of GRACE satellite gravimetry measurements with improved estimate of glacial-isostatic adjustment based on GPS uplift rates",
+      "journal": "Cryosphere",
+      "year": 2013,
+      "doi": "10.5194/tc-7-1499-2013",
+      "link": "https://doi.org/10.5194/tc-7-1499-2013"
+    },
+    {
+      "authors": "Volkov, Denis L., Landerer, Felix W., Kirillov, Sergey A.",
+      "title": "The genesis of sea level variability in the Barents Sea",
+      "journal": "Cont.Shelf Res.",
+      "year": 2013,
+      "doi": "10.1016/j.csr.2013.07.007",
+      "link": "https://doi.org/10.1016/j.csr.2013.07.007"
+    },
+    {
+      "authors": "Zlotnicki, Victor, Bettadpur, Srinivas, Landerer, Felix W., Watkins, Michael M.",
+      "title": "Gravity Recorvery and Climate Experiement (GRACE): Detection of Ice Mass Loss, Terrestrial Mass Changes, and Ocean Mass Gains",
+      "journal": "Terrestrial Mass Changes",
+      "year": 2013,
+      "doi": "10.1007/978-1-4614-5684-1_7",
+      "link": "https://doi.org/10.1007/978-1-4614-5684-1_7"
+    },
+    {
+      "authors": "Shi, Mingjie, Yang, Zong-Liang, Landerer, Felix W.",
+      "title": "Representing and evaluating the landscape freeze/thaw properties and their impacts on soil impermeability-hydrological processes in the community land model version 4",
+      "journal": "J. Geophys. Res. Atmos.",
+      "year": 2013,
+      "doi": "10.1002/jgrd.50576;",
+      "link": "https://doi.org/10.1002/jgrd.50576;"
+    },
+    {
+      "authors": "Moon, Jae-Hong, Song, Y. Tony",
+      "title": "Sea level and heat content changes in the western North Pacific",
+      "journal": "Journal of Geophysical Research-Oceans",
+      "year": 2013,
+      "doi": "10.1002/jgrc.20096",
+      "link": "https://doi.org/10.1002/jgrc.20096"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "Time-variable gravity observations of ice sheet mass balance: Precision and limitations of the GRACE satellite data",
+      "journal": "Geophysical Research Letters",
+      "year": 2013,
+      "doi": "10.1002/grl.50527",
+      "link": "https://doi.org/10.1002/grl.50527"
+    },
+    {
+      "authors": "Volkov, Denis L., Landerer, Felix W.",
+      "title": "Non-seasonal fluctuations of the Arctic Ocean mass observed by the GRACE satellites",
+      "journal": "Journal of Geophysical Research: Oceans",
+      "year": 2013,
+      "doi": "10.1002/2013JC009341",
+      "link": "https://doi.org/10.1002/2013JC009341"
+    },
+    {
+      "authors": "Ivins, Erik R., James, Thomas S., Wahr, John, Schrama, Ernst J. O., Landerer, Felix W., Simon, Karen M.",
+      "title": "Antarctic contribution to sea level rise observed by GRACE with improved GIA correction",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2013,
+      "doi": "10.1002/jgrb.50208",
+      "link": "https://doi.org/10.1002/jgrb.50208"
+    },
+    {
+      "authors": "Gardner, Alex S., Moholdt, Geir, Cogley, J. Graham, Wouters, Bert, Arendt, Anthony A., Wahr, John, Berthier, Etienne, Hock, Regine, Pfeffer, W. Tad, Kaser, Georg, Ligtenberg, Stefan R. M., Bolch, Tobias, Sharp, Martin J., Hagen, Jon Ove, van den Broeke, Michiel R., van den Broeke, Michiel R.",
+      "title": "A reconciled estimate of glacier contributions to sea level rise; 2003 to 2009",
+      "journal": "Science",
+      "year": 2013,
+      "doi": "10.1126/science.1234532",
+      "link": "https://doi.org/10.1126/science.1234532"
+    },
+    {
+      "authors": "Morison, James, Kwok, Ron, Peralta-Ferriz, Cecilia, Alkire, Matt, Rigor, Ignatius, Andersen, Roger, Steele, Mike",
+      "title": "Changing Arctic Ocean freshwater pathways",
+      "journal": "Nature",
+      "year": 2012,
+      "doi": "10.1038/nature10705",
+      "link": "https://doi.org/10.1038/nature10705"
+    },
+    {
+      "authors": "Velicogna, I., Tong, J., Zhang, T., Kimball, J. S.",
+      "title": "Increasing subsurface water storage in discontinuous permafrost areas of the Lena River basin, Eurasia, detected from GRACE",
+      "journal": "Eurasia",
+      "year": 2012,
+      "doi": "10.1029/2012GL051623",
+      "link": "https://doi.org/10.1029/2012GL051623"
+    },
+    {
+      "authors": "Wu, Xiaoping, Ray, Jim, van Dam, Tonie",
+      "title": "Geocenter motion and its geodetic and geophysical implications",
+      "journal": "Journal of Geodynamics",
+      "year": 2012,
+      "doi": "10.1016/j.jog.2012.01.007",
+      "link": "https://doi.org/10.1016/j.jog.2012.01.007"
+    },
+    {
+      "authors": "Lambinicio, A., An, K., Reager, J. T., Druffel-Rodriguez, R. E., Richey, A. S., Famiglietti, J. S., Rodell, M.",
+      "title": "Contribution of groundwater depletion to global mean sea level rise",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/H/sessions/H31F/abstracts/H31F-1186.html"
+    },
+    {
+      "authors": "Willis, J., Hobbs, W. R.",
+      "title": "Global sea level rise and the Earth's energy balance",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G31A/abstracts/G31A-0901.html"
+    },
+    {
+      "authors": "Gibbons, A., Famiglietti, J. S., Reager, J. T.",
+      "title": "Correlating total dissolved solid concentration changes with GRACE-based changes in water table depth",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/H/sessions/H31F/abstracts/H31F-1193.html"
+    },
+    {
+      "authors": "Moholdt, Geir, Wouters, Bert, Gardner, Alex S.",
+      "title": "Recent mass changes of glaciers in the Russian High Arctic",
+      "journal": "Geophysical Research Letters",
+      "year": 2012,
+      "doi": "10.1029/2012GL051466",
+      "link": "https://doi.org/10.1029/2012GL051466"
+    },
+    {
+      "authors": "Nanteza, J., Reager, J. T., Richey, A. S., Liu, H., Famiglietti, J. S., Rodell, M.",
+      "title": "The link between surface and groundwater variations over East Africa using GRACE and Altimetry data",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/H/sessions/H31F/abstracts/H31F-1185.html"
+    },
+    {
+      "authors": "Sheard, B. S., Heinzel, G., Danzmann, K., Shaddock, D. A., Klipstein, W. M., Folkner, W. M.",
+      "title": "Intersatellite laser ranging instrument for the GRACE follow-on mission",
+      "journal": "Journal of Geodesy",
+      "year": 2012,
+      "doi": "10.1007/s00190-012-0566-3",
+      "link": "https://doi.org/10.1007/s00190-012-0566-3"
+    },
+    {
+      "authors": "Reager, J. T.",
+      "title": "Terrestrial water storage across scales: Applications of the GRACE satellite mission for global hydrology",
+      "journal": "Ph.D. thesis",
+      "year": 2012,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Lenaerts, J., van Angelen, J., van den Broeke, M. R., Gardner, A. S., Wouters, B., van Meijgaard, E.",
+      "title": "Irreversible mass loss from Canadian Arctic glaciers",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/C/sessions/C43F/abstracts/C43F-02.html"
+    },
+    {
+      "authors": "Ivins, E. R., Wahr, J. M., Schrama, E. J., Milne, G. A., Barletta, V., Horwath, M., Whitehouse, P.",
+      "title": "Antarctic glacial isostatic adjustment and ice sheet mass balance using GRACE; a report from the Ice-Sheet Mass Balance Exercise (IMBIE)",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G21A/abstracts/G21A-0876.html"
+    },
+    {
+      "authors": "Velicogna, I.",
+      "title": "Spatial pattern in Greenland and Antarctica ice mass loss acceleration",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G31C/abstracts/G31C-04.html"
+    },
+    {
+      "authors": "Sasgen, Ingo, van den Broeke, Michiel, Bamber, Jonathan L., Rignot, Eric, Sorensen, Louise Sandberg, Wouters, Bert, Martinec, Zdenek, Velicogna, Isabella, Simonsen, Sebastian B.",
+      "title": "Timing and origin of recent regional ice-mass loss in Greenland",
+      "journal": "Earth and Planetary Science Letters",
+      "year": 2012,
+      "doi": "10.1016/j.epsl.2012.03.033",
+      "link": "https://doi.org/10.1016/j.epsl.2012.03.033"
+    },
+    {
+      "authors": "Shepherd, Andrew, Ivins, Erik R., A, Geruo, Barletta, Valentina R., Bentley, Mike J., Bettadpur, Srinivas, Briggs, Kate H., Bromwich, David H., Forsberg, Rene, Galin, Natalia, Horwath, Martin, Jacobs, Stan, Joughin, Ian, King, Matt A., Lenaerts, Jan T. M., Li, Jilu, Ligtenberg, Stefan R. M., Luckman, Adrian, Luthcke, Scott B., McMillan, Malcolm, Meister, Rakia, Milne, Glenn, Mouginot, Jeremie, Muir, Alan, Nicolas, Julien P., Paden, John, Payne, Antony J., Pritchard, Hamish, Rignot, Eric, Rott, Helmut, Sorensen, Louise Sandbe",
+      "title": "A reconciled estimate of ice-sheet mass balance",
+      "journal": "Science",
+      "year": 2012,
+      "doi": "10.1126/science.1228102",
+      "link": "https://doi.org/10.1126/science.1228102"
+    },
+    {
+      "authors": "Sutterley, T. C., Velicogna, I., Rignot, E. J., van den Broeke, M. R., Csatho, B. M., Wahr, J. M., Ivins, E. R.",
+      "title": "Improving accuracy of glacial isostatic adjustment models and ice mass balance using GRACE, InSAR, altimetry, and regional atmospheric climate model output",
+      "journal": "InSAR",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G21A/abstracts/G21A-0879.html"
+    },
+    {
+      "authors": "Kuss, A. J. M., Newcomer, Michelle E., Hsu, W., Bourai, A., Puranam, A., Landerer, F. W., Schmidt, Cynthia L.",
+      "title": "Downscaling GRACE satellite data for sub-region groundwater storage estimates in California's Central Valley",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/ED/sessions/ED11A/abstracts/ED11A-0717.html"
+    },
+    {
+      "authors": "Nanteza, Jamiat, Reager, John T., Liu, Huidong, Richey, Alexandra S., Famiglietti, James S., Rodell, Matthew",
+      "title": "The link between surface and groundwater variations over East Africa using GRACE and Altimetry",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://fallmeeting.agu.org/2012/eposters/eposter/h31f-1185/"
+    },
+    {
+      "authors": "Sasgen, I., Konrad, H., Ivins, E. R., van den Broeke, M. R., Bamber, J. L., Martinec, Z., Klemann, V.",
+      "title": "A revised estimate of glacial-isostatic adjustment based on GPS uplift rates and its impact on Antarctic ice-mass trends from GRACE",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G21A/abstracts/G21A-0878.html"
+    },
+    {
+      "authors": "Volkov, Denis L., Zlotnicki, Victor",
+      "title": "Performance of GOCE and GRACE-derived mean dynamic topographies in resolving Antarctic Circumpolar Current fronts",
+      "journal": "Ocean Dynamics",
+      "year": 2012,
+      "doi": "10.1007/s10236-012-0541-9",
+      "link": "https://doi.org/10.1007/s10236-012-0541-9"
+    },
+    {
+      "authors": "Wahr, J. M., Barletta, V., Bettadpur, S., Forsberg, R., Horwath, M., Ivins, E. R., Luthcke, S. B., Schrama, E. J., Velicogna, I., Whitehouse, P.",
+      "title": "A group intercomparison of GRACE Antarctic and Greenland ice loss estimates, as part of the Ice Mass Balance Inter-comparison Exercise (IMBIE)",
+      "journal": "as part of the Ice Mass Balance Inter-comparison Exercise (IMBIE)",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G31C/abstracts/G31C-03.html"
+    },
+    {
+      "authors": "Wang, Lei, Shum, C. K., Simons, Frederik J., Tassara, Andres, Erkan, Kamil, Jekeli, Christopher, Braun, Alexander, Kuo, Chungyen, Lee, Hyongki, Yuan, Dah-Ning",
+      "title": "Coseismic slip of the 2010 Mw 8.8 Great Maule, Chile, earthquake quantified by the inversion of GRACE observations",
+      "journal": "Chile",
+      "year": 2012,
+      "doi": "10.1016/j.epsl.2012.04.044",
+      "link": "https://doi.org/10.1016/j.epsl.2012.04.044"
+    },
+    {
+      "authors": "Voss, K., Famiglietti, J. S., Reager, J. T., Lo, M., Ho, S., de Linage, Caroline, Rodell, M.",
+      "title": "Asia's changing water resources; trends from GRACE and implications for water management",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G33A/abstracts/G33A-0939.html"
+    },
+    {
+      "authors": "Fielding, E. J., McKenzie, D. P.",
+      "title": "Lithospheric flexure in the Sichuan Basin and Longmen Shan at the eastern edge of Tibet estimated from gravity",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G34A/abstracts/G34A-02.html"
+    },
+    {
+      "authors": "Kim, H., Famiglietti, J. S., Rodell, M., Reager, J. T., Syed, T. H., Lo, M., Chambers, D. P., Swenson, S. C.",
+      "title": "Contributions to terrestrial and global hydrology from a decade of GRACE measurements",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2012,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2012/FM/sections/G/sessions/G31C/abstracts/G31C-05.html"
+    },
+    {
+      "authors": "Rignot, Eric",
+      "title": "Is Antarctica melting?",
+      "journal": "Wiley Interdisciplinary Reviews-Climate Change",
+      "year": 2011,
+      "doi": "10.1002/wcc.110",
+      "link": "https://doi.org/10.1002/wcc.110"
+    },
+    {
+      "authors": "Song, Y. Tony, Colberg, Frank",
+      "title": "Deep ocean warming assessed from altimeters, Gravity Recovery and Climate Experiment, in situ measurements, and a non-Boussinesq ocean general circulation model",
+      "journal": "Gravity Recovery and Climate Experiment",
+      "year": 2011,
+      "doi": "10.1029/2010JC006601",
+      "link": "https://doi.org/10.1029/2010JC006601"
+    },
+    {
+      "authors": "Tong, J., Velicogna, Isabella, Zhang, T., Kimball, John S.",
+      "title": "Increase in groundwater storage in discontinuous permafrost areas in Eurasia and impact on vegetation productivity",
+      "journal": "in American Geophysical Union 2011 fall meeting",
+      "year": 2011,
+      "doi": "",
+      "link": "http://static.coreapps.net/agu2011/html/GC41C-0836.html"
+    },
+    {
+      "authors": "Arendt, A. A., Luthcke, S. B., Oneel, S., Gardner, A. S., Hill, D. F.",
+      "title": "Analysis of seasonal variability in Gulf of Alaska glacier mass balance using GRACE",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2011,
+      "doi": "",
+      "link": "http://abstractsearch.agu.org/meetings/2011/FM/sections/C/sessions/C34A/abstracts/C34A-02.html"
+    },
+    {
+      "authors": "Rignot, E. J., Velicogna, I., Mouginot, J., Scheuchl, B., van den Broeke, M. R., Paden, J. D.",
+      "title": "Revised mass budget of hot spots in Greenland and Antarctica using IceBridge and other data",
+      "journal": "in American Geophysical Union Fall Meeting",
+      "year": 2011,
+      "doi": "",
+      "link": "http://www.agu.org/cgi-bin/SFgate/SFgate?language=English&verbose=0&listenv=table&application=fm11&convert=&converthl=&refinequery=&formintern=&formextern=&transquery=an%3dc51c&_lines=&multiple=0&descriptor=%2fdata%2fepubs%2fwais%2findexes%2ffm11%2ffm11%7c1000%7c2596%7cOngoing%20Changes%20in%20Small%20Ice%20Caps%20in%20Greenland%20and%20Arctic%20Canada%20As%20Measured%20by%20NASA%27s%20Operation%20IceBridge%20and%20the%20Airborne%20Topographic%20Mapper%7cHTML%7clocalhost:0%7c%2fdata%2fepubs%2fwais%2findexes%2ffm11%2ffm11%7c16686439%2016689035%20%2fdata2%2fepubs%2fwais%2fdata%2ffm11%2ffm11.txt"
+    },
+    {
+      "authors": "Vermeersen, Bert L. A., Ivins, Erik R., King, Matt A.",
+      "title": "Special section on observation and modeling of glacial isostatic adjustment",
+      "journal": "Tectonophysics",
+      "year": 2011,
+      "doi": "10.1016/j.tecto.2011.10.012",
+      "link": "https://doi.org/10.1016/j.tecto.2011.10.012"
+    },
+    {
+      "authors": "Wu, X., Collilieux, X., Altamimi, Z., Vermeersen, B. L. A., Gross, R. S., Fukumori, I.",
+      "title": "Accuracy of the International Terrestrial Reference Frame origin and Earth expansion",
+      "journal": "Geophysical Research Letters",
+      "year": 2011,
+      "doi": "10.1029/2011GL047450",
+      "link": "https://doi.org/10.1029/2011GL047450"
+    },
+    {
+      "authors": "Seo, Ki-Weon, Ryu, Dongryeol, Kim, Baek-Min, Waliser, Duane E., Tian, Baijun, Eom, Jooyoung",
+      "title": "GRACE and AMSR-E-based estimates of winter season solid precipitation accumulation in the Arctic drainage region",
+      "journal": "Journal of Geophysical Research-Atmospheres",
+      "year": 2010,
+      "doi": "10.1029/2009JD013504",
+      "link": "https://doi.org/10.1029/2009JD013504"
+    },
+    {
+      "authors": "Tamisiea, M. E., Hill, E. M., Ponte, R. M., Davis, J. L., Velicogna, I., Vinogradova, N. T.",
+      "title": "Impact of self-attraction and loading on the annual cycle in sea level",
+      "journal": "Journal of Geophysical Research",
+      "year": 2010,
+      "doi": "10.1029/2009JC005687",
+      "link": "https://doi.org/10.1029/2009JC005687"
+    },
+    {
+      "authors": "Wu, Xiaoping, Heflin, Michael B., Schotman, Hugo, Vermeersen, Bert L. A., Dong, Danan, Gross, Richard S., Ivins, Erik R., Moore, AngelynW, Owen, Susan E.",
+      "title": "Simultaneous estimation of global present-day water transport and glacial isostatic adjustment",
+      "journal": "Nature Geoscience",
+      "year": 2010,
+      "doi": "10.1038/NGEO938",
+      "link": "https://doi.org/10.1038/NGEO938"
+    },
+    {
+      "authors": "McStraw, T. C., Pulla, S. T., Jones, N. L., Williams, G. P., David, C. H., Nelson, J. E., Ames, D. P.",
+      "title": "An Open-Source Web Application for Regional Analysis of GRACE Groundwater Data and Engaging Stakeholders in Groundwater Management",
+      "journal": "",
+      "year": 2010,
+      "doi": "10.1111/1752-1688.12968",
+      "link": "https://doi.org/10.1111/1752-1688.12968"
+    },
+    {
+      "authors": "Simon, Karen M., James, Thomas S., Ivins, Erik R.",
+      "title": "Ocean loading effects on the prediction of Antarctic glacial isostatic uplift and gravity rates",
+      "journal": "Journal of Geodesy",
+      "year": 2010,
+      "doi": "10.1007/s00190-010-0368-4",
+      "link": "https://doi.org/10.1007/s00190-010-0368-4"
+    },
+    {
+      "authors": "Syed, Tajdarul H., Famiglietti, James S., Chambers, Don P., Willis, Josh K., Hilburn, Kyle",
+      "title": "Satellite-based global-ocean mass balance estimates of interannual variability and emerging trends in continental freshwater discharge",
+      "journal": "Proc.Natl.Acad.Sci.U.S.A.",
+      "year": 2010,
+      "doi": "10.1073/pnas.1003292107",
+      "link": "https://doi.org/10.1073/pnas.1003292107"
+    },
+    {
+      "authors": "Willis, Josh K., Chambers, Don P., Kuo, Chung-Yen, Shum, C. K.",
+      "title": "Global Sea Level Rise: RECENT PROGRESS AND CHALLENGES FOR THE DECADE TO COME",
+      "journal": "Oceanography",
+      "year": 2010,
+      "doi": "",
+      "link": "http://www.vliz.be/imisdocs/publications/217969.pdf"
+    },
+    {
+      "authors": "Zelensky, Nikita P., Lemoine, Frank G., Ziebart, Marek, Sibthorpe, Ant, Willis, Pascal, Beckley, Brian D., Klosko, Steven M., Chinn, Douglas S., Rowlands, David D., Luthcke, Scott B., Pavlis, Despina E., Luceri, Vincenza",
+      "title": "DORIS/SLR POD modeling improvements for Jason-1 and Jason-2",
+      "journal": "Advances in Space Research",
+      "year": 2010,
+      "doi": "10.1016/j.asr.2010.05.008",
+      "link": "https://doi.org/10.1016/j.asr.2010.05.008"
+    },
+    {
+      "authors": "Ivins, Erik R., James, T. S., Wu, X.",
+      "title": "Long- and short-time scale glacial isostasy of the Antarctic Peninsula and impact on GRACE science; European Geosciences Union general assembly 2009",
+      "journal": "in European Geosciences Union general assembly 2009",
+      "year": 2009,
+      "doi": "",
+      "link": "http://www.copernicus.org/EGU/gra/gra.html"
+    },
+    {
+      "authors": "Seo, Ki-Weon, Waliser, Duane E., Tian, Baijun, Famiglietti, James S., Syed, Tajdarul H.",
+      "title": "Evaluation of global land-to-ocean fresh water discharge and evapotranspiration using space-based observations",
+      "journal": "Journal of Hydrology",
+      "year": 2009,
+      "doi": "10.1016/j.jhydrol.2009.05.014",
+      "link": "https://doi.org/10.1016/j.jhydrol.2009.05.014"
+    },
+    {
+      "authors": "Wiese, D. N., Folkner, W. M., Nerem, R. S.",
+      "title": "Alternative mission architectures for a gravity recovery satellite mission",
+      "journal": "Journal of Geodesy",
+      "year": 2009,
+      "doi": "10.1007/s00190-008-0274-1",
+      "link": "https://doi.org/10.1007/s00190-008-0274-1"
+    },
+    {
+      "authors": "Maximenko, Nikolai, Niiler, Peter, Rio, Marie-Helene, Melnichenko, Oleg, Centurioni, Luca, Chambers, Don, Zlotnicki, Victor, Galperin, Boris",
+      "title": "Mean Dynamic Topography of the Ocean Derived from Satellite and Drifting Buoy Data Using Three Different Techniques",
+      "journal": "Journal of Atmospheric and Oceanic Technology",
+      "year": 2009,
+      "doi": "10.1175/2009JTECHO672.1",
+      "link": "https://doi.org/10.1175/2009JTECHO672.1"
+    },
+    {
+      "authors": "Rodell, Matthew, Velicogna, Isabella, Famiglietti, James S.",
+      "title": "Satellite-based estimates of groundwater depletion in India",
+      "journal": "Nature",
+      "year": 2009,
+      "doi": "10.1038/nature08238",
+      "link": "https://doi.org/10.1038/nature08238"
+    },
+    {
+      "authors": "Velicogna, I.",
+      "title": "Increasing rates of ice mass loss from the Greenland and Antarctic ice sheets revealed by GRACE",
+      "journal": "Geophysical Research Letters",
+      "year": 2009,
+      "doi": "10.1029/2009GL040222",
+      "link": "https://doi.org/10.1029/2009GL040222"
+    },
+    {
+      "authors": "Wu, Xiaoping, Blom, Ronald G., Ivins, Erik R., Oyafuso, Fabiano A., Zhong, Min",
+      "title": "Improved inverse and probabilistic methods for geophysical applications of GRACE gravity data",
+      "journal": "Geophysical Journal International",
+      "year": 2009,
+      "doi": "10.1111/j.1365-246X.2009.04141.x",
+      "link": "https://doi.org/10.1111/j.1365-246X.2009.04141.x"
+    },
+    {
+      "authors": "Reager, J. T., Famiglietti, J. S.",
+      "title": "Global terrestrial water storage capacity and flood potential using GRACE",
+      "journal": "Geophysical Research Letters",
+      "year": 2009,
+      "doi": "10.1029/2009GL040826",
+      "link": "https://doi.org/10.1029/2009GL040826"
+    },
+    {
+      "authors": "Rodell, Matthew, Zaitchik, Benjamin F., Li, Bailing, Bolten, John, Hourborg, Rasmus, Velicogna, Isabella, Famiglietti, Jay",
+      "title": "Hydrologic Applications of GRACE Terrestrial Water Storage Data",
+      "journal": "in 2009 American Geophysical Union Conference; 14-18 Dec. 2009; San Francisco",
+      "year": 2009,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2009AGUFM.G33E..05R"
+    },
+    {
+      "authors": "Peltier, W. R., Argus, Donald, Gyllencreutz, Richard, Mangerud, Jan, Lohne, Oystein S., Svendsen, John",
+      "title": "A next model of Northern Hemisphere glaciation history; ICE-6G (VM5a)",
+      "journal": "in AGU 2009 fall meeting",
+      "year": 2009,
+      "doi": "",
+      "link": "http://www.agu.org/meetings/fm09/waisfm09.html"
+    },
+    {
+      "authors": "van den Broeke, Michiel, Bamber, Jonathan, Ettema, Janneke, Rignot, Eric, Schrama, Ernst, van de Berg, Willem Jan, van Meijgaard, Erik, Velicogna, Isabella, Wouters, Bert",
+      "title": "Partitioning Recent Greenland Mass Loss",
+      "journal": "Science",
+      "year": 2009,
+      "doi": "10.1126/science.1178176",
+      "link": "https://doi.org/10.1126/science.1178176"
+    },
+    {
+      "authors": "Velicogna, Isabella, Ivins, Erik R., Rignot, Eric",
+      "title": "Constraints on accumulation and postglacial rebound from GRACE and InSAR",
+      "journal": "paper presented at Joint DynaQlim/Global Geodetic Observing System workshop",
+      "year": 2009,
+      "doi": "",
+      "link": "http://dynaqlim.fgi.fi/texts/full_program.pdf"
+    },
+    {
+      "authors": "Wu, Xiaoping, Heflin, Michael, Schotman, Hugo, Vermeersen, Bert L. A., Dong, Danan, Gross, Richard S., Ivins, Erik R., Moore, Angelyn, Owen, Susan",
+      "title": "Using GRACE and surface geodetic data combination to improve GIA knowledge",
+      "journal": "paper presented at Joint DynaQlim/Global Geodetic Observing System workshop",
+      "year": 2009,
+      "doi": "",
+      "link": "http://dynaqlim.fgi.fi/texts/full_program.pdf"
+    },
+    {
+      "authors": "Velicogna, Isabella",
+      "title": "Interpretation and Uncertainties in Ice Sheet Mass Balance and Seasonal Variability from Grace Data",
+      "journal": "edited",
+      "year": 2008,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Seo, K. W., Wilson, C. R., Chen, J. L., Waliser, D. E.",
+      "title": "GRACE's spatial aliasing error",
+      "journal": "Geophysical Journal International",
+      "year": 2008,
+      "doi": "10.1111/j.1365-246X.2007.03611.x",
+      "link": "https://doi.org/10.1111/j.1365-246X.2007.03611.x"
+    },
+    {
+      "authors": "Tapley, Byron D., Rothacher, Markus, Bettadpur, Srinivas, Flechtner, Frank, Watkins, Michael",
+      "title": "The GRACE Mission: Status and Future Prospects",
+      "journal": "edited",
+      "year": 2008,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2008cosp...37.3149T"
+    },
+    {
+      "authors": "Wilson, T., Wiens, Doug, Smalley, B., Raymond, C., Nyblade, A. A., Huerta, A., Dalziel, Ian, Bevis, M., Aster, R., Anandakrishnan, S.",
+      "title": "POLENET seismic and GPS network in West Antarctica; AGU 2008 fall meeting",
+      "journal": "in American Geophysical Union 2008 fall meeting",
+      "year": 2008,
+      "doi": "",
+      "link": "http://www.agu.org/meetings/fm08/waisfm08.html"
+    },
+    {
+      "authors": "Seo, K. W., Wilson, C. R., Han, S. C., Waliser, D. E.",
+      "title": "Gravity Recovery and Climate Experiment (GRACE) alias error from ocean",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2008,
+      "doi": "10.1029/2006JB004747",
+      "link": "https://doi.org/10.1029/2006JB004747"
+    },
+    {
+      "authors": "Song, Y. T., Zlotnicki, V.",
+      "title": "Subpolar ocean bottom pressure oscillation and its links to the tropical ENSO",
+      "journal": "International Journal of Remote Sensing",
+      "year": 2008,
+      "doi": "10.1080/01431160802175538",
+      "link": "https://doi.org/10.1080/01431160802175538"
+    },
+    {
+      "authors": "Tapley, B., Rothacher, M., Bettadpur, S., Watkins, M., Flechtner, F.",
+      "title": "The GRACE Mission: Status and Future Prospects",
+      "journal": "edited",
+      "year": 2008,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2008AGUFM.G21C..01T"
+    },
+    {
+      "authors": "Willis, J. K., Chambers, D. P., Nerem, R. S.",
+      "title": "Assessing the globally averaged sea level budget on seasonal to interannual timescales",
+      "journal": "Journal of Geophysical Research-Oceans",
+      "year": 2008,
+      "doi": "10.1029/2007JC004517",
+      "link": "https://doi.org/10.1029/2007JC004517"
+    },
+    {
+      "authors": "Ivins, Erik R., Wolf, Detlef",
+      "title": "Glacial isostatic adjustment; new developments from advanced observing systems and modeling",
+      "journal": "Journal of Geodynamics",
+      "year": 2008,
+      "doi": "10.1016/j.jog.2008.06.002",
+      "link": "https://doi.org/10.1016/j.jog.2008.06.002"
+    },
+    {
+      "authors": "Smith, A. E., Bell, R. E., Velicogna, I., Studinger, M.",
+      "title": "Methods for determining topography in data sparse regions of East Antarctica",
+      "journal": "",
+      "year": 2007,
+      "doi": "",
+      "link": "http://pubs.usgs.gov/of/2007/1047/ea/of2007-1047ea188.pdf"
+    },
+    {
+      "authors": "Smith, A. E., Bell, R. E., Studinger, M., Velicogna, I.",
+      "title": "New Antarctic Bedrock and Moho Topography Models from GRACE: Implications for the Cryosphere",
+      "journal": "in 2007 AGU Fall Meeting; San Francisco",
+      "year": 2007,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Watkins, M. M., Yuan, D., Kruizinga, G. L., Bertiger, W., Byun, S., Lu, W.",
+      "title": "Improved GRACE Measurements of Climate Change: Alternative and Advanced Processing Techniques",
+      "journal": "in 2007 AGU Fall Meeting; San Francisco",
+      "year": 2007,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, X., Gross, R. S., Heflin, M. B., Ivins, E. R., Schotman, H. H., Vermeersen, B. L.",
+      "title": "Global Surface Mass Variations From GRACE, GPS, and Geophysical Models",
+      "journal": "",
+      "year": 2007,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Nerem, R. S., Dorsi, S., Willis, J. K., Chambers, D. P., Mitchum, G. T.",
+      "title": "Satellite and In Situ Observations of Regional Sea Level Change: What can they tell us about future changes?",
+      "journal": "in 2007 AGU Fall Meeting; San Francisco",
+      "year": 2007,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Syed, T. H., Famiglietti, J. S., Zlotnicki, V., Rodell, M.",
+      "title": "Contemporary estimates of Pan-Arctic freshwater discharge from GRACE and reanalysis",
+      "journal": "Geophysical Research Letters",
+      "year": 2007,
+      "doi": "10.1029/2007GL031254",
+      "link": "https://doi.org/10.1029/2007GL031254"
+    },
+    {
+      "authors": "Rodell, M., Famiglietti, J. S., Zaitchik, B. F., Velicogna, I.",
+      "title": "GRACE Applied to Terrestrial Hydrology",
+      "journal": "edited",
+      "year": 2007,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2007AGUFM.U24B..03R"
+    },
+    {
+      "authors": "Kapale, Kishore T., Didomenico, Leo D., Lee, Hwang, Kok, Pieter, Dowling, Jonathan P.",
+      "title": "Quantum interferometric sensors",
+      "journal": "",
+      "year": 2007,
+      "doi": "10.1117/12.724317",
+      "link": "https://doi.org/10.1117/12.724317"
+    },
+    {
+      "authors": "Tapley, B., Rothacher, M., Watkins, M., Bettadpur, S., Flechtner, F.",
+      "title": "Multi-disciplinary Applications of the Gravity Recovery And Climate Experiment (GRACE)",
+      "journal": "edited",
+      "year": 2007,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2007AGUFM.U24B..01T"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "Recent results from GRACE in Antarctica and Greenland: comparison with Insar mass balance estimates",
+      "journal": "in 2007 AGU Fall Meeting; San Francisco",
+      "year": 2007,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, X.",
+      "title": "Geocenter motion and reference frame - geophysical and geodetic perspectives",
+      "journal": "in 9th European Geosciences Union General Assembly",
+      "year": 2007,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Zlotnicki, V., Wahr, J., Fukumori, I., Song, Y. T.",
+      "title": "Antarctic circumpolar current transport variability during 2003-05 from GRACE",
+      "journal": "Journal of Physical Oceanography",
+      "year": 2007,
+      "doi": "10.1175/JPO3009.1",
+      "link": "https://doi.org/10.1175/JPO3009.1"
+    },
+    {
+      "authors": "Sherwood, R., Mannucci, A., Zuffada, C., Heeg, C.",
+      "title": "A GPS System-of-Systems for Science",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "Time variable gravity from GRACE provides new and independent measurements of long term and seasonal mass variations of the ice sheets",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Watkins, M. M., Yuan, D., Kuang, D.",
+      "title": "Next Generation Gravity Analyses from GRACE: Implications for Polar Ice Mass Balance",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, X., Blom, R. G., Dong, D., Ivins, E. R., Newport, B. J., Owen, S. E., Oyafuso, F. A.",
+      "title": "Global Surface Mass Variation Estimates From Multi-Satellite Data Combination",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Sullivant, Rosemary",
+      "title": "NASA missions help dissect sea level rise",
+      "journal": "The Earth Scientist",
+      "year": 2006,
+      "doi": "",
+      "link": "http://www.nestanet.org"
+    },
+    {
+      "authors": "Ramillien, G., Lombard, A., Cazenave, A., Ivins, E. R., Llubes, M., Remy, F., Biancale, R.",
+      "title": "Interannual variations of the mass balance of the Antarctica and Greenland ice sheets from GRACE",
+      "journal": "Global and Planetary Change",
+      "year": 2006,
+      "doi": "10.1016/j.gloplacha.2006.06.003",
+      "link": "https://doi.org/10.1016/j.gloplacha.2006.06.003"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "Acceleration of Greenland ice mass loss in spring 2004",
+      "journal": "Nature",
+      "year": 2006,
+      "doi": "10.1038/nature05168",
+      "link": "https://doi.org/10.1038/nature05168"
+    },
+    {
+      "authors": "Smith, A. E., Velicogna, I., Bell, R.",
+      "title": "Unveiling the Antarctic Using GRACE Satellite Gravity Data",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": "http://www.agu.org/meetings/fm06/fm06-sessions/fm06_U21B.html"
+    },
+    {
+      "authors": "Song, Y. Tony, Zlotnicki, Victor",
+      "title": "The Subarctic Ocean-Bottom-Pressure Oscillation Observed by GRACE and Its Link to ENSO",
+      "journal": "in Joint Assembly; Baltimore; Maryland; 23-26 May 2006",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Song, Y.",
+      "title": "The Subarctic Ocean-Bottom-Pressure Oscillation Observed by GRACE and Its Link to ENSO",
+      "journal": "in AGU Ocean Sciences Meeting",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Song, Y. Tony",
+      "title": "Estimation of interbasin transport using ocean bottom pressure; theory and model for Asian marginal seas; Dynamics and circulation of the Yellow, East and South China Seas",
+      "journal": "East and South China Seas",
+      "year": 2006,
+      "doi": "10.1029/2005JC003189",
+      "link": "https://doi.org/10.1029/2005JC003189"
+    },
+    {
+      "authors": "Wahr, John, Swenson, Sean, Velicogna, Isabella",
+      "title": "Accuracy of GRACE mass estimates",
+      "journal": "Geophysical Research Letters",
+      "year": 2006,
+      "doi": "10.1029/2005GL025305",
+      "link": "https://doi.org/10.1029/2005GL025305"
+    },
+    {
+      "authors": "Velicogna, Isabella, Wahr, John",
+      "title": "Measurements of time-variable gravity show mass loss in Antarctica",
+      "journal": "Science",
+      "year": 2006,
+      "doi": "10.1126/science.1123785",
+      "link": "https://doi.org/10.1126/science.1123785"
+    },
+    {
+      "authors": "Wahr, J., Swenson, S., Velicogna, I.",
+      "title": "Some Off-Beat Applications of GRACE Time-Variable Gravity Data",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Waliser, Duane Edward, Schubert, S., Seo, K. W., Bergengren, J., Njoku, E. G.",
+      "title": "Evaluation and Climate Change Projections of the Global Hydrological Cycle in IPCC AR4 Model Simulations",
+      "journal": "paper presented at 20 Conf. on Hydrology. (86. AMS Annual Meeting)",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, Xiaoping, Blom, Ronald G., Dong, Danan, Ivins, Erik R., Owen, Susan E., Oyafusol, Fabiano A.",
+      "title": "Improving Global Surface Mass Variation Estimates With Multi-Satellite Data Combination",
+      "journal": "in Joint Assembly; Baltimore; Maryland; 23-26 May 2006",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wahr, J., Swenson, S., Velicogna, I., Paulson, A., Zhong, S.",
+      "title": "Glacial Isostatic Adjustment and the GRACE Satellite Gravity Mission",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Seo, K., Wilson, C. R., Chen, J., Waliser, D. E.",
+      "title": "GRACE's spatial aliasing error",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "10.1111/j.1365-246X.2007.03611.x",
+      "link": "https://doi.org/10.1111/j.1365-246X.2007.03611.x"
+    },
+    {
+      "authors": "Syed, T. H., Famiglietti, J. S., Zlotnicki, V., Rodell, M.",
+      "title": "Estimates of Freshwater Discharge from GRACE",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, Xiaoping, Dong, Danan, Ivins, Erik R., Owen, Susan E., Xing, Zhangfan, Bettadpur, Srinivas V., Ries, John C.",
+      "title": "Seasonal and Interannual Global Surface Mass Budget From GRACE, GPS and Data-Assimilated Ocean Bottom Pressure Model",
+      "journal": "GPS and Data-Assimilated Ocean Bottom Pressure Model",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, X., Dong, D., Ivins, E. R., Owen, S. E., Xing, Z., Bettadpur, S. V., Ries, J. C.",
+      "title": "Seasonal and Interannual Global Surface Mass Budget From GRACE, GPS and Data- Assimilated Ocean Bottom Pressure Model",
+      "journal": "GPS and Data- Assimilated Ocean Bottom Pressure Model",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Zlotnicki, V., Chambers, D. P., Fukumori, I.",
+      "title": "Global modes of variability and propagation in ocean bottom pressure from GRACE and ECCO",
+      "journal": "in AGU Fall Meeting; San Francisco",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wu, X. P., Heflin, M. B., Ivins, E. R., Fukumori, I.",
+      "title": "Seasonal and interannual global surface mass variations from multisatellite geodetic data",
+      "journal": "Journal of Geophysical Research-Solid Earth",
+      "year": 2006,
+      "doi": "10.1029/2005JB004100",
+      "link": "https://doi.org/10.1029/2005JB004100"
+    },
+    {
+      "authors": "Wu, Sien-Chong, Bar-Sever, Yoaz E.",
+      "title": "Real-time sub-cm differential orbit determination of two low-earth orbiters with GPS bias fixing",
+      "journal": "paper presented at Institute of Navigation - 19th International Technical Meeting of the Satellite Division",
+      "year": 2006,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Rodell, M., Chao, B. F., Au, A. Y., Kimball, J. S., McDonald, K. C.",
+      "title": "Global biomass variation and its geodynamic effects: 1982-98",
+      "journal": "Earth Interactions",
+      "year": 2005,
+      "doi": "10.1175/EI126.1",
+      "link": "https://doi.org/10.1175/EI126.1"
+    },
+    {
+      "authors": "Wahr, J., Swenson, S., Velicogna, I.",
+      "title": "Water Storage Estimates From GRACE Time-Variable Gravity Measurements",
+      "journal": "edited",
+      "year": 2005,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2005AGUFM.H21D1382W&db_key=PHY"
+    },
+    {
+      "authors": "Nghiem, S. V., Steffen, K., Huff, R., Neumann, G.",
+      "title": "Anomalous Snow Accumulation over the Southeast Region of the Greenland Ice Sheet during 2002-2003 Snow Season",
+      "journal": "paper presented at 8. AMS Conf. on Polar Meteorology and Oceanography",
+      "year": 2005,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Velicogna, Isabella, Wahr, John, Hanna, Edward, Huybrechts, Philippe",
+      "title": "Short term mass variability in Greenland, from GRACE",
+      "journal": "from GRACE",
+      "year": 2005,
+      "doi": "10.1029/2004GL021948",
+      "link": "https://doi.org/10.1029/2004GL021948"
+    },
+    {
+      "authors": "Velicogna, Isabella, Wahr, John",
+      "title": "Greenland mass balance from GRACE",
+      "journal": "Geophysical Research Letters",
+      "year": 2005,
+      "doi": "10.1029/2005GL023955",
+      "link": "https://doi.org/10.1029/2005GL023955"
+    },
+    {
+      "authors": "Ivins, Erik, Wu, Xioping, Gross, Richard",
+      "title": "Low order gravity field and sea-level: antarctic contribution to late-Pleistocen and Holocene volume changes",
+      "journal": "paper presented at International Association of Meteorology and Atmospheric Sciences (IAMAS) Conference",
+      "year": 2005,
+      "doi": "",
+      "link": "http:\\\\\\\\hdl.handle.net\\\\2014/37792"
+    },
+    {
+      "authors": "Song, Y., Zlotnicki, V.",
+      "title": "Subarctic Ocean-Bottom-Pressure Oscillation and Its Link to the Tropical Pacific ENSO-Related Mass Oscillation",
+      "journal": "edited",
+      "year": 2005,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2005AGUSMOS51A..06S&db_key=PHY"
+    },
+    {
+      "authors": "Wahr, J., Swenson, S., Velicogna, I.",
+      "title": "Water Balance Estimates From GRACE Measurements of Time-Variable Gravity",
+      "journal": "edited",
+      "year": 2004,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2004AGUFM.H23D1159W&db_key=PHY"
+    },
+    {
+      "authors": "Watkins, M. M.",
+      "title": "Bowie lecture; time variable gravity measurements come of age",
+      "journal": "in American Geophysical Union 2004 fall meeting",
+      "year": 2004,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Raymond, C. A., Ivins, E. R., James, T. S.",
+      "title": "GPS measurement of glacial isostatic adjustment in Antarctica; current results and future prospects",
+      "journal": "in American Geophysical Union 2004 fall meeting",
+      "year": 2004,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Song, Y. Tony, Zlotnicki, Victor",
+      "title": "Ocean bottom pressure waves predicted in the tropical Pacific",
+      "journal": "Geophysical Research Letters",
+      "year": 2004,
+      "doi": "10.1029/2003GL018980",
+      "link": "https://doi.org/10.1029/2003GL018980"
+    },
+    {
+      "authors": "Wahr, J., Swenson, S., Velicogna, I.",
+      "title": "Hydrological Information Inferred From GRACE Estimates OF Time-Variable Gravity",
+      "journal": "edited",
+      "year": 2004,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2004AGUSM.U31A..04W&db_key=PHY"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "Geodesy and the problem of ice sheets",
+      "journal": "",
+      "year": 2004,
+      "doi": "10.1007/978-3-662-10735-5_36",
+      "link": "https://doi.org/10.1007/978-3-662-10735-5_36"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J., Hanna, E., Huybrechts, P.",
+      "title": "Snow accumulation, ice discharge and mass balance in Greenland and Antarctica from GRACE",
+      "journal": "ice discharge and mass balance in Greenland and Antarctica from GRACE",
+      "year": 2004,
+      "doi": "",
+      "link": ""
+    },
+    {
+      "authors": "Wahr, John, Swenson, Sean, Zlotnicki, Victor, Velicogna, Isabella",
+      "title": "Time-variable gravity from GRACE: first results",
+      "journal": "Geophysical Research Letters",
+      "year": 2004,
+      "doi": "10.1029/2004GL019779",
+      "link": "https://doi.org/10.1029/2004GL019779"
+    },
+    {
+      "authors": "Zlotnicki, V., Song, Y., Wahr, J.",
+      "title": "Subarctic Bottom Pressure Oscillation observed by GRACE, linked to ENSO",
+      "journal": "linked to ENSO",
+      "year": 2004,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/cgi-bin/nph-bib_query?bibcode=2004AGUFM.G23A..07Z&db_key=PHY"
+    },
+    {
+      "authors": "Kornfeld, R. P., Arnold, B. W., Gross, M. A., Dahya, N. T., Klipstein, W. M., Gath, P. F., Bettadpur, S.",
+      "title": "GRACE-FO: The Gravity Recovery and Climate Experiment Follow-On Mission (vol 56, A34326, 2019)",
+      "journal": "1. https://doi.org/10.2514/1.A34326.c1.",
+      "year": 2004,
+      "doi": "10.2514/1.A34326.c1",
+      "link": "https://doi.org/10.2514/1.A34326.c1"
+    },
+    {
+      "authors": "Zlotnicki, V., Stammer, D., Fukumori, I.",
+      "title": "GRACE gravity model: assssment in terms of deep ocean currents from hydrography and from the ECCO ocean model",
+      "journal": "paper presented at EGS-AGU-EUG Joint Assembly",
+      "year": 2003,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2003EAEJA.....4783Z"
+    },
+    {
+      "authors": "Velicogna, Isabella, Wahr, John",
+      "title": "Monitoring polar ice change; first results from GRACE",
+      "journal": "in American Geophysical Union 2003 fall meeting",
+      "year": 2003,
+      "doi": "",
+      "link": "http://adsabs.harvard.edu/abs/2003AGUFM.C11C0836V"
+    },
+    {
+      "authors": "Wahr, J., Velicogna, I.",
+      "title": "What might GRACE contribute to studies of post glacial rebound?",
+      "journal": "Space Science Reviews",
+      "year": 2003,
+      "doi": "10.1023/A:1026183526762",
+      "link": "https://doi.org/10.1023/A:1026183526762"
+    },
+    {
+      "authors": "Zlotnicki, V., Ali, A., Ponte, R. M.",
+      "title": "Jason 1 data quality assessment and dealising from high-frequency wind and pressure variability",
+      "journal": "paper presented at Jason-1 Science Team Meeting",
+      "year": 2002,
+      "doi": "",
+      "link": "http:\\\\\\\\hdl.handle.net\\\\2014/8680"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "Postglacial rebound and Earth's viscosity structure from GRACE",
+      "journal": "Journal of Geophysical Research",
+      "year": 2002,
+      "doi": "10.1029/2001JB001735",
+      "link": "https://doi.org/10.1029/2001JB001735"
+    },
+    {
+      "authors": "Velicogna, I., Wahr, J.",
+      "title": "A method for separating Antarctic postglacial rebound and ice mass balance using future ICESat Geoscience Laser Altimeter System, Gravity Recovery and Climate Experiment, and GPS satellite data",
+      "journal": "Gravity Recovery and Climate Experiment",
+      "year": 2002,
+      "doi": "10.1029/2001JB000708",
+      "link": "https://doi.org/10.1029/2001JB000708"
+    },
+    {
+      "authors": "Watkins, M. M., Yuan, D., Bertiger, W., Kruizinga, G., Romans, L., Wu, S.",
+      "title": "GRACE gravity field results from JPL",
+      "journal": "in American Geophysical Union 2002 fall meeting",
+      "year": 2002,
+      "doi": "",
+      "link": "http://www.agu.org/meetings/fm02/waisfm02.html"
+    },
+    {
+      "authors": "Wu, Xiaoping, Watkins, M. M., Ivins, E. R., Kwok, R., Ping, Wang, Wahr, J. M.",
+      "title": "Toward global inverse solutions for current and past ice mass variations: Contribution of secular satellite gravity and topography change measurements",
+      "journal": "Journal of Geophysical Research",
+      "year": 2002,
+      "doi": "10.1029/2001JB000543",
+      "link": "https://doi.org/10.1029/2001JB000543"
+    }
+  ]
+}

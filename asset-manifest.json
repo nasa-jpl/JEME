@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/JEME/static/css/main.64c88cce.css",
+    "main.js": "/JEME/static/js/main.1462c80e.js",
+    "index.html": "/JEME/index.html",
+    "main.64c88cce.css.map": "/JEME/static/css/main.64c88cce.css.map",
+    "main.1462c80e.js.map": "/JEME/static/js/main.1462c80e.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.64c88cce.css",
+    "static/js/main.1462c80e.js"
+  ]
+}
